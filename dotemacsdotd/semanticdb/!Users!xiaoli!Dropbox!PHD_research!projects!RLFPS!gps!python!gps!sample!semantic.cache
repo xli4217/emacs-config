@@ -1,0 +1,221 @@
+;; Object sample/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sample/"
+  :tables
+  (list
+    (semanticdb-table "sample_list.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the sample list wrapper and sample writers. \"\"\"" code nil nil [1 70])
+            ("cPickle" include nil nil [71 85])
+            ("logging" include nil nil [86 100])
+            ("numpy" include nil nil [102 120])
+            ("LOGGER" variable nil nil [123 159])
+            ("SampleList" type
+               (:documentation " Class that handles writes and reads to sample data. "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [293 316]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [269 273])
+                            ("samples" variable nil (reparse-symbol function_parameters) [275 282]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [256 317])
+                    ("get_X" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [332 336])
+                            ("idx" variable nil (reparse-symbol function_parameters) [338 341]))                          
+                        :documentation " Returns N x T x dX numpy array of states. ")
+                        (reparse-symbol indented_block_body) [322 542])
+                    ("get_U" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [557 561])
+                            ("idx" variable nil (reparse-symbol function_parameters) [563 566]))                          
+                        :documentation " Returns N x T x dU numpy array of actions. ")
+                        (reparse-symbol indented_block_body) [547 768])
+                    ("get_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [785 789])
+                            ("idx" variable nil (reparse-symbol function_parameters) [791 794]))                          
+                        :documentation " Returns N x T x dO numpy array of features. ")
+                        (reparse-symbol indented_block_body) [773 999])
+                    ("get_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1020 1024])
+                            ("idx" variable nil (reparse-symbol function_parameters) [1026 1029]))                          
+                        :documentation " Returns N sample objects. ")
+                        (reparse-symbol indented_block_body) [1004 1194])
+                    ("num_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1215 1219]))                          
+                        :documentation " Returns number of samples. ")
+                        (reparse-symbol indented_block_body) [1199 1299])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1343 1347]))                          )
+                        (reparse-symbol indented_block_body) [1331 1384])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1405 1409])
+                            ("idx" variable nil (reparse-symbol function_parameters) [1411 1414]))                          )
+                        (reparse-symbol indented_block_body) [1389 1459]))                  
+                :type "class")
+                nil [162 1459])
+            ("PickleSampleWriter" type
+               (:documentation " Pickles samples into data_file. "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1582 1609]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1556 1560])
+                            ("data_file" variable nil (reparse-symbol function_parameters) [1562 1571]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1543 1610])
+                    ("write" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1625 1629])
+                            ("samples" variable nil (reparse-symbol function_parameters) [1631 1638]))                          
+                        :documentation " Write samples to data file. ")
+                        (reparse-symbol indented_block_body) [1615 1785]))                  
+                :type "class")
+                nil [1461 1785])
+            ("SysOutWriter" type
+               (:documentation " Writes notifications to sysout on sample writes. "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [1908 1912]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1893 1897]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1880 1913])
+                    ("write" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1928 1932])
+                            ("samples" variable nil (reparse-symbol function_parameters) [1934 1941]))                          
+                        :documentation " Write number of samples to sysout. ")
+                        (reparse-symbol indented_block_body) [1918 2054]))                  
+                :type "class")
+                nil [1787 2054]))          
+      :file "sample_list.py"
+      :pointmax 2054
+      :fsize 2053
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "sample.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the sample class. \"\"\"" code nil nil [1 44])
+            ("numpy" include nil nil [45 63])
+            ("gps.proto.gps_pb2" include nil nil [65 101])
+            ("Sample" type
+               (:documentation "
+    Class that handles the representation of a trajectory and stores a
+    single trajectory.
+    Note: must be serializable for easy saving, no C++ references!
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [342 360])
+                            ("self" variable nil (reparse-symbol indented_block_body) [370 386])
+                            ("self" variable nil (reparse-symbol indented_block_body) [395 413])
+                            ("self" variable nil (reparse-symbol indented_block_body) [422 440])
+                            ("self" variable nil (reparse-symbol indented_block_body) [449 467])
+                            ("self" variable nil (reparse-symbol indented_block_body) [476 494])
+                            ("self" variable nil (reparse-symbol indented_block_body) [574 589])
+                            ("self" variable nil (reparse-symbol indented_block_body) [599 636])
+                            ("self" code nil (reparse-symbol indented_block_body) [645 665])
+                            ("self" variable nil (reparse-symbol indented_block_body) [674 713])
+                            ("self" code nil (reparse-symbol indented_block_body) [722 744])
+                            ("self" variable nil (reparse-symbol indented_block_body) [753 783])
+                            ("self" code nil (reparse-symbol indented_block_body) [792 815]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [320 324])
+                            ("agent" variable nil (reparse-symbol function_parameters) [326 331]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [307 816])
+                    ("set" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [829 833])
+                            ("sensor_name" variable nil (reparse-symbol function_parameters) [835 846])
+                            ("sensor_data" variable nil (reparse-symbol function_parameters) [848 859])
+                            ("t" variable nil (reparse-symbol function_parameters) [861 862]))                          
+                        :documentation " Set trajectory data for a particular sensor. ")
+                        (reparse-symbol indented_block_body) [821 1552])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1565 1569])
+                            ("sensor_name" variable nil (reparse-symbol function_parameters) [1571 1582])
+                            ("t" variable nil (reparse-symbol function_parameters) [1584 1585]))                          
+                        :documentation " Get trajectory data for a particular sensor. ")
+                        (reparse-symbol indented_block_body) [1557 1759])
+                    ("get_X" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1774 1778])
+                            ("t" variable nil (reparse-symbol function_parameters) [1780 1781]))                          
+                        :documentation " Get the state. Put it together if not precomputed. ")
+                        (reparse-symbol indented_block_body) [1764 2277])
+                    ("get_U" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2292 2296])
+                            ("t" variable nil (reparse-symbol function_parameters) [2298 2299]))                          
+                        :documentation " Get the action. ")
+                        (reparse-symbol indented_block_body) [2282 2416])
+                    ("get_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2433 2437])
+                            ("t" variable nil (reparse-symbol function_parameters) [2439 2440]))                          
+                        :documentation " Get the observation. Put it together if not precomputed. ")
+                        (reparse-symbol indented_block_body) [2421 3047])
+                    ("get_meta" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3065 3069]))                          
+                        :documentation " Get the meta data. Put it together if not precomputed. ")
+                        (reparse-symbol indented_block_body) [3052 3481])
+                    ("__getstate__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3523 3527]))                          )
+                        (reparse-symbol indented_block_body) [3506 3615])
+                    ("__setstate__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3659 3663])
+                            ("state" variable nil (reparse-symbol function_parameters) [3665 3670]))                          )
+                        (reparse-symbol indented_block_body) [3642 3741]))                  
+                :type "class")
+                nil [104 3741]))          
+      :file "sample.py"
+      :pointmax 3741
+      :fsize 3740
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax '((NAME 2529 . 2532) (IF 2545 . 2547) (ELSE 2558 . 2562) (RETURN 2347 . 2353) (IF 2373 . 2375) (ELSE 2386 . 2390) (NAME 1864 . 1865) (IF 1876 . 1878) (ELSE 1889 . 1893))))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!sample!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

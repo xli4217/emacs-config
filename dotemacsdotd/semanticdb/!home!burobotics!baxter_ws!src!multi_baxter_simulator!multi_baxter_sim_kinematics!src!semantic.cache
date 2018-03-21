@@ -1,0 +1,245 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "arm_kinematics.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("cstring" include (:system-flag t) nil [1882 1900])
+            ("ros/ros.h" include (:system-flag t) nil [1901 1921])
+            ("multi_baxter_sim_kinematics/arm_kinematics.h" include (:system-flag t) nil [1922 1977])
+            ("arm_kinematics" type
+               (:members 
+                  ( ("Kinematics" function
+                       (:constructor-flag t
+                        :parent "Kinematics"
+                        :type ("Kinematics" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2006 2052])
+                    ("init_grav" function
+                       (:parent "Kinematics"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2054 7870])
+                    ("init" function
+                       (:parent "Kinematics"
+                        :arguments 
+                          ( ("tip" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7990 8006])
+                            ("no_jts" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [8007 8019]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [7968 9346])
+                    ("loadModel" function
+                       (:parent "Kinematics"
+                        :arguments 
+                          ( ("xml" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9470 9492]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [9443 10224])
+                    ("readJoints" function
+                       (:parent "Kinematics"
+                        :arguments 
+                          ( ("robot_model" variable
+                               (:reference 1
+                                :type ("urdf::Model" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10346 10371]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [10318 12264])
+                    ("getGravityTorques" function
+                       (:parent "arm_kinematics::Kinematics"
+                        :arguments 
+                          ( ("joint_configuration" variable
+                               (:constant-flag t
+                                :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12453 12503])
+                            ("left_gravity" variable
+                               (:reference 1
+                                :type ("baxter_core_msgs::SEAJointState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12555 12601])
+                            ("right_gravity" variable
+                               (:reference 1
+                                :type ("baxter_core_msgs::SEAJointState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12653 12700])
+                            ("isEnabled" variable (:type "bool") (reparse-symbol arg-sub-list) [12701 12716]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [12402 14961])
+                    ("getJointIndex" function
+                       (:parent "Kinematics"
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15113 15137]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [15083 15276])
+                    ("getKDLSegmentIndex" function
+                       (:parent "Kinematics"
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15443 15467]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [15408 15647])
+                    ("getPositionIK" function
+                       (:parent "arm_kinematics::Kinematics"
+                        :arguments 
+                          ( ("pose_stamp" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("geometry_msgs::PoseStamped" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15788 15833])
+                            ("seed" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15881 15917])
+                            ("result" variable
+                               (:pointer 1
+                                :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15918 15950]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [15741 17486])
+                    ("getPositionFK" function
+                       (:parent "arm_kinematics::Kinematics"
+                        :arguments 
+                          ( ("frame_id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17638 17659])
+                            ("joint_configuration" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17660 17711])
+                            ("result" variable
+                               (:reference 1
+                                :type ("geometry_msgs::PoseStamped" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17759 17794]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [17591 18928]))                  
+                :type "namespace")
+                nil [1979 18931]))          
+      :file "arm_kinematics.cpp"
+      :pointmax 18946
+      :fsize 18945
+      :lastmodtime '(23117 24292 178467 88000)
+      :unmatched-syntax nil)
+    (semanticdb-table "position_kinematics.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("multi_baxter_sim_kinematics/position_kinematics.h" include (:system-flag t) nil [1870 1930])
+            ("signal.h" include (:system-flag t) nil [1931 1950])
+            ("kinematics" type
+               (:members 
+                  ( ("ref_frame_id" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "\"base\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1975 2022])
+                    ("JOINT_STATES" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "\"joint_states\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2023 2078])
+                    ("ROBOT_STATE" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "\"state\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2079 2126])
+                    ("joint_id" variable
+                       (:constant-flag t
+                        :default-value "6"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2127 2150])
+                    ("init" function
+                       (:parent "position_kinematics"
+                        :arguments 
+                          ( ("side" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2380 2397]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2349 4510])
+                    ("stateCB" function
+                       (:parent "position_kinematics"
+                        :arguments 
+                          ( ("msg" variable
+                               (:constant-flag t
+                                :type ("baxter_core_msgs::AssemblyState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4619 4661]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4585 4738])
+                    ("FKCallback" function
+                       (:parent "position_kinematics"
+                        :arguments 
+                          ( ("msg" variable
+                               (:constant-flag t
+                                :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4928 4962]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4891 5429])
+                    ("FilterJointState" function
+                       (:parent "position_kinematics"
+                        :arguments 
+                          ( ("msg" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5569 5604])
+                            ("res" variable
+                               (:reference 1
+                                :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5605 5634]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5526 6140])
+                    ("FKCalc" function
+                       (:parent "position_kinematics"
+                        :arguments 
+                          ( ("configuration" variable
+                               (:constant-flag t
+                                :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6309 6353]))                          
+                        :type ("geometry_msgs::PoseStamped" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6254 6511])
+                    ("IKCallback" function
+                       (:parent "position_kinematics"
+                        :arguments 
+                          ( ("req" variable
+                               (:reference 1
+                                :type ("baxter_core_msgs::SolvePositionIK::Request" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6686 6734])
+                            ("res" variable
+                               (:reference 1
+                                :type ("baxter_core_msgs::SolvePositionIK::Response" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6772 6821]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [6649 8512]))                  
+                :type "namespace")
+                nil [1952 8515])
+            ("g_pNode" variable (:type ("kinematics::position_kinematics::poskin_ptr" type (:type "class") nil nil)) nil [8660 8712])
+            ("quitRequested" function
+               (:arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [8757 8761]))                  
+                :type "void")
+                nil [8738 8850])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [8987 8996])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8997 9010]))                  
+                :type "int")
+                nil [8978 9587]))          
+      :file "position_kinematics.cpp"
+      :pointmax 9588
+      :fsize 9587
+      :lastmodtime '(23117 24468 575023 689000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!baxter_ws!src!multi_baxter_simulator!multi_baxter_sim_kinematics!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

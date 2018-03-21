@@ -1,0 +1,103 @@
+;; Object optitrack/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "optitrack/"
+  :tables
+  (list
+    (semanticdb-table "insert_scene.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("pub_goal_marker" include nil nil [37 80])
+            ("numpy" include nil nil [81 99])
+            ("motive_to_baxter_transform" include nil nil [100 167])
+            ("InsertScene" type
+               (:members 
+                  ( ("'''
+    insert objects into the environment (defined in config.py) and obtain pose feedback
+    '''" code nil (reparse-symbol indented_block_body) [195 294])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [341 376])
+                            ("self" variable nil (reparse-symbol indented_block_body) [385 442])
+                            ("for" code nil (reparse-symbol indented_block_body) [465 886])
+                            ("self" code nil (reparse-symbol indented_block_body) [895 933])
+                            ("self" variable nil (reparse-symbol indented_block_body) [942 962]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [317 321])
+                            ("config" variable nil (reparse-symbol function_parameters) [323 329]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [304 963])
+                    ("update_scene_objects" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1005 1009]))                          )
+                        (reparse-symbol indented_block_body) [980 1235]))                  
+                :type "class")
+                nil [170 1235])
+            ("if" code nil nil [1241 1423]))          
+      :file "insert_scene.py"
+      :pointmax 1423
+      :fsize 1422
+      :lastmodtime '(23125 7977 141295 688000)
+      :unmatched-syntax nil)
+    (semanticdb-table "pub_goal_marker.py"
+      :file "pub_goal_marker.py"
+      :fsize 11451
+      :lastmodtime '(23188 19359 867553 685000))
+    (semanticdb-table "motive_to_baxter_transform.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("pub_goal_marker" include nil nil [37 80])
+            ("geometry_msgs.msg" include nil nil [81 128])
+            ("numpy" include nil nil [129 147])
+            ("sys" include nil nil [148 158])
+            ("tf" include nil nil [159 168])
+            ("MotiveToBaxterFrameTransform" type
+               (:members 
+                  ( ("'''
+    Transform poses in motive frame to baxter frame
+    '''" code nil (reparse-symbol indented_block_body) [212 275])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [321 385])
+                            ("self" variable nil (reparse-symbol indented_block_body) [394 431])
+                            ("self" variable nil (reparse-symbol indented_block_body) [440 477])
+                            ("for" code nil (reparse-symbol indented_block_body) [487 694])
+                            ("self" variable nil (reparse-symbol indented_block_body) [703 723]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [298 302])
+                            ("config" variable nil (reparse-symbol function_parameters) [304 310]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [285 724])
+                    ("sub_motive_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [753 757])
+                            ("msg" variable nil (reparse-symbol function_parameters) [759 762])
+                            ("topic_name" variable nil (reparse-symbol function_parameters) [764 774]))                          )
+                        (reparse-symbol indented_block_body) [729 1649])
+                    ("get_object_poses" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1675 1679]))                          )
+                        (reparse-symbol indented_block_body) [1654 2259])
+                    ("get_object_pose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2284 2288])
+                            ("name" variable nil (reparse-symbol function_parameters) [2290 2294]))                          )
+                        (reparse-symbol indented_block_body) [2264 2591]))                  
+                :type "class")
+                nil [170 2591])
+            ("if" code nil nil [2602 2677]))          
+      :file "motive_to_baxter_transform.py"
+      :pointmax 2677
+      :fsize 2676
+      :lastmodtime '(23125 7977 141295 688000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!Xiao!docker!docker_home!baxter_ws!src!baxter_learn_pkgs!baxter_api!src!baxter_api!env!optitrack!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

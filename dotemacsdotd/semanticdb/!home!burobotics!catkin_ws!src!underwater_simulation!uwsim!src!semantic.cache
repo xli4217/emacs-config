@@ -1,0 +1,1157 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "VirtualSLSProjector.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("uwsim/VirtualSLSProjector.h" include (:system-flag t) nil [140 178])
+            ("UpdateLMVPM" type
+               (:superclasses 
+                  ( ("osg::Uniform::Callback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [232 239])
+                    ("UpdateLMVPM" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("camera" variable
+                               (:pointer 1
+                                :type ("osg::Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [254 274]))                          
+                        :type ("UpdateLMVPM" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [242 306])
+                    ("()" function
+                       (:operator-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("u" variable
+                               (:pointer 1
+                                :type ("osg::Uniform" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [334 350])
+                            ("" variable
+                               (:pointer 1
+                                :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [351 369]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [309 559])
+                    ("protected" label nil (reparse-symbol classsubparts) [561 571])
+                    ("mCamera" variable
+                       (:pointer 1
+                        :type ("osg::Camera" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [574 595]))                  
+                :type "class")
+                nil [180 598])
+            ("VirtualSLSProjector" function
+               (:constructor-flag t
+                :parent "VirtualSLSProjector"
+                :type ("VirtualSLSProjector" type (:type "class") nil nil))
+                nil [600 940])
+            ("VirtualSLSProjector" function
+               (:constructor-flag t
+                :parent "VirtualSLSProjector"
+                :arguments 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [983 1000])
+                    ("parentName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1000 1023])
+                    ("root" variable
+                       (:pointer 1
+                        :type ("osg::Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1024 1040])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("osg::Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1041 1057])
+                    ("image_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1058 1081])
+                    ("fov" variable (:type "double") (reparse-symbol arg-sub-list) [1123 1134])
+                    ("laser" variable (:type "bool") (reparse-symbol arg-sub-list) [1135 1146]))                  
+                :type ("VirtualSLSProjector" type (:type "class") nil nil))
+                nil [942 1239])
+            ("init" function
+               (:parent "VirtualSLSProjector"
+                :arguments 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1272 1289])
+                    ("parentName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1289 1312])
+                    ("root" variable
+                       (:pointer 1
+                        :type ("osg::Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1313 1329])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("osg::Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1330 1346])
+                    ("image_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1347 1370])
+                    ("range" variable (:type "double") (reparse-symbol arg-sub-list) [1371 1384])
+                    ("fov" variable (:type "double") (reparse-symbol arg-sub-list) [1416 1427])
+                    ("laser" variable (:type "bool") (reparse-symbol arg-sub-list) [1428 1439]))                  
+                :type "void")
+                nil [1241 3768]))          
+      :file "VirtualSLSProjector.cpp"
+      :pointmax 3770
+      :fsize 3769
+      :lastmodtime '(22721 1705 642223 34000)
+      :unmatched-syntax nil)
+    (semanticdb-table "SimulatedDevices.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("uwsim/SimulatedDevices.h" include (:system-flag t) nil [342 377])
+            ("uwsim/ConfigXMLParser.h" include (:system-flag t) nil [378 412])
+            ("ros/ros.h" include (:system-flag t) nil [413 433])
+            ("osg/Notify" include (:system-flag t) nil [434 455])
+            ("pluginlib/class_loader.h" include (:system-flag t) nil [457 492])
+            ("uwsim" using (:type ("uwsim" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [493 515])
+            ("SimulatedDevicesLoader" type
+               (:members 
+                  ( ("simdev_loader" variable (:type ("boost::shared_ptr" type
+                         (:template-specifier 
+                            ( ("pluginlib::ClassLoader" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [550 631])
+                    ("available_plugins" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [634 667])
+                    ("public" label nil (reparse-symbol classsubparts) [668 675])
+                    ("factories" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("SimulatedDeviceFactory::Ptr" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [757 808])
+                    ("SimulatedDevicesLoader" function
+                       (:constructor-flag t
+                        :type ("SimulatedDevicesLoader" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [812 1700])
+                    ("SimulatedDevicesLoader" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1704 1899]))                  
+                :type "class")
+                nil [517 1902])
+            ("loader" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("SimulatedDevicesLoader" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1957 1981]))                  
+                :type ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("SimulatedDevicesLoader" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1904 1983])
+            ("SimulatedDevices" function
+               (:constructor-flag t
+                :parent "SimulatedDevices"
+                :type ("SimulatedDevices" type (:type "class") nil nil))
+                nil [1985 2025])
+            ("getInterfaces" function
+               (:parent "SimulatedDevices"
+                :arguments 
+                  ( ("rosInterface" variable
+                       (:reference 1
+                        :type ("ROSInterfaceInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2110 2142])
+                    ("iauvFile" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("boost::shared_ptr" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2143 2201]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("boost::shared_ptr" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2027 3002])
+            ("applyConfig" function
+               (:parent "SimulatedDevices"
+                :arguments 
+                  ( ("auv" variable
+                       (:pointer 1
+                        :type ("SimulatedIAUV" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3039 3059])
+                    ("vehicleChars" variable
+                       (:reference 1
+                        :type ("Vehicle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3060 3082])
+                    ("oscene" variable
+                       (:pointer 1
+                        :type ("SceneBuilder" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3083 3104]))                  
+                :type "void")
+                nil [3004 3441])
+            ("processConfigNode" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("xmlpp::Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3473 3497])
+                    ("config" variable
+                       (:pointer 1
+                        :type ("ConfigFile" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3498 3518])
+                    ("cfg" variable (:type ("SimulatedDeviceConfig::Ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3519 3550]))                  
+                :type "void")
+                nil [3443 3915])
+            ("processConfig" function
+               (:parent "SimulatedDevices"
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("xmlpp::Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3989 4013])
+                    ("config" variable
+                       (:pointer 1
+                        :type ("ConfigFile" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4014 4034])
+                    ("isDevice" variable (:type "bool") (reparse-symbol arg-sub-list) [4107 4121]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("SimulatedDeviceConfig::Ptr" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3917 5236])
+            ("SimulatedDeviceConfig" function
+               (:constructor-flag t
+                :parent "SimulatedDeviceConfig"
+                :arguments 
+                  ( ("type" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5283 5300]))                  
+                :type ("SimulatedDeviceConfig" type (:type "class") nil nil))
+                nil [5238 5325])
+            ("SimulatedDeviceFactory" function
+               (:constructor-flag t
+                :parent "SimulatedDeviceFactory"
+                :arguments 
+                  ( ("type" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5374 5391]))                  
+                :type ("SimulatedDeviceFactory" type (:type "class") nil nil))
+                nil [5327 5416])
+            ("SimulatedDevice" function
+               (:constructor-flag t
+                :parent "SimulatedDevice"
+                :arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :type ("SimulatedDeviceConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5451 5479]))                  
+                :type ("SimulatedDevice" type (:type "class") nil nil))
+                nil [5418 5540]))          
+      :file "SimulatedDevices.cpp"
+      :pointmax 5541
+      :fsize 5540
+      :lastmodtime '(22721 1705 642223 34000)
+      :unmatched-syntax '((semantic-list 1979 . 1981) (NEW 1953 . 1956)))
+    (semanticdb-table "DVLSensor.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("uwsim/UWSimUtils.h" include (:system-flag t) nil [352 381])
+            ("uwsim/DVLSensor.h" include (:system-flag t) nil [382 410])
+            ("osg/io_utils" include (:system-flag t) nil [411 434])
+            ("osg/PositionAttitudeTransform" include (:system-flag t) nil [436 476])
+            ("getMeasurement" function
+               (:parent "DVLSensor"
+                :type ("osg::Vec3d" type (:type "class") nil nil))
+                nil [478 1549])
+            ("getTFTransform" function
+               (:parent "DVLSensor"
+                :arguments 
+                  ( ("pose" variable
+                       (:reference 1
+                        :type ("tf::Pose" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1581 1597])
+                    ("parent" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1598 1619]))                  
+                :type "int")
+                nil [1551 2366]))          
+      :file "DVLSensor.cpp"
+      :pointmax 2368
+      :fsize 2367
+      :lastmodtime '(22721 1705 642223 34000)
+      :unmatched-syntax nil)
+    (semanticdb-table "InertialMeasurementUnit.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("uwsim/UWSimUtils.h" include (:system-flag t) nil [352 381])
+            ("uwsim/InertialMeasurementUnit.h" include (:system-flag t) nil [382 424])
+            ("osg/PositionAttitudeTransform" include (:system-flag t) nil [425 465])
+            ("getMeasurement" function
+               (:parent "InertialMeasurementUnit"
+                :type ("osg::Quat" type (:type "class") nil nil))
+                nil [467 1048])
+            ("getTFTransform" function
+               (:parent "InertialMeasurementUnit"
+                :arguments 
+                  ( ("pose" variable
+                       (:reference 1
+                        :type ("tf::Pose" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1094 1110])
+                    ("parent" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1111 1132]))                  
+                :type "int")
+                nil [1050 1879]))          
+      :file "InertialMeasurementUnit.cpp"
+      :pointmax 1880
+      :fsize 1879
+      :lastmodtime '(22721 1705 642223 34000)
+      :unmatched-syntax nil)
+    (semanticdb-table "KinematicChain.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("uwsim/KinematicChain.h" include (:system-flag t) nil [352 385])
+            ("osgDB/Registry" include (:system-flag t) nil [386 411])
+            ("osgDB/ReadFile" include (:system-flag t) nil [412 437])
+            ("KinematicChain" function
+               (:constructor-flag t
+                :parent "KinematicChain"
+                :arguments 
+                  ( ("nlinks" variable (:type "int") (reparse-symbol arg-sub-list) [470 481])
+                    ("njoints" variable (:type "int") (reparse-symbol arg-sub-list) [482 494]))                  
+                :type ("KinematicChain" type (:type "class") nil nil))
+                nil [439 721])
+            ("setJointPosition" function
+               (:parent "KinematicChain"
+                :arguments 
+                  ( ("newq" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [761 774])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [775 781]))                  
+                :type "void")
+                nil [723 1487])
+            ("setJointVelocity" function
+               (:parent "KinematicChain"
+                :arguments 
+                  ( ("qdot" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1527 1540])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1541 1547]))                  
+                :type "void")
+                nil [1489 2384])
+            ("setJointPosition" function
+               (:parent "KinematicChain"
+                :arguments 
+                  ( ("q" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2424 2447])
+                    ("names" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [2448 2479]))                  
+                :type "void")
+                nil [2386 3101])
+            ("setJointVelocity" function
+               (:parent "KinematicChain"
+                :arguments 
+                  ( ("qdot" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3141 3167])
+                    ("names" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [3168 3199]))                  
+                :type "void")
+                nil [3103 3823])
+            ("getJointPosition" function
+               (:parent "KinematicChain"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("double" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3825 4066])
+            ("getJointName" function
+               (:parent "KinematicChain"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [4068 4308])
+            ("getFullJointMap" function
+               (:parent "KinematicChain"
+                :type ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("double" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [4310 4545])
+            ("KinematicChain" function
+               (:destructor-flag t
+                :parent "KinematicChain"
+                :type "void")
+                nil [4547 4584]))          
+      :file "KinematicChain.cpp"
+      :pointmax 4585
+      :fsize 4584
+      :lastmodtime '(22721 1705 642223 34000)
+      :unmatched-syntax nil)
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [352 372])
+            ("string" include (:system-flag t) nil [374 391])
+            ("vector" include (:system-flag t) nil [392 409])
+            ("stdlib.h" include (:system-flag t) nil [410 429])
+            ("uwsim/ConfigXMLParser.h" include (:system-flag t) nil [431 465])
+            ("uwsim/ROSSceneBuilder.h" include (:system-flag t) nil [466 500])
+            ("uwsim/ViewBuilder.h" include (:system-flag t) nil [501 531])
+            ("uwsim/PhysicsBuilder.h" include (:system-flag t) nil [532 565])
+            ("osgbCollision/GLDebugDrawer.h" include nil nil [566 606])
+            ("uwsim/UWSimUtils.h" include (:system-flag t) nil [607 636])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [638 658])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [699 708])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [709 722]))                  
+                :type "int")
+                nil [690 7369]))          
+      :file "main.cpp"
+      :pointmax 7370
+      :fsize 7369
+      :lastmodtime '(22721 1705 642223 34000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ROSInterface.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("uwsim/ROSInterface.h" include (:system-flag t) nil [350 381])
+            ("uwsim/UWSimUtils.h" include (:system-flag t) nil [382 411])
+            ("osg/LineWidth" include (:system-flag t) nil [412 436])
+            ("osg/Material" include (:system-flag t) nil [437 460])
+            ("osgOcean/ShaderManager" include (:system-flag t) nil [461 494])
+            ("uwsim/osgPCDLoader.h" include (:system-flag t) nil [495 526])
+            ("sensor_msgs/Imu.h" include (:system-flag t) nil [528 556])
+            ("sensor_msgs/NavSatFix.h" include (:system-flag t) nil [557 591])
+            ("sensor_msgs/LaserScan.h" include (:system-flag t) nil [592 626])
+            ("underwater_sensor_msgs/Pressure.h" include (:system-flag t) nil [627 671])
+            ("underwater_sensor_msgs/DVL.h" include (:system-flag t) nil [672 711])
+            ("std_msgs/Bool.h" include (:system-flag t) nil [712 738])
+            ("osg/LineStipple" include (:system-flag t) nil [739 765])
+            ("robot_state_publisher/robot_state_publisher.h" include (:system-flag t) nil [766 822])
+            ("kdl_parser/kdl_parser.hpp" include (:system-flag t) nil [823 859])
+            ("ROSInterface::current_time_" variable (:type ("ros::Time" type (:type "class") nil nil)) nil [878 916])
+            ("ROSSubscriberInterface" function
+               (:constructor-flag t
+                :parent "ROSSubscriberInterface"
+                :arguments 
+                  ( ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [965 983]))                  
+                :type ("ROSSubscriberInterface" type (:type "class") nil nil))
+                nil [918 1030])
+            ("run" function
+               (:parent "ROSSubscriberInterface"
+                :type "void")
+                nil [1050 1142])
+            ("ROSSubscriberInterface" function
+               (:destructor-flag t
+                :parent "ROSSubscriberInterface"
+                :type "void")
+                nil [1144 1207])
+            ("ROSOdomToPAT" function
+               (:constructor-flag t
+                :parent "ROSOdomToPAT"
+                :arguments 
+                  ( ("rootNode" variable
+                       (:pointer 1
+                        :type ("osg::Group" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1236 1257])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1258 1276])
+                    ("vehicleName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1277 1301]))                  
+                :type ("ROSOdomToPAT" type (:type "class") nil nil))
+                nil [1209 1610])
+            ("createSubscriber" function
+               (:parent "ROSOdomToPAT"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1648 1668]))                  
+                :type "void")
+                nil [1612 1964])
+            ("processData" function
+               (:parent "ROSOdomToPAT"
+                :arguments 
+                  ( ("odom" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("nav_msgs::Odometry::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1997 2038]))                  
+                :type "void")
+                nil [1966 4012])
+            ("ROSOdomToPAT" function
+               (:destructor-flag t
+                :parent "ROSOdomToPAT"
+                :type "void")
+                nil [4014 4047])
+            ("ROSTwistToPAT" function
+               (:constructor-flag t
+                :parent "ROSTwistToPAT"
+                :arguments 
+                  ( ("rootNode" variable
+                       (:pointer 1
+                        :type ("osg::Group" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4078 4099])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4100 4118])
+                    ("vehicleName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4119 4143]))                  
+                :type ("ROSTwistToPAT" type (:type "class") nil nil))
+                nil [4049 4452])
+            ("createSubscriber" function
+               (:parent "ROSTwistToPAT"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4491 4511]))                  
+                :type "void")
+                nil [4454 4684])
+            ("processData" function
+               (:parent "ROSTwistToPAT"
+                :arguments 
+                  ( ("twist" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("geometry_msgs::TwistStamped::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4718 4769]))                  
+                :type "void")
+                nil [4686 5822])
+            ("ROSTwistToPAT" function
+               (:destructor-flag t
+                :parent "ROSTwistToPAT"
+                :type "void")
+                nil [5824 5859])
+            ("ROSPoseToPAT" function
+               (:constructor-flag t
+                :parent "ROSPoseToPAT"
+                :arguments 
+                  ( ("rootNode" variable
+                       (:pointer 1
+                        :type ("osg::Group" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5888 5909])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5910 5928])
+                    ("vehicleName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5929 5953]))                  
+                :type ("ROSPoseToPAT" type (:type "class") nil nil))
+                nil [5861 6232])
+            ("createSubscriber" function
+               (:parent "ROSPoseToPAT"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6270 6290]))                  
+                :type "void")
+                nil [6234 6453])
+            ("processData" function
+               (:parent "ROSPoseToPAT"
+                :arguments 
+                  ( ("pose" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("geometry_msgs::Pose::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6486 6528]))                  
+                :type "void")
+                nil [6455 6921])
+            ("ROSPoseToPAT" function
+               (:destructor-flag t
+                :parent "ROSPoseToPAT"
+                :type "void")
+                nil [6923 6956])
+            ("ROSPointCloudLoader" function
+               (:constructor-flag t
+                :parent "ROSPointCloudLoader"
+                :arguments 
+                  ( ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6999 7017])
+                    ("root" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osg::Group" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [7018 7048])
+                    ("mask" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7048 7066])
+                    ("del" variable (:type "bool") (reparse-symbol arg-sub-list) [7066 7075]))                  
+                :type ("ROSPointCloudLoader" type (:type "class") nil nil))
+                nil [6958 7166])
+            ("createSubscriber" function
+               (:parent "ROSPointCloudLoader"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7211 7231]))                  
+                :type "void")
+                nil [7168 7383])
+            ("processData" function
+               (:parent "ROSPointCloudLoader"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("sensor_msgs::PointCloud2ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7423 7467]))                  
+                :type "void")
+                nil [7385 8988])
+            ("colourCloudDepth" function
+               (:parent "ROSPointCloudLoader"
+                :arguments 
+                  ( ("cloudIn" variable (:type ("pcl::PointCloud::Ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9130 9174])
+                    ("cloud" variable (:type ("pcl::PointCloud::Ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9175 9220]))                  
+                :type "void")
+                nil [9087 10216])
+            ("interpolate" function
+               (:parent "ROSPointCloudLoader"
+                :arguments 
+                  ( ("val" variable (:type "double") (reparse-symbol arg-sub-list) [10325 10336])
+                    ("y0" variable (:type "double") (reparse-symbol arg-sub-list) [10337 10347])
+                    ("x0" variable (:type "double") (reparse-symbol arg-sub-list) [10348 10358])
+                    ("y1" variable (:type "double") (reparse-symbol arg-sub-list) [10359 10369])
+                    ("x1" variable (:type "double") (reparse-symbol arg-sub-list) [10370 10380]))                  
+                :type "double")
+                nil [10285 10425])
+            ("base" function
+               (:parent "ROSPointCloudLoader"
+                :arguments 
+                  ( ("val" variable (:type "double") (reparse-symbol arg-sub-list) [10460 10471]))                  
+                :type "double")
+                nil [10427 10688])
+            ("ROSPointCloudLoader" function
+               (:destructor-flag t
+                :parent "ROSPointCloudLoader"
+                :type "void")
+                nil [10690 10735])
+            ("ROSJointStateToArm" function
+               (:constructor-flag t
+                :parent "ROSJointStateToArm"
+                :arguments 
+                  ( ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12416 12434])
+                    ("arm" variable (:type ("boost::shared_ptr" type
+                         (:template-specifier 
+                            ( ("SimulatedIAUV" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [12435 12472]))                  
+                :type ("ROSJointStateToArm" type (:type "class") nil nil))
+                nil [12377 12531])
+            ("createSubscriber" function
+               (:parent "ROSJointStateToArm"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12575 12595]))                  
+                :type "void")
+                nil [12533 12774])
+            ("processData" function
+               (:parent "ROSJointStateToArm"
+                :arguments 
+                  ( ("js" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("sensor_msgs::JointState::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12813 12857]))                  
+                :type "void")
+                nil [12776 13322])
+            ("ROSJointStateToArm" function
+               (:destructor-flag t
+                :parent "ROSJointStateToArm"
+                :type "void")
+                nil [13324 13369])
+            ("ROSImageToHUDCamera" function
+               (:constructor-flag t
+                :parent "ROSImageToHUDCamera"
+                :arguments 
+                  ( ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13412 13430])
+                    ("info_topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13431 13454])
+                    ("camera" variable (:type ("boost::shared_ptr" type
+                         (:template-specifier 
+                            ( ("HUDCamera" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [13455 13491]))                  
+                :type ("ROSImageToHUDCamera" type (:type "class") nil nil))
+                nil [13371 13569])
+            ("createSubscriber" function
+               (:parent "ROSImageToHUDCamera"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13614 13634]))                  
+                :type "void")
+                nil [13571 14174])
+            ("processData" function
+               (:parent "ROSImageToHUDCamera"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("sensor_msgs::ImageConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14214 14252]))                  
+                :type "void")
+                nil [14176 15245])
+            ("ROSImageToHUDCamera" function
+               (:destructor-flag t
+                :parent "ROSImageToHUDCamera"
+                :type "void")
+                nil [15247 15294])
+            ("ROSPublisherInterface" function
+               (:constructor-flag t
+                :parent "ROSPublisherInterface"
+                :arguments 
+                  ( ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15341 15359])
+                    ("publish_rate" variable (:type "int") (reparse-symbol arg-sub-list) [15360 15377]))                  
+                :type ("ROSPublisherInterface" type (:type "class") nil nil))
+                nil [15296 15610])
+            ("run" function
+               (:parent "ROSPublisherInterface"
+                :type "void")
+                nil [15630 15815])
+            ("ROSPublisherInterface" function
+               (:destructor-flag t
+                :parent "ROSPublisherInterface"
+                :type "void")
+                nil [15817 15878])
+            ("PATToROSOdom" function
+               (:constructor-flag t
+                :parent "PATToROSOdom"
+                :arguments 
+                  ( ("rootNode" variable
+                       (:pointer 1
+                        :type ("osg::Group" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15907 15928])
+                    ("vehicleName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15929 15953])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15954 15972])
+                    ("rate" variable (:type "int") (reparse-symbol arg-sub-list) [15973 15982]))                  
+                :type ("PATToROSOdom" type (:type "class") nil nil))
+                nil [15880 16267])
+            ("createPublisher" function
+               (:parent "PATToROSOdom"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16304 16324]))                  
+                :type "void")
+                nil [16269 16450])
+            ("publish" function
+               (:parent "PATToROSOdom"
+                :type "void")
+                nil [16452 17419])
+            ("PATToROSOdom" function
+               (:destructor-flag t
+                :parent "PATToROSOdom"
+                :type "void")
+                nil [17421 17454])
+            ("ImuToROSImu" function
+               (:constructor-flag t
+                :parent "ImuToROSImu"
+                :arguments 
+                  ( ("imu" variable
+                       (:pointer 1
+                        :type ("InertialMeasurementUnit" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17481 17510])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17511 17529])
+                    ("rate" variable (:type "int") (reparse-symbol arg-sub-list) [17530 17539]))                  
+                :type ("ImuToROSImu" type (:type "class") nil nil))
+                nil [17456 17595])
+            ("createPublisher" function
+               (:parent "ImuToROSImu"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17631 17651]))                  
+                :type "void")
+                nil [17597 17766])
+            ("publish" function
+               (:parent "ImuToROSImu"
+                :type "void")
+                nil [17768 18279])
+            ("ImuToROSImu" function
+               (:destructor-flag t
+                :parent "ImuToROSImu"
+                :type "void")
+                nil [18281 18312])
+            ("PressureSensorToROS" function
+               (:constructor-flag t
+                :parent "PressureSensorToROS"
+                :arguments 
+                  ( ("sensor" variable
+                       (:pointer 1
+                        :type ("PressureSensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18355 18378])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18379 18397])
+                    ("rate" variable (:type "int") (reparse-symbol arg-sub-list) [18398 18407]))                  
+                :type ("PressureSensorToROS" type (:type "class") nil nil))
+                nil [18314 18469])
+            ("createPublisher" function
+               (:parent "PressureSensorToROS"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18513 18533]))                  
+                :type "void")
+                nil [18471 18675])
+            ("publish" function
+               (:parent "PressureSensorToROS"
+                :type "void")
+                nil [18677 18954])
+            ("PressureSensorToROS" function
+               (:destructor-flag t
+                :parent "PressureSensorToROS"
+                :type "void")
+                nil [18956 19003])
+            ("createPublisher" function
+               (:parent "GPSSensorToROS"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19042 19062]))                  
+                :type "void")
+                nil [19005 19189])
+            ("publish" function
+               (:parent "GPSSensorToROS"
+                :type "void")
+                nil [19191 19737])
+            ("createPublisher" function
+               (:parent "DVLSensorToROS"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19776 19796]))                  
+                :type "void")
+                nil [19739 19928])
+            ("publish" function
+               (:parent "DVLSensorToROS"
+                :type "void")
+                nil [19930 20186])
+            ("ArmToROSJointState" function
+               (:constructor-flag t
+                :parent "ArmToROSJointState"
+                :arguments 
+                  ( ("arm" variable
+                       (:pointer 1
+                        :type ("SimulatedIAUV" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20227 20246])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20247 20265])
+                    ("rate" variable (:type "int") (reparse-symbol arg-sub-list) [20266 20275]))                  
+                :type ("ArmToROSJointState" type (:type "class") nil nil))
+                nil [20188 20345])
+            ("createPublisher" function
+               (:parent "ArmToROSJointState"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20388 20408]))                  
+                :type "void")
+                nil [20347 20545])
+            ("publish" function
+               (:parent "ArmToROSJointState"
+                :type "void")
+                nil [20547 20966])
+            ("ArmToROSJointState" function
+               (:destructor-flag t
+                :parent "ArmToROSJointState"
+                :type "void")
+                nil [20968 21013])
+            ("()" function
+               (:operator-flag t
+                :parent "VirtualCameraToROSImage::CameraBufferCallback"
+                :arguments 
+                  ( ("camera" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("osg::Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21080 21106]))                  
+                :type "void")
+                nil [21015 21358])
+            ("CameraBufferCallback" function
+               (:parent "VirtualCameraToROSImage::CameraBufferCallback"
+                :arguments 
+                  ( ("publisher" variable
+                       (:pointer 1
+                        :type ("VirtualCameraToROSImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21428 21464])
+                    ("camera" variable
+                       (:pointer 1
+                        :type ("VirtualCamera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21464 21486])
+                    ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [21486 21496]))                  
+                :type "int")
+                nil [21360 21626])
+            ("VirtualCameraToROSImage" function
+               (:constructor-flag t
+                :parent "VirtualCameraToROSImage"
+                :arguments 
+                  ( ("camera" variable
+                       (:pointer 1
+                        :type ("VirtualCamera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21677 21699])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21700 21718])
+                    ("info_topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21719 21742])
+                    ("rate" variable (:type "int") (reparse-symbol arg-sub-list) [21792 21801])
+                    ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [21802 21812]))                  
+                :type ("VirtualCameraToROSImage" type (:type "class") nil nil))
+                nil [21628 22129])
+            ("createPublisher" function
+               (:parent "VirtualCameraToROSImage"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22177 22197]))                  
+                :type "void")
+                nil [22131 22489])
+            ("publish" function
+               (:parent "VirtualCameraToROSImage"
+                :type "void")
+                nil [22491 26220])
+            ("VirtualCameraToROSImage" function
+               (:destructor-flag t
+                :parent "VirtualCameraToROSImage"
+                :type "void")
+                nil [26222 26277])
+            ("RangeCameraToPCL" function
+               (:constructor-flag t
+                :parent "RangeCameraToPCL"
+                :arguments 
+                  ( ("camera" variable
+                       (:pointer 1
+                        :type ("VirtualCamera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26314 26336])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26337 26355])
+                    ("rate" variable (:type "int") (reparse-symbol arg-sub-list) [26356 26365]))                  
+                :type ("RangeCameraToPCL" type (:type "class") nil nil))
+                nil [26279 26423])
+            ("createPublisher" function
+               (:parent "RangeCameraToPCL"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26464 26484]))                  
+                :type "void")
+                nil [26425 26626])
+            ("publish" function
+               (:parent "RangeCameraToPCL"
+                :type "void")
+                nil [26628 27517])
+            ("RangeCameraToPCL" function
+               (:destructor-flag t
+                :parent "RangeCameraToPCL"
+                :type "void")
+                nil [27519 27560])
+            ("RangeSensorToROSRange" function
+               (:constructor-flag t
+                :parent "RangeSensorToROSRange"
+                :arguments 
+                  ( ("rangesensor" variable
+                       (:pointer 1
+                        :type ("VirtualRangeSensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27607 27639])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27640 27658])
+                    ("rate" variable (:type "int") (reparse-symbol arg-sub-list) [27659 27668]))                  
+                :type ("RangeSensorToROSRange" type (:type "class") nil nil))
+                nil [27562 27730])
+            ("createPublisher" function
+               (:parent "RangeSensorToROSRange"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27776 27796]))                  
+                :type "void")
+                nil [27732 27931])
+            ("publish" function
+               (:parent "RangeSensorToROSRange"
+                :type "void")
+                nil [27933 28333])
+            ("RangeSensorToROSRange" function
+               (:destructor-flag t
+                :parent "RangeSensorToROSRange"
+                :type "void")
+                nil [28335 28386])
+            ("MultibeamSensorToROS" function
+               (:constructor-flag t
+                :parent "MultibeamSensorToROS"
+                :arguments 
+                  ( ("multibeamSensor" variable
+                       (:pointer 1
+                        :type ("MultibeamSensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28431 28464])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28465 28483])
+                    ("rate" variable (:type "int") (reparse-symbol arg-sub-list) [28484 28493]))                  
+                :type ("MultibeamSensorToROS" type (:type "class") nil nil))
+                nil [28388 28559])
+            ("createPublisher" function
+               (:parent "MultibeamSensorToROS"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28604 28624]))                  
+                :type "void")
+                nil [28561 28763])
+            ("publish" function
+               (:parent "MultibeamSensorToROS"
+                :type "void")
+                nil [28765 30120])
+            ("MultibeamSensorToROS" function
+               (:destructor-flag t
+                :parent "MultibeamSensorToROS"
+                :type "void")
+                nil [30122 30171])
+            ("contactSensorToROS" function
+               (:constructor-flag t
+                :parent "contactSensorToROS"
+                :arguments 
+                  ( ("rootNode" variable
+                       (:pointer 1
+                        :type ("osg::Group" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30212 30233])
+                    ("physics" variable
+                       (:pointer 1
+                        :type ("BulletPhysics" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30234 30258])
+                    ("target" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30259 30278])
+                    ("topic" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30318 30336])
+                    ("rate" variable (:type "int") (reparse-symbol arg-sub-list) [30337 30346]))                  
+                :type ("contactSensorToROS" type (:type "class") nil nil))
+                nil [30173 30472])
+            ("createPublisher" function
+               (:parent "contactSensorToROS"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30515 30535]))                  
+                :type "void")
+                nil [30474 30663])
+            ("publish" function
+               (:parent "contactSensorToROS"
+                :type "void")
+                nil [30665 31819])
+            ("contactSensorToROS" function
+               (:destructor-flag t
+                :parent "contactSensorToROS"
+                :type "void")
+                nil [31821 31866])
+            ("WorldToROSTF" function
+               (:constructor-flag t
+                :parent "WorldToROSTF"
+                :arguments 
+                  ( ("scene" variable
+                       (:pointer 1
+                        :type ("SceneBuilder" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31898 31919])
+                    ("worldRootName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31920 31946])
+                    ("enableObjects" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [31947 31974])
+                    ("rate" variable (:type "int") (reparse-symbol arg-sub-list) [31975 31985]))                  
+                :type ("WorldToROSTF" type (:type "class") nil nil))
+                nil [31869 33052])
+            ("createPublisher" function
+               (:parent "WorldToROSTF"
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33089 33109]))                  
+                :type "void")
+                nil [33054 33202])
+            ("publish" function
+               (:parent "WorldToROSTF"
+                :type "void")
+                nil [33204 39415])
+            ("WorldToROSTF" function
+               (:destructor-flag t
+                :parent "WorldToROSTF"
+                :type "void")
+                nil [39417 39450]))          
+      :file "ROSInterface.cpp"
+      :pointmax 39451
+      :fsize 39450
+      :lastmodtime '(22901 750 961609 621000)
+      :unmatched-syntax nil)
+    (semanticdb-table "MultibeamSensor.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("uwsim/MultibeamSensor.h" include (:system-flag t) nil [352 386])
+            ("osg/PositionAttitudeTransform" include (:system-flag t) nil [387 427])
+            ("MultibeamSensor" function
+               (:constructor-flag t
+                :parent "MultibeamSensor"
+                :arguments 
+                  ( ("uwsim_root" variable
+                       (:pointer 1
+                        :type ("osg::Group" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [462 485])
+                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [486 503])
+                    ("parentName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [504 527])
+                    ("trackNode" variable
+                       (:pointer 1
+                        :type ("osg::Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [528 549])
+                    ("initAngle" variable (:type "double") (reparse-symbol arg-sub-list) [550 567])
+                    ("finalAngle" variable (:type "double") (reparse-symbol arg-sub-list) [601 619])
+                    ("alpha" variable (:type "double") (reparse-symbol arg-sub-list) [620 633])
+                    ("range" variable (:type "double") (reparse-symbol arg-sub-list) [634 647])
+                    ("mask" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [648 666])
+                    ("visible" variable (:type "int") (reparse-symbol arg-sub-list) [667 679])
+                    ("ARMask" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [679 699]))                  
+                :type ("MultibeamSensor" type (:type "class") nil nil))
+                nil [429 2753])
+            ("preCalcTable" function
+               (:parent "MultibeamSensor"
+                :type "void")
+                nil [2755 5290])
+            ("getTFTransform" function
+               (:parent "MultibeamSensor"
+                :arguments 
+                  ( ("pose" variable
+                       (:reference 1
+                        :type ("tf::Pose" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5328 5344])
+                    ("parent" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5345 5366]))                  
+                :type "int")
+                nil [5292 6380]))          
+      :file "MultibeamSensor.cpp"
+      :pointmax 6381
+      :fsize 6380
+      :lastmodtime '(22721 1705 642223 34000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!catkin_ws!src!underwater_simulation!uwsim!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

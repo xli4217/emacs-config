@@ -1,0 +1,286 @@
+;; Object darknet_ros/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "darknet_ros/"
+  :tables
+  (list
+    (semanticdb-table "YoloObjectDetector.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [165 182])
+            ("string" include (:system-flag t) nil [183 200])
+            ("vector" include (:system-flag t) nil [201 218])
+            ("iostream" include (:system-flag t) nil [219 238])
+            ("pthread.h" include (:system-flag t) nil [239 259])
+            ("ros/ros.h" include (:system-flag t) nil [268 288])
+            ("std_msgs/Int8.h" include (:system-flag t) nil [289 315])
+            ("actionlib/server/simple_action_server.h" include (:system-flag t) nil [316 366])
+            ("sensor_msgs/image_encodings.h" include (:system-flag t) nil [367 407])
+            ("sensor_msgs/Image.h" include (:system-flag t) nil [408 438])
+            ("geometry_msgs/Point.h" include (:system-flag t) nil [439 471])
+            ("image_transport/image_transport.h" include (:system-flag t) nil [472 516])
+            ("opencv2/imgproc/imgproc.hpp" include (:system-flag t) nil [528 566])
+            ("opencv2/highgui/highgui.hpp" include (:system-flag t) nil [567 605])
+            ("opencv2/objdetect/objdetect.hpp" include (:system-flag t) nil [606 648])
+            ("cv_bridge/cv_bridge.h" include (:system-flag t) nil [649 681])
+            ("darknet_ros_msgs/BoundingBoxes.h" include (:system-flag t) nil [703 746])
+            ("darknet_ros_msgs/BoundingBox.h" include (:system-flag t) nil [747 788])
+            ("darknet_ros_msgs/CheckForObjectsAction.h" include (:system-flag t) nil [789 840])
+            ("darknet_ros" type
+               (:members 
+                  ( ("RosBox_" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("x" variable (:type "float") (reparse-symbol classsubparts) [927 950])
+                                  ("y" variable (:type "float") (reparse-symbol classsubparts) [927 950])
+                                  ("w" variable (:type "float") (reparse-symbol classsubparts) [927 950])
+                                  ("h" variable (:type "float") (reparse-symbol classsubparts) [927 950])
+                                  ("prob" variable (:type "float") (reparse-symbol classsubparts) [927 950])
+                                  ("num" variable (:type "int") (reparse-symbol classsubparts) [953 968])
+                                  ("Class" variable (:type "int") (reparse-symbol classsubparts) [953 968]))                                
+                              :type "struct")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [908 979])
+                    ("demo_yolo" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("RosBox_" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1063 1084])
+                    ("load_network_demo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cfgfile" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1483 1497])
+                            ("weightfile" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1498 1515])
+                            ("datafile" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1516 1531])
+                            ("thresh" variable (:type "float") (reparse-symbol arg-sub-list) [1566 1579])
+                            ("names" variable
+                               (:pointer 2
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1614 1627])
+                            ("classes" variable (:type "int") (reparse-symbol arg-sub-list) [1628 1640])
+                            ("viewimage" variable (:type "bool") (reparse-symbol arg-sub-list) [1675 1690])
+                            ("waitkeydelay" variable (:type "int") (reparse-symbol arg-sub-list) [1691 1708])
+                            ("frame_skip" variable (:type "int") (reparse-symbol arg-sub-list) [1743 1758])
+                            ("hier" variable (:type "float") (reparse-symbol arg-sub-list) [1793 1804])
+                            ("w" variable (:type "int") (reparse-symbol arg-sub-list) [1839 1845])
+                            ("h" variable (:type "int") (reparse-symbol arg-sub-list) [1846 1852])
+                            ("frames" variable (:type "int") (reparse-symbol arg-sub-list) [1853 1864])
+                            ("fullscreen" variable (:type "int") (reparse-symbol arg-sub-list) [1865 1880])
+                            ("enableConsoleOutput" variable (:type "bool") (reparse-symbol arg-sub-list) [1915 1940]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1460 1941])
+                    ("get_ipl_image" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2096 2101]))                          
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2072 2102])
+                    ("YoloObjectDetector" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2132 2139])
+                            ("YoloObjectDetector" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("nh" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2200 2219]))                                  
+                                :type ("YoloObjectDetector" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2181 2220])
+                            ("YoloObjectDetector" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2253 2275])
+                            ("private" label nil (reparse-symbol classsubparts) [2278 2286])
+                            ("readParameters" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2378 2400])
+                            ("init" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2453 2465])
+                            ("drawBoxes" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("inputFrame" variable
+                                       (:reference 1
+                                        :type ("cv::Mat" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2861 2881])
+                                    ("rosBoxes" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("RosBox_" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2882 2913])
+                                    ("numberOfObjects" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2914 2935])
+                                    ("rosBoxColor" variable
+                                       (:reference 1
+                                        :type ("cv::Scalar" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2942 2966])
+                                    ("objectLabel" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2967 2998]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2846 2999])
+                            ("runYolo" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fullFrame" variable
+                                       (:reference 1
+                                        :type ("cv::Mat" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3121 3140])
+                                    ("header" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std_msgs::Header" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3141 3172])
+                                    ("id" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3173 3183]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3108 3185])
+                            ("cameraCallback" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("sensor_msgs::ImageConstPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3281 3319]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3261 3320])
+                            ("checkForObjectsActionGoalCB" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3381 3416])
+                            ("checkForObjectsActionPreemptCB" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3480 3518])
+                            ("isCheckingForObjects" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3673 3707])
+                            ("publishDetectionImage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("detectionImage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("cv::Mat" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3819 3849]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3792 3850])
+                            ("CheckForObjectsActionServer" type
+                               (:typedef ("actionlib::SimpleActionServer" type
+                                     (:template-specifier 
+                                        ( ("darknet_ros_msgs::CheckForObjectsAction" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3870 3977])
+                            ("CheckForObjectsActionServerPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("CheckForObjectsActionServer" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3980 4064])
+                            ("nodeHandle_" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4091 4119])
+                            ("numClasses_" variable (:type "int") (reparse-symbol classsubparts) [4143 4159])
+                            ("classLabels_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4162 4200])
+                            ("checkForObjectsActionServer_" variable (:type ("CheckForObjectsActionServerPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4243 4303])
+                            ("imageTransport_" variable (:type ("image_transport::ImageTransport" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4354 4402])
+                            ("imageSubscriber_" variable (:type ("image_transport::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4442 4487])
+                            ("objectPublisher_" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4490 4522])
+                            ("boundingBoxesPublisher_" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4525 4564])
+                            ("rosBoxes_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::vector" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4592 4638])
+                            ("rosBoxCounter_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4641 4673])
+                            ("rosBoxColors_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("cv::Scalar" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4676 4714])
+                            ("boundingBoxesResults_" variable (:type ("darknet_ros_msgs::BoundingBoxes" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4717 4771])
+                            ("boxes_" variable
+                               (:pointer 1
+                                :type ("RosBox_" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4774 4790])
+                            ("frameWidth_" variable (:type "int") (reparse-symbol classsubparts) [4827 4843])
+                            ("frameHeight_" variable (:type "int") (reparse-symbol classsubparts) [4846 4863])
+                            ("opencvWindow_" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4895 4927])
+                            ("viewImage_" variable (:type "bool") (reparse-symbol classsubparts) [4930 4946])
+                            ("waitKeyDelay_" variable (:type "int") (reparse-symbol classsubparts) [4949 4967])
+                            ("darknetImageViewer_" variable (:type "bool") (reparse-symbol classsubparts) [4970 4995])
+                            ("enableConsoleOutput_" variable (:type "bool") (reparse-symbol classsubparts) [4998 5024])
+                            ("detectionImagePublisher_" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5071 5111]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2104 5114]))                  
+                :type "namespace")
+                nil [842 5117]))          
+      :file "YoloObjectDetector.h"
+      :pointmax 5145
+      :fsize 5144
+      :lastmodtime '(23108 9613 776191 246000)
+      :unmatched-syntax '((EXPLICIT 2172 . 2180) (string 1456 . 1459) (EXTERN 1449 . 1455) (string 1059 . 1062) (EXTERN 1052 . 1058) (symbol 152 . 156) (symbol 145 . 151) (punctuation 144 . 145)))
+    (semanticdb-table "image_interface.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("IMAGE_INTERFACE_H" variable (:constant-flag t) nil [175 192])
+            ("image.h" include nil nil [194 212])
+            ("load_alphabet_with_file" function
+               (:prototype-flag t
+                :pointer 2
+                :arguments 
+                  ( ("datafile" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [246 261]))                  
+                :type ("image" type (:type "class") nil nil))
+                nil [214 262]))          
+      :file "image_interface.h"
+      :pointmax 271
+      :fsize 270
+      :lastmodtime '(23108 9613 776191 246000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("IMAGE_INTERFACE_H")
+          )
+))
+  :file "!home!burobotics!baxter_ws!src!darknet_ros!darknet_ros!include!darknet_ros!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,142 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "dynamics.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("roslib" include nil nil [44 57])
+            ("roslib" code nil nil [59 110])
+            ("rospy" include nil nil [111 123])
+            ("PyKDL" include nil nil [124 136])
+            ("sys" include nil nil [137 147])
+            ("std_msgs.msg" include nil nil [163 205])
+            ("geometry_msgs.msg" include nil nil [207 241])
+            ("geometry_msgs.msg" include nil nil [243 283])
+            ("geometry_msgs.msg" include nil nil [284 327])
+            ("std_srvs.srv" include nil nil [346 376])
+            ("numpy" include nil nil [393 412])
+            ("tf" include nil nil [413 422])
+            ("Dynamics" type
+               (:members 
+                  ( ("getConfig" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [465 469]))                          
+                        :documentation " Load parameters from the rosparam server ")
+                        (reparse-symbol indented_block_body) [451 2205])
+                    ("self" variable nil (reparse-symbol indented_block_body) [2213 2290])
+                    ("s" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3138 3142])
+                            ("x" variable nil (reparse-symbol function_parameters) [3144 3145]))                          
+                        :documentation " Given a 3D vector computes the 3x3 antisymetric matrix ")
+                        (reparse-symbol indented_block_body) [3132 3369])
+                    ("\"\"\" Computes the generalized force as B*u, being B the allocation matrix and u the control input \"\"\"" code nil (reparse-symbol indented_block_body) [3408 3508])
+                    ("b" variable nil (reparse-symbol indented_block_body) [3713 3728])
+                    ("coriolisMatrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3940 3944]))                          )
+                        (reparse-symbol indented_block_body) [3921 4248])
+                    ("dumpingMatrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4275 4279]))                          )
+                        (reparse-symbol indented_block_body) [4257 5164])
+                    ("\"\"\" Computes the gravity and buoyancy forces. Assumes a sphere model for now \"\"\"" code nil (reparse-symbol indented_block_body) [5189 5269])
+                    ("inverseDynamic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6439 6443]))                          
+                        :documentation " Given the setpoint for each thruster, the previous velocity and the 
+            previous position computes the v_dot ")
+                        (reparse-symbol indented_block_body) [6420 7012])
+                    ("integral" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7045 7049])
+                            ("x_dot" variable nil (reparse-symbol function_parameters) [7051 7056])
+                            ("x" variable nil (reparse-symbol function_parameters) [7058 7059])
+                            ("t" variable nil (reparse-symbol function_parameters) [7061 7062]))                          
+                        :documentation " Computes the integral o x dt ")
+                        (reparse-symbol indented_block_body) [7032 7142])
+                    ("kinematics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7171 7175]))                          
+                        :documentation " Given the current velocity and the previous position computes the p_dot ")
+                        (reparse-symbol indented_block_body) [7156 8088])
+                    ("updateThrusters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8113 8117])
+                            ("thrusters" variable nil (reparse-symbol function_parameters) [8119 8128]))                          
+                        :documentation "Receives the control input, saturates each component to maxsat or minsat, and multiplies each component by the actuator gain")
+                        (reparse-symbol indented_block_body) [8093 8376])
+                    ("self" variable nil (reparse-symbol indented_block_body) [8519 8527])
+                    ("thrustersDynamics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8661 8665])
+                            ("u" variable nil (reparse-symbol function_parameters) [8667 8668]))                          )
+                        (reparse-symbol indented_block_body) [8639 8900])
+                    ("updateCollision" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8927 8931])
+                            ("force" variable nil (reparse-symbol function_parameters) [8933 8938]))                          )
+                        (reparse-symbol indented_block_body) [8907 9109])
+                    ("pubPose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9130 9134])
+                            ("event" variable nil (reparse-symbol function_parameters) [9136 9141]))                          )
+                        (reparse-symbol indented_block_body) [9118 9825])
+                    ("computeTf" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9848 9852])
+                            ("tf" variable nil (reparse-symbol function_parameters) [9854 9856]))                          )
+                        (reparse-symbol indented_block_body) [9834 10054])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10069 10073])
+                            ("req" variable nil (reparse-symbol function_parameters) [10074 10077]))                          )
+                        (reparse-symbol indented_block_body) [10059 10132])
+                    ("return" code nil (reparse-symbol indented_block_body) [10133 10142])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\" Simulates the dynamics of an AUV \"\"\"" code nil (reparse-symbol indented_block_body) [10180 10220])
+                            ("if" code nil (reparse-symbol indented_block_body) [10230 10340])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10350 10376])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10385 10417])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10426 10454])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10463 10492]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10165 10169]))                          
+                        :documentation " Simulates the dynamics of an AUV "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10152 10493])
+                    ("self" variable nil (reparse-symbol indented_block_body) [10523 10558])
+                    ("s" variable nil (reparse-symbol indented_block_body) [12531 12585])
+                    ("iterate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12604 12608]))                          )
+                        (reparse-symbol indented_block_body) [12592 13009]))                  
+                :type "class")
+                nil [424 13009])
+            ("if" code nil nil [13019 13202]))          
+      :file "dynamics.py"
+      :pointmax 13207
+      :fsize 13206
+      :lastmodtime '(22721 1705 638223 34000)
+      :unmatched-syntax '((INDENT_BLOCK 10592 . 12528) (INDENT_BLOCK 8528 . 8617) (INDENT_BLOCK 8376 . 8518) (INDENT_BLOCK 5302 . 6398) (INDENT_BLOCK 3729 . 3915) (INDENT_BLOCK 3509 . 3653) (INDENT_BLOCK 2294 . 3118))))
+  :file "!home!burobotics!catkin_ws!src!underwater_simulation!underwater_vehicle_dynamics!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

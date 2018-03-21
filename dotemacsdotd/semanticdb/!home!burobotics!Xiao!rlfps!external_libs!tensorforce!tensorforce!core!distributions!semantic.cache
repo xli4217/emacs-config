@@ -1,0 +1,401 @@
+;; Object distributions/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "distributions/"
+  :tables
+  (list
+    (semanticdb-table "gaussian.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [681 719])
+            ("__future__" include nil nil [720 757])
+            ("__future__" include nil nil [758 789])
+            ("math" include nil nil [791 818])
+            ("tensorflow" include nil nil [819 842])
+            ("tensorforce" include nil nil [844 872])
+            ("tensorforce.core.networks" include nil nil [873 917])
+            ("tensorforce.core.distributions" include nil nil [918 973])
+            ("Gaussian" type
+               (:documentation "
+    Gaussian distribution, for unbounded continuous actions.
+    "
+                :superclasses ("Distribution")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1186 1204])
+                            ("action_size" variable nil (reparse-symbol indented_block_body) [1213 1248])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1258 1319])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1328 1407])
+                            ("super" code nil (reparse-symbol indented_block_body) [1417 1470]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1101 1105])
+                            ("shape" variable nil (reparse-symbol function_parameters) [1107 1112])
+                            ("mean" variable nil (reparse-symbol function_parameters) [1114 1118])
+                            ("log_stddev" variable nil (reparse-symbol function_parameters) [1124 1134])
+                            ("scope" variable nil (reparse-symbol function_parameters) [1140 1145])
+                            ("summary_labels" variable nil (reparse-symbol function_parameters) [1158 1172]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1088 1471])
+                    ("tf_parameterize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1496 1500])
+                            ("x" variable nil (reparse-symbol function_parameters) [1502 1503]))                          )
+                        (reparse-symbol indented_block_body) [1476 2173])
+                    ("state_value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2194 2198])
+                            ("distr_params" variable nil (reparse-symbol function_parameters) [2200 2212]))                          )
+                        (reparse-symbol indented_block_body) [2178 2304])
+                    ("state_action_value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2332 2336])
+                            ("distr_params" variable nil (reparse-symbol function_parameters) [2338 2350])
+                            ("action" variable nil (reparse-symbol function_parameters) [2352 2358]))                          )
+                        (reparse-symbol indented_block_body) [2309 2622])
+                    ("tf_sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2641 2645])
+                            ("distr_params" variable nil (reparse-symbol function_parameters) [2647 2659])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [2661 2674]))                          )
+                        (reparse-symbol indented_block_body) [2627 3061])
+                    ("tf_log_probability" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3089 3093])
+                            ("distr_params" variable nil (reparse-symbol function_parameters) [3095 3107])
+                            ("action" variable nil (reparse-symbol function_parameters) [3109 3115]))                          )
+                        (reparse-symbol indented_block_body) [3066 3378])
+                    ("tf_entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3398 3402])
+                            ("distr_params" variable nil (reparse-symbol function_parameters) [3404 3416]))                          )
+                        (reparse-symbol indented_block_body) [3383 3511])
+                    ("tf_kl_divergence" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3537 3541])
+                            ("distr_params1" variable nil (reparse-symbol function_parameters) [3543 3556])
+                            ("distr_params2" variable nil (reparse-symbol function_parameters) [3558 3571]))                          )
+                        (reparse-symbol indented_block_body) [3516 3994])
+                    ("tf_regularization_loss" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4026 4030]))                          )
+                        (reparse-symbol indented_block_body) [3999 4659])
+                    ("get_variables" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4682 4686])
+                            ("include_non_trainable" variable nil (reparse-symbol function_parameters) [4688 4709]))                          )
+                        (reparse-symbol indented_block_body) [4664 5111])
+                    ("get_summaries" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5134 5138]))                          )
+                        (reparse-symbol indented_block_body) [5116 5405]))                  
+                :type "class")
+                nil [976 5405]))          
+      :file "gaussian.py"
+      :pointmax 5405
+      :fsize 5404
+      :lastmodtime '(23098 62796 444858 228000)
+      :unmatched-syntax nil)
+    (semanticdb-table "beta.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("math" include nil nil [681 701])
+            ("tensorflow" include nil nil [703 726])
+            ("tensorforce" include nil nil [728 756])
+            ("tensorforce.core.networks" include nil nil [757 801])
+            ("tensorforce.core.distributions" include nil nil [802 857])
+            ("Beta" type
+               (:documentation "
+    Beta distribution, for bounded continuous actions
+    "
+                :superclasses ("Distribution")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Beta distribution used for continuous actions. In particular, the Beta distribution
+        allows to bound action values with min and max values.
+
+        Args:
+            shape: Shape of actions
+            min_value: Min value of all actions for the given shape
+            max_value: Max value of all actions for the given shape
+            alpha: Concentration parameter of the Beta distribution
+            beta: Concentration parameter of the Beta distribution
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1072 1564])
+                            ("assert" code nil (reparse-symbol indented_block_body) [1573 1622])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1631 1649])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1658 1684])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1693 1719])
+                            ("action_size" variable nil (reparse-symbol indented_block_body) [1728 1763])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1773 1837])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1846 1907])
+                            ("super" code nil (reparse-symbol indented_block_body) [1917 1966]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [974 978])
+                            ("shape" variable nil (reparse-symbol function_parameters) [980 985])
+                            ("min_value" variable nil (reparse-symbol function_parameters) [987 996])
+                            ("max_value" variable nil (reparse-symbol function_parameters) [998 1007])
+                            ("alpha" variable nil (reparse-symbol function_parameters) [1009 1014])
+                            ("beta" variable nil (reparse-symbol function_parameters) [1020 1024])
+                            ("scope" variable nil (reparse-symbol function_parameters) [1030 1035])
+                            ("summary_labels" variable nil (reparse-symbol function_parameters) [1044 1058]))                          
+                        :documentation "
+        Beta distribution used for continuous actions. In particular, the Beta distribution
+        allows to bound action values with min and max values.
+
+        Args:
+            shape: Shape of actions
+            min_value: Min value of all actions for the given shape
+            max_value: Max value of all actions for the given shape
+            alpha: Concentration parameter of the Beta distribution
+            beta: Concentration parameter of the Beta distribution
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [961 1967])
+                    ("tf_parameterize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1992 1996])
+                            ("x" variable nil (reparse-symbol function_parameters) [1998 1999]))                          )
+                        (reparse-symbol indented_block_body) [1972 2836])
+                    ("tf_sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2855 2859])
+                            ("distr_params" variable nil (reparse-symbol function_parameters) [2861 2873])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [2875 2888]))                          )
+                        (reparse-symbol indented_block_body) [2841 3442])
+                    ("tf_log_probability" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3470 3474])
+                            ("distr_params" variable nil (reparse-symbol function_parameters) [3476 3488])
+                            ("action" variable nil (reparse-symbol function_parameters) [3490 3496]))                          )
+                        (reparse-symbol indented_block_body) [3447 3828])
+                    ("tf_entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3848 3852])
+                            ("distr_params" variable nil (reparse-symbol function_parameters) [3854 3866]))                          )
+                        (reparse-symbol indented_block_body) [3833 4086])
+                    ("tf_kl_divergence" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4112 4116])
+                            ("distr_params1" variable nil (reparse-symbol function_parameters) [4118 4131])
+                            ("distr_params2" variable nil (reparse-symbol function_parameters) [4133 4146]))                          )
+                        (reparse-symbol indented_block_body) [4091 4465])
+                    ("tf_regularization_loss" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4497 4501]))                          )
+                        (reparse-symbol indented_block_body) [4470 5121])
+                    ("get_variables" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5144 5148])
+                            ("include_non_trainable" variable nil (reparse-symbol function_parameters) [5150 5171]))                          )
+                        (reparse-symbol indented_block_body) [5126 5554])
+                    ("get_summaries" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5577 5581]))                          )
+                        (reparse-symbol indented_block_body) [5559 5829]))                  
+                :type "class")
+                nil [860 5829]))          
+      :file "beta.py"
+      :pointmax 5829
+      :fsize 5828
+      :lastmodtime '(23098 62796 444858 228000)
+      :unmatched-syntax nil)
+    (semanticdb-table "distribution.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [681 719])
+            ("__future__" include nil nil [720 757])
+            ("__future__" include nil nil [758 789])
+            ("tensorflow" include nil nil [791 814])
+            ("tensorforce" include nil nil [816 844])
+            ("tensorforce.core.distributions" include nil nil [845 882])
+            ("Distribution" type
+               (:documentation "
+    Base class for policy distributions.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1046 1093])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1103 1126])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1135 1162])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1171 1194])
+                            ("custom_getter" function (:arguments 
+                              ( ("getter" variable nil (reparse-symbol function_parameters) [1222 1228])
+                                ("name" variable nil (reparse-symbol function_parameters) [1230 1234])
+                                ("registered" variable nil (reparse-symbol function_parameters) [1236 1246])
+                                ("kwargs" variable nil (reparse-symbol function_parameters) [1254 1262]))                              ) (reparse-symbol indented_block_body) [1204 1783])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1792 1965])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1974 2129])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2138 2320])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2329 2487])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2496 2672])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2681 2875]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [988 992])
+                            ("scope" variable nil (reparse-symbol function_parameters) [994 999])
+                            ("summary_labels" variable nil (reparse-symbol function_parameters) [1016 1030]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [975 2876])
+                    ("tf_parameterize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2901 2905])
+                            ("x" variable nil (reparse-symbol function_parameters) [2907 2908]))                          
+                        :documentation "
+        Creates the TensorFlow operations for parameterizing a distribution conditioned on the  
+        given input.
+
+        Args:
+            x: Input tensor which the distribution is conditioned on.
+
+        Returns:
+            Tuple of distribution parameter tensors.
+        ")
+                        (reparse-symbol indented_block_body) [2881 3243])
+                    ("tf_sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3262 3266])
+                            ("distr_params" variable nil (reparse-symbol function_parameters) [3268 3280])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [3282 3295]))                          
+                        :documentation "
+        Creates the TensorFlow operations for sampling an action based on a distribution.
+
+        Args:
+            distr_params: Tuple of distribution parameter tensors.
+            deterministic: Boolean input tensor indicating whether the maximum likelihood action  
+            should be returned.
+
+        Returns:
+            Sampled action tensor.
+        ")
+                        (reparse-symbol indented_block_body) [3248 3712])
+                    ("tf_log_probability" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3740 3744])
+                            ("distr_params" variable nil (reparse-symbol function_parameters) [3746 3758])
+                            ("action" variable nil (reparse-symbol function_parameters) [3760 3766]))                          
+                        :documentation "
+        Creates the TensorFlow operations for calculating the log probability of an action for a  
+        distribution.
+
+        Args:
+            distr_params: Tuple of distribution parameter tensors.
+            action: Action tensor.
+
+        Returns:
+            KL divergence tensor.
+        ")
+                        (reparse-symbol indented_block_body) [3717 4117])
+                    ("tf_entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4137 4141])
+                            ("distr_params" variable nil (reparse-symbol function_parameters) [4143 4155]))                          
+                        :documentation "
+        Creates the TensorFlow operations for calculating the entropy of a distribution.
+
+        Args:
+            distr_params: Tuple of distribution parameter tensors.
+
+        Returns:
+            Entropy tensor.
+        ")
+                        (reparse-symbol indented_block_body) [4122 4433])
+                    ("tf_kl_divergence" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4459 4463])
+                            ("distr_params1" variable nil (reparse-symbol function_parameters) [4465 4478])
+                            ("distr_params2" variable nil (reparse-symbol function_parameters) [4480 4493]))                          
+                        :documentation "
+        Creates the TensorFlow operations for calculating the KL divergence between two  
+        distributions.
+
+        Args:
+            distr_params1: Tuple of parameter tensors for first distribution.
+            distr_params2: Tuple of parameter tensors for second distribution.
+
+        Returns:
+            KL divergence tensor.
+        ")
+                        (reparse-symbol indented_block_body) [4438 4891])
+                    ("tf_regularization_loss" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4923 4927]))                          
+                        :documentation "
+        Creates the TensorFlow operations for the distribution regularization loss.
+
+        Returns:
+            Regularization loss tensor.
+        ")
+                        (reparse-symbol indented_block_body) [4896 5116])
+                    ("get_variables" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5139 5143])
+                            ("include_non_trainable" variable nil (reparse-symbol function_parameters) [5145 5166]))                          
+                        :documentation "
+        Returns the TensorFlow variables used by the distribution.
+
+        Returns:
+            List of variables.
+        ")
+                        (reparse-symbol indented_block_body) [5121 5521])
+                    ("get_summaries" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5544 5548]))                          
+                        :documentation "
+        Returns the TensorFlow summaries reported by the distribution.
+
+        Returns:
+            List of summaries.
+        ")
+                        (reparse-symbol indented_block_body) [5526 5725])
+                    ("from_spec" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("spec" variable nil (reparse-symbol function_parameters) [5762 5766])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [5768 5774]))                          
+                        :documentation "
+        Creates a distribution from a specification dict.
+        ")
+                        (reparse-symbol indented_block_body) [5730 6121]))                  
+                :type "class")
+                nil [885 6121]))          
+      :file "distribution.py"
+      :pointmax 6121
+      :fsize 6120
+      :lastmodtime '(23101 19624 602460 721000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!Xiao!rlfps!external_libs!tensorforce!tensorforce!core!distributions!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,171 @@
+;; Object gps_agent_pkg/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gps_agent_pkg/"
+  :tables
+  (list
+    (semanticdb-table "sensor.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [177 197])
+            ("boost/scoped_ptr.hpp" include (:system-flag t) nil [198 229])
+            ("gps/proto/gps.pb.h" include nil nil [348 377])
+            ("gps_agent_pkg/sample.h" include nil nil [464 497])
+            ("gps_control" type
+               (:members 
+                  ( ("SensorType" type
+                       (:members 
+                          ( ("EncoderSensorType" variable
+                               (:constant-flag t
+                                :default-value (651 652)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [631 652])
+                            ("ROSTopicSensorType" variable
+                               (:constant-flag t
+                                :default-value (679 680)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [658 680])
+                            ("CameraSensorType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [686 703])
+                            ("TotalSensorTypes" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [708 726]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [609 727])
+                    ("Sample" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [754 767])
+                    ("RobotPlugin" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [768 786])
+                    ("Sensor" type
+                       (:members 
+                          ( ("protected" label nil (reparse-symbol classsubparts) [803 813])
+                            ("sensor_step_length_" variable (:type "double") (reparse-symbol classsubparts) [904 931])
+                            ("public" label nil (reparse-symbol classsubparts) [932 939])
+                            ("create_sensor" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("type" variable (:type ("SensorType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [998 1014])
+                                    ("n" variable
+                                       (:reference 1
+                                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1015 1034])
+                                    ("plugin" variable
+                                       (:pointer 1
+                                        :type ("RobotPlugin" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1035 1055])
+                                    ("" variable (:type ("gps::ActuatorType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1056 1074]))                                  
+                                :type ("Sensor" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [969 1075])
+                            ("Sensor" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("n" variable
+                                       (:reference 1
+                                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1107 1126])
+                                    ("plugin" variable
+                                       (:pointer 1
+                                        :type ("RobotPlugin" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1127 1147]))                                  
+                                :type ("Sensor" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1100 1148])
+                            ("Sensor" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1172 1190])
+                            ("reset" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("plugin" variable
+                                       (:pointer 1
+                                        :type ("RobotPlugin" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1304 1324])
+                                    ("current_time" variable (:type ("ros::Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1325 1348]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1285 1349])
+                            ("update" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("plugin" variable
+                                       (:pointer 1
+                                        :type ("RobotPlugin" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1749 1769])
+                                    ("current_time" variable (:type ("ros::Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1770 1793])
+                                    ("is_controller_step" variable (:type "bool") (reparse-symbol arg-sub-list) [1794 1818]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1729 1819])
+                            ("set_update" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("new_sensor_step_length" variable (:type "double") (reparse-symbol arg-sub-list) [1880 1910]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1856 1911])
+                            ("configure_sensor" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("options" variable
+                                       (:reference 1
+                                        :type ("OptionsMap" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2012 2032]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1982 2033])
+                            ("set_sample_data_format" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("sample" variable
+                                       (:reference 1
+                                        :type ("boost::scoped_ptr" type
+                                             (:template-specifier 
+                                                ( ("Sample" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2135 2169]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2099 2170])
+                            ("set_sample_data" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("sample" variable
+                                       (:reference 1
+                                        :type ("boost::scoped_ptr" type
+                                             (:template-specifier 
+                                                ( ("Sample" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2244 2278])
+                                    ("t" variable (:type "int") (reparse-symbol arg-sub-list) [2279 2285]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2215 2286]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [788 2289]))                  
+                :type "namespace")
+                nil [499 2292]))          
+      :file "sensor.h"
+      :pointmax 3126
+      :fsize 3125
+      :lastmodtime '(22653 24658 0 0)
+      :unmatched-syntax '((symbol 159 . 163) (symbol 152 . 158) (punctuation 151 . 152)))
+    (semanticdb-table "sample.h"
+      :file "sample.h"
+      :fsize 4752
+      :lastmodtime '(22653 24658 0 0)))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!src!gps_agent_pkg!include!gps_agent_pkg!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

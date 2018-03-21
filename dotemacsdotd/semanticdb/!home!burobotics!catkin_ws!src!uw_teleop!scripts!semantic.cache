@@ -1,0 +1,805 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables
+  (list
+    (semanticdb-table "uw_teleop_thrust.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("numpy" include nil nil [37 55])
+            ("std_msgs.msg" include nil nil [56 98])
+            ("sensor_msgs.msg" include nil nil [99 137])
+            ("nav_msgs.msg" include nil nil [138 171])
+            ("os.path" include nil nil [174 194])
+            ("UWTeleop" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("rospy" code nil (reparse-symbol indented_block_body) [253 280])
+                            ("self" variable nil (reparse-symbol indented_block_body) [291 388])
+                            ("self" variable nil (reparse-symbol indented_block_body) [397 423])
+                            ("self" variable nil (reparse-symbol indented_block_body) [435 502])
+                            ("self" variable nil (reparse-symbol indented_block_body) [512 533])
+                            ("self" variable nil (reparse-symbol indented_block_body) [542 576]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [238 242]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [225 577])
+                    ("joy_msg_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [605 609])
+                            ("data" variable nil (reparse-symbol function_parameters) [611 615]))                          )
+                        (reparse-symbol indented_block_body) [584 944])
+                    ("start_teleop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [966 970]))                          )
+                        (reparse-symbol indented_block_body) [949 1091]))                  
+                :type "class")
+                nil [197 1091])
+            ("if" code nil nil [1092 1175]))          
+      :file "uw_teleop_thrust.py"
+      :pointmax 1175
+      :fsize 2922
+      :lastmodtime '(22878 38995 714768 127000)
+      :unmatched-syntax nil)
+    (semanticdb-table "uw_teleop_BF2_vel_follow.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("sensor_msgs.msg" include nil nil [37 104])
+            ("nav_msgs.msg" include nil nil [105 138])
+            ("cv_bridge" include nil nil [139 184])
+            ("cv2" include nil nil [185 195])
+            ("numpy" include nil nil [196 214])
+            ("tf" include nil nil [215 224])
+            ("laser_geometry" include nil nil [225 267])
+            ("tf2_ros" include nil nil [268 282])
+            ("tf2_sensor_msgs.tf2_sensor_msgs" include nil nil [283 345])
+            ("PyKDL" include nil nil [347 359])
+            ("os.path" include nil nil [360 380])
+            ("UWTeleop" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("rospy" code nil (reparse-symbol indented_block_body) [439 467])
+                            ("self" variable nil (reparse-symbol indented_block_body) [478 553])
+                            ("self" variable nil (reparse-symbol indented_block_body) [562 637])
+                            ("self" variable nil (reparse-symbol indented_block_body) [655 735])
+                            ("self" variable nil (reparse-symbol indented_block_body) [744 770])
+                            ("self" variable nil (reparse-symbol indented_block_body) [779 846])
+                            ("self" variable nil (reparse-symbol indented_block_body) [856 946])
+                            ("self" variable nil (reparse-symbol indented_block_body) [955 1045])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1133 1222])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2515 2535])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2633 2726])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2797 2880])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2889 2951])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2960 3038])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3056 3077])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3086 3112])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3121 3147])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3157 3177])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3186 3206])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3215 3232])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3250 3269])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3278 3297])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3306 3334])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3343 3371])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3389 3411])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3421 3443])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3489 3530])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3540 3584])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3594 3627])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3636 3696]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [424 428]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [411 3697])
+                    ("pose1_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3729 3733])
+                            ("data" variable nil (reparse-symbol function_parameters) [3735 3739]))                          )
+                        (reparse-symbol indented_block_body) [3710 5763])
+                    ("pose2_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5931 5935])
+                            ("data" variable nil (reparse-symbol function_parameters) [5937 5941]))                          )
+                        (reparse-symbol indented_block_body) [5912 6043])
+                    ("laser2_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6077 6081])
+                            ("data" variable nil (reparse-symbol function_parameters) [6083 6087]))                          )
+                        (reparse-symbol indented_block_body) [6057 6120])
+                    ("get_relative_pose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6156 6160])
+                            ("source" variable nil (reparse-symbol function_parameters) [6162 6168])
+                            ("target" variable nil (reparse-symbol function_parameters) [6170 6176]))                          )
+                        (reparse-symbol indented_block_body) [6134 7115])
+                    ("get_planar_pose_follow_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7151 7155])
+                            ("source" variable nil (reparse-symbol function_parameters) [7157 7163])
+                            ("target" variable nil (reparse-symbol function_parameters) [7165 7171])
+                            ("desired_dist" variable nil (reparse-symbol function_parameters) [7173 7185]))                          )
+                        (reparse-symbol indented_block_body) [7120 8510])
+                    ("get_planar_vel_follow_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8545 8549])
+                            ("target_vel" variable nil (reparse-symbol function_parameters) [8551 8561]))                          )
+                        (reparse-symbol indented_block_body) [8515 8730])
+                    ("get_obs_avoidance_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8761 8765])
+                            ("source_id" variable nil (reparse-symbol function_parameters) [8767 8776])
+                            ("scale" variable nil (reparse-symbol function_parameters) [8778 8783]))                          )
+                        (reparse-symbol indented_block_body) [8735 9501])
+                    ("joy_msg_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9539 9543])
+                            ("data" variable nil (reparse-symbol function_parameters) [9545 9549]))                          )
+                        (reparse-symbol indented_block_body) [9518 10823])
+                    ("start_teleop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10846 10850]))                          )
+                        (reparse-symbol indented_block_body) [10829 12219])
+                    ("lidar_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12244 12248])
+                            ("data" variable nil (reparse-symbol function_parameters) [12250 12254]))                          )
+                        (reparse-symbol indented_block_body) [12225 12702])
+                    ("laser1_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12745 12749])
+                            ("data" variable nil (reparse-symbol function_parameters) [12751 12755]))                          )
+                        (reparse-symbol indented_block_body) [12725 12788]))                  
+                :type "class")
+                nil [383 12788])
+            ("if" code nil nil [12802 12885]))          
+      :file "uw_teleop_BF2_vel_follow.py"
+      :pointmax 12885
+      :unmatched-syntax nil)
+    (semanticdb-table "laser_geometry.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Copyright (c) 2014, Enrique Fernandez
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the Willow Garage, Inc. nor the names of its
+      contributors may be used to endorse or promote products derived from
+      this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+\"\"\"" code nil nil [1 1535])
+            ("rospy" include nil nil [1537 1549])
+            ("sensor_msgs.msg" include nil nil [1550 1589])
+            ("sensor_msgs.point_cloud2" include nil nil [1590 1628])
+            ("numpy" include nil nil [1630 1648])
+            ("LaserProjection" type
+               (:documentation "
+    A class to Project Laser Scan
+
+    This calls will project laser scans into point clouds. It caches
+    unit vectors between runs (provided the angular resolution of
+    your scanner is not changing) to avoid excess computation.
+
+    By default all range values less thatn the scanner min_range,
+    greater than the scanner max_range are removed from the generated
+    point cloud, as these are assumed to be invalid.
+
+    If it is important to preserve a mapping between the index of
+    range values and points in the cloud, the recommended approach is to
+    pre-filter your laser scan message to meet the requirement that all
+    ranges are between min and max_range.
+
+    The generate PointClouds have a number of channels which can be enabled
+    through the use of ChannelOption.
+    - ChannelOption.INTENSITY - Create a channel named \"intensities\" with the
+    intensity of the return for each point.
+    - ChannelOption.INDEX     - Create a channel named \"index\" containing the
+    index from the original array for each point.
+    - ChannelOption.DISTANCE  - Create a channel named \"distance\" containing
+    the distance from the laser to each point.
+    - ChannelOption.TIMESTAMP - Create a channel named \"stamps\" containing the
+    specific timestamp at which each point was measured.
+    "
+                :members 
+                  ( ("LASER_SCAN_INVALID" code nil (reparse-symbol indented_block_body) [2996 3023])
+                    ("LASER_SCAN_MIN_RANGE" code nil (reparse-symbol indented_block_body) [3028 3055])
+                    ("LASER_SCAN_MAX_RANGE" code nil (reparse-symbol indented_block_body) [3060 3087])
+                    ("ChannelOption" type
+                       (:members 
+                          ( ("NONE" variable nil (reparse-symbol indented_block_body) [3122 3138])
+                            ("INTENSITY" variable nil (reparse-symbol indented_block_body) [3168 3184])
+                            ("INDEX" variable nil (reparse-symbol indented_block_body) [3224 3240])
+                            ("DISTANCE" variable nil (reparse-symbol indented_block_body) [3280 3296])
+                            ("TIMESTAMP" variable nil (reparse-symbol indented_block_body) [3336 3352])
+                            ("VIEWPOINT" variable nil (reparse-symbol indented_block_body) [3392 3408])
+                            ("DEFAULT" variable nil (reparse-symbol indented_block_body) [3448 3479]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [3093 3480])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3513 3535])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3544 3566])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3576 3611]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3498 3502]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3485 3612])
+                    ("projectLaser" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3634 3638])
+                            ("scan_in" variable nil (reparse-symbol function_parameters) [3640 3647])
+                            ("range_cutoff" variable nil (reparse-symbol function_parameters) [3661 3673])
+                            ("channel_options" variable nil (reparse-symbol function_parameters) [3680 3695]))                          
+                        :documentation "
+        Project a sensor_msgs::LaserScan into a sensor_msgs::PointCloud2.
+
+        Project a single laser scan from a linear array into a 3D
+        point cloud. The generated cloud will be in the same frame
+        as the original laser scan.
+
+        Keyword arguments:
+        scan_in -- The input laser scan.
+        range_cutoff -- An additional range cutoff which can be
+            applied which is more limiting than max_range in the scan
+            (default -1.0).
+        channel_options -- An OR'd set of channels to include.
+        ")
+                        (reparse-symbol indented_block_body) [3617 4357])
+                    ("__projectLaser" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4381 4385])
+                            ("scan_in" variable nil (reparse-symbol function_parameters) [4387 4394])
+                            ("range_cutoff" variable nil (reparse-symbol function_parameters) [4396 4408])
+                            ("channel_options" variable nil (reparse-symbol function_parameters) [4410 4425]))                          )
+                        (reparse-symbol indented_block_body) [4362 9717]))                  
+                :type "class")
+                nil [1650 9717]))          
+      :file "laser_geometry.py"
+      :pointmax 9717
+      :fsize 9716
+      :lastmodtime '(23071 30517 552826 126000)
+      :unmatched-syntax nil)
+    (semanticdb-table "tf_remap.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("tf" include nil nil [37 46])
+            ("tf2_ros" include nil nil [48 62])
+            ("tf2_msgs.msg" include nil nil [64 98])
+            ("geometry_msgs.msg" include nil nil [99 145])
+            ("numpy" include nil nil [147 165])
+            ("TfRemapper" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [205 249])
+                            ("self" variable nil (reparse-symbol indented_block_body) [258 307])
+                            ("self" variable nil (reparse-symbol indented_block_body) [316 365])
+                            ("self" variable nil (reparse-symbol indented_block_body) [374 440])
+                            ("self" variable nil (reparse-symbol indented_block_body) [449 511]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [205 209]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [192 532])
+                    ("tf_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [562 566])
+                            ("data" variable nil (reparse-symbol function_parameters) [568 572]))                          )
+                        (reparse-symbol indented_block_body) [546 790])
+                    ("copy_transform" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1607 1611])
+                            ("transform" variable nil (reparse-symbol function_parameters) [1613 1622])
+                            ("child_frame_id" variable nil (reparse-symbol function_parameters) [1624 1638]))                          )
+                        (reparse-symbol indented_block_body) [1588 2022])
+                    ("tf_remap" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2056 2060]))                          )
+                        (reparse-symbol indented_block_body) [2043 2077]))                  
+                :type "class")
+                nil [167 2077])
+            ("if" code nil nil [2086 2291]))          
+      :file "tf_remap.py"
+      :pointmax 2291
+      :fsize 2290
+      :lastmodtime '(23072 12256 363775 265000)
+      :unmatched-syntax nil)
+    (semanticdb-table "uw_teleop_arms.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("sensor_msgs.msg" include nil nil [37 87])
+            ("nav_msgs.msg" include nil nil [88 121])
+            ("cv_bridge" include nil nil [122 167])
+            ("cv2" include nil nil [168 178])
+            ("os.path" include nil nil [180 200])
+            ("UWTeleop_joint" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("rospy" code nil (reparse-symbol indented_block_body) [265 299])
+                            ("self" variable nil (reparse-symbol indented_block_body) [309 396])
+                            ("self" variable nil (reparse-symbol indented_block_body) [405 431])
+                            ("self" variable nil (reparse-symbol indented_block_body) [440 507])
+                            ("self" variable nil (reparse-symbol indented_block_body) [516 537])
+                            ("self" variable nil (reparse-symbol indented_block_body) [546 573])
+                            ("self" variable nil (reparse-symbol indented_block_body) [582 751])
+                            ("self" variable nil (reparse-symbol indented_block_body) [760 832]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [250 254]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [237 833])
+                    ("joy_msg_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [859 863])
+                            ("data" variable nil (reparse-symbol function_parameters) [865 869]))                          )
+                        (reparse-symbol indented_block_body) [838 2212])
+                    ("start_teleop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2237 2241]))                          )
+                        (reparse-symbol indented_block_body) [2220 2360]))                  
+                :type "class")
+                nil [203 2360])
+            ("if" code nil nil [2361 2463]))          
+      :file "uw_teleop_arms.py"
+      :pointmax 2463
+      :fsize 2462
+      :lastmodtime '(22786 10982 890252 853000)
+      :unmatched-syntax nil)
+    (semanticdb-table "uw_teleop_BF2_vel_follow_spinning_lidar.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("sensor_msgs.msg" include nil nil [37 104])
+            ("nav_msgs.msg" include nil nil [105 138])
+            ("cv_bridge" include nil nil [139 184])
+            ("cv2" include nil nil [185 195])
+            ("numpy" include nil nil [196 214])
+            ("tf" include nil nil [215 224])
+            ("laser_geometry" include nil nil [225 267])
+            ("tf2_ros" include nil nil [268 282])
+            ("tf2_sensor_msgs.tf2_sensor_msgs" include nil nil [283 345])
+            ("PyKDL" include nil nil [347 359])
+            ("os.path" include nil nil [360 380])
+            ("UWTeleop" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("rospy" code nil (reparse-symbol indented_block_body) [439 467])
+                            ("self" variable nil (reparse-symbol indented_block_body) [478 553])
+                            ("self" variable nil (reparse-symbol indented_block_body) [562 637])
+                            ("self" variable nil (reparse-symbol indented_block_body) [655 735])
+                            ("self" variable nil (reparse-symbol indented_block_body) [744 770])
+                            ("self" variable nil (reparse-symbol indented_block_body) [779 846])
+                            ("self" variable nil (reparse-symbol indented_block_body) [856 946])
+                            ("self" variable nil (reparse-symbol indented_block_body) [955 1045])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1055 1144])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1153 1246])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1255 1348])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1419 1502])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1511 1573])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1582 1660])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1678 1699])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1708 1734])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1743 1769])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1779 1799])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1808 1828])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1837 1854])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1872 1891])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1900 1919])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1928 1956])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1965 1993])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2011 2033])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2043 2065])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2111 2152])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2162 2206])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2216 2249])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2258 2318]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [424 428]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [411 2319])
+                    ("pose1_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2351 2355])
+                            ("data" variable nil (reparse-symbol function_parameters) [2357 2361]))                          )
+                        (reparse-symbol indented_block_body) [2332 4385])
+                    ("pose2_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4553 4557])
+                            ("data" variable nil (reparse-symbol function_parameters) [4559 4563]))                          )
+                        (reparse-symbol indented_block_body) [4534 4665])
+                    ("laser2_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4699 4703])
+                            ("data" variable nil (reparse-symbol function_parameters) [4705 4709]))                          )
+                        (reparse-symbol indented_block_body) [4679 4742])
+                    ("get_relative_pose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4778 4782])
+                            ("source" variable nil (reparse-symbol function_parameters) [4784 4790])
+                            ("target" variable nil (reparse-symbol function_parameters) [4792 4798]))                          )
+                        (reparse-symbol indented_block_body) [4756 5737])
+                    ("get_planar_pose_follow_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5773 5777])
+                            ("source" variable nil (reparse-symbol function_parameters) [5779 5785])
+                            ("target" variable nil (reparse-symbol function_parameters) [5787 5793])
+                            ("desired_dist" variable nil (reparse-symbol function_parameters) [5795 5807]))                          )
+                        (reparse-symbol indented_block_body) [5742 7132])
+                    ("get_planar_vel_follow_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7167 7171])
+                            ("target_vel" variable nil (reparse-symbol function_parameters) [7173 7183]))                          )
+                        (reparse-symbol indented_block_body) [7137 7352])
+                    ("get_obs_avoidance_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7383 7387])
+                            ("source_id" variable nil (reparse-symbol function_parameters) [7389 7398])
+                            ("scale" variable nil (reparse-symbol function_parameters) [7400 7405]))                          )
+                        (reparse-symbol indented_block_body) [7357 8123])
+                    ("joy_msg_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8161 8165])
+                            ("data" variable nil (reparse-symbol function_parameters) [8167 8171]))                          )
+                        (reparse-symbol indented_block_body) [8140 9445])
+                    ("start_teleop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9468 9472]))                          )
+                        (reparse-symbol indented_block_body) [9451 10841])
+                    ("lidar_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10866 10870])
+                            ("data" variable nil (reparse-symbol function_parameters) [10872 10876]))                          )
+                        (reparse-symbol indented_block_body) [10847 11324])
+                    ("laser1_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11367 11371])
+                            ("data" variable nil (reparse-symbol function_parameters) [11373 11377]))                          )
+                        (reparse-symbol indented_block_body) [11347 11410]))                  
+                :type "class")
+                nil [383 11410])
+            ("if" code nil nil [11424 11507]))          
+      :file "uw_teleop_BF2_vel_follow_spinning_lidar.py"
+      :pointmax 11507
+      :unmatched-syntax nil)
+    (semanticdb-table "uw_teleop_BF2_vel_follow_stacked_lidar.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("sensor_msgs.msg" include nil nil [37 104])
+            ("nav_msgs.msg" include nil nil [105 138])
+            ("cv_bridge" include nil nil [139 184])
+            ("cv2" include nil nil [185 195])
+            ("numpy" include nil nil [196 214])
+            ("tf" include nil nil [215 224])
+            ("laser_geometry" include nil nil [225 267])
+            ("tf2_ros" include nil nil [268 282])
+            ("tf2_sensor_msgs.tf2_sensor_msgs" include nil nil [283 345])
+            ("PyKDL" include nil nil [347 359])
+            ("os.path" include nil nil [360 380])
+            ("UWTeleop" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("rospy" code nil (reparse-symbol indented_block_body) [439 467])
+                            ("self" variable nil (reparse-symbol indented_block_body) [478 553])
+                            ("self" variable nil (reparse-symbol indented_block_body) [562 637])
+                            ("self" variable nil (reparse-symbol indented_block_body) [655 681])
+                            ("self" variable nil (reparse-symbol indented_block_body) [690 757])
+                            ("self" variable nil (reparse-symbol indented_block_body) [767 857])
+                            ("self" variable nil (reparse-symbol indented_block_body) [866 956])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1044 1136])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1145 1240])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1249 1344])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1353 1448])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1457 1552])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1561 1656])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1665 1760])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1769 1864])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1873 1968])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1977 2072])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2081 2187])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2196 2294])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2304 2324])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2333 2370])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2468 2561])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2632 2715])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2724 2786])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2795 2873])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2891 2912])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2921 2947])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2956 2982])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2992 3012])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3021 3041])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3050 3067])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3085 3104])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3113 3132])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3141 3169])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3178 3206])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3224 3246])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3256 3278])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3324 3365])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3375 3419])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3429 3462])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3471 3531]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [424 428]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [411 3532])
+                    ("pose1_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3564 3568])
+                            ("data" variable nil (reparse-symbol function_parameters) [3570 3574]))                          )
+                        (reparse-symbol indented_block_body) [3545 3856])
+                    ("pose2_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4024 4028])
+                            ("data" variable nil (reparse-symbol function_parameters) [4030 4034]))                          )
+                        (reparse-symbol indented_block_body) [4005 4136])
+                    ("laser2_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4170 4174])
+                            ("data" variable nil (reparse-symbol function_parameters) [4176 4180]))                          )
+                        (reparse-symbol indented_block_body) [4150 4213])
+                    ("get_relative_pose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4249 4253])
+                            ("source" variable nil (reparse-symbol function_parameters) [4255 4261])
+                            ("target" variable nil (reparse-symbol function_parameters) [4263 4269]))                          )
+                        (reparse-symbol indented_block_body) [4227 5208])
+                    ("get_planar_pose_follow_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5244 5248])
+                            ("source" variable nil (reparse-symbol function_parameters) [5250 5256])
+                            ("target" variable nil (reparse-symbol function_parameters) [5258 5264])
+                            ("desired_dist" variable nil (reparse-symbol function_parameters) [5266 5278]))                          )
+                        (reparse-symbol indented_block_body) [5213 6603])
+                    ("get_planar_vel_follow_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6638 6642])
+                            ("target_vel" variable nil (reparse-symbol function_parameters) [6644 6654]))                          )
+                        (reparse-symbol indented_block_body) [6608 6823])
+                    ("get_obs_avoidance_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6854 6858])
+                            ("source_id" variable nil (reparse-symbol function_parameters) [6860 6869])
+                            ("scale" variable nil (reparse-symbol function_parameters) [6871 6876]))                          )
+                        (reparse-symbol indented_block_body) [6828 7594])
+                    ("joy_msg_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7632 7636])
+                            ("data" variable nil (reparse-symbol function_parameters) [7638 7642]))                          )
+                        (reparse-symbol indented_block_body) [7611 8916])
+                    ("start_teleop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8939 8943]))                          )
+                        (reparse-symbol indented_block_body) [8922 10312])
+                    ("lidar_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10337 10341])
+                            ("data" variable nil (reparse-symbol function_parameters) [10343 10347]))                          )
+                        (reparse-symbol indented_block_body) [10318 10795])
+                    ("laser1_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10838 10842])
+                            ("data" variable nil (reparse-symbol function_parameters) [10844 10848]))                          )
+                        (reparse-symbol indented_block_body) [10818 10882]))                  
+                :type "class")
+                nil [383 10882])
+            ("if" code nil nil [10896 10979]))          
+      :file "uw_teleop_BF2_vel_follow_stacked_lidar.py"
+      :pointmax 10979
+      :fsize 10978
+      :lastmodtime '(23162 21633 128472 817000)
+      :unmatched-syntax nil)
+    (semanticdb-table "uw_teleop_BF2_vel_follow_laser_assember.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("sensor_msgs.msg" include nil nil [37 104])
+            ("nav_msgs.msg" include nil nil [105 138])
+            ("cv_bridge" include nil nil [139 184])
+            ("cv2" include nil nil [185 195])
+            ("numpy" include nil nil [196 214])
+            ("tf" include nil nil [215 224])
+            ("laser_geometry" include nil nil [225 267])
+            ("tf2_ros" include nil nil [268 282])
+            ("tf2_sensor_msgs.tf2_sensor_msgs" include nil nil [283 345])
+            ("PyKDL" include nil nil [347 359])
+            ("os.path" include nil nil [360 380])
+            ("laser_assembler.srv" include nil nil [382 428])
+            ("UWTeleop" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("rospy" code nil (reparse-symbol indented_block_body) [499 527])
+                            ("rospy" code nil (reparse-symbol indented_block_body) [577 618])
+                            ("self" variable nil (reparse-symbol indented_block_body) [627 702])
+                            ("self" variable nil (reparse-symbol indented_block_body) [752 827])
+                            ("self" variable nil (reparse-symbol indented_block_body) [836 911])
+                            ("self" variable nil (reparse-symbol indented_block_body) [929 1009])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1018 1104])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1114 1140])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1149 1216])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1226 1316])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1325 1415])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1425 1514])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1628 1723])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1732 1825])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1896 1979])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1988 2050])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2059 2137])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2155 2176])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2185 2211])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2220 2246])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2256 2276])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2285 2305])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2314 2331])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2349 2368])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2377 2396])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2405 2433])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2442 2470])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2488 2510])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2520 2542])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2588 2629])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2639 2683])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2693 2726])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2735 2795]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [484 488]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [471 2796])
+                    ("pose1_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4265 4269])
+                            ("data" variable nil (reparse-symbol function_parameters) [4271 4275]))                          )
+                        (reparse-symbol indented_block_body) [4246 5317])
+                    ("pose2_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5485 5489])
+                            ("data" variable nil (reparse-symbol function_parameters) [5491 5495]))                          )
+                        (reparse-symbol indented_block_body) [5466 5597])
+                    ("laser1_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6523 6527])
+                            ("data" variable nil (reparse-symbol function_parameters) [6529 6533]))                          )
+                        (reparse-symbol indented_block_body) [6503 6566])
+                    ("laser2_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6599 6603])
+                            ("data" variable nil (reparse-symbol function_parameters) [6605 6609]))                          )
+                        (reparse-symbol indented_block_body) [6579 6642])
+                    ("get_relative_pose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6678 6682])
+                            ("source" variable nil (reparse-symbol function_parameters) [6684 6690])
+                            ("target" variable nil (reparse-symbol function_parameters) [6692 6698]))                          )
+                        (reparse-symbol indented_block_body) [6656 7637])
+                    ("get_planar_pose_follow_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7673 7677])
+                            ("source" variable nil (reparse-symbol function_parameters) [7679 7685])
+                            ("target" variable nil (reparse-symbol function_parameters) [7687 7693])
+                            ("desired_dist" variable nil (reparse-symbol function_parameters) [7695 7707]))                          )
+                        (reparse-symbol indented_block_body) [7642 9032])
+                    ("get_planar_vel_follow_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9067 9071])
+                            ("target_vel" variable nil (reparse-symbol function_parameters) [9073 9083]))                          )
+                        (reparse-symbol indented_block_body) [9037 9252])
+                    ("get_obs_avoidance_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9283 9287])
+                            ("source_id" variable nil (reparse-symbol function_parameters) [9289 9298])
+                            ("scale" variable nil (reparse-symbol function_parameters) [9300 9305]))                          )
+                        (reparse-symbol indented_block_body) [9257 10023])
+                    ("joy_msg_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10061 10065])
+                            ("data" variable nil (reparse-symbol function_parameters) [10067 10071]))                          )
+                        (reparse-symbol indented_block_body) [10040 11345])
+                    ("start_teleop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11368 11372]))                          )
+                        (reparse-symbol indented_block_body) [11351 12741]))                  
+                :type "class")
+                nil [443 12741])
+            ("if" code nil nil [12756 12839]))          
+      :file "uw_teleop_BF2_vel_follow_laser_assember.py"
+      :pointmax 12839
+      :fsize 16226
+      :lastmodtime '(23164 20957 665044 262000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!catkin_ws!src!uw_teleop!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

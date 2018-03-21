@@ -1,0 +1,70 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "joy_node.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("unistd.h" include (:system-flag t) nil [1649 1668])
+            ("math.h" include (:system-flag t) nil [1669 1686])
+            ("linux/joystick.h" include (:system-flag t) nil [1687 1714])
+            ("fcntl.h" include (:system-flag t) nil [1715 1733])
+            ("diagnostic_updater/diagnostic_updater.h" include (:system-flag t) nil [1734 1784])
+            ("ros/ros.h" include nil nil [1785 1805])
+            ("sensor_msgs/Joy.h" include (:system-flag t) nil [1806 1834])
+            ("Joystick" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [1912 1920])
+                    ("nh_" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1923 1943])
+                    ("open_" variable (:type "bool") (reparse-symbol classsubparts) [1946 1957])
+                    ("joy_dev_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1960 1981])
+                    ("deadzone_" variable (:type "double") (reparse-symbol classsubparts) [1984 2001])
+                    ("autorepeat_rate_" variable (:type "double") (reparse-symbol classsubparts) [2004 2028])
+                    ("coalesce_interval_" variable (:type "double") (reparse-symbol classsubparts) [2060 2086])
+                    ("event_count_" variable (:type "int") (reparse-symbol classsubparts) [2123 2140])
+                    ("pub_count_" variable (:type "int") (reparse-symbol classsubparts) [2143 2158])
+                    ("pub_" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2161 2181])
+                    ("lastDiagTime_" variable (:type "double") (reparse-symbol classsubparts) [2184 2205])
+                    ("diagnostic_" variable (:type ("diagnostic_updater::Updater" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2209 2249])
+                    ("diagnostics" function
+                       (:arguments 
+                          ( ("stat" variable
+                               (:reference 1
+                                :type ("diagnostic_updater::DiagnosticStatusWrapper" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2315 2365]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2298 3050])
+                    ("public" label nil (reparse-symbol classsubparts) [3052 3059])
+                    ("Joystick" function
+                       (:constructor-flag t
+                        :type ("Joystick" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3062 3100])
+                    ("main" function
+                       (:arguments 
+                          ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3197 3206])
+                            ("argv" variable
+                               (:pointer 2
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3207 3219]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3188 11275]))                  
+                :type "class")
+                nil [1895 11278])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [11289 11298])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11299 11311]))                  
+                :type "int")
+                nil [11280 11395]))          
+      :file "joy_node.cpp"
+      :pointmax 11396
+      :fsize 11395
+      :lastmodtime '(22782 21747 479122 643000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!catkin_ws!src!joystick_drivers!joy1!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

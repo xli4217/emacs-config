@@ -1,0 +1,450 @@
+;; Object algos/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "algos/"
+  :tables
+  (list
+    (semanticdb-table "rllab_trpo_wrapper.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.trpo" include nil nil [1 34])
+            ("rllab.misc.overrides" include nil nil [35 77])
+            ("rllab.misc.logger" include nil nil [78 112])
+            ("rllabTrpoWrapper" type
+               (:superclasses ("TRPO")
+                :members 
+                  ( ("'''
+    Wrapper for rllab implemented TRPO method
+    \"reward\": is the additional input class to post-process rewards using
+                  the collected batch of experience
+    '''" code nil (reparse-symbol indented_block_body) [149 332])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [454 523])
+                            ("if" code nil (reparse-symbol indented_block_body) [532 627]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [364 368])
+                            ("reward" variable nil (reparse-symbol function_parameters) [382 388])
+                            ("optimizer" variable nil (reparse-symbol function_parameters) [407 416])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [435 443]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [338 627])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [657 661]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [632 2010]))                  
+                :type "class")
+                nil [115 2010]))          
+      :file "rllab_trpo_wrapper.py"
+      :pointmax 2010
+      :fsize 2009
+      :lastmodtime '(22580 28753 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22516 4165 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ereps.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("theano.tensor" include nil nil [1 27])
+            ("theano" include nil nil [28 41])
+            ("scipy.optimize" include nil nil [42 63])
+            ("rllab.misc" include nil nil [64 93])
+            ("rllab.misc.overrides" include nil nil [94 136])
+            ("rllab.misc" include nil nil [137 163])
+            ("rllab.algos.batch_polopt" include nil nil [164 226])
+            ("rllab.core.serializable" include nil nil [227 275])
+            ("numpy" include nil nil [276 294])
+            ("rllab.misc" include nil nil [295 339])
+            ("scipy" include nil nil [341 359])
+            ("scipy.optimize" include nil nil [360 395])
+            ("examples.baxter_examples.config" include nil nil [397 450])
+            ("BatchSamplerWrapper" type
+               (:superclasses ("BatchSampler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [531 578]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [510 514])
+                            ("algo" variable nil (reparse-symbol function_parameters) [516 520]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [497 579])
+                    ("process_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [623 627])
+                            ("itr" variable nil (reparse-symbol function_parameters) [629 632])
+                            ("paths" variable nil (reparse-symbol function_parameters) [634 639]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [584 1539]))                  
+                :type "class")
+                nil [452 1539])
+            ("EREPS" type
+               (:documentation "
+    Episodic Relative Entropy Policy Search (REPS)
+
+    References
+    ----------
+    [1] J. Peters, K. Mulling, and Y. Altun, \"Relative Entropy Policy Search,\" Artif. Intell., pp. 1607-1612, 2008.
+
+    [2] Deisenroth, M. P. (2011). A Survey on Policy Search for Robotics
+
+    [3] Daniel, C., Neumann, G., & Peters, J. (2012). Hierarchical Relative Entropy Policy Search 2. Proceedings of the International Conference on Artificial Intelligence and Statistics (AISTATS 2012)
+  
+    "
+                :superclasses ("BatchPolopt" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+
+        :param epsilon: Max KL divergence between new policy and old policy.
+        :param L2_reg_dual: Dual regularization
+        :param L2_reg_loss: Loss regularization
+        :param max_opt_itr: Maximum number of batch optimization iterations.
+        scipy.optimize.fmin_l_bfgs_b.
+        :return:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2233 2554])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [2572 2611])
+                            ("super" code nil (reparse-symbol indented_block_body) [2620 2657])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2667 2689])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2698 2728])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2737 2757])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2767 2807])
+                            ("if" code nil (reparse-symbol indented_block_body) [2865 2968])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3097 3127])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3136 3169]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2115 2119])
+                            ("epsilon" variable nil (reparse-symbol function_parameters) [2133 2140])
+                            ("max_opt_itr" variable nil (reparse-symbol function_parameters) [2158 2169])
+                            ("reward" variable nil (reparse-symbol function_parameters) [2187 2193])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [2214 2222]))                          
+                        :documentation "
+
+        :param epsilon: Max KL divergence between new policy and old policy.
+        :param L2_reg_dual: Dual regularization
+        :param L2_reg_loss: Loss regularization
+        :param max_opt_itr: Maximum number of batch optimization iterations.
+        scipy.optimize.fmin_l_bfgs_b.
+        :return:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2089 3170])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3212 3216]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3187 4630])
+                    ("init_opt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4668 4672]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4640 4773])
+                    ("optimize_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4825 4829])
+                            ("itr" variable nil (reparse-symbol function_parameters) [4831 4834])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [4836 4848]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4790 7727])
+                    ("kl_dual" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7745 7749])
+                            ("eta" variable nil (reparse-symbol function_parameters) [7751 7754])
+                            ("kl_threshold" variable nil (reparse-symbol function_parameters) [7756 7768])
+                            ("rewards" variable nil (reparse-symbol function_parameters) [7770 7777]))                          )
+                        (reparse-symbol indented_block_body) [7733 7878])
+                    ("get_itr_snapshot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7927 7931])
+                            ("itr" variable nil (reparse-symbol function_parameters) [7933 7936])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [7938 7950]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7891 8099]))                  
+                :type "class")
+                nil [1550 8099]))          
+      :file "ereps.py"
+      :pointmax 8099
+      :fsize 8098
+      :lastmodtime '(22684 55421 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "spi_reps.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("theano.tensor" include nil nil [1 27])
+            ("theano" include nil nil [28 41])
+            ("scipy.optimize" include nil nil [42 63])
+            ("rllab.misc" include nil nil [64 93])
+            ("rllab.misc.overrides" include nil nil [94 136])
+            ("rllab.misc" include nil nil [137 163])
+            ("rllab.algos.batch_polopt" include nil nil [164 226])
+            ("rllab.core.serializable" include nil nil [227 275])
+            ("numpy" include nil nil [276 294])
+            ("rllab.misc" include nil nil [295 339])
+            ("scipy" include nil nil [341 359])
+            ("scipy.optimize" include nil nil [360 395])
+            ("BatchSamplerWrapper" type
+               (:superclasses ("BatchSampler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [476 523]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [455 459])
+                            ("algo" variable nil (reparse-symbol function_parameters) [461 465]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [442 524])
+                    ("process_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [568 572])
+                            ("itr" variable nil (reparse-symbol function_parameters) [574 577])
+                            ("paths" variable nil (reparse-symbol function_parameters) [579 584]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [529 1320]))                  
+                :type "class")
+                nil [397 1320])
+            ("SPIREPS" type
+               (:documentation "
+    Step-based PI-REPS
+
+    References
+    ----------
+    [1]. Chebotar, Y., Kalakrishnan, M., Yahya, A., Li, A., Schaal, S., & Levine, S. (2016). Path Integral Guided Policy Search.
+
+    [2]. Gomez, V., Kappen, H. J., Peters, J., & Neumann, G. (2014). Policy search for path integral control. 
+  
+    "
+                :superclasses ("BatchPolopt" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+
+        :param epsilon: Max KL divergence between new policy and old policy.
+        :param L2_reg_dual: Dual regularization
+        :param L2_reg_loss: Loss regularization
+        :param max_opt_itr: Maximum number of batch optimization iterations.
+        :param optimizer: Module path to the optimizer. It must support the same interface as
+        scipy.optimize.fmin_l_bfgs_b.
+        :return:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1888 2303])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [2321 2360])
+                            ("super" code nil (reparse-symbol indented_block_body) [2369 2408])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2418 2440])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2449 2479])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2488 2514])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2523 2543])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2553 2593])
+                            ("if" code nil (reparse-symbol indented_block_body) [2651 2754])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2763 2813])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2822 2870]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1718 1722])
+                            ("epsilon" variable nil (reparse-symbol function_parameters) [1736 1743])
+                            ("max_opt_itr" variable nil (reparse-symbol function_parameters) [1761 1772])
+                            ("optimizer" variable nil (reparse-symbol function_parameters) [1790 1799])
+                            ("reward" variable nil (reparse-symbol function_parameters) [1842 1848])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1869 1877]))                          
+                        :documentation "
+
+        :param epsilon: Max KL divergence between new policy and old policy.
+        :param L2_reg_dual: Dual regularization
+        :param L2_reg_loss: Loss regularization
+        :param max_opt_itr: Maximum number of batch optimization iterations.
+        :param optimizer: Module path to the optimizer. It must support the same interface as
+        scipy.optimize.fmin_l_bfgs_b.
+        :return:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1692 2871])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2909 2913]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2884 4274])
+                    ("init_opt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4312 4316]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4284 4416])
+                    ("optimize_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4468 4472])
+                            ("itr" variable nil (reparse-symbol function_parameters) [4474 4477])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [4479 4491]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4433 7070])
+                    ("kl_dual" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7088 7092])
+                            ("eta" variable nil (reparse-symbol function_parameters) [7094 7097])
+                            ("kl_threshold" variable nil (reparse-symbol function_parameters) [7099 7111])
+                            ("rewards" variable nil (reparse-symbol function_parameters) [7113 7120]))                          )
+                        (reparse-symbol indented_block_body) [7076 7221])
+                    ("get_itr_snapshot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7270 7274])
+                            ("itr" variable nil (reparse-symbol function_parameters) [7276 7279])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [7281 7293]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7234 7442]))                  
+                :type "class")
+                nil [1331 7442]))          
+      :file "spi_reps.py"
+      :pointmax 7442
+      :fsize 7441
+      :lastmodtime '(22659 55233 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "hireps.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("theano.tensor" include nil nil [1 27])
+            ("theano" include nil nil [28 41])
+            ("scipy.optimize" include nil nil [42 63])
+            ("rllab.misc" include nil nil [64 93])
+            ("rllab.misc.overrides" include nil nil [94 136])
+            ("rllab.misc" include nil nil [137 163])
+            ("rllab.algos.batch_polopt" include nil nil [164 226])
+            ("rllab.core.serializable" include nil nil [227 275])
+            ("numpy" include nil nil [276 294])
+            ("rllab.misc" include nil nil [295 339])
+            ("scipy" include nil nil [341 359])
+            ("scipy.optimize" include nil nil [360 395])
+            ("BatchSamplerWrapper" type
+               (:superclasses ("BatchSampler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [476 523]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [455 459])
+                            ("algo" variable nil (reparse-symbol function_parameters) [461 465]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [442 524]))                  
+                :type "class")
+                nil [397 1621])
+            ("SHiREPS" type
+               (:documentation "
+    Step-based Hierarhical Relative Entropy Policy Search (HiREPS)
+
+    References
+    ----------
+    [1] Deisenroth, M. P. (2011). A Survey on Policy Search for Robotics
+
+    [2] Daniel, C., Neumann, G., & Peters, J. (2012). Hierarchical Relative Entropy Policy Search 2. Proceedings of the International Conference on Artificial Intelligence and Statistics (AISTATS 2012)
+  
+    "
+                :superclasses ("BatchPolopt" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+
+        :param epsilon: Max KL divergence between new policy and old policy.
+        :param L2_reg_dual: Dual regularization
+        :param L2_reg_loss: Loss regularization
+        :param max_opt_itr: Maximum number of batch optimization iterations.
+        :param optimizer: Module path to the optimizer. It must support the same interface as
+        scipy.optimize.fmin_l_bfgs_b.
+        :return:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2188 2603])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [2621 2660])
+                            ("super" code nil (reparse-symbol indented_block_body) [2669 2708])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2718 2740])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2749 2779])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2788 2814])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2823 2843])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2853 2893])
+                            ("if" code nil (reparse-symbol indented_block_body) [2951 3054])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3063 3113])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3122 3170]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2098 2102])
+                            ("epsilon" variable nil (reparse-symbol function_parameters) [2116 2123])
+                            ("max_opt_itr" variable nil (reparse-symbol function_parameters) [2141 2152])
+                            ("optimizer" variable nil (reparse-symbol function_parameters) [2170 2179])
+                            ("reward" variable nil (reparse-symbol function_parameters) [2222 2228])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [2249 2257]))                          
+                        :documentation "
+
+        :param epsilon: Max KL divergence between new policy and old policy.
+        :param L2_reg_dual: Dual regularization
+        :param L2_reg_loss: Loss regularization
+        :param max_opt_itr: Maximum number of batch optimization iterations.
+        :param optimizer: Module path to the optimizer. It must support the same interface as
+        scipy.optimize.fmin_l_bfgs_b.
+        :return:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2072 3251])
+                    ("init_opt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4692 4696]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4664 4797])
+                    ("kl_dual" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7753 7757])
+                            ("eta" variable nil (reparse-symbol function_parameters) [7759 7762])
+                            ("kl_threshold" variable nil (reparse-symbol function_parameters) [7764 7776])
+                            ("rewards" variable nil (reparse-symbol function_parameters) [7778 7785]))                          )
+                        (reparse-symbol indented_block_body) [7741 7886])
+                    ("get_itr_snapshot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7935 7939])
+                            ("itr" variable nil (reparse-symbol function_parameters) [7941 7944])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [7946 7958]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7899 8107]))                  
+                :type "class")
+                nil [1632 8107]))          
+      :file "hireps.py"
+      :pointmax 8107
+      :fsize 8106
+      :lastmodtime '(22663 54501 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rlfps!algos!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

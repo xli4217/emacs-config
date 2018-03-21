@@ -1,0 +1,300 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "LaserLoopClosure.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("laser_loop_closure/LaserLoopClosure.h" include (:system-flag t) nil [1805 1853])
+            ("geometry_utils/GeometryUtilsROS.h" include (:system-flag t) nil [1855 1899])
+            ("parameter_utils/ParameterUtils.h" include (:system-flag t) nil [1900 1943])
+            ("pose_graph_msgs/KeyedScan.h" include (:system-flag t) nil [1944 1982])
+            ("pose_graph_msgs/PoseGraph.h" include (:system-flag t) nil [1983 2021])
+            ("std_msgs/Empty.h" include (:system-flag t) nil [2022 2049])
+            ("visualization_msgs/Marker.h" include (:system-flag t) nil [2050 2088])
+            ("pcl/registration/gicp.h" include (:system-flag t) nil [2090 2124])
+            ("pcl_conversions/pcl_conversions.h" include (:system-flag t) nil [2125 2169])
+            ("gu" type
+               (:kind alias
+                :members 
+                  ( ("geometry_utils" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [2171 2201])
+            ("gr" type
+               (:kind alias
+                :members 
+                  ( ("gu::ros" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [2202 2225])
+            ("pu" type
+               (:kind alias
+                :members 
+                  ( ("parameter_utils" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [2226 2257])
+            ("gtsam::BetweenFactor" using (:type ("gtsam::BetweenFactor" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2259 2286])
+            ("gtsam::ISAM2" using (:type ("gtsam::ISAM2" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2287 2306])
+            ("gtsam::ISAM2Params" using (:type ("gtsam::ISAM2Params" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2307 2332])
+            ("gtsam::NonlinearFactorGraph" using (:type ("gtsam::NonlinearFactorGraph" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2333 2367])
+            ("gtsam::Pose3" using (:type ("gtsam::Pose3" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2368 2387])
+            ("gtsam::PriorFactor" using (:type ("gtsam::PriorFactor" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2388 2413])
+            ("gtsam::Rot3" using (:type ("gtsam::Rot3" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2414 2432])
+            ("gtsam::Values" using (:type ("gtsam::Values" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2433 2453])
+            ("gtsam::Vector3" using (:type ("gtsam::Vector3" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2454 2475])
+            ("gtsam::Vector6" using (:type ("gtsam::Vector6" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2476 2497])
+            ("LaserLoopClosure" function
+               (:constructor-flag t
+                :parent "LaserLoopClosure"
+                :type ("LaserLoopClosure" type (:type "class") nil nil))
+                nil [2499 2604])
+            ("LaserLoopClosure" function
+               (:destructor-flag t
+                :parent "LaserLoopClosure"
+                :type "void")
+                nil [2606 2646])
+            ("Initialize" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("n" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2682 2707]))                  
+                :type "bool")
+                nil [2648 3164])
+            ("LoadParameters" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("n" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3204 3229]))                  
+                :type "bool")
+                nil [3166 6475])
+            ("RegisterCallbacks" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("n" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6518 6543]))                  
+                :type "bool")
+                nil [6477 7569])
+            ("AddBetweenFactor" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("delta" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("gu::Transform3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7616 7644])
+                    ("covariance" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("LaserLoopClosure::Mat66" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7645 7687])
+                    ("stamp" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ros::Time" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7692 7715])
+                    ("key" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [7716 7734]))                  
+                :type "bool")
+                nil [7571 8902])
+            ("AddKeyScanPair" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("key" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8942 8959])
+                    ("scan" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("PointCloud::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8998 9031]))                  
+                :type "bool")
+                nil [8904 9819])
+            ("FindLoopClosures" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("key" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [9866 9883])
+                    ("closure_keys" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("unsigned int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9884 9924]))                  
+                :type "bool")
+                nil [9821 12428])
+            ("GetMaximumLikelihoodPoints" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("points" variable
+                       (:pointer 1
+                        :type ("PointCloud" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12480 12499]))                  
+                :type "void")
+                nil [12430 13478])
+            ("GetLastPose" function
+               (:parent "LaserLoopClosure"
+                :type ("gu::Transform3" type (:type "class") nil nil))
+                nil [13480 13730])
+            ("ToGu" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("pose" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Pose3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13770 13788]))                  
+                :type ("gu::Transform3" type (:type "class") nil nil))
+                nil [13732 14104])
+            ("ToGtsam" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("pose" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("gu::Transform3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14138 14165]))                  
+                :type ("Pose3" type (:type "class") nil nil))
+                nil [14106 14519])
+            ("ToGu" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("covariance" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("LaserLoopClosure::Gaussian::shared_ptr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14573 14630]))                  
+                :type ("LaserLoopClosure::Mat66" type (:type "class") nil nil))
+                nil [14521 14854])
+            ("ToGtsam" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("covariance" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("LaserLoopClosure::Mat66" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14926 14968]))                  
+                :type ("LaserLoopClosure::Gaussian::shared_ptr" type (:type "class") nil nil))
+                nil [14856 15176])
+            ("MakePriorFactor" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("pose" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Pose3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15236 15254])
+                    ("covariance" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("LaserLoopClosure::Diagonal::shared_ptr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15259 15316]))                  
+                :type ("PriorFactor" type
+                     (:template-specifier 
+                        ( ("Pose3" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [15178 15373])
+            ("MakeBetweenFactor" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("delta" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Pose3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15437 15456])
+                    ("covariance" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("LaserLoopClosure::Gaussian::shared_ptr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15461 15518]))                  
+                :type ("BetweenFactor" type
+                     (:template-specifier 
+                        ( ("Pose3" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [15375 15645])
+            ("PerformICP" function
+               (:parent "LaserLoopClosure"
+                :arguments 
+                  ( ("scan1" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("PointCloud::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15681 15715])
+                    ("scan2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("PointCloud::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15750 15784])
+                    ("pose1" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("gu::Transform3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15819 15847])
+                    ("pose2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("gu::Transform3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15882 15910])
+                    ("delta" variable
+                       (:pointer 1
+                        :type ("gu::Transform3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15945 15967])
+                    ("covariance" variable
+                       (:pointer 1
+                        :type ("LaserLoopClosure::Mat66" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16002 16038]))                  
+                :type "bool")
+                nil [15647 18920])
+            ("PublishPoseGraph" function
+               (:parent "LaserLoopClosure"
+                :type "void")
+                nil [18922 23952]))          
+      :file "LaserLoopClosure.cc"
+      :pointmax 23953
+      :fsize 23952
+      :lastmodtime '(23160 53199 215751 112000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!Xiao!blam!internal!src!laser_loop_closure!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

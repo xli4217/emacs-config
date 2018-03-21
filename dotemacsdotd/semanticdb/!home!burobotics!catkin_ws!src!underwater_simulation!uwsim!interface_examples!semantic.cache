@@ -1,0 +1,88 @@
+;; Object interface_examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "interface_examples/"
+  :tables
+  (list
+    (semanticdb-table "setJointVelocity.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [353 373])
+            ("sensor_msgs/JointState.h" include (:system-flag t) nil [374 409])
+            ("stdlib.h" include (:system-flag t) nil [410 429])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [440 449])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [450 462]))                  
+                :type "int")
+                nil [431 1615]))          
+      :file "setJointVelocity.cpp"
+      :pointmax 1616
+      :fsize 1615
+      :lastmodtime '(22721 1705 638223 34000)
+      :unmatched-syntax nil)
+    (semanticdb-table "setJointPosition.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [350 370])
+            ("sensor_msgs/JointState.h" include (:system-flag t) nil [371 406])
+            ("stdlib.h" include (:system-flag t) nil [407 426])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [437 446])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [447 459]))                  
+                :type "int")
+                nil [428 2586]))          
+      :file "setJointPosition.cpp"
+      :pointmax 2587
+      :fsize 2586
+      :lastmodtime '(22785 2643 346811 80000)
+      :unmatched-syntax nil)
+    (semanticdb-table "setVehicleDisturbances.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [353 372])
+            ("string.h" include (:system-flag t) nil [373 392])
+            ("ros/ros.h" include (:system-flag t) nil [400 420])
+            ("nav_msgs/Odometry.h" include (:system-flag t) nil [421 451])
+            ("osg/Quat" include (:system-flag t) nil [458 477])
+            ("osg/Vec3d" include (:system-flag t) nil [478 498])
+            ("osg/Matrix" include (:system-flag t) nil [499 520])
+            ("firstpass" variable
+               (:default-value "false"
+                :type "bool")
+                nil [522 543])
+            ("initialQ" variable (:type ("osg::Quat" type (:type "class") nil nil)) nil [544 563])
+            ("initialT" variable (:type ("osg::Vec3d" type (:type "class") nil nil)) nil [564 584])
+            ("wMv_initial" variable (:type ("osg::Matrix" type (:type "class") nil nil)) nil [585 609])
+            ("vehiclePoseCallback" function
+               (:arguments 
+                  ( ("odom" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("nav_msgs::Odometry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [636 667]))                  
+                :type "void")
+                nil [611 1012])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1023 1032])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1033 1045]))                  
+                :type "int")
+                nil [1014 3150]))          
+      :file "setVehicleDisturbances.cpp"
+      :pointmax 3151
+      :fsize 3150
+      :lastmodtime '(22721 1705 638223 34000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!catkin_ws!src!underwater_simulation!uwsim!interface_examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

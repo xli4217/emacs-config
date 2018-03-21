@@ -1,0 +1,135 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables
+  (list
+    (semanticdb-table "ik_pick_and_place_demo.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Baxter RSDK Inverse Kinematics Pick and Place Demo
+\"\"\"" code nil nil [1578 1636])
+            ("argparse" include nil nil [1637 1652])
+            ("struct" include nil nil [1653 1666])
+            ("sys" include nil nil [1667 1677])
+            ("copy" include nil nil [1678 1689])
+            ("rospy" include nil nil [1691 1703])
+            ("rospkg" include nil nil [1704 1717])
+            ("" code nil nil [1747 1783])
+            ("" code nil nil [1814 1871])
+            ("" code nil nil [1897 1923])
+            ("" code nil nil [1958 2010])
+            ("baxter_interface" include nil nil [2012 2035])
+            ("PickAndPlace" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2140 2162])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2180 2217])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2238 2261])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2277 2317])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2326 2372])
+                            ("ns" code nil (reparse-symbol indented_block_body) [2381 2447])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2456 2509])
+                            ("rospy" code nil (reparse-symbol indented_block_body) [2518 2549])
+                            ("print" code nil (reparse-symbol indented_block_body) [2592 2624])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2633 2704])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2713 2756])
+                            ("print" code nil (reparse-symbol indented_block_body) [2765 2792])
+                            ("self" code nil (reparse-symbol indented_block_body) [2801 2818]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2082 2086])
+                            ("limb" variable nil (reparse-symbol function_parameters) [2088 2092])
+                            ("hover_distance" variable nil (reparse-symbol function_parameters) [2094 2108])
+                            ("verbose" variable nil (reparse-symbol function_parameters) [2117 2124]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2069 2819])
+                    ("move_to_start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2842 2846])
+                            ("start_angles" variable nil (reparse-symbol function_parameters) [2848 2860]))                          )
+                        (reparse-symbol indented_block_body) [2824 3190])
+                    ("ik_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3210 3214])
+                            ("pose" variable nil (reparse-symbol function_parameters) [3216 3220]))                          )
+                        (reparse-symbol indented_block_body) [3195 4780])
+                    ("_guarded_move_to_joint_position" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4821 4825])
+                            ("joint_angles" variable nil (reparse-symbol function_parameters) [4827 4839]))                          )
+                        (reparse-symbol indented_block_body) [4785 5037])
+                    ("gripper_open" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5059 5063]))                          )
+                        (reparse-symbol indented_block_body) [5042 5120])
+                    ("gripper_close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5143 5147]))                          )
+                        (reparse-symbol indented_block_body) [5125 5205])
+                    ("_approach" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5224 5228])
+                            ("pose" variable nil (reparse-symbol function_parameters) [5230 5234]))                          )
+                        (reparse-symbol indented_block_body) [5210 5532])
+                    ("_retract" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5550 5554]))                          )
+                        (reparse-symbol indented_block_body) [5537 6261])
+                    ("_servo_to_pose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6285 6289])
+                            ("pose" variable nil (reparse-symbol function_parameters) [6291 6295]))                          )
+                        (reparse-symbol indented_block_body) [6266 6434])
+                    ("pick" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6448 6452])
+                            ("pose" variable nil (reparse-symbol function_parameters) [6454 6458]))                          )
+                        (reparse-symbol indented_block_body) [6439 6741])
+                    ("place" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6756 6760])
+                            ("pose" variable nil (reparse-symbol function_parameters) [6762 6766]))                          )
+                        (reparse-symbol indented_block_body) [6746 6996]))                  
+                :type "class")
+                nil [2037 6996])
+            ("load_gazebo_models" function (:arguments 
+              ( ("table_pose" variable nil (reparse-symbol function_parameters) [7020 7030])
+                ("table_reference_frame" variable nil (reparse-symbol function_parameters) [7097 7118])
+                ("block_pose" variable nil (reparse-symbol function_parameters) [7151 7161])
+                ("block_reference_frame" variable nil (reparse-symbol function_parameters) [7237 7258]))              ) nil [6997 8488])
+            ("delete_gazebo_models" function nil nil [8489 9064])
+            ("main" function (:documentation "RSDK Inverse Kinematics Pick and Place Example
+
+    A Pick and Place example using the Rethink Inverse Kinematics
+    Service which returns the joint angles a requested Cartesian Pose.
+    This ROS Service client is used to request both pick and place
+    poses in the /base frame of the robot.
+
+    Note: This is a highly scripted and tuned demo. The object location
+    is \"known\" and movement is done completely open loop. It is expected
+    behavior that Baxter will eventually mis-pick or drop the block. You
+    can improve on this demo by adding perception and feedback to close
+    the loop.
+    ") nil [9065 11850])
+            ("if" code nil nil [11851 11899]))          
+      :file "ik_pick_and_place_demo.py"
+      :pointmax 11899
+      :fsize 11898
+      :lastmodtime '(23098 45138 192146 799000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!baxter_ws!src!baxter_simulator!baxter_sim_examples!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,372 @@
+;; Object box2d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "box2d/"
+  :tables
+  (list
+    (semanticdb-table "box2d_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os.path" include nil nil [1 22])
+            ("mako.lookup" include nil nil [24 42])
+            ("mako.template" include nil nil [43 63])
+            ("numpy" include nil nil [64 82])
+            ("rllab" include nil nil [84 108])
+            ("rllab.envs.base" include nil nil [109 146])
+            ("rllab.envs.box2d.box2d_viewer" include nil nil [147 200])
+            ("rllab.envs.box2d.parser.xml_box2d" include nil nil [202 291])
+            ("rllab.misc" include nil nil [292 323])
+            ("rllab.misc.overrides" include nil nil [324 366])
+            ("BIG" variable nil nil [368 377])
+            ("Box2DEnv" type
+               (:superclasses ("Env")
+                :members 
+                  ( ("" code nil (reparse-symbol indented_block_body) [417 492])
+                    ("" code nil (reparse-symbol indented_block_body) [510 682])
+                    ("" code nil (reparse-symbol indented_block_body) [700 855])
+                    ("" code nil (reparse-symbol indented_block_body) [873 1030])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1228 1261])
+                            ("if" code nil (reparse-symbol indented_block_body) [1270 1760])
+                            ("world, extra_data" code nil (reparse-symbol indented_block_body) [1768 1819])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1828 1846])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1855 1883])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1892 1924])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1933 1951])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1960 1988])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1997 2037])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2046 2080])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2089 2115])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2124 2156])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2165 2191])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2249 2274])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2283 2306])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2315 2337]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1061 1065])
+                            ("model_path" variable nil (reparse-symbol function_parameters) [1067 1077])
+                            ("frame_skip" variable nil (reparse-symbol function_parameters) [1079 1089])
+                            ("position_only" variable nil (reparse-symbol function_parameters) [1093 1106])
+                            ("obs_noise" variable nil (reparse-symbol function_parameters) [1126 1135])
+                            ("action_noise" variable nil (reparse-symbol function_parameters) [1141 1153])
+                            ("template_string" variable nil (reparse-symbol function_parameters) [1159 1174])
+                            ("template_args" variable nil (reparse-symbol function_parameters) [1193 1206]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1035 2338])
+                    ("model_path" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2358 2362])
+                            ("file_name" variable nil (reparse-symbol function_parameters) [2364 2373]))                          )
+                        (reparse-symbol indented_block_body) [2343 2497])
+                    ("_set_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2517 2521])
+                            ("state" variable nil (reparse-symbol function_parameters) [2523 2528]))                          )
+                        (reparse-symbol indented_block_body) [2502 2867])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2897 2901]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2872 3026])
+                    ("_invalidate_state_caches" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3060 3064]))                          )
+                        (reparse-symbol indented_block_body) [3031 3130])
+                    ("_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3160 3164]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3135 3457])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3508 3512]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil)
+                            ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3462 3721])
+                    ("observation_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3777 3781]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil)
+                            ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3726 3986])
+                    ("action_bounds" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4023 4027]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3991 4070])
+                    ("forward_dynamics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4096 4100])
+                            ("action" variable nil (reparse-symbol function_parameters) [4102 4108]))                          )
+                        (reparse-symbol indented_block_body) [4075 5602])
+                    ("compute_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5626 5630])
+                            ("action" variable nil (reparse-symbol function_parameters) [5632 5638]))                          
+                        :documentation "
+        The implementation of this method should have two parts, structured
+        like the following:
+
+        <perform calculations before stepping the world>
+        yield
+        reward = <perform calculations after stepping the world>
+        yield reward
+        ")
+                        (reparse-symbol indented_block_body) [5607 5961])
+                    ("step" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5990 5994])
+                            ("action" variable nil (reparse-symbol function_parameters) [5996 6002]))                          
+                        :documentation "
+        Note: override this method with great care, as it post-processes the
+        observations, etc.
+        ")
+                        (reparse-symbol indented_block_body) [5966 6692])
+                    ("_filter_position" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6718 6722])
+                            ("obs" variable nil (reparse-symbol function_parameters) [6724 6727]))                          
+                        :documentation "
+        Filter the observation to contain only position information.
+        ")
+                        (reparse-symbol indented_block_body) [6697 6868])
+                    ("get_obs_noise_scale_factor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6904 6908])
+                            ("obs" variable nil (reparse-symbol function_parameters) [6910 6913]))                          )
+                        (reparse-symbol indented_block_body) [6873 6949])
+                    ("_inject_obs_noise" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6976 6980])
+                            ("obs" variable nil (reparse-symbol function_parameters) [6982 6985]))                          
+                        :documentation "
+        Inject entry-wise noise to the observation. This should not change
+        the dimension of the observation.
+        ")
+                        (reparse-symbol indented_block_body) [6954 7275])
+                    ("get_current_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7316 7320])
+                            ("state" variable nil (reparse-symbol function_parameters) [7322 7327])
+                            ("xml_obs" variable nil (reparse-symbol function_parameters) [7329 7336])
+                            ("action" variable nil (reparse-symbol function_parameters) [7338 7344])
+                            ("next_state" variable nil (reparse-symbol function_parameters) [7346 7356])
+                            ("next_xml_obs" variable nil (reparse-symbol function_parameters) [7358 7370]))                          )
+                        (reparse-symbol indented_block_body) [7280 7407])
+                    ("is_current_done" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7432 7436]))                          )
+                        (reparse-symbol indented_block_body) [7412 7473])
+                    ("_inject_action_noise" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7503 7507])
+                            ("action" variable nil (reparse-symbol function_parameters) [7509 7515]))                          )
+                        (reparse-symbol indented_block_body) [7478 7815])
+                    ("get_current_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7840 7844]))                          
+                        :documentation "
+        This method should not be overwritten.
+        ")
+                        (reparse-symbol indented_block_body) [7820 8115])
+                    ("_get_position_ids" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8142 8146]))                          )
+                        (reparse-symbol indented_block_body) [8120 8449])
+                    ("get_raw_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8470 8474]))                          
+                        :documentation "
+        Return the unfiltered & noiseless observation. By default, it computes
+        based on the declarations in the xml file.
+        ")
+                        (reparse-symbol indented_block_body) [8454 11834])
+                    ("_compute_com_pos_vel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11864 11868])
+                            ("com" variable nil (reparse-symbol function_parameters) [11870 11874]))                          )
+                        (reparse-symbol indented_block_body) [11839 12418])
+                    ("get_com_position" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12444 12448])
+                            ("com" variable nil (reparse-symbol function_parameters) [12450 12454]))                          )
+                        (reparse-symbol indented_block_body) [12423 12508])
+                    ("get_com_velocity" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12534 12538])
+                            ("com" variable nil (reparse-symbol function_parameters) [12540 12544]))                          )
+                        (reparse-symbol indented_block_body) [12513 12598])
+                    ("render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12629 12633])
+                            ("states" variable nil (reparse-symbol function_parameters) [12635 12641])
+                            ("actions" variable nil (reparse-symbol function_parameters) [12648 12655])
+                            ("pause" variable nil (reparse-symbol function_parameters) [12662 12667]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [12603 12951])
+                    ("before_world_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12978 12982])
+                            ("action" variable nil (reparse-symbol function_parameters) [12984 12990]))                          )
+                        (reparse-symbol indented_block_body) [12956 13006])
+                    ("action_from_keys" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13032 13036])
+                            ("keys" variable nil (reparse-symbol function_parameters) [13038 13042]))                          )
+                        (reparse-symbol indented_block_body) [13011 13079]))                  
+                :type "class")
+                nil [378 13079]))          
+      :file "box2d_env.py"
+      :pointmax 13080
+      :fsize 13079
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "box2d_viewer.py"
+      :file "box2d_viewer.py"
+      :fsize 9331
+      :lastmodtime '(22555 31253 0 0))
+    (semanticdb-table "car_parking_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("pygame" include nil nil [20 33])
+            ("rllab.envs.box2d.box2d_env" include nil nil [34 81])
+            ("rllab.envs.box2d.parser" include nil nil [82 127])
+            ("rllab.core.serializable" include nil nil [129 177])
+            ("rllab.envs.box2d.parser.xml_box2d" include nil nil [178 233])
+            ("rllab.misc" include nil nil [234 265])
+            ("rllab.misc.overrides" include nil nil [266 308])
+            ("CarParkingEnv" type
+               (:superclasses ("Box2DEnv" "Serializable")
+                :members 
+                  ( ("" code nil (reparse-symbol indented_block_body) [378 397])
+                    ("" code nil (reparse-symbol indented_block_body) [415 603])
+                    ("" code nil (reparse-symbol indented_block_body) [621 739])
+                    ("__init__" function
+                       (:suite 
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [789 833])
+                            ("self" variable nil (reparse-symbol indented_block_body) [842 894])
+                            ("self" variable nil (reparse-symbol indented_block_body) [903 965])
+                            ("super" code nil (reparse-symbol indented_block_body) [974 1096])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1105 1146])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1155 1194])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1203 1296])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1305 1398])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1407 1425])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1434 1455])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1464 1485])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1494 1516]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [757 761])
+                            ("args" variable nil (reparse-symbol function_parameters) [763 768])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [770 778]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [744 1517])
+                    ("before_world_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1559 1563])
+                            ("action" variable nil (reparse-symbol function_parameters) [1565 1571]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1522 2375])
+                    ("action_dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2424 2428]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil)
+                            ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2380 2488])
+                    ("action_bounds" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2540 2544]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil)
+                            ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2493 2678])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2708 2712]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2683 3516])
+                    ("compute_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3555 3559])
+                            ("action" variable nil (reparse-symbol function_parameters) [3561 3567]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3521 3728])
+                    ("is_current_done" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3768 3772]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3733 3993])
+                    ("action_from_keys" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4034 4038])
+                            ("keys" variable nil (reparse-symbol function_parameters) [4040 4044]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3998 4347]))                  
+                :type "class")
+                nil [311 4347]))          
+      :file "car_parking_env.py"
+      :pointmax 4348
+      :fsize 4347
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!rllab!envs!box2d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,72 @@
+;; Object sandbox/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sandbox/"
+  :tables
+  (list
+    (semanticdb-table "ray_parallel_sampler.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 22])
+            ("os" include nil nil [23 32])
+            ("cloudpickle" include nil nil [33 51])
+            ("ray" include nil nil [52 62])
+            ("ray" code nil nil [64 74])
+            ("RayParallelBatchSampler" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    If using Ray, the env class needs to be a ray actor (with @ray.remote), function run_episode() needs to be
+    implemented in the environment class
+	'''" code nil (reparse-symbol indented_block_body) [119 279])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [617 633])
+                            ("self" variable nil (reparse-symbol indented_block_body) [677 728])
+                            ("self" variable nil (reparse-symbol indented_block_body) [737 804])
+                            ("self" variable nil (reparse-symbol indented_block_body) [813 874])
+                            ("self" variable nil (reparse-symbol indented_block_body) [883 903])
+                            ("self" variable nil (reparse-symbol indented_block_body) [912 956])
+                            ("self" variable nil (reparse-symbol indented_block_body) [965 1011])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1021 1045])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1054 1076])
+                            ("if" code nil (reparse-symbol indented_block_body) [1086 1315]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [297 301])
+                            ("envs" variable nil (reparse-symbol function_parameters) [320 324])
+                            ("sampler_hyperparams" variable nil (reparse-symbol function_parameters) [343 362])
+                            ("state_preprocessor" variable nil (reparse-symbol function_parameters) [381 399])
+                            ("reward_preprocessor" variable nil (reparse-symbol function_parameters) [423 442])
+                            ("logger" variable nil (reparse-symbol function_parameters) [466 472])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [496 504]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [284 1315])
+                    ("get_parallel_episodes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1346 1350]))                          )
+                        (reparse-symbol indented_block_body) [1320 1621])
+                    ("get_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2175 2179])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [2181 2194]))                          )
+                        (reparse-symbol indented_block_body) [2161 2675])
+                    ("save_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2695 2699])
+                            ("batch" variable nil (reparse-symbol function_parameters) [2701 2706])
+                            ("path" variable nil (reparse-symbol function_parameters) [2708 2712]))                          )
+                        (reparse-symbol indented_block_body) [2680 2857]))                  
+                :type "class")
+                nil [76 2857])
+            ("if" code nil nil [2859 4852]))          
+      :file "ray_parallel_sampler.py"
+      :pointmax 4852
+      :fsize 4851
+      :lastmodtime '(23175 20250 335002 149000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!Xiao!docker!docker_home!parallel_baxter_ws!src!baxter_learn_pkgs!baxter_learn!src!baxter_learn!go_to_goal!sandbox!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

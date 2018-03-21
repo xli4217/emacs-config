@@ -1,0 +1,671 @@
+;; Object baxter_sim_controllers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "baxter_sim_controllers/"
+  :tables
+  (list
+    (semanticdb-table "baxter_head_controller.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("BAXTER_HEAD_CONTROLLER_H_" variable (:constant-flag t) nil [1766 1791])
+            ("ros/node_handle.h" include (:system-flag t) nil [1792 1820])
+            ("urdf/model.h" include (:system-flag t) nil [1822 1845])
+            ("control_toolbox/pid.h" include (:system-flag t) nil [1846 1878])
+            ("boost/scoped_ptr.hpp" include (:system-flag t) nil [1879 1910])
+            ("boost/thread/condition.hpp" include (:system-flag t) nil [1911 1948])
+            ("hardware_interface/joint_command_interface.h" include (:system-flag t) nil [1949 2004])
+            ("controller_interface/controller.h" include (:system-flag t) nil [2005 2049])
+            ("realtime_tools/realtime_buffer.h" include (:system-flag t) nil [2050 2093])
+            ("baxter_core_msgs/HeadPanCommand.h" include (:system-flag t) nil [2161 2205])
+            ("effort_controllers/joint_position_controller.h" include (:system-flag t) nil [2206 2263])
+            ("multi_baxter_sim_controllers" type
+               (:members 
+                  ( ("BaxterHeadController" type
+                       (:superclasses 
+                          ( ("controller_interface::Controller" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2462 2469])
+                            ("BaxterHeadController" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("BaxterHeadController" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2472 2495])
+                            ("BaxterHeadController" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2498 2522])
+                            ("init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("robot" variable
+                                       (:pointer 1
+                                        :type ("hardware_interface::EffortJointInterface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2536 2584])
+                                    ("n" variable
+                                       (:reference 1
+                                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2585 2604]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2526 2605])
+                            ("starting" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2622 2644]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2608 2645])
+                            ("stopping" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2662 2684]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2648 2685])
+                            ("update" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2700 2722])
+                                    ("period" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Duration" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2723 2751]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2688 2752])
+                            ("updateCommands" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2755 2777])
+                            ("private" label nil (reparse-symbol classsubparts) [2779 2787])
+                            ("nh_" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2790 2810])
+                            ("head_command_buffer" variable (:type ("realtime_tools::RealtimeBuffer" type
+                                 (:template-specifier 
+                                    ( ("baxter_core_msgs::HeadPanCommand" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2849 2934])
+                            ("n_joints" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2938 2954])
+                            ("topic_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2957 2980])
+                            ("joint_to_index_map" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil)
+                                      ("std::size_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2984 3038])
+                            ("new_command" variable (:type "bool") (reparse-symbol classsubparts) [3093 3110])
+                            ("update_counter" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3181 3203])
+                            ("head_command_sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3231 3264])
+                            ("commandCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::HeadPanCommandConstPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3402 3454]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3387 3455])
+                            ("head_controllers" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("boost::shared_ptr" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3529 3623]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2349 3626]))                  
+                :type "namespace")
+                nil [2308 3629]))          
+      :file "baxter_head_controller.h"
+      :pointmax 3684
+      :fsize 3677
+      :lastmodtime '(23110 45509 130657 925000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BAXTER_HEAD_CONTROLLER_H_")
+          )
+)
+    (semanticdb-table "baxter_effort_controller.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("BAXTER_EFFORT_CONTROLLER_H" variable (:constant-flag t) nil [1874 1900])
+            ("ros/node_handle.h" include (:system-flag t) nil [1902 1930])
+            ("urdf/model.h" include (:system-flag t) nil [1932 1955])
+            ("control_toolbox/pid.h" include (:system-flag t) nil [1956 1988])
+            ("boost/scoped_ptr.hpp" include (:system-flag t) nil [1989 2020])
+            ("boost/thread/condition.hpp" include (:system-flag t) nil [2021 2058])
+            ("hardware_interface/joint_command_interface.h" include (:system-flag t) nil [2059 2114])
+            ("controller_interface/controller.h" include (:system-flag t) nil [2115 2159])
+            ("realtime_tools/realtime_buffer.h" include (:system-flag t) nil [2160 2203])
+            ("baxter_core_msgs/JointCommand.h" include (:system-flag t) nil [2205 2247])
+            ("effort_controllers/joint_effort_controller.h" include (:system-flag t) nil [2271 2326])
+            ("multi_baxter_sim_controllers" type
+               (:members 
+                  ( ("BaxterEffortController" type
+                       (:superclasses 
+                          ( ("controller_interface::Controller" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2527 2534])
+                            ("BaxterEffortController" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("BaxterEffortController" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2537 2562])
+                            ("BaxterEffortController" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2565 2591])
+                            ("init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("robot" variable
+                                       (:pointer 1
+                                        :type ("hardware_interface::EffortJointInterface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2605 2653])
+                                    ("n" variable
+                                       (:reference 1
+                                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2654 2673]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2595 2674])
+                            ("starting" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2691 2713]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2677 2714])
+                            ("stopping" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2731 2753]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2717 2754])
+                            ("update" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2769 2791])
+                                    ("period" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Duration" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2792 2820]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2757 2821])
+                            ("updateCommands" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2824 2846])
+                            ("private" label nil (reparse-symbol classsubparts) [2848 2856])
+                            ("nh_" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2859 2879])
+                            ("n_joints_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2882 2899])
+                            ("topic_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2902 2925])
+                            ("m" variable (:type ("std_msgs::Float64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2928 2948])
+                            ("joint_to_index_map_" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil)
+                                      ("std::size_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2951 3006])
+                            ("new_command_" variable (:type "bool") (reparse-symbol classsubparts) [3060 3078])
+                            ("effort_command_sub_" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3174 3210])
+                            ("effort_command_pub_" variable
+                               (:dereference 1
+                                :type ("ros::Publisher" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3237 3276])
+                            ("commandCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::JointCommandConstPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3414 3464]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3399 3465])
+                            ("effort_controllers_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("boost::shared_ptr" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3537 3632]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2412 3635]))                  
+                :type "namespace")
+                nil [2371 3638]))          
+      :file "baxter_effort_controller.h"
+      :pointmax 3661
+      :fsize 3660
+      :lastmodtime '(23117 22645 273609 889000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BAXTER_EFFORT_CONTROLLER_H")
+          )
+)
+    (semanticdb-table "baxter_gripper_controller.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("BAXTER_GRIPPER_CONTROLLER_H_" variable (:constant-flag t) nil [1757 1785])
+            ("ros/node_handle.h" include (:system-flag t) nil [1787 1815])
+            ("urdf/model.h" include (:system-flag t) nil [1817 1840])
+            ("control_toolbox/pid.h" include (:system-flag t) nil [1841 1873])
+            ("boost/scoped_ptr.hpp" include (:system-flag t) nil [1874 1905])
+            ("boost/thread/condition.hpp" include (:system-flag t) nil [1906 1943])
+            ("hardware_interface/joint_command_interface.h" include (:system-flag t) nil [1944 1999])
+            ("controller_interface/controller.h" include (:system-flag t) nil [2000 2044])
+            ("realtime_tools/realtime_buffer.h" include (:system-flag t) nil [2045 2088])
+            ("baxter_core_msgs/EndEffectorCommand.h" include (:system-flag t) nil [2090 2138])
+            ("effort_controllers/joint_position_controller.h" include (:system-flag t) nil [2139 2196])
+            ("multi_baxter_sim_controllers" type
+               (:members 
+                  ( ("BaxterGripperController" type
+                       (:superclasses 
+                          ( ("controller_interface::Controller" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2398 2405])
+                            ("BaxterGripperController" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("BaxterGripperController" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2408 2434])
+                            ("BaxterGripperController" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2437 2464])
+                            ("init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("robot" variable
+                                       (:pointer 1
+                                        :type ("hardware_interface::EffortJointInterface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2478 2526])
+                                    ("n" variable
+                                       (:reference 1
+                                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2527 2546]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2468 2547])
+                            ("starting" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2564 2586]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2550 2587])
+                            ("stopping" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2604 2626]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2590 2627])
+                            ("update" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2642 2664])
+                                    ("period" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Duration" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2665 2693]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2630 2694])
+                            ("updateCommands" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2697 2719])
+                            ("private" label nil (reparse-symbol classsubparts) [2721 2729])
+                            ("nh_" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2732 2752])
+                            ("gripper_command_buffer" variable (:type ("realtime_tools::RealtimeBuffer" type
+                                 (:template-specifier 
+                                    ( ("baxter_core_msgs::EndEffectorCommand" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2791 2883])
+                            ("n_joints" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2887 2903])
+                            ("topic_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2906 2929])
+                            ("mimic_idx_" variable (:type "int") (reparse-symbol classsubparts) [2974 2989])
+                            ("main_idx_" variable (:type "int") (reparse-symbol classsubparts) [2992 3006])
+                            ("joint_to_index_map" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil)
+                                      ("std::size_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3010 3064])
+                            ("new_command" variable (:type "bool") (reparse-symbol classsubparts) [3119 3136])
+                            ("update_counter" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3207 3229])
+                            ("gripper_command_sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3257 3293])
+                            ("commandCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::EndEffectorCommandConstPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3431 3487]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3416 3488])
+                            ("gripper_controllers" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("boost::shared_ptr" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3562 3659]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2282 3662]))                  
+                :type "namespace")
+                nil [2241 3665]))          
+      :file "baxter_gripper_controller.h"
+      :pointmax 3723
+      :fsize 3716
+      :lastmodtime '(23110 45509 130657 925000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BAXTER_GRIPPER_CONTROLLER_H_")
+          )
+)
+    (semanticdb-table "baxter_position_controller.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("BAXTER_POSITION_CONTROLLER_H" variable (:constant-flag t) nil [1982 2010])
+            ("ros/node_handle.h" include (:system-flag t) nil [2012 2040])
+            ("urdf/model.h" include (:system-flag t) nil [2042 2065])
+            ("control_toolbox/pid.h" include (:system-flag t) nil [2066 2098])
+            ("boost/scoped_ptr.hpp" include (:system-flag t) nil [2099 2130])
+            ("boost/thread/condition.hpp" include (:system-flag t) nil [2131 2168])
+            ("hardware_interface/joint_command_interface.h" include (:system-flag t) nil [2169 2224])
+            ("controller_interface/controller.h" include (:system-flag t) nil [2225 2269])
+            ("realtime_tools/realtime_buffer.h" include (:system-flag t) nil [2270 2313])
+            ("baxter_core_msgs/JointCommand.h" include (:system-flag t) nil [2315 2357])
+            ("effort_controllers/joint_position_controller.h" include (:system-flag t) nil [2381 2438])
+            ("multi_baxter_sim_controllers" type
+               (:members 
+                  ( ("BaxterPositionController" type
+                       (:superclasses 
+                          ( ("controller_interface::Controller" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2641 2648])
+                            ("BaxterPositionController" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("BaxterPositionController" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2651 2678])
+                            ("BaxterPositionController" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2681 2709])
+                            ("init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("robot" variable
+                                       (:pointer 1
+                                        :type ("hardware_interface::EffortJointInterface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2723 2771])
+                                    ("n" variable
+                                       (:reference 1
+                                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2772 2791]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2713 2792])
+                            ("starting" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2809 2831]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2795 2832])
+                            ("stopping" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2849 2871]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2835 2872])
+                            ("update" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2887 2909])
+                                    ("period" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Duration" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2910 2938]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2875 2939])
+                            ("updateCommands" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2942 2964])
+                            ("private" label nil (reparse-symbol classsubparts) [2966 2974])
+                            ("nh_" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2977 2997])
+                            ("position_command_buffer_" variable (:type ("realtime_tools::RealtimeBuffer" type
+                                 (:template-specifier 
+                                    ( ("baxter_core_msgs::JointCommand" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3036 3124])
+                            ("n_joints_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3128 3145])
+                            ("topic_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3148 3171])
+                            ("joint_to_index_map_" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil)
+                                      ("std::size_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3175 3230])
+                            ("verbose_" variable (:type "bool") (reparse-symbol classsubparts) [3285 3299])
+                            ("new_command_" variable (:type "bool") (reparse-symbol classsubparts) [3302 3320])
+                            ("update_counter_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3391 3414])
+                            ("position_command_sub_" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3442 3480])
+                            ("commandCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::JointCommandConstPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3618 3668]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3603 3669])
+                            ("position_controllers_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("boost::shared_ptr" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3743 3842]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2524 3845]))                  
+                :type "namespace")
+                nil [2483 3848]))          
+      :file "baxter_position_controller.h"
+      :pointmax 3871
+      :fsize 3864
+      :lastmodtime '(23110 45509 130657 925000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BAXTER_POSITION_CONTROLLER_H")
+          )
+)
+    (semanticdb-table "baxter_velocity_controller.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("BAXTER_VELOCITY_CONTROLLER_H" variable (:constant-flag t) nil [1982 2010])
+            ("ros/node_handle.h" include (:system-flag t) nil [2012 2040])
+            ("urdf/model.h" include (:system-flag t) nil [2042 2065])
+            ("control_toolbox/pid.h" include (:system-flag t) nil [2066 2098])
+            ("boost/scoped_ptr.hpp" include (:system-flag t) nil [2099 2130])
+            ("boost/thread/condition.hpp" include (:system-flag t) nil [2131 2168])
+            ("hardware_interface/joint_command_interface.h" include (:system-flag t) nil [2169 2224])
+            ("controller_interface/controller.h" include (:system-flag t) nil [2225 2269])
+            ("realtime_tools/realtime_buffer.h" include (:system-flag t) nil [2270 2313])
+            ("baxter_core_msgs/JointCommand.h" include (:system-flag t) nil [2315 2357])
+            ("effort_controllers/joint_velocity_controller.h" include (:system-flag t) nil [2381 2438])
+            ("multi_baxter_sim_controllers" type
+               (:members 
+                  ( ("BaxterVelocityController" type
+                       (:superclasses 
+                          ( ("controller_interface::Controller" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2641 2648])
+                            ("BaxterVelocityController" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("BaxterVelocityController" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2651 2678])
+                            ("BaxterVelocityController" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2681 2709])
+                            ("init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("robot" variable
+                                       (:pointer 1
+                                        :type ("hardware_interface::EffortJointInterface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2723 2771])
+                                    ("n" variable
+                                       (:reference 1
+                                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2772 2791]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2713 2792])
+                            ("starting" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2809 2831]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2795 2832])
+                            ("stopping" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2849 2871]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2835 2872])
+                            ("update" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2887 2909])
+                                    ("period" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::Duration" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2910 2938]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2875 2939])
+                            ("updateCommands" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2942 2964])
+                            ("private" label nil (reparse-symbol classsubparts) [2966 2974])
+                            ("nh_" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2977 2997])
+                            ("velocity_command_buffer_" variable (:type ("realtime_tools::RealtimeBuffer" type
+                                 (:template-specifier 
+                                    ( ("baxter_core_msgs::JointCommand" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3030 3118])
+                            ("n_joints_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3122 3139])
+                            ("topic_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3142 3165])
+                            ("joint_to_index_map_" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil)
+                                      ("std::size_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3169 3224])
+                            ("verbose_" variable (:type "bool") (reparse-symbol classsubparts) [3279 3293])
+                            ("new_command_" variable (:type "bool") (reparse-symbol classsubparts) [3296 3314])
+                            ("update_counter_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3385 3408])
+                            ("velocity_command_sub_" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3436 3474])
+                            ("commandCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::JointCommandConstPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3612 3662]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3597 3663])
+                            ("velocity_controllers_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("boost::shared_ptr" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3737 3836]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2524 3839]))                  
+                :type "namespace")
+                nil [2483 3842]))          
+      :file "baxter_velocity_controller.h"
+      :pointmax 3865
+      :fsize 3864
+      :lastmodtime '(23117 22672 45682 515000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BAXTER_VELOCITY_CONTROLLER_H")
+          )
+))
+  :file "!home!burobotics!baxter_ws!src!multi_baxter_simulator!multi_baxter_sim_controller!include!baxter_sim_controllers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

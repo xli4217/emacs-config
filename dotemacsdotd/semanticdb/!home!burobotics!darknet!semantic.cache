@@ -1,0 +1,56 @@
+;; Object darknet/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "darknet/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("GPU" variable (:default-value ("1")) nil [1 7])
+            ("CUDNN" variable (:default-value ("1")) nil [7 15])
+            ("OPENCV" variable (:default-value ("1")) nil [15 24])
+            ("DEBUG" variable (:default-value ("0")) nil [24 32])
+            ("ARCH" variable (:default-value ("-gencode" "arch=compute_20,code=[sm_20,sm_21]" "-gencode" "arch=compute_30,code=sm_30" "-gencode" "arch=compute_35,code=sm_35" "-gencode" "arch=compute_50,code=[sm_50,compute_50]" "-gencode" "arch=compute_52,code=[sm_52,compute_52]")) nil [33 285])
+            ("VPATH" variable (:default-value ("./src/")) nil [411 424])
+            ("EXEC" variable (:default-value ("darknet")) nil [424 437])
+            ("OBJDIR" variable (:default-value ("./obj/")) nil [437 451])
+            ("CC" variable (:default-value ("gcc")) nil [452 459])
+            ("NVCC" variable (:default-value ("nvcc")) nil [459 470])
+            ("OPTS" variable (:default-value ("-Ofast")) nil [470 482])
+            ("LDFLAGS" variable (:default-value ("-lm" "-pthread")) nil [482 505])
+            ("COMMON" variable nil nil [505 514])
+            ("CFLAGS" variable (:default-value ("-Wall" "-Wfatal-errors")) nil [514 543])
+            ("OPTS" variable (:default-value ("-O0" "-g")) nil [564 576])
+            ("CFLAGS" variable (:default-value ("$(OPTS)")) nil [583 599])
+            ("COMMON" variable (:default-value ("-DOPENCV")) nil [621 639])
+            ("CFLAGS" variable (:default-value ("-DOPENCV")) nil [639 657])
+            ("LDFLAGS" variable (:default-value ("`pkg-config --libs opencv`")) nil [657 695])
+            ("COMMON" variable (:default-value ("`pkg-config --cflags opencv`")) nil [695 734])
+            ("COMMON" variable (:default-value ("-DGPU" "-I/usr/local/cuda/include/")) nil [759 801])
+            ("CFLAGS" variable (:default-value ("-DGPU")) nil [801 816])
+            ("LDFLAGS" variable (:default-value ("-L/usr/local/cuda/lib64" "-lcuda" "-lcudart" "-lcublas" "-lcurand")) nil [816 884])
+            ("COMMON" variable (:default-value ("-DCUDNN")) nil [911 929])
+            ("CFLAGS" variable (:default-value ("-DCUDNN")) nil [929 946])
+            ("LDFLAGS" variable (:default-value ("-lcudnn")) nil [946 964])
+            ("OBJ" variable (:default-value ("gemm.o" "utils.o" "cuda.o" "convolutional_layer.o" "list.o" "image.o" "activations.o" "im2col.o" "col2im.o" "blas.o" "crop_layer.o" "dropout_layer.o" "maxpool_layer.o" "softmax_layer.o" "data.o" "matrix.o" "network.o" "connected_layer.o" "cost_layer.o" "parser.o" "option_list.o" "darknet.o" "detection_layer.o" "captcha.o" "route_layer.o" "writing.o" "box.o" "nightmare.o" "normalization_layer.o" "avgpool_layer.o" "coco.o" "dice.o" "yolo.o" "detector.o" "layer.o" "compare.o" "classifier.o" "local_layer.o" "swag.o" "shortcut_layer.o" "activation_layer.o" "rnn_layer.o" "gru_layer.o" "rnn.o" "rnn_vid.o" "crnn_layer.o" "demo.o" "tag.o" "cifar.o" "go.o" "batchnorm_layer.o" "art.o" "region_layer.o" "reorg_layer.o" "super.o" "voxel.o" "tree.o")) nil [971 1607])
+            ("LDFLAGS" variable (:default-value ("-lstdc++")) nil [1625 1645])
+            ("OBJ" variable (:default-value ("convolutional_kernels.o" "activation_kernels.o" "im2col_kernels.o" "col2im_kernels.o" "blas_kernels.o" "crop_layer_kernels.o" "dropout_layer_kernels.o" "maxpool_layer_kernels.o" "network_kernels.o" "avgpool_layer_kernels.o")) nil [1645 1855])
+            ("OBJS" variable (:default-value ("$(addprefix $(OBJDIR), $(OBJ))")) nil [1862 1900])
+            ("DEPS" variable (:default-value ("$(wildcard src/*.h)" "Makefile")) nil [1900 1936])
+            ("all" function (:arguments ("obj" "backup" "results" "$(EXEC)")) nil [1937 1969])
+            ("$(EXEC)" function (:arguments ("$(OBJS)")) nil [1970 2034])
+            ("$(OBJDIR)" function (:arguments ("%.c" "$(DEPS)")) nil [2035 2100])
+            ("$(OBJDIR)" function (:arguments ("%.cu" "$(DEPS)")) nil [2101 2198])
+            ("obj" function nil nil [2199 2218])
+            ("backup" function nil nil [2218 2243])
+            ("results" function nil nil [2243 2270])
+            (".PHONY" function (:arguments ("clean")) nil [2271 2285])
+            ("clean" function nil nil [2286 2317]))          
+      :file "Makefile"
+      :pointmax 2318
+      :fsize 2317
+      :lastmodtime '(22737 13591 956505 992000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!darknet!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

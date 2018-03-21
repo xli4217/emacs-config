@@ -1,0 +1,451 @@
+;; Object TL/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "TL/"
+  :tables
+  (list
+    (semanticdb-table "tltl_gradient_reward_gym_robot_sequential.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("theano.tensor" include nil nil [20 45])
+            ("theano" include nil nil [46 59])
+            ("OBS_NUM" variable nil nil [61 72])
+            ("TLTLGradientRewardGymRobotSequential" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    takes in a trajectory can calculate reward based on gradients of logsumexp or softmax approximations
+    '''" code nil (reparse-symbol indented_block_body) [130 246])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [328 352])
+                            ("self" variable nil (reparse-symbol indented_block_body) [362 382])
+                            ("self" variable nil (reparse-symbol indented_block_body) [392 434])
+                            ("self" variable nil (reparse-symbol indented_block_body) [443 489])
+                            ("self" variable nil (reparse-symbol indented_block_body) [498 544])
+                            ("self" variable nil (reparse-symbol indented_block_body) [553 599])
+                            ("self" variable nil (reparse-symbol indented_block_body) [608 668])
+                            ("self" variable nil (reparse-symbol indented_block_body) [677 737])
+                            ("self" variable nil (reparse-symbol indented_block_body) [746 806])
+                            ("self" variable nil (reparse-symbol indented_block_body) [815 875])
+                            ("self" variable nil (reparse-symbol indented_block_body) [884 946])
+                            ("self" variable nil (reparse-symbol indented_block_body) [955 1016])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1025 1071])
+                            ("if" code nil (reparse-symbol indented_block_body) [1081 1376]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [269 273])
+                            ("beta" variable nil (reparse-symbol function_parameters) [275 279])
+                            ("task_num" variable nil (reparse-symbol function_parameters) [282 290])
+                            ("s_or_l" variable nil (reparse-symbol function_parameters) [292 298])
+                            ("goal_and_obs_info" variable nil (reparse-symbol function_parameters) [300 317]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [256 1376])
+                    ("update_paths_with_custom_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1427 1431])
+                            ("paths" variable nil (reparse-symbol function_parameters) [1433 1438]))                          )
+                        (reparse-symbol indented_block_body) [1391 2310])
+                    ("get_smoothed_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2339 2343])
+                            ("obs" variable nil (reparse-symbol function_parameters) [2345 2348])
+                            ("actions" variable nil (reparse-symbol function_parameters) [2350 2357]))                          )
+                        (reparse-symbol indented_block_body) [2315 2550])
+                    ("get_gradient_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2587 2591])
+                            ("obs" variable nil (reparse-symbol function_parameters) [2593 2596]))                          )
+                        (reparse-symbol indented_block_body) [2563 3304])
+                    ("get_gradient_task1" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3332 3336])
+                            ("beta" variable nil (reparse-symbol function_parameters) [3338 3342])
+                            ("s_or_l" variable nil (reparse-symbol function_parameters) [3344 3350]))                          )
+                        (reparse-symbol indented_block_body) [3309 4904])
+                    ("get_gradient_task2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4933 4937])
+                            ("beta" variable nil (reparse-symbol function_parameters) [4939 4943])
+                            ("s_or_l" variable nil (reparse-symbol function_parameters) [4945 4951]))                          )
+                        (reparse-symbol indented_block_body) [4910 6389])
+                    ("get_gradient_task3" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6429 6433])
+                            ("beta" variable nil (reparse-symbol function_parameters) [6435 6439])
+                            ("s_or_l" variable nil (reparse-symbol function_parameters) [6441 6447]))                          )
+                        (reparse-symbol indented_block_body) [6406 12362])
+                    ("evaluate_tltl_robot_sequential" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12403 12407])
+                            ("subpath" variable nil (reparse-symbol function_parameters) [12409 12416])
+                            ("task_num" variable nil (reparse-symbol function_parameters) [12418 12426]))                          )
+                        (reparse-symbol indented_block_body) [12368 17832])
+                    ("dist" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17846 17850])
+                            ("x1" variable nil (reparse-symbol function_parameters) [17852 17854])
+                            ("x2" variable nil (reparse-symbol function_parameters) [17856 17858]))                          )
+                        (reparse-symbol indented_block_body) [17837 17903]))                  
+                :type "class")
+                nil [74 17903]))          
+      :file "tltl_gradient_reward_gym_robot_sequential.py"
+      :pointmax 17903
+      :fsize 17902
+      :lastmodtime '(22679 37339 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "tl_base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("TLRewardBase" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    Takes in a trajectory and compute corresponding STL reward at each step
+    Currently implemented for SwimmerMazeEnv
+    '''" code nil (reparse-symbol indented_block_body) [54 186])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [220 240]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [205 209]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [192 241])
+                    ("update_paths_with_tl_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [278 282])
+                            ("paths" variable nil (reparse-symbol function_parameters) [284 289])
+                            ("osr" variable nil (reparse-symbol function_parameters) [291 294]))                          )
+                        (reparse-symbol indented_block_body) [246 790])
+                    ("get_tl_updated_reward_for_one_path" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [834 838])
+                            ("obs" variable nil (reparse-symbol function_parameters) [840 843])
+                            ("extrinsic_reward" variable nil (reparse-symbol function_parameters) [845 861])
+                            ("osr" variable nil (reparse-symbol function_parameters) [868 871]))                          )
+                        (reparse-symbol indented_block_body) [795 1856])
+                    ("evaluate_tl_subpath_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1892 1896])
+                            ("subpath" variable nil (reparse-symbol function_parameters) [1898 1905]))                          )
+                        (reparse-symbol indented_block_body) [1861 1942]))                  
+                :type "class")
+                nil [22 1942]))          
+      :file "tl_base.py"
+      :pointmax 1942
+      :fsize 1941
+      :lastmodtime '(22516 27473 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "tltl_gradient_reward_gym_robot_sequential_bak.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("theano.tensor" include nil nil [20 45])
+            ("theano" include nil nil [46 59])
+            ("TLTLGradientRewardGymRobotSequential" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    takes in a trajectory can calculate reward based on gradients of logsumexp or softmax approximations
+    '''" code nil (reparse-symbol indented_block_body) [118 234])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [308 332])
+                            ("self" variable nil (reparse-symbol indented_block_body) [342 362])
+                            ("if" code nil (reparse-symbol indented_block_body) [372 778]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [253 257])
+                            ("beta" variable nil (reparse-symbol function_parameters) [259 263])
+                            ("task_num" variable nil (reparse-symbol function_parameters) [265 273])
+                            ("s_or_l" variable nil (reparse-symbol function_parameters) [279 285]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [240 778])
+                    ("update_paths_with_tl_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [836 840])
+                            ("paths" variable nil (reparse-symbol function_parameters) [842 847]))                          )
+                        (reparse-symbol indented_block_body) [804 1719])
+                    ("get_smoothed_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1748 1752])
+                            ("obs" variable nil (reparse-symbol function_parameters) [1754 1757])
+                            ("actions" variable nil (reparse-symbol function_parameters) [1759 1766]))                          )
+                        (reparse-symbol indented_block_body) [1724 1959])
+                    ("get_gradient_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1996 2000])
+                            ("obs" variable nil (reparse-symbol function_parameters) [2002 2005]))                          )
+                        (reparse-symbol indented_block_body) [1972 2713])
+                    ("get_gradient_task1" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2741 2745])
+                            ("beta" variable nil (reparse-symbol function_parameters) [2747 2751])
+                            ("s_or_l" variable nil (reparse-symbol function_parameters) [2753 2759]))                          )
+                        (reparse-symbol indented_block_body) [2718 4313])
+                    ("get_gradient_task2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4342 4346])
+                            ("beta" variable nil (reparse-symbol function_parameters) [4348 4352])
+                            ("s_or_l" variable nil (reparse-symbol function_parameters) [4354 4360]))                          )
+                        (reparse-symbol indented_block_body) [4319 6568])
+                    ("get_gradient_task3" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6608 6612])
+                            ("beta" variable nil (reparse-symbol function_parameters) [6614 6618])
+                            ("s_or_l" variable nil (reparse-symbol function_parameters) [6620 6626]))                          )
+                        (reparse-symbol indented_block_body) [6585 9024])
+                    ("get_gradient_task4" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9052 9056])
+                            ("beta" variable nil (reparse-symbol function_parameters) [9058 9062])
+                            ("s_or_l" variable nil (reparse-symbol function_parameters) [9064 9070]))                          )
+                        (reparse-symbol indented_block_body) [9029 12510])
+                    ("evaluate_tltl_robot_sequential" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12550 12554])
+                            ("subpath" variable nil (reparse-symbol function_parameters) [12556 12563])
+                            ("task_num" variable nil (reparse-symbol function_parameters) [12565 12573]))                          )
+                        (reparse-symbol indented_block_body) [12515 19192]))                  
+                :type "class")
+                nil [62 19192]))          
+      :file "tltl_gradient_reward_gym_robot_sequential_bak.py"
+      :pointmax 19192
+      :fsize 19191
+      :lastmodtime '(22657 27281 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "heuristic_reward_gym_robot_sequential.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("theano.tensor" include nil nil [20 45])
+            ("theano" include nil nil [46 59])
+            ("tltl_gradient_reward_gym_robot_sequential" include nil nil [61 151])
+            ("OBS_NUM" variable nil nil [153 164])
+            ("HeuristicRewardGymRobotSequential" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    takes in a trajectory can calculate reward based on gradients of logsumexp or softmax approximations
+    '''" code nil (reparse-symbol indented_block_body) [219 335])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [414 438])
+                            ("self" variable nil (reparse-symbol indented_block_body) [447 475])
+                            ("self" variable nil (reparse-symbol indented_block_body) [493 598])
+                            ("self" variable nil (reparse-symbol indented_block_body) [609 651])
+                            ("self" variable nil (reparse-symbol indented_block_body) [660 706])
+                            ("self" variable nil (reparse-symbol indented_block_body) [715 761])
+                            ("self" variable nil (reparse-symbol indented_block_body) [770 816])
+                            ("self" variable nil (reparse-symbol indented_block_body) [825 885])
+                            ("self" variable nil (reparse-symbol indented_block_body) [894 954])
+                            ("self" variable nil (reparse-symbol indented_block_body) [963 1023])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1032 1092])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1101 1163])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1172 1233])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1242 1288])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1298 1318])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1327 1349])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1358 1379]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [358 362])
+                            ("task_num" variable nil (reparse-symbol function_parameters) [364 372])
+                            ("reward_num" variable nil (reparse-symbol function_parameters) [374 384])
+                            ("goal_and_obs_info" variable nil (reparse-symbol function_parameters) [386 403]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [345 1380])
+                    ("update_paths_with_custom_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1430 1434])
+                            ("paths" variable nil (reparse-symbol function_parameters) [1436 1441]))                          )
+                        (reparse-symbol indented_block_body) [1394 2130])
+                    ("get_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2150 2154])
+                            ("obs" variable nil (reparse-symbol function_parameters) [2156 2159])
+                            ("actions" variable nil (reparse-symbol function_parameters) [2161 2168])
+                            ("task_num" variable nil (reparse-symbol function_parameters) [2170 2178])
+                            ("reward_num" variable nil (reparse-symbol function_parameters) [2180 2190]))                          )
+                        (reparse-symbol indented_block_body) [2135 2743])
+                    ("get_task2_reward1" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2771 2775])
+                            ("x" variable nil (reparse-symbol function_parameters) [2777 2778])
+                            ("y" variable nil (reparse-symbol function_parameters) [2780 2781])
+                            ("actions" variable nil (reparse-symbol function_parameters) [2783 2790]))                          
+                        :documentation "
+        +5 if reaches goal
+        -2 if stays in obstacle
+        -0.1 every step
+        ")
+                        (reparse-symbol indented_block_body) [2749 3581])
+                    ("get_task2_reward2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3609 3613])
+                            ("x" variable nil (reparse-symbol function_parameters) [3615 3616])
+                            ("y" variable nil (reparse-symbol function_parameters) [3618 3619])
+                            ("actions" variable nil (reparse-symbol function_parameters) [3621 3628]))                          )
+                        (reparse-symbol indented_block_body) [3587 4340])
+                    ("get_task3_reward1" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4367 4371])
+                            ("x" variable nil (reparse-symbol function_parameters) [4373 4374])
+                            ("y" variable nil (reparse-symbol function_parameters) [4376 4377])
+                            ("actions" variable nil (reparse-symbol function_parameters) [4379 4386]))                          )
+                        (reparse-symbol indented_block_body) [4345 6112])
+                    ("get_task3_reward2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6151 6155])
+                            ("x" variable nil (reparse-symbol function_parameters) [6157 6158])
+                            ("y" variable nil (reparse-symbol function_parameters) [6160 6161])
+                            ("actions" variable nil (reparse-symbol function_parameters) [6163 6170]))                          )
+                        (reparse-symbol indented_block_body) [6129 7851])
+                    ("has_reached_ball" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7878 7882])
+                            ("x" variable nil (reparse-symbol function_parameters) [7884 7885])
+                            ("y" variable nil (reparse-symbol function_parameters) [7887 7888])
+                            ("ball_num" variable nil (reparse-symbol function_parameters) [7891 7899]))                          )
+                        (reparse-symbol indented_block_body) [7857 8916]))                  
+                :type "class")
+                nil [166 8916]))          
+      :file "heuristic_reward_gym_robot_sequential.py"
+      :pointmax 8921
+      :fsize 8920
+      :lastmodtime '(22678 8955 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "tltl_reward_baxter.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("theano.tensor" include nil nil [20 45])
+            ("theano" include nil nil [46 59])
+            ("examples.baxter_examples.config" include nil nil [61 114])
+            ("TLTLRewardBaxter" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    takes in a trajectory can calculate reward based on gradients of logsumexp or softmax approximations
+    '''" code nil (reparse-symbol indented_block_body) [152 268])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [341 361])
+                            ("self" variable nil (reparse-symbol indented_block_body) [371 413])
+                            ("self" variable nil (reparse-symbol indented_block_body) [422 472])
+                            ("slot1" variable nil (reparse-symbol indented_block_body) [528 590])
+                            ("self" variable nil (reparse-symbol indented_block_body) [599 637])
+                            ("self" variable nil (reparse-symbol indented_block_body) [646 685])
+                            ("self" variable nil (reparse-symbol indented_block_body) [703 753])
+                            ("self" variable nil (reparse-symbol indented_block_body) [810 854])
+                            ("self" variable nil (reparse-symbol indented_block_body) [890 936])
+                            ("self" variable nil (reparse-symbol indented_block_body) [973 1050])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1107 1153])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1199 1246])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1293 1338])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1378 1430])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1439 1505])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1574 1620])
+                            ("if" code nil (reparse-symbol indented_block_body) [1677 1782]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [291 295])
+                            ("beta" variable nil (reparse-symbol function_parameters) [297 301])
+                            ("s_or_r" variable nil (reparse-symbol function_parameters) [304 310])
+                            ("goal_and_obs_info" variable nil (reparse-symbol function_parameters) [312 329]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [278 1782])
+                    ("update_paths_with_custom_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1845 1849])
+                            ("paths" variable nil (reparse-symbol function_parameters) [1851 1856]))                          )
+                        (reparse-symbol indented_block_body) [1809 2719])
+                    ("get_smoothed_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2748 2752])
+                            ("r_obs" variable nil (reparse-symbol function_parameters) [2754 2759]))                          )
+                        (reparse-symbol indented_block_body) [2724 2779])
+                    ("get_smoothed_reward_logsumexp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2826 2830])
+                            ("beta" variable nil (reparse-symbol function_parameters) [2832 2836]))                          )
+                        (reparse-symbol indented_block_body) [2792 2852])
+                    ("evaluate_tltl_real" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2884 2888])
+                            ("r_obs" variable nil (reparse-symbol function_parameters) [2890 2895])
+                            ("actions" variable nil (reparse-symbol function_parameters) [2897 2904]))                          )
+                        (reparse-symbol indented_block_body) [2861 3218])
+                    ("evaluate_tltl_real_f" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3256 3260])
+                            ("ee_pos" variable nil (reparse-symbol function_parameters) [3262 3268])
+                            ("ee_ori" variable nil (reparse-symbol function_parameters) [3270 3276])
+                            ("ee_gripper" variable nil (reparse-symbol function_parameters) [3278 3288])
+                            ("ee_velocities" variable nil (reparse-symbol function_parameters) [3290 3303])
+                            ("actions" variable nil (reparse-symbol function_parameters) [3305 3312]))                          )
+                        (reparse-symbol indented_block_body) [3231 10185])
+                    ("dist" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10199 10203])
+                            ("x1" variable nil (reparse-symbol function_parameters) [10205 10207])
+                            ("x2" variable nil (reparse-symbol function_parameters) [10209 10211]))                          )
+                        (reparse-symbol indented_block_body) [10190 10257])
+                    ("normalize_robustness" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10287 10291])
+                            ("array" variable nil (reparse-symbol function_parameters) [10293 10298]))                          )
+                        (reparse-symbol indented_block_body) [10262 10403])
+                    ("calculate_min_predicate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10436 10440])
+                            ("M_data" variable nil (reparse-symbol function_parameters) [10442 10448])
+                            ("low_vec" variable nil (reparse-symbol function_parameters) [10450 10457])
+                            ("high_vec" variable nil (reparse-symbol function_parameters) [10459 10467]))                          )
+                        (reparse-symbol indented_block_body) [10408 10870]))                  
+                :type "class")
+                nil [116 10870]))          
+      :file "tltl_reward_baxter.py"
+      :pointmax 10870
+      :fsize 10869
+      :lastmodtime '(22684 53762 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rlfps!rewards!TL!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,99 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "PointCloudFilter.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("point_cloud_filter/PointCloudFilter.h" include (:system-flag t) nil [1806 1854])
+            ("parameter_utils/ParameterUtils.h" include (:system-flag t) nil [1855 1898])
+            ("pcl/filters/filter.h" include (:system-flag t) nil [1900 1931])
+            ("pcl/filters/radius_outlier_removal.h" include (:system-flag t) nil [1932 1979])
+            ("pcl/filters/random_sample.h" include (:system-flag t) nil [1980 2018])
+            ("pcl/filters/statistical_outlier_removal.h" include (:system-flag t) nil [2019 2071])
+            ("pcl/filters/voxel_grid.h" include (:system-flag t) nil [2072 2107])
+            ("pu" type
+               (:kind alias
+                :members 
+                  ( ("parameter_utils" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [2109 2140])
+            ("PointCloudFilter" function
+               (:constructor-flag t
+                :parent "PointCloudFilter"
+                :type ("PointCloudFilter" type (:type "class") nil nil))
+                nil [2142 2181])
+            ("PointCloudFilter" function
+               (:destructor-flag t
+                :parent "PointCloudFilter"
+                :type "void")
+                nil [2182 2222])
+            ("Initialize" function
+               (:parent "PointCloudFilter"
+                :arguments 
+                  ( ("n" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2258 2283]))                  
+                :type "bool")
+                nil [2224 2607])
+            ("LoadParameters" function
+               (:parent "PointCloudFilter"
+                :arguments 
+                  ( ("n" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2647 2672]))                  
+                :type "bool")
+                nil [2609 3625])
+            ("RegisterCallbacks" function
+               (:parent "PointCloudFilter"
+                :arguments 
+                  ( ("n" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3668 3693]))                  
+                :type "bool")
+                nil [3627 3803])
+            ("Filter" function
+               (:parent "PointCloudFilter"
+                :arguments 
+                  ( ("points" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("PointCloud::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3835 3870])
+                    ("points_filtered" variable (:type ("PointCloud::Ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3901 3933]))                  
+                :type "bool")
+                nil [3805 5507]))          
+      :file "PointCloudFilter.cc"
+      :pointmax 5508
+      :fsize 5507
+      :lastmodtime '(23160 53200 135748 186000)
+      :unmatched-syntax nil)
+    (semanticdb-table "point_cloud_filter.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1806 1826])
+            ("point_cloud_filter/PointCloudFilter.h" include (:system-flag t) nil [1827 1875])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1886 1895])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1896 1908]))                  
+                :type "int")
+                nil [1877 2218]))          
+      :file "point_cloud_filter.cc"
+      :pointmax 2219
+      :fsize 2218
+      :lastmodtime '(23160 53200 135748 186000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!Xiao!blam!internal!src!point_cloud_filter!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

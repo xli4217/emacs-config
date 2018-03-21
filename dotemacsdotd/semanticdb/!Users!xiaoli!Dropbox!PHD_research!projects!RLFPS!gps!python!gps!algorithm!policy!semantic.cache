@@ -1,0 +1,260 @@
+;; Object policy/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "policy/"
+  :tables
+  (list
+    (semanticdb-table "lin_gauss_init.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" Initializations for linear Gaussian controllers. \"\"\"" code nil nil [1 57])
+            ("copy" include nil nil [58 69])
+            ("numpy" include nil nil [70 88])
+            ("scipy" include nil nil [89 107])
+            ("gps.algorithm.dynamics.dynamics_utils" include nil nil [109 173])
+            ("gps.algorithm.policy.lin_gauss_policy" include nil nil [174 244])
+            ("gps.algorithm.policy.config" include nil nil [245 308])
+            ("init_lqr" function
+               (:documentation "
+    Return initial gains for a time-varying linear Gaussian controller
+    that tries to hold the initial position.
+    "
+                :arguments 
+                  ( ("hyperparams" variable nil (reparse-symbol function_parameters) [324 335]))                  )
+                nil [311 4018])
+            ("init_pd" function
+               (:documentation "
+    This function initializes the linear-Gaussian controller as a
+    proportional-derivative (PD) controller with Gaussian noise. The
+    position gains are controlled by the variable pos_gains, velocity
+    gains are controlled by pos_gains*vel_gans_mult.
+    "
+                :arguments 
+                  ( ("hyperparams" variable nil (reparse-symbol function_parameters) [4053 4064]))                  )
+                nil [4041 5317]))          
+      :file "lin_gauss_init.py"
+      :pointmax 5317
+      :fsize 5316
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "lin_gauss_policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the linear Gaussian policy class. \"\"\"" code nil nil [1 60])
+            ("numpy" include nil nil [61 79])
+            ("gps.algorithm.policy.policy" include nil nil [81 127])
+            ("gps.utility.general_utils" include nil nil [128 177])
+            ("LinearGaussianPolicy" type
+               (:documentation "
+    Time-varying linear Gaussian policy.
+    U = K*x + k + noise, where noise ~ N(0, chol_pol_covar)
+    "
+                :superclasses ("Policy")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Policy" code nil (reparse-symbol indented_block_body) [413 434])
+                            ("self" variable nil (reparse-symbol indented_block_body) [514 533])
+                            ("self" variable nil (reparse-symbol indented_block_body) [542 562])
+                            ("self" variable nil (reparse-symbol indented_block_body) [571 591])
+                            ("check_shape" code nil (reparse-symbol indented_block_body) [601 634])
+                            ("check_shape" code nil (reparse-symbol indented_block_body) [643 693])
+                            ("check_shape" code nil (reparse-symbol indented_block_body) [702 757])
+                            ("check_shape" code nil (reparse-symbol indented_block_body) [766 820])
+                            ("self" variable nil (reparse-symbol indented_block_body) [830 840])
+                            ("self" variable nil (reparse-symbol indented_block_body) [849 859])
+                            ("self" variable nil (reparse-symbol indented_block_body) [868 894])
+                            ("self" variable nil (reparse-symbol indented_block_body) [903 939])
+                            ("self" variable nil (reparse-symbol indented_block_body) [948 982]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [350 354])
+                            ("K" variable nil (reparse-symbol function_parameters) [356 357])
+                            ("k" variable nil (reparse-symbol function_parameters) [359 360])
+                            ("pol_covar" variable nil (reparse-symbol function_parameters) [362 371])
+                            ("chol_pol_covar" variable nil (reparse-symbol function_parameters) [373 387])
+                            ("inv_pol_covar" variable nil (reparse-symbol function_parameters) [389 402]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [337 983])
+                    ("act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [996 1000])
+                            ("x" variable nil (reparse-symbol function_parameters) [1002 1003])
+                            ("obs" variable nil (reparse-symbol function_parameters) [1005 1008])
+                            ("t" variable nil (reparse-symbol function_parameters) [1010 1011])
+                            ("noise" variable nil (reparse-symbol function_parameters) [1013 1018]))                          
+                        :documentation "
+        Return an action for a state.
+        Args:
+            x: State vector.
+            obs: Observation vector.
+            t: Time step.
+            noise: Action noise. This will be scaled by the variance.
+        ")
+                        (reparse-symbol indented_block_body) [988 1371])
+                    ("fold_k" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1387 1391])
+                            ("noise" variable nil (reparse-symbol function_parameters) [1393 1398]))                          
+                        :documentation "
+        Fold noise into k.
+        Args:
+            noise: A T x Du noise vector with mean 0 and variance 1.
+        Returns:
+            k: A T x dU bias vector.
+        ")
+                        (reparse-symbol indented_block_body) [1376 1782])
+                    ("nans_like" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1801 1805]))                          
+                        :documentation "
+        Returns:
+            A new linear Gaussian policy object with the same dimensions
+            but all values filled with NaNs.
+        ")
+                        (reparse-symbol indented_block_body) [1787 2404]))                  
+                :type "class")
+                nil [180 2404]))          
+      :file "lin_gauss_policy.py"
+      :pointmax 2404
+      :fsize 2403
+      :lastmodtime '(22652 16501 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" Default configuration and hyperparameter values for policies. \"\"\"" code nil nil [1 70])
+            ("INIT_LG_PD" variable nil nil [191 371])
+            ("INIT_LG_LQR" variable nil nil [447 722])
+            ("POLICY_PRIOR" variable nil nil [738 778])
+            ("POLICY_PRIOR_GMM" variable nil nil [797 922]))          
+      :file "config.py"
+      :pointmax 923
+      :fsize 922
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the base class for the policy. \"\"\"" code nil nil [1 57])
+            ("abc" include nil nil [58 68])
+            ("Policy" type
+               (:documentation " Computes actions from states/observations. "
+                :superclasses ("object")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [152 179])
+                    ("act" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [217 221])
+                            ("x" variable nil (reparse-symbol function_parameters) [223 224])
+                            ("obs" variable nil (reparse-symbol function_parameters) [226 229])
+                            ("t" variable nil (reparse-symbol function_parameters) [231 232])
+                            ("noise" variable nil (reparse-symbol function_parameters) [234 239]))                          
+                        :documentation "
+        Args:
+            x: State vector.
+            obs: Observation vector.
+            t: Time step.
+            noise: A dU-dimensional noise vector.
+        Returns:
+            A dU dimensional action vector.
+        ")
+                        (reparse-symbol indented_block_body) [185 553])
+                    ("set_meta_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [576 580])
+                            ("meta" variable nil (reparse-symbol function_parameters) [582 586]))                          
+                        :documentation "
+        Set meta data for policy (e.g., domain image, multi modal observation sizes)
+        Args:
+            meta: meta data.
+        ")
+                        (reparse-symbol indented_block_body) [558 756]))                  
+                :type "class")
+                nil [71 756]))          
+      :file "policy.py"
+      :pointmax 756
+      :fsize 755
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "policy_prior.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the constant prior for policy linearization. \"\"\"" code nil nil [1 71])
+            ("copy" include nil nil [72 83])
+            ("numpy" include nil nil [85 103])
+            ("gps.algorithm.algorithm_utils" include nil nil [105 168])
+            ("gps.algorithm.policy.config" include nil nil [169 221])
+            ("PolicyPrior" type
+               (:documentation " Constant policy prior. "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("config" variable nil (reparse-symbol indented_block_body) [331 367])
+                            ("config" code nil (reparse-symbol indented_block_body) [376 402])
+                            ("self" variable nil (reparse-symbol indented_block_body) [411 437]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [303 307])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [309 320]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [290 438])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [454 458])
+                            ("samples" variable nil (reparse-symbol function_parameters) [460 467])
+                            ("policy_opt" variable nil (reparse-symbol function_parameters) [469 479])
+                            ("all_samples" variable nil (reparse-symbol function_parameters) [481 492])
+                            ("retrain" variable nil (reparse-symbol function_parameters) [494 501]))                          
+                        :documentation " Update dynamics prior. ")
+                        (reparse-symbol indented_block_body) [443 616])
+                    ("eval" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [630 634])
+                            ("Ts" variable nil (reparse-symbol function_parameters) [636 638])
+                            ("Ps" variable nil (reparse-symbol function_parameters) [640 642]))                          
+                        :documentation " Evaluate the policy prior. ")
+                        (reparse-symbol indented_block_body) [621 1138])
+                    ("fit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1151 1155])
+                            ("X" variable nil (reparse-symbol function_parameters) [1157 1158])
+                            ("pol_mu" variable nil (reparse-symbol function_parameters) [1160 1166])
+                            ("pol_sig" variable nil (reparse-symbol function_parameters) [1168 1175]))                          
+                        :documentation "
+        Fit policy linearization.
+
+        Args:
+            X: Samples (N, T, dX)
+            pol_mu: Policy means (N, T, dU)
+            pol_sig: Policy covariance (N, T, dU)
+        ")
+                        (reparse-symbol indented_block_body) [1143 2551]))                  
+                :type "class")
+                nil [224 2551]))          
+      :file "policy_prior.py"
+      :pointmax 2551
+      :fsize 2550
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!algorithm!policy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

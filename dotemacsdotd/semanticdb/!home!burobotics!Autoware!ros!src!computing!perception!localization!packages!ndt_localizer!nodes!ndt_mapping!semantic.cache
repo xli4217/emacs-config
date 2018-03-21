@@ -1,0 +1,577 @@
+;; Object ndt_mapping/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ndt_mapping/"
+  :tables
+  (list
+    (semanticdb-table "ndt_mapping.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("OUTPUT" variable (:constant-flag t) nil [1693 1699])
+            ("iostream" include (:system-flag t) nil [1765 1784])
+            ("sstream" include (:system-flag t) nil [1785 1803])
+            ("fstream" include (:system-flag t) nil [1804 1822])
+            ("string" include (:system-flag t) nil [1823 1840])
+            ("ros/ros.h" include (:system-flag t) nil [1842 1862])
+            ("std_msgs/Bool.h" include (:system-flag t) nil [1863 1889])
+            ("std_msgs/Float32.h" include (:system-flag t) nil [1890 1919])
+            ("nav_msgs/Odometry.h" include (:system-flag t) nil [1920 1950])
+            ("sensor_msgs/Imu.h" include (:system-flag t) nil [1951 1979])
+            ("sensor_msgs/PointCloud2.h" include (:system-flag t) nil [1980 2016])
+            ("velodyne_pointcloud/point_types.h" include (:system-flag t) nil [2017 2061])
+            ("velodyne_pointcloud/rawdata.h" include (:system-flag t) nil [2062 2102])
+            ("tf/transform_broadcaster.h" include (:system-flag t) nil [2104 2141])
+            ("tf/transform_datatypes.h" include (:system-flag t) nil [2142 2177])
+            ("pcl/io/io.h" include (:system-flag t) nil [2179 2201])
+            ("pcl/io/pcd_io.h" include (:system-flag t) nil [2202 2228])
+            ("pcl/point_types.h" include (:system-flag t) nil [2229 2257])
+            ("pcl_conversions/pcl_conversions.h" include (:system-flag t) nil [2258 2302])
+            ("pcl/registration/ndt.h" include (:system-flag t) nil [2410 2443])
+            ("pcl/filters/voxel_grid.h" include (:system-flag t) nil [2444 2479])
+            ("autoware_msgs/ConfigNdtMapping.h" include (:system-flag t) nil [2488 2531])
+            ("autoware_msgs/ConfigNdtMappingOutput.h" include (:system-flag t) nil [2532 2581])
+            ("pose" type
+               (:members 
+                  ( ("x" variable (:type "double") (reparse-symbol classsubparts) [2599 2608])
+                    ("y" variable (:type "double") (reparse-symbol classsubparts) [2611 2620])
+                    ("z" variable (:type "double") (reparse-symbol classsubparts) [2623 2632])
+                    ("roll" variable (:type "double") (reparse-symbol classsubparts) [2635 2647])
+                    ("pitch" variable (:type "double") (reparse-symbol classsubparts) [2650 2663])
+                    ("yaw" variable (:type "double") (reparse-symbol classsubparts) [2666 2677]))                  
+                :type "struct")
+                nil [2583 2680])
+            ("previous_pose" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("guess_pose" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("guess_pose_imu" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("guess_pose_odom" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("guess_pose_imu_odom" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("current_pose" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("current_pose_imu" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("current_pose_odom" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("current_pose_imu_odom" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("ndt_pose" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("added_pose" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("localizer_pose" variable
+               (:typemodifiers ("static")
+                :type ("pose" type (:type "class") nil nil))
+                nil [2702 2905])
+            ("current_scan_time" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [2907 2942])
+            ("previous_scan_time" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [2943 2979])
+            ("scan_duration" variable
+               (:typemodifiers ("static")
+                :type ("ros::Duration" type (:type "class") nil nil))
+                nil [2980 3015])
+            ("diff" variable
+               (:typemodifiers ("static")
+                :default-value "0.0"
+                :type "double")
+                nil [3017 3042])
+            ("diff_x" variable
+               (:typemodifiers ("static")
+                :default-value "0.0"
+                :type "double")
+                nil [3043 3108])
+            ("diff_y" variable
+               (:typemodifiers ("static")
+                :default-value "0.0"
+                :type "double")
+                nil [3043 3108])
+            ("diff_z" variable
+               (:typemodifiers ("static")
+                :default-value "0.0"
+                :type "double")
+                nil [3043 3108])
+            ("diff_yaw" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3043 3108])
+            ("offset_imu_x" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3141 3247])
+            ("offset_imu_y" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3141 3247])
+            ("offset_imu_z" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3141 3247])
+            ("offset_imu_roll" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3141 3247])
+            ("offset_imu_pitch" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3141 3247])
+            ("offset_imu_yaw" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3141 3247])
+            ("offset_odom_x" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3248 3360])
+            ("offset_odom_y" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3248 3360])
+            ("offset_odom_z" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3248 3360])
+            ("offset_odom_roll" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3248 3360])
+            ("offset_odom_pitch" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3248 3360])
+            ("offset_odom_yaw" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3248 3360])
+            ("offset_imu_odom_x" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3361 3497])
+            ("offset_imu_odom_y" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3361 3497])
+            ("offset_imu_odom_z" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3361 3497])
+            ("offset_imu_odom_roll" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3361 3497])
+            ("offset_imu_odom_pitch" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3361 3497])
+            ("offset_imu_odom_yaw" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [3361 3497])
+            ("current_velocity_x" variable
+               (:typemodifiers ("static")
+                :default-value "0.0"
+                :type "double")
+                nil [3499 3538])
+            ("current_velocity_y" variable
+               (:typemodifiers ("static")
+                :default-value "0.0"
+                :type "double")
+                nil [3539 3578])
+            ("current_velocity_z" variable
+               (:typemodifiers ("static")
+                :default-value "0.0"
+                :type "double")
+                nil [3579 3618])
+            ("current_velocity_imu_x" variable
+               (:typemodifiers ("static")
+                :default-value "0.0"
+                :type "double")
+                nil [3620 3663])
+            ("current_velocity_imu_y" variable
+               (:typemodifiers ("static")
+                :default-value "0.0"
+                :type "double")
+                nil [3664 3707])
+            ("current_velocity_imu_z" variable
+               (:typemodifiers ("static")
+                :default-value "0.0"
+                :type "double")
+                nil [3708 3751])
+            ("map" variable
+               (:typemodifiers ("static")
+                :type ("pcl::PointCloud" type
+                     (:template-specifier 
+                        ( ("pcl::PointXYZI" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3753 3796])
+            ("ndt" variable
+               (:typemodifiers ("static")
+                :type ("pcl::NormalDistributionsTransform" type
+                     (:template-specifier 
+                        ( ("pcl::PointXYZI" type nil nil nil)
+                          ("pcl::PointXYZI" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3798 3875])
+            ("max_iter" variable
+               (:typemodifiers ("static")
+                :default-value "30"
+                :type "int")
+                nil [3894 3919])
+            ("ndt_res" variable
+               (:typemodifiers ("static")
+                :default-value "1.0"
+                :type "float")
+                nil [3953 3980])
+            ("step_size" variable
+               (:typemodifiers ("static")
+                :default-value "0.1"
+                :type "double")
+                nil [4000 4030])
+            ("trans_eps" variable
+               (:typemodifiers ("static")
+                :default-value "0.01"
+                :type "double")
+                nil [4046 4077])
+            ("voxel_leaf_size" variable
+               (:typemodifiers ("static")
+                :default-value "2.0"
+                :type "double")
+                nil [4140 4176])
+            ("callback_start" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("callback_end" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("t1_start" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("t1_end" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("t2_start" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("t2_end" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("t3_start" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("t3_end" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("t4_start" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("t4_end" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("t5_start" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("t5_end" variable
+               (:typemodifiers ("static")
+                :type ("ros::Time" type (:type "class") nil nil))
+                nil [4178 4318])
+            ("d_callback" variable
+               (:typemodifiers ("static")
+                :type ("ros::Duration" type (:type "class") nil nil))
+                nil [4319 4371])
+            ("d1" variable
+               (:typemodifiers ("static")
+                :type ("ros::Duration" type (:type "class") nil nil))
+                nil [4319 4371])
+            ("d2" variable
+               (:typemodifiers ("static")
+                :type ("ros::Duration" type (:type "class") nil nil))
+                nil [4319 4371])
+            ("d3" variable
+               (:typemodifiers ("static")
+                :type ("ros::Duration" type (:type "class") nil nil))
+                nil [4319 4371])
+            ("d4" variable
+               (:typemodifiers ("static")
+                :type ("ros::Duration" type (:type "class") nil nil))
+                nil [4319 4371])
+            ("d5" variable
+               (:typemodifiers ("static")
+                :type ("ros::Duration" type (:type "class") nil nil))
+                nil [4319 4371])
+            ("ndt_map_pub" variable
+               (:typemodifiers ("static")
+                :type ("ros::Publisher" type (:type "class") nil nil))
+                nil [4373 4407])
+            ("current_pose_pub" variable
+               (:typemodifiers ("static")
+                :type ("ros::Publisher" type (:type "class") nil nil))
+                nil [4408 4447])
+            ("guess_pose_linaer_pub" variable
+               (:typemodifiers ("static")
+                :type ("ros::Publisher" type (:type "class") nil nil))
+                nil [4448 4492])
+            ("current_pose_msg" variable
+               (:typemodifiers ("static")
+                :type ("geometry_msgs::PoseStamped" type (:type "class") nil nil))
+                nil [4493 4560])
+            ("guess_pose_msg" variable
+               (:typemodifiers ("static")
+                :type ("geometry_msgs::PoseStamped" type (:type "class") nil nil))
+                nil [4493 4560])
+            ("ndt_stat_pub" variable
+               (:typemodifiers ("static")
+                :type ("ros::Publisher" type (:type "class") nil nil))
+                nil [4562 4597])
+            ("ndt_stat_msg" variable
+               (:typemodifiers ("static")
+                :type ("std_msgs::Bool" type (:type "class") nil nil))
+                nil [4598 4633])
+            ("initial_scan_loaded" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [4635 4670])
+            ("gnss_transform" variable
+               (:typemodifiers ("static")
+                :default-value "Eigen::Matrix4f::Identity()"
+                :type ("Eigen::Matrix4f" type (:type "class") nil nil))
+                nil [4672 4740])
+            ("min_scan_range" variable
+               (:typemodifiers ("static")
+                :default-value "5.0"
+                :type "double")
+                nil [4742 4777])
+            ("min_add_scan_shift" variable
+               (:typemodifiers ("static")
+                :default-value "1.0"
+                :type "double")
+                nil [4778 4817])
+            ("_tf_x" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [4819 4883])
+            ("_tf_y" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [4819 4883])
+            ("_tf_z" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [4819 4883])
+            ("_tf_roll" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [4819 4883])
+            ("_tf_pitch" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [4819 4883])
+            ("_tf_yaw" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [4819 4883])
+            ("tf_btol" variable
+               (:typemodifiers ("static")
+                :type ("Eigen::Matrix4f" type (:type "class") nil nil))
+                nil [4884 4924])
+            ("tf_ltob" variable
+               (:typemodifiers ("static")
+                :type ("Eigen::Matrix4f" type (:type "class") nil nil))
+                nil [4884 4924])
+            ("isMapUpdate" variable
+               (:typemodifiers ("static")
+                :default-value "true"
+                :type "bool")
+                nil [4926 4957])
+            ("_use_openmp" variable
+               (:typemodifiers ("static")
+                :default-value "false"
+                :type "bool")
+                nil [4958 4990])
+            ("_use_imu" variable
+               (:typemodifiers ("static")
+                :default-value "false"
+                :type "bool")
+                nil [4991 5020])
+            ("_use_odom" variable
+               (:typemodifiers ("static")
+                :default-value "false"
+                :type "bool")
+                nil [5021 5051])
+            ("_imu_upside_down" variable
+               (:typemodifiers ("static")
+                :default-value "false"
+                :type "bool")
+                nil [5052 5089])
+            ("_imu_topic" variable
+               (:typemodifiers ("static")
+                :default-value "\"/imu_raw\""
+                :type ("std::string" type (:type "class") nil nil))
+                nil [5091 5134])
+            ("fitness_score" variable
+               (:typemodifiers ("static")
+                :type "double")
+                nil [5137 5165])
+            ("imu" variable
+               (:typemodifiers ("static")
+                :type ("sensor_msgs::Imu" type (:type "class") nil nil))
+                nil [5167 5195])
+            ("odom" variable
+               (:typemodifiers ("static")
+                :type ("nav_msgs::Odometry" type (:type "class") nil nil))
+                nil [5196 5227])
+            ("param_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("autoware_msgs::ConfigNdtMapping::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5256 5311]))                  
+                :type "void")
+                nil [5229 6058])
+            ("output_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("autoware_msgs::ConfigNdtMappingOutput::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6088 6149]))                  
+                :type "void")
+                nil [6060 7826])
+            ("imu_odom_calc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("current_time" variable (:type ("ros::Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7854 7877]))                  
+                :type "void")
+                nil [7828 9263])
+            ("odom_calc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("current_time" variable (:type ("ros::Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9288 9311]))                  
+                :type "void")
+                nil [9266 10614])
+            ("imu_calc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("current_time" variable (:type ("ros::Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10637 10660]))                  
+                :type "void")
+                nil [10616 12827])
+            ("wrapToPm" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a_num" variable (:type "double") (reparse-symbol arg-sub-list) [12853 12866])
+                    ("a_max" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [12867 12886]))                  
+                :type "double")
+                nil [12830 12974])
+            ("wrapToPmPi" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a_angle_rad" variable (:type "double") (reparse-symbol arg-sub-list) [13001 13020]))                  
+                :type "double")
+                nil [12976 13064])
+            ("odom_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("nav_msgs::Odometry::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13092 13134]))                  
+                :type "void")
+                nil [13066 13230])
+            ("imuUpsideDown" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input" variable
+                       (:constant-flag t
+                        :type ("sensor_msgs::Imu::Ptr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13259 13293]))                  
+                :type "void")
+                nil [13233 13908])
+            ("imu_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("sensor_msgs::Imu::Ptr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13936 13971]))                  
+                :type "void")
+                nil [13911 15824])
+            ("points_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("sensor_msgs::PointCloud2::ConstPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15855 15903]))                  
+                :type "void")
+                nil [15827 26353])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [26364 26373])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26374 26386]))                  
+                :type "int")
+                nil [26355 30857]))          
+      :file "ndt_mapping.cpp"
+      :pointmax 30858
+      :fsize 30857
+      :lastmodtime '(23040 63222 81645 421000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("OUTPUT")
+          )
+))
+  :file "!home!burobotics!Autoware!ros!src!computing!perception!localization!packages!ndt_localizer!nodes!ndt_mapping!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

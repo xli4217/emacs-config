@@ -1,0 +1,92 @@
+;; Object runners/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "runners/"
+  :tables
+  (list
+    (semanticdb-table "execution_runner.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [1 39])
+            ("__future__" include nil nil [40 77])
+            ("__future__" include nil nil [78 109])
+            ("time" include nil nil [111 122])
+            ("six.moves" include nil nil [123 151])
+            ("rl_pipeline.train.rl.rl_runner_base" include nil nil [153 213])
+            ("numpy" include nil nil [214 232])
+            ("ExecutionRunner" type
+               (:documentation "
+    Simple runner for non-realtime single-process execution.
+    "
+                :superclasses ("RLRunnerBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Initialize a Runner object.
+
+        Args:
+            agent:
+            environment:
+            repeat_actions:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [442 580])
+                            ("super" code nil (reparse-symbol indented_block_body) [590 655])
+                            ("self" variable nil (reparse-symbol indented_block_body) [664 700])
+                            ("self" variable nil (reparse-symbol indented_block_body) [709 732])
+                            ("self" variable nil (reparse-symbol indented_block_body) [741 765])
+                            ("self" code nil (reparse-symbol indented_block_body) [790 809]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [367 371])
+                            ("agent" variable nil (reparse-symbol function_parameters) [373 378])
+                            ("environment" variable nil (reparse-symbol function_parameters) [380 391])
+                            ("logger" variable nil (reparse-symbol function_parameters) [393 399])
+                            ("repeat_actions" variable nil (reparse-symbol function_parameters) [401 415])
+                            ("history" variable nil (reparse-symbol function_parameters) [419 426]))                          
+                        :documentation "
+        Initialize a Runner object.
+
+        Args:
+            agent:
+            environment:
+            repeat_actions:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [354 810])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [825 829])
+                            ("history" variable nil (reparse-symbol function_parameters) [831 838]))                          )
+                        (reparse-symbol indented_block_body) [815 1178])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1200 1204])
+                            ("timesteps" variable nil (reparse-symbol function_parameters) [1214 1223])
+                            ("episodes" variable nil (reparse-symbol function_parameters) [1238 1246])
+                            ("max_episode_timesteps" variable nil (reparse-symbol function_parameters) [1261 1282])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [1297 1310])
+                            ("episode_finished" variable nil (reparse-symbol function_parameters) [1326 1342]))                          
+                        :documentation "
+        Runs the agent on the environment.
+
+        Args:
+            timesteps: Number of timesteps
+            episodes: Number of episodes
+            max_episode_timesteps: Max number of timesteps per episode
+            deterministic: Deterministic flag
+            episode_finished: Function handler taking a `Runner` argument and returning a boolean indicating
+                whether to continue execution. For instance, useful for reporting intermediate performance or
+                integrating termination conditions.
+        ")
+                        (reparse-symbol indented_block_body) [1183 5068]))                  
+                :type "class")
+                nil [235 5068]))          
+      :file "execution_runner.py"
+      :pointmax 5068
+      :fsize 5067
+      :lastmodtime '(23125 20245 335750 448000)
+      :unmatched-syntax nil))
+  :file "!home!burobotics!Xiao!docker!docker_home!baxter_ws!src!baxter_learn_pkgs!baxter_learn!src!baxter_learn!go_to_goal!runners!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

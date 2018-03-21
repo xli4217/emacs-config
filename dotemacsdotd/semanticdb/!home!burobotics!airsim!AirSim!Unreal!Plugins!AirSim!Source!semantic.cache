@@ -1,0 +1,213 @@
+;; Object Source/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Source/"
+  :tables
+  (list
+    (semanticdb-table "AirSim.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("Engine.h" include nil nil [15 34])
+            ("DECLARE_STATS_GROUP" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("TEXT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56 70])
+                    ("" variable (:type ("STATGROUP_AirSim" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72 89])
+                    ("" variable (:type ("STATCAT_Advanced" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [90 107]))                  
+                :type "int")
+                nil [36 108])
+            ("DECLARE_LOG_CATEGORY_EXTERN" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("LogAirSim" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [138 148])
+                    ("" variable (:type ("Log" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149 153])
+                    ("" variable (:type ("All" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [154 158]))                  
+                :type "int")
+                nil [110 159]))          
+      :file "AirSim.h"
+      :pointmax 161
+      :fsize 160
+      :lastmodtime '(22758 51192 364612 241000)
+      :unmatched-syntax '((semantic-list 60 . 70) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "AirSim.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("AirSim.h" include nil nil [1 20])
+            ("SimJoyStick/SimJoyStick.h" include nil nil [21 57])
+            ("DEFINE_LOG_CATEGORY" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("LogAirSim" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79 89]))                  
+                :type "int")
+                nil [59 90])
+            ("FAirSim" type
+               (:superclasses 
+                  ( ("IModuleInterface" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("override" variable (:type "int") (reparse-symbol classsubparts) [167 176])
+                    ("override" variable (:type "int") (reparse-symbol classsubparts) [211 220]))                  
+                :type "class")
+                nil [92 223])
+            ("xinput_dllHandle" variable
+               (:pointer 1
+                :type "void")
+                nil [260 283])
+            ("StartupModule" function
+               (:parent "FAirSim"
+                :type "void")
+                nil [285 642])
+            ("ShutdownModule" function
+               (:parent "FAirSim"
+                :type "void")
+                nil [644 856]))          
+      :file "AirSim.cpp"
+      :pointmax 856
+      :fsize 855
+      :lastmodtime '(22758 51192 364612 241000)
+      :unmatched-syntax '((semantic-list 241 . 258) (symbol 225 . 241) (semantic-list 208 . 210) (symbol 194 . 208) (VOID 189 . 193) (VIRTUAL 181 . 188) (semantic-list 164 . 166) (symbol 151 . 164) (VOID 146 . 150) (VIRTUAL 138 . 145)))
+    (semanticdb-table "CameraDirector.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("AirSim.h" include nil nil [1 20])
+            ("CameraDirector.h" include nil nil [21 48])
+            ("AirBlueprintLib.h" include nil nil [49 77])
+            ("ACameraDirector" function
+               (:constructor-flag t
+                :parent "ACameraDirector"
+                :type ("ACameraDirector" type (:type "class") nil nil))
+                nil [80 160])
+            ("BeginPlay" function
+               (:parent "ACameraDirector"
+                :type "void")
+                nil [162 250])
+            ("Tick" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("DeltaTime" variable (:type "float") (reparse-symbol arg-sub-list) [280 297]))                  
+                :type "void")
+                nil [252 510])
+            ("getMode" function
+               (:parent "ACameraDirector"
+                :type ("ECameraDirectorMode" type (:type "class") nil nil))
+                nil [512 580])
+            ("setMode" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("mode" variable (:type ("ECameraDirectorMode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [612 637]))                  
+                :type "void")
+                nil [582 957])
+            ("setupInputBindings" function
+               (:parent "ACameraDirector"
+                :type "void")
+                nil [959 2949])
+            ("enableManualBindings" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("enable" variable (:type "bool") (reparse-symbol arg-sub-list) [2994 3006]))                  
+                :type "void")
+                nil [2951 3381])
+            ("inputManualLeft" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("val" variable (:type "float") (reparse-symbol arg-sub-list) [3421 3431]))                  
+                :type "void")
+                nil [3383 3575])
+            ("inputManualRight" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("val" variable (:type "float") (reparse-symbol arg-sub-list) [3615 3625]))                  
+                :type "void")
+                nil [3576 3763])
+            ("inputManualForward" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("val" variable (:type "float") (reparse-symbol arg-sub-list) [3805 3815]))                  
+                :type "void")
+                nil [3764 3953])
+            ("inputManualBackward" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("val" variable (:type "float") (reparse-symbol arg-sub-list) [3996 4006]))                  
+                :type "void")
+                nil [3954 4144])
+            ("inputManualMoveUp" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("val" variable (:type "float") (reparse-symbol arg-sub-list) [4185 4195]))                  
+                :type "void")
+                nil [4145 4301])
+            ("inputManualDown" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("val" variable (:type "float") (reparse-symbol arg-sub-list) [4340 4350]))                  
+                :type "void")
+                nil [4302 4457])
+            ("inputManualLeftYaw" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("val" variable (:type "float") (reparse-symbol arg-sub-list) [4499 4509]))                  
+                :type "void")
+                nil [4458 4604])
+            ("inputManualUpPitch" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("val" variable (:type "float") (reparse-symbol arg-sub-list) [4646 4656]))                  
+                :type "void")
+                nil [4605 4750])
+            ("inputManualRightYaw" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("val" variable (:type "float") (reparse-symbol arg-sub-list) [4793 4803]))                  
+                :type "void")
+                nil [4751 4897])
+            ("inputManualDownPitch" function
+               (:parent "ACameraDirector"
+                :arguments 
+                  ( ("val" variable (:type "float") (reparse-symbol arg-sub-list) [4941 4951]))                  
+                :type "void")
+                nil [4898 5046])
+            ("checkCameraRefs" function
+               (:parent "ACameraDirector"
+                :type "bool")
+                nil [5049 5395])
+            ("togglePIPScene" function
+               (:parent "ACameraDirector"
+                :type "bool")
+                nil [5397 5947])
+            ("togglePIPDepth" function
+               (:parent "ACameraDirector"
+                :type "bool")
+                nil [5949 6499])
+            ("togglePIPSeg" function
+               (:parent "ACameraDirector"
+                :type "bool")
+                nil [6501 7045])
+            ("togglePIPAll" function
+               (:parent "ACameraDirector"
+                :type "bool")
+                nil [7047 7591])
+            ("getCamera" function
+               (:pointer 1
+                :parent "ACameraDirector"
+                :arguments 
+                  ( ("id" variable (:type "int") (reparse-symbol arg-sub-list) [7633 7640]))                  
+                :type ("APIPCamera" type (:type "class") nil nil))
+                nil [7594 7787]))          
+      :file "CameraDirector.cpp"
+      :pointmax 7788
+      :fsize 7787
+      :lastmodtime '(22758 51192 364612 241000)
+      :unmatched-syntax nil)
+    (semanticdb-table "CameraDirector.h"
+      :file "CameraDirector.h"
+      :fsize 2899
+      :lastmodtime '(22758 51192 364612 241000))
+    (semanticdb-table "AirBlueprintLib.h"
+      :file "AirBlueprintLib.h"
+      :fsize 2887
+      :lastmodtime '(22758 51192 364612 241000)))
+  :file "!home!burobotics!airsim!AirSim!Unreal!Plugins!AirSim!Source!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

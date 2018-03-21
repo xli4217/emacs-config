@@ -1,0 +1,331 @@
+;; Object traj_opt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "traj_opt/"
+  :tables
+  (list
+    (semanticdb-table "traj_opt_lqr.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file interfaces to C++ iLQG-based trajectory optimization. \"\"\"" code nil nil [1 72])
+            ("gps.algorithm.traj_opt.traj_opt" include nil nil [73 124])
+            ("TrajOptLQR" type
+               (:documentation " LQR trajectory optimization. "
+                :superclasses ("TrajOpt")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("TrajOpt" code nil (reparse-symbol indented_block_body) [250 295]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [212 216])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [218 229])
+                            ("dynamics" variable nil (reparse-symbol function_parameters) [231 239]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [199 296])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [312 316]))                          
+                        :documentation " Update trajectory distributions. ")
+                        (reparse-symbol indented_block_body) [301 508]))                  
+                :type "class")
+                nil [127 508]))          
+      :file "traj_opt_lqr.py"
+      :pointmax 508
+      :fsize 507
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "traj_opt.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the base trajectory optimization class. \"\"\"" code nil nil [1 66])
+            ("abc" include nil nil [67 77])
+            ("TrajOpt" type
+               (:documentation " Trajectory optimization superclass. "
+                :superclasses ("object")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [155 182])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [229 260]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [201 205])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [207 218]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [188 261])
+                    ("update" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [301 305]))                          
+                        :documentation " Update trajectory distributions. ")
+                        (reparse-symbol indented_block_body) [266 427]))                  
+                :type "class")
+                nil [80 427]))          
+      :file "traj_opt.py"
+      :pointmax 467
+      :fsize 466
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "traj_opt_lqr_python.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines code for iLQG-based trajectory optimization. \"\"\"" code nil nil [1 71])
+            ("logging" include nil nil [72 86])
+            ("copy" include nil nil [87 98])
+            ("numpy" include nil nil [100 118])
+            ("numpy.linalg" include nil nil [119 155])
+            ("scipy" include nil nil [156 174])
+            ("gps.algorithm.traj_opt.config" include nil nil [176 230])
+            ("gps.algorithm.traj_opt.traj_opt" include nil nil [231 282])
+            ("gps.algorithm.traj_opt.traj_opt_utils" include nil nil [283 370])
+            ("gps.algorithm.algorithm_badmm" include nil nil [372 428])
+            ("gps.algorithm.algorithm_mdgps" include nil nil [429 485])
+            ("LOGGER" variable nil nil [487 523])
+            ("TrajOptLQRPython" type
+               (:documentation " LQR trajectory optimization, Python implementation. "
+                :superclasses ("TrajOpt")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("config" variable nil (reparse-symbol indented_block_body) [667 703])
+                            ("config" code nil (reparse-symbol indented_block_body) [712 738])
+                            ("TrajOpt" code nil (reparse-symbol indented_block_body) [748 778]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [639 643])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [645 656]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [626 779])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [850 854])
+                            ("m" variable nil (reparse-symbol function_parameters) [856 857])
+                            ("algorithm" variable nil (reparse-symbol function_parameters) [859 868]))                          
+                        :documentation " Run dual gradient decent to optimize trajectories. ")
+                        (reparse-symbol indented_block_body) [839 3715])
+                    ("estimate_cost" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3738 3742])
+                            ("traj_distr" variable nil (reparse-symbol function_parameters) [3744 3754])
+                            ("traj_info" variable nil (reparse-symbol function_parameters) [3756 3765]))                          
+                        :documentation " Compute Laplace approximation to expected cost. ")
+                        (reparse-symbol indented_block_body) [3720 4530])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4547 4551])
+                            ("traj_distr" variable nil (reparse-symbol function_parameters) [4553 4563])
+                            ("traj_info" variable nil (reparse-symbol function_parameters) [4565 4574]))                          
+                        :documentation "
+        Perform LQR forward pass. Computes state-action marginals from
+        dynamics and policy.
+        Args:
+            traj_distr: A linear Gaussian policy object.
+            traj_info: A TrajectoryInfo object.
+        Returns:
+            mu: A T x dX mean action vector.
+            sigma: A T x dX x dX covariance matrix.
+        ")
+                        (reparse-symbol indented_block_body) [4535 6567])
+                    ("backward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6585 6589])
+                            ("prev_traj_distr" variable nil (reparse-symbol function_parameters) [6591 6606])
+                            ("traj_info" variable nil (reparse-symbol function_parameters) [6608 6617])
+                            ("eta" variable nil (reparse-symbol function_parameters) [6619 6622])
+                            ("algorithm" variable nil (reparse-symbol function_parameters) [6624 6633])
+                            ("m" variable nil (reparse-symbol function_parameters) [6635 6636]))                          
+                        :documentation "
+        Perform LQR backward pass. This computes a new linear Gaussian
+        policy object.
+        Args:
+            prev_traj_distr: A linear Gaussian policy object from
+                previous iteration.
+            traj_info: A TrajectoryInfo object.
+            eta: Dual variable.
+            algorithm: Algorithm object needed to compute costs.
+            m: Condition number.
+        Returns:
+            traj_distr: A new linear Gaussian policy.
+            new_eta: The updated dual variable. Updates happen if the
+                Q-function is not PD.
+        ")
+                        (reparse-symbol indented_block_body) [6572 11392]))                  
+                :type "class")
+                nil [525 11392]))          
+      :file "traj_opt_lqr_python.py"
+      :pointmax 11392
+      :fsize 11391
+      :lastmodtime '(22604 44624 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" Default configuration for trajectory optimization. \"\"\"" code nil nil [1 59])
+            ("TRAJ_OPT_LQR" variable nil nil [81 243])
+            ("TRAJ_OPT_PI2" variable nil nil [258 368]))          
+      :file "config.py"
+      :pointmax 369
+      :fsize 368
+      :lastmodtime '(22652 9234 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "traj_opt_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines utilities for trajectory optimization. \"\"\"" code nil nil [1 65])
+            ("abc" include nil nil [66 76])
+            ("logging" include nil nil [77 91])
+            ("numpy" include nil nil [93 111])
+            ("scipy" include nil nil [112 130])
+            ("LOGGER" variable nil nil [133 169])
+            ("DGD_MAX_ITER" variable nil nil [203 220])
+            ("traj_distr_kl" function
+               (:documentation "
+    Compute KL divergence between new and previous trajectory
+    distributions.
+    Args:
+        new_mu: T x dX, mean of new trajectory distribution.
+        new_sigma: T x dX x dX, variance of new trajectory distribution.
+        new_traj_distr: A linear Gaussian policy object, new
+            distribution.
+        prev_traj_distr: A linear Gaussian policy object, previous
+            distribution.
+    Returns:
+        kl_div: The KL divergence between the new and previous
+            trajectories.
+    "
+                :arguments 
+                  ( ("new_mu" variable nil (reparse-symbol function_parameters) [241 247])
+                    ("new_sigma" variable nil (reparse-symbol function_parameters) [249 258])
+                    ("new_traj_distr" variable nil (reparse-symbol function_parameters) [260 274])
+                    ("prev_traj_distr" variable nil (reparse-symbol function_parameters) [276 291]))                  )
+                nil [223 3071]))          
+      :file "traj_opt_utils.py"
+      :pointmax 3071
+      :fsize 3070
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "traj_opt_pi2.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines code for PI2-based trajectory optimization.
+
+Optimization of trajectories with PI2 and a REPS-like KL-divergence constraint. 
+References:
+[1] E. Theodorou, J. Buchli, and S. Schaal. A generalized path integral control 
+    approach to reinforcement learning. JMLR, 11, 2010.
+[2] F. Stulp and O. Sigaud. Path integral policy improvement with covariance 
+    matrix adaptation. In ICML, 2012.
+[3] J. Peters, K. Mulling, and Y. Altun. Relative entropy policy search. 
+    In AAAI, 2010.
+ \"\"\"" code nil nil [1 511])
+            ("copy" include nil nil [512 523])
+            ("numpy" include nil nil [524 542])
+            ("scipy" include nil nil [543 561])
+            ("numpy.linalg" include nil nil [563 599])
+            ("scipy.optimize" include nil nil [600 635])
+            ("gps.algorithm.traj_opt.config" include nil nil [637 691])
+            ("gps.algorithm.traj_opt.traj_opt" include nil nil [692 743])
+            ("TrajOptPi2" type
+               (:documentation " PI2 trajectory optimization.
+    Hyperparameters:
+        kl_threshold: KL-divergence threshold between old and new policies.
+        covariance_damping: If greater than zero, covariance is computed as a
+            multiple of the old covariance. Multiplier is taken to the power
+            (1 / covariance_damping). If greater than one, slows down 
+            convergence and keeps exploration noise high for more iterations.
+        min_temperature: Minimum bound of the temperature optimiztion for the 
+            soft-max probabilities of the policy samples.
+    "
+                :superclasses ("TrajOpt")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("config" variable nil (reparse-symbol indented_block_body) [1401 1437])
+                            ("config" code nil (reparse-symbol indented_block_body) [1446 1472])
+                            ("TrajOpt" code nil (reparse-symbol indented_block_body) [1481 1511])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1520 1574])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1583 1649])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1658 1718]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1373 1377])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [1379 1390]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1360 1719])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1739 1743])
+                            ("m" variable nil (reparse-symbol function_parameters) [1745 1746])
+                            ("algorithm" variable nil (reparse-symbol function_parameters) [1748 1757]))                          
+                        :documentation "
+        Perform optimization of the feedforward controls of time-varying
+        linear-Gaussian controllers with PI2. 
+        Args:
+            m: Current condition number.
+            algorithm: Currently used algorithm.
+        Returns:
+            traj_distr: Updated linear-Gaussian controller.
+        ")
+                        (reparse-symbol indented_block_body) [1728 3333])
+                    ("update_pi2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3353 3357])
+                            ("samples" variable nil (reparse-symbol function_parameters) [3359 3366])
+                            ("costs" variable nil (reparse-symbol function_parameters) [3368 3373])
+                            ("mean_old" variable nil (reparse-symbol function_parameters) [3375 3383])
+                            ("cov_old" variable nil (reparse-symbol function_parameters) [3385 3392]))                          
+                        :documentation "
+        Perform optimization with PI2. Computes new mean and covariance matrices
+        of the policy parameters given policy samples and their costs.
+        Args:
+            samples: Matrix of policy samples with dimensions: 
+                     [num_samples x num_timesteps x num_controls].
+            costs: Matrix of roll-out costs with dimensions:
+                   [num_samples x num_timesteps]
+            mean_old: Old policy mean.
+            cov_old: Old policy covariance.            
+        Returns:
+            mean_new: New policy mean.
+            cov_new: New policy covariance.
+            inv_cov_new: Inverse of the new policy covariance.
+            chol_cov_new: Cholesky decomposition of the new policy covariance.
+        ")
+                        (reparse-symbol indented_block_body) [3338 6552])
+                    ("kl_dual" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6569 6573])
+                            ("eta" variable nil (reparse-symbol function_parameters) [6575 6578])
+                            ("kl_threshold" variable nil (reparse-symbol function_parameters) [6580 6592])
+                            ("costs" variable nil (reparse-symbol function_parameters) [6594 6599]))                          
+                        :documentation "
+        Dual function for optimizing the temperature eta according to the given
+        KL-divergence constraint.
+        
+        Args:
+            eta: Temperature that has to be optimized.
+            kl_threshold: Max. KL-divergence constraint.
+            costs: Roll-out costs.            
+        Returns:
+            Value of the dual function.
+        ")
+                        (reparse-symbol indented_block_body) [6557 7090]))                  
+                :type "class")
+                nil [746 7090]))          
+      :file "traj_opt_pi2.py"
+      :pointmax 7090
+      :fsize 7089
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!algorithm!traj_opt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,333 @@
+;; Object sampler/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sampler/"
+  :tables
+  (list
+    (semanticdb-table "parallel_sampler.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.sampler.utils" include nil nil [1 40])
+            ("rllab.sampler.stateful_pool" include nil nil [41 109])
+            ("rllab.misc" include nil nil [110 136])
+            ("rllab.misc" include nil nil [137 166])
+            ("rllab.misc" include nil nil [167 202])
+            ("pickle" include nil nil [203 216])
+            ("numpy" include nil nil [217 235])
+            ("_worker_init" function (:arguments 
+              ( ("G" variable nil (reparse-symbol function_parameters) [255 256])
+                ("id" variable nil (reparse-symbol function_parameters) [258 260]))              ) nil [238 390])
+            ("initialize" function (:arguments 
+              ( ("n_parallel" variable nil (reparse-symbol function_parameters) [407 417]))              ) nil [392 557])
+            ("_get_scoped_G" function (:arguments 
+              ( ("G" variable nil (reparse-symbol function_parameters) [577 578])
+                ("scope" variable nil (reparse-symbol function_parameters) [580 585]))              ) nil [559 832])
+            ("_worker_populate_task" function (:arguments 
+              ( ("G" variable nil (reparse-symbol function_parameters) [860 861])
+                ("env" variable nil (reparse-symbol function_parameters) [863 866])
+                ("policy" variable nil (reparse-symbol function_parameters) [868 874])
+                ("scope" variable nil (reparse-symbol function_parameters) [876 881]))              ) nil [834 1080])
+            ("_worker_terminate_task" function (:arguments 
+              ( ("G" variable nil (reparse-symbol function_parameters) [1109 1110])
+                ("scope" variable nil (reparse-symbol function_parameters) [1112 1117]))              ) nil [1082 1324])
+            ("populate_task" function (:arguments 
+              ( ("env" variable nil (reparse-symbol function_parameters) [1344 1347])
+                ("policy" variable nil (reparse-symbol function_parameters) [1349 1355])
+                ("scope" variable nil (reparse-symbol function_parameters) [1357 1362]))              ) nil [1326 1889])
+            ("G" code nil nil [1796 1834])
+            ("terminate_task" function (:arguments 
+              ( ("scope" variable nil (reparse-symbol function_parameters) [1910 1915]))              ) nil [1891 2037])
+            ("_worker_set_seed" function (:arguments 
+              ( ("_" variable nil (reparse-symbol function_parameters) [2060 2061])
+                ("seed" variable nil (reparse-symbol function_parameters) [2063 2067]))              ) nil [2039 2093])
+            ("set_seed" function (:arguments 
+              ( ("seed" variable nil (reparse-symbol function_parameters) [2108 2112]))              ) nil [2095 2241])
+            ("_worker_set_policy_params" function (:arguments 
+              ( ("G" variable nil (reparse-symbol function_parameters) [2273 2274])
+                ("params" variable nil (reparse-symbol function_parameters) [2276 2282])
+                ("scope" variable nil (reparse-symbol function_parameters) [2284 2289]))              ) nil [2243 2367])
+            ("_worker_collect_one_path" function (:arguments 
+              ( ("G" variable nil (reparse-symbol function_parameters) [2398 2399])
+                ("max_path_length" variable nil (reparse-symbol function_parameters) [2401 2416])
+                ("scope" variable nil (reparse-symbol function_parameters) [2418 2423]))              ) nil [2369 2554])
+            ("sample_paths" function
+               (:documentation "
+    :param policy_params: parameters for the policy. This will be updated on each worker process
+    :param max_samples: desired maximum number of samples to be collected. The actual number of collected samples
+    might be greater since all trajectories will be rolled out either until termination or until max_path_length is
+    reached
+    :param max_path_length: horizon / maximum length of a single trajectory
+    :return: a list of collected paths
+    "
+                :arguments 
+                  ( ("policy_params" variable nil (reparse-symbol function_parameters) [2582 2595])
+                    ("max_samples" variable nil (reparse-symbol function_parameters) [2605 2616])
+                    ("max_path_length" variable nil (reparse-symbol function_parameters) [2626 2641])
+                    ("scope" variable nil (reparse-symbol function_parameters) [2658 2663]))                  )
+                nil [2556 3448])
+            ("truncate_paths" function
+               (:documentation "
+    Truncate the list of paths so that the total number of samples is exactly equal to max_samples. This is done by
+    removing extra paths at the end of the list, and make the last path shorter if necessary
+    :param paths: a list of paths
+    :param max_samples: the absolute maximum number of samples
+    :return: a list of paths, truncated so that the number of samples adds up to max-samples
+    "
+                :arguments 
+                  ( ("paths" variable nil (reparse-symbol function_parameters) [3469 3474])
+                    ("max_samples" variable nil (reparse-symbol function_parameters) [3476 3487]))                  )
+                nil [3450 4841]))          
+      :file "parallel_sampler.py"
+      :pointmax 4841
+      :fsize 4840
+      :lastmodtime '(22684 63964 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("rllab.misc" include nil nil [20 55])
+            ("inspect" include nil nil [56 70])
+            ("scipy.ndimage" include nil nil [71 105])
+            ("generate_noise" function (:arguments 
+              ( ("max_path_length" variable nil (reparse-symbol function_parameters) [127 142])
+                ("action_dim" variable nil (reparse-symbol function_parameters) [144 154])
+                ("smooth" variable nil (reparse-symbol function_parameters) [156 162])
+                ("renorm" variable nil (reparse-symbol function_parameters) [164 170]))              ) nil [108 647])
+            ("rollout" function (:arguments 
+              ( ("env" variable nil (reparse-symbol function_parameters) [660 663])
+                ("agent" variable nil (reparse-symbol function_parameters) [665 670])
+                ("max_path_length" variable nil (reparse-symbol function_parameters) [672 687])
+                ("animated" variable nil (reparse-symbol function_parameters) [696 704])
+                ("speedup" variable nil (reparse-symbol function_parameters) [712 719])
+                ("test_policy" variable nil (reparse-symbol function_parameters) [723 734]))              ) nil [648 2605]))          
+      :file "utils.py"
+      :pointmax 2605
+      :fsize 2604
+      :lastmodtime '(22684 58403 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "stateful_pool.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [1 38])
+            ("__future__" include nil nil [39 77])
+            ("joblib.pool" include nil nil [78 115])
+            ("multiprocessing" include nil nil [116 144])
+            ("rllab.misc" include nil nil [145 174])
+            ("pyprind" include nil nil [175 189])
+            ("time" include nil nil [190 201])
+            ("traceback" include nil nil [202 218])
+            ("sys" include nil nil [219 229])
+            ("ProgBarCounter" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [307 337])
+                            ("self" variable nil (reparse-symbol indented_block_body) [346 373])
+                            ("self" variable nil (reparse-symbol indented_block_body) [382 403])
+                            ("self" variable nil (reparse-symbol indented_block_body) [412 430])
+                            ("if" code nil (reparse-symbol indented_block_body) [439 579]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [279 283])
+                            ("total_count" variable nil (reparse-symbol function_parameters) [285 296]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [266 579])
+                    ("inc" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [592 596])
+                            ("increment" variable nil (reparse-symbol function_parameters) [598 607]))                          )
+                        (reparse-symbol indented_block_body) [584 938])
+                    ("stop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [952 956]))                          )
+                        (reparse-symbol indented_block_body) [943 1034]))                  
+                :type "class")
+                nil [232 1034])
+            ("SharedGlobal" type
+               (:superclasses ("object")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [1068 1072]))                  
+                :type "class")
+                nil [1036 1073])
+            ("StatefulPool" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1135 1154])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1163 1179])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1188 1205])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1214 1238])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1247 1270]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1120 1124]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1107 1271])
+                    ("initialize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1291 1295])
+                            ("n_parallel" variable nil (reparse-symbol function_parameters) [1297 1307]))                          )
+                        (reparse-symbol indented_block_body) [1276 1804])
+                    ("run_each" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1822 1826])
+                            ("runner" variable nil (reparse-symbol function_parameters) [1828 1834])
+                            ("args_list" variable nil (reparse-symbol function_parameters) [1836 1845]))                          
+                        :documentation "
+        Run the method on each worker process, and collect the result of execution.
+        The runner method will receive 'G' as its first argument, followed by the arguments
+        in the args_list, if any
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [1809 2643])
+                    ("run_map" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2660 2664])
+                            ("runner" variable nil (reparse-symbol function_parameters) [2666 2672])
+                            ("args_list" variable nil (reparse-symbol function_parameters) [2674 2683]))                          )
+                        (reparse-symbol indented_block_body) [2648 2949])
+                    ("run_collect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2970 2974])
+                            ("collect_once" variable nil (reparse-symbol function_parameters) [2976 2988])
+                            ("threshold" variable nil (reparse-symbol function_parameters) [2990 2999])
+                            ("args" variable nil (reparse-symbol function_parameters) [3001 3005])
+                            ("show_prog_bar" variable nil (reparse-symbol function_parameters) [3012 3025]))                          
+                        :documentation "
+        Run the collector method using the worker pool. The collect_once method will receive 'G' as
+        its first argument, followed by the provided args, if any. The method should return a pair of values.
+        The first should be the object to be collected, and the second is the increment to be added.
+        This will continue until the total increment reaches or exceeds the given threshold.
+
+        Sample script:
+
+        def collect_once(G):
+            return 'a', 1
+
+        stateful_pool.run_collect(collect_once, threshold=3) # => ['a', 'a', 'a']
+
+        :param collector:
+        :param threshold:
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [2954 5055]))                  
+                :type "class")
+                nil [1075 5055])
+            ("singleton_pool" variable nil nil [5057 5088])
+            ("_worker_run_each" function (:arguments 
+              ( ("all_args" variable nil (reparse-symbol function_parameters) [5112 5120]))              ) nil [5091 5510])
+            ("_worker_run_collect" function (:arguments 
+              ( ("all_args" variable nil (reparse-symbol function_parameters) [5536 5544]))              ) nil [5512 6115])
+            ("_worker_run_map" function (:arguments 
+              ( ("all_args" variable nil (reparse-symbol function_parameters) [6137 6145]))              ) nil [6117 6336]))          
+      :file "stateful_pool.py"
+      :pointmax 6336
+      :fsize 6335
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [1 38])
+            ("__future__" include nil nil [39 77])
+            ("numpy" include nil nil [78 96])
+            ("rllab.misc" include nil nil [97 127])
+            ("rllab.misc" include nil nil [128 163])
+            ("rllab.algos" include nil nil [164 192])
+            ("rllab.misc.logger" include nil nil [193 227])
+            ("Sampler" type
+               (:superclasses ("object")
+                :members 
+                  ( ("start_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [274 278]))                          
+                        :documentation "
+        Initialize the sampler, e.g. launching parallel workers if necessary.
+        ")
+                        (reparse-symbol indented_block_body) [257 417])
+                    ("obtain_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [441 445])
+                            ("itr" variable nil (reparse-symbol function_parameters) [447 450]))                          
+                        :documentation "
+        Collect samples for the given iteration number.
+        :param itr: Iteration number.
+        :return: A list of paths.
+        ")
+                        (reparse-symbol indented_block_body) [422 639])
+                    ("process_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [664 668])
+                            ("itr" variable nil (reparse-symbol function_parameters) [670 673])
+                            ("paths" variable nil (reparse-symbol function_parameters) [675 680]))                          
+                        :documentation "
+        Return processed sample data (typically a dictionary of concatenated tensors) based on the collected paths.
+        :param itr: Iteration number.
+        :param paths: A list of collected paths.
+        :return: Processed sample data.
+        ")
+                        (reparse-symbol indented_block_body) [644 984])
+                    ("shutdown_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1009 1013]))                          
+                        :documentation "
+        Terminate workers if necessary.
+        ")
+                        (reparse-symbol indented_block_body) [989 1114]))                  
+                :type "class")
+                nil [230 1114])
+            ("BaseSampler" type
+               (:superclasses ("Sampler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :type algo: BatchPolopt
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1182 1229])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1238 1254]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1161 1165])
+                            ("algo" variable nil (reparse-symbol function_parameters) [1167 1171]))                          
+                        :documentation "
+        :type algo: BatchPolopt
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1148 1255])
+                    ("process_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1280 1284])
+                            ("itr" variable nil (reparse-symbol function_parameters) [1286 1289])
+                            ("paths" variable nil (reparse-symbol function_parameters) [1291 1296]))                          )
+                        (reparse-symbol indented_block_body) [1260 6732]))                  
+                :type "class")
+                nil [1116 6732]))          
+      :file "base.py"
+      :pointmax 6732
+      :fsize 6731
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!rllab!sampler!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

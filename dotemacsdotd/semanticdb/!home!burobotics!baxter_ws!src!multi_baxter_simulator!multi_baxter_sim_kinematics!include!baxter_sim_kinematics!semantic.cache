@@ -1,0 +1,250 @@
+;; Object baxter_sim_kinematics/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "baxter_sim_kinematics/"
+  :tables
+  (list
+    (semanticdb-table "arm_kinematics.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("ARM_KINEMATICS_H_" variable (:constant-flag t) nil [1917 1934])
+            ("cstring" include (:system-flag t) nil [1935 1953])
+            ("ros/ros.h" include (:system-flag t) nil [1954 1974])
+            ("tf/transform_listener.h" include (:system-flag t) nil [1975 2009])
+            ("tf_conversions/tf_kdl.h" include (:system-flag t) nil [2010 2044])
+            ("tf/transform_datatypes.h" include (:system-flag t) nil [2045 2080])
+            ("kdl_parser/kdl_parser.hpp" include (:system-flag t) nil [2081 2117])
+            ("kdl/jntarray.hpp" include (:system-flag t) nil [2118 2145])
+            ("kdl/chainiksolverpos_nr_jl.hpp" include (:system-flag t) nil [2146 2187])
+            ("kdl/chainiksolvervel_pinv.hpp" include (:system-flag t) nil [2188 2228])
+            ("kdl/chainfksolverpos_recursive.hpp" include (:system-flag t) nil [2229 2274])
+            ("kdl/chainidsolver_recursive_newton_euler.hpp" include (:system-flag t) nil [2275 2330])
+            ("urdf/model.h" include (:system-flag t) nil [2331 2354])
+            ("sensor_msgs/JointState.h" include (:system-flag t) nil [2355 2390])
+            ("geometry_msgs/PoseStamped.h" include (:system-flag t) nil [2391 2429])
+            ("std_msgs/Bool.h" include (:system-flag t) nil [2430 2456])
+            ("baxter_core_msgs/SEAJointState.h" include (:system-flag t) nil [2457 2500])
+            ("gazebo_msgs/SetLinkProperties.h" include (:system-flag t) nil [2501 2543])
+            ("gazebo_msgs/GetLinkProperties.h" include (:system-flag t) nil [2544 2586])
+            ("algorithm" include (:system-flag t) nil [2587 2607])
+            ("arm_kinematics" type
+               (:members 
+                  ( ("INFO" type
+                       (:members 
+                          ( ("link_names" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2695 2731])
+                            ("joint_names" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2734 2771]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2671 2794])
+                    ("KinematicSolverInfo" type
+                       (:typedef ("INFO" type (:type "struct") nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [2671 2794])
+                    ("Kinematics" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2815 2822])
+                            ("Kinematics" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Kinematics" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2825 2838])
+                            ("init_grav" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2880 2897])
+                            ("init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("tip_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3013 3034])
+                                    ("no_jts" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3035 3047]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3003 3048])
+                            ("Ptr" type
+                               (:typedef ("boost::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Kinematics" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3051 3093])
+                            ("create" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("tip_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3114 3135])
+                                    ("no_jts" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3136 3148]))                                  
+                                :type ("Ptr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3096 3314])
+                            ("getPositionIK" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pose_stamp" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("geometry_msgs::PoseStamped" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3435 3480])
+                                    ("seed" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3481 3517])
+                                    ("result" variable
+                                       (:pointer 1
+                                        :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3539 3571]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3416 3572])
+                            ("getPositionFK" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("frame_id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3704 3725])
+                                    ("joint_configuration" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3726 3777])
+                                    ("res" variable
+                                       (:reference 1
+                                        :type ("geometry_msgs::PoseStamped" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3799 3831]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3685 3832])
+                            ("getGravityTorques" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("joint_configuration" variable
+                                       (:constant-flag t
+                                        :type ("sensor_msgs::JointState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4120 4170])
+                                    ("left_gravity" variable
+                                       (:reference 1
+                                        :type ("baxter_core_msgs::SEAJointState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4196 4242])
+                                    ("right_gravity" variable
+                                       (:reference 1
+                                        :type ("baxter_core_msgs::SEAJointState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4243 4290])
+                                    ("isEnabled" variable (:type "bool") (reparse-symbol arg-sub-list) [4316 4331]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4097 4332])
+                            ("private" label nil (reparse-symbol classsubparts) [4334 4342])
+                            ("nh" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4345 4376])
+                            ("nh_private" variable (:type ("ros::NodeHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4345 4376])
+                            ("root_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4379 4444])
+                            ("tip_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4379 4444])
+                            ("grav_left_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4379 4444])
+                            ("grav_right_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4379 4444])
+                            ("joint_min" variable (:type ("KDL::JntArray" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4447 4482])
+                            ("joint_max" variable (:type ("KDL::JntArray" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4447 4482])
+                            ("chain" variable (:type ("KDL::Chain" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4485 4530])
+                            ("grav_chain_l" variable (:type ("KDL::Chain" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4485 4530])
+                            ("grav_chain_r" variable (:type ("KDL::Chain" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4485 4530])
+                            ("num_joints" variable (:type "unsigned int") (reparse-symbol classsubparts) [4533 4557])
+                            ("fk_solver" variable
+                               (:pointer 1
+                                :type ("KDL::ChainFkSolverPos_recursive" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4561 4604])
+                            ("ik_solver_pos" variable
+                               (:pointer 1
+                                :type ("KDL::ChainIkSolverPos_NR_JL" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4607 4650])
+                            ("ik_solver_vel" variable
+                               (:pointer 1
+                                :type ("KDL::ChainIkSolverVel_pinv" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4653 4695])
+                            ("gravity_solver_l" variable
+                               (:pointer 1
+                                :type ("KDL::ChainIdSolver_RNE" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4698 4758])
+                            ("gravity_solver_r" variable
+                               (:pointer 1
+                                :type ("KDL::ChainIdSolver_RNE" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4698 4758])
+                            ("ik_service" variable (:type ("ros::ServiceServer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4762 4816])
+                            ("ik_solver_info_service" variable (:type ("ros::ServiceServer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4762 4816])
+                            ("fk_service" variable (:type ("ros::ServiceServer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4819 4873])
+                            ("fk_solver_info_service" variable (:type ("ros::ServiceServer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4819 4873])
+                            ("tf_listener" variable (:type ("tf::TransformListener" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4877 4911])
+                            ("indd" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4914 4936])
+                            ("left_joint" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4939 4988])
+                            ("right_joint" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4939 4988])
+                            ("info" variable (:type ("KinematicSolverInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4991 5042])
+                            ("grav_info_l" variable (:type ("KinematicSolverInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4991 5042])
+                            ("grav_info_r" variable (:type ("KinematicSolverInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4991 5042])
+                            ("loadModel" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("xml" variable
+                                       (:constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5162 5184]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [5147 5185])
+                            ("readJoints" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("robot_model" variable
+                                       (:reference 1
+                                        :type ("urdf::Model" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5303 5328]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [5287 5329])
+                            ("getJointIndex" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5477 5501]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [5459 5502])
+                            ("getKDLSegmentIndex" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5665 5689]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [5642 5690]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2796 5693]))                  
+                :type "namespace")
+                nil [2609 5695]))          
+      :file "arm_kinematics.h"
+      :pointmax 5703
+      :fsize 5702
+      :lastmodtime '(23110 45509 146657 992000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ARM_KINEMATICS_H_")
+          )
+))
+  :file "!home!burobotics!baxter_ws!src!multi_baxter_simulator!multi_baxter_sim_kinematics!include!baxter_sim_kinematics!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

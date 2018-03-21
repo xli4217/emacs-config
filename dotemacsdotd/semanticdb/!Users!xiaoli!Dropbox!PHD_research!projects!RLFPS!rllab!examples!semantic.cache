@@ -1,0 +1,198 @@
+;; Object examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "examples/"
+  :tables
+  (list
+    (semanticdb-table "trpo_gym.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [1 38])
+            ("__future__" include nil nil [39 77])
+            ("rllab.algos.trpo" include nil nil [79 112])
+            ("rllab.baselines.linear_feature_baseline" include nil nil [113 186])
+            ("rllab.envs.gym_env" include nil nil [187 224])
+            ("rllab.envs.normalized_env" include nil nil [225 272])
+            ("rllab.misc.instrument" include nil nil [273 332])
+            ("rllab.policies.gaussian_mlp_policy" include nil nil [333 397])
+            ("stub" code nil nil [399 414])
+            ("env" variable nil nil [416 454])
+            ("policy" variable nil nil [456 622])
+            ("baseline" variable nil nil [624 675])
+            ("algo" variable nil nil [677 952])
+            ("run_experiment_lite" code nil nil [954 1279]))          
+      :file "trpo_gym.py"
+      :pointmax 1280
+      :fsize 1279
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ddpg_cartpole_stub.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.ddpg" include nil nil [1 34])
+            ("rllab.envs.box2d.cartpole_env" include nil nil [35 88])
+            ("rllab.envs.normalized_env" include nil nil [89 136])
+            ("rllab.misc.instrument" include nil nil [137 196])
+            ("rllab.exploration_strategies.ou_strategy" include nil nil [197 260])
+            ("rllab.policies.deterministic_mlp_policy" include nil nil [261 335])
+            ("rllab.q_functions.continuous_mlp_q_function" include nil nil [336 414])
+            ("stub" code nil nil [416 431])
+            ("env" variable nil nil [433 463])
+            ("policy" variable nil nil [465 638])
+            ("es" variable nil nil [640 674])
+            ("qf" variable nil nil [676 722])
+            ("algo" variable nil nil [724 1102])
+            ("run_experiment_lite" code nil nil [1104 1429]))          
+      :file "ddpg_cartpole_stub.py"
+      :pointmax 1430
+      :fsize 1429
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "vpg_2.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [1 38])
+            ("rllab.envs.box2d.cartpole_env" include nil nil [39 92])
+            ("rllab.baselines.linear_feature_baseline" include nil nil [93 166])
+            ("rllab.policies.gaussian_mlp_policy" include nil nil [167 231])
+            ("rllab.envs.normalized_env" include nil nil [232 279])
+            ("numpy" include nil nil [280 298])
+            ("theano" include nil nil [299 312])
+            ("theano.tensor" include nil nil [313 339])
+            ("lasagne.updates" include nil nil [340 372])
+            ("env" variable nil nil [522 552])
+            ("policy" variable nil nil [635 690])
+            ("baseline" variable nil nil [768 810])
+            ("N" variable nil nil [861 868])
+            ("T" variable nil nil [920 927])
+            ("n_itr" variable nil nil [951 962])
+            ("discount" variable nil nil [1005 1020])
+            ("learning_rate" variable nil nil [1061 1080])
+            ("observations_var" variable nil nil [1579 1768])
+            ("actions_var" variable nil nil [1769 1854])
+            ("advantages_var" variable nil nil [1855 1895])
+            ("dist_info_vars" variable nil nil [2115 2170])
+            ("dist" variable nil nil [2557 2583])
+            ("surr" code nil nil [2676 2763])
+            ("params" variable nil nil [2805 2847])
+            ("grads" variable nil nil [2848 2881])
+            ("f_train" variable nil nil [2883 3081])
+            ("for" code nil nil [3083 5711]))          
+      :file "vpg_2.py"
+      :pointmax 5711
+      :fsize 5710
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "point_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.envs.base" include nil nil [1 32])
+            ("rllab.spaces" include nil nil [33 61])
+            ("rllab.envs.base" include nil nil [62 94])
+            ("numpy" include nil nil [95 113])
+            ("PointEnv" type
+               (:superclasses ("Env")
+                :members 
+                  ( ("observation_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [177 181]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [141 241])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [277 281]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [246 335])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [350 354]))                          )
+                        (reparse-symbol indented_block_body) [340 485])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [499 503])
+                            ("action" variable nil (reparse-symbol function_parameters) [505 511]))                          )
+                        (reparse-symbol indented_block_body) [490 799])
+                    ("render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [815 819]))                          )
+                        (reparse-symbol indented_block_body) [804 866]))                  
+                :type "class")
+                nil [116 866]))          
+      :file "point_env.py"
+      :pointmax 866
+      :fsize 865
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "trpo_point.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.trpo" include nil nil [1 34])
+            ("rllab.baselines.linear_feature_baseline" include nil nil [35 108])
+            ("examples.point_env" include nil nil [109 148])
+            ("rllab.envs.normalized_env" include nil nil [149 196])
+            ("rllab.policies.gaussian_mlp_policy" include nil nil [197 261])
+            ("env" variable nil nil [263 290])
+            ("policy" variable nil nil [291 343])
+            ("baseline" variable nil nil [344 395])
+            ("algo" variable nil nil [396 465])
+            ("algo" code nil nil [466 478]))          
+      :file "trpo_point.py"
+      :pointmax 479
+      :fsize 478
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "trpo_cartpole_stub.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.trpo" include nil nil [1 34])
+            ("rllab.baselines.linear_feature_baseline" include nil nil [35 108])
+            ("rllab.envs.box2d.cartpole_env" include nil nil [109 162])
+            ("rllab.envs.normalized_env" include nil nil [163 210])
+            ("rllab.misc.instrument" include nil nil [211 270])
+            ("rllab.policies.gaussian_mlp_policy" include nil nil [271 335])
+            ("stub" code nil nil [337 352])
+            ("env" variable nil nil [354 384])
+            ("policy" variable nil nil [386 554])
+            ("baseline" variable nil nil [556 607])
+            ("algo" variable nil nil [609 876])
+            ("run_experiment_lite" code nil nil [878 1203]))          
+      :file "trpo_cartpole_stub.py"
+      :pointmax 1204
+      :fsize 1203
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "trpo_cartpole.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.trpo" include nil nil [1 34])
+            ("rllab.baselines.linear_feature_baseline" include nil nil [35 108])
+            ("rllab.envs.box2d.cartpole_env" include nil nil [109 162])
+            ("rllab.envs.normalized_env" include nil nil [163 210])
+            ("rllab.policies.gaussian_mlp_policy" include nil nil [211 275])
+            ("env" variable nil nil [278 308])
+            ("policy" variable nil nil [310 478])
+            ("baseline" variable nil nil [480 531])
+            ("algo" variable nil nil [533 701])
+            ("algo" code nil nil [702 714]))          
+      :file "trpo_cartpole.py"
+      :pointmax 715
+      :fsize 714
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,85 @@
+;; Object policies/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "policies/"
+  :tables
+  (list
+    (semanticdb-table "deterministic_mlp_policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.core.serializable" include nil nil [1 49])
+            ("rllab.misc" include nil nil [50 76])
+            ("rllab.misc.overrides" include nil nil [77 119])
+            ("sandbox.rocky.tf.core.layers_powered" include nil nil [120 182])
+            ("sandbox.rocky.tf.core.network" include nil nil [183 228])
+            ("sandbox.rocky.tf.distributions.categorical" include nil nil [229 295])
+            ("sandbox.rocky.tf.policies.base" include nil nil [296 345])
+            ("sandbox.rocky.tf.misc" include nil nil [346 392])
+            ("sandbox.rocky.tf.core.layers" include nil nil [394 434])
+            ("sandbox.rocky.tf.core.layers" include nil nil [435 486])
+            ("sandbox.rocky.tf.spaces.discrete" include nil nil [488 541])
+            ("tensorflow" include nil nil [542 565])
+            ("DeterministicMLPPolicy" type
+               (:superclasses ("Policy" "LayersPowered" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [896 935])
+                            ("with" code nil (reparse-symbol indented_block_body) [945 1766])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1775 1807])
+                            ("super" code nil (reparse-symbol indented_block_body) [2108 2162])
+                            ("LayersPowered" code nil (reparse-symbol indented_block_body) [2171 2228]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [665 669])
+                            ("name" variable nil (reparse-symbol function_parameters) [683 687])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [701 709])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [723 735])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [758 777])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [802 821])
+                            ("prob_network" variable nil (reparse-symbol function_parameters) [846 858])
+                            ("bn" variable nil (reparse-symbol function_parameters) [877 879]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [639 2229])
+                    ("vectorized" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2263 2267]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2234 2290])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2333 2337])
+                            ("observation" variable nil (reparse-symbol function_parameters) [2339 2350]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2303 2491])
+                    ("get_actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2527 2531])
+                            ("observations" variable nil (reparse-symbol function_parameters) [2533 2545]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2496 2686])
+                    ("get_action_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2710 2714])
+                            ("obs_var" variable nil (reparse-symbol function_parameters) [2716 2723]))                          )
+                        (reparse-symbol indented_block_body) [2691 2795]))                  
+                :type "class")
+                nil [568 2795]))          
+      :file "deterministic_mlp_policy.py"
+      :pointmax 2795
+      :fsize 2794
+      :lastmodtime '(22831 15122 20427 212000)
+      :unmatched-syntax nil)
+    (semanticdb-table "base.py"
+      :file "base.py"
+      :fsize 2755
+      :lastmodtime '(22832 30804 284558 403000)))
+  :file "!home!burobotics!Xiao!rlfps!rllab!sandbox!rocky!tf!policies!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

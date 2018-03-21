@@ -1,0 +1,349 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "baxter_gripper_controller.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("baxter_sim_controllers/baxter_gripper_controller.h" include (:system-flag t) nil [1711 1772])
+            ("pluginlib/class_list_macros.h" include (:system-flag t) nil [1773 1813])
+            ("yaml-cpp/yaml.h" include (:system-flag t) nil [1814 1840])
+            ("baxter_sim_controllers" type
+               (:members 
+                  ( ("BaxterGripperController" function
+                       (:constructor-flag t
+                        :parent "BaxterGripperController"
+                        :type ("BaxterGripperController" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1877 1999])
+                    ("BaxterGripperController" function
+                       (:destructor-flag t
+                        :parent "BaxterGripperController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2001 2090])
+                    ("init" function
+                       (:parent "BaxterGripperController"
+                        :arguments 
+                          ( ("robot" variable
+                               (:pointer 1
+                                :type ("hardware_interface::EffortJointInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2127 2175])
+                            ("nh" variable
+                               (:reference 1
+                                :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2176 2196]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2092 5064])
+                    ("starting" function
+                       (:parent "BaxterGripperController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5105 5127]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5066 5131])
+                    ("stopping" function
+                       (:parent "BaxterGripperController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5172 5194]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5133 5198])
+                    ("update" function
+                       (:parent "BaxterGripperController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5237 5259])
+                            ("period" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Duration" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5260 5288]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5200 5600])
+                    ("updateCommands" function
+                       (:parent "BaxterGripperController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5602 7303])
+                    ("commandCB" function
+                       (:parent "BaxterGripperController"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::EndEffectorCommandConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7345 7401]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7305 7687]))                  
+                :type "namespace")
+                nil [1842 7690]))          
+      :file "baxter_gripper_controller.cpp"
+      :pointmax 7816
+      :fsize 7815
+      :lastmodtime '(23110 45509 130657 925000)
+      :unmatched-syntax '((semantic-list 7728 . 7815) (symbol 7706 . 7728)))
+    (semanticdb-table "baxter_velocity_controller.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("baxter_sim_controllers/baxter_velocity_controller.h" include (:system-flag t) nil [1937 1999])
+            ("pluginlib/class_list_macros.h" include (:system-flag t) nil [2000 2040])
+            ("baxter_sim_controllers" type
+               (:members 
+                  ( ("BaxterVelocityController" function
+                       (:constructor-flag t
+                        :parent "BaxterVelocityController"
+                        :type ("BaxterVelocityController" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2077 2174])
+                    ("BaxterVelocityController" function
+                       (:destructor-flag t
+                        :parent "BaxterVelocityController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2176 2269])
+                    ("init" function
+                       (:parent "BaxterVelocityController"
+                        :arguments 
+                          ( ("robot" variable
+                               (:pointer 1
+                                :type ("hardware_interface::EffortJointInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2307 2355])
+                            ("nh" variable
+                               (:reference 1
+                                :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2356 2376]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2271 5166])
+                    ("starting" function
+                       (:parent "BaxterVelocityController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5208 5230]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5168 5560])
+                    ("stopping" function
+                       (:parent "BaxterVelocityController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5602 5624]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5562 5628])
+                    ("update" function
+                       (:parent "BaxterVelocityController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5668 5690])
+                            ("period" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Duration" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5691 5719]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5630 6031])
+                    ("updateCommands" function
+                       (:parent "BaxterVelocityController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6033 7173])
+                    ("commandCB" function
+                       (:parent "BaxterVelocityController"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::JointCommandConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7216 7266]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7175 7555]))                  
+                :type "namespace")
+                nil [2042 7558]))          
+      :file "baxter_velocity_controller.cpp"
+      :pointmax 7685
+      :fsize 7684
+      :lastmodtime '(23110 45509 130657 925000)
+      :unmatched-syntax '((semantic-list 7596 . 7684) (symbol 7574 . 7596)))
+    (semanticdb-table "baxter_effort_controller.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("baxter_sim_controllers/baxter_effort_controller.h" include (:system-flag t) nil [1805 1865])
+            ("pluginlib/class_list_macros.h" include (:system-flag t) nil [1866 1906])
+            ("baxter_sim_controllers" type
+               (:members 
+                  ( ("BaxterEffortController" function
+                       (:constructor-flag t
+                        :parent "BaxterEffortController"
+                        :type ("BaxterEffortController" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1943 2038])
+                    ("BaxterEffortController" function
+                       (:destructor-flag t
+                        :parent "BaxterEffortController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2040 2127])
+                    ("init" function
+                       (:parent "BaxterEffortController"
+                        :arguments 
+                          ( ("robot" variable
+                               (:pointer 1
+                                :type ("hardware_interface::EffortJointInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2163 2211])
+                            ("nh" variable
+                               (:reference 1
+                                :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2212 2232]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2129 5429])
+                    ("starting" function
+                       (:parent "BaxterEffortController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5469 5491]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5431 5577])
+                    ("stopping" function
+                       (:parent "BaxterEffortController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5617 5639]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5579 5643])
+                    ("update" function
+                       (:parent "BaxterEffortController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5681 5703])
+                            ("period" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Duration" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5704 5732]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5645 5986])
+                    ("commandCB" function
+                       (:parent "BaxterEffortController"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::JointCommandConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6027 6077]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5988 7071]))                  
+                :type "namespace")
+                nil [1908 7074]))          
+      :file "baxter_effort_controller.cpp"
+      :pointmax 7199
+      :fsize 7198
+      :lastmodtime '(23110 45509 130657 925000)
+      :unmatched-syntax '((semantic-list 7112 . 7198) (symbol 7090 . 7112)))
+    (semanticdb-table "baxter_position_controller.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("baxter_sim_controllers/baxter_position_controller.h" include (:system-flag t) nil [1937 1999])
+            ("pluginlib/class_list_macros.h" include (:system-flag t) nil [2000 2040])
+            ("baxter_sim_controllers" type
+               (:members 
+                  ( ("BaxterPositionController" function
+                       (:constructor-flag t
+                        :parent "BaxterPositionController"
+                        :type ("BaxterPositionController" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2077 2174])
+                    ("BaxterPositionController" function
+                       (:destructor-flag t
+                        :parent "BaxterPositionController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2176 2269])
+                    ("init" function
+                       (:parent "BaxterPositionController"
+                        :arguments 
+                          ( ("robot" variable
+                               (:pointer 1
+                                :type ("hardware_interface::EffortJointInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2307 2355])
+                            ("nh" variable
+                               (:reference 1
+                                :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2356 2376]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2271 5166])
+                    ("starting" function
+                       (:parent "BaxterPositionController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5208 5230]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5168 5598])
+                    ("stopping" function
+                       (:parent "BaxterPositionController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5640 5662]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5600 5666])
+                    ("update" function
+                       (:parent "BaxterPositionController"
+                        :arguments 
+                          ( ("time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Time" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5706 5728])
+                            ("period" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ros::Duration" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5729 5757]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5668 6069])
+                    ("updateCommands" function
+                       (:parent "BaxterPositionController"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6071 7203])
+                    ("commandCB" function
+                       (:parent "BaxterPositionController"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::JointCommandConstPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7246 7296]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7205 7585]))                  
+                :type "namespace")
+                nil [2042 7588]))          
+      :file "baxter_position_controller.cpp"
+      :pointmax 7715
+      :fsize 7714
+      :lastmodtime '(23110 45509 130657 925000)
+      :unmatched-syntax '((semantic-list 7626 . 7714) (symbol 7604 . 7626))))
+  :file "!home!burobotics!baxter_ws!src!multi_baxter_simulator!baxter_sim_controllers!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
