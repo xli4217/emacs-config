@@ -1,0 +1,616 @@
+;; Object controller/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "controller/"
+  :tables
+  (list
+    (semanticdb-table "main.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("modules/common/beyond_app.h" include nil nil [236 274])
+            ("modules/controller/controller.h" include nil nil [275 317])
+            ("BEYOND_MAIN" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("beyond::controller::Controller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [331 362]))                  
+                :type "int")
+                nil [319 363]))          
+      :file "main.cc"
+      :pointmax 364
+      :fsize 363
+      :lastmodtime '(23283 15324 537982 639000)
+      :unmatched-syntax nil)
+    (semanticdb-table "controller.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_CONTROLLER_CONTROLLER_H_" variable (:constant-flag t) nil [285 317])
+            ("algorithm" include (:system-flag t) nil [319 339])
+            ("string" include (:system-flag t) nil [340 357])
+            ("modules/common/beyond_app.h" include nil nil [359 397])
+            ("modules/common/monitor/proto/monitor.pb.h" include nil nil [398 450])
+            ("modules/controller/common/controller_gflags.h" include nil nil [452 508])
+            ("modules/canbus/proto/vehicle.pb.h" include nil nil [510 554])
+            ("modules/planner/proto/planner.pb.h" include nil nil [555 600])
+            ("modules/sensors/imu/proto/imu.pb.h" include nil nil [601 646])
+            ("modules/visualizer/proto/visualizer.pb.h" include nil nil [647 698])
+            ("modules/controller/speed.h" include nil nil [700 737])
+            ("modules/controller/steering.h" include nil nil [738 778])
+            ("modules/controller/ser_protocol.h" include nil nil [780 824])
+            ("Enable_Throttle" variable (:constant-flag t) nil [834 849])
+            ("Enable_Brake" variable (:constant-flag t) nil [863 875])
+            ("Enable_Torque" variable (:constant-flag t) nil [889 902])
+            ("Turn_Left" variable (:constant-flag t) nil [916 925])
+            ("Turn_Right" variable (:constant-flag t) nil [939 949])
+            ("Brake_Light" variable (:constant-flag t) nil [963 974])
+            ("Control_Update_Flg" variable (:constant-flag t) nil [988 1006])
+            ("beyond" type
+               (:members 
+                  ( ("controller" type
+                       (:members 
+                          ( ("Controller" type
+                               (:superclasses 
+                                  ( ("beyond::common::BeyondApp" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [1336 1344])
+                                    ("serial_port" variable (:type ("ser_protc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1347 1369])
+                                    ("STR" variable (:type ("STEERING" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1372 1385])
+                                    ("SPD" variable (:type ("SPEED" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1388 1398])
+                                    ("control" variable
+                                       (:default-value "0"
+                                        :type ("uint8_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1401 1421])
+                                    ("spd_cmd" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1424 1453])
+                                    ("str_cmd" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1424 1453])
+                                    ("speed" variable (:type "double") (reparse-symbol classsubparts) [1456 1469])
+                                    ("EngageRxFxn" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::visualizer::VisualizerCommandMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1534 1586]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1517 1587])
+                                    ("SteeringRxFxn" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::can::VehicleSteeringAngle" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1609 1654]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1590 1655])
+                                    ("SpeedRxFxn" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::can::VehicleSpeed" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1674 1711]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1658 1712])
+                                    ("ControlTarget" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::planner::ControlTarget" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1734 1776]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1715 1777])
+                                    ("InitParameters" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1781 1803])
+                                    ("OnSteeringAngleIMU" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::sensors::imu::SteeringAngleIMU" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1830 1880]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1806 1881])
+                                    ("public" label nil (reparse-symbol classsubparts) [1884 1891])
+                                    ("Controller" function
+                                       (:constructor-flag t
+                                        :type ("Controller" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1894 2212])
+                                    ("override" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2271 2286])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [2410 2419])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [2526 2535])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [2596 2605])
+                                    ("OnTimer" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ros::TimerEvent" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2622 2646]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2609 2647])
+                                    ("private" label nil (reparse-symbol classsubparts) [2713 2721])
+                                    ("FilterSteeringAngle" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :arguments 
+                                          ( ("vehicle_steering_angle" variable
+                                               (:constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [2757 2793]))                                          
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [2724 2794])
+                                    ("private" label nil (reparse-symbol classsubparts) [2797 2805])
+                                    ("timer_" variable (:type ("ros::Timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2808 2826])
+                                    ("param_steering_kp_" variable (:type "double") (reparse-symbol classsubparts) [2829 2855])
+                                    ("param_steering_ki_" variable (:type "double") (reparse-symbol classsubparts) [2858 2884])
+                                    ("param_steering_kd_" variable (:type "double") (reparse-symbol classsubparts) [2887 2913])
+                                    ("param_speed_kp_" variable (:type "double") (reparse-symbol classsubparts) [2916 2939])
+                                    ("param_speed_ki_" variable (:type "double") (reparse-symbol classsubparts) [2942 2965])
+                                    ("param_speed_kd_" variable (:type "double") (reparse-symbol classsubparts) [2968 2991])
+                                    ("param_steering_gain_" variable (:type "double") (reparse-symbol classsubparts) [2994 3022])
+                                    ("current_steering_angle_imu_" variable (:type "double") (reparse-symbol classsubparts) [3025 3060])
+                                    ("current_speed_" variable (:type "double") (reparse-symbol classsubparts) [3063 3085])
+                                    ("next_steering_angle_target_" variable (:type "double") (reparse-symbol classsubparts) [3088 3123])
+                                    ("current_steering_angle_target_" variable (:type "double") (reparse-symbol classsubparts) [3126 3164])
+                                    ("receive_target_timestamp_" variable (:type "double") (reparse-symbol classsubparts) [3167 3200]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1281 3203]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1111 3206]))                  
+                :type "namespace")
+                nil [1092 3233]))          
+      :file "controller.h"
+      :pointmax 3300
+      :fsize 3299
+      :lastmodtime '(23283 15324 537982 639000)
+      :unmatched-syntax '((punctuation 2709 . 2710) (DEFAULT 2702 . 2709) (punctuation 2700 . 2701) (semantic-list 2697 . 2699) (symbol 2687 . 2697) (punctuation 2686 . 2687) (semantic-list 2593 . 2595) (symbol 2589 . 2593) (VOID 2584 . 2588) (semantic-list 2523 . 2525) (symbol 2518 . 2523) (symbol 2511 . 2517) (punctuation 2510 . 2511) (punctuation 2509 . 2510) (symbol 2503 . 2509) (punctuation 2502 . 2503) (punctuation 2501 . 2502) (symbol 2495 . 2501) (semantic-list 2407 . 2409) (symbol 2403 . 2407) (symbol 2396 . 2402) (punctuation 2395 . 2396) (punctuation 2394 . 2395) (symbol 2388 . 2394) (punctuation 2387 . 2388) (punctuation 2386 . 2387) (symbol 2380 . 2386) (semantic-list 2268 . 2270) (symbol 2264 . 2268) (symbol 2257 . 2263) (punctuation 2256 . 2257) (punctuation 2255 . 2256) (symbol 2252 . 2255))
+      :lexical-table 
+        '(("Control_Update_Flg" . ((number "0x80" 1007 . 1011)))
+          ("MODULES_CONTROLLER_CONTROLLER_H_")
+          ("Turn_Left" . ((number "0x08" 926 . 930)))
+          ("Turn_Right" . ((number "0x10" 950 . 954)))
+          ("Brake_Light" . ((number "0x20" 975 . 979)))
+          ("Enable_Torque" . ((number "0x04" 903 . 907)))
+          ("Enable_Brake" . ((number "0x02" 876 . 880)))
+          ("Enable_Throttle" . ((number "0x01" 850 . 854)))
+          )
+)
+    (semanticdb-table "speed.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_CONTROLLER_SPEED_H_" variable (:constant-flag t) nil [280 307])
+            ("modules/controller/common/controller_gflags.h" include nil nil [309 365])
+            ("modules/controller/lib/pid.h" include nil nil [366 405])
+            ("beyond" type
+               (:members 
+                  ( ("controller" type
+                       (:members 
+                          ( ("SPEED" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [465 473])
+                                    ("FeedbackControl" variable (:type ("PID" type (:type "class") nil nil)) (reparse-symbol classsubparts) [476 496])
+                                    ("target" variable (:type "double") (reparse-symbol classsubparts) [500 514])
+                                    ("current" variable (:type "double") (reparse-symbol classsubparts) [517 532])
+                                    ("forward" variable (:type "double") (reparse-symbol classsubparts) [535 550])
+                                    ("errorlimit_hi" variable (:type "double") (reparse-symbol classsubparts) [554 590])
+                                    ("errorlimit_lo" variable (:type "double") (reparse-symbol classsubparts) [554 590])
+                                    ("error" variable (:type "double") (reparse-symbol classsubparts) [593 618])
+                                    ("error_last" variable (:type "double") (reparse-symbol classsubparts) [593 618])
+                                    ("limit_adj" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [622 639])
+                                    ("public" label nil (reparse-symbol classsubparts) [642 649])
+                                    ("SPEED" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("SPEED" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [652 660])
+                                    ("set_target" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [679 686]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [663 687])
+                                    ("get_target" function
+                                       (:prototype-flag t
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [690 710])
+                                    ("update" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [727 734]))                                          
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [713 735])
+                                    ("set_forward" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [755 762]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [738 763])
+                                    ("pid_flush" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [766 783])
+                                    ("update_params" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("param_kp" variable
+                                               (:constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [810 832])
+                                            ("param_ki" variable
+                                               (:constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [833 855])
+                                            ("param_kd" variable
+                                               (:constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [856 878]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [786 879]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [450 882]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [426 885]))                  
+                :type "namespace")
+                nil [407 912]))          
+      :file "speed.h"
+      :pointmax 976
+      :fsize 975
+      :lastmodtime '(23283 15324 537982 639000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MODULES_CONTROLLER_SPEED_H_")
+          )
+)
+    (semanticdb-table "steering.h"
+      :file "steering.h"
+      :fsize 1071
+      :lastmodtime '(23283 15324 537982 639000))
+    (semanticdb-table "ser_protocol.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_CONTROLLER_SER_PROTOCOL_H_" variable (:constant-flag t) nil [287 321])
+            ("stdio.h" include (:system-flag t) nil [323 341])
+            ("stdlib.h" include (:system-flag t) nil [342 361])
+            ("string.h" include (:system-flag t) nil [362 381])
+            ("unistd.h" include (:system-flag t) nil [417 436])
+            ("fcntl.h" include (:system-flag t) nil [479 497])
+            ("errno.h" include (:system-flag t) nil [531 549])
+            ("termios.h" include (:system-flag t) nil [583 603])
+            ("thread" include (:system-flag t) nil [645 662])
+            ("modules/common/adapters/adapter_manager.h" include nil nil [664 716])
+            ("modules/controller/common/controller_gflags.h" include nil nil [717 773])
+            ("modules/common/beyond_app.h" include nil nil [774 812])
+            ("modules/controller/proto/controller.pb.h" include nil nil [813 864])
+            ("beyond" type
+               (:members 
+                  ( ("controller" type
+                       (:members 
+                          ( ("CLS_CMD" variable (:constant-flag t) (reparse-symbol namespacesubparts) [917 924])
+                            ("CLS_RPT" variable (:constant-flag t) (reparse-symbol namespacesubparts) [980 987])
+                            ("ser_protc" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [1058 1066])
+                                    ("SPortHandler" variable (:type "int") (reparse-symbol classsubparts) [1069 1086])
+                                    ("SRead" variable (:type ("std::thread" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1089 1107])
+                                    ("control" variable
+                                       (:pointer 1
+                                        :type ("uint8_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1111 1128])
+                                    ("ReadThreadRunning" variable (:type "bool") (reparse-symbol classsubparts) [1193 1216])
+                                    ("SerRx_Fxn" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1261 1278])
+                                    ("Checksum" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:pointer 1
+                                                :type ("uint8_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1425 1435])
+                                            ("" variable
+                                               (:pointer 1
+                                                :type ("uint8_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1436 1446])
+                                            ("" variable
+                                               (:pointer 1
+                                                :type ("uint8_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1447 1457]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1411 1458])
+                                    ("MsgReport" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:pointer 1
+                                                :type ("uint8_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1477 1486]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1462 1487])
+                                    ("public" label nil (reparse-symbol classsubparts) [1490 1497])
+                                    ("PortOpen" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [1574 1586])
+                                            ("" variable
+                                               (:pointer 1
+                                                :type ("uint8_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1587 1596]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1561 1597])
+                                    ("PortClose" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1651 1668])
+                                    ("SendCommand" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1828 1836])
+                                            ("" variable (:type ("int16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1837 1845])
+                                            ("" variable (:type ("int16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1846 1854]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1811 1855]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1039 1858]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [885 1861]))                  
+                :type "namespace")
+                nil [866 1888]))          
+      :file "ser_protocol.h"
+      :pointmax 1957
+      :fsize 1956
+      :lastmodtime '(23283 15324 537982 639000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MODULES_CONTROLLER_SER_PROTOCOL_H_")
+          ("CLS_CMD" . ((number "0x11" 925 . 929)))
+          ("CLS_RPT" . ((number "0x21" 988 . 992)))
+          )
+)
+    (semanticdb-table "controller.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("modules/controller/controller.h" include nil nil [236 278])
+            ("modules/common/adapters/adapter_manager.h" include nil nil [279 331])
+            ("modules/common/proto/error_code.pb.h" include nil nil [332 379])
+            ("modules/visualizer/proto/visualizer.pb.h" include nil nil [380 431])
+            ("beyond::common::ErrorCode" variable (:type "int") nil [463 489])
+            ("beyond::common::Status" variable (:type "int") nil [498 521])
+            ("beyond::common::adapter::AdapterManager" variable (:type "int") nil [530 570])
+            ("beyond::visualizer::VisualizerCommandValueEngage" variable (:type "int") nil [579 628])
+            ("kSpeedBeginIMUSteering" variable
+               (:constant-flag t
+                :default-value "7.0"
+                :type "double")
+                nil [630 672])
+            ("kSpeedEndIMUSteering" variable
+               (:constant-flag t
+                :default-value "10.0"
+                :type "double")
+                nil [673 714])
+            ("beyond" type
+               (:members 
+                  ( ("controller" type
+                       (:members 
+                          ( ("Name" function
+                               (:parent "Controller"
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [759 825])
+                            ("Init" function
+                               (:parent "Controller"
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [827 970])
+                            ("Start" function
+                               (:parent "Controller"
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [972 1989])
+                            ("InitParameters" function
+                               (:parent "Controller"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1991 2539])
+                            ("OnTimer" function
+                               (:parent "Controller"
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::TimerEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2566 2590]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2541 3310])
+                            ("Stop" function
+                               (:parent "Controller"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3312 3454])
+                            ("EngageRxFxn" function
+                               (:parent "Controller"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("beyond::visualizer::VisualizerCommandMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3490 3542]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3456 5504])
+                            ("SteeringRxFxn" function
+                               (:parent "Controller"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("beyond::can::VehicleSteeringAngle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5537 5582]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5506 6525])
+                            ("SpeedRxFxn" function
+                               (:parent "Controller"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("beyond::can::VehicleSpeed" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6555 6592]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6527 7790])
+                            ("ControlTarget" function
+                               (:parent "Controller"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("beyond::planner::ControlTarget" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7823 7865]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [7792 8327])
+                            ("OnSteeringAngleIMU" function
+                               (:parent "Controller"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("beyond::sensors::imu::SteeringAngleIMU" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8370 8420]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8329 8478])
+                            ("FilterSteeringAngle" function
+                               (:parent "Controller"
+                                :constant-flag t
+                                :arguments 
+                                  ( ("vehicle_steering_angle" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [8530 8566]))                                  
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [8480 9160]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [735 9163]))                  
+                :type "namespace")
+                nil [716 9190]))          
+      :file "controller.cc"
+      :pointmax 9212
+      :fsize 9211
+      :lastmodtime '(23283 15324 537982 639000)
+      :unmatched-syntax '((punctuation 578 . 579) (USING 571 . 576) (punctuation 529 . 530) (USING 522 . 527) (punctuation 497 . 498) (USING 490 . 495) (punctuation 462 . 463) (USING 455 . 460)))
+    (semanticdb-table "speed.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [236 255])
+            ("modules/controller/speed.h" include nil nil [256 293])
+            ("beyond" type
+               (:members 
+                  ( ("controller" type
+                       (:members 
+                          ( ("sample_interval" variable (:constant-flag t) (reparse-symbol namespacesubparts) [346 361])
+                            ("kp" variable (:constant-flag t) (reparse-symbol namespacesubparts) [377 379])
+                            ("ki" variable (:constant-flag t) (reparse-symbol namespacesubparts) [405 407])
+                            ("kd" variable (:constant-flag t) (reparse-symbol namespacesubparts) [433 435])
+                            ("i_limit" variable (:constant-flag t) (reparse-symbol namespacesubparts) [461 468])
+                            ("error_limit_init_hi" variable (:constant-flag t) (reparse-symbol namespacesubparts) [482 501])
+                            ("error_limit_init_lo" variable (:constant-flag t) (reparse-symbol namespacesubparts) [515 534])
+                            ("error_limit_hi_increase" variable (:constant-flag t) (reparse-symbol namespacesubparts) [549 572])
+                            ("error_limit_lo_increase" variable (:constant-flag t) (reparse-symbol namespacesubparts) [584 607])
+                            ("command_min" variable (:constant-flag t) (reparse-symbol namespacesubparts) [619 630])
+                            ("command_max" variable (:constant-flag t) (reparse-symbol namespacesubparts) [645 656])
+                            ("SPEED" function
+                               (:constructor-flag t
+                                :parent "SPEED"
+                                :type ("SPEED" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [663 1156])
+                            ("limit_adj" function
+                               (:parent "SPEED"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1158 1855])
+                            ("set_target" function
+                               (:parent "SPEED"
+                                :arguments 
+                                  ( ("val" variable (:type "double") (reparse-symbol arg-sub-list) [1880 1891]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1857 1941])
+                            ("get_target" function
+                               (:parent "SPEED"
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [1943 1990])
+                            ("update" function
+                               (:parent "SPEED"
+                                :arguments 
+                                  ( ("input" variable (:type "double") (reparse-symbol arg-sub-list) [2013 2026]))                                  
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [1992 2788])
+                            ("set_forward" function
+                               (:parent "SPEED"
+                                :arguments 
+                                  ( ("val" variable (:type "double") (reparse-symbol arg-sub-list) [2814 2825]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2790 2846])
+                            ("pid_flush" function
+                               (:parent "SPEED"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2848 2980])
+                            ("update_params" function
+                               (:parent "SPEED"
+                                :arguments 
+                                  ( ("param_kp" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3011 3033])
+                                    ("param_ki" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3034 3056])
+                                    ("param_kd" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3057 3079]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2982 3175]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [314 3178]))                  
+                :type "namespace")
+                nil [295 3205]))          
+      :file "speed.cc"
+      :pointmax 3227
+      :fsize 3226
+      :lastmodtime '(23283 15324 537982 639000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("error_limit_init_hi" . ((number "2500" 502 . 506)))
+          ("error_limit_lo_increase" . ((number "30" 608 . 610)))
+          ("command_max" . ((number "1500" 657 . 661)))
+          ("command_min" . ((punctuation "-" 631 . 632) (number "2500" 632 . 636)))
+          ("kp" . ((symbol "FLAGS_SPD_PID_kp" 380 . 396)))
+          ("kd" . ((symbol "FLAGS_SPD_PID_kd" 436 . 452)))
+          ("error_limit_init_lo" . ((punctuation "-" 535 . 536) (number "2300" 536 . 540)))
+          ("i_limit" . ((number "800" 469 . 472)))
+          ("error_limit_hi_increase" . ((number "50" 573 . 575)))
+          ("ki" . ((symbol "FLAGS_SPD_PID_ki" 408 . 424)))
+          ("sample_interval" . ((number "0.024" 362 . 367)))
+          )
+))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!controller!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

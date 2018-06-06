@@ -53,7 +53,7 @@
       :file "dynamics_lr_prior.py"
       :pointmax 1979
       :fsize 1978
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22653 24657 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "dynamics.py"
       :major-mode 'python-mode
@@ -115,7 +115,7 @@
       :file "dynamics.py"
       :pointmax 1352
       :fsize 1351
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22653 24657 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "dynamics_lr.py"
       :major-mode 'python-mode
@@ -165,7 +165,7 @@
       :file "dynamics_lr.py"
       :pointmax 1766
       :fsize 1765
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22697 58688 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "dynamics_prior_gmm.py"
       :major-mode 'python-mode
@@ -258,12 +258,58 @@
       :file "dynamics_prior_gmm.py"
       :pointmax 3710
       :fsize 3709
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22697 59988 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" Default configuration and hyperparameter values for dynamics objects. \"\"\"" code nil nil [1 78])
+            ("DYN_PRIOR_GMM" variable nil nil [100 222]))          
       :file "config.py"
+      :pointmax 223
       :fsize 222
-      :lastmodtime '(22592 31744 0 0)))
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "dynamics_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines utility classes and functions for dynamics. \"\"\"" code nil nil [1 70])
+            ("numpy" include nil nil [71 89])
+            ("guess_dynamics" function
+               (:documentation "
+    Initial guess at the model using position-velocity assumption.
+    Note: This code assumes joint positions occupy the first dU state
+          indices and joint velocities occupy the next dU.
+    Args:
+        gains: dU dimensional joint gains.
+        acc: dU dimensional joint acceleration.
+        dX: Dimensionality of the state.
+        dU: Dimensionality of the action.
+        dt: Length of a time step.
+    Returns:
+        Fd: A dX by dX+dU transition matrix.
+        fc: A dX bias vector.
+    "
+                :arguments 
+                  ( ("gains" variable nil (reparse-symbol function_parameters) [111 116])
+                    ("acc" variable nil (reparse-symbol function_parameters) [118 121])
+                    ("dX" variable nil (reparse-symbol function_parameters) [123 125])
+                    ("dU" variable nil (reparse-symbol function_parameters) [127 129])
+                    ("dt" variable nil (reparse-symbol function_parameters) [131 133]))                  )
+                nil [92 1169]))          
+      :file "dynamics_utils.py"
+      :pointmax 1169
+      :fsize 1168
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil))
   :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!algorithm!dynamics!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

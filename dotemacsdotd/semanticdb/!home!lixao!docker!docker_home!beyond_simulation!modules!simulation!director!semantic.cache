@@ -1,0 +1,363 @@
+;; Object director/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "director/"
+  :tables
+  (list
+    (semanticdb-table "bag_player.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"This script \"\"\"" code nil nil [393 411])
+            ("threading" include nil nil [413 429])
+            ("thread" include nil nil [430 443])
+            ("time" include nil nil [444 455])
+            ("copy" include nil nil [456 467])
+            ("tqdm" include nil nil [469 490])
+            ("rosbag" include nil nil [492 505])
+            ("rospy" include nil nil [506 518])
+            ("rosgraph_msgs" include nil nil [519 539])
+            ("tf2_msgs" include nil nil [540 555])
+            ("log_conf" include nil nil [556 593])
+            ("modules.state_estimation.proto" include nil nil [594 657])
+            ("modules.simulation.proto" include nil nil [658 709])
+            ("WORLD_STATE_MSG_TOPIC" variable nil nil [711 773])
+            ("BagPlayer" type
+               (:documentation "
+    @brief      Class for command.
+    "
+                :superclasses ("threading.Thread")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        { item_description }
+        \"\"\"" code nil (reparse-symbol indented_block_body) [905 949])
+                            ("self" variable nil (reparse-symbol indented_block_body) [958 982])
+                            ("self" variable nil (reparse-symbol indented_block_body) [991 1014])
+                            ("threading" code nil (reparse-symbol indented_block_body) [1023 1054])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1063 1176])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1185 1286])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1295 1422])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1432 1464])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1473 1491])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1500 1525])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1534 1551]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [880 884])
+                            ("scenario" variable nil (reparse-symbol function_parameters) [886 894]))                          
+                        :documentation "
+        { item_description }
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [867 1552])
+                    ("_key_input_thread" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1579 1583]))                          
+                        :documentation "
+        @brief      { thread to listen to keyboard input }
+        @param      self  The object
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [1557 1827])
+                    ("_sim_clock_func" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1852 1856])
+                            ("bag" variable nil (reparse-symbol function_parameters) [1858 1861]))                          
+                        :documentation "
+        @brief      { simulate ros clock using clock messages in rosbag }
+        @param      self  The object
+        @param      bag   The rosbag
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [1832 3058])
+                    ("_sim_clock_unlimited_func" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3093 3097])
+                            ("start_time_msg" variable nil (reparse-symbol function_parameters) [3099 3113]))                          
+                        :documentation "
+        @brief      { simulate ros clock }
+        @param      self  The object
+        @param      start_time_msg  The first clock message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [3063 4455])
+                    ("_remove_agents" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4479 4483])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [4485 4496]))                          
+                        :documentation "
+        @brief      { remove agent messages that are not needed by scenario }
+        @param      self  The object
+        @param      world_state  The original world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [4460 5122])
+                    ("_modify_agents" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5146 5150])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [5152 5163]))                          
+                        :documentation "
+        @brief      { modify agent message based on scenario }
+        @param      self  The object
+        @param      world_state  The original world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [5127 6099])
+                    ("_is_time_to_send_task" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6130 6134])
+                            ("agent_config" variable nil (reparse-symbol function_parameters) [6136 6148])
+                            ("timestamp" variable nil (reparse-symbol function_parameters) [6150 6159]))                          
+                        :documentation "
+        @brief      { check if it is time to send a agent task message }
+        @param      self  The object
+        @param      agent_config  The config from scenario file
+        @param      timestamp  The timestamp in seconds
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [6104 6666])
+                    ("_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6683 6687])
+                            ("action_str" variable nil (reparse-symbol function_parameters) [6689 6699]))                          
+                        :documentation "
+        @brief      { turn action string into protobuf message format }
+        @param      self  The object
+        @param      action_str  The action string
+        @return     { corresponding protobuf message }
+        ")
+                        (reparse-symbol indented_block_body) [6671 7282])
+                    ("_send_agent_tasks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7309 7313])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [7315 7326]))                          
+                        :documentation "
+        @brief      { send agent tasks which are active at the current timestamp }
+        @param      self  The object
+        @param      world_state  The world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [7287 9440])
+                    ("_add_path_id_to_lanes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9471 9475])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [9477 9488]))                          
+                        :documentation "
+        @brief      { process world state message }
+        @param      self  The object
+        @param      wolrd_state  The world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [9445 10075])
+                    ("_process_world_state_msg" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10109 10113])
+                            ("wolrd_state" variable nil (reparse-symbol function_parameters) [10115 10126]))                          
+                        :documentation "
+        @brief      { process world state message }
+        @param      self  The object
+        @param      wolrd_state  The world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [10080 10840])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10853 10857]))                          
+                        :documentation "
+        @brief      { main function }
+        @param      self  The object
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [10845 13108]))                  
+                :type "class")
+                nil [776 13108])
+            ("if" code nil nil [13109 13479]))          
+      :file "bag_player.py"
+      :pointmax 13479
+      :fsize 13478
+      :lastmodtime '(23313 52658 514427 600000)
+      :unmatched-syntax nil)
+    (semanticdb-table "log_conf.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logging" include nil nil [393 407])
+            ("sys" include nil nil [408 418])
+            ("APP_NAME" variable nil nil [420 441])
+            ("singleton" function (:arguments 
+              ( ("cls" variable nil (reparse-symbol function_parameters) [457 460]))              ) nil [443 630])
+            ("Logger" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [690 726])
+                            ("formatter" variable nil (reparse-symbol indented_block_body) [735 816])
+                            ("handler" variable nil (reparse-symbol indented_block_body) [825 868])
+                            ("handler" code nil (reparse-symbol indented_block_body) [877 908])
+                            ("self" code nil (reparse-symbol indented_block_body) [917 943])
+                            ("self" code nil (reparse-symbol indented_block_body) [952 982]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [675 679]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [662 983])
+                    ("info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [997 1001])
+                            ("msg" variable nil (reparse-symbol function_parameters) [1003 1006])
+                            ("args" variable nil (reparse-symbol function_parameters) [1008 1013])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1015 1023]))                          )
+                        (reparse-symbol indented_block_body) [988 1068])
+                    ("debug" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1083 1087])
+                            ("msg" variable nil (reparse-symbol function_parameters) [1089 1092])
+                            ("args" variable nil (reparse-symbol function_parameters) [1094 1099])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1101 1109]))                          )
+                        (reparse-symbol indented_block_body) [1073 1154]))                  
+                :type "class")
+                nil [642 1154]))          
+      :file "log_conf.py"
+      :pointmax 1154
+      :fsize 1153
+      :lastmodtime '(23191 1065 890938 602000)
+      :unmatched-syntax nil)
+    (semanticdb-table "simulation_config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [393 404])
+            ("os" include nil nil [405 414])
+            ("glob" include nil nil [415 426])
+            ("log_conf" include nil nil [427 464])
+            ("SimulationConfig" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [535 565])
+                            ("self" variable nil (reparse-symbol indented_block_body) [574 636])
+                            ("if" code nil (reparse-symbol indented_block_body) [645 766]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [507 511])
+                            ("config_path" variable nil (reparse-symbol function_parameters) [513 524]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [494 766])
+                    ("_load_config" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [788 792]))                          )
+                        (reparse-symbol indented_block_body) [771 1120])
+                    ("_get_scenarios_files" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1150 1154])
+                            ("config" variable nil (reparse-symbol function_parameters) [1156 1162]))                          )
+                        (reparse-symbol indented_block_body) [1125 1831])
+                    ("load_scenarios" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1855 1859]))                          )
+                        (reparse-symbol indented_block_body) [1836 2045]))                  
+                :type "class")
+                nil [466 2045]))          
+      :file "simulation_config.py"
+      :pointmax 2045
+      :fsize 2044
+      :lastmodtime '(23313 52658 514427 600000)
+      :unmatched-syntax '((INDENT_BLOCK 1311 . 1398) (NEWLINE 1310 . 1311) (COLON 1309 . 1310) (TRY 1221 . 1224) (AS 1305 . 1307) (INDENT_BLOCK 1034 . 1120) (NEWLINE 1033 . 1034) (COLON 1032 . 1033) (TRY 803 . 806) (AS 1028 . 1030)))
+    (semanticdb-table "main.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [393 403])
+            ("argparse" include nil nil [404 419])
+            ("rospy" include nil nil [420 432])
+            ("log_conf" include nil nil [433 470])
+            ("simulation_config" include nil nil [471 517])
+            ("player" include nil nil [518 543])
+            ("ROSReceiver" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [592 596]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [568 597]))                  
+                :type "class")
+                nil [545 597])
+            ("parse_arguments" function nil nil [598 888])
+            ("main" function nil nil [889 1483])
+            ("if" code nil nil [1485 1522]))          
+      :file "main.py"
+      :pointmax 1522
+      :fsize 1521
+      :lastmodtime '(23313 52658 514427 600000)
+      :unmatched-syntax nil)
+    (semanticdb-table "player.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [393 404])
+            ("bag_player" include nil nil [405 437])
+            ("log_conf" include nil nil [438 475])
+            ("Player" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [539 575]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [508 512])
+                            ("scenario_files" variable nil (reparse-symbol function_parameters) [514 528]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [495 576])
+                    ("_load_scenario" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [673 677])
+                            ("file_path" variable nil (reparse-symbol function_parameters) [679 688]))                          )
+                        (reparse-symbol indented_block_body) [654 939])
+                    ("_validate_scenario" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [967 971])
+                            ("scenario" variable nil (reparse-symbol function_parameters) [973 981]))                          )
+                        (reparse-symbol indented_block_body) [944 1670])
+                    ("_play_scenario" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1694 1698])
+                            ("scenario" variable nil (reparse-symbol function_parameters) [1700 1708]))                          )
+                        (reparse-symbol indented_block_body) [1675 2305])
+                    ("play" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2319 2323]))                          )
+                        (reparse-symbol indented_block_body) [2310 2618]))                  
+                :type "class")
+                nil [477 2618]))          
+      :file "player.py"
+      :pointmax 2618
+      :fsize 2617
+      :lastmodtime '(23191 1065 890938 602000)
+      :unmatched-syntax '((INDENT_BLOCK 1645 . 1670) (NEWLINE 1644 . 1645) (COLON 1643 . 1644) (TRY 992 . 995) (AS 1639 . 1641) (INDENT_BLOCK 851 . 939) (NEWLINE 850 . 851) (COLON 849 . 850) (TRY 699 . 702) (AS 845 . 847)))
+    (semanticdb-table "config.json"
+      :major-mode 'js-mode
+      :tags nil
+      :file "config.json"
+      :pointmax 92
+      :fsize 91
+      :lastmodtime '(23313 52658 514427 600000)
+      :unmatched-syntax nil))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!simulation!director!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

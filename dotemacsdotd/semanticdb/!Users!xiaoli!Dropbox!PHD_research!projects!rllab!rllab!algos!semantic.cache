@@ -510,6 +510,96 @@
       :pointmax 17620
       :fsize 17619
       :lastmodtime '(22354 18394 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "cem.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.base" include nil nil [1 41])
+            ("numpy" include nil nil [43 61])
+            ("rllab.misc.special" include nil nil [63 109])
+            ("rllab.sampler" include nil nil [110 167])
+            ("rllab.sampler.utils" include nil nil [168 207])
+            ("rllab.core.serializable" include nil nil [208 256])
+            ("rllab.misc.logger" include nil nil [257 291])
+            ("rllab.plotter" include nil nil [292 323])
+            ("_worker_rollout_policy" function (:arguments 
+              ( ("G" variable nil (reparse-symbol function_parameters) [353 354])
+                ("args" variable nil (reparse-symbol function_parameters) [356 360]))              ) nil [326 970])
+            ("CEM" type
+               (:superclasses ("RLAlgorithm" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param n_itr: Number of iterations.
+        :param max_path_length: Maximum length of a single rollout.
+        :param batch_size: # of samples from trajs from param distribution, when this
+        is set, n_samples is ignored
+        :param discount: Discount.
+        :param plot: Plot evaluation run after each iteration.
+        :param init_std: Initial std for param distribution
+        :param extra_std: Decaying std added to param distribution at each iteration
+        :param extra_decay_time: Iterations that it takes to decay extra std
+        :param n_samples: #of samples from param distribution
+        :param best_frac: Best fraction of the sampled params
+        :return:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1395 2106])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [2115 2154])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2163 2177])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2186 2206])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2215 2243])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2252 2268])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2277 2317])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2326 2352])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2361 2387])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2396 2422])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2431 2455])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2464 2488])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2497 2535])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2544 2562]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1040 1044])
+                            ("env" variable nil (reparse-symbol function_parameters) [1058 1061])
+                            ("policy" variable nil (reparse-symbol function_parameters) [1075 1081])
+                            ("n_itr" variable nil (reparse-symbol function_parameters) [1095 1100])
+                            ("max_path_length" variable nil (reparse-symbol function_parameters) [1118 1133])
+                            ("discount" variable nil (reparse-symbol function_parameters) [1151 1159])
+                            ("init_std" variable nil (reparse-symbol function_parameters) [1178 1186])
+                            ("n_samples" variable nil (reparse-symbol function_parameters) [1203 1212])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [1230 1240])
+                            ("best_frac" variable nil (reparse-symbol function_parameters) [1259 1268])
+                            ("extra_std" variable nil (reparse-symbol function_parameters) [1287 1296])
+                            ("extra_decay_time" variable nil (reparse-symbol function_parameters) [1313 1329])
+                            ("plot" variable nil (reparse-symbol function_parameters) [1347 1351])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1371 1379]))                          
+                        :documentation "
+        :param n_itr: Number of iterations.
+        :param max_path_length: Maximum length of a single rollout.
+        :param batch_size: # of samples from trajs from param distribution, when this
+        is set, n_samples is ignored
+        :param discount: Discount.
+        :param plot: Plot evaluation run after each iteration.
+        :param init_std: Initial std for param distribution
+        :param extra_std: Decaying std added to param distribution at each iteration
+        :param extra_decay_time: Iterations that it takes to decay extra std
+        :param n_samples: #of samples from param distribution
+        :param best_frac: Best fraction of the sampled params
+        :return:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1014 2563])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2578 2582]))                          )
+                        (reparse-symbol indented_block_body) [2568 5830]))                  
+                :type "class")
+                nil [972 5830]))          
+      :file "cem.py"
+      :pointmax 5830
+      :fsize 5829
+      :lastmodtime '(22509 7984 0 0)
       :unmatched-syntax nil))
   :file "!Users!xiaoli!Dropbox!PHD_research!projects!rllab!rllab!algos!semantic.cache"
   :semantic-tag-version "2.0"

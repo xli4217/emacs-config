@@ -1,0 +1,429 @@
+;; Object agent_service/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "agent_service/"
+  :tables
+  (list
+    (semanticdb-table "agent_service.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("geometry_msgs/PoseStamped.h" include (:system-flag t) nil [236 274])
+            ("tf2/LinearMath/Quaternion.h" include (:system-flag t) nil [275 313])
+            ("tf2/utils.h" include (:system-flag t) nil [314 336])
+            ("algorithm" include (:system-flag t) nil [338 358])
+            ("vector" include (:system-flag t) nil [359 376])
+            ("memory" include (:system-flag t) nil [377 394])
+            ("modules/simulation/agent_service/agent_service.h" include nil nil [396 455])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("beyond::state_estimation::WorldStateMsg" using (:type ("beyond::state_estimation::WorldStateMsg" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [500 546])
+                            ("beyond::state_estimation::AgentMsg" using (:type ("beyond::state_estimation::AgentMsg" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [547 588])
+                            ("beyond::state_estimation::AgentCutInStatus" using (:type ("beyond::state_estimation::AgentCutInStatus" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [589 638])
+                            ("beyond::state_estimation::AgentLaneStatus" using (:type ("beyond::state_estimation::AgentLaneStatus" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [639 687])
+                            ("beyond::state_estimation::AgentType" using (:type ("beyond::state_estimation::AgentType" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [688 730])
+                            ("kDefaultFollowingVelocity" variable
+                               (:constant-flag t
+                                :default-value "30.0"
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [732 778])
+                            ("AgentService" function
+                               (:constructor-flag t
+                                :parent "AgentService"
+                                :type ("AgentService" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [780 811])
+                            ("AgentService" function
+                               (:destructor-flag t
+                                :parent "AgentService"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [813 846])
+                            ("Init" function
+                               (:parent "AgentService"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [848 1014])
+                            ("SetTransformBroadcaster" function
+                               (:parent "AgentService"
+                                :arguments 
+                                  ( ("p_tb" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("tf2_ros::TransformBroadcaster" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1064 1116]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1016 1153])
+                            ("SetMapServer" function
+                               (:parent "AgentService"
+                                :arguments 
+                                  ( ("map_service" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("MapService" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1187 1227]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1155 1261])
+                            ("UpdateAgentsWithMsg" function
+                               (:parent "AgentService"
+                                :arguments 
+                                  ( ("world_state_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WorldStateMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1307 1344])
+                                    ("director_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SimulationDirectorMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1349 1391])
+                                    ("frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1392 1410]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1263 7850])
+                            ("UpdateAgents" function
+                               (:parent "AgentService"
+                                :arguments 
+                                  ( ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [7884 7901]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [7852 8164])
+                            ("GetAgentMsgs" function
+                               (:parent "AgentService"
+                                :arguments 
+                                  ( ("world_state_msg" variable
+                                       (:pointer 1
+                                        :type ("WorldStateMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8198 8229])
+                                    ("target_frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8262 8287]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8166 11104])
+                            ("ClearAgents" function
+                               (:parent "AgentService"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11106 11184])
+                            ("SimulationAgent" function
+                               (:constructor-flag t
+                                :parent "SimulationAgent"
+                                :arguments 
+                                  ( ("id" variable (:type "int") (reparse-symbol arg-sub-list) [11219 11226])
+                                    ("map_service" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("MapService" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [11260 11300]))                                  
+                                :type ("SimulationAgent" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [11186 11346])
+                            ("SimulationAgent" function
+                               (:destructor-flag t
+                                :parent "SimulationAgent"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11348 11386])
+                            ("Update" function
+                               (:parent "SimulationAgent"
+                                :arguments 
+                                  ( ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [11417 11434])
+                                    ("action_msg" variable (:type ("AgentActionMsg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11435 11461])
+                                    ("verbose" variable (:type "bool") (reparse-symbol arg-sub-list) [11491 11504]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11388 15959])
+                            ("StepFollowLane" function
+                               (:parent "SimulationAgent"
+                                :arguments 
+                                  ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [15998 16013])
+                                    ("acc" variable (:type "double") (reparse-symbol arg-sub-list) [16014 16025])
+                                    ("target_speed" variable (:type "double") (reparse-symbol arg-sub-list) [16063 16083])
+                                    ("verbose" variable (:type "bool") (reparse-symbol arg-sub-list) [16084 16097]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [15961 18350])
+                            ("StepChangeLane" function
+                               (:parent "SimulationAgent"
+                                :arguments 
+                                  ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [18389 18404])
+                                    ("acc" variable (:type "double") (reparse-symbol arg-sub-list) [18405 18416])
+                                    ("target_speed" variable (:type "double") (reparse-symbol arg-sub-list) [18454 18474])
+                                    ("direction" variable (:type ("AgentAction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18475 18497])
+                                    ("duration" variable (:type "double") (reparse-symbol arg-sub-list) [18535 18551])
+                                    ("verbose" variable (:type "bool") (reparse-symbol arg-sub-list) [18552 18565]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [18352 21726])
+                            ("UpdateWithMsg" function
+                               (:parent "SimulationAgent"
+                                :arguments 
+                                  ( ("new_agent_state" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("VehicleState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [21764 21800])
+                                    ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [21837 21854]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [21728 21962]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [476 21965]))                  
+                :type "namespace")
+                nil [457 21992]))          
+      :file "agent_service.cc"
+      :pointmax 22014
+      :fsize 22013
+      :lastmodtime '(23313 52658 514427 600000)
+      :unmatched-syntax nil)
+    (semanticdb-table "agent_service.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_SIMULATION_AGENT_SERVICE_H_" variable (:constant-flag t) nil [288 323])
+            ("tf2_ros/transform_broadcaster.h" include (:system-flag t) nil [325 367])
+            ("tf2_ros/transform_listener.h" include (:system-flag t) nil [368 407])
+            ("map" include (:system-flag t) nil [409 423])
+            ("memory" include (:system-flag t) nil [424 441])
+            ("string" include (:system-flag t) nil [442 459])
+            ("modules/simulation/map_service/map_service.h" include nil nil [461 516])
+            ("modules/simulation/proto/simulation.pb.h" include nil nil [517 568])
+            ("modules/simulation/vehicle_state.h" include nil nil [569 614])
+            ("modules/state_estimation/proto/state_estimation.pb.h" include nil nil [615 678])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("SimulationAgent" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [748 755])
+                                    ("SimulationAgent" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("id" variable
+                                               (:default-value "-1"
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [783 794])
+                                            ("map_service" variable
+                                               (:default-value "nullptr"
+                                                :type ("std::shared_ptr" type
+                                                     (:template-specifier 
+                                                        ( ("MapService" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [823 872]))                                          
+                                        :type ("SimulationAgent" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [767 874])
+                                    ("SimulationAgent" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [877 896])
+                                    ("Update" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [912 929])
+                                            ("action_msg" variable (:type ("AgentActionMsg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [930 956])
+                                            ("verbose" variable
+                                               (:default-value "false"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [971 991]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [900 993])
+                                    ("UpdateWithMsg" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("new_agent_state" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("VehicleState" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1015 1051])
+                                            ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [1052 1069]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [996 1070])
+                                    ("GetId" function
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1074 1113])
+                                    ("GetState" function
+                                       (:constant-flag t
+                                        :type ("VehicleState" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1117 1178])
+                                    ("GetLastTimestamp" function
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [1182 1248])
+                                    ("private" label nil (reparse-symbol classsubparts) [1251 1259])
+                                    ("StepFollowLane" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [1282 1297])
+                                            ("acc" variable (:type "double") (reparse-symbol arg-sub-list) [1298 1309])
+                                            ("target_speed" variable (:type "double") (reparse-symbol arg-sub-list) [1310 1330])
+                                            ("verbose" variable
+                                               (:default-value "false"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [1353 1373]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1262 1375])
+                                    ("StepChangeLane" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [1399 1414])
+                                            ("acc" variable (:type "double") (reparse-symbol arg-sub-list) [1415 1426])
+                                            ("target_speed" variable (:type "double") (reparse-symbol arg-sub-list) [1427 1447])
+                                            ("direction" variable (:type ("AgentAction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1470 1492])
+                                            ("duration" variable (:type "double") (reparse-symbol arg-sub-list) [1493 1509])
+                                            ("verbose" variable
+                                               (:default-value "false"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [1532 1552]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1379 1554])
+                                    ("id_" variable (:type "int") (reparse-symbol classsubparts) [1558 1566])
+                                    ("last_timestamp_" variable (:type "double") (reparse-symbol classsubparts) [1569 1592])
+                                    ("map_service_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("MapService" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1595 1636])
+                                    ("current_action_" variable (:type ("AgentActionMsg" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1660 1691])
+                                    ("target_path_id_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1694 1722])
+                                    ("agent_state_" variable (:type ("VehicleState" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1726 1752]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [723 1755])
+                            ("AgentService" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1779 1786])
+                                    ("AgentService" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("AgentService" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1789 1804])
+                                    ("AgentService" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1807 1823])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1827 1839])
+                                    ("UpdateAgents" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("timestamp" variable (:type "double") (reparse-symbol arg-sub-list) [1935 1952]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1917 1953])
+                                    ("UpdateAgentsWithMsg" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("world_state_msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2185 2248])
+                                            ("director_msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("SimulationDirectorMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2255 2297])
+                                            ("frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2298 2316]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2153 2317])
+                                    ("GetAgentMsgs" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("world_state_msg" variable
+                                               (:pointer 1
+                                                :type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2339 2396])
+                                            ("target_frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2417 2442]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2321 2449])
+                                    ("SetTransformBroadcaster" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("p_tb" variable (:type ("std::shared_ptr" type
+                                                 (:template-specifier 
+                                                    ( ("tf2_ros::TransformBroadcaster" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [2489 2541]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2453 2542])
+                                    ("SetMapServer" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("map_service" variable (:type ("std::shared_ptr" type
+                                                 (:template-specifier 
+                                                    ( ("MapService" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [2564 2604]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2546 2605])
+                                    ("ClearAgents" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2609 2628])
+                                    ("private" label nil (reparse-symbol classsubparts) [2631 2639])
+                                    ("agents_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("unsigned int" type nil nil nil)
+                                              ("SimulationAgent" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2642 2690])
+                                    ("tf_buffer_" variable (:type ("tf2_ros::Buffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2694 2721])
+                                    ("tf_listener_" variable
+                                       (:default-value "nullptr"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("tf2_ros::TransformListener" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [2724 2791])
+                                    ("transform_broadcaster_" variable
+                                       (:default-value "nullptr"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("tf2_ros::TransformBroadcaster" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [2794 2880])
+                                    ("map_service_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("MapService" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2883 2924])
+                                    ("directions_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("unsigned int" type nil nil nil)
+                                              ("AgentActionMsg" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2927 2978])
+                                    ("initialized_" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2982 3008])
+                                    ("time_threshold_cleanup_" variable
+                                       (:default-value "0.3"
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [3011 3048]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1757 3051]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [699 3054]))                  
+                :type "namespace")
+                nil [680 3081]))          
+      :file "agent_service.h"
+      :pointmax 3111
+      :fsize 3110
+      :lastmodtime '(23313 52658 514427 600000)
+      :unmatched-syntax '((EXPLICIT 758 . 766))
+      :lexical-table 
+        '(("MODULES_SIMULATION_AGENT_SERVICE_H_")
+          )
+))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!simulation!agent_service!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

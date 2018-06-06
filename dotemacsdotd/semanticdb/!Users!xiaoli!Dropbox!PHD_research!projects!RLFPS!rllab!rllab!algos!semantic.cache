@@ -6,59 +6,48 @@
     (semanticdb-table "batch_polopt.py"
       :major-mode 'python-mode
       :tags 
-        '( ("numpy" include nil nil [1 19])
-            ("rllab.algos.base" include nil nil [20 60])
-            ("rllab.sampler" include nil nil [61 103])
-            ("rllab.sampler.base" include nil nil [104 142])
-            ("rllab.misc" include nil nil [143 173])
-            ("rllab.misc" include nil nil [174 209])
-            ("rllab.algos" include nil nil [210 238])
-            ("rllab.misc.logger" include nil nil [239 273])
-            ("rllab.plotter" include nil nil [274 305])
-            ("rllab.policies.base" include nil nil [306 344])
+        '( ("rllab.algos.base" include nil nil [1 41])
+            ("rllab.sampler" include nil nil [42 84])
+            ("rllab.sampler.base" include nil nil [85 127])
+            ("rllab.misc.logger" include nil nil [128 162])
+            ("rllab.plotter" include nil nil [163 194])
+            ("rllab.policies.base" include nil nil [195 233])
             ("BatchSampler" type
-               (:superclasses ("Sampler")
+               (:superclasses ("BaseSampler")
                 :members 
                   ( ("__init__" function
                        (:suite 
                           ( ("\"\"\"
         :type algo: BatchPolopt
-        \"\"\"" code nil (reparse-symbol indented_block_body) [414 461])
-                            ("self" variable nil (reparse-symbol indented_block_body) [470 486]))                          
+        \"\"\"" code nil (reparse-symbol indented_block_body) [307 354])
+                            ("self" variable nil (reparse-symbol indented_block_body) [363 379]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [393 397])
-                            ("algo" variable nil (reparse-symbol function_parameters) [399 403]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [286 290])
+                            ("algo" variable nil (reparse-symbol function_parameters) [292 296]))                          
                         :documentation "
         :type algo: BatchPolopt
         "
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [380 487])
+                        (reparse-symbol indented_block_body) [273 380])
                     ("start_worker" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [509 513]))                          )
-                        (reparse-symbol indented_block_body) [492 611])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [402 406]))                          )
+                        (reparse-symbol indented_block_body) [385 504])
                     ("shutdown_worker" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [636 640]))                          )
-                        (reparse-symbol indented_block_body) [616 706])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [529 533]))                          )
+                        (reparse-symbol indented_block_body) [509 599])
                     ("obtain_samples" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [730 734])
-                            ("itr" variable nil (reparse-symbol function_parameters) [736 739]))                          )
-                        (reparse-symbol indented_block_body) [711 1229])
-                    ("process_samples" function
-                       (:parent "dummy"
-                        :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1254 1258])
-                            ("itr" variable nil (reparse-symbol function_parameters) [1260 1263])
-                            ("paths" variable nil (reparse-symbol function_parameters) [1265 1270]))                          )
-                        (reparse-symbol indented_block_body) [1234 6681]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [623 627])
+                            ("itr" variable nil (reparse-symbol function_parameters) [629 632]))                          )
+                        (reparse-symbol indented_block_body) [604 1122]))                  
                 :type "class")
-                nil [347 6681])
+                nil [236 1122])
             ("BatchPolopt" type
                (:documentation "
     Base class for batch sampling-based policy optimization methods.
@@ -87,48 +76,48 @@
         :param positive_adv: Whether to shift the advantages so that they are always positive. When used in
         conjunction with center_adv the advantages will be standardized before shifting.
         :param store_paths: Whether to save all paths data to the snapshot.
-        \"\"\"" code nil (reparse-symbol indented_block_body) [7441 8618])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8627 8641])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8650 8670])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8679 8703])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8712 8730])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8739 8757])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8766 8794])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8803 8831])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8840 8878])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8887 8911])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8920 8948])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8957 8973])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8982 9018])
-                            ("self" variable nil (reparse-symbol indented_block_body) [9027 9055])
-                            ("self" variable nil (reparse-symbol indented_block_body) [9064 9096])
-                            ("self" variable nil (reparse-symbol indented_block_body) [9105 9135])
-                            ("self" variable nil (reparse-symbol indented_block_body) [9144 9174])
-                            ("if" code nil (reparse-symbol indented_block_body) [9183 9246])
-                            ("if" code nil (reparse-symbol indented_block_body) [9254 9313])
-                            ("self" variable nil (reparse-symbol indented_block_body) [9322 9370]))                          
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1882 3059])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3068 3082])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3091 3111])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3120 3144])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3153 3171])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3180 3198])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3207 3235])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3244 3272])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3281 3319])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3328 3352])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3361 3389])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3398 3414])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3423 3459])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3468 3496])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3505 3537])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3546 3576])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3585 3615])
+                            ("if" code nil (reparse-symbol indented_block_body) [3624 3687])
+                            ("if" code nil (reparse-symbol indented_block_body) [3695 3754])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3762 3810]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [6912 6916])
-                            ("env" variable nil (reparse-symbol function_parameters) [6930 6933])
-                            ("policy" variable nil (reparse-symbol function_parameters) [6947 6953])
-                            ("baseline" variable nil (reparse-symbol function_parameters) [6967 6975])
-                            ("scope" variable nil (reparse-symbol function_parameters) [6989 6994])
-                            ("n_itr" variable nil (reparse-symbol function_parameters) [7013 7018])
-                            ("start_itr" variable nil (reparse-symbol function_parameters) [7036 7045])
-                            ("batch_size" variable nil (reparse-symbol function_parameters) [7061 7071])
-                            ("max_path_length" variable nil (reparse-symbol function_parameters) [7090 7105])
-                            ("discount" variable nil (reparse-symbol function_parameters) [7123 7131])
-                            ("gae_lambda" variable nil (reparse-symbol function_parameters) [7150 7160])
-                            ("plot" variable nil (reparse-symbol function_parameters) [7176 7180])
-                            ("pause_for_plot" variable nil (reparse-symbol function_parameters) [7200 7214])
-                            ("center_adv" variable nil (reparse-symbol function_parameters) [7234 7244])
-                            ("positive_adv" variable nil (reparse-symbol function_parameters) [7263 7275])
-                            ("store_paths" variable nil (reparse-symbol function_parameters) [7295 7306])
-                            ("whole_paths" variable nil (reparse-symbol function_parameters) [7326 7337])
-                            ("sampler_cls" variable nil (reparse-symbol function_parameters) [7356 7367])
-                            ("sampler_args" variable nil (reparse-symbol function_parameters) [7386 7398])
-                            ("kwargs" variable nil (reparse-symbol function_parameters) [7417 7425]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1353 1357])
+                            ("env" variable nil (reparse-symbol function_parameters) [1371 1374])
+                            ("policy" variable nil (reparse-symbol function_parameters) [1388 1394])
+                            ("baseline" variable nil (reparse-symbol function_parameters) [1408 1416])
+                            ("scope" variable nil (reparse-symbol function_parameters) [1430 1435])
+                            ("n_itr" variable nil (reparse-symbol function_parameters) [1454 1459])
+                            ("start_itr" variable nil (reparse-symbol function_parameters) [1477 1486])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [1502 1512])
+                            ("max_path_length" variable nil (reparse-symbol function_parameters) [1531 1546])
+                            ("discount" variable nil (reparse-symbol function_parameters) [1564 1572])
+                            ("gae_lambda" variable nil (reparse-symbol function_parameters) [1591 1601])
+                            ("plot" variable nil (reparse-symbol function_parameters) [1617 1621])
+                            ("pause_for_plot" variable nil (reparse-symbol function_parameters) [1641 1655])
+                            ("center_adv" variable nil (reparse-symbol function_parameters) [1675 1685])
+                            ("positive_adv" variable nil (reparse-symbol function_parameters) [1704 1716])
+                            ("store_paths" variable nil (reparse-symbol function_parameters) [1736 1747])
+                            ("whole_paths" variable nil (reparse-symbol function_parameters) [1767 1778])
+                            ("sampler_cls" variable nil (reparse-symbol function_parameters) [1797 1808])
+                            ("sampler_args" variable nil (reparse-symbol function_parameters) [1827 1839])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1858 1866]))                          
                         :documentation "
         :param env: Environment
         :param policy: Policy
@@ -150,71 +139,91 @@
         :param store_paths: Whether to save all paths data to the snapshot.
         "
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [6886 9371])
+                        (reparse-symbol indented_block_body) [1327 3811])
                     ("start_worker" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [9401 9405]))                          )
-                        (reparse-symbol indented_block_body) [9384 9519])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3833 3837]))                          )
+                        (reparse-symbol indented_block_body) [3816 3951])
                     ("shutdown_worker" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [9544 9548]))                          )
-                        (reparse-symbol indented_block_body) [9524 9590])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3976 3980]))                          )
+                        (reparse-symbol indented_block_body) [3956 4022])
                     ("train" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [9605 9609]))                          )
-                        (reparse-symbol indented_block_body) [9595 10709])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4037 4041]))                          )
+                        (reparse-symbol indented_block_body) [4027 5136])
                     ("log_diagnostics" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [10734 10738])
-                            ("paths" variable nil (reparse-symbol function_parameters) [10740 10745]))                          )
-                        (reparse-symbol indented_block_body) [10714 10876])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5161 5165])
+                            ("paths" variable nil (reparse-symbol function_parameters) [5167 5172]))                          )
+                        (reparse-symbol indented_block_body) [5141 5303])
                     ("init_opt" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [10894 10898]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5321 5325]))                          
                         :documentation "
         Initialize the optimization procedure. If using theano / cgt, this may
         include declaring all the variables and compiling functions
         ")
-                        (reparse-symbol indented_block_body) [10881 11106])
+                        (reparse-symbol indented_block_body) [5308 5533])
                     ("get_itr_snapshot" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [11132 11136])
-                            ("itr" variable nil (reparse-symbol function_parameters) [11138 11141])
-                            ("samples_data" variable nil (reparse-symbol function_parameters) [11143 11155]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5559 5563])
+                            ("itr" variable nil (reparse-symbol function_parameters) [5565 5568])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [5570 5582]))                          
                         :documentation "
         Returns all the data that should be saved in the snapshot for this
         iteration.
         ")
-                        (reparse-symbol indented_block_body) [11111 11310])
+                        (reparse-symbol indented_block_body) [5538 5737])
                     ("optimize_policy" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [11335 11339])
-                            ("itr" variable nil (reparse-symbol function_parameters) [11341 11344])
-                            ("samples_data" variable nil (reparse-symbol function_parameters) [11346 11358]))                          )
-                        (reparse-symbol indented_block_body) [11315 11395])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5762 5766])
+                            ("itr" variable nil (reparse-symbol function_parameters) [5768 5771])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [5773 5785]))                          )
+                        (reparse-symbol indented_block_body) [5742 5822])
                     ("update_plot" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [11416 11420]))                          )
-                        (reparse-symbol indented_block_body) [11400 11512]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5843 5847]))                          )
+                        (reparse-symbol indented_block_body) [5827 5939]))                  
                 :type "class")
-                nil [6683 11512]))          
+                nil [1124 5939]))          
       :file "batch_polopt.py"
-      :pointmax 11512
-      :fsize 11511
-      :lastmodtime '(22646 45959 0 0)
+      :pointmax 5939
+      :fsize 5938
+      :lastmodtime '(22777 14933 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Algorithm" type
+               (:superclasses ("object")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [30 34]))                  
+                :type "class")
+                nil [1 35])
+            ("RLAlgorithm" type
+               (:superclasses ("Algorithm")
+                :members 
+                  ( ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [82 86]))                          )
+                        (reparse-symbol indented_block_body) [72 123]))                  
+                :type "class")
+                nil [37 123]))          
       :file "base.py"
+      :pointmax 123
       :fsize 122
-      :lastmodtime '(22555 31253 0 0))
+      :lastmodtime '(22795 34202 0 0)
+      :unmatched-syntax nil)
     (semanticdb-table "cem.py"
       :major-mode 'python-mode
       :tags 
@@ -297,13 +306,13 @@
                        (:parent "dummy"
                         :arguments 
                           ( ("self" variable nil (reparse-symbol function_parameters) [2578 2582]))                          )
-                        (reparse-symbol indented_block_body) [2568 5826]))                  
+                        (reparse-symbol indented_block_body) [2568 5828]))                  
                 :type "class")
-                nil [972 5826]))          
+                nil [972 5828]))          
       :file "cem.py"
-      :pointmax 5826
-      :fsize 5825
-      :lastmodtime '(22555 31253 0 0)
+      :pointmax 5828
+      :fsize 5827
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "cma_es.py"
       :major-mode 'python-mode
@@ -381,8 +390,8 @@
                 nil [853 5753]))          
       :file "cma_es.py"
       :pointmax 5753
-      :fsize 5752
-      :lastmodtime '(22555 31253 0 0)
+      :fsize 5759
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "cma_es_lib.py"
       :major-mode 'python-mode
@@ -5997,8 +6006,8 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
             ("if" code nil nil [377385 377590]))          
       :file "cma_es_lib.py"
       :pointmax 377590
-      :fsize 377589
-      :lastmodtime '(22555 31253 0 0)
+      :fsize 377327
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax '((RETURN 367058 . 367064) (IF 367067 . 367069) (ELSE 367081 . 367085) (NAME 366828 . 366829) (IF 366836 . 366838) (ELSE 366854 . 366858) (RETURN 365231 . 365237) (IF 365240 . 365242) (ELSE 365267 . 365271) (RETURN 364805 . 364811) (IF 364814 . 364816) (ELSE 364828 . 364832) (NAME 364676 . 364677) (IF 364684 . 364686) (ELSE 364702 . 364706) (RETURN 363903 . 363909) (IF 363912 . 363914) (ELSE 363926 . 363930) (NAME 363762 . 363763) (IF 363770 . 363772) (ELSE 363788 . 363792) (NAME 362862 . 362865) (IF 362888 . 362890) (ELSE 362907 . 362911) (NAME 362688 . 362697) (IF 362709 . 362711) (ELSE 362726 . 362730) (RETURN 360925 . 360931) (IF 360934 . 360936) (ELSE 360948 . 360952) (NAME 360792 . 360793) (IF 360800 . 360802) (ELSE 360818 . 360822) (RETURN 360680 . 360686) (IF 360689 . 360691) (ELSE 360703 . 360707) (NAME 360567 . 360568) (IF 360575 . 360577) (ELSE 360593 . 360597) (RETURN 360315 . 360321) (IF 360324 . 360326) (ELSE 360338 . 360342) (NAME 360199 . 360200) (IF 360207 . 360209) (ELSE 360225 . 360229) (RETURN 359662 . 359668) (IF 359671 . 359673) (ELSE 359685 . 359689) (NAME 359494 . 359495) (IF 359502 . 359504) (ELSE 359520 . 359524) (RETURN 356629 . 356635) (IF 356652 . 356654) (ELSE 356673 . 356677) (RETURN 356518 . 356524) (IF 356541 . 356543) (ELSE 356567 . 356571) (RETURN 356413 . 356419) (IF 356436 . 356438) (ELSE 356448 . 356452) (NAME 354373 . 354374) (IF 354388 . 354390) (ELSE 354400 . 354404) (NAME 354326 . 354327) (IF 354340 . 354342) (ELSE 354352 . 354356) (NAME 354078 . 354081) (IF 354095 . 354097) (ELSE 354109 . 354113) (NAME 354027 . 354030) (IF 354043 . 354045) (ELSE 354057 . 354061) (NAME 349652 . 349656) (IF 349682 . 349684) (ELSE 349691 . 349695) (NAME 344359 . 344361) (IF 344385 . 344387) (ELSE 344398 . 344402) (RETURN 325757 . 325763) (IF 325769 . 325771) (ELSE 325789 . 325793) (NAME 325232 . 325234) (IF 325246 . 325248) (ELSE 325266 . 325270) (NAME 320131 . 320135) (IF 320143 . 320145) (ELSE 320151 . 320155) (NAME 319828 . 319832) (IF 319840 . 319842) (ELSE 319848 . 319852) (NAME 318487 . 318491) (IF 318506 . 318508) (ELSE 318522 . 318526) (NAME 316209 . 316213) (IF 316237 . 316239) (ELSE 316254 . 316258) (NAME 316061 . 316065) (IF 316078 . 316080) (ELSE 316086 . 316090) (ELSE 315239 . 315243) (NAME 315208 . 315216) (IF 315229 . 315231) (NAME 309942 . 309946) (IF 309959 . 309961) (ELSE 309987 . 309991) (NAME 309877 . 309882) (IF 309907 . 309909) (ELSE 309927 . 309931) (NAME 307263 . 307267) (IF 307292 . 307294) (ELSE 307304 . 307308) (NAME 283881 . 283886) (IF 283898 . 283900) (ELSE 283912 . 283916) (NAME 262394 . 262397) (IF 262407 . 262409) (ELSE 262429 . 262433) (NAME 254588 . 254592) (IF 254619 . 254621) (ELSE 254648 . 254652) (NAME 218680 . 218684) (IF 218696 . 218698) (ELSE 218745 . 218749) (RETURN 209262 . 209268) (IF 209286 . 209288) (ELSE 209313 . 209317) (NAME 171755 . 171756) (IF 171850 . 171852) (ELSE 171868 . 171872) (NAME 151780 . 151781) (IF 151799 . 151801) (ELSE 151813 . 151817) (NAME 131815 . 131820) (IF 131833 . 131835) (ELSE 131850 . 131854) (NAME 131010 . 131013) (IF 131036 . 131038) (ELSE 131055 . 131059) (NAME 130717 . 130720) (IF 130743 . 130745) (ELSE 130762 . 130766) (NAME 125997 . 126002) (IF 126035 . 126037) (ELSE 126055 . 126059) (NAME 125942 . 125951) (IF 125959 . 125961) (ELSE 125977 . 125981) (NAME 122983 . 122987) (IF 123016 . 123018) (ELSE 123086 . 123090) (NAME 122217 . 122221) (IF 122279 . 122281) (ELSE 122324 . 122328) (NAME 93724 . 93728) (IF 93761 . 93763) (ELSE 93796 . 93800) (NAME 89402 . 89408) (IF 89447 . 89449) (ELSE 89457 . 89461) (NAME 89160 . 89166) (IF 89177 . 89179) (ELSE 89187 . 89191) (NAME 75243 . 75247) (IF 75277 . 75279) (ELSE 75302 . 75306) (NAME 74858 . 74862) (IF 74887 . 74889) (ELSE 74910 . 74914) (NAME 55780 . 55782) (IF 55817 . 55819) (ELSE 55845 . 55849) (RETURN 51649 . 51655) (IF 51663 . 51665) (ELSE 51685 . 51689) (NAME 50611 . 50612) (IF 50619 . 50621) (ELSE 50641 . 50645) (RETURN 50495 . 50501) (IF 50506 . 50508) (ELSE 50524 . 50528) (NAME 49228 . 49229) (IF 49252 . 49254) (ELSE 49280 . 49284) (RETURN 40968 . 40974) (IF 40977 . 40979) (ELSE 40996 . 41000) (NAME 37877 . 37881) (IF 37895 . 37897) (ELSE 37908 . 37912) (NAME 36227 . 36231) (IF 36238 . 36240) (ELSE 36275 . 36279) (NAME 349652 . 349656) (IF 349682 . 349684) (ELSE 349691 . 349695) (NAME 344359 . 344361) (IF 344385 . 344387) (ELSE 344398 . 344402) (RETURN 325757 . 325763) (IF 325769 . 325771) (ELSE 325789 . 325793) (NAME 325232 . 325234) (IF 325246 . 325248) (ELSE 325266 . 325270) (NAME 320131 . 320135) (IF 320143 . 320145) (ELSE 320151 . 320155) (NAME 319828 . 319832) (IF 319840 . 319842) (ELSE 319848 . 319852) (NAME 318487 . 318491) (IF 318506 . 318508) (ELSE 318522 . 318526) (NAME 316209 . 316213) (IF 316237 . 316239) (ELSE 316254 . 316258) (NAME 316061 . 316065) (IF 316078 . 316080) (ELSE 316086 . 316090) (ELSE 315239 . 315243) (NAME 315208 . 315216) (IF 315229 . 315231) (NAME 309942 . 309946) (IF 309959 . 309961) (ELSE 309987 . 309991) (NAME 309877 . 309882) (IF 309907 . 309909) (ELSE 309927 . 309931) (NAME 307263 . 307267) (IF 307292 . 307294) (ELSE 307304 . 307308) (NAME 283881 . 283886) (IF 283898 . 283900) (ELSE 283912 . 283916) (NAME 262394 . 262397) (IF 262407 . 262409) (ELSE 262429 . 262433) (NAME 254588 . 254592) (IF 254619 . 254621) (ELSE 254648 . 254652) (NAME 218680 . 218684) (IF 218696 . 218698) (ELSE 218745 . 218749) (RETURN 209262 . 209268) (IF 209286 . 209288) (ELSE 209313 . 209317) (NAME 171755 . 171756) (IF 171850 . 171852) (ELSE 171868 . 171872) (NAME 151780 . 151781) (IF 151799 . 151801) (ELSE 151813 . 151817) (NAME 131815 . 131820) (IF 131833 . 131835) (ELSE 131850 . 131854) (NAME 131010 . 131013) (IF 131036 . 131038) (ELSE 131055 . 131059) (NAME 130717 . 130720) (IF 130743 . 130745) (ELSE 130762 . 130766) (NAME 125997 . 126002) (IF 126035 . 126037) (ELSE 126055 . 126059) (NAME 125942 . 125951) (IF 125959 . 125961) (ELSE 125977 . 125981) (NAME 122983 . 122987) (IF 123016 . 123018) (ELSE 123086 . 123090) (NAME 122217 . 122221) (IF 122279 . 122281) (ELSE 122324 . 122328) (NAME 93724 . 93728) (IF 93761 . 93763) (ELSE 93796 . 93800) (NAME 89402 . 89408) (IF 89447 . 89449) (ELSE 89457 . 89461) (NAME 89160 . 89166) (IF 89177 . 89179) (ELSE 89187 . 89191) (NAME 75243 . 75247) (IF 75277 . 75279) (ELSE 75302 . 75306) (NAME 74858 . 74862) (IF 74887 . 74889) (ELSE 74910 . 74914) (NAME 55780 . 55782) (IF 55817 . 55819) (ELSE 55845 . 55849) (RETURN 51649 . 51655) (IF 51663 . 51665) (ELSE 51685 . 51689) (NAME 50611 . 50612) (IF 50619 . 50621) (ELSE 50641 . 50645) (RETURN 50495 . 50501) (IF 50506 . 50508) (ELSE 50524 . 50528) (NAME 49228 . 49229) (IF 49252 . 49254) (ELSE 49280 . 49284) (RETURN 40968 . 40974) (IF 40977 . 40979) (ELSE 40996 . 41000) (NAME 37877 . 37881) (IF 37895 . 37897) (ELSE 37908 . 37912) (NAME 36227 . 36231) (IF 36238 . 36240) (ELSE 36275 . 36279)))
     (semanticdb-table "erwr.py"
       :major-mode 'python-mode
@@ -6039,7 +6048,7 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
       :file "erwr.py"
       :pointmax 1375
       :fsize 1374
-      :lastmodtime '(22555 31253 0 0)
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "vpg.py"
       :major-mode 'python-mode
@@ -6106,7 +6115,7 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
       :file "vpg.py"
       :pointmax 4778
       :fsize 4777
-      :lastmodtime '(22555 31253 0 0)
+      :lastmodtime '(22780 9547 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "ppo.py"
       :major-mode 'python-mode
@@ -6138,7 +6147,7 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
       :file "ppo.py"
       :pointmax 647
       :fsize 646
-      :lastmodtime '(22555 31253 0 0)
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "npo.py"
       :major-mode 'python-mode
@@ -6158,50 +6167,52 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
                 :members 
                   ( ("__init__" function
                        (:suite 
-                          ( ("if" code nil (reparse-symbol indented_block_body) [503 668])
-                            ("self" variable nil (reparse-symbol indented_block_body) [676 702])
-                            ("self" variable nil (reparse-symbol indented_block_body) [711 737])
-                            ("super" code nil (reparse-symbol indented_block_body) [746 781]))                          
+                          ( ("if" code nil (reparse-symbol indented_block_body) [550 715])
+                            ("self" variable nil (reparse-symbol indented_block_body) [723 749])
+                            ("self" variable nil (reparse-symbol indented_block_body) [758 784])
+                            ("self" variable nil (reparse-symbol indented_block_body) [793 847])
+                            ("super" code nil (reparse-symbol indented_block_body) [856 891]))                          
                         :parent "dummy"
                         :arguments 
                           ( ("self" variable nil (reparse-symbol function_parameters) [377 381])
                             ("optimizer" variable nil (reparse-symbol function_parameters) [395 404])
                             ("optimizer_args" variable nil (reparse-symbol function_parameters) [423 437])
                             ("step_size" variable nil (reparse-symbol function_parameters) [456 465])
-                            ("kwargs" variable nil (reparse-symbol function_parameters) [484 492]))                          
+                            ("truncate_local_is_ratio" variable nil (reparse-symbol function_parameters) [484 507])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [526 534]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [351 782])
+                        (reparse-symbol indented_block_body) [351 892])
                     ("init_opt" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [815 819]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [925 929]))                          
                         :decorators 
                           ( ("overrides" function (:type "decorator") nil nil))                          )
-                        (reparse-symbol indented_block_body) [787 3102])
+                        (reparse-symbol indented_block_body) [897 3327])
                     ("optimize_policy" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [3142 3146])
-                            ("itr" variable nil (reparse-symbol function_parameters) [3148 3151])
-                            ("samples_data" variable nil (reparse-symbol function_parameters) [3153 3165]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3367 3371])
+                            ("itr" variable nil (reparse-symbol function_parameters) [3373 3376])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [3378 3390]))                          
                         :decorators 
                           ( ("overrides" function (:type "decorator") nil nil))                          )
-                        (reparse-symbol indented_block_body) [3107 4174])
+                        (reparse-symbol indented_block_body) [3332 4534])
                     ("get_itr_snapshot" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4215 4219])
-                            ("itr" variable nil (reparse-symbol function_parameters) [4221 4224])
-                            ("samples_data" variable nil (reparse-symbol function_parameters) [4226 4238]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4575 4579])
+                            ("itr" variable nil (reparse-symbol function_parameters) [4581 4584])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [4586 4598]))                          
                         :decorators 
                           ( ("overrides" function (:type "decorator") nil nil))                          )
-                        (reparse-symbol indented_block_body) [4179 4387]))                  
+                        (reparse-symbol indented_block_body) [4539 4747]))                  
                 :type "class")
-                nil [273 4387]))          
+                nil [273 4747]))          
       :file "npo.py"
-      :pointmax 4387
-      :fsize 4386
-      :lastmodtime '(22555 31253 0 0)
+      :pointmax 4747
+      :fsize 4746
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "nop.py"
       :major-mode 'python-mode
@@ -6253,7 +6264,7 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
       :file "nop.py"
       :pointmax 520
       :fsize 519
-      :lastmodtime '(22555 31253 0 0)
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "tnpg.py"
       :major-mode 'python-mode
@@ -6284,7 +6295,7 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
       :file "tnpg.py"
       :pointmax 728
       :fsize 727
-      :lastmodtime '(22555 31253 0 0)
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "trpo.py"
       :major-mode 'python-mode
@@ -6315,7 +6326,7 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
       :file "trpo.py"
       :pointmax 604
       :fsize 603
-      :lastmodtime '(22555 31253 0 0)
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "reps.py"
       :major-mode 'python-mode
@@ -6382,27 +6393,43 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
         "
                         :constructor-flag t)
                         (reparse-symbol indented_block_body) [569 1523])
+                    ("init_opt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1556 1560]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1528 6993])
                     ("_features" function
                        (:parent "dummy"
                         :arguments 
                           ( ("self" variable nil (reparse-symbol function_parameters) [7012 7016])
                             ("path" variable nil (reparse-symbol function_parameters) [7018 7022]))                          )
                         (reparse-symbol indented_block_body) [6998 7248])
+                    ("optimize_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7288 7292])
+                            ("itr" variable nil (reparse-symbol function_parameters) [7294 7297])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [7299 7311]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7253 11903])
                     ("get_itr_snapshot" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [11938 11942])
-                            ("itr" variable nil (reparse-symbol function_parameters) [11944 11947])
-                            ("samples_data" variable nil (reparse-symbol function_parameters) [11949 11961]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11944 11948])
+                            ("itr" variable nil (reparse-symbol function_parameters) [11950 11953])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [11955 11967]))                          
                         :decorators 
                           ( ("overrides" function (:type "decorator") nil nil))                          )
-                        (reparse-symbol indented_block_body) [11902 12110]))                  
+                        (reparse-symbol indented_block_body) [11908 12116]))                  
                 :type "class")
-                nil [319 12110]))          
+                nil [319 12116]))          
       :file "reps.py"
-      :pointmax 12110
-      :fsize 12109
-      :lastmodtime '(22658 51438 0 0)
+      :pointmax 12116
+      :fsize 12115
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "__init__.py"
       :major-mode 'python-mode
@@ -6410,21 +6437,21 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
       :file "__init__.py"
       :pointmax 1
       :fsize 0
-      :lastmodtime '(22555 31253 0 0)
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "util.py"
       :major-mode 'python-mode
       :tags 
         '( ("numpy" include nil nil [1 19])
-            ("theano" include nil nil [20 33])
-            ("time" include nil nil [34 45])
-            ("rllab.core.serializable" include nil nil [46 94])
-            ("rllab.misc.ext" include nil nil [95 129])
-            ("floatX" variable nil nil [131 160])
+            ("time" include nil nil [20 31])
+            ("rllab.core.serializable" include nil nil [32 80])
+            ("rllab.misc.ext" include nil nil [81 115])
             ("center_advantages" function (:arguments 
-              ( ("advantages" variable nil (reparse-symbol function_parameters) [185 195]))              ) nil [163 272])
+              ( ("advantages" variable nil (reparse-symbol function_parameters) [140 150]))              ) nil [118 227])
             ("shift_advantages_to_positive" function (:arguments 
-              ( ("advantages" variable nil (reparse-symbol function_parameters) [306 316]))              ) nil [273 371])
+              ( ("advantages" variable nil (reparse-symbol function_parameters) [262 272]))              ) nil [229 327])
+            ("sign" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [338 339]))              ) nil [329 382])
             ("ReplayPool" type
                (:documentation "
     A utility class for experience replay.
@@ -6445,36 +6472,36 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
             concat_observations - whether to concat the past few observations
             as a single one, so as to ensure the Markov property
             concat_length - length of the concatenation
-        \"\"\"" code nil (reparse-symbol indented_block_body) [816 1314])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1324 1366])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1375 1403])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1412 1438])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1447 1547])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1556 1624])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1633 1684])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1693 1746])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1826 1844])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1853 1899])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1908 1942])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1951 1993])
-                            ("self" variable nil (reparse-symbol indented_block_body) [2002 2034])
-                            ("if" code nil (reparse-symbol indented_block_body) [2043 2139])
-                            ("if" code nil (reparse-symbol indented_block_body) [2148 2321])
-                            ("self" variable nil (reparse-symbol indented_block_body) [2330 2345])
-                            ("self" variable nil (reparse-symbol indented_block_body) [2354 2366])
-                            ("self" variable nil (reparse-symbol indented_block_body) [2375 2388])
-                            ("super" code nil (reparse-symbol indented_block_body) [2397 2585]))                          
+        \"\"\"" code nil (reparse-symbol indented_block_body) [835 1333])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1343 1385])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1394 1422])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1431 1457])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1466 1566])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1575 1643])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1652 1707])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1716 1769])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1778 1796])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1805 1851])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1860 1894])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1903 1945])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1954 1986])
+                            ("if" code nil (reparse-symbol indented_block_body) [1995 2091])
+                            ("if" code nil (reparse-symbol indented_block_body) [2100 2273])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2282 2297])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2306 2318])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2327 2340])
+                            ("super" code nil (reparse-symbol indented_block_body) [2349 2537]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [562 566])
-                            ("observation_shape" variable nil (reparse-symbol function_parameters) [580 597])
-                            ("action_dim" variable nil (reparse-symbol function_parameters) [611 621])
-                            ("max_steps" variable nil (reparse-symbol function_parameters) [635 644])
-                            ("observation_dtype" variable nil (reparse-symbol function_parameters) [658 675])
-                            ("action_dtype" variable nil (reparse-symbol function_parameters) [696 708])
-                            ("concat_observations" variable nil (reparse-symbol function_parameters) [729 748])
-                            ("concat_length" variable nil (reparse-symbol function_parameters) [768 781])
-                            ("rng" variable nil (reparse-symbol function_parameters) [797 800]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [573 577])
+                            ("observation_shape" variable nil (reparse-symbol function_parameters) [591 608])
+                            ("action_dim" variable nil (reparse-symbol function_parameters) [622 632])
+                            ("max_steps" variable nil (reparse-symbol function_parameters) [646 655])
+                            ("observation_dtype" variable nil (reparse-symbol function_parameters) [669 686])
+                            ("action_dtype" variable nil (reparse-symbol function_parameters) [711 723])
+                            ("concat_observations" variable nil (reparse-symbol function_parameters) [748 767])
+                            ("concat_length" variable nil (reparse-symbol function_parameters) [787 800])
+                            ("rng" variable nil (reparse-symbol function_parameters) [816 819]))                          
                         :documentation "Construct a ReplayPool.
 
         Arguments:
@@ -6488,27 +6515,27 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
             concat_length - length of the concatenation
         "
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [536 2586])
+                        (reparse-symbol indented_block_body) [547 2538])
                     ("__getstate__" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2608 2612]))                          )
-                        (reparse-symbol indented_block_body) [2591 2995])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2560 2564]))                          )
+                        (reparse-symbol indented_block_body) [2543 2947])
                     ("__setstate__" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [3017 3021])
-                            ("d" variable nil (reparse-symbol function_parameters) [3023 3024]))                          )
-                        (reparse-symbol indented_block_body) [3000 3384])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2969 2973])
+                            ("d" variable nil (reparse-symbol function_parameters) [2975 2976]))                          )
+                        (reparse-symbol indented_block_body) [2952 3316])
                     ("add_sample" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [3404 3408])
-                            ("observation" variable nil (reparse-symbol function_parameters) [3410 3421])
-                            ("action" variable nil (reparse-symbol function_parameters) [3423 3429])
-                            ("reward" variable nil (reparse-symbol function_parameters) [3431 3437])
-                            ("terminal" variable nil (reparse-symbol function_parameters) [3439 3447])
-                            ("extra" variable nil (reparse-symbol function_parameters) [3449 3454]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3336 3340])
+                            ("observation" variable nil (reparse-symbol function_parameters) [3342 3353])
+                            ("action" variable nil (reparse-symbol function_parameters) [3355 3361])
+                            ("reward" variable nil (reparse-symbol function_parameters) [3363 3369])
+                            ("terminal" variable nil (reparse-symbol function_parameters) [3371 3379])
+                            ("extra" variable nil (reparse-symbol function_parameters) [3381 3386]))                          
                         :documentation "Add a time step record.
 
         Arguments:
@@ -6518,54 +6545,295 @@ not sure what happens if set to ``False``. \"\"\"" code nil nil [17755 17942])
             terminal -- boolean indicating whether the episode ended after this
             time step
         ")
-                        (reparse-symbol indented_block_body) [3389 4597])
+                        (reparse-symbol indented_block_body) [3321 4530])
                     ("__len__" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4614 4618]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4547 4551]))                          
                         :documentation "Return an approximate count of stored state transitions.")
-                        (reparse-symbol indented_block_body) [4602 4850])
+                        (reparse-symbol indented_block_body) [4535 4783])
                     ("last_concat_state" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4877 4881]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4810 4814]))                          
                         :documentation "
         Return the most recent sample (concatenated observations if needed).
         ")
-                        (reparse-symbol indented_block_body) [4855 5232])
+                        (reparse-symbol indented_block_body) [4788 5165])
                     ("concat_state" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5254 5258])
-                            ("state" variable nil (reparse-symbol function_parameters) [5260 5265]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5187 5191])
+                            ("state" variable nil (reparse-symbol function_parameters) [5193 5198]))                          
                         :documentation "Return a concatenated state, using the last concat_length -
         1, plus state.
 
         ")
-                        (reparse-symbol indented_block_body) [5237 5866])
+                        (reparse-symbol indented_block_body) [5170 5799])
                     ("random_batch" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5888 5892])
-                            ("batch_size" variable nil (reparse-symbol function_parameters) [5894 5904]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5821 5825])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [5827 5837]))                          
                         :documentation "
         Return corresponding observations, actions, rewards, terminal status,
         and next_observations for batch_size randomly chosen state transitions.
         ")
-                        (reparse-symbol indented_block_body) [5871 9989]))                  
+                        (reparse-symbol indented_block_body) [5804 9923]))                  
                 :type "class")
-                nil [373 9989])
-            ("simple_tests" function nil nil [10040 10883])
-            ("speed_tests" function nil nil [10885 11647])
-            ("trivial_tests" function nil nil [11649 12190])
-            ("max_size_tests" function nil nil [12192 13166])
-            ("test_memory_usage_ok" function nil nil [13168 13824])
-            ("main" function nil nil [13826 13925])
-            ("if" code nil nil [13926 13964]))          
+                nil [384 9923])
+            ("simple_tests" function nil nil [9961 10816])
+            ("speed_tests" function nil nil [10818 11582])
+            ("trivial_tests" function nil nil [11584 12126])
+            ("max_size_tests" function nil nil [12128 13103])
+            ("test_memory_usage_ok" function nil nil [13105 13763])
+            ("main" function nil nil [13765 13864])
+            ("if" code nil nil [13866 13904]))          
       :file "util.py"
-      :pointmax 13964
-      :fsize 13963
-      :lastmodtime '(22555 31253 0 0)
+      :pointmax 13904
+      :fsize 13903
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ddpg.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.base" include nil nil [1 41])
+            ("rllab.misc.overrides" include nil nil [42 84])
+            ("rllab.misc" include nil nil [85 115])
+            ("rllab.misc" include nil nil [116 142])
+            ("rllab.sampler" include nil nil [143 185])
+            ("rllab.plotter" include nil nil [186 219])
+            ("functools" include nil nil [220 249])
+            ("rllab.misc.logger" include nil nil [250 284])
+            ("theano.tensor" include nil nil [285 311])
+            ("pickle" include nil nil [312 335])
+            ("numpy" include nil nil [336 354])
+            ("pyprind" include nil nil [355 369])
+            ("lasagne" include nil nil [370 384])
+            ("parse_update_method" function (:arguments 
+              ( ("update_method" variable nil (reparse-symbol function_parameters) [411 424])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [426 434]))              ) nil [387 681])
+            ("SimpleReplayPool" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [804 843])
+                            ("self" variable nil (reparse-symbol indented_block_body) [852 881])
+                            ("self" variable nil (reparse-symbol indented_block_body) [890 925])
+                            ("self" variable nil (reparse-symbol indented_block_body) [934 1020])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1029 1105])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1114 1153])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1162 1218])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1227 1243])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1252 1265])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1274 1288]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [745 749])
+                            ("max_pool_size" variable nil (reparse-symbol function_parameters) [751 764])
+                            ("observation_dim" variable nil (reparse-symbol function_parameters) [766 781])
+                            ("action_dim" variable nil (reparse-symbol function_parameters) [783 793]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [719 1289])
+                    ("add_sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1309 1313])
+                            ("observation" variable nil (reparse-symbol function_parameters) [1315 1326])
+                            ("action" variable nil (reparse-symbol function_parameters) [1328 1334])
+                            ("reward" variable nil (reparse-symbol function_parameters) [1336 1342])
+                            ("terminal" variable nil (reparse-symbol function_parameters) [1344 1352]))                          )
+                        (reparse-symbol indented_block_body) [1294 1751])
+                    ("random_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1773 1777])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [1779 1789]))                          )
+                        (reparse-symbol indented_block_body) [1756 2879])
+                    ("size" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2907 2911]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2884 2940]))                  
+                :type "class")
+                nil [683 2940])
+            ("DDPG" type
+               (:documentation "
+    Deep Deterministic Policy Gradient.
+    "
+                :superclasses ("RLAlgorithm")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param env: Environment
+        :param policy: Policy
+        :param qf: Q function
+        :param es: Exploration strategy
+        :param batch_size: Number of samples for each minibatch.
+        :param n_epochs: Number of epochs. Policy will be evaluated after each epoch.
+        :param epoch_length: How many timesteps for each epoch.
+        :param min_pool_size: Minimum size of the pool to start training.
+        :param replay_pool_size: Size of the experience replay pool.
+        :param discount: Discount factor for the cumulative return.
+        :param max_path_length: Discount factor for the cumulative return.
+        :param qf_weight_decay: Weight decay factor for parameters of the Q function.
+        :param qf_update_method: Online optimization method for training Q function.
+        :param qf_learning_rate: Learning rate for training Q function.
+        :param policy_weight_decay: Weight decay factor for parameters of the policy.
+        :param policy_update_method: Online optimization method for training the policy.
+        :param policy_learning_rate: Learning rate for training the policy.
+        :param eval_samples: Number of samples (timesteps) for evaluating the policy.
+        :param soft_target_tau: Interpolation parameter for doing the soft target update.
+        :param n_updates_per_sample: Number of Q function and policy updates per new sample obtained
+        :param scale_reward: The scaling factor applied to the rewards when training
+        :param include_horizon_terminal_transitions: whether to include transitions with terminal=True because the
+        horizon was reached. This might make the Q value back up less stable for certain tasks.
+        :param plot: Whether to visualize the policy performance after each eval_interval.
+        :param pause_for_plot: Whether to pause before continuing when plotting.
+        :return:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [3849 5753])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5762 5776])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5785 5805])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5814 5826])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5835 5847])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5856 5884])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5893 5917])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5926 5958])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5967 6001])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6010 6050])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6059 6083])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6092 6130])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6139 6177])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6186 6340])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6349 6389])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6398 6444])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6453 6619])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6628 6676])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6685 6717])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6726 6764])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6773 6821])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6830 6910])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6919 6935])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6944 6980])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6990 7016])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7025 7055])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7064 7084])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7093 7113])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7122 7137])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7146 7171])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7180 7206])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7216 7248])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7258 7278]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3054 3058])
+                            ("env" variable nil (reparse-symbol function_parameters) [3072 3075])
+                            ("policy" variable nil (reparse-symbol function_parameters) [3089 3095])
+                            ("qf" variable nil (reparse-symbol function_parameters) [3109 3111])
+                            ("es" variable nil (reparse-symbol function_parameters) [3125 3127])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [3141 3151])
+                            ("n_epochs" variable nil (reparse-symbol function_parameters) [3168 3176])
+                            ("epoch_length" variable nil (reparse-symbol function_parameters) [3194 3206])
+                            ("min_pool_size" variable nil (reparse-symbol function_parameters) [3225 3238])
+                            ("replay_pool_size" variable nil (reparse-symbol function_parameters) [3258 3274])
+                            ("discount" variable nil (reparse-symbol function_parameters) [3296 3304])
+                            ("max_path_length" variable nil (reparse-symbol function_parameters) [3323 3338])
+                            ("qf_weight_decay" variable nil (reparse-symbol function_parameters) [3356 3371])
+                            ("qf_update_method" variable nil (reparse-symbol function_parameters) [3388 3404])
+                            ("qf_learning_rate" variable nil (reparse-symbol function_parameters) [3425 3441])
+                            ("policy_weight_decay" variable nil (reparse-symbol function_parameters) [3460 3479])
+                            ("policy_update_method" variable nil (reparse-symbol function_parameters) [3495 3515])
+                            ("policy_learning_rate" variable nil (reparse-symbol function_parameters) [3536 3556])
+                            ("eval_samples" variable nil (reparse-symbol function_parameters) [3575 3587])
+                            ("soft_target" variable nil (reparse-symbol function_parameters) [3607 3618])
+                            ("soft_target_tau" variable nil (reparse-symbol function_parameters) [3637 3652])
+                            ("n_updates_per_sample" variable nil (reparse-symbol function_parameters) [3672 3692])
+                            ("scale_reward" variable nil (reparse-symbol function_parameters) [3708 3720])
+                            ("include_horizon_terminal_transitions" variable nil (reparse-symbol function_parameters) [3738 3774])
+                            ("plot" variable nil (reparse-symbol function_parameters) [3794 3798])
+                            ("pause_for_plot" variable nil (reparse-symbol function_parameters) [3818 3832]))                          
+                        :documentation "
+        :param env: Environment
+        :param policy: Policy
+        :param qf: Q function
+        :param es: Exploration strategy
+        :param batch_size: Number of samples for each minibatch.
+        :param n_epochs: Number of epochs. Policy will be evaluated after each epoch.
+        :param epoch_length: How many timesteps for each epoch.
+        :param min_pool_size: Minimum size of the pool to start training.
+        :param replay_pool_size: Size of the experience replay pool.
+        :param discount: Discount factor for the cumulative return.
+        :param max_path_length: Discount factor for the cumulative return.
+        :param qf_weight_decay: Weight decay factor for parameters of the Q function.
+        :param qf_update_method: Online optimization method for training Q function.
+        :param qf_learning_rate: Learning rate for training Q function.
+        :param policy_weight_decay: Weight decay factor for parameters of the policy.
+        :param policy_update_method: Online optimization method for training the policy.
+        :param policy_learning_rate: Learning rate for training the policy.
+        :param eval_samples: Number of samples (timesteps) for evaluating the policy.
+        :param soft_target_tau: Interpolation parameter for doing the soft target update.
+        :param n_updates_per_sample: Number of Q function and policy updates per new sample obtained
+        :param scale_reward: The scaling factor applied to the rewards when training
+        :param include_horizon_terminal_transitions: whether to include transitions with terminal=True because the
+        horizon was reached. This might make the Q value back up less stable for certain tasks.
+        :param plot: Whether to visualize the policy performance after each eval_interval.
+        :param pause_for_plot: Whether to pause before continuing when plotting.
+        :return:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3028 7279])
+                    ("start_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7301 7305]))                          )
+                        (reparse-symbol indented_block_body) [7284 7445])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7475 7479]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7450 10548])
+                    ("init_opt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10566 10570]))                          )
+                        (reparse-symbol indented_block_body) [10553 12752])
+                    ("do_training" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12773 12777])
+                            ("itr" variable nil (reparse-symbol function_parameters) [12779 12782])
+                            ("batch" variable nil (reparse-symbol function_parameters) [12784 12789]))                          )
+                        (reparse-symbol indented_block_body) [12757 14060])
+                    ("evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14078 14082])
+                            ("epoch" variable nil (reparse-symbol function_parameters) [14084 14089])
+                            ("pool" variable nil (reparse-symbol function_parameters) [14091 14095]))                          )
+                        (reparse-symbol indented_block_body) [14065 17192])
+                    ("update_plot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17213 17217]))                          )
+                        (reparse-symbol indented_block_body) [17197 17309])
+                    ("get_epoch_snapshot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17337 17341])
+                            ("epoch" variable nil (reparse-symbol function_parameters) [17343 17348]))                          )
+                        (reparse-symbol indented_block_body) [17314 17621]))                  
+                :type "class")
+                nil [2942 17621]))          
+      :file "ddpg.py"
+      :pointmax 17621
+      :fsize 17620
+      :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil))
   :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!rllab!algos!semantic.cache"
   :semantic-tag-version "2.0"

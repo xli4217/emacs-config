@@ -20,121 +20,143 @@
             ("baxter_interface" include nil nil [382 405])
             ("baxter_interface" include nil nil [406 448])
             ("" code nil nil [475 484])
+            ("functools" include nil nil [485 513])
+            ("TimeoutException" type
+               (:documentation " Exception thrown on timeouts. "
+                :superclasses ("Exception")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Exception" code nil (reparse-symbol indented_block_body) [637 703]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [610 614])
+                            ("sec_waited" variable nil (reparse-symbol function_parameters) [616 626]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [597 704]))                  
+                :type "class")
+                nil [516 704])
             ("BaxterOptitrackEnv" type
                (:superclasses ("Env" "Serializable")
                 :members 
                   ( ("'''
     An rllab environment for controlling baxter Under Optitrack
-    '''" code nil (reparse-symbol indented_block_body) [536 611])
+    '''" code nil (reparse-symbol indented_block_body) [755 830])
                     ("__init__" function
                        (:suite 
-                          ( ("super" code nil (reparse-symbol indented_block_body) [646 688])
-                            ("Serializable" code nil (reparse-symbol indented_block_body) [697 736])
-                            ("self" variable nil (reparse-symbol indented_block_body) [755 780])
-                            ("self" variable nil (reparse-symbol indented_block_body) [789 816])
-                            ("self" variable nil (reparse-symbol indented_block_body) [825 850])
-                            ("self" variable nil (reparse-symbol indented_block_body) [860 881])
-                            ("self" variable nil (reparse-symbol indented_block_body) [901 1161]))                          
+                          ( ("super" code nil (reparse-symbol indented_block_body) [865 907])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [916 955])
+                            ("self" variable nil (reparse-symbol indented_block_body) [974 999])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1008 1035])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1044 1069])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1079 1100])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1119 1379])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1389 1410]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [630 634]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [849 853]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [617 1162])
+                        (reparse-symbol indented_block_body) [836 1411])
                     ("observation_space" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1227 1231]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1475 1479]))                          
                         :decorators 
                           ( ("property" function (:type "decorator") nil nil)
                             ("overrides" function (:type "decorator") nil nil))                          )
-                        (reparse-symbol indented_block_body) [1176 1740])
+                        (reparse-symbol indented_block_body) [1424 1988])
                     ("action_space" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1791 1795]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2039 2043]))                          
                         :decorators 
                           ( ("property" function (:type "decorator") nil nil)
                             ("overrides" function (:type "decorator") nil nil))                          )
-                        (reparse-symbol indented_block_body) [1745 2062])
+                        (reparse-symbol indented_block_body) [1993 2310])
                     ("configure_as_worker" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2124 2128])
-                            ("worker_id" variable nil (reparse-symbol function_parameters) [2130 2139]))                          )
-                        (reparse-symbol indented_block_body) [2100 4223])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2372 2376])
+                            ("worker_id" variable nil (reparse-symbol function_parameters) [2378 2387]))                          )
+                        (reparse-symbol indented_block_body) [2348 4489])
                     ("horizon" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4269 4273]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4535 4539]))                          
                         :decorators 
                           ( ("property" function (:type "decorator") nil nil)
                             ("overrides" function (:type "decorator") nil nil))                          )
-                        (reparse-symbol indented_block_body) [4228 4312])
+                        (reparse-symbol indented_block_body) [4494 4578])
                     ("reset" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4335 4339]))                          )
-                        (reparse-symbol indented_block_body) [4325 4431])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4601 4605]))                          )
+                        (reparse-symbol indented_block_body) [4591 4697])
                     ("make_cmd" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4449 4453])
-                            ("joint_names" variable nil (reparse-symbol function_parameters) [4455 4466])
-                            ("joint_velocities" variable nil (reparse-symbol function_parameters) [4468 4484]))                          )
-                        (reparse-symbol indented_block_body) [4436 4588])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4715 4719])
+                            ("joint_names" variable nil (reparse-symbol function_parameters) [4721 4732])
+                            ("joint_velocities" variable nil (reparse-symbol function_parameters) [4734 4750]))                          )
+                        (reparse-symbol indented_block_body) [4702 4854])
                     ("get_reward" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4609 4613])
-                            ("next_obs" variable nil (reparse-symbol function_parameters) [4615 4623]))                          )
-                        (reparse-symbol indented_block_body) [4594 4639])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4875 4879])
+                            ("next_obs" variable nil (reparse-symbol function_parameters) [4881 4889]))                          )
+                        (reparse-symbol indented_block_body) [4860 4905])
                     ("step" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4661 4665])
-                            ("action" variable nil (reparse-symbol function_parameters) [4667 4673]))                          )
-                        (reparse-symbol indented_block_body) [4652 5126])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4919 4923])
+                            ("action" variable nil (reparse-symbol function_parameters) [4925 4931]))                          )
+                        (reparse-symbol indented_block_body) [4910 5666])
+                    ("get_reward_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5690 5694]))                          )
+                        (reparse-symbol indented_block_body) [5671 7110])
                     ("get_current_obs" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [6603 6607]))                          )
-                        (reparse-symbol indented_block_body) [6583 7491])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7143 7147]))                          )
+                        (reparse-symbol indented_block_body) [7123 8043])
                     ("_reset_control_modes" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [7538 7542]))                          )
-                        (reparse-symbol indented_block_body) [7513 7847])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8090 8094]))                          )
+                        (reparse-symbol indented_block_body) [8065 8398])
                     ("set_neutral" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [7868 7872]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8419 8423]))                          
                         :documentation "
        Sets both arms back into a neutral pose.
        ")
-                        (reparse-symbol indented_block_body) [7852 8151])
+                        (reparse-symbol indented_block_body) [8403 8702])
                     ("clean_shutdown" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [8223 8227]))                          )
-                        (reparse-symbol indented_block_body) [8204 8478])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8774 8778]))                          )
+                        (reparse-symbol indented_block_body) [8755 9029])
                     ("optitrack_callback" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [8506 8510])
-                            ("data" variable nil (reparse-symbol function_parameters) [8511 8515]))                          )
-                        (reparse-symbol indented_block_body) [8483 8619])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9057 9061])
+                            ("data" variable nil (reparse-symbol function_parameters) [9062 9066]))                          )
+                        (reparse-symbol indented_block_body) [9034 9234])
                     ("done_condition_check" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [8657 8661]))                          )
-                        (reparse-symbol indented_block_body) [8632 8806]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9272 9276]))                          )
+                        (reparse-symbol indented_block_body) [9247 9421]))                  
                 :type "class")
-                nil [487 8806])
-            ("if" code nil nil [8807 9586]))          
+                nil [706 9421])
+            ("if" code nil nil [9422 10201]))          
       :file "baxter_optitrack_env.py"
-      :pointmax 9586
-      :fsize 9585
-      :lastmodtime '(22684 55264 0 0)
+      :pointmax 10201
+      :fsize 10200
+      :lastmodtime '(22749 17641 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "baxter_sim_env.py"
       :major-mode 'python-mode
@@ -151,107 +173,211 @@
             ("baxter_interface" include nil nil [280 303])
             ("baxter_interface" include nil nil [304 346])
             ("" code nil nil [373 382])
+            ("functools" include nil nil [383 411])
             ("BaxterEnv" type
                (:superclasses ("Env" "Serializable")
                 :members 
                   ( ("'''
     An rllab environment for controlling baxter
-    '''" code nil (reparse-symbol indented_block_body) [425 484])
+    '''" code nil (reparse-symbol indented_block_body) [454 513])
                     ("__init__" function
                        (:suite 
-                          ( ("super" code nil (reparse-symbol indented_block_body) [519 552])
-                            ("Serializable" code nil (reparse-symbol indented_block_body) [561 600])
-                            ("self" variable nil (reparse-symbol indented_block_body) [610 629])
-                            ("self" variable nil (reparse-symbol indented_block_body) [639 666])
-                            ("self" variable nil (reparse-symbol indented_block_body) [675 710])
-                            ("self" variable nil (reparse-symbol indented_block_body) [719 752]))                          
+                          ( ("super" code nil (reparse-symbol indented_block_body) [548 581])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [590 629])
+                            ("self" variable nil (reparse-symbol indented_block_body) [639 658])
+                            ("self" variable nil (reparse-symbol indented_block_body) [668 695])
+                            ("self" variable nil (reparse-symbol indented_block_body) [704 739])
+                            ("self" variable nil (reparse-symbol indented_block_body) [748 781]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [503 507]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [532 536]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [490 753])
+                        (reparse-symbol indented_block_body) [519 782])
                     ("observation_space" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [809 813]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [838 842]))                          
                         :decorators 
                           ( ("property" function (:type "decorator") nil nil)
                             ("overrides" function (:type "decorator") nil nil))                          )
-                        (reparse-symbol indented_block_body) [758 1098])
+                        (reparse-symbol indented_block_body) [787 1127])
                     ("action_space" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1149 1153]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1178 1182]))                          
                         :decorators 
                           ( ("property" function (:type "decorator") nil nil)
                             ("overrides" function (:type "decorator") nil nil))                          )
-                        (reparse-symbol indented_block_body) [1103 1358])
+                        (reparse-symbol indented_block_body) [1132 1387])
                     ("configure_as_worker" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1420 1424])
-                            ("worker_id" variable nil (reparse-symbol function_parameters) [1426 1435]))                          )
-                        (reparse-symbol indented_block_body) [1396 3762])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1449 1453])
+                            ("worker_id" variable nil (reparse-symbol function_parameters) [1455 1464]))                          )
+                        (reparse-symbol indented_block_body) [1425 3795])
                     ("publish_current_goal_pose" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [3797 3801])
-                            ("goal_pose" variable nil (reparse-symbol function_parameters) [3803 3812]))                          )
-                        (reparse-symbol indented_block_body) [3767 5620])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3830 3834])
+                            ("goal_pose" variable nil (reparse-symbol function_parameters) [3836 3845]))                          )
+                        (reparse-symbol indented_block_body) [3800 5653])
                     ("get_random_goal_pose_within_cubic_region" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5670 5674]))                          )
-                        (reparse-symbol indented_block_body) [5625 5919])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5703 5707]))                          )
+                        (reparse-symbol indented_block_body) [5658 5952])
                     ("get_current_obs" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5944 5948]))                          )
-                        (reparse-symbol indented_block_body) [5924 6769])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5977 5981]))                          )
+                        (reparse-symbol indented_block_body) [5957 6814])
                     ("reset" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [6784 6788]))                          )
-                        (reparse-symbol indented_block_body) [6774 7155])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6829 6833]))                          )
+                        (reparse-symbol indented_block_body) [6819 7200])
                     ("make_cmd" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [7173 7177])
-                            ("joint_names" variable nil (reparse-symbol function_parameters) [7179 7190])
-                            ("joint_velocities" variable nil (reparse-symbol function_parameters) [7192 7208]))                          )
-                        (reparse-symbol indented_block_body) [7160 7312])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7218 7222])
+                            ("joint_names" variable nil (reparse-symbol function_parameters) [7224 7235])
+                            ("joint_velocities" variable nil (reparse-symbol function_parameters) [7237 7253]))                          )
+                        (reparse-symbol indented_block_body) [7205 7357])
                     ("step" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [7326 7330])
-                            ("action" variable nil (reparse-symbol function_parameters) [7332 7338]))                          )
-                        (reparse-symbol indented_block_body) [7317 8386])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7371 7375])
+                            ("action" variable nil (reparse-symbol function_parameters) [7377 7383]))                          )
+                        (reparse-symbol indented_block_body) [7362 8431])
                     ("_reset_control_modes" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [8416 8420]))                          )
-                        (reparse-symbol indented_block_body) [8391 8725])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8461 8465]))                          )
+                        (reparse-symbol indented_block_body) [8436 8769])
                     ("set_neutral" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [8746 8750]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8790 8794]))                          
                         :documentation "
        Sets both arms back into a neutral pose.
        ")
-                        (reparse-symbol indented_block_body) [8730 8903])
+                        (reparse-symbol indented_block_body) [8774 8947])
                     ("clean_shutdown" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [9011 9015]))                          )
-                        (reparse-symbol indented_block_body) [8992 9266]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9055 9059]))                          )
+                        (reparse-symbol indented_block_body) [9036 9310]))                  
                 :type "class")
-                nil [385 9266])
-            ("if" code nil nil [9268 9318]))          
+                nil [414 9310])
+            ("if" code nil nil [9312 9362]))          
       :file "baxter_sim_env.py"
-      :pointmax 9599
-      :fsize 9598
-      :lastmodtime '(22653 24111 0 0)
-      :unmatched-syntax nil))
+      :pointmax 9643
+      :fsize 9642
+      :lastmodtime '(22749 17641 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "remap.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("sensor_msgs.msg" include nil nil [37 75])
+            ("rospy" code nil nil [77 104])
+            ("joint_states" variable nil nil [106 180])
+            ("remap" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [193 197]))              ) nil [183 267])
+            ("rospy" code nil nil [269 327])
+            ("rospy" code nil nil [329 341]))          
+      :file "remap.py"
+      :pointmax 342
+      :fsize 341
+      :lastmodtime '(22749 17641 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ros_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.envs.base" include nil nil [1 38])
+            ("rllab.spaces" include nil nil [39 67])
+            ("numpy" include nil nil [68 86])
+            ("importlib" include nil nil [87 103])
+            ("copy" include nil nil [105 116])
+            ("rospy" include nil nil [118 130])
+            ("ROSEnv" type
+               (:superclasses ("Env")
+                :members 
+                  ( ("'''
+    Defines a base class for environment interacting with ROS
+    '''" code nil (reparse-symbol indented_block_body) [156 229])
+                    ("__init__" function
+                       (:suite 
+                          ( ("'''
+        config is a dictionary of hyperparameters that define the name of nodes, topics, etc
+        '''" code nil (reparse-symbol indented_block_body) [271 379])
+                            ("super" code nil (reparse-symbol indented_block_body) [388 418])
+                            ("self" variable nil (reparse-symbol indented_block_body) [428 463])
+                            ("rospy" code nil (reparse-symbol indented_block_body) [473 514])
+                            ("self, self" code nil (reparse-symbol indented_block_body) [617 677])
+                            ("self, self" code nil (reparse-symbol indented_block_body) [687 757]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [248 252])
+                            ("config" variable nil (reparse-symbol function_parameters) [254 260]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [235 758])
+                    ("observation_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [987 991]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [951 1041])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1077 1081]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1046 1131])
+                    ("_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1161 1165]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1136 1181])
+                    ("_import_msgs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1203 1207]))                          )
+                        (reparse-symbol indented_block_body) [1186 2463])
+                    ("_init_pubs_and_subs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2492 2496]))                          )
+                        (reparse-symbol indented_block_body) [2468 2950])
+                    ("_sub_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3065 3069])
+                            ("msg" variable nil (reparse-symbol function_parameters) [3071 3074]))                          )
+                        (reparse-symbol indented_block_body) [3047 3124])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3139 3143]))                          )
+                        (reparse-symbol indented_block_body) [3129 3193])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3207 3211])
+                            ("action" variable nil (reparse-symbol function_parameters) [3213 3219]))                          )
+                        (reparse-symbol indented_block_body) [3198 3269]))                  
+                :type "class")
+                nil [133 3269])
+            ("if" code nil nil [3271 3737]))          
+      :file "ros_env.py"
+      :pointmax 4065
+      :fsize 4064
+      :lastmodtime '(22749 17641 0 0)
+      :unmatched-syntax '((FROM 3302 . 3306) (PERIOD 3307 . 3308))))
   :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rlfps!envs!rlfps_ros_env!scripts!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

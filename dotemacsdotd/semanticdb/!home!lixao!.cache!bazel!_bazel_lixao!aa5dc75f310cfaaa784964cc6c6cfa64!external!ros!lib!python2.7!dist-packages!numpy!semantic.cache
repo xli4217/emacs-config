@@ -1,0 +1,140 @@
+;; Object numpy/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "numpy/"
+  :tables
+  (list
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+NumPy
+=====
+
+Provides
+  1. An array object of arbitrary homogeneous items
+  2. Fast mathematical operations over arrays
+  3. Linear Algebra, Fourier Transforms, Random Number Generation
+
+How to use the documentation
+----------------------------
+Documentation is available in two forms: docstrings provided
+with the code, and a loose standing reference guide, available from
+`the NumPy homepage <http://www.scipy.org>`_.
+
+We recommend exploring the docstrings using
+`IPython <http://ipython.scipy.org>`_, an advanced Python shell with
+TAB-completion and introspection capabilities.  See below for further
+instructions.
+
+The docstring examples assume that `numpy` has been imported as `np`::
+
+  >>> import numpy as np
+
+Code snippets are indicated by three greater-than signs::
+
+  >>> x = 42
+  >>> x = x + 1
+
+Use the built-in ``help`` function to view a function's docstring::
+
+  >>> help(np.sort)
+  ... # doctest: +SKIP
+
+For some objects, ``np.info(obj)`` may provide additional help.  This is
+particularly true if you see the line \"Help on ufunc object:\" at the top
+of the help() page.  Ufuncs are implemented in C, not Python, for speed.
+The native Python help() does not know how to view their help, but our
+np.info() function does.
+
+To search for documents containing a keyword, do::
+
+  >>> np.lookfor('keyword')
+  ... # doctest: +SKIP
+
+General-purpose documents like a glossary and help on the basic concepts
+of numpy are available under the ``doc`` sub-module::
+
+  >>> from numpy import doc
+  >>> help(doc)
+  ... # doctest: +SKIP
+
+Available subpackages
+---------------------
+doc
+    Topical documentation on broadcasting, indexing, etc.
+lib
+    Basic functions used by several sub-packages.
+random
+    Core Random Tools
+linalg
+    Core Linear Algebra Tools
+fft
+    Core FFT routines
+polynomial
+    Polynomial tools
+testing
+    Numpy testing tools
+f2py
+    Fortran to Python Interface Generator.
+distutils
+    Enhancements to distutils with support for
+    Fortran compilers support and more.
+
+Utilities
+---------
+test
+    Run numpy unittests
+show_config
+    Show numpy build configuration
+dual
+    Overwrite certain functions with high-performance Scipy tools
+matlib
+    Make everything matrices.
+__version__
+    Numpy version string
+
+Viewing documentation using IPython
+-----------------------------------
+Start IPython with the NumPy profile (``ipython -p numpy``), which will
+import `numpy` under the alias `np`.  Then, use the ``cpaste`` command to
+paste examples into the shell.  To see which functions are available in
+`numpy`, type ``np.<TAB>`` (where ``<TAB>`` refers to the TAB key), or use
+``np.*cos*?<ENTER>`` (where ``<ENTER>`` refers to the ENTER key) to narrow
+down the list.  To view the docstring for a function, use
+``np.cos?<ENTER>`` (to view the docstring) and ``np.cos??<ENTER>`` (to view
+the source code).
+
+Copies vs. in-place operation
+-----------------------------
+Most of the functions in `numpy` return a copy of the array argument
+(e.g., `np.sort`).  In-place versions of these functions are often
+available as array methods, i.e. ``x = np.array([1,2,3]); x.sort()``.
+Exceptions to this rule are documented.
+
+\"\"\"" code nil nil [1 3147])
+            ("__future__" include nil nil [3148 3212])
+            ("sys" include nil nil [3214 3224])
+            ("ModuleDeprecationWarning" type
+               (:documentation "Module deprecation warning.
+
+    The nose tester turns ordinary Deprecation warnings into test failures.
+    That makes it hard to deprecate whole modules, because they get
+    imported by default. So this is a special Deprecation warning that the
+    nose tester will let pass without making tests fail.
+
+    "
+                :superclasses ("DeprecationWarning")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [3604 3608]))                  
+                :type "class")
+                nil [3227 3686])
+            ("try" code nil nil [3727 3798])
+            ("if" code nil nil [3800 5971]))          
+      :file "__init__.py"
+      :pointmax 5971
+      :fsize 5970
+      :lastmodtime '(23052 13117 0 0)
+      :unmatched-syntax '((FROM 5437 . 5441) (PERIOD 5442 . 5443) (PERIOD 5101 . 5102) (NEWLINE 5091 . 5092) (IMPORT 5083 . 5089) (MULT 5090 . 5091) (FROM 5067 . 5071) (PERIOD 5072 . 5073) (FROM 5031 . 5035) (PERIOD 5036 . 5037) (FROM 5010 . 5014) (PERIOD 5015 . 5016) (FROM 4982 . 4986) (PERIOD 4987 . 4988) (FROM 4957 . 4961) (PERIOD 4962 . 4963) (FROM 4928 . 4932) (PERIOD 4933 . 4934) (FROM 4906 . 4910) (PERIOD 4911 . 4912) (PERIOD 4886 . 4887) (NEWLINE 4876 . 4877) (IMPORT 4868 . 4874) (MULT 4875 . 4876) (FROM 4858 . 4862) (PERIOD 4863 . 4864) (FROM 4836 . 4840) (PERIOD 4841 . 4842) (PERIOD 4816 . 4817) (NEWLINE 4806 . 4807) (IMPORT 4798 . 4804) (MULT 4805 . 4806) (FROM 4787 . 4791) (PERIOD 4792 . 4793) (FROM 4764 . 4768) (PERIOD 4769 . 4770) (FROM 4679 . 4683) (PERIOD 4684 . 4685) (FROM 4536 . 4540) (PERIOD 4541 . 4542) (FROM 4362 . 4366) (PERIOD 4367 . 4368) (FROM 4313 . 4317) (PERIOD 4318 . 4319) (FROM 4255 . 4259) (PERIOD 4260 . 4261))))
+  :file "!home!lixao!.cache!bazel!_bazel_lixao!aa5dc75f310cfaaa784964cc6c6cfa64!external!ros!lib!python2.7!dist-packages!numpy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

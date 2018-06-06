@@ -34,7 +34,7 @@
       :file "lin_gauss_init.py"
       :pointmax 5317
       :fsize 5316
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22653 24657 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "lin_gauss_policy.py"
       :major-mode 'python-mode
@@ -120,7 +120,7 @@
       :file "lin_gauss_policy.py"
       :pointmax 2404
       :fsize 2403
-      :lastmodtime '(22652 16501 0 0)
+      :lastmodtime '(22653 24657 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "config.py"
       :major-mode 'python-mode
@@ -133,7 +133,7 @@
       :file "config.py"
       :pointmax 923
       :fsize 922
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22653 24657 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "policy.py"
       :major-mode 'python-mode
@@ -181,7 +181,7 @@
       :file "policy.py"
       :pointmax 756
       :fsize 755
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22653 24657 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "policy_prior.py"
       :major-mode 'python-mode
@@ -245,7 +245,7 @@
       :file "policy_prior.py"
       :pointmax 2551
       :fsize 2550
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22653 24657 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "__init__.py"
       :major-mode 'python-mode
@@ -253,7 +253,114 @@
       :file "__init__.py"
       :pointmax 1
       :fsize 0
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "policy_prior_gmm.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines a GMM prior for policy linearization. \"\"\"" code nil nil [1 64])
+            ("copy" include nil nil [65 76])
+            ("logging" include nil nil [77 91])
+            ("numpy" include nil nil [93 111])
+            ("gps.algorithm.policy.config" include nil nil [113 169])
+            ("gps.utility.gmm" include nil nil [170 201])
+            ("gps.algorithm.algorithm_utils" include nil nil [202 265])
+            ("LOGGER" variable nil nil [268 304])
+            ("PolicyPriorGMM" type
+               (:documentation "
+    A policy prior encoded as a GMM over [x_t, u_t] points, where u_t is
+    the output of the policy for the given state x_t. This prior is used
+    when computing the linearization of the policy.
+
+    See the method AlgorithmBADMM._update_policy_fit, in
+    python/gps/algorithm.algorithm_badmm.py.
+
+    Also see the GMM dynamics prior, in
+    python/gps/algorithm/dynamics/dynamics_prior_gmm.py. This is a
+    similar GMM prior that is used for the dynamics estimate.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Hyperparameters:
+            min_samples_per_cluster: Minimum number of samples.
+            max_clusters: Maximum number of clusters to fit.
+            max_samples: Maximum number of trajectories to use for
+                fitting the GMM at any given time.
+            strength: Adjusts the strength of the prior.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [869 1209])
+                            ("config" variable nil (reparse-symbol indented_block_body) [1218 1258])
+                            ("config" code nil (reparse-symbol indented_block_body) [1267 1293])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1302 1328])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1337 1350])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1359 1374])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1383 1399])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1478 1539])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1548 1600])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1609 1663])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1672 1718]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [841 845])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [847 858]))                          
+                        :documentation "
+        Hyperparameters:
+            min_samples_per_cluster: Minimum number of samples.
+            max_clusters: Maximum number of clusters to fit.
+            max_samples: Maximum number of trajectories to use for
+                fitting the GMM at any given time.
+            strength: Adjusts the strength of the prior.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [828 1719])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1735 1739])
+                            ("samples" variable nil (reparse-symbol function_parameters) [1741 1748])
+                            ("policy_opt" variable nil (reparse-symbol function_parameters) [1750 1760])
+                            ("mode" variable nil (reparse-symbol function_parameters) [1762 1766]))                          
+                        :documentation "
+        Update GMM using new samples or policy_opt.
+        By default does not replace old samples.
+
+        Args:
+            samples: SampleList containing new samples
+            policy_opt: PolicyOpt containing current policy
+        ")
+                        (reparse-symbol indented_block_body) [1724 3204])
+                    ("eval" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3218 3222])
+                            ("Ts" variable nil (reparse-symbol function_parameters) [3224 3226])
+                            ("Ps" variable nil (reparse-symbol function_parameters) [3228 3230]))                          
+                        :documentation " Evaluate prior. ")
+                        (reparse-symbol indented_block_body) [3209 3624])
+                    ("fit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3682 3686])
+                            ("X" variable nil (reparse-symbol function_parameters) [3688 3689])
+                            ("pol_mu" variable nil (reparse-symbol function_parameters) [3691 3697])
+                            ("pol_sig" variable nil (reparse-symbol function_parameters) [3699 3706]))                          
+                        :documentation "
+        Fit policy linearization.
+
+        Args:
+            X: Samples (N, T, dX)
+            pol_mu: Policy means (N, T, dU)
+            pol_sig: Policy covariance (N, T, dU)
+        ")
+                        (reparse-symbol indented_block_body) [3674 5082]))                  
+                :type "class")
+                nil [307 5082]))          
+      :file "policy_prior_gmm.py"
+      :pointmax 5082
+      :fsize 5081
+      :lastmodtime '(22653 24657 0 0)
       :unmatched-syntax nil))
   :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!algorithm!policy!semantic.cache"
   :semantic-tag-version "2.0"

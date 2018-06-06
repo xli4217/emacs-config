@@ -1,0 +1,247 @@
+;; Object map_service/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "map_service/"
+  :tables
+  (list
+    (semanticdb-table "map_service.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("boost/numeric/ublas/io.hpp" include (:system-flag t) nil [236 273])
+            ("boost/numeric/ublas/lu.hpp" include (:system-flag t) nil [274 311])
+            ("boost/numeric/ublas/matrix.hpp" include (:system-flag t) nil [312 353])
+            ("boost/numeric/ublas/triangular.hpp" include (:system-flag t) nil [354 399])
+            ("boost/numeric/ublas/vector.hpp" include (:system-flag t) nil [400 441])
+            ("boost/numeric/ublas/vector_proxy.hpp" include (:system-flag t) nil [442 489])
+            ("chrono" include (:system-flag t) nil [491 508])
+            ("ctime" include (:system-flag t) nil [509 525])
+            ("memory" include (:system-flag t) nil [526 543])
+            ("random" include (:system-flag t) nil [544 561])
+            ("utility" include (:system-flag t) nil [562 580])
+            ("modules/common/log.h" include nil nil [582 613])
+            ("modules/common/math/polyfit.h" include nil nil [614 654])
+            ("modules/simulation/map_service/map_service.h" include nil nil [655 710])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("beyond::state_estimation::WorldStateMsg" using (:type ("beyond::state_estimation::WorldStateMsg" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [755 801])
+                            ("beyond::state_estimation::MapMsg" using (:type ("beyond::state_estimation::MapMsg" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [802 841])
+                            ("beyond::state_estimation::LaneMsg" using (:type ("beyond::state_estimation::LaneMsg" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [842 882])
+                            ("beyond::state_estimation::LaneID" using (:type ("beyond::state_estimation::LaneID" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [883 922])
+                            ("beyond::state_estimation::LaneQuality" using (:type ("beyond::state_estimation::LaneQuality" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [923 967])
+                            ("beyond::state_estimation::LaneChangeFlag" using (:type ("beyond::state_estimation::LaneChangeFlag" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [968 1015])
+                            ("boost::numeric::ublas::matrix" using (:type ("boost::numeric::ublas::matrix" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1016 1052])
+                            ("boost::numeric::ublas::vector" using (:type ("boost::numeric::ublas::vector" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1053 1089])
+                            ("boost::numeric::ublas::prod" using (:type ("boost::numeric::ublas::prod" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1090 1124])
+                            ("beyond::common::planner_utils::WaypointLane" using (:type ("beyond::common::planner_utils::WaypointLane" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1125 1175])
+                            ("beyond::common::planner_utils::PolyLane" using (:type ("beyond::common::planner_utils::PolyLane" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1176 1222])
+                            ("beyond::common::planner_utils::Lane" using (:type ("beyond::common::planner_utils::Lane" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1223 1265])
+                            ("InvertMatrix" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("input" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("matrix" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1304 1327])
+                                    ("inverse" variable
+                                       (:pointer 1
+                                        :type ("matrix" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1328 1347]))                                  )
+                                (reparse-symbol namespacesubparts) [1267 2011])
+                            ("MapService" function
+                               (:constructor-flag t
+                                :parent "MapService"
+                                :type ("MapService" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2013 2100])
+                            ("MapService" function
+                               (:destructor-flag t
+                                :parent "MapService"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2102 2131])
+                            ("Init" function
+                               (:parent "MapService"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2133 2297])
+                            ("SetTransformBroadcaster" function
+                               (:parent "MapService"
+                                :arguments 
+                                  ( ("p_tb" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("tf2_ros::TransformBroadcaster" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2345 2397]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2299 2434])
+                            ("UpdateMapWithMsg" function
+                               (:parent "MapService"
+                                :arguments 
+                                  ( ("world_state_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2475 2538])
+                                    ("frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2543 2561]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2436 2746])
+                            ("GetLaneCoefficientsInTargetFrame" function
+                               (:parent "MapService"
+                                :arguments 
+                                  ( ("lane" variable
+                                       (:constant-flag t
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("Lane" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2818 2851])
+                                    ("target_frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2852 2877])
+                                    ("success" variable
+                                       (:pointer 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [2878 2892]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("double" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [2748 5369])
+                            ("GetLaneMsgs" function
+                               (:parent "MapService"
+                                :arguments 
+                                  ( ("world_state_msg" variable
+                                       (:pointer 1
+                                        :type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5405 5462])
+                                    ("target_frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5467 5492]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5371 7872])
+                            ("MapPositionToLane" function
+                               (:parent "MapService"
+                                :arguments 
+                                  ( ("position" variable (:type ("geometry_msgs::PointStamped" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7931 7968])
+                                    ("station" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [7969 7985])
+                                    ("distance" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [7986 8003])
+                                    ("on_lane" variable
+                                       (:pointer 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [8008 8022]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Lane" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [7874 9013])
+                            ("GetDistanceToLane" function
+                               (:parent "MapService"
+                                :arguments 
+                                  ( ("lane" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Lane" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [9050 9077])
+                                    ("position" variable (:type ("geometry_msgs::PointStamped" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9113 9150])
+                                    ("station" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [9186 9202])
+                                    ("distance" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [9203 9220])
+                                    ("index" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [9256 9267]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [9015 10264])
+                            ("MapLaneToPosition" function
+                               (:parent "MapService"
+                                :arguments 
+                                  ( ("lane" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Lane" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [10329 10356])
+                                    ("station" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [10357 10378])
+                                    ("distance" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [10379 10401])
+                                    ("target_frame" variable
+                                       (:constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10406 10437]))                                  
+                                :type ("geometry_msgs::PointStamped" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [10266 11298]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [731 11301]))                  
+                :type "namespace")
+                nil [712 11328]))          
+      :file "map_service.cc"
+      :pointmax 11350
+      :fsize 11349
+      :lastmodtime '(23312 35247 711782 186000)
+      :unmatched-syntax nil)
+    (semanticdb-table "map_service.h"
+      :file "map_service.h"
+      :fsize 2644
+      :lastmodtime '(23312 34978 701503 551000)))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!simulation!map_service!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

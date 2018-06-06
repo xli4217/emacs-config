@@ -3,154 +3,171 @@
 (semanticdb-project-database-file "plot_results/"
   :tables
   (list
-    (semanticdb-table "plot_results_gps.py"
-      :major-mode 'python-mode
-      :tags 
-        '( ("pickle" include nil nil [1 14])
-            ("gps.sample.sample_list" include nil nil [16 45])
-            ("matplotlib.pyplot" include nil nil [47 78])
-            ("matplotlib.patches" include nil nil [79 115])
-            ("data_dir" variable nil nil [118 254])
-            ("data" variable nil nil [256 320])
-            ("X" variable nil nil [387 406])
-            ("fig" variable nil nil [408 424])
-            ("ax" variable nil nil [425 437])
-            ("ax" code nil nil [439 609])
-            ("ax" code nil nil [612 782])
-            ("for" code nil nil [785 885])
-            ("plt" code nil nil [886 902])
-            ("plt" code nil nil [903 917])
-            ("plt" code nil nil [918 933])
-            ("plt" code nil nil [934 949])
-            ("plt" code nil nil [950 974]))          
-      :file "plot_results_gps.py"
-      :pointmax 985
-      :fsize 984
-      :lastmodtime '(22614 64124 0 0)
-      :unmatched-syntax '((NAME 975 . 978) ($EOI 985 . 985)))
-    (semanticdb-table "plot_results_gym.py"
+    (semanticdb-table "rlfps_plot.py"
       :major-mode 'python-mode
       :tags 
         '( ("numpy" include nil nil [1 19])
             ("matplotlib.pyplot" include nil nil [20 51])
-            ("path" variable nil nil [53 150])
-            ("gr_path" variable nil nil [151 235])
-            ("t1_osr_name" variable nil nil [260 286])
-            ("t1_name" variable nil nil [287 305])
-            ("t1_osr_csv_name" variable nil nil [325 393])
-            ("t1_csv_name" variable nil nil [394 458])
-            ("t1_gr_csv_name" variable nil nil [459 512])
-            ("t2_osr_csv_name" variable nil nil [514 582])
-            ("t2_csv_name" variable nil nil [583 647])
-            ("t3_osr_csv_name" variable nil nil [649 717])
-            ("t3_csv_name" variable nil nil [718 782])
-            ("t3_gr_csv_name" variable nil nil [783 836])
-            ("t4_osr_csv_name" variable nil nil [838 906])
-            ("t4_csv_name" variable nil nil [907 971])
-            ("t1_osr_csv" variable nil nil [1625 1711])
-            ("t1_csv" variable nil nil [1712 1790])
-            ("t1_gr_csv" variable nil nil [1824 1911])
-            ("t2_osr_csv" variable nil nil [1946 2032])
-            ("t2_csv" variable nil nil [2033 2111])
-            ("t3_osr_csv" variable nil nil [2146 2232])
-            ("t3_csv" variable nil nil [2233 2311])
-            ("t3_gr_csv" variable nil nil [2345 2432])
-            ("t4_osr_csv" variable nil nil [2467 2553])
-            ("t4_csv" variable nil nil [2554 2632])
-            ("tot_itr" variable nil nil [2667 2680])
-            ("t1_osr_csv" variable nil nil [2682 2718])
-            ("t1_csv" variable nil nil [2719 2747])
-            ("t1_gr_csv" variable nil nil [2748 2782])
-            ("t2_osr_csv" variable nil nil [2784 2820])
-            ("t2_csv" variable nil nil [2821 2849])
-            ("t3_osr_csv" variable nil nil [2851 2887])
-            ("t3_csv" variable nil nil [2888 2916])
-            ("t3_gr_csv" variable nil nil [2917 2951])
-            ("t4_osr_csv" variable nil nil [2953 2989])
-            ("t4_csv" variable nil nil [2990 3018])
-            ("average_episode" variable nil nil [3020 3040])
-            ("plt" code nil nil [3074 3087])
-            ("line1" variable nil nil [3088 3164])
-            ("plt" code nil nil [3165 3179])
-            ("line2" variable nil nil [3180 3264])
-            ("line3" variable nil nil [3265 3335])
-            ("plt" code nil nil [3336 3361])
-            ("plt" code nil nil [3362 3402])
-            ("plt" code nil nil [3403 3447])
-            ("plt" code nil nil [3491 3508])
-            ("plt" code nil nil [3510 3523])
-            ("line1" variable nil nil [3524 3600])
-            ("plt" code nil nil [3601 3615])
-            ("line2" variable nil nil [3616 3700])
-            ("plt" code nil nil [3701 3726])
-            ("plt" code nil nil [3727 3767])
-            ("plt" code nil nil [3768 3809])
-            ("plt" code nil nil [3811 3824])
-            ("line1" variable nil nil [3825 3901])
-            ("plt" code nil nil [3902 3916])
-            ("line2" variable nil nil [3917 4001])
-            ("line3" variable nil nil [4002 4072])
-            ("plt" code nil nil [4073 4098])
-            ("plt" code nil nil [4099 4139])
-            ("plt" code nil nil [4140 4184])
-            ("plt" code nil nil [4228 4245])
-            ("plt" code nil nil [4247 4260])
-            ("line1" variable nil nil [4261 4337])
-            ("plt" code nil nil [4338 4352])
-            ("line2" variable nil nil [4353 4437])
-            ("plt" code nil nil [4438 4463])
-            ("plt" code nil nil [4464 4504])
-            ("plt" code nil nil [4505 4546])
-            ("plt" code nil nil [4549 4559]))          
-      :file "plot_results_gym.py"
-      :pointmax 4560
-      :fsize 4559
-      :lastmodtime '(22580 50562 0 0)
+            ("matplotlib" include nil nil [52 77])
+            ("matplotlib.patches" include nil nil [78 114])
+            ("mpl_toolkits.mplot3d" include nil nil [116 155])
+            ("string" include nil nil [156 190])
+            ("RLFPSPlot" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    Learning visualization
+    '''" code nil (reparse-symbol indented_block_body) [221 259])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [507 1895])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1905 1936])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1945 1959])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1968 1980])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1989 2001])
+                            ("self" code nil (reparse-symbol indented_block_body) [2011 2056])
+                            ("self" code nil (reparse-symbol indented_block_body) [2065 2110])
+                            ("if" code nil (reparse-symbol indented_block_body) [2119 2219])
+                            ("if" code nil (reparse-symbol indented_block_body) [2227 2277]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [277 281])
+                            ("fig" variable nil (reparse-symbol function_parameters) [300 303])
+                            ("ax" variable nil (reparse-symbol function_parameters) [322 324])
+                            ("ar" variable nil (reparse-symbol function_parameters) [343 345])
+                            ("xlabel" variable nil (reparse-symbol function_parameters) [364 370])
+                            ("ylabel" variable nil (reparse-symbol function_parameters) [389 395])
+                            ("fontsize" variable nil (reparse-symbol function_parameters) [414 422])
+                            ("axis_lim" variable nil (reparse-symbol function_parameters) [444 452])
+                            ("equal" variable nil (reparse-symbol function_parameters) [476 481]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [264 2277])
+                    ("plot_patches" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2307 2311])
+                            ("shape" variable nil (reparse-symbol function_parameters) [2313 2318])
+                            ("center" variable nil (reparse-symbol function_parameters) [2320 2326])
+                            ("dimensions" variable nil (reparse-symbol function_parameters) [2328 2338])
+                            ("color" variable nil (reparse-symbol function_parameters) [2340 2345])
+                            ("fill" variable nil (reparse-symbol function_parameters) [2347 2351])
+                            ("label" variable nil (reparse-symbol function_parameters) [2358 2363]))                          )
+                        (reparse-symbol indented_block_body) [2290 3466])
+                    ("plot_trajectories2D" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3500 3504])
+                            ("traj_Y" variable nil (reparse-symbol function_parameters) [3506 3512])
+                            ("traj_X" variable nil (reparse-symbol function_parameters) [3515 3521])
+                            ("style" variable nil (reparse-symbol function_parameters) [3528 3533]))                          )
+                        (reparse-symbol indented_block_body) [3476 4920])
+                    ("plot_filled" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4959 4963])
+                            ("data_Y" variable nil (reparse-symbol function_parameters) [4965 4971])
+                            ("data_X" variable nil (reparse-symbol function_parameters) [4973 4979])
+                            ("styles" variable nil (reparse-symbol function_parameters) [4986 4992])
+                            ("fill" variable nil (reparse-symbol function_parameters) [4997 5001])
+                            ("plot_mean" variable nil (reparse-symbol function_parameters) [5008 5017]))                          )
+                        (reparse-symbol indented_block_body) [4943 8554])
+                    ("_filled_plot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8596 8600])
+                            ("mean_x" variable nil (reparse-symbol function_parameters) [8602 8608])
+                            ("mean_y" variable nil (reparse-symbol function_parameters) [8610 8616])
+                            ("std_x" variable nil (reparse-symbol function_parameters) [8618 8623])
+                            ("std_y" variable nil (reparse-symbol function_parameters) [8625 8630])
+                            ("fill_color" variable nil (reparse-symbol function_parameters) [8632 8642])
+                            ("mean_color" variable nil (reparse-symbol function_parameters) [8649 8659])
+                            ("label" variable nil (reparse-symbol function_parameters) [8666 8671])
+                            ("alpha" variable nil (reparse-symbol function_parameters) [8678 8683])
+                            ("fill" variable nil (reparse-symbol function_parameters) [8690 8694])
+                            ("plot_mean" variable nil (reparse-symbol function_parameters) [8701 8710])
+                            ("data_X" variable nil (reparse-symbol function_parameters) [8718 8724])
+                            ("data_Y" variable nil (reparse-symbol function_parameters) [8731 8737]))                          )
+                        (reparse-symbol indented_block_body) [8579 10121])
+                    ("_filled_between_plot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10172 10176])
+                            ("x" variable nil (reparse-symbol function_parameters) [10178 10179])
+                            ("mean" variable nil (reparse-symbol function_parameters) [10181 10185])
+                            ("std" variable nil (reparse-symbol function_parameters) [10187 10190])
+                            ("fill_color" variable nil (reparse-symbol function_parameters) [10192 10202])
+                            ("mean_color" variable nil (reparse-symbol function_parameters) [10209 10219])
+                            ("label" variable nil (reparse-symbol function_parameters) [10226 10231]))                          )
+                        (reparse-symbol indented_block_body) [10147 10527])
+                    ("show" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10550 10554]))                          )
+                        (reparse-symbol indented_block_body) [10541 10575]))                  
+                :type "class")
+                nil [192 10575]))          
+      :file "rlfps_plot.py"
+      :pointmax 10575
+      :fsize 10574
+      :lastmodtime '(22736 42771 0 0)
       :unmatched-syntax nil)
-    (semanticdb-table "plot_res_gym_new.py"
+    (semanticdb-table "test.py"
       :major-mode 'python-mode
       :tags 
         '( ("numpy" include nil nil [1 19])
             ("matplotlib.pyplot" include nil nil [20 51])
-            ("os" include nil nil [53 62])
-            ("rlfps_root_path" variable nil nil [64 132])
-            ("data_path" code nil nil [134 223])
-            ("subdirectories" variable nil nil [225 263])
-            ("filled_plot" function (:arguments 
-              ( ("ax" variable nil (reparse-symbol function_parameters) [281 283])
-                ("x" variable nil (reparse-symbol function_parameters) [285 286])
-                ("mean" variable nil (reparse-symbol function_parameters) [288 292])
-                ("std" variable nil (reparse-symbol function_parameters) [294 297])
-                ("fill_color" variable nil (reparse-symbol function_parameters) [299 309])
-                ("mean_color" variable nil (reparse-symbol function_parameters) [311 321])
-                ("label" variable nil (reparse-symbol function_parameters) [322 327]))              ) nil [265 659])
-            ("task_num" variable nil nil [678 692])
-            ("if" code nil nil [693 729])
-            ("if" code nil nil [729 764])
-            ("filename1" code nil nil [775 868])
-            ("M1" variable nil nil [869 934])
-            ("filename2" code nil nil [936 1036])
-            ("M2" variable nil nil [1037 1102])
-            ("fig1" variable nil nil [1104 1124])
-            ("ax1" variable nil nil [1125 1141])
-            ("fig2" variable nil nil [1143 1163])
-            ("ax2" variable nil nil [1164 1180])
-            ("cnames" variable nil nil [1183 2326])
-            ("ckeys" variable nil nil [2336 2357])
-            ("beta_label_list" variable nil nil [2359 2460])
-            ("heuristic_reward_label_list" variable nil nil [2461 2601])
-            ("k" variable nil nil [2603 2606])
-            ("for" code nil nil [2607 2882])
-            ("k" variable nil nil [2934 2937])
-            ("filled_plot" code nil nil [2938 3047])
-            ("for" code nil nil [3048 3335])
-            ("ax2" code nil nil [3386 3490])
-            ("ax1" code nil nil [3491 3508])
-            ("plt" code nil nil [3510 3520]))          
-      :file "plot_res_gym_new.py"
-      :pointmax 3528
-      :fsize 3527
-      :lastmodtime '(22684 36687 0 0)
+            ("rlfps_plot" include nil nil [52 84])
+            ("get_training_data" include nil nil [85 130])
+            ("joblib" include nil nil [131 144])
+            ("os" include nil nil [146 155])
+            ("dir_path" variable nil nil [156 217])
+            ("data_path" code nil nil [218 272])
+            ("g" variable nil nil [365 386])
+            ("M" variable nil nil [433 464])
+            ("print" code nil nil [466 479]))          
+      :file "test.py"
+      :pointmax 1022
+      :fsize 1021
+      :lastmodtime '(22725 26926 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "get_training_data.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("joblib" include nil nil [30 43])
+            ("GetTrainingData" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [109 113]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [94 98]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [81 114])
+                    ("get_csv_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [136 140])
+                            ("data_path" variable nil (reparse-symbol function_parameters) [142 151])
+                            ("col_num" variable nil (reparse-symbol function_parameters) [153 160]))                          )
+                        (reparse-symbol indented_block_body) [119 1221])
+                    ("get_pkl_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1255 1259])
+                            ("data_path" variable nil (reparse-symbol function_parameters) [1261 1270])
+                            ("field" variable nil (reparse-symbol function_parameters) [1272 1277])
+                            ("itr_list" variable nil (reparse-symbol function_parameters) [1279 1287]))                          )
+                        (reparse-symbol indented_block_body) [1238 3067]))                  
+                :type "class")
+                nil [45 3067]))          
+      :file "get_training_data.py"
+      :pointmax 3078
+      :fsize 3077
+      :lastmodtime '(22725 55913 0 0)
       :unmatched-syntax nil))
   :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!plot_results!semantic.cache"
   :semantic-tag-version "2.0"

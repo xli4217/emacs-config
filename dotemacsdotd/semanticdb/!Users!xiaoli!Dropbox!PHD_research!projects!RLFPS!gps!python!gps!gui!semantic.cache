@@ -89,12 +89,12 @@ costs for each sample and condition.
       :file "mean_plotter.py"
       :pointmax 3465
       :fsize 3464
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22653 24657 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "util.py"
       :file "util.py"
       :fsize 4436
-      :lastmodtime '(22592 31744 0 0))
+      :lastmodtime '(22653 24657 0 0))
     (semanticdb-table "realtime_plotter.py"
       :major-mode 'python-mode
       :tags 
@@ -162,7 +162,7 @@ colors according to the spectral colormap.
       :file "realtime_plotter.py"
       :pointmax 2844
       :fsize 2843
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22653 24657 0 0)
       :unmatched-syntax '((NAME 2330 . 2337) (IF 2348 . 2350) (ELSE 2358 . 2362) (NAME 2161 . 2163) (IF 2177 . 2179) (ELSE 2187 . 2191) (NAME 1362 . 1367) (IF 1386 . 1388) (ELSE 1414 . 1418) (NAME 1289 . 1294) (IF 1313 . 1315) (ELSE 1341 . 1345)))
     (semanticdb-table "gps_training_gui.py"
       :major-mode 'python-mode
@@ -469,28 +469,151 @@ For more detailed documentation, visit: rll.berkeley.edu/gps/gui
       :file "gps_training_gui.py"
       :pointmax 18768
       :fsize 18767
-      :lastmodtime '(22592 31744 0 0)
+      :lastmodtime '(22653 24657 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "config.py"
       :file "config.py"
       :fsize 5434
-      :lastmodtime '(22592 31744 0 0))
+      :lastmodtime '(22653 24657 0 0))
     (semanticdb-table "action_panel.py"
       :file "action_panel.py"
       :fsize 4321
-      :lastmodtime '(22592 31744 0 0))
+      :lastmodtime '(22653 24657 0 0))
     (semanticdb-table "textbox.py"
       :file "textbox.py"
       :fsize 2868
-      :lastmodtime '(22592 31744 0 0))
+      :lastmodtime '(22653 24657 0 0))
     (semanticdb-table "plotter_3d.py"
       :file "plotter_3d.py"
       :fsize 5375
-      :lastmodtime '(22592 31744 0 0))
+      :lastmodtime '(22653 24657 0 0))
     (semanticdb-table "image_visualizer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Image Visualizer
+
+The Image Visualizer class expects to be given images in real time (via the
+update function), and displays those images onto the screen. Optionally,
+images can be supplied via a rostopic.
+
+The Image Visualizer can also overlay an initial image or target image on top 
+of the realtime images. This is used for resetting the task space after each
+sample if the robot disturbed it during sampling.
+\"\"\"" code nil nil [1 421])
+            ("numpy" include nil nil [422 440])
+            ("matplotlib.pyplot" include nil nil [441 472])
+            ("matplotlib.gridspec" include nil nil [473 511])
+            ("gps.gui.action_panel" include nil nil [513 565])
+            ("logging" include nil nil [567 581])
+            ("LOGGER" variable nil nil [582 618])
+            ("ROS_ENABLED" variable nil nil [619 638])
+            ("ImageVisualizer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        If rostopic is given to this constructor, then the image visualizer will 
+        automatically update with rostopic image. Else, the update method must 
+        be manually called to supply images.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1092 1314])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1349 1360])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1369 1395])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1404 1430])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1464 1502])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1511 1548])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1557 1583])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1592 1618])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1627 1652])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1661 1686])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1695 1736])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1745 1770])
+                            ("actions_arr" variable nil (reparse-symbol indented_block_body) [1798 2021])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2056 2071])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2080 2146])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2155 2195])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2204 2243])
+                            ("if" code nil (reparse-symbol indented_block_body) [2253 2376])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2385 2434])
+                            ("self" code nil (reparse-symbol indented_block_body) [2443 2472])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2481 2536])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2545 2643])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2652 2750])
+                            ("self" code nil (reparse-symbol indented_block_body) [2760 2783])
+                            ("self" code nil (reparse-symbol indented_block_body) [2792 2823])
+                            ("if" code nil (reparse-symbol indented_block_body) [2911 3063]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1010 1014])
+                            ("fig" variable nil (reparse-symbol function_parameters) [1016 1019])
+                            ("gs" variable nil (reparse-symbol function_parameters) [1021 1023])
+                            ("cropsize" variable nil (reparse-symbol function_parameters) [1025 1033])
+                            ("rostopic" variable nil (reparse-symbol function_parameters) [1040 1048])
+                            ("show_overlay_buttons" variable nil (reparse-symbol function_parameters) [1055 1075]))                          
+                        :documentation "
+        If rostopic is given to this constructor, then the image visualizer will 
+        automatically update with rostopic image. Else, the update method must 
+        be manually called to supply images.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [997 3063])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3079 3083])
+                            ("image" variable nil (reparse-symbol function_parameters) [3085 3090]))                          
+                        :documentation " Update images. ")
+                        (reparse-symbol indented_block_body) [3068 3526])
+                    ("update_ros" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3546 3550])
+                            ("image_msg" variable nil (reparse-symbol function_parameters) [3552 3561]))                          )
+                        (reparse-symbol indented_block_body) [3531 3877])
+                    ("get_current_image" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3904 3908]))                          )
+                        (reparse-symbol indented_block_body) [3882 3946])
+                    ("set_initial_image" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3973 3977])
+                            ("image" variable nil (reparse-symbol function_parameters) [3979 3984])
+                            ("alpha" variable nil (reparse-symbol function_parameters) [3986 3991]))                          )
+                        (reparse-symbol indented_block_body) [3951 4138])
+                    ("set_target_image" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4164 4168])
+                            ("image" variable nil (reparse-symbol function_parameters) [4170 4175])
+                            ("alpha" variable nil (reparse-symbol function_parameters) [4177 4182]))                          )
+                        (reparse-symbol indented_block_body) [4143 4327])
+                    ("toggle_initial_image_overlay" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4365 4369])
+                            ("event" variable nil (reparse-symbol function_parameters) [4371 4376]))                          )
+                        (reparse-symbol indented_block_body) [4332 4930])
+                    ("toggle_target_image_overlay" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4967 4971])
+                            ("event" variable nil (reparse-symbol function_parameters) [4973 4978]))                          )
+                        (reparse-symbol indented_block_body) [4935 5522])
+                    ("draw" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5536 5540]))                          )
+                        (reparse-symbol indented_block_body) [5527 5880]))                  
+                :type "class")
+                nil [961 5880]))          
       :file "image_visualizer.py"
+      :pointmax 5880
       :fsize 5879
-      :lastmodtime '(22592 31744 0 0)))
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 915 . 959) (COLON 913 . 914) (AS 909 . 911) (EXCEPT 871 . 877) (INDENT_BLOCK 826 . 871) (COLON 824 . 825) (TRY 639 . 642) (AS 820 . 822))))
   :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!gui!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")
