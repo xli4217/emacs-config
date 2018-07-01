@@ -14,33 +14,33 @@
                 :members 
                   ( ("__init__" function
                        (:suite 
-                          ( ("self" variable nil (reparse-symbol indented_block_body) [209 244])
-                            ("super" code nil (reparse-symbol indented_block_body) [253 291]))                          
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [208 243])
+                            ("super" code nil (reparse-symbol indented_block_body) [252 290]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [179 183])
-                            ("output_layers" variable nil (reparse-symbol function_parameters) [185 198]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [178 182])
+                            ("output_layers" variable nil (reparse-symbol function_parameters) [184 197]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [166 292])
+                        (reparse-symbol indented_block_body) [165 291])
                     ("output_layers" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [329 333]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [328 332]))                          
                         :decorators 
                           ( ("property" function (:type "decorator") nil nil))                          )
-                        (reparse-symbol indented_block_body) [297 371])
+                        (reparse-symbol indented_block_body) [296 370])
                     ("get_params_internal" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [415 419])
-                            ("tags" variable nil (reparse-symbol function_parameters) [421 427]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [414 418])
+                            ("tags" variable nil (reparse-symbol function_parameters) [420 426]))                          
                         :decorators 
                           ( ("overrides" function (:type "decorator") nil nil))                          )
-                        (reparse-symbol indented_block_body) [376 559]))                  
+                        (reparse-symbol indented_block_body) [375 655]))                  
                 :type "class")
-                nil [124 559]))          
+                nil [124 655]))          
       :file "lasagne_powered.py"
-      :pointmax 559
+      :pointmax 655
       :fsize 654
       :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
@@ -54,126 +54,135 @@
             ("suppress_params_loading" function (:decorators 
               ( ("contextmanager" function (:type "decorator") nil nil))              ) nil [181 308])
             ("Parameterized" type
-               (:superclasses ("object")
+               (:superclasses ("Serializable")
                 :members 
                   ( ("__init__" function
                        (:suite 
-                          ( ("self" variable nil (reparse-symbol indented_block_body) [371 395])
-                            ("self" variable nil (reparse-symbol indented_block_body) [404 434])
-                            ("self" variable nil (reparse-symbol indented_block_body) [443 473]))                          
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [377 401])
+                            ("self" variable nil (reparse-symbol indented_block_body) [410 440])
+                            ("self" variable nil (reparse-symbol indented_block_body) [449 479]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [356 360]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [362 366]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [343 474])
+                        (reparse-symbol indented_block_body) [349 480])
                     ("get_params_internal" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [503 507])
-                            ("tags" variable nil (reparse-symbol function_parameters) [509 515]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [509 513])
+                            ("tags" variable nil (reparse-symbol function_parameters) [515 521]))                          
                         :documentation "
         Internal method to be implemented which does not perform caching
         ")
-                        (reparse-symbol indented_block_body) [479 649])
+                        (reparse-symbol indented_block_body) [485 655])
                     ("get_params" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [669 673])
-                            ("tags" variable nil (reparse-symbol function_parameters) [675 681]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [675 679])
+                            ("tags" variable nil (reparse-symbol function_parameters) [681 687]))                          
                         :documentation "
         Get the list of parameters, filtered by the provided tags.
         Some common tags include 'regularizable' and 'trainable'
         ")
-                        (reparse-symbol indented_block_body) [654 1081])
+                        (reparse-symbol indented_block_body) [660 1163])
                     ("get_param_dtypes" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1107 1111])
-                            ("tags" variable nil (reparse-symbol function_parameters) [1113 1119]))                          )
-                        (reparse-symbol indented_block_body) [1086 1457])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1189 1193])
+                            ("tags" variable nil (reparse-symbol function_parameters) [1195 1201]))                          )
+                        (reparse-symbol indented_block_body) [1168 1545])
                     ("get_param_shapes" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1483 1487])
-                            ("tags" variable nil (reparse-symbol function_parameters) [1489 1495]))                          )
-                        (reparse-symbol indented_block_body) [1462 1833])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1571 1575])
+                            ("tags" variable nil (reparse-symbol function_parameters) [1577 1583]))                          )
+                        (reparse-symbol indented_block_body) [1550 1927])
                     ("get_param_values" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1859 1863])
-                            ("tags" variable nil (reparse-symbol function_parameters) [1865 1871]))                          )
-                        (reparse-symbol indented_block_body) [1838 2009])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1953 1957])
+                            ("tags" variable nil (reparse-symbol function_parameters) [1959 1965]))                          )
+                        (reparse-symbol indented_block_body) [1932 2103])
                     ("set_param_values" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2035 2039])
-                            ("flattened_params" variable nil (reparse-symbol function_parameters) [2041 2057])
-                            ("tags" variable nil (reparse-symbol function_parameters) [2059 2065]))                          )
-                        (reparse-symbol indented_block_body) [2014 2499])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2129 2133])
+                            ("flattened_params" variable nil (reparse-symbol function_parameters) [2135 2151])
+                            ("tags" variable nil (reparse-symbol function_parameters) [2153 2159]))                          )
+                        (reparse-symbol indented_block_body) [2108 2594])
                     ("flat_to_params" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2523 2527])
-                            ("flattened_params" variable nil (reparse-symbol function_parameters) [2529 2545])
-                            ("tags" variable nil (reparse-symbol function_parameters) [2547 2553]))                          )
-                        (reparse-symbol indented_block_body) [2504 2638])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2618 2622])
+                            ("flattened_params" variable nil (reparse-symbol function_parameters) [2624 2640])
+                            ("tags" variable nil (reparse-symbol function_parameters) [2642 2648]))                          )
+                        (reparse-symbol indented_block_body) [2599 2733])
                     ("__getstate__" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2660 2664]))                          )
-                        (reparse-symbol indented_block_body) [2643 2774])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2755 2759]))                          )
+                        (reparse-symbol indented_block_body) [2738 2869])
                     ("__setstate__" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2796 2800])
-                            ("d" variable nil (reparse-symbol function_parameters) [2802 2803]))                          )
-                        (reparse-symbol indented_block_body) [2779 2947]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2891 2895])
+                            ("d" variable nil (reparse-symbol function_parameters) [2897 2898]))                          )
+                        (reparse-symbol indented_block_body) [2874 3042]))                  
                 :type "class")
-                nil [309 2947]))          
+                nil [309 3042]))          
       :file "parameterized.py"
-      :pointmax 2948
-      :fsize 3036
-      :lastmodtime '(22749 16759 0 0)
+      :pointmax 3043
+      :fsize 3042
+      :lastmodtime '(22778 11703 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "serializable.py"
       :major-mode 'python-mode
       :tags 
         '( ("inspect" include nil nil [1 15])
+            ("sys" include nil nil [16 26])
             ("Serializable" type
                (:superclasses ("object")
                 :members 
                   ( ("__init__" function
                        (:suite 
-                          ( ("self" variable nil (reparse-symbol indented_block_body) [96 114])
-                            ("self" variable nil (reparse-symbol indented_block_body) [123 145]))                          
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [107 125])
+                            ("self" variable nil (reparse-symbol indented_block_body) [134 156]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [64 68])
-                            ("args" variable nil (reparse-symbol function_parameters) [70 75])
-                            ("kwargs" variable nil (reparse-symbol function_parameters) [77 85]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [75 79])
+                            ("args" variable nil (reparse-symbol function_parameters) [81 86])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [88 96]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [51 146])
+                        (reparse-symbol indented_block_body) [62 157])
                     ("quick_init" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [166 170])
-                            ("locals_" variable nil (reparse-symbol function_parameters) [172 179]))                          )
-                        (reparse-symbol indented_block_body) [151 787])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [177 181])
+                            ("locals_" variable nil (reparse-symbol function_parameters) [183 190]))                          )
+                        (reparse-symbol indented_block_body) [162 1054])
                     ("__getstate__" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [809 813]))                          )
-                        (reparse-symbol indented_block_body) [792 882])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1076 1080]))                          )
+                        (reparse-symbol indented_block_body) [1059 1149])
                     ("__setstate__" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [904 908])
-                            ("d" variable nil (reparse-symbol function_parameters) [910 911]))                          )
-                        (reparse-symbol indented_block_body) [887 1013]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1171 1175])
+                            ("d" variable nil (reparse-symbol function_parameters) [1177 1178]))                          )
+                        (reparse-symbol indented_block_body) [1154 1564])
+                    ("clone" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [1596 1599])
+                            ("obj" variable nil (reparse-symbol function_parameters) [1601 1604])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1606 1614]))                          )
+                        (reparse-symbol indented_block_body) [1569 1837]))                  
                 :type "class")
-                nil [18 1013]))          
+                nil [29 1837]))          
       :file "serializable.py"
-      :pointmax 1013
+      :pointmax 1837
       :fsize 1836
       :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)

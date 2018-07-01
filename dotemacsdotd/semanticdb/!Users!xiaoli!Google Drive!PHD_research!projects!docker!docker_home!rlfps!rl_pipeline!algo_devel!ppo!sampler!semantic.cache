@@ -1,0 +1,86 @@
+;; Object sampler/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sampler/"
+  :tables
+  (list
+    (semanticdb-table "batch_sampler.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("cloudpickle" include nil nil [30 48])
+            ("BatchSampler" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [322 336])
+                            ("self" variable nil (reparse-symbol indented_block_body) [458 478])
+                            ("self" variable nil (reparse-symbol indented_block_body) [487 538])
+                            ("self" variable nil (reparse-symbol indented_block_body) [547 614])
+                            ("self" variable nil (reparse-symbol indented_block_body) [623 684])
+                            ("if" code nil (reparse-symbol indented_block_body) [693 737])
+                            ("self" variable nil (reparse-symbol indented_block_body) [745 789])
+                            ("self" variable nil (reparse-symbol indented_block_body) [798 844])
+                            ("self" variable nil (reparse-symbol indented_block_body) [854 878])
+                            ("self" variable nil (reparse-symbol indented_block_body) [928 950])
+                            ("if" code nil (reparse-symbol indented_block_body) [1000 1217]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [96 100])
+                            ("env" variable nil (reparse-symbol function_parameters) [119 122])
+                            ("policy" variable nil (reparse-symbol function_parameters) [141 147])
+                            ("sampler_hyperparams" variable nil (reparse-symbol function_parameters) [166 185])
+                            ("state_preprocessor" variable nil (reparse-symbol function_parameters) [204 222])
+                            ("reward_preprocessor" variable nil (reparse-symbol function_parameters) [246 265])
+                            ("logger" variable nil (reparse-symbol function_parameters) [289 295])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [302 310]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [83 1217])
+                    ("run_episode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1254 1258])
+                            ("env" variable nil (reparse-symbol function_parameters) [1280 1283])
+                            ("policy" variable nil (reparse-symbol function_parameters) [1305 1311])
+                            ("episode_horizon" variable nil (reparse-symbol function_parameters) [1333 1348])
+                            ("state_preprocessor" variable nil (reparse-symbol function_parameters) [1370 1388])
+                            ("reward_preprocessor" variable nil (reparse-symbol function_parameters) [1410 1429])
+                            ("logger" variable nil (reparse-symbol function_parameters) [1451 1457])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [1479 1492]))                          
+                        :documentation " Run single episode with option to animate
+        Args:
+        
+        Returns: two dictionaries with keys \"Observations\", \"Actions\", \"Rewards\"
+        Observations: shape = (episode len, obs_dim)
+        Actions: shape = (episode len, act_dim)
+        Rewards: shape = (episode len,)
+
+        The first dictionary is original trajectory
+        The second is normalized trajectory (same as the first if no state or reward preprocessor specified)
+        ")
+                        (reparse-symbol indented_block_body) [1238 3990])
+                    ("get_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4021 4025])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [4027 4040]))                          )
+                        (reparse-symbol indented_block_body) [4007 5186])
+                    ("save_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5207 5211])
+                            ("batch" variable nil (reparse-symbol function_parameters) [5213 5218])
+                            ("path" variable nil (reparse-symbol function_parameters) [5220 5224]))                          )
+                        (reparse-symbol indented_block_body) [5192 5421]))                  
+                :type "class")
+                nil [50 5421])
+            ("if" code nil nil [5434 7040]))          
+      :file "batch_sampler.py"
+      :pointmax 7040
+      :fsize 7039
+      :lastmodtime '(23155 24082 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!algo_devel!ppo!sampler!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

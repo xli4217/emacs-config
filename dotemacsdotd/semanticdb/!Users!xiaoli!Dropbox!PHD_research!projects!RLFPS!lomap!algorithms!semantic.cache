@@ -83,7 +83,138 @@
       :pointmax 11335
       :fsize 11334
       :lastmodtime '(22787 52860 0 0)
-      :unmatched-syntax nil))
+      :unmatched-syntax nil)
+    (semanticdb-table "product.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("networkx" include nil nil [767 788])
+            ("itertools" include nil nil [789 811])
+            ("Model" include nil nil [833 845])
+            ("Ts" include nil nil [864 873])
+            ("Markov" include nil nil [896 909])
+            ("sys" include nil nil [910 920])
+            ("logging" include nil nil [921 935])
+            ("functools" include nil nil [936 964])
+            ("logger" variable nil nil [989 1025])
+            ("__all__" variable nil nil [1069 1171])
+            ("ts_times_fsa" function (:arguments 
+              ( ("ts" variable nil (reparse-symbol function_parameters) [1191 1193])
+                ("fsa" variable nil (reparse-symbol function_parameters) [1195 1198]))              ) nil [1174 3319])
+            ("ts_times_buchi" function (:arguments 
+              ( ("ts" variable nil (reparse-symbol function_parameters) [3339 3341])
+                ("buchi" variable nil (reparse-symbol function_parameters) [3343 3348]))              ) nil [3320 5505])
+            ("ts_times_ts" function (:arguments 
+              ( ("ts_tuple" variable nil (reparse-symbol function_parameters) [5522 5530]))              ) nil [5506 8456])
+            ("flatten_tuple" function (:arguments 
+              ( ("t" variable nil (reparse-symbol function_parameters) [8475 8476]))              ) nil [8457 8616])
+            ("markov_times_markov" function (:arguments 
+              ( ("markov_tuple" variable nil (reparse-symbol function_parameters) [8641 8653]))              ) nil [8617 12107])
+            ("markov_times_fsa" function (:arguments 
+              ( ("markov" variable nil (reparse-symbol function_parameters) [12130 12136])
+                ("fsa" variable nil (reparse-symbol function_parameters) [12138 12141]))              ) nil [12109 14670]))          
+      :file "product.py"
+      :pointmax 14670
+      :fsize 14669
+      :lastmodtime '(22833 32189 0 0)
+      :unmatched-syntax '((PERIOD 880 . 881) (FROM 874 . 878) (PERIOD 879 . 880) (PERIOD 852 . 853) (FROM 846 . 850) (PERIOD 851 . 852) (PERIOD 818 . 819) (FROM 812 . 816) (PERIOD 817 . 818)))
+    (semanticdb-table "sync_seq.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Compute a synchronization sequence for a given run of a team of agents that
+guarantees correctness in the field.
+\"\"\"" code nil nil [767 887])
+            ("__author__" variable nil nil [889 917])
+            ("ts_times_buchi" include nil nil [933 954])
+            ("construct_field_event_ts" include nil nil [976 1007])
+            ("lomap.algorithms.dijkstra" include nil nil [1008 1071])
+            ("logging" include nil nil [1072 1086])
+            ("logger" variable nil nil [1111 1147])
+            ("empty_language" function (:arguments 
+              ( ("p" variable nil (reparse-symbol function_parameters) [1210 1211]))              ) nil [1191 1520])
+            ("compute_sync_seqs" function
+               (:documentation "
+	Compute synchronization sequences for each, i.e. wait sets,
+	for each agent so that correctness in the field is guaranteed.
+
+	Parameters
+	----------
+	ts_tuple: Tuple of transition system objects
+		ts_tuple[i] is the transition that models agent i.
+
+	tts: A transition system object
+		tts is the team transition system that models the asynchronous
+		behavior of the team of agents who are individually modeled as
+		the transition systems in ts_tuple.
+
+	b: A buchi object
+		This is the buchi automaton that corresponds to the negation of
+		the mission specification.
+
+	prefix: A list of tuples
+		This is the prefix of the run on the team transition system tts.
+
+	suffix: A list of tuples
+		This is the suffix of the run on the team transition system tts.
+
+	Results
+	-------
+	wait_sets: A 2-D list of sets
+		wait_sets[i][j] gives the list of agents that agent i must wait at
+		position j of the run before satisfying any propositions at that
+		state and proceeding with the next position in its run.
+	"
+                :arguments 
+                  ( ("ts_tuple" variable nil (reparse-symbol function_parameters) [1543 1551])
+                    ("rhos" variable nil (reparse-symbol function_parameters) [1553 1557])
+                    ("tts" variable nil (reparse-symbol function_parameters) [1559 1562])
+                    ("b" variable nil (reparse-symbol function_parameters) [1564 1565])
+                    ("prefix" variable nil (reparse-symbol function_parameters) [1567 1573])
+                    ("suffix" variable nil (reparse-symbol function_parameters) [1575 1581]))                  )
+                nil [1521 4388]))          
+      :file "sync_seq.py"
+      :pointmax 4388
+      :fsize 4387
+      :lastmodtime '(22751 47667 0 0)
+      :unmatched-syntax '((FROM 955 . 959) (PERIOD 960 . 961) (FROM 919 . 923) (PERIOD 924 . 925)))
+    (semanticdb-table "dijkstra.py"
+      :file "dijkstra.py"
+      :fsize 12258
+      :lastmodtime '(22751 47666 0 0))
+    (semanticdb-table "inc_syn.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logging" include nil nil [767 781])
+            ("networkx" include nil nil [782 803])
+            ("collections" include nil nil [804 830])
+            ("Markov" include nil nil [853 866])
+            ("Timer" include nil nil [888 900])
+            ("markov_times_markov" include nil nil [915 941])
+            ("markov_times_fsa" include nil nil [956 979])
+            ("policy_synthesis" include nil nil [1002 1025])
+            ("compute_mrp" include nil nil [1048 1066])
+            ("logger" variable nil nil [1091 1127])
+            ("__all__" variable nil nil [1171 1245])
+            ("minimize_mdp" function (:arguments 
+              ( ("mdp" variable nil (reparse-symbol function_parameters) [1264 1267])
+                ("exp_rwd" variable nil (reparse-symbol function_parameters) [1269 1276])
+                ("exp_rwd_ver" variable nil (reparse-symbol function_parameters) [1278 1289]))              ) nil [1247 2313])
+            ("incremental_synthesis" function (:arguments 
+              ( ("vehicle_mdp" variable nil (reparse-symbol function_parameters) [2341 2352])
+                ("fsa" variable nil (reparse-symbol function_parameters) [2354 2357])
+                ("targets" variable nil (reparse-symbol function_parameters) [2359 2366])
+                ("prop_set_fn" variable nil (reparse-symbol function_parameters) [2368 2379])
+                ("assumed_props" variable nil (reparse-symbol function_parameters) [2381 2394]))              ) nil [2315 4354])
+            ("classical_synthesis" function (:arguments 
+              ( ("vehicle_mdp" variable nil (reparse-symbol function_parameters) [4379 4390])
+                ("fsa" variable nil (reparse-symbol function_parameters) [4392 4395])
+                ("targets" variable nil (reparse-symbol function_parameters) [4397 4404])
+                ("prop_set_fn" variable nil (reparse-symbol function_parameters) [4406 4417]))              ) nil [4355 5131]))          
+      :file "inc_syn.py"
+      :pointmax 5132
+      :fsize 5131
+      :lastmodtime '(22751 47666 0 0)
+      :unmatched-syntax '((FROM 1026 . 1030) (PERIOD 1031 . 1032) (FROM 980 . 984) (PERIOD 985 . 986) (FROM 942 . 946) (PERIOD 947 . 948) (FROM 901 . 905) (PERIOD 906 . 907) (PERIOD 873 . 874) (FROM 867 . 871) (PERIOD 872 . 873) (PERIOD 837 . 838) (FROM 831 . 835) (PERIOD 836 . 837))))
   :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!lomap!algorithms!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

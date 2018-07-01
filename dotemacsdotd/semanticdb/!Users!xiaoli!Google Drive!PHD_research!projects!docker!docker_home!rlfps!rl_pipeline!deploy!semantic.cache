@@ -1,0 +1,108 @@
+;; Object deploy/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "deploy/"
+  :tables
+  (list
+    (semanticdb-table "deploy_tensorflow.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("tensorflow" include nil nil [1 24])
+            ("os" include nil nil [25 34])
+            ("numpy" include nil nil [35 53])
+            ("rl_pipeline.deploy.deploy_base" include nil nil [55 108])
+            ("DeployTensorflow" type
+               (:superclasses ("DeployBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [427 488])
+                            ("if" code nil (reparse-symbol indented_block_body) [498 587])
+                            ("if" code nil (reparse-symbol indented_block_body) [596 800])
+                            ("if" code nil (reparse-symbol indented_block_body) [809 1081]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [164 168])
+                            ("deploy_params" variable nil (reparse-symbol function_parameters) [187 200])
+                            ("policy" variable nil (reparse-symbol function_parameters) [219 225])
+                            ("policy_config" variable nil (reparse-symbol function_parameters) [249 262])
+                            ("state_preprocessor" variable nil (reparse-symbol function_parameters) [286 304])
+                            ("state_preprocessor_config" variable nil (reparse-symbol function_parameters) [328 353])
+                            ("sess" variable nil (reparse-symbol function_parameters) [377 381])
+                            ("logger" variable nil (reparse-symbol function_parameters) [405 411]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [151 1081])
+                    ("load_preprocessors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1117 1121])
+                            ("preprocessor_param_dir" variable nil (reparse-symbol function_parameters) [1123 1145]))                          )
+                        (reparse-symbol indented_block_body) [1094 1312])
+                    ("load_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1344 1348])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [1350 1359]))                          )
+                        (reparse-symbol indented_block_body) [1329 1429])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1449 1453])
+                            ("obs" variable nil (reparse-symbol function_parameters) [1455 1458])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [1460 1473]))                          )
+                        (reparse-symbol indented_block_body) [1434 1693]))                  
+                :type "class")
+                nil [110 1693])
+            ("if" code nil nil [1702 3322]))          
+      :file "deploy_tensorflow.py"
+      :pointmax 3322
+      :fsize 3321
+      :lastmodtime '(23207 13710 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "deploy_base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("DeployBase" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    This is the base class for model serving
+    '''" code nil (reparse-symbol indented_block_body) [31 87])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [144 178])
+                            ("self" variable nil (reparse-symbol indented_block_body) [187 207]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [106 110])
+                            ("deploy_params" variable nil (reparse-symbol function_parameters) [112 125])
+                            ("logger" variable nil (reparse-symbol function_parameters) [127 133]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [93 208])
+                    ("load_preprocessors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [236 240])
+                            ("preprocessor_param_dir" variable nil (reparse-symbol function_parameters) [242 264]))                          )
+                        (reparse-symbol indented_block_body) [213 299])
+                    ("load_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [327 331])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [333 342]))                          )
+                        (reparse-symbol indented_block_body) [312 377])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [397 401])
+                            ("obs" variable nil (reparse-symbol function_parameters) [403 406]))                          )
+                        (reparse-symbol indented_block_body) [382 440]))                  
+                :type "class")
+                nil [1 440]))          
+      :file "deploy_base.py"
+      :pointmax 440
+      :fsize 439
+      :lastmodtime '(23207 8007 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 209 . 416) (INDENT_BLOCK 209 . 383) (DEF 213 . 216) (NEWLINE 255 . 256) (INDENT_BLOCK 209 . 398) (DEF 213 . 216) (NEWLINE 248 . 249) (INDENT_BLOCK 209 . 391) (DEF 213 . 216) (NEWLINE 243 . 244) (INDENT_BLOCK 209 . 385) (DEF 213 . 216) (NEWLINE 237 . 238) (INDENT_BLOCK 209 . 379))))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!deploy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

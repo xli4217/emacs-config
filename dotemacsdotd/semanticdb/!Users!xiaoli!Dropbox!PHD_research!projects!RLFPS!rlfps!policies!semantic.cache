@@ -295,60 +295,7 @@
       :fsize 2131
       :lastmodtime '(22749 17643 0 0)
       :unmatched-syntax nil)
-    (semanticdb-table "deterministic_mlp_policy.py"
-      :major-mode 'python-mode
-      :tags 
-        '( ("numpy" include nil nil [1 19])
-            ("sandbox.rocky.tf.core.layers_powered" include nil nil [21 83])
-            ("sandbox.rocky.tf.core.layers" include nil nil [84 124])
-            ("sandbox.rocky.tf.core.network" include nil nil [125 170])
-            ("sandbox.rocky.tf.spaces.box" include nil nil [171 214])
-            ("rllab.core.serializable" include nil nil [216 264])
-            ("sandbox.rocky.tf.policies.base" include nil nil [265 314])
-            ("rllab.misc.overrides" include nil nil [315 357])
-            ("rllab.misc" include nil nil [358 387])
-            ("sandbox.rocky.tf.misc" include nil nil [388 434])
-            ("tensorflow" include nil nil [435 458])
-            ("DeterministicMLPPolicy" type
-               (:superclasses ("Policy" "LayersPowered" "Serializable")
-                :members 
-                  ( ("__init__" function
-                       (:suite 
-                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [833 871])
-                            ("with" code nil (reparse-symbol indented_block_body) [936 1644])
-                            ("super" code nil (reparse-symbol indented_block_body) [1665 1719])
-                            ("LayersPowered" code nil (reparse-symbol indented_block_body) [1728 1766])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1776 1893]))                          
-                        :parent "dummy"
-                        :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [557 561])
-                            ("name" variable nil (reparse-symbol function_parameters) [575 579])
-                            ("env_spec" variable nil (reparse-symbol function_parameters) [593 601])
-                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [615 627])
-                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [649 668])
-                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [693 712])
-                            ("bn" variable nil (reparse-symbol function_parameters) [731 733]))                          
-                        :constructor-flag t)
-                        (reparse-symbol indented_block_body) [531 1816])
-                    ("get_action" function
-                       (:parent "dummy"
-                        :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1836 1840])
-                            ("observation" variable nil (reparse-symbol function_parameters) [1842 1853]))                          )
-                        (reparse-symbol indented_block_body) [1821 1989])
-                    ("get_actions" function
-                       (:parent "dummy"
-                        :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2010 2014])
-                            ("observations" variable nil (reparse-symbol function_parameters) [2016 2028]))                          )
-                        (reparse-symbol indented_block_body) [1994 2136]))                  
-                :type "class")
-                nil [460 2136]))          
-      :file "deterministic_mlp_policy.py"
-      :pointmax 2136
-      :fsize 2135
-      :lastmodtime '(22795 45983 0 0)
-      :unmatched-syntax nil)
+
     (semanticdb-table "deterministic_mlp_policy_tf.py"
       :major-mode 'python-mode
       :tags 
@@ -358,46 +305,112 @@
             ("rllab.misc" include nil nil [143 172])
             ("sandbox.rocky.tf.misc" include nil nil [173 219])
             ("tensorflow" include nil nil [220 243])
-            ("DeterministicMLPPolicy" type
-               (:superclasses ("Policy" "LayersPowered" "Serializable")
+            ("tensorflow.contrib.slim" include nil nil [244 282])
+            ("numpy" include nil nil [283 301])
+            ("DeterministicMLPPolicyTF" type
+               (:superclasses ("Policy" "Serializable")
                 :members 
-                  ( ("__init__" function
+                  ( ("'''
+    create a simple feedforward neural network with TFSlim
+    '''" code nil (reparse-symbol indented_block_body) [361 431])
+                    ("__init__" function
                        (:suite 
-                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [540 578])
-                            ("with" code nil (reparse-symbol indented_block_body) [643 1351])
-                            ("super" code nil (reparse-symbol indented_block_body) [1372 1426])
-                            ("LayersPowered" code nil (reparse-symbol indented_block_body) [1435 1473])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1483 1600]))                          
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [682 720])
+                            ("with" code nil (reparse-symbol indented_block_body) [785 2286])
+                            ("super" code nil (reparse-symbol indented_block_body) [2295 2351]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [342 346])
-                            ("name" variable nil (reparse-symbol function_parameters) [360 364])
-                            ("env_spec" variable nil (reparse-symbol function_parameters) [378 386])
-                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [400 412])
-                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [434 453])
-                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [478 497])
-                            ("bn" variable nil (reparse-symbol function_parameters) [516 518]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [462 466])
+                            ("policy_scope" variable nil (reparse-symbol function_parameters) [480 492])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [506 514])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [528 540])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [562 581])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [620 639])
+                            ("bn" variable nil (reparse-symbol function_parameters) [658 660]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [316 1601])
+                        (reparse-symbol indented_block_body) [436 2352])
                     ("get_action" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1621 1625])
-                            ("observation" variable nil (reparse-symbol function_parameters) [1627 1638]))                          )
-                        (reparse-symbol indented_block_body) [1606 1774])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2379 2383])
+                            ("observation" variable nil (reparse-symbol function_parameters) [2385 2396]))                          )
+                        (reparse-symbol indented_block_body) [2364 2532])
                     ("get_actions" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1795 1799])
-                            ("observations" variable nil (reparse-symbol function_parameters) [1801 1813]))                          )
-                        (reparse-symbol indented_block_body) [1779 1921]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2553 2557])
+                            ("observations" variable nil (reparse-symbol function_parameters) [2559 2571]))                          )
+                        (reparse-symbol indented_block_body) [2537 2681])
+                    ("normalized_columns_initializer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2789 2793])
+                            ("std" variable nil (reparse-symbol function_parameters) [2795 2798]))                          )
+                        (reparse-symbol indented_block_body) [2754 3072])
+                    ("compile_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3098 3102])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [3104 3110])
+                            ("outputs" variable nil (reparse-symbol function_parameters) [3112 3119])
+                            ("log_name" variable nil (reparse-symbol function_parameters) [3121 3129]))                          )
+                        (reparse-symbol indented_block_body) [3077 3349]))                  
                 :type "class")
-                nil [245 1921]))          
+                nil [303 3349]))          
       :file "deterministic_mlp_policy_tf.py"
-      :pointmax 1921
-      :fsize 1920
-      :lastmodtime '(22795 46091 0 0)
-      :unmatched-syntax '((FROM 254 . 258) ($EOI 2032 . 2032))))
+      :pointmax 3349
+      :fsize 3348
+      :lastmodtime '(22802 11143 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "deterministic_mlp_policy_keras.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.core.serializable" include nil nil [1 49])
+            ("sandbox.rocky.tf.policies.base" include nil nil [50 99])
+            ("rllab.misc.overrides" include nil nil [100 142])
+            ("rllab.misc" include nil nil [143 172])
+            ("sandbox.rocky.tf.misc" include nil nil [173 219])
+            ("tensorflow" include nil nil [220 243])
+            ("DeterministicMLPPolicyKeras" type
+               (:superclasses ("Policy" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [531 569])
+                            ("with" code nil (reparse-symbol indented_block_body) [634 1046])
+                            ("super" code nil (reparse-symbol indented_block_body) [1067 1121])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1131 1248]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [333 337])
+                            ("name" variable nil (reparse-symbol function_parameters) [351 355])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [369 377])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [391 403])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [425 444])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [469 488])
+                            ("bn" variable nil (reparse-symbol function_parameters) [507 509]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [307 1249])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1269 1273])
+                            ("observation" variable nil (reparse-symbol function_parameters) [1275 1286]))                          )
+                        (reparse-symbol indented_block_body) [1254 1422])
+                    ("get_actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1443 1447])
+                            ("observations" variable nil (reparse-symbol function_parameters) [1449 1461]))                          )
+                        (reparse-symbol indented_block_body) [1427 1569]))                  
+                :type "class")
+                nil [246 1569]))          
+      :file "deterministic_mlp_policy_keras.py"
+      :pointmax 1569
+      :fsize 1568
+      :lastmodtime '(22802 15032 0 0)
+      :unmatched-syntax nil)
+)
   :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rlfps!policies!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

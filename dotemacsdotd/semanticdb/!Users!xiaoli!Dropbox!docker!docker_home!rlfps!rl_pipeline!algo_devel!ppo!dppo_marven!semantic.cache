@@ -1,0 +1,168 @@
+;; Object dppo_marven/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dppo_marven/"
+  :tables
+  (list
+    (semanticdb-table "ppo_runner.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("ppo_config_test" include nil nil [1 50])
+            ("rl_pipeline.train.rl.rl_runner_base" include nil nil [51 111])
+            ("rl_pipeline.agent_initializer.tensorflow_agent_initializer" include nil nil [112 209])
+            ("tensorflow" include nil nil [211 234])
+            ("numpy" include nil nil [236 254])
+            ("pandas" include nil nil [255 274])
+            ("os" include nil nil [275 284])
+            ("copy" include nil nil [285 296])
+            ("ray" include nil nil [297 307])
+            ("future.utils" include nil nil [308 342])
+            ("PPORunner" type
+               (:superclasses ("RLRunnerBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [442 481])
+                            ("tf" code nil (reparse-symbol indented_block_body) [491 530])
+                            ("np" code nil (reparse-symbol indented_block_body) [539 574])
+                            ("self" variable nil (reparse-symbol indented_block_body) [592 612])
+                            ("if" code nil (reparse-symbol indented_block_body) [630 1137])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1146 1160])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1169 1194])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1203 1219]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [393 397])
+                            ("config" variable nil (reparse-symbol function_parameters) [399 405])
+                            ("remote" variable nil (reparse-symbol function_parameters) [407 413])
+                            ("ray" variable nil (reparse-symbol function_parameters) [421 424]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [380 1220])
+                    ("update_config" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1251 1255])
+                            ("hyperparam_dict" variable nil (reparse-symbol function_parameters) [1257 1272]))                          )
+                        (reparse-symbol indented_block_body) [1233 1607])
+                    ("create_agent" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1653 1657])
+                            ("initializer" variable nil (reparse-symbol function_parameters) [1659 1670])
+                            ("initial_climb" variable nil (reparse-symbol function_parameters) [1672 1685]))                          )
+                        (reparse-symbol indented_block_body) [1636 8903])
+                    ("get_trainable_weights" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8959 8963]))                          )
+                        (reparse-symbol indented_block_body) [8933 9129])
+                    ("set_trainable_weights" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9172 9176])
+                            ("policy_weights" variable nil (reparse-symbol function_parameters) [9178 9192])
+                            ("value_weights" variable nil (reparse-symbol function_parameters) [9194 9207]))                          )
+                        (reparse-symbol indented_block_body) [9146 9404])
+                    ("get_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9435 9439])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [9441 9454]))                          )
+                        (reparse-symbol indented_block_body) [9421 9674])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9697 9701]))                          )
+                        (reparse-symbol indented_block_body) [9687 11293]))                  
+                :type "class")
+                nil [344 11293])
+            ("if" code nil nil [11308 13513]))          
+      :file "ppo_runner.py"
+      :pointmax 13733
+      :fsize 13732
+      :lastmodtime '(23238 22191 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ppo_config_test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("rl_pipeline.configuration.configuration" include nil nil [11 76])
+            ("numpy" include nil nil [77 95])
+            ("rl_pipeline.env.pendulum_env" include nil nil [97 157])
+            ("rl_pipeline.env.lunarlander_env" include nil nil [158 216])
+            ("rl_pipeline.env.gym_robotics_env" include nil nil [217 276])
+            ("rl_pipeline.env.pybullet_gym_env" include nil nil [277 336])
+            ("rl_pipeline.logging.tensorboard_logger" include nil nil [339 407])
+            ("rl_pipeline.hyperparameter_tuner.random_search" include nil nil [408 479])
+            ("rl_pipeline.hyperparameter_tuner.skopt_tuner" include nil nil [480 547])
+            ("rl_pipeline.preprocessor.running_average" include nil nil [548 615])
+            ("rl_pipeline.preprocessor.standardize" include nil nil [616 676])
+            ("rl_pipeline.sampler.batch_sampler" include nil nil [677 735])
+            ("rl_pipeline.agent_initializer.max_return_initializer" include nil nil [736 821])
+            ("rl_pipeline.algo_devel.ppo.dppo_marven.policies.mlp_policy" include nil nil [823 903])
+            ("rl_pipeline.algo_devel.ppo.dppo_marven.value_functions.mlp_value" include nil nil [904 989])
+            ("rl_pipeline.algo_devel.ppo.dppo_marven.agent.PPOAgent" include nil nil [990 1064])
+            ("tensorflow" include nil nil [1066 1089])
+            ("rlfps_dir" variable nil nil [1091 1127])
+            ("experiment_root_dir" variable nil nil [1129 1160])
+            ("if" code nil nil [1162 1228])
+            ("experiment_dir" variable nil nil [1229 1294])
+            ("current_exp_dir" variable nil nil [1295 1348])
+            ("configuration" variable nil nil [1386 1448])
+            ("steps_per_episode" variable nil nil [1501 1525])
+            ("CONFIG" variable nil nil [1592 5974]))          
+      :file "ppo_config_test.py"
+      :pointmax 5976
+      :fsize 5975
+      :lastmodtime '(23238 16864 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ppo_deploy_runner.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cloudpickle" include nil nil [1 19])
+            ("rl_pipeline.deploy.deploy_tensorflow" include nil nil [20 85])
+            ("os" include nil nil [87 96])
+            ("copy" include nil nil [97 108])
+            ("numpy" include nil nil [109 127])
+            ("PPODeployRunner" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [237 276])
+                            ("self" variable nil (reparse-symbol indented_block_body) [359 453])
+                            ("self" variable nil (reparse-symbol indented_block_body) [462 482])
+                            ("env_params" variable nil (reparse-symbol indented_block_body) [593 665])
+                            ("env_params" variable nil (reparse-symbol indented_block_body) [674 702])
+                            ("self" variable nil (reparse-symbol indented_block_body) [711 823])
+                            ("policy_config" variable nil (reparse-symbol indented_block_body) [959 1037])
+                            ("policy_config" variable nil (reparse-symbol indented_block_body) [1046 1113])
+                            ("policy_config" variable nil (reparse-symbol indented_block_body) [1122 1189])
+                            ("policy_config" variable nil (reparse-symbol indented_block_body) [1198 1257])
+                            ("policy_config" variable nil (reparse-symbol indented_block_body) [1266 1329])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1338 1377])
+                            ("state_preprocessor_config" variable nil (reparse-symbol indented_block_body) [1424 1543])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1561 1970]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [178 182])
+                            ("deployer" variable nil (reparse-symbol function_parameters) [184 192])
+                            ("deploy_runner_params" variable nil (reparse-symbol function_parameters) [194 214])
+                            ("logger" variable nil (reparse-symbol function_parameters) [216 222]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [165 1972])
+                    ("run_evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1995 1999]))                          )
+                        (reparse-symbol indented_block_body) [1978 2744]))                  
+                :type "class")
+                nil [129 2744])
+            ("if" code nil nil [2753 3381]))          
+      :file "ppo_deploy_runner.py"
+      :pointmax 3381
+      :fsize 3380
+      :lastmodtime '(23243 46566 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!rl_pipeline!algo_devel!ppo!dppo_marven!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

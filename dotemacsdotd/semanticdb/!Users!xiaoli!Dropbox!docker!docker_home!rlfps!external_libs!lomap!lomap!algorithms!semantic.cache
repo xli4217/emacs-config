@@ -1,0 +1,109 @@
+;; Object algorithms/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "algorithms/"
+  :tables
+  (list
+    (semanticdb-table "product.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("itertools" include nil nil [830 852])
+            ("operator" include nil nil [853 874])
+            ("logging" include nil nil [875 889])
+            ("collections" include nil nil [890 919])
+            ("pdb" include nil nil [920 930])
+            ("Timer" include nil nil [947 983])
+            ("Ts" include nil nil [947 983])
+            ("Model" include nil nil [947 983])
+            ("Markov" include nil nil [947 983])
+            ("Fsa" include nil nil [947 983])
+            ("functools" include nil nil [984 1012])
+            ("logger" variable nil nil [1038 1074])
+            ("__all__" variable nil nil [1156 1425])
+            ("powerset" function (:arguments 
+              ( ("iterable" variable nil (reparse-symbol function_parameters) [1440 1448]))              ) nil [1427 1765])
+            ("no_data" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [1778 1783])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [1785 1793]))              ) nil [1766 1853])
+            ("get_default_state_data" function (:arguments 
+              ( ("state" variable nil (reparse-symbol function_parameters) [1881 1886])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [1888 1896]))              ) nil [1854 2228])
+            ("get_default_transition_data" function (:arguments 
+              ( ("current_state" variable nil (reparse-symbol function_parameters) [2261 2274])
+                ("next_state" variable nil (reparse-symbol function_parameters) [2276 2286])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [2288 2296]))              ) nil [2229 2677])
+            ("process_product_initial_state" function (:arguments 
+              ( ("product_model" variable nil (reparse-symbol function_parameters) [2712 2725])
+                ("init_state" variable nil (reparse-symbol function_parameters) [2727 2737])
+                ("get_state_data" variable nil (reparse-symbol function_parameters) [2739 2753])
+                ("is_final" variable nil (reparse-symbol function_parameters) [2789 2797]))              ) nil [2678 3197])
+            ("process_product_transition" function (:arguments 
+              ( ("product_model" variable nil (reparse-symbol function_parameters) [3229 3242])
+                ("stack" variable nil (reparse-symbol function_parameters) [3244 3249])
+                ("current_state" variable nil (reparse-symbol function_parameters) [3251 3264])
+                ("next_state" variable nil (reparse-symbol function_parameters) [3266 3276])
+                ("blocking" variable nil (reparse-symbol function_parameters) [3309 3317])
+                ("is_final" variable nil (reparse-symbol function_parameters) [3319 3327])
+                ("get_state_data" variable nil (reparse-symbol function_parameters) [3329 3343])
+                ("get_transition_data" variable nil (reparse-symbol function_parameters) [3376 3395]))              ) nil [3198 5222])
+            ("ts_times_fsa" function (:arguments 
+              ( ("ts" variable nil (reparse-symbol function_parameters) [5241 5243])
+                ("fsa" variable nil (reparse-symbol function_parameters) [5245 5248])
+                ("from_current" variable nil (reparse-symbol function_parameters) [5250 5262])
+                ("expand_finals" variable nil (reparse-symbol function_parameters) [5270 5283])
+                ("get_state_data" variable nil (reparse-symbol function_parameters) [5307 5321])
+                ("get_transition_data" variable nil (reparse-symbol function_parameters) [5363 5382]))              ) nil [5224 9874])
+            ("ts_times_buchi" function (:arguments 
+              ( ("ts" variable nil (reparse-symbol function_parameters) [9894 9896])
+                ("buchi" variable nil (reparse-symbol function_parameters) [9898 9903]))              ) nil [9875 13048])
+            ("ts_times_ts" function (:arguments 
+              ( ("ts_tuple" variable nil (reparse-symbol function_parameters) [13065 13073]))              ) nil [13049 16540])
+            ("pfsa_default_transition_data" function (:arguments 
+              ( ("current_state" variable nil (reparse-symbol function_parameters) [16574 16587])
+                ("next_state" variable nil (reparse-symbol function_parameters) [16589 16599])
+                ("guard" variable nil (reparse-symbol function_parameters) [16601 16606])
+                ("bitmaps" variable nil (reparse-symbol function_parameters) [16608 16615])
+                ("fsa_tuple" variable nil (reparse-symbol function_parameters) [16650 16659]))              ) nil [16541 16817])
+            ("fsa_times_fsa" function (:arguments 
+              ( ("fsa_tuple" variable nil (reparse-symbol function_parameters) [16836 16845])
+                ("from_current" variable nil (reparse-symbol function_parameters) [16847 16859])
+                ("get_state_data" variable nil (reparse-symbol function_parameters) [16885 16899])
+                ("get_transition_data" variable nil (reparse-symbol function_parameters) [16927 16946]))              ) nil [16818 22327])
+            ("ts_times_fsas" function (:arguments 
+              ( ("ts" variable nil (reparse-symbol function_parameters) [22346 22348])
+                ("fsa_tuple" variable nil (reparse-symbol function_parameters) [22350 22359])
+                ("from_current" variable nil (reparse-symbol function_parameters) [22361 22373])
+                ("expand_finals" variable nil (reparse-symbol function_parameters) [22380 22393])
+                ("get_state_data" variable nil (reparse-symbol function_parameters) [22418 22432])
+                ("get_transition_data" variable nil (reparse-symbol function_parameters) [22460 22479]))              ) nil [22328 29134])
+            ("flatten_tuple" function (:arguments 
+              ( ("t" variable nil (reparse-symbol function_parameters) [29153 29154]))              ) nil [29135 29395])
+            ("markov_times_markov" function (:arguments 
+              ( ("markov_tuple" variable nil (reparse-symbol function_parameters) [29420 29432]))              ) nil [29396 34596])
+            ("markov_times_fsa" function (:arguments 
+              ( ("markov" variable nil (reparse-symbol function_parameters) [34619 34625])
+                ("fsa" variable nil (reparse-symbol function_parameters) [34627 34630]))              ) nil [34598 38395]))          
+      :file "product.py"
+      :pointmax 38395
+      :fsize 38394
+      :lastmodtime '(23234 31521 0 0)
+      :unmatched-syntax '((PERIOD 938 . 939) (FROM 932 . 936) (PERIOD 937 . 938)))
+
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 766
+      :fsize 765
+      :lastmodtime '(23234 31521 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "multi_agent_optimal_run.py"
+      :file "multi_agent_optimal_run.py"
+      :fsize 2356
+      :lastmodtime '(23234 31521 0 0))
+    (semanticdb-table "robust_multi_agent_optimal_run.py"
+      :file "robust_multi_agent_optimal_run.py"
+      :fsize 5321
+      :lastmodtime '(23234 31521 0 0)))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!external_libs!lomap!lomap!algorithms!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

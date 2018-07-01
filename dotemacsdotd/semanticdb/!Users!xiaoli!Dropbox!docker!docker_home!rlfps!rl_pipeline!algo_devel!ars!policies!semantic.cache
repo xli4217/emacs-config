@@ -1,0 +1,73 @@
+;; Object policies/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "policies/"
+  :tables
+  (list
+    (semanticdb-table "linear_policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("cloudpickle" include nil nil [30 48])
+            ("LinearPolicy" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [189 209])
+                            ("self" variable nil (reparse-symbol indented_block_body) [218 234])
+                            ("self" variable nil (reparse-symbol indented_block_body) [243 275])
+                            ("self" variable nil (reparse-symbol indented_block_body) [284 325])
+                            ("self" variable nil (reparse-symbol indented_block_body) [334 369])
+                            ("self" variable nil (reparse-symbol indented_block_body) [378 413])
+                            ("self" variable nil (reparse-symbol indented_block_body) [423 443])
+                            ("self" variable nil (reparse-symbol indented_block_body) [453 524]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [95 99])
+                            ("config" variable nil (reparse-symbol function_parameters) [118 124])
+                            ("seed" variable nil (reparse-symbol function_parameters) [143 147])
+                            ("logger" variable nil (reparse-symbol function_parameters) [166 172]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [82 525])
+                    ("save" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [547 551])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [553 562])
+                            ("model_name" variable nil (reparse-symbol function_parameters) [564 574]))                          )
+                        (reparse-symbol indented_block_body) [538 861])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [878 882])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [884 893]))                          )
+                        (reparse-symbol indented_block_body) [866 1064])
+                    ("get_weights" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1085 1089]))                          )
+                        (reparse-symbol indented_block_body) [1069 1120])
+                    ("set_weights" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1141 1145])
+                            ("weights" variable nil (reparse-symbol function_parameters) [1147 1154]))                          )
+                        (reparse-symbol indented_block_body) [1125 1188])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1217 1221])
+                            ("obs" variable nil (reparse-symbol function_parameters) [1223 1226])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [1228 1241]))                          )
+                        (reparse-symbol indented_block_body) [1202 1301]))                  
+                :type "class")
+                nil [50 1301]))          
+      :file "linear_policy.py"
+      :pointmax 1318
+      :fsize 1317
+      :lastmodtime '(23224 4113 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!rl_pipeline!algo_devel!ars!policies!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

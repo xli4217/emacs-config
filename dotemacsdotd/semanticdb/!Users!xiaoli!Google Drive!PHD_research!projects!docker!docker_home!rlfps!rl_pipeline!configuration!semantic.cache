@@ -1,0 +1,123 @@
+;; Object configuration/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "configuration/"
+  :tables
+  (list
+    (semanticdb-table "configuration.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("shutil" include nil nil [11 24])
+            ("Configuration" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    This class holds all the paths and hyperparameters. Experiment paths follow this hierarchy
+
+    + Experiment
+    |
+    + - exp1
+    |
+    + -- csv_data
+    |
+    + --- hyperparam1 (csv_data for hyperparam1 is stored in this folder)
+    .
+    .
+    .
+    |
+    + -- log
+    |
+    + --- hyperparam1
+    .
+    .
+    .
+    + -- models
+    |
+    + --- hyperparam1
+    .
+    .
+    .
+    + --- config
+    |
+    + -- hyperparam1
+    .
+    .
+    .
+    + --- info
+    |
+    + -- hyperparam1
+    .
+    .
+    .
+    + - exp2
+    |
+    .
+    .
+    .
+    
+    '''" code nil (reparse-symbol indented_block_body) [60 616])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [725 754])
+                            ("self" variable nil (reparse-symbol indented_block_body) [826 850])
+                            ("self" variable nil (reparse-symbol indented_block_body) [924 948])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1008 1027])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1123 1144])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1215 1246])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1347 1386])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1462 1496])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1514 1550])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1566 1603])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1618 1653])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1668 1710])
+                            ("self" code nil (reparse-symbol indented_block_body) [1776 1807])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1890 1953])
+                            ("if" code nil (reparse-symbol indented_block_body) [1962 2101])
+                            ("self" code nil (reparse-symbol indented_block_body) [2109 2143])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2153 2226])
+                            ("self" code nil (reparse-symbol indented_block_body) [2235 2276])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2286 2349])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2358 2411])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2420 2477])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2486 2545])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2554 2609])
+                            ("self" code nil (reparse-symbol indented_block_body) [2627 2661])
+                            ("self" code nil (reparse-symbol indented_block_body) [2670 2699])
+                            ("self" code nil (reparse-symbol indented_block_body) [2708 2739])
+                            ("self" code nil (reparse-symbol indented_block_body) [2748 2780])
+                            ("self" code nil (reparse-symbol indented_block_body) [2789 2819]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [634 638])
+                            ("experiment_dir" variable nil (reparse-symbol function_parameters) [657 671])
+                            ("experiment_name" variable nil (reparse-symbol function_parameters) [690 705]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [621 2820])
+                    ("create_hyperparam_exp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2864 2868])
+                            ("hyperparam_str" variable nil (reparse-symbol function_parameters) [2869 2883]))                          )
+                        (reparse-symbol indented_block_body) [2838 3919])
+                    ("create_dir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3947 3951])
+                            ("directory" variable nil (reparse-symbol function_parameters) [3953 3962]))                          )
+                        (reparse-symbol indented_block_body) [3932 4130])
+                    ("remove_dir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4162 4166])
+                            ("directory" variable nil (reparse-symbol function_parameters) [4168 4177]))                          )
+                        (reparse-symbol indented_block_body) [4147 4297]))                  
+                :type "class")
+                nil [26 4297]))          
+      :file "configuration.py"
+      :pointmax 4299
+      :fsize 4298
+      :lastmodtime '(23170 12119 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!configuration!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

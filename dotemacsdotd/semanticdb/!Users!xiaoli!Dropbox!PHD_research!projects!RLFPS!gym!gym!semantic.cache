@@ -1,0 +1,525 @@
+;; Object gym/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gym/"
+  :tables
+  (list
+    (semanticdb-table "core.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logging" include nil nil [1 15])
+            ("logger" variable nil nil [16 52])
+            ("numpy" include nil nil [54 72])
+            ("gym" include nil nil [74 95])
+            ("gym.utils" include nil nil [96 133])
+            ("env_closer" variable nil nil [135 163])
+            ("Env" type
+               (:documentation "The main OpenAI Gym class. It encapsulates an environment with
+    arbitrary behind-the-scenes dynamics. An environment can be
+    partially or fully observed.
+
+    The main API methods that users of this class need to know are:
+
+        step
+        reset
+        render
+        close
+        seed
+
+    When implementing an environment, override the following methods
+    in your subclass:
+
+        _step
+        _reset
+        _render
+        _close
+        _seed
+
+    And set the following attributes:
+
+        action_space: The Space object corresponding to valid actions
+        observation_space: The Space object corresponding to valid observations
+        reward_range: A tuple corresponding to the min and max possible rewards
+
+    Note: a default reward range set to [-inf,+inf] already exists. Set it if you want a narrower range.
+
+    The methods are accessed publicly as \"step\", \"reset\", etc.. The
+    non-underscored versions are wrapper methods to which we may add
+    functionality over time.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__new__" function (:arguments 
+                      ( ("cls" variable nil (reparse-symbol function_parameters) [1253 1256])
+                        ("args" variable nil (reparse-symbol function_parameters) [1258 1263])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [1265 1273]))                      ) (reparse-symbol indented_block_body) [1241 1666])
+                    ("metadata" variable nil (reparse-symbol indented_block_body) [1705 1736])
+                    ("reward_range" variable nil (reparse-symbol indented_block_body) [1741 1773])
+                    ("_close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1824 1828]))                          )
+                        (reparse-symbol indented_block_body) [1813 1844])
+                    ("_configure" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1864 1868])
+                            ("args" variable nil (reparse-symbol function_parameters) [1869 1874])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1875 1883]))                          )
+                        (reparse-symbol indented_block_body) [1849 1899])
+                    ("action_space" variable nil (reparse-symbol indented_block_body) [1946 1965])
+                    ("observation_space" variable nil (reparse-symbol indented_block_body) [1970 1994])
+                    ("_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2043 2047])
+                            ("action" variable nil (reparse-symbol function_parameters) [2049 2055]))                          )
+                        (reparse-symbol indented_block_body) [2033 2084])
+                    ("_reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2099 2103]))                          )
+                        (reparse-symbol indented_block_body) [2088 2132])
+                    ("_render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2148 2152])
+                            ("mode" variable nil (reparse-symbol function_parameters) [2154 2158])
+                            ("close" variable nil (reparse-symbol function_parameters) [2168 2173]))                          )
+                        (reparse-symbol indented_block_body) [2136 2189])
+                    ("_seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2203 2207])
+                            ("seed" variable nil (reparse-symbol function_parameters) [2209 2213]))                          )
+                        (reparse-symbol indented_block_body) [2193 2231])
+                    ("_owns_render" variable nil (reparse-symbol indented_block_body) [2258 2277])
+                    ("monitor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2309 2313]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2283 2538])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2552 2556])
+                            ("action" variable nil (reparse-symbol function_parameters) [2558 2564]))                          
+                        :documentation "Run one timestep of the environment's dynamics. When end of
+        episode is reached, you are responsible for calling `reset()`
+        to reset this environment's state.
+
+        Accepts an action and returns a tuple (observation, reward, done, info).
+
+        Args:
+            action (object): an action provided by the environment
+
+        Returns:
+            observation (object): agent's observation of the current environment
+            reward (float) : amount of reward returned after previous action
+            done (boolean): whether the episode has ended, in which case further step() calls will return undefined results
+            info (dict): contains auxiliary diagnostic information (helpful for debugging, and sometimes learning)
+        ")
+                        (reparse-symbol indented_block_body) [2543 3376])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3391 3395]))                          
+                        :documentation "Resets the state of the environment and returns an initial observation.
+
+        Returns: observation (object): the initial observation of the
+            space.
+        ")
+                        (reparse-symbol indented_block_body) [3381 3613])
+                    ("render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3629 3633])
+                            ("mode" variable nil (reparse-symbol function_parameters) [3635 3639])
+                            ("close" variable nil (reparse-symbol function_parameters) [3649 3654]))                          
+                        :documentation "Renders the environment.
+
+        The set of supported modes varies per environment. (And some
+        environments do not support rendering at all.) By convention,
+        if mode is:
+
+        - human: render to the current display or terminal and
+          return nothing. Usually for human consumption.
+        - rgb_array: Return an numpy.ndarray with shape (x, y, 3),
+          representing RGB values for an x-by-y pixel image, suitable
+          for turning into a video.
+        - ansi: Return a string (str) or StringIO.StringIO containing a
+          terminal-style text representation. The text can include newlines
+          and ANSI escape sequences (e.g. for colors).
+
+        Note:
+            Make sure that your class's metadata 'render.modes' key includes
+              the list of supported modes. It's recommended to call super()
+              in implementations to use the functionality of this method.
+
+        Args:
+            mode (str): the mode to render with
+            close (bool): close all open renderings
+
+        Example:
+
+        class MyEnv(Env):
+            metadata = {'render.modes': ['human', 'rgb_array']}
+
+            def render(self, mode='human'):
+                if mode == 'rgb_array':
+                    return np.array(...) # return RGB frame suitable for video
+                elif mode is 'human':
+                    ... # pop up a window and render
+                else:
+                    super(MyEnv, self).render(mode=mode) # just raise an exception
+        ")
+                        (reparse-symbol indented_block_body) [3618 5684])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5699 5703]))                          
+                        :documentation "Override _close in your subclass to perform any necessary cleanup.
+
+        Environments will automatically close() themselves when
+        garbage collected or when the program exits.
+        ")
+                        (reparse-symbol indented_block_body) [5689 6343])
+                    ("seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6357 6361])
+                            ("seed" variable nil (reparse-symbol function_parameters) [6363 6367]))                          
+                        :documentation "Sets the seed for this env's random number generator(s).
+
+        Note:
+            Some environments use multiple pseudorandom number generators.
+            We want to capture all such seeds used in order to ensure that
+            there aren't accidental correlations between multiple generators.
+
+        Returns:
+            list<bigint>: Returns the list of seeds used in this env's random
+              number generators. The first value in the list should be the
+              \"main\" seed, or the value which a reproducer should pass to
+              'seed'. Often, the main seed equals the provided 'seed', but
+              this won't be true if seed=None, for example.
+        ")
+                        (reparse-symbol indented_block_body) [6348 7110])
+                    ("unwrapped" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7143 7147]))                          
+                        :documentation "Completely unwrap this env.
+
+        Returns:
+            gym.Env: The base non-wrapped gym.Env instance
+        ")
+                        (reparse-symbol indented_block_body) [7115 7298])
+                    ("__del__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7315 7319]))                          )
+                        (reparse-symbol indented_block_body) [7303 7343])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7360 7364]))                          )
+                        (reparse-symbol indented_block_body) [7348 7550])
+                    ("configure" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7569 7573])
+                            ("args" variable nil (reparse-symbol function_parameters) [7575 7580])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [7582 7590]))                          )
+                        (reparse-symbol indented_block_body) [7555 8241]))                  
+                :type "class")
+                nil [193 8241])
+            ("Space" type
+               (:documentation "Defines the observation and action spaces, so you can write generic
+    code that applies to any Env. For example, you can choose a random
+    action.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8483 8487]))                          
+                        :documentation "
+        Uniformly randomly sample a random element of this space
+        ")
+                        (reparse-symbol indented_block_body) [8472 8613])
+                    ("contains" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8631 8635])
+                            ("x" variable nil (reparse-symbol function_parameters) [8637 8638]))                          
+                        :documentation "
+        Return boolean specifying if x is a valid
+        member of this space
+        ")
+                        (reparse-symbol indented_block_body) [8618 8778])
+                    ("to_jsonable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8799 8803])
+                            ("sample_n" variable nil (reparse-symbol function_parameters) [8805 8813]))                          
+                        :documentation "Convert a batch of samples from this space to a JSONable data type.")
+                        (reparse-symbol indented_block_body) [8783 8972])
+                    ("from_jsonable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8995 8999])
+                            ("sample_n" variable nil (reparse-symbol function_parameters) [9001 9009]))                          
+                        :documentation "Convert a JSONable data type to a batch of samples from this space.")
+                        (reparse-symbol indented_block_body) [8977 9168]))                  
+                :type "class")
+                nil [8280 9168])
+            ("Wrapper" type
+               (:superclasses ("Env")
+                :members 
+                  ( ("metadata" variable nil (reparse-symbol indented_block_body) [9256 9269])
+                    ("_owns_render" variable nil (reparse-symbol indented_block_body) [9274 9294])
+                    ("env" variable nil (reparse-symbol indented_block_body) [9377 9387])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [9656 9670])
+                            ("metadata" variable nil (reparse-symbol indented_block_body) [9718 9742])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9751 9791])
+                            ("self" code nil (reparse-symbol indented_block_body) [9800 9830])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9840 9881])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9890 9941])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9950 9991])
+                            ("self" code nil (reparse-symbol indented_block_body) [10000 10029]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9406 9410])
+                            ("env" variable nil (reparse-symbol function_parameters) [9412 9415]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9393 9800])
+                    ("class_name" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [9837 9840]))                          )
+                        (reparse-symbol indented_block_body) [9805 9871])
+                    ("_ensure_no_double_wrap" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9903 9907]))                          )
+                        (reparse-symbol indented_block_body) [9876 10250])
+                    ("_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10265 10269])
+                            ("action" variable nil (reparse-symbol function_parameters) [10271 10277]))                          )
+                        (reparse-symbol indented_block_body) [10255 10317])
+                    ("_reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10436 10440]))                          )
+                        (reparse-symbol indented_block_body) [10425 10475])
+                    ("_render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10492 10496])
+                            ("mode" variable nil (reparse-symbol function_parameters) [10498 10502])
+                            ("close" variable nil (reparse-symbol function_parameters) [10512 10517]))                          )
+                        (reparse-symbol indented_block_body) [10480 10570])
+                    ("_close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10586 10590]))                          )
+                        (reparse-symbol indented_block_body) [10575 10625])
+                    ("_seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10640 10644])
+                            ("seed" variable nil (reparse-symbol function_parameters) [10646 10650]))                          )
+                        (reparse-symbol indented_block_body) [10630 10693])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10710 10714]))                          )
+                        (reparse-symbol indented_block_body) [10698 10779])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10797 10801]))                          )
+                        (reparse-symbol indented_block_body) [10784 10829])
+                    ("unwrapped" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10862 10866]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10834 10903])
+                    ("spec" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10931 10935]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10908 10967]))                  
+                :type "class")
+                nil [9169 10967])
+            ("ObservationWrapper" type
+               (:superclasses ("Wrapper")
+                :members 
+                  ( ("_reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11018 11022]))                          )
+                        (reparse-symbol indented_block_body) [11007 11110])
+                    ("_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11125 11129])
+                            ("action" variable nil (reparse-symbol function_parameters) [11131 11137]))                          )
+                        (reparse-symbol indented_block_body) [11115 11269])
+                    ("observation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11290 11294])
+                            ("observation" variable nil (reparse-symbol function_parameters) [11296 11307]))                          )
+                        (reparse-symbol indented_block_body) [11274 11356])
+                    ("_observation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11378 11382])
+                            ("observation" variable nil (reparse-symbol function_parameters) [11384 11395]))                          )
+                        (reparse-symbol indented_block_body) [11361 11432]))                  
+                :type "class")
+                nil [10968 11432])
+            ("RewardWrapper" type
+               (:superclasses ("Wrapper")
+                :members 
+                  ( ("_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11477 11481])
+                            ("action" variable nil (reparse-symbol function_parameters) [11483 11489]))                          )
+                        (reparse-symbol indented_block_body) [11467 11616])
+                    ("reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11632 11636])
+                            ("reward" variable nil (reparse-symbol function_parameters) [11638 11644]))                          )
+                        (reparse-symbol indented_block_body) [11621 11683])
+                    ("_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11700 11704])
+                            ("reward" variable nil (reparse-symbol function_parameters) [11706 11712]))                          )
+                        (reparse-symbol indented_block_body) [11688 11749]))                  
+                :type "class")
+                nil [11433 11749])
+            ("ActionWrapper" type
+               (:superclasses ("Wrapper")
+                :members 
+                  ( ("_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11794 11798])
+                            ("action" variable nil (reparse-symbol function_parameters) [11800 11806]))                          )
+                        (reparse-symbol indented_block_body) [11784 11883])
+                    ("action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11899 11903])
+                            ("action" variable nil (reparse-symbol function_parameters) [11905 11911]))                          )
+                        (reparse-symbol indented_block_body) [11888 11950])
+                    ("_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11967 11971])
+                            ("action" variable nil (reparse-symbol function_parameters) [11973 11979]))                          )
+                        (reparse-symbol indented_block_body) [11955 12016])
+                    ("reverse_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12040 12044])
+                            ("action" variable nil (reparse-symbol function_parameters) [12046 12052]))                          )
+                        (reparse-symbol indented_block_body) [12021 12099])
+                    ("_reverse_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12124 12128])
+                            ("action" variable nil (reparse-symbol function_parameters) [12130 12136]))                          )
+                        (reparse-symbol indented_block_body) [12104 12173]))                  
+                :type "class")
+                nil [11750 12173]))          
+      :file "core.py"
+      :pointmax 12173
+      :fsize 12172
+      :lastmodtime '(22837 44411 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "configuration.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logging" include nil nil [1 15])
+            ("sys" include nil nil [16 26])
+            ("logger" variable nil nil [28 64])
+            ("root_logger" variable nil nil [66 99])
+            ("package_name" variable nil nil [176 225])
+            ("gym_logger" variable nil nil [226 270])
+            ("_extra_loggers" variable nil nil [391 420])
+            ("formatter" variable nil nil [451 509])
+            ("handler" variable nil nil [510 553])
+            ("handler" code nil nil [554 585])
+            ("logger_setup" function (:arguments 
+              ( ("_" variable nil (reparse-symbol function_parameters) [698 699]))              ) nil [681 916])
+            ("undo_logger_setup" function (:documentation "Undoes the automatic logging setup done by OpenAI Gym. You should call
+    this function if you want to manually configure logging
+    yourself. Typical usage would involve putting something like the
+    following at the top of your script:
+
+    gym.undo_logger_setup()
+    logger = logging.getLogger()
+    logger.addHandler(logging.StreamHandler(sys.stderr))
+    ") nil [917 1430]))          
+      :file "configuration.py"
+      :pointmax 1430
+      :fsize 1429
+      :lastmodtime '(22791 23400 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("distutils.version" include nil nil [1 25])
+            ("logging" include nil nil [26 40])
+            ("sys" include nil nil [41 51])
+            ("gym" include nil nil [53 74])
+            ("gym.configuration" include nil nil [75 136])
+            ("gym.utils" include nil nil [137 166])
+            ("gym.version" include nil nil [167 213])
+            ("logger" variable nil nil [215 251])
+            ("sanity_check_dependencies" function nil nil [358 971])
+            ("logger_setup" code nil nil [1874 1888])
+            ("del" code nil nil [1889 1905])
+            ("sanity_check_dependencies" code nil nil [1907 1934])
+            ("gym.core" include nil nil [1936 2026])
+            ("gym.benchmarks" include nil nil [2027 2068])
+            ("gym.envs" include nil nil [2069 2100])
+            ("gym.scoreboard.api" include nil nil [2101 2138])
+            ("gym" include nil nil [2139 2163])
+            ("__all__" variable nil nil [2165 2240]))          
+      :file "__init__.py"
+      :pointmax 2241
+      :fsize 2240
+      :lastmodtime '(22791 23400 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "version.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("VERSION" variable nil nil [1 18]))          
+      :file "version.py"
+      :pointmax 19
+      :fsize 18
+      :lastmodtime '(22791 23400 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gym!gym!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

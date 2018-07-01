@@ -1,0 +1,206 @@
+;; Object deploy/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "deploy/"
+  :tables
+  (list
+    (semanticdb-table "deploy_tensorflow.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("tensorflow" include nil nil [1 24])
+            ("os" include nil nil [25 34])
+            ("numpy" include nil nil [35 53])
+            ("rl_pipeline.deploy.deploy_base" include nil nil [55 108])
+            ("DeployTensorflow" type
+               (:superclasses ("DeployBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [429 518])
+                            ("if" code nil (reparse-symbol indented_block_body) [527 753])
+                            ("super" code nil (reparse-symbol indented_block_body) [771 1106]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [164 168])
+                            ("deploy_params" variable nil (reparse-symbol function_parameters) [187 200])
+                            ("policy" variable nil (reparse-symbol function_parameters) [219 225])
+                            ("policy_config" variable nil (reparse-symbol function_parameters) [249 262])
+                            ("state_preprocessor" variable nil (reparse-symbol function_parameters) [286 304])
+                            ("state_preprocessor_config" variable nil (reparse-symbol function_parameters) [328 353])
+                            ("sess" variable nil (reparse-symbol function_parameters) [377 381])
+                            ("logger" variable nil (reparse-symbol function_parameters) [405 411]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [151 1107]))                  
+                :type "class")
+                nil [110 1107])
+            ("if" code nil nil [1123 2743]))          
+      :file "deploy_tensorflow.py"
+      :pointmax 2743
+      :fsize 2742
+      :lastmodtime '(23286 9432 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "deploy_base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("DeployBase" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    This is the base class for model serving
+    '''" code nil (reparse-symbol indented_block_body) [42 98])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [393 427])
+                            ("self" variable nil (reparse-symbol indented_block_body) [436 456])
+                            ("if" code nil (reparse-symbol indented_block_body) [466 712])
+                            ("if" code nil (reparse-symbol indented_block_body) [721 1031]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [117 121])
+                            ("deploy_params" variable nil (reparse-symbol function_parameters) [140 153])
+                            ("state_preprocessor" variable nil (reparse-symbol function_parameters) [172 190])
+                            ("state_preprocessor_config" variable nil (reparse-symbol function_parameters) [209 234])
+                            ("policy" variable nil (reparse-symbol function_parameters) [253 259])
+                            ("policy_config" variable nil (reparse-symbol function_parameters) [283 296])
+                            ("constructed_policy" variable nil (reparse-symbol function_parameters) [320 338])
+                            ("logger" variable nil (reparse-symbol function_parameters) [362 368]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [104 1031])
+                    ("load_preprocessors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1084 1088])
+                            ("preprocessor_param_dir" variable nil (reparse-symbol function_parameters) [1090 1112]))                          )
+                        (reparse-symbol indented_block_body) [1061 1279])
+                    ("load_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1299 1303])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [1305 1314]))                          )
+                        (reparse-symbol indented_block_body) [1284 1384])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1404 1408])
+                            ("obs" variable nil (reparse-symbol function_parameters) [1410 1413])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [1415 1428]))                          )
+                        (reparse-symbol indented_block_body) [1389 1631]))                  
+                :type "class")
+                nil [12 1631]))          
+      :file "deploy_base.py"
+      :pointmax 1631
+      :fsize 1630
+      :lastmodtime '(23286 10817 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "deployer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cloudpickle" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("copy" include nil nil [30 41])
+            ("numpy" include nil nil [42 60])
+            ("rl_pipeline.sampler.batch_sampler" include nil nil [62 120])
+            ("Deployer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [230 269])
+                            ("self" variable nil (reparse-symbol indented_block_body) [352 446])
+                            ("self" variable nil (reparse-symbol indented_block_body) [455 475])
+                            ("env_params" variable nil (reparse-symbol indented_block_body) [586 658])
+                            ("env_params" variable nil (reparse-symbol indented_block_body) [667 695])
+                            ("env_params" variable nil (reparse-symbol indented_block_body) [704 757])
+                            ("self" variable nil (reparse-symbol indented_block_body) [766 878])
+                            ("policy_config" variable nil (reparse-symbol indented_block_body) [1014 1092])
+                            ("policy_config" variable nil (reparse-symbol indented_block_body) [1101 1168])
+                            ("policy_config" variable nil (reparse-symbol indented_block_body) [1177 1244])
+                            ("policy_config" variable nil (reparse-symbol indented_block_body) [1253 1312])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1395 1434])
+                            ("state_preprocessor_config" variable nil (reparse-symbol indented_block_body) [1481 1600])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1618 2052])
+                            ("sampler_config" variable nil (reparse-symbol indented_block_body) [2062 2290])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2308 2456]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [165 169])
+                            ("deployer_base" variable nil (reparse-symbol function_parameters) [171 184])
+                            ("deploy_runner_params" variable nil (reparse-symbol function_parameters) [186 206])
+                            ("logger" variable nil (reparse-symbol function_parameters) [208 214]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [152 2457])
+                    ("keyboard_control" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2491 2495]))                          )
+                        (reparse-symbol indented_block_body) [2470 2939])
+                    ("run_evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2973 2977])
+                            ("nb_trials" variable nil (reparse-symbol function_parameters) [2979 2988])
+                            ("episode_horizon" variable nil (reparse-symbol function_parameters) [2993 3008])
+                            ("evaluation_batch_save_dir" variable nil (reparse-symbol function_parameters) [3014 3039]))                          )
+                        (reparse-symbol indented_block_body) [2956 3446])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3461 3465]))                          )
+                        (reparse-symbol indented_block_body) [3451 3492]))                  
+                :type "class")
+                nil [123 3492]))          
+      :file "deployer.py"
+      :pointmax 3492
+      :fsize 3491
+      :lastmodtime '(23294 6385 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "deploy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cloudpickle" include nil nil [1 19])
+            ("rl_pipeline.deploy.deploy_tensorflow" include nil nil [20 85])
+            ("rl_pipeline.deploy.deploy_base" include nil nil [86 139])
+            ("rl_pipeline.deploy.deployer" include nil nil [140 188])
+            ("rl_pipeline.evaluation.evaluation" include nil nil [189 245])
+            ("rl_pipeline.logging.logger" include nil nil [246 289])
+            ("os" include nil nil [291 300])
+            ("copy" include nil nil [301 312])
+            ("numpy" include nil nil [313 331])
+            ("glob" include nil nil [332 353])
+            ("future.utils" include nil nil [355 389])
+            ("evaluation_dict" function (:arguments 
+              ( ("experiment_dir" variable nil (reparse-symbol function_parameters) [411 425])
+                ("experiment_name" variable nil (reparse-symbol function_parameters) [447 462])
+                ("hyperparam_folder" variable nil (reparse-symbol function_parameters) [484 501])
+                ("itr" variable nil (reparse-symbol function_parameters) [523 526])
+                ("deployer_type" variable nil (reparse-symbol function_parameters) [548 561])
+                ("nb_trials" variable nil (reparse-symbol function_parameters) [583 592])
+                ("episode_horizon" variable nil (reparse-symbol function_parameters) [617 632])
+                ("evaluate" variable nil (reparse-symbol function_parameters) [658 666])
+                ("evaluator_config" variable nil (reparse-symbol function_parameters) [693 709])
+                ("evaluation_class" variable nil (reparse-symbol function_parameters) [734 750])
+                ("visdom" variable nil (reparse-symbol function_parameters) [777 783]))              ) nil [391 2424])
+            ("deploy" function (:arguments 
+              ( ("mode" variable nil (reparse-symbol function_parameters) [2436 2440])
+                ("deployer_type" variable nil (reparse-symbol function_parameters) [2577 2590])
+                ("experiment_dir" variable nil (reparse-symbol function_parameters) [2653 2667])
+                ("cloud" variable nil (reparse-symbol function_parameters) [2686 2691])
+                ("experiment_name" variable nil (reparse-symbol function_parameters) [2710 2725])
+                ("itr" variable nil (reparse-symbol function_parameters) [2745 2748])
+                ("hyperparam_folder" variable nil (reparse-symbol function_parameters) [2763 2780])
+                ("nb_trials" variable nil (reparse-symbol function_parameters) [2799 2808])
+                ("episode_horizon" variable nil (reparse-symbol function_parameters) [2824 2839])
+                ("evaluation_class" variable nil (reparse-symbol function_parameters) [2856 2872])
+                ("evaluation_log_info_keys" variable nil (reparse-symbol function_parameters) [2890 2914])
+                ("evaluation_log_state_dimensions" variable nil (reparse-symbol function_parameters) [2930 2961])
+                ("evaluation_log_action_dimensions" variable nil (reparse-symbol function_parameters) [2977 3009])
+                ("evaluation_batch_save_dir" variable nil (reparse-symbol function_parameters) [3025 3050])
+                ("visdom" variable nil (reparse-symbol function_parameters) [3068 3074]))              ) nil [2425 7868]))          
+      :file "deploy.py"
+      :pointmax 7892
+      :fsize 7891
+      :lastmodtime '(23289 3049 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 855 . 2482) (GT 832 . 833) (GTGT 830 . 832) (GTGT 828 . 830) (GTGT 826 . 828) (ASSIGN 824 . 825) (EQ 822 . 824) (EQ 820 . 822) (EQ 818 . 820) (LT 798 . 799) (LTLT 796 . 798) (LTLT 794 . 796) (DEF 391 . 394) (LTLT 792 . 794))))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!rl_pipeline!deploy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

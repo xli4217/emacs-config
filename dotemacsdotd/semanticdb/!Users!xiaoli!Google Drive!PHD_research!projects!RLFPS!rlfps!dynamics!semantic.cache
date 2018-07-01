@@ -1,0 +1,67 @@
+;; Object dynamics/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dynamics/"
+  :tables
+  (list
+    (semanticdb-table "dynamics.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the base class for dynamics estimation. \"\"\"" code nil nil [1 66])
+            ("abc" include nil nil [67 77])
+            ("numpy" include nil nil [79 97])
+            ("Dynamics" type
+               (:documentation " Dynamics superclass. "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [407 433])
+                            ("self" variable nil (reparse-symbol indented_block_body) [442 468])
+                            ("self" variable nil (reparse-symbol indented_block_body) [477 510]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [175 179]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [162 526])
+                    ("update_prior" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [572 576])
+                            ("sample" variable nil (reparse-symbol function_parameters) [578 584]))                          
+                        :documentation " Update dynamics prior. ")
+                        (reparse-symbol indented_block_body) [531 696])
+                    ("get_prior" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [739 743]))                          
+                        :documentation " Returns prior object. ")
+                        (reparse-symbol indented_block_body) [701 854])
+                    ("fit" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [891 895])
+                            ("sample_list" variable nil (reparse-symbol function_parameters) [897 908]))                          
+                        :documentation " Fit dynamics. ")
+                        (reparse-symbol indented_block_body) [859 1011])
+                    ("copy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1025 1029]))                          
+                        :documentation " Return a copy of the dynamics estimate. ")
+                        (reparse-symbol indented_block_body) [1016 1223]))                  
+                :type "class")
+                nil [100 1223]))          
+      :file "dynamics.py"
+      :pointmax 1223
+      :fsize 1222
+      :lastmodtime '(22984 40749 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!RLFPS!rlfps!dynamics!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

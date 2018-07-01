@@ -1,0 +1,321 @@
+;; Object 9_Deep_Deterministic_Policy_Gradient_DDPG/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "9_Deep_Deterministic_Policy_Gradient_DDPG/"
+  :tables
+  (list
+    (semanticdb-table "DDPG_update2.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Note: This is a updated version from my previous code,
+for the target network, I use moving average to soft replace target parameters instead using assign function.
+By doing this, it has 20% speed up on my machine (CPU).
+
+Deep Deterministic Policy Gradient (DDPG), Reinforcement Learning.
+DDPG is Actor Critic based algorithm.
+Pendulum example.
+
+View more on my tutorial page: https://morvanzhou.github.io/tutorials/
+
+Using:
+tensorflow 1.0
+gym 0.8.0
+\"\"\"" code nil nil [1 458])
+            ("tensorflow" include nil nil [460 483])
+            ("numpy" include nil nil [484 502])
+            ("gym" include nil nil [503 513])
+            ("time" include nil nil [514 525])
+            ("MAX_EPISODES" variable nil nil [591 609])
+            ("MAX_EP_STEPS" variable nil nil [610 628])
+            ("LR_A" variable nil nil [629 641])
+            ("LR_C" variable nil nil [671 683])
+            ("GAMMA" variable nil nil [714 725])
+            ("TAU" variable nil nil [748 758])
+            ("MEMORY_CAPACITY" variable nil nil [783 806])
+            ("BATCH_SIZE" variable nil nil [807 822])
+            ("RENDER" variable nil nil [824 838])
+            ("ENV_NAME" variable nil nil [839 863])
+            ("DDPG" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1020 1102])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1111 1127])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1136 1160])
+                            ("self, self, self" code nil (reparse-symbol indented_block_body) [1170 1231])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1240 1295])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1304 1361])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1370 1421])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1431 1462])
+                            ("q" variable nil (reparse-symbol indented_block_body) [1471 1506])
+                            ("a_params" variable nil (reparse-symbol indented_block_body) [1515 1592])
+                            ("c_params" variable nil (reparse-symbol indented_block_body) [1601 1679])
+                            ("ema" variable nil (reparse-symbol indented_block_body) [1688 1742])
+                            ("ema_getter" function (:arguments 
+                              ( ("getter" variable nil (reparse-symbol function_parameters) [1795 1801])
+                                ("name" variable nil (reparse-symbol function_parameters) [1803 1807])
+                                ("args" variable nil (reparse-symbol function_parameters) [1809 1814])
+                                ("kwargs" variable nil (reparse-symbol function_parameters) [1816 1824]))                              ) (reparse-symbol indented_block_body) [1780 1889])
+                            ("target_update" variable nil (reparse-symbol indented_block_body) [1898 1956])
+                            ("a_" variable nil (reparse-symbol indented_block_body) [1994 2059])
+                            ("q_" variable nil (reparse-symbol indented_block_body) [2099 2168])
+                            ("a_loss" code nil (reparse-symbol indented_block_body) [2178 2206])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2233 2311])
+                            ("with" code nil (reparse-symbol indented_block_body) [2321 2625])
+                            ("self" code nil (reparse-symbol indented_block_body) [2634 2682]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [981 985])
+                            ("a_dim" variable nil (reparse-symbol function_parameters) [987 992])
+                            ("s_dim" variable nil (reparse-symbol function_parameters) [994 999])
+                            ("a_bound" variable nil (reparse-symbol function_parameters) [1001 1008]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [968 2683])
+                    ("choose_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2706 2710])
+                            ("s" variable nil (reparse-symbol function_parameters) [2712 2713]))                          )
+                        (reparse-symbol indented_block_body) [2688 2784])
+                    ("learn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2799 2803]))                          )
+                        (reparse-symbol indented_block_body) [2789 3220])
+                    ("store_transition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3246 3250])
+                            ("s" variable nil (reparse-symbol function_parameters) [3252 3253])
+                            ("a" variable nil (reparse-symbol function_parameters) [3255 3256])
+                            ("r" variable nil (reparse-symbol function_parameters) [3258 3259])
+                            ("s_" variable nil (reparse-symbol function_parameters) [3261 3263]))                          )
+                        (reparse-symbol indented_block_body) [3225 3472])
+                    ("_build_a" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3490 3494])
+                            ("s" variable nil (reparse-symbol function_parameters) [3496 3497])
+                            ("reuse" variable nil (reparse-symbol function_parameters) [3499 3504])
+                            ("custom_getter" variable nil (reparse-symbol function_parameters) [3511 3524]))                          )
+                        (reparse-symbol indented_block_body) [3477 3932])
+                    ("_build_c" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3950 3954])
+                            ("s" variable nil (reparse-symbol function_parameters) [3956 3957])
+                            ("a" variable nil (reparse-symbol function_parameters) [3959 3960])
+                            ("reuse" variable nil (reparse-symbol function_parameters) [3962 3967])
+                            ("custom_getter" variable nil (reparse-symbol function_parameters) [3974 3987]))                          )
+                        (reparse-symbol indented_block_body) [3937 4542]))                  
+                :type "class")
+                nil [944 4542])
+            ("env" variable nil nil [4625 4649])
+            ("env" variable nil nil [4650 4669])
+            ("env" code nil nil [4670 4681])
+            ("s_dim" variable nil nil [4683 4721])
+            ("a_dim" variable nil nil [4722 4755])
+            ("a_bound" variable nil nil [4756 4787])
+            ("ddpg" variable nil nil [4789 4823])
+            ("var" variable nil nil [4825 4832])
+            ("t1" variable nil nil [4856 4872])
+            ("for" code nil nil [4873 5638]))          
+      :file "DDPG_update2.py"
+      :pointmax 5680
+      :fsize 5679
+      :lastmodtime '(23180 20973 0 0)
+      :unmatched-syntax '((PRINT 5639 . 5644) ($EOI 5680 . 5680) (NAME 4003 . 4012) (IF 4020 . 4022) (ELSE 4037 . 4041) (NAME 3540 . 3549) (IF 3557 . 3559) (ELSE 3574 . 3578)))
+    (semanticdb-table "DDPG.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Deep Deterministic Policy Gradient (DDPG), Reinforcement Learning.
+DDPG is Actor Critic based algorithm.
+Pendulum example.
+
+View more on my tutorial page: https://morvanzhou.github.io/tutorials/
+
+Using:
+tensorflow 1.0
+gym 0.8.0
+\"\"\"" code nil nil [1 236])
+            ("tensorflow" include nil nil [238 261])
+            ("numpy" include nil nil [262 280])
+            ("gym" include nil nil [281 291])
+            ("time" include nil nil [292 303])
+            ("np" code nil nil [306 323])
+            ("tf" code nil nil [324 345])
+            ("MAX_EPISODES" variable nil nil [410 428])
+            ("MAX_EP_STEPS" variable nil nil [429 447])
+            ("LR_A" variable nil nil [448 460])
+            ("LR_C" variable nil nil [490 502])
+            ("GAMMA" variable nil nil [533 544])
+            ("REPLACEMENT" variable nil nil [567 674])
+            ("MEMORY_CAPACITY" variable nil nil [740 763])
+            ("BATCH_SIZE" variable nil nil [764 779])
+            ("RENDER" variable nil nil [781 795])
+            ("OUTPUT_GRAPH" variable nil nil [796 815])
+            ("ENV_NAME" variable nil nil [816 840])
+            ("Actor" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1034 1050])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1059 1082])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1091 1123])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1132 1155])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1164 1194])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1203 1229])
+                            ("with" code nil (reparse-symbol indented_block_body) [1239 1510])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1519 1607])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1616 1706])
+                            ("if" code nil (reparse-symbol indented_block_body) [1716 2095]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [959 963])
+                            ("sess" variable nil (reparse-symbol function_parameters) [965 969])
+                            ("action_dim" variable nil (reparse-symbol function_parameters) [971 981])
+                            ("action_bound" variable nil (reparse-symbol function_parameters) [983 995])
+                            ("learning_rate" variable nil (reparse-symbol function_parameters) [997 1010])
+                            ("replacement" variable nil (reparse-symbol function_parameters) [1012 1023]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [946 2095])
+                    ("_build_net" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2115 2119])
+                            ("s" variable nil (reparse-symbol function_parameters) [2121 2122])
+                            ("scope" variable nil (reparse-symbol function_parameters) [2124 2129])
+                            ("trainable" variable nil (reparse-symbol function_parameters) [2131 2140]))                          )
+                        (reparse-symbol indented_block_body) [2100 2912])
+                    ("learn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2927 2931])
+                            ("s" variable nil (reparse-symbol function_parameters) [2933 2934]))                          )
+                        (reparse-symbol indented_block_body) [2917 3282])
+                    ("choose_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3305 3309])
+                            ("s" variable nil (reparse-symbol function_parameters) [3311 3312]))                          )
+                        (reparse-symbol indented_block_body) [3287 3437])
+                    ("add_grad_to_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3464 3468])
+                            ("a_grads" variable nil (reparse-symbol function_parameters) [3470 3477]))                          )
+                        (reparse-symbol indented_block_body) [3442 4086]))                  
+                :type "class")
+                nil [921 4086])
+            ("Critic" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [4292 4308])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4317 4339])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4348 4371])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4380 4403])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4412 4430])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4439 4469])
+                            ("with" code nil (reparse-symbol indented_block_body) [4479 5040])
+                            ("with" code nil (reparse-symbol indented_block_body) [5049 5138])
+                            ("with" code nil (reparse-symbol indented_block_body) [5147 5268])
+                            ("with" code nil (reparse-symbol indented_block_body) [5277 5392])
+                            ("with" code nil (reparse-symbol indented_block_body) [5401 5542])
+                            ("if" code nil (reparse-symbol indented_block_body) [5551 5942]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4206 4210])
+                            ("sess" variable nil (reparse-symbol function_parameters) [4212 4216])
+                            ("state_dim" variable nil (reparse-symbol function_parameters) [4218 4227])
+                            ("action_dim" variable nil (reparse-symbol function_parameters) [4229 4239])
+                            ("learning_rate" variable nil (reparse-symbol function_parameters) [4241 4254])
+                            ("gamma" variable nil (reparse-symbol function_parameters) [4256 4261])
+                            ("replacement" variable nil (reparse-symbol function_parameters) [4263 4274])
+                            ("a" variable nil (reparse-symbol function_parameters) [4276 4277])
+                            ("a_" variable nil (reparse-symbol function_parameters) [4279 4281]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4193 5942])
+                    ("_build_net" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5962 5966])
+                            ("s" variable nil (reparse-symbol function_parameters) [5968 5969])
+                            ("a" variable nil (reparse-symbol function_parameters) [5971 5972])
+                            ("scope" variable nil (reparse-symbol function_parameters) [5974 5979])
+                            ("trainable" variable nil (reparse-symbol function_parameters) [5981 5990]))                          )
+                        (reparse-symbol indented_block_body) [5947 6787])
+                    ("learn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6802 6806])
+                            ("s" variable nil (reparse-symbol function_parameters) [6808 6809])
+                            ("a" variable nil (reparse-symbol function_parameters) [6811 6812])
+                            ("r" variable nil (reparse-symbol function_parameters) [6814 6815])
+                            ("s_" variable nil (reparse-symbol function_parameters) [6817 6819]))                          )
+                        (reparse-symbol indented_block_body) [6792 7182]))                  
+                :type "class")
+                nil [4167 7182])
+            ("Memory" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [7307 7331])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7340 7378])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7387 7403]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7276 7280])
+                            ("capacity" variable nil (reparse-symbol function_parameters) [7282 7290])
+                            ("dims" variable nil (reparse-symbol function_parameters) [7292 7296]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7263 7404])
+                    ("store_transition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7430 7434])
+                            ("s" variable nil (reparse-symbol function_parameters) [7436 7437])
+                            ("a" variable nil (reparse-symbol function_parameters) [7439 7440])
+                            ("r" variable nil (reparse-symbol function_parameters) [7442 7443])
+                            ("s_" variable nil (reparse-symbol function_parameters) [7445 7447]))                          )
+                        (reparse-symbol indented_block_body) [7409 7652])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7668 7672])
+                            ("n" variable nil (reparse-symbol function_parameters) [7674 7675]))                          )
+                        (reparse-symbol indented_block_body) [7657 7851]))                  
+                :type "class")
+                nil [7237 7851])
+            ("env" variable nil nil [7853 7877])
+            ("env" variable nil nil [7878 7897])
+            ("env" code nil nil [7898 7909])
+            ("state_dim" variable nil nil [7911 7953])
+            ("action_dim" variable nil nil [7954 7992])
+            ("action_bound" variable nil nil [7993 8029])
+            ("with" code nil nil [8056 8151])
+            ("with" code nil nil [8151 8232])
+            ("with" code nil nil [8232 8330])
+            ("sess" variable nil nil [8332 8351])
+            ("actor" variable nil nil [8480 8544])
+            ("critic" variable nil nil [8545 8634])
+            ("actor" code nil nil [8635 8674])
+            ("sess" code nil nil [8676 8719])
+            ("M" variable nil nil [8721 8785])
+            ("if" code nil nil [8787 8851])
+            ("var" variable nil nil [8852 8859])
+            ("t1" variable nil nil [8884 8900])
+            ("for" code nil nil [8901 9958]))          
+      :file "DDPG.py"
+      :pointmax 9998
+      :fsize 9997
+      :lastmodtime '(23242 29573 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!sandbox!algo_implementations!Reinforcement-learning-with-tensorflow!contents!9_Deep_Deterministic_Policy_Gradient_DDPG!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

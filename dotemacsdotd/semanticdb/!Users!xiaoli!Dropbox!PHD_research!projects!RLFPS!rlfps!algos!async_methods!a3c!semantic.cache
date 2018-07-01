@@ -11,113 +11,159 @@
             ("rllab.misc.logger" include nil nil [54 88])
             ("sandbox.rocky.tf.policies.base" include nil nil [89 138])
             ("tensorflow" include nil nil [139 162])
+            ("rllab.sampler.utils" include nil nil [163 202])
+            ("rllab.sampler.stateful_pool" include nil nil [203 269])
+            ("rllab.misc" include nil nil [270 305])
+            ("pickle" include nil nil [306 319])
+            ("rllab.plotter" include nil nil [320 351])
+            ("worker" include nil nil [353 378])
+            ("central" include nil nil [379 406])
             ("A3C" type
                (:superclasses ("RLAlgorithm")
                 :members 
                   ( ("__init__" function
                        (:suite 
-                          ( ("self" variable nil (reparse-symbol indented_block_body) [673 687])
-                            ("self" variable nil (reparse-symbol indented_block_body) [696 717])
-                            ("self" variable nil (reparse-symbol indented_block_body) [726 744])
-                            ("self" variable nil (reparse-symbol indented_block_body) [753 771])
-                            ("self" variable nil (reparse-symbol indented_block_body) [780 798])
-                            ("self" variable nil (reparse-symbol indented_block_body) [807 835])
-                            ("self" variable nil (reparse-symbol indented_block_body) [844 882])
-                            ("self" variable nil (reparse-symbol indented_block_body) [891 915])
-                            ("self" variable nil (reparse-symbol indented_block_body) [924 940])
-                            ("self" variable nil (reparse-symbol indented_block_body) [949 985])
-                            ("self" variable nil (reparse-symbol indented_block_body) [994 1024])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1033 1063])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1072 1106])
-                            ("if" code nil (reparse-symbol indented_block_body) [1117 1172]))                          
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1154 1168])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1177 1211])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1220 1256])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1265 1283])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1292 1310])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1319 1337])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1346 1374])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1383 1421])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1430 1454])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1463 1479])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1488 1524])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1533 1563])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1572 1602])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1611 1645])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1654 1680])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1690 1727])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1736 1967]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [220 224])
-                            ("env" variable nil (reparse-symbol function_parameters) [238 241])
-                            ("policy" variable nil (reparse-symbol function_parameters) [255 261])
-                            ("scope" variable nil (reparse-symbol function_parameters) [275 280])
-                            ("n_itr" variable nil (reparse-symbol function_parameters) [299 304])
-                            ("start_itr" variable nil (reparse-symbol function_parameters) [322 331])
-                            ("batch_size" variable nil (reparse-symbol function_parameters) [347 357])
-                            ("max_path_length" variable nil (reparse-symbol function_parameters) [376 391])
-                            ("discount" variable nil (reparse-symbol function_parameters) [409 417])
-                            ("plot" variable nil (reparse-symbol function_parameters) [436 440])
-                            ("pause_for_plot" variable nil (reparse-symbol function_parameters) [460 474])
-                            ("store_paths" variable nil (reparse-symbol function_parameters) [494 505])
-                            ("whole_paths" variable nil (reparse-symbol function_parameters) [525 536])
-                            ("fixed_horizon" variable nil (reparse-symbol function_parameters) [556 569])
-                            ("sample_cls" variable nil (reparse-symbol function_parameters) [589 599])
-                            ("sampler_args" variable nil (reparse-symbol function_parameters) [618 630])
-                            ("kwargs" variable nil (reparse-symbol function_parameters) [649 657]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [468 472])
+                            ("env" variable nil (reparse-symbol function_parameters) [486 489])
+                            ("global_policy" variable nil (reparse-symbol function_parameters) [503 516])
+                            ("local_policies" variable nil (reparse-symbol function_parameters) [550 564])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [605 612])
+                            ("model_path" variable nil (reparse-symbol function_parameters) [674 684])
+                            ("summary_path" variable nil (reparse-symbol function_parameters) [737 749])
+                            ("scope" variable nil (reparse-symbol function_parameters) [788 793])
+                            ("n_itr" variable nil (reparse-symbol function_parameters) [812 817])
+                            ("start_itr" variable nil (reparse-symbol function_parameters) [835 844])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [860 870])
+                            ("max_path_length" variable nil (reparse-symbol function_parameters) [889 904])
+                            ("discount" variable nil (reparse-symbol function_parameters) [922 930])
+                            ("plot" variable nil (reparse-symbol function_parameters) [949 953])
+                            ("pause_for_plot" variable nil (reparse-symbol function_parameters) [973 987])
+                            ("store_paths" variable nil (reparse-symbol function_parameters) [1007 1018])
+                            ("whole_paths" variable nil (reparse-symbol function_parameters) [1038 1049])
+                            ("fixed_horizon" variable nil (reparse-symbol function_parameters) [1069 1082])
+                            ("task_info" variable nil (reparse-symbol function_parameters) [1102 1111])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1130 1138]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [194 1172])
+                        (reparse-symbol indented_block_body) [442 1968])
                     ("start_worker" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1195 1199]))                          )
-                        (reparse-symbol indented_block_body) [1178 1238])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2003 2007]))                          )
+                        (reparse-symbol indented_block_body) [1986 2373])
                     ("shutdown_worker" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1263 1267]))                          )
-                        (reparse-symbol indented_block_body) [1243 1309])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2410 2414]))                          )
+                        (reparse-symbol indented_block_body) [2390 2463])
                     ("obtain_samples" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1333 1337])
-                            ("itr" variable nil (reparse-symbol function_parameters) [1339 1342]))                          )
-                        (reparse-symbol indented_block_body) [1314 1393])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2487 2491])
+                            ("itr" variable nil (reparse-symbol function_parameters) [2493 2496]))                          )
+                        (reparse-symbol indented_block_body) [2468 3097])
+                    ("run_iteration" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3120 3124])
+                            ("policy_params_list" variable nil (reparse-symbol function_parameters) [3148 3166])
+                            ("max_path_length" variable nil (reparse-symbol function_parameters) [3190 3205])
+                            ("env_params" variable nil (reparse-symbol function_parameters) [3236 3246])
+                            ("scope" variable nil (reparse-symbol function_parameters) [3275 3280]))                          )
+                        (reparse-symbol indented_block_body) [3102 3860])
                     ("process_samples" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1418 1422])
-                            ("itr" variable nil (reparse-symbol function_parameters) [1424 1427])
-                            ("paths" variable nil (reparse-symbol function_parameters) [1429 1434]))                          )
-                        (reparse-symbol indented_block_body) [1398 1493])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3903 3907])
+                            ("itr" variable nil (reparse-symbol function_parameters) [3909 3912])
+                            ("paths" variable nil (reparse-symbol function_parameters) [3914 3919]))                          )
+                        (reparse-symbol indented_block_body) [3883 3992])
                     ("insert_to_db" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1515 1519])
-                            ("itr" variable nil (reparse-symbol function_parameters) [1521 1524])
-                            ("samples_data" variable nil (reparse-symbol function_parameters) [1526 1538]))                          )
-                        (reparse-symbol indented_block_body) [1498 1554])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4022 4026])
+                            ("itr" variable nil (reparse-symbol function_parameters) [4028 4031])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [4033 4045]))                          )
+                        (reparse-symbol indented_block_body) [4005 4061])
                     ("train" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1569 1573])
-                            ("sess" variable nil (reparse-symbol function_parameters) [1575 1579]))                          )
-                        (reparse-symbol indented_block_body) [1559 1600])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4076 4080])
+                            ("sess" variable nil (reparse-symbol function_parameters) [4082 4086]))                          )
+                        (reparse-symbol indented_block_body) [4066 4551])
                     ("log_diagnostics" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1625 1629])
-                            ("paths" variable nil (reparse-symbol function_parameters) [1631 1636]))                          )
-                        (reparse-symbol indented_block_body) [1605 1767])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4609 4613])
+                            ("paths" variable nil (reparse-symbol function_parameters) [4615 4620]))                          )
+                        (reparse-symbol indented_block_body) [4589 4767])
                     ("get_itr_snapshot" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1794 1798])
-                            ("itr" variable nil (reparse-symbol function_parameters) [1800 1803])
-                            ("samples_data" variable nil (reparse-symbol function_parameters) [1805 1817]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4793 4797])
+                            ("itr" variable nil (reparse-symbol function_parameters) [4799 4802])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [4804 4816]))                          
                         :documentation "
         Returns all the data that should be saved in the snapshot for this
         iteration.
         ")
-                        (reparse-symbol indented_block_body) [1773 1972])
+                        (reparse-symbol indented_block_body) [4772 4971])
                     ("optimize_policy" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1997 2001])
-                            ("itr" variable nil (reparse-symbol function_parameters) [2003 2006])
-                            ("samples_data" variable nil (reparse-symbol function_parameters) [2008 2020]))                          )
-                        (reparse-symbol indented_block_body) [1977 2057]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4996 5000])
+                            ("itr" variable nil (reparse-symbol function_parameters) [5002 5005])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [5007 5019]))                          )
+                        (reparse-symbol indented_block_body) [4976 5056])
+                    ("init_opt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5075 5079]))                          )
+                        (reparse-symbol indented_block_body) [5062 5095])
+                    ("populate_task" function (:arguments 
+                      ( ("env" variable nil (reparse-symbol function_parameters) [5118 5121])
+                        ("scope" variable nil (reparse-symbol function_parameters) [5123 5128]))                      ) (reparse-symbol indented_block_body) [5100 5431])
+                    ("terminate_task" function (:arguments 
+                      ( ("scope" variable nil (reparse-symbol function_parameters) [5455 5460]))                      ) (reparse-symbol indented_block_body) [5436 5610])
+                    ("set_seed" function (:arguments 
+                      ( ("seed" variable nil (reparse-symbol function_parameters) [5628 5632]))                      ) (reparse-symbol indented_block_body) [5615 5788])
+                    ("update_plot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5809 5813]))                          )
+                        (reparse-symbol indented_block_body) [5793 5912])
+                    ("update_target_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6059 6063])
+                            ("from_scope" variable nil (reparse-symbol function_parameters) [6065 6075])
+                            ("to_scope" variable nil (reparse-symbol function_parameters) [6077 6085]))                          )
+                        (reparse-symbol indented_block_body) [6035 6417]))                  
                 :type "class")
-                nil [165 2057]))          
+                nil [413 6417]))          
       :file "a3c.py"
-      :pointmax 2058
-      :fsize 2057
-      :lastmodtime '(22795 37157 0 0)
-      :unmatched-syntax '((DEF 1398 . 1401) (NEWLINE 1417 . 1418) (NAME 1278 . 1282) (NEWLINE 1291 . 1292) (NAME 1278 . 1282) (NEWLINE 1291 . 1292) ($EOI 1323 . 1323) (DEF 1265 . 1268) (NEWLINE 1289 . 1290) (DEF 1265 . 1268) (NEWLINE 1289 . 1290) (DEF 1220 . 1223) (NEWLINE 1223 . 1224) (DEF 1220 . 1223) (NEWLINE 1223 . 1224) (DEF 1178 . 1181) (NEWLINE 1194 . 1195)))
+      :pointmax 6417
+      :fsize 6416
+      :lastmodtime '(22802 12356 0 0)
+      :unmatched-syntax nil)
     (semanticdb-table "central.py"
       :major-mode 'python-mode
       :tags 
@@ -149,7 +195,262 @@
       :pointmax 420
       :fsize 419
       :lastmodtime '(22795 43943 0 0)
-      :unmatched-syntax '(($EOI 420 . 420))))
+      :unmatched-syntax '(($EOI 420 . 420)))
+    (semanticdb-table "worker.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("tensorflow" include nil nil [1 24])
+            ("numpy" include nil nil [25 43])
+            ("rllab.sampler.utils" include nil nil [45 84])
+            ("rllab.sampler.stateful_pool" include nil nil [85 137])
+            ("rllab.misc" include nil nil [138 164])
+            ("rllab.misc" include nil nil [165 194])
+            ("rllab.misc" include nil nil [195 230])
+            ("pickle" include nil nil [231 244])
+            ("rlfps.database_utils.arctic_utils" include nil nil [247 301])
+            ("Worker" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [535 581])
+                            ("self" variable nil (reparse-symbol indented_block_body) [590 612])
+                            ("self" variable nil (reparse-symbol indented_block_body) [621 645])
+                            ("self" variable nil (reparse-symbol indented_block_body) [654 680])
+                            ("self" variable nil (reparse-symbol indented_block_body) [689 717])
+                            ("self" variable nil (reparse-symbol indented_block_body) [726 758])
+                            ("self" variable nil (reparse-symbol indented_block_body) [767 791]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [343 347])
+                            ("task_info" variable nil (reparse-symbol function_parameters) [366 375])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [394 402])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [421 428])
+                            ("model_path" variable nil (reparse-symbol function_parameters) [447 457])
+                            ("summary_path" variable nil (reparse-symbol function_parameters) [476 488])
+                            ("discount" variable nil (reparse-symbol function_parameters) [507 515]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [330 792])
+                    ("_worker_init_tf" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [825 829])
+                            ("G" variable nil (reparse-symbol function_parameters) [830 831]))                          )
+                        (reparse-symbol indented_block_body) [805 891])
+                    ("_worker_init_tf_vars" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [921 925])
+                            ("G" variable nil (reparse-symbol function_parameters) [926 927]))                          )
+                        (reparse-symbol indented_block_body) [896 984])
+                    ("_get_scoped_G" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1007 1011])
+                            ("G" variable nil (reparse-symbol function_parameters) [1013 1014])
+                            ("scope" variable nil (reparse-symbol function_parameters) [1016 1021]))                          )
+                        (reparse-symbol indented_block_body) [989 1300])
+                    ("_worker_set_policy_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1344 1348])
+                            ("G" variable nil (reparse-symbol function_parameters) [1350 1351])
+                            ("params" variable nil (reparse-symbol function_parameters) [1353 1359])
+                            ("scope" variable nil (reparse-symbol function_parameters) [1361 1366]))                          )
+                        (reparse-symbol indented_block_body) [1314 1457])
+                    ("_worker_set_env_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1489 1493])
+                            ("G" variable nil (reparse-symbol function_parameters) [1495 1496])
+                            ("params" variable nil (reparse-symbol function_parameters) [1498 1504])
+                            ("scope" variable nil (reparse-symbol function_parameters) [1506 1511]))                          )
+                        (reparse-symbol indented_block_body) [1462 1599])
+                    ("_worker_populate_task" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1636 1640])
+                            ("G" variable nil (reparse-symbol function_parameters) [1642 1643])
+                            ("env" variable nil (reparse-symbol function_parameters) [1645 1648])
+                            ("policy" variable nil (reparse-symbol function_parameters) [1650 1656])
+                            ("scope" variable nil (reparse-symbol function_parameters) [1658 1663]))                          )
+                        (reparse-symbol indented_block_body) [1610 1865])
+                    ("_worker_terminate_task" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1905 1909])
+                            ("G" variable nil (reparse-symbol function_parameters) [1911 1912])
+                            ("scope" variable nil (reparse-symbol function_parameters) [1914 1919]))                          )
+                        (reparse-symbol indented_block_body) [1878 2159])
+                    ("_worker_set_seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2186 2190])
+                            ("_" variable nil (reparse-symbol function_parameters) [2191 2192])
+                            ("seed" variable nil (reparse-symbol function_parameters) [2194 2198]))                          )
+                        (reparse-symbol indented_block_body) [2165 2276])
+                    ("_worker_collect_one_path" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2311 2315])
+                            ("G" variable nil (reparse-symbol function_parameters) [2317 2318])
+                            ("max_path_length" variable nil (reparse-symbol function_parameters) [2320 2335])
+                            ("scope" variable nil (reparse-symbol function_parameters) [2337 2342]))                          )
+                        (reparse-symbol indented_block_body) [2282 2490])
+                    ("_worker_collect_n_paths_and_update_global" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2541 2545])
+                            ("G" variable nil (reparse-symbol function_parameters) [2597 2598])
+                            ("n_rl_per_update" variable nil (reparse-symbol function_parameters) [2650 2665])
+                            ("max_path_length" variable nil (reparse-symbol function_parameters) [2779 2794])
+                            ("scope" variable nil (reparse-symbol function_parameters) [2846 2851]))                          )
+                        (reparse-symbol indented_block_body) [2495 3002])
+                    ("_worker_train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3025 3029])
+                            ("path" variable nil (reparse-symbol function_parameters) [3031 3035])
+                            ("sess" variable nil (reparse-symbol function_parameters) [3037 3041]))                          )
+                        (reparse-symbol indented_block_body) [3007 3147]))                  
+                :type "class")
+                nil [303 3147]))          
+      :file "worker.py"
+      :pointmax 3156
+      :fsize 3155
+      :lastmodtime '(22802 12429 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "a3c_networks.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.core.serializable" include nil nil [1 49])
+            ("sandbox.rocky.tf.policies.base" include nil nil [50 99])
+            ("rllab.misc.overrides" include nil nil [100 142])
+            ("rllab.misc" include nil nil [143 172])
+            ("sandbox.rocky.tf.misc" include nil nil [173 219])
+            ("tensorflow" include nil nil [220 243])
+            ("tensorflow.contrib.slim" include nil nil [244 282])
+            ("numpy" include nil nil [283 301])
+            ("A3CNetworksTF" type
+               (:superclasses ("Policy" "Serializable")
+                :members 
+                  ( ("'''
+    create a simple feedforward neural network with TFSlim
+    '''" code nil (reparse-symbol indented_block_body) [350 420])
+                    ("__init__" function
+                       (:suite 
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [671 709])
+                            ("with" code nil (reparse-symbol indented_block_body) [774 2275])
+                            ("super" code nil (reparse-symbol indented_block_body) [2284 2340]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [451 455])
+                            ("policy_scope" variable nil (reparse-symbol function_parameters) [469 481])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [495 503])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [517 529])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [551 570])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [609 628])
+                            ("bn" variable nil (reparse-symbol function_parameters) [647 649]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [425 2341])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2368 2372])
+                            ("observation" variable nil (reparse-symbol function_parameters) [2374 2385]))                          )
+                        (reparse-symbol indented_block_body) [2353 2521])
+                    ("get_actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2542 2546])
+                            ("observations" variable nil (reparse-symbol function_parameters) [2548 2560]))                          )
+                        (reparse-symbol indented_block_body) [2526 2670])
+                    ("normalized_columns_initializer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2778 2782])
+                            ("std" variable nil (reparse-symbol function_parameters) [2784 2787]))                          )
+                        (reparse-symbol indented_block_body) [2743 3061])
+                    ("compile_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3087 3091])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [3093 3099])
+                            ("outputs" variable nil (reparse-symbol function_parameters) [3101 3108])
+                            ("log_name" variable nil (reparse-symbol function_parameters) [3110 3118]))                          )
+                        (reparse-symbol indented_block_body) [3066 3338]))                  
+                :type "class")
+                nil [303 3338]))          
+      :file "a3c_networks.py"
+      :pointmax 3338
+      :unmatched-syntax nil)
+    (semanticdb-table "a3c_networks_tf.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.core.serializable" include nil nil [1 49])
+            ("sandbox.rocky.tf.policies.base" include nil nil [50 99])
+            ("rllab.misc.overrides" include nil nil [100 142])
+            ("rllab.misc" include nil nil [143 172])
+            ("sandbox.rocky.tf.misc" include nil nil [173 219])
+            ("tensorflow" include nil nil [220 243])
+            ("tensorflow.contrib.slim" include nil nil [244 282])
+            ("numpy" include nil nil [283 301])
+            ("A3CNetworksTF" type
+               (:superclasses ("Policy" "Serializable")
+                :members 
+                  ( ("'''
+    create a simple feedforward neural network with TFSlim
+    '''" code nil (reparse-symbol indented_block_body) [350 420])
+                    ("__init__" function
+                       (:suite 
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [699 737])
+                            ("with" code nil (reparse-symbol indented_block_body) [802 2401])
+                            ("super" code nil (reparse-symbol indented_block_body) [2439 2484]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [451 455])
+                            ("policy_scope" variable nil (reparse-symbol function_parameters) [469 481])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [495 503])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [517 529])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [551 570])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [609 628])
+                            ("bn" variable nil (reparse-symbol function_parameters) [647 649])
+                            ("task_info" variable nil (reparse-symbol function_parameters) [669 678]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [425 2485])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2512 2516])
+                            ("observation" variable nil (reparse-symbol function_parameters) [2518 2529]))                          )
+                        (reparse-symbol indented_block_body) [2497 2665])
+                    ("get_actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2686 2690])
+                            ("observations" variable nil (reparse-symbol function_parameters) [2692 2704]))                          )
+                        (reparse-symbol indented_block_body) [2670 2814])
+                    ("normalized_columns_initializer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2922 2926])
+                            ("std" variable nil (reparse-symbol function_parameters) [2928 2931]))                          )
+                        (reparse-symbol indented_block_body) [2887 3205])
+                    ("compile_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3231 3235])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [3237 3243])
+                            ("outputs" variable nil (reparse-symbol function_parameters) [3245 3252])
+                            ("log_name" variable nil (reparse-symbol function_parameters) [3254 3262]))                          )
+                        (reparse-symbol indented_block_body) [3210 3482]))                  
+                :type "class")
+                nil [303 3482]))          
+      :file "a3c_networks_tf.py"
+      :pointmax 3482
+      :fsize 3481
+      :lastmodtime '(22802 15010 0 0)
+      :unmatched-syntax nil))
   :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rlfps!algos!async_methods!a3c!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

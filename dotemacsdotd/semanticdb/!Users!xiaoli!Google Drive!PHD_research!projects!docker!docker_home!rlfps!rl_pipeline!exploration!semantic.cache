@@ -1,0 +1,83 @@
+;; Object exploration/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "exploration/"
+  :tables
+  (list
+    (semanticdb-table "exploration_base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("ExplorationBase" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [119 163])
+                            ("self" variable nil (reparse-symbol indented_block_body) [272 304]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [50 54])
+                            ("exploration_params" variable nil (reparse-symbol function_parameters) [56 74])
+                            ("action_space" variable nil (reparse-symbol function_parameters) [81 93])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [100 108]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [37 306])
+                    ("get_action_with_exploration" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [351 355])
+                            ("action" variable nil (reparse-symbol function_parameters) [357 363])
+                            ("total_timestep" variable nil (reparse-symbol function_parameters) [365 379]))                          )
+                        (reparse-symbol indented_block_body) [319 558]))                  
+                :type "class")
+                nil [1 558]))          
+      :file "exploration_base.py"
+      :pointmax 558
+      :fsize 557
+      :lastmodtime '(23156 58388 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "epsilon_linear_decay.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("exploration_base" include nil nil [1 45])
+            ("rl_pipeline.schedule.schedule" include nil nil [46 102])
+            ("numpy" include nil nil [103 121])
+            ("EpsilonLinearDecay" type
+               (:superclasses ("ExplorationBase")
+                :members 
+                  ( ("'''
+    TODO: right now only support discrete action
+    '''" code nil (reparse-symbol indented_block_body) [170 230])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [322 382])
+                            ("self" variable nil (reparse-symbol indented_block_body) [391 460])
+                            ("self" variable nil (reparse-symbol indented_block_body) [469 534])
+                            ("self" variable nil (reparse-symbol indented_block_body) [543 604])
+                            ("self" variable nil (reparse-symbol indented_block_body) [613 656])
+                            ("self" variable nil (reparse-symbol indented_block_body) [665 779])
+                            ("np" code nil (reparse-symbol indented_block_body) [788 813]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [253 257])
+                            ("exploration_params" variable nil (reparse-symbol function_parameters) [259 277])
+                            ("action_space" variable nil (reparse-symbol function_parameters) [284 296])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [303 311]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [240 814])
+                    ("get_action_with_exploration" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [859 863])
+                            ("action" variable nil (reparse-symbol function_parameters) [865 871])
+                            ("total_timestep" variable nil (reparse-symbol function_parameters) [873 887]))                          )
+                        (reparse-symbol indented_block_body) [827 1522]))                  
+                :type "class")
+                nil [123 1522]))          
+      :file "epsilon_linear_decay.py"
+      :pointmax 1522
+      :fsize 1521
+      :lastmodtime '(23156 59368 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!exploration!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

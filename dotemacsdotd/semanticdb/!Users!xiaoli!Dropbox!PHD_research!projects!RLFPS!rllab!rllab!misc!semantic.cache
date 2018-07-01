@@ -821,7 +821,6 @@
       :fsize 12215
       :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
-
     (semanticdb-table "special.py"
       :major-mode 'python-mode
       :tags 
@@ -840,50 +839,53 @@
                 :arguments 
                   ( ("weights" variable nil (reparse-symbol function_parameters) [195 202])
                     ("objects" variable nil (reparse-symbol function_parameters) [204 211]))                  )
-                nil [175 537])
+                nil [175 560])
+            ("weighted_sample_n" function (:arguments 
+              ( ("prob_matrix" variable nil (reparse-symbol function_parameters) [584 595])
+                ("items" variable nil (reparse-symbol function_parameters) [597 602]))              ) nil [562 800])
             ("softmax" function (:arguments 
-              ( ("x" variable nil (reparse-symbol function_parameters) [582 583]))              ) nil [570 718])
+              ( ("x" variable nil (reparse-symbol function_parameters) [845 846]))              ) nil [833 983])
             ("softmax_sym" function (:arguments 
-              ( ("x" variable nil (reparse-symbol function_parameters) [736 737]))              ) nil [720 781])
+              ( ("x" variable nil (reparse-symbol function_parameters) [1001 1002]))              ) nil [985 1046])
             ("cat_entropy" function (:arguments 
-              ( ("x" variable nil (reparse-symbol function_parameters) [830 831]))              ) nil [814 876])
+              ( ("x" variable nil (reparse-symbol function_parameters) [1095 1096]))              ) nil [1079 1142])
             ("cat_perplexity" function (:arguments 
-              ( ("x" variable nil (reparse-symbol function_parameters) [931 932]))              ) nil [912 969])
+              ( ("x" variable nil (reparse-symbol function_parameters) [1197 1198]))              ) nil [1178 1235])
             ("explained_variance_1d" function (:arguments 
-              ( ("ypred" variable nil (reparse-symbol function_parameters) [997 1002])
-                ("y" variable nil (reparse-symbol function_parameters) [1004 1005]))              ) nil [971 1330])
+              ( ("ypred" variable nil (reparse-symbol function_parameters) [1263 1268])
+                ("y" variable nil (reparse-symbol function_parameters) [1270 1271]))              ) nil [1237 1501])
             ("to_onehot" function (:arguments 
-              ( ("ind" variable nil (reparse-symbol function_parameters) [1346 1349])
-                ("dim" variable nil (reparse-symbol function_parameters) [1351 1354]))              ) nil [1332 1413])
+              ( ("ind" variable nil (reparse-symbol function_parameters) [1517 1520])
+                ("dim" variable nil (reparse-symbol function_parameters) [1522 1525]))              ) nil [1503 1584])
             ("to_onehot_n" function (:arguments 
-              ( ("inds" variable nil (reparse-symbol function_parameters) [1431 1435])
-                ("dim" variable nil (reparse-symbol function_parameters) [1437 1440]))              ) nil [1415 1535])
+              ( ("inds" variable nil (reparse-symbol function_parameters) [1602 1606])
+                ("dim" variable nil (reparse-symbol function_parameters) [1608 1611]))              ) nil [1586 1706])
             ("to_onehot_sym" function (:arguments 
-              ( ("ind" variable nil (reparse-symbol function_parameters) [1555 1558])
-                ("dim" variable nil (reparse-symbol function_parameters) [1560 1563]))              ) nil [1537 1647])
+              ( ("ind" variable nil (reparse-symbol function_parameters) [1726 1729])
+                ("dim" variable nil (reparse-symbol function_parameters) [1731 1734]))              ) nil [1708 1818])
             ("from_onehot" function (:arguments 
-              ( ("v" variable nil (reparse-symbol function_parameters) [1665 1666]))              ) nil [1649 1700])
+              ( ("v" variable nil (reparse-symbol function_parameters) [1836 1837]))              ) nil [1820 1871])
             ("from_onehot_n" function (:arguments 
-              ( ("v" variable nil (reparse-symbol function_parameters) [1720 1721]))              ) nil [1702 1752])
+              ( ("v" variable nil (reparse-symbol function_parameters) [1891 1892]))              ) nil [1873 1961])
             ("normalize_updates" function
                (:documentation "
     Compute the updates for normalizing the last (linear) layer of a neural
     network
     "
                 :arguments 
-                  ( ("old_mean" variable nil (reparse-symbol function_parameters) [1776 1784])
-                    ("old_std" variable nil (reparse-symbol function_parameters) [1786 1793])
-                    ("new_mean" variable nil (reparse-symbol function_parameters) [1795 1803])
-                    ("new_std" variable nil (reparse-symbol function_parameters) [1805 1812])
-                    ("old_W" variable nil (reparse-symbol function_parameters) [1814 1819])
-                    ("old_b" variable nil (reparse-symbol function_parameters) [1821 1826]))                  )
-                nil [1754 2396])
+                  ( ("old_mean" variable nil (reparse-symbol function_parameters) [1985 1993])
+                    ("old_std" variable nil (reparse-symbol function_parameters) [1995 2002])
+                    ("new_mean" variable nil (reparse-symbol function_parameters) [2004 2012])
+                    ("new_std" variable nil (reparse-symbol function_parameters) [2014 2021])
+                    ("old_W" variable nil (reparse-symbol function_parameters) [2023 2028])
+                    ("old_b" variable nil (reparse-symbol function_parameters) [2030 2035]))                  )
+                nil [1963 2605])
             ("discount_cumsum" function (:arguments 
-              ( ("x" variable nil (reparse-symbol function_parameters) [2418 2419])
-                ("discount" variable nil (reparse-symbol function_parameters) [2421 2429]))              ) nil [2398 2716])
+              ( ("x" variable nil (reparse-symbol function_parameters) [2627 2628])
+                ("discount" variable nil (reparse-symbol function_parameters) [2630 2638]))              ) nil [2607 2932])
             ("discount_return" function (:arguments 
-              ( ("x" variable nil (reparse-symbol function_parameters) [2738 2739])
-                ("discount" variable nil (reparse-symbol function_parameters) [2741 2749]))              ) nil [2718 2807])
+              ( ("x" variable nil (reparse-symbol function_parameters) [2954 2955])
+                ("discount" variable nil (reparse-symbol function_parameters) [2957 2965]))              ) nil [2934 3023])
             ("rk4" function
                (:documentation "
     Integrate 1D or ND system of ODEs using 4-th order Runge-Kutta.
@@ -935,14 +937,14 @@
     scipy.integrate tools rather than this function.
     "
                 :arguments 
-                  ( ("derivs" variable nil (reparse-symbol function_parameters) [2817 2823])
-                    ("y0" variable nil (reparse-symbol function_parameters) [2825 2827])
-                    ("t" variable nil (reparse-symbol function_parameters) [2829 2830])
-                    ("args" variable nil (reparse-symbol function_parameters) [2832 2837])
-                    ("kwargs" variable nil (reparse-symbol function_parameters) [2839 2847]))                  )
-                nil [2809 4681]))          
+                  ( ("derivs" variable nil (reparse-symbol function_parameters) [3033 3039])
+                    ("y0" variable nil (reparse-symbol function_parameters) [3041 3043])
+                    ("t" variable nil (reparse-symbol function_parameters) [3045 3046])
+                    ("args" variable nil (reparse-symbol function_parameters) [3048 3053])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [3055 3063]))                  )
+                nil [3025 4896]))          
       :file "special.py"
-      :pointmax 4683
+      :pointmax 4896
       :fsize 4895
       :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
@@ -952,20 +954,27 @@
         '( ("operator" include nil nil [1 16])
             ("numpy" include nil nil [18 36])
             ("flatten_tensors" function (:arguments 
-              ( ("tensors" variable nil (reparse-symbol function_parameters) [59 66]))              ) nil [39 209])
+              ( ("tensors" variable nil (reparse-symbol function_parameters) [59 66]))              ) nil [39 204])
             ("unflatten_tensors" function (:arguments 
-              ( ("flattened" variable nil (reparse-symbol function_parameters) [233 242])
-                ("tensor_shapes" variable nil (reparse-symbol function_parameters) [244 257]))              ) nil [211 458])
+              ( ("flattened" variable nil (reparse-symbol function_parameters) [228 237])
+                ("tensor_shapes" variable nil (reparse-symbol function_parameters) [239 252]))              ) nil [206 454])
             ("pad_tensor" function (:arguments 
-              ( ("x" variable nil (reparse-symbol function_parameters) [475 476])
-                ("max_len" variable nil (reparse-symbol function_parameters) [478 485]))              ) nil [460 615])
+              ( ("x" variable nil (reparse-symbol function_parameters) [471 472])
+                ("max_len" variable nil (reparse-symbol function_parameters) [474 481])
+                ("mode" variable nil (reparse-symbol function_parameters) [483 487]))              ) nil [456 693])
+            ("pad_tensor_n" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [712 714])
+                ("max_len" variable nil (reparse-symbol function_parameters) [716 723]))              ) nil [695 880])
             ("pad_tensor_dict" function (:arguments 
-              ( ("tensor_dict" variable nil (reparse-symbol function_parameters) [637 648])
-                ("max_len" variable nil (reparse-symbol function_parameters) [650 657]))              ) nil [617 919])
+              ( ("tensor_dict" variable nil (reparse-symbol function_parameters) [902 913])
+                ("max_len" variable nil (reparse-symbol function_parameters) [915 922])
+                ("mode" variable nil (reparse-symbol function_parameters) [924 928]))              ) nil [882 1225])
+            ("flatten_first_axis_tensor_dict" function (:arguments 
+              ( ("tensor_dict" variable nil (reparse-symbol function_parameters) [1262 1273]))              ) nil [1227 1602])
             ("high_res_normalize" function (:arguments 
-              ( ("probs" variable nil (reparse-symbol function_parameters) [944 949]))              ) nil [921 1024])
+              ( ("probs" variable nil (reparse-symbol function_parameters) [1627 1632]))              ) nil [1604 1708])
             ("stack_tensor_list" function (:arguments 
-              ( ("tensor_list" variable nil (reparse-symbol function_parameters) [1048 1059]))              ) nil [1026 1095])
+              ( ("tensor_list" variable nil (reparse-symbol function_parameters) [1732 1743]))              ) nil [1710 1779])
             ("stack_tensor_dict_list" function
                (:documentation "
     Stack a list of dictionaries of {tensors or dictionary of tensors}.
@@ -973,22 +982,28 @@
     :return: a dictionary of {stacked tensors or dictionary of stacked tensors}
     "
                 :arguments 
-                  ( ("tensor_dict_list" variable nil (reparse-symbol function_parameters) [1285 1301]))                  )
-                nil [1258 1905])
+                  ( ("tensor_dict_list" variable nil (reparse-symbol function_parameters) [1969 1985]))                  )
+                nil [1942 2595])
+            ("concat_tensor_list_subsample" function (:arguments 
+              ( ("tensor_list" variable nil (reparse-symbol function_parameters) [2630 2641])
+                ("f" variable nil (reparse-symbol function_parameters) [2643 2644]))              ) nil [2597 2783])
+            ("concat_tensor_dict_list_subsample" function (:arguments 
+              ( ("tensor_dict_list" variable nil (reparse-symbol function_parameters) [2823 2839])
+                ("f" variable nil (reparse-symbol function_parameters) [2841 2842]))              ) nil [2785 3221])
             ("concat_tensor_list" function (:arguments 
-              ( ("tensor_list" variable nil (reparse-symbol function_parameters) [1930 1941]))              ) nil [1907 1991])
+              ( ("tensor_list" variable nil (reparse-symbol function_parameters) [3246 3257]))              ) nil [3223 3307])
             ("concat_tensor_dict_list" function (:arguments 
-              ( ("tensor_dict_list" variable nil (reparse-symbol function_parameters) [2021 2037]))              ) nil [1993 2384])
+              ( ("tensor_dict_list" variable nil (reparse-symbol function_parameters) [3337 3353]))              ) nil [3309 3706])
             ("split_tensor_dict_list" function (:arguments 
-              ( ("tensor_dict" variable nil (reparse-symbol function_parameters) [2413 2424]))              ) nil [2386 2777])
+              ( ("tensor_dict" variable nil (reparse-symbol function_parameters) [3735 3746]))              ) nil [3708 4105])
             ("truncate_tensor_list" function (:arguments 
-              ( ("tensor_list" variable nil (reparse-symbol function_parameters) [2804 2815])
-                ("truncated_len" variable nil (reparse-symbol function_parameters) [2817 2830]))              ) nil [2779 2872])
+              ( ("tensor_list" variable nil (reparse-symbol function_parameters) [4132 4143])
+                ("truncated_len" variable nil (reparse-symbol function_parameters) [4145 4158]))              ) nil [4107 4200])
             ("truncate_tensor_dict" function (:arguments 
-              ( ("tensor_dict" variable nil (reparse-symbol function_parameters) [2899 2910])
-                ("truncated_len" variable nil (reparse-symbol function_parameters) [2912 2925]))              ) nil [2874 3167]))          
+              ( ("tensor_dict" variable nil (reparse-symbol function_parameters) [4227 4238])
+                ("truncated_len" variable nil (reparse-symbol function_parameters) [4240 4253]))              ) nil [4202 4491]))          
       :file "tensor_utils.py"
-      :pointmax 3167
+      :pointmax 4491
       :fsize 4490
       :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)
@@ -1172,129 +1187,153 @@
     (semanticdb-table "logger.py"
       :major-mode 'python-mode
       :tags 
-        '( ("__future__" include nil nil [1 38])
-            ("rllab.misc.tabulate" include nil nil [39 79])
-            ("rllab.misc.console" include nil nil [80 118])
-            ("rllab.misc.autoargs" include nil nil [119 169])
-            ("contextlib" include nil nil [170 207])
-            ("os" include nil nil [208 217])
-            ("os.path" include nil nil [218 239])
-            ("sys" include nil nil [240 250])
-            ("datetime" include nil nil [251 266])
-            ("dateutil.tz" include nil nil [267 285])
-            ("csv" include nil nil [286 296])
-            ("joblib" include nil nil [297 310])
-            ("json" include nil nil [311 322])
-            ("cPickle" include nil nil [323 347])
-            ("base64" include nil nil [348 361])
-            ("_prefixes" variable nil nil [363 377])
-            ("_prefix_str" variable nil nil [378 394])
-            ("_tabular_prefixes" variable nil nil [396 418])
-            ("_tabular_prefix_str" variable nil nil [419 443])
-            ("_tabular" variable nil nil [445 458])
-            ("_text_outputs" variable nil nil [460 478])
-            ("_tabular_outputs" variable nil nil [479 500])
-            ("_text_fds" variable nil nil [502 516])
-            ("_tabular_fds" variable nil nil [517 534])
-            ("_tabular_header_written" variable nil nil [535 566])
-            ("_snapshot_dir" variable nil nil [568 588])
-            ("_snapshot_mode" variable nil nil [589 611])
-            ("_log_tabular_only" variable nil nil [613 638])
-            ("_header_printed" variable nil nil [639 662])
+        '( ("enum" include nil nil [1 22])
+            ("rllab.misc.tabulate" include nil nil [24 64])
+            ("rllab.misc.console" include nil nil [65 113])
+            ("rllab.misc.autoargs" include nil nil [114 164])
+            ("contextlib" include nil nil [165 202])
+            ("numpy" include nil nil [203 221])
+            ("os" include nil nil [222 231])
+            ("os.path" include nil nil [232 253])
+            ("sys" include nil nil [254 264])
+            ("datetime" include nil nil [265 280])
+            ("dateutil.tz" include nil nil [281 299])
+            ("csv" include nil nil [300 310])
+            ("joblib" include nil nil [311 324])
+            ("json" include nil nil [325 336])
+            ("pickle" include nil nil [337 350])
+            ("base64" include nil nil [351 364])
+            ("_prefixes" variable nil nil [366 380])
+            ("_prefix_str" variable nil nil [381 397])
+            ("_tabular_prefixes" variable nil nil [399 421])
+            ("_tabular_prefix_str" variable nil nil [422 446])
+            ("_tabular" variable nil nil [448 461])
+            ("_text_outputs" variable nil nil [463 481])
+            ("_tabular_outputs" variable nil nil [482 503])
+            ("_text_fds" variable nil nil [505 519])
+            ("_tabular_fds" variable nil nil [520 537])
+            ("_tabular_header_written" variable nil nil [538 569])
+            ("_snapshot_dir" variable nil nil [571 591])
+            ("_snapshot_mode" variable nil nil [592 614])
+            ("_snapshot_gap" variable nil nil [615 632])
+            ("_log_tabular_only" variable nil nil [634 659])
+            ("_header_printed" variable nil nil [660 683])
             ("_add_output" function (:arguments 
-              ( ("file_name" variable nil (reparse-symbol function_parameters) [681 690])
-                ("arr" variable nil (reparse-symbol function_parameters) [692 695])
-                ("fds" variable nil (reparse-symbol function_parameters) [697 700])
-                ("mode" variable nil (reparse-symbol function_parameters) [702 706]))              ) nil [665 863])
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [702 711])
+                ("arr" variable nil (reparse-symbol function_parameters) [713 716])
+                ("fds" variable nil (reparse-symbol function_parameters) [718 721])
+                ("mode" variable nil (reparse-symbol function_parameters) [723 727]))              ) nil [686 884])
             ("_remove_output" function (:arguments 
-              ( ("file_name" variable nil (reparse-symbol function_parameters) [884 893])
-                ("arr" variable nil (reparse-symbol function_parameters) [895 898])
-                ("fds" variable nil (reparse-symbol function_parameters) [900 903]))              ) nil [865 1019])
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [905 914])
+                ("arr" variable nil (reparse-symbol function_parameters) [916 919])
+                ("fds" variable nil (reparse-symbol function_parameters) [921 924]))              ) nil [886 1040])
             ("push_prefix" function (:arguments 
-              ( ("prefix" variable nil (reparse-symbol function_parameters) [1037 1043]))              ) nil [1021 1135])
+              ( ("prefix" variable nil (reparse-symbol function_parameters) [1058 1064]))              ) nil [1042 1156])
             ("add_text_output" function (:arguments 
-              ( ("file_name" variable nil (reparse-symbol function_parameters) [1157 1166]))              ) nil [1137 1232])
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1178 1187]))              ) nil [1158 1253])
             ("remove_text_output" function (:arguments 
-              ( ("file_name" variable nil (reparse-symbol function_parameters) [1257 1266]))              ) nil [1234 1325])
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1278 1287]))              ) nil [1255 1346])
             ("add_tabular_output" function (:arguments 
-              ( ("file_name" variable nil (reparse-symbol function_parameters) [1350 1359]))              ) nil [1327 1432])
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1371 1380]))              ) nil [1348 1452])
             ("remove_tabular_output" function (:arguments 
-              ( ("file_name" variable nil (reparse-symbol function_parameters) [1460 1469]))              ) nil [1434 1657])
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1480 1489]))              ) nil [1454 1677])
             ("set_snapshot_dir" function (:arguments 
-              ( ("dir_name" variable nil (reparse-symbol function_parameters) [1680 1688]))              ) nil [1659 1745])
-            ("get_snapshot_dir" function nil nil [1747 1796])
-            ("get_snapshot_mode" function nil nil [1798 1849])
+              ( ("dir_name" variable nil (reparse-symbol function_parameters) [1700 1708]))              ) nil [1679 1765])
+            ("get_snapshot_dir" function nil nil [1767 1816])
+            ("get_snapshot_mode" function nil nil [1818 1869])
             ("set_snapshot_mode" function (:arguments 
-              ( ("mode" variable nil (reparse-symbol function_parameters) [1873 1877]))              ) nil [1851 1932])
+              ( ("mode" variable nil (reparse-symbol function_parameters) [1893 1897]))              ) nil [1871 1952])
+            ("get_snapshot_gap" function nil nil [1953 2002])
+            ("set_snapshot_gap" function (:arguments 
+              ( ("gap" variable nil (reparse-symbol function_parameters) [2024 2027]))              ) nil [2003 2079])
             ("set_log_tabular_only" function (:arguments 
-              ( ("log_tabular_only" variable nil (reparse-symbol function_parameters) [1959 1975]))              ) nil [1934 2048])
-            ("get_log_tabular_only" function nil nil [2050 2107])
+              ( ("log_tabular_only" variable nil (reparse-symbol function_parameters) [2105 2121]))              ) nil [2080 2194])
+            ("get_log_tabular_only" function nil nil [2196 2253])
             ("log" function (:arguments 
-              ( ("s" variable nil (reparse-symbol function_parameters) [2117 2118])
-                ("with_prefix" variable nil (reparse-symbol function_parameters) [2120 2131])
-                ("with_timestamp" variable nil (reparse-symbol function_parameters) [2138 2152]))              ) nil [2109 2608])
+              ( ("s" variable nil (reparse-symbol function_parameters) [2263 2264])
+                ("with_prefix" variable nil (reparse-symbol function_parameters) [2266 2277])
+                ("with_timestamp" variable nil (reparse-symbol function_parameters) [2284 2298])
+                ("color" variable nil (reparse-symbol function_parameters) [2305 2310]))              ) nil [2255 2833])
             ("record_tabular" function (:arguments 
-              ( ("key" variable nil (reparse-symbol function_parameters) [2629 2632])
-                ("val" variable nil (reparse-symbol function_parameters) [2634 2637]))              ) nil [2610 2704])
+              ( ("key" variable nil (reparse-symbol function_parameters) [2854 2857])
+                ("val" variable nil (reparse-symbol function_parameters) [2859 2862]))              ) nil [2835 2929])
             ("push_tabular_prefix" function (:arguments 
-              ( ("key" variable nil (reparse-symbol function_parameters) [2730 2733]))              ) nil [2706 2854])
-            ("pop_tabular_prefix" function nil nil [2856 2996])
+              ( ("key" variable nil (reparse-symbol function_parameters) [2955 2958]))              ) nil [2931 3079])
+            ("pop_tabular_prefix" function nil nil [3081 3221])
             ("prefix" function
                (:decorators 
                   ( ("contextmanager" function (:type "decorator") nil nil))                  
                 :arguments 
-                  ( ("key" variable nil (reparse-symbol function_parameters) [3025 3028]))                  )
-                nil [2998 3109])
+                  ( ("key" variable nil (reparse-symbol function_parameters) [3250 3253]))                  )
+                nil [3223 3334])
             ("tabular_prefix" function
                (:decorators 
                   ( ("contextmanager" function (:type "decorator") nil nil))                  
                 :arguments 
-                  ( ("key" variable nil (reparse-symbol function_parameters) [3146 3149]))                  )
-                nil [3111 3216])
+                  ( ("key" variable nil (reparse-symbol function_parameters) [3371 3374]))                  )
+                nil [3336 3441])
             ("TerminalTablePrinter" type
                (:superclasses ("object")
                 :members 
                   ( ("__init__" function
                        (:suite 
-                          ( ("self" variable nil (reparse-symbol indented_block_body) [3286 3305])
-                            ("self" variable nil (reparse-symbol indented_block_body) [3314 3332]))                          
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3511 3530])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3539 3557]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [3271 3275]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3496 3500]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [3258 3333])
+                        (reparse-symbol indented_block_body) [3483 3558])
                     ("print_tabular" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [3356 3360])
-                            ("new_tabular" variable nil (reparse-symbol function_parameters) [3362 3373]))                          )
-                        (reparse-symbol indented_block_body) [3338 3616])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3581 3585])
+                            ("new_tabular" variable nil (reparse-symbol function_parameters) [3587 3598]))                          )
+                        (reparse-symbol indented_block_body) [3563 3841])
                     ("refresh" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [3633 3637]))                          )
-                        (reparse-symbol indented_block_body) [3621 3908]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3858 3862]))                          )
+                        (reparse-symbol indented_block_body) [3846 4133]))                  
                 :type "class")
-                nil [3218 3908])
-            ("table_printer" variable nil nil [3910 3948])
+                nil [3443 4133])
+            ("table_printer" variable nil nil [4135 4173])
             ("dump_tabular" function (:arguments 
-              ( ("args" variable nil (reparse-symbol function_parameters) [3968 3973])
-                ("kwargs" variable nil (reparse-symbol function_parameters) [3975 3983]))              ) nil [3951 4727])
-            ("pop_prefix" function nil nil [4729 4829])
+              ( ("args" variable nil (reparse-symbol function_parameters) [4193 4198])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [4200 4208]))              ) nil [4176 5029])
+            ("pop_prefix" function nil nil [5031 5131])
             ("save_itr_params" function (:arguments 
-              ( ("itr" variable nil (reparse-symbol function_parameters) [4851 4854])
-                ("params" variable nil (reparse-symbol function_parameters) [4856 4862]))              ) nil [4831 5349])
+              ( ("itr" variable nil (reparse-symbol function_parameters) [5153 5156])
+                ("params" variable nil (reparse-symbol function_parameters) [5158 5164]))              ) nil [5133 5861])
             ("log_parameters" function (:arguments 
-              ( ("log_file" variable nil (reparse-symbol function_parameters) [5370 5378])
-                ("args" variable nil (reparse-symbol function_parameters) [5380 5384])
-                ("classes" variable nil (reparse-symbol function_parameters) [5386 5393]))              ) nil [5351 6124])
+              ( ("log_file" variable nil (reparse-symbol function_parameters) [5882 5890])
+                ("args" variable nil (reparse-symbol function_parameters) [5892 5896])
+                ("classes" variable nil (reparse-symbol function_parameters) [5898 5905]))              ) nil [5863 6634])
             ("stub_to_json" function (:arguments 
-              ( ("stub_sth" variable nil (reparse-symbol function_parameters) [6143 6151]))              ) nil [6126 7231])
+              ( ("stub_sth" variable nil (reparse-symbol function_parameters) [6653 6661]))              ) nil [6636 8187])
+            ("MyEncoder" type
+               (:superclasses ("json.JSONEncoder")
+                :members 
+                  ( ("default" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8240 8244])
+                            ("o" variable nil (reparse-symbol function_parameters) [8246 8247]))                          )
+                        (reparse-symbol indented_block_body) [8228 8515]))                  
+                :type "class")
+                nil [8189 8515])
             ("log_parameters_lite" function (:arguments 
-              ( ("log_file" variable nil (reparse-symbol function_parameters) [7257 7265])
-                ("args" variable nil (reparse-symbol function_parameters) [7267 7271]))              ) nil [7233 8079]))          
+              ( ("log_file" variable nil (reparse-symbol function_parameters) [8541 8549])
+                ("args" variable nil (reparse-symbol function_parameters) [8551 8555]))              ) nil [8517 9380])
+            ("log_variant" function (:arguments 
+              ( ("log_file" variable nil (reparse-symbol function_parameters) [9398 9406])
+                ("variant_data" variable nil (reparse-symbol function_parameters) [9408 9420]))              ) nil [9382 9700])
+            ("record_tabular_misc_stat" function (:arguments 
+              ( ("key" variable nil (reparse-symbol function_parameters) [9731 9734])
+                ("values" variable nil (reparse-symbol function_parameters) [9736 9742])
+                ("placement" variable nil (reparse-symbol function_parameters) [9744 9753]))              ) nil [9702 10539]))          
       :file "logger.py"
-      :pointmax 8080
+      :pointmax 10539
       :fsize 10538
       :lastmodtime '(22749 16759 0 0)
       :unmatched-syntax nil)

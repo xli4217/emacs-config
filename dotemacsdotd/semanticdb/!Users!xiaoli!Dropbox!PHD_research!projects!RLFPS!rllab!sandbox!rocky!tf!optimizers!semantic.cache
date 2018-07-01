@@ -1,0 +1,202 @@
+;; Object optimizers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "optimizers/"
+  :tables
+  (list
+    (semanticdb-table "conjugate_gradient_optimizer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.misc" include nil nil [1 27])
+            ("rllab.misc" include nil nil [28 57])
+            ("rllab.misc" include nil nil [58 87])
+            ("rllab.core.serializable" include nil nil [88 136])
+            ("itertools" include nil nil [191 207])
+            ("numpy" include nil nil [208 226])
+            ("tensorflow" include nil nil [227 250])
+            ("sandbox.rocky.tf.misc" include nil nil [251 297])
+            ("rllab.misc.ext" include nil nil [298 335])
+            ("PerlmutterHvp" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [413 431])
+                            ("self" variable nil (reparse-symbol indented_block_body) [440 461])
+                            ("self" variable nil (reparse-symbol indented_block_body) [470 489])
+                            ("self" variable nil (reparse-symbol indented_block_body) [498 527]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [384 388])
+                            ("num_slices" variable nil (reparse-symbol function_parameters) [390 400]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [371 528])
+                    ("update_opt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [548 552])
+                            ("f" variable nil (reparse-symbol function_parameters) [554 555])
+                            ("target" variable nil (reparse-symbol function_parameters) [557 563])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [565 571])
+                            ("reg_coeff" variable nil (reparse-symbol function_parameters) [573 582]))                          )
+                        (reparse-symbol indented_block_body) [533 1743])
+                    ("build_eval" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1763 1767])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [1769 1775]))                          )
+                        (reparse-symbol indented_block_body) [1748 2021]))                  
+                :type "class")
+                nil [338 2021])
+            ("FiniteDifferenceHvp" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2151 2175])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2184 2210])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2219 2245])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2254 2283]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2075 2079])
+                            ("base_eps" variable nil (reparse-symbol function_parameters) [2081 2089])
+                            ("symmetric" variable nil (reparse-symbol function_parameters) [2096 2105])
+                            ("grad_clip" variable nil (reparse-symbol function_parameters) [2112 2121])
+                            ("num_slices" variable nil (reparse-symbol function_parameters) [2128 2138]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2062 2284])
+                    ("update_opt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2304 2308])
+                            ("f" variable nil (reparse-symbol function_parameters) [2310 2311])
+                            ("target" variable nil (reparse-symbol function_parameters) [2313 2319])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [2321 2327])
+                            ("reg_coeff" variable nil (reparse-symbol function_parameters) [2329 2338]))                          )
+                        (reparse-symbol indented_block_body) [2289 4067])
+                    ("build_eval" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4087 4091])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [4093 4099]))                          )
+                        (reparse-symbol indented_block_body) [4072 4344]))                  
+                :type "class")
+                nil [2023 4344])
+            ("ConjugateGradientOptimizer" type
+               (:documentation "
+    Performs constrained optimization via line search. The search direction is computed using a conjugate gradient
+    algorithm, which gives x = A^{-1}g, where A is a second order approximation of the constraint and g is the gradient
+    of the loss function.
+    "
+                :superclasses ("Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+
+        :param cg_iters: The number of CG iterations used to calculate A^-1 g
+        :param reg_coeff: A small value so that A -> A + reg*I
+        :param subsample_factor: Subsampling factor to reduce samples when using \"conjugate gradient. Since the
+        computation time for the descent direction dominates, this can greatly reduce the overall computation time.
+        :param debug_nan: if set to True, NanGuard will be added to the compilation, and ipdb will be invoked when
+        nan is detected
+        :param accept_violation: whether to accept the descent step if it violates the line search condition after
+        exhausting all backtracking budgets
+        :return:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [4989 5689])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [5698 5737])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5746 5771])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5780 5807])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5816 5857])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5866 5905])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5914 5951])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5960 5989])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5999 6019])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6028 6047])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6056 6087])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6096 6124])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6133 6160])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6169 6210])
+                            ("if" code nil (reparse-symbol indented_block_body) [6219 6297])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6305 6338]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4702 4706])
+                            ("cg_iters" variable nil (reparse-symbol function_parameters) [4720 4728])
+                            ("reg_coeff" variable nil (reparse-symbol function_parameters) [4745 4754])
+                            ("subsample_factor" variable nil (reparse-symbol function_parameters) [4773 4789])
+                            ("backtrack_ratio" variable nil (reparse-symbol function_parameters) [4806 4821])
+                            ("max_backtracks" variable nil (reparse-symbol function_parameters) [4839 4853])
+                            ("debug_nan" variable nil (reparse-symbol function_parameters) [4870 4879])
+                            ("accept_violation" variable nil (reparse-symbol function_parameters) [4899 4915])
+                            ("hvp_approach" variable nil (reparse-symbol function_parameters) [4935 4947])
+                            ("num_slices" variable nil (reparse-symbol function_parameters) [4966 4976]))                          
+                        :documentation "
+
+        :param cg_iters: The number of CG iterations used to calculate A^-1 g
+        :param reg_coeff: A small value so that A -> A + reg*I
+        :param subsample_factor: Subsampling factor to reduce samples when using \"conjugate gradient. Since the
+        computation time for the descent direction dominates, this can greatly reduce the overall computation time.
+        :param debug_nan: if set to True, NanGuard will be added to the compilation, and ipdb will be invoked when
+        nan is detected
+        :param accept_violation: whether to accept the descent step if it violates the line search condition after
+        exhausting all backtracking budgets
+        :return:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4676 6339])
+                    ("update_opt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6359 6363])
+                            ("loss" variable nil (reparse-symbol function_parameters) [6365 6369])
+                            ("target" variable nil (reparse-symbol function_parameters) [6371 6377])
+                            ("leq_constraint" variable nil (reparse-symbol function_parameters) [6379 6393])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [6395 6401])
+                            ("extra_inputs" variable nil (reparse-symbol function_parameters) [6403 6415])
+                            ("constraint_name" variable nil (reparse-symbol function_parameters) [6422 6437])
+                            ("args" variable nil (reparse-symbol function_parameters) [6452 6457])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [6478 6486]))                          
+                        :documentation "
+        :param loss: Symbolic expression for the loss function.
+        :param target: A parameterized object to optimize over. It should implement methods of the
+        :class:`rllab.core.paramerized.Parameterized` class.
+        :param leq_constraint: A constraint provided as a tuple (f, epsilon), of the form f(*inputs) <= epsilon.
+        :param inputs: A list of symbolic variables as inputs, which could be subsampled if needed. It is assumed
+        that the first dimension of these inputs should correspond to the number of data points
+        :param extra_inputs: A list of symbolic variables as extra inputs which should not be subsampled
+        :return: No return value.
+        ")
+                        (reparse-symbol indented_block_body) [6344 8878])
+                    ("loss" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8892 8896])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [8898 8904])
+                            ("extra_inputs" variable nil (reparse-symbol function_parameters) [8906 8918]))                          )
+                        (reparse-symbol indented_block_body) [8883 9116])
+                    ("constraint_val" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9140 9144])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [9146 9152])
+                            ("extra_inputs" variable nil (reparse-symbol function_parameters) [9154 9166]))                          )
+                        (reparse-symbol indented_block_body) [9121 9370])
+                    ("optimize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9388 9392])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [9394 9400])
+                            ("extra_inputs" variable nil (reparse-symbol function_parameters) [9402 9414])
+                            ("subsample_grouped_inputs" variable nil (reparse-symbol function_parameters) [9421 9445]))                          )
+                        (reparse-symbol indented_block_body) [9375 12906]))                  
+                :type "class")
+                nil [4346 12906]))          
+      :file "conjugate_gradient_optimizer.py"
+      :pointmax 12906
+      :fsize 12905
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!sandbox!rocky!tf!optimizers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,49 @@
+;; Object evaluation/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "evaluation/"
+  :tables
+  (list
+    (semanticdb-table "evaluation.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("scipy.signal" include nil nil [1 20])
+            ("future.utils" include nil nil [21 55])
+            ("numpy" include nil nil [56 74])
+            ("Evaluation" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [143 163])
+                            ("self" variable nil (reparse-symbol indented_block_body) [172 200]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [120 124])
+                            ("config" variable nil (reparse-symbol function_parameters) [126 132]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [107 219])
+                    ("discount" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [237 241])
+                            ("x" variable nil (reparse-symbol function_parameters) [243 244])
+                            ("gamma" variable nil (reparse-symbol function_parameters) [246 251]))                          
+                        :documentation " Calculate discounted forward sum of a sequence at each point ")
+                        (reparse-symbol indented_block_body) [224 404])
+                    ("get_diagnostics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [439 443])
+                            ("mode" variable nil (reparse-symbol function_parameters) [445 449])
+                            ("batch" variable nil (reparse-symbol function_parameters) [451 456]))                          )
+                        (reparse-symbol indented_block_body) [419 3918]))                  
+                :type "class")
+                nil [76 3918]))          
+      :file "evaluation.py"
+      :pointmax 3918
+      :fsize 3917
+      :lastmodtime '(23286 5317 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!rl_pipeline!evaluation!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

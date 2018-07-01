@@ -1,0 +1,168 @@
+;; Object discrete_fsa_example/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "discrete_fsa_example/"
+  :tables
+  (list
+    (semanticdb-table "grid_world_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("rllab.envs.base" include nil nil [20 51])
+            ("rllab.spaces" include nil nil [52 85])
+            ("rllab.envs.base" include nil nil [86 118])
+            ("rllab.core.serializable" include nil nil [119 167])
+            ("MAPS" variable nil nil [169 265])
+            ("GridWorldEnv" type
+               (:documentation "
+    This is a 1d discrete environment, horizontal axis denote automata states
+    'S' : starting point
+    'F' : free space
+    "
+                :superclasses ("Env" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [508 547])
+                            ("if" code nil (reparse-symbol indented_block_body) [556 612])
+                            ("desc" variable nil (reparse-symbol indented_block_body) [620 658])
+                            ("print" code nil (reparse-symbol indented_block_body) [667 678])
+                            ("self" variable nil (reparse-symbol indented_block_body) [687 703])
+                            ("self, self" code nil (reparse-symbol indented_block_body) [712 747])
+                            (", " code nil (reparse-symbol indented_block_body) [756 804])
+                            ("A_x, A_y" code nil (reparse-symbol indented_block_body) [813 847])
+                            ("B_x, B_y" code nil (reparse-symbol indented_block_body) [856 890])
+                            ("self" variable nil (reparse-symbol indented_block_body) [900 922])
+                            ("self" variable nil (reparse-symbol indented_block_body) [931 953])
+                            ("self" code nil (reparse-symbol indented_block_body) [962 1011])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1020 1037])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1046 1068])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1078 1106])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1115 1167])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1176 1194])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1204 1223])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1232 1251]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [465 469])
+                            ("fsa_reward" variable nil (reparse-symbol function_parameters) [471 481])
+                            ("desc" variable nil (reparse-symbol function_parameters) [488 492]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [452 1252])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1275 1279]))                          )
+                        (reparse-symbol indented_block_body) [1265 1425])
+                    ("action_from_direction" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("d" variable nil (reparse-symbol function_parameters) [1474 1475]))                          
+                        :documentation "
+        Return the action corresponding to the given direction. This is a helper method for debugging and testing
+        purposes.
+        :return: the action index corresponding to the given direction
+        ")
+                        (reparse-symbol indented_block_body) [1430 1800])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1814 1818])
+                            ("action" variable nil (reparse-symbol function_parameters) [1820 1826]))                          
+                        :documentation "
+        action map:
+        0: stay
+        1: left
+        2: right
+        :param action: should be a one-hot vector encoding the action
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [1805 2653])
+                    ("get_possible_next_states" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2687 2691])
+                            ("state" variable nil (reparse-symbol function_parameters) [2693 2698])
+                            ("action" variable nil (reparse-symbol function_parameters) [2700 2706]))                          
+                        :documentation "
+        Given the state and action, return a list of possible next states and their probabilities. Only next states
+        with nonzero probabilities will be returned
+        :param state: start state
+        :param action: action
+        :return: a list of pairs (s', p(s'|s,a))
+        ")
+                        (reparse-symbol indented_block_body) [2658 3452])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3488 3492]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3457 3522])
+                    ("observation_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3563 3567]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3527 3619])
+                    ("get_manhattan_dist" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3647 3651])
+                            ("s1" variable nil (reparse-symbol function_parameters) [3652 3654])
+                            ("g_y" variable nil (reparse-symbol function_parameters) [3655 3658]))                          )
+                        (reparse-symbol indented_block_body) [3624 3751])
+                    ("get_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3771 3775])
+                            ("s" variable nil (reparse-symbol function_parameters) [3777 3778])
+                            ("astate" variable nil (reparse-symbol function_parameters) [3780 3786]))                          )
+                        (reparse-symbol indented_block_body) [3756 4890])
+                    ("get_state_coords" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4928 4932])
+                            ("s" variable nil (reparse-symbol function_parameters) [4934 4935]))                          )
+                        (reparse-symbol indented_block_body) [4907 5013]))                  
+                :type "class")
+                nil [268 5013])
+            ("if" code nil nil [5015 5230]))          
+      :file "grid_world_env.py"
+      :pointmax 5230
+      :fsize 5229
+      :lastmodtime '(22952 35601 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "grid_world_example.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("grid_world_env" include nil nil [20 59])
+            ("rllab.misc.logger" include nil nil [60 94])
+            ("logger" code nil nil [96 135])
+            ("env" variable nil nil [137 167])
+            ("env" code nil nil [168 179])
+            ("Q_stay" variable nil nil [181 206])
+            ("Q_left" variable nil nil [207 232])
+            ("Q_right" variable nil nil [233 259])
+            ("Q" variable nil nil [261 290])
+            ("itr" variable nil nil [292 302])
+            ("horizon" variable nil nil [303 316])
+            ("alpha" variable nil nil [317 328])
+            ("gamma" variable nil nil [329 341])
+            ("epsilon" variable nil nil [342 355])
+            ("R_last" variable nil nil [357 367])
+            ("for" code nil nil [368 1285])
+            ("policy" variable nil nil [1300 1356])
+            ("print" code nil nil [1357 1370])
+            ("np" code nil nil [1372 1404]))          
+      :file "grid_world_example.py"
+      :pointmax 1951
+      :fsize 1950
+      :lastmodtime '(22952 36415 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!examples!discrete_fsa_example!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,405 @@
+;; Object ai2thor/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ai2thor/"
+  :tables
+  (list
+    (semanticdb-table "_version.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__version__" variable nil nil [93 115]))          
+      :file "_version.py"
+      :pointmax 116
+      :fsize 115
+      :lastmodtime '(23280 41554 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "controller.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+ai2thor.controller
+
+Primary entrypoint into the Thor API. Provides all the high-level functions
+needed to control the in-game agent through ai2thor.server.
+
+\"\"\"" code nil nil [62 226])
+            ("atexit" include nil nil [227 240])
+            ("collections" include nil nil [241 283])
+            ("itertools" include nil nil [284 313])
+            ("io" include nil nil [314 323])
+            ("json" include nil nil [324 335])
+            ("logging" include nil nil [336 350])
+            ("math" include nil nil [351 362])
+            ("time" include nil nil [363 374])
+            ("random" include nil nil [375 388])
+            ("shlex" include nil nil [389 401])
+            ("signal" include nil nil [402 415])
+            ("socket" include nil nil [416 429])
+            ("subprocess" include nil nil [430 447])
+            ("threading" include nil nil [448 464])
+            ("os" include nil nil [465 474])
+            ("platform" include nil nil [475 490])
+            ("uuid" include nil nil [491 502])
+            ("tty" include nil nil [503 513])
+            ("sys" include nil nil [514 524])
+            ("termios" include nil nil [525 539])
+            ("try" code nil nil [540 621])
+            ("zipfile" include nil nil [622 636])
+            ("numpy" include nil nil [638 656])
+            ("ai2thor.docker" include nil nil [658 679])
+            ("ai2thor.downloader" include nil nil [680 705])
+            ("ai2thor.server" include nil nil [706 727])
+            ("ai2thor.server" include nil nil [728 764])
+            ("ai2thor._builds" include nil nil [765 799])
+            ("logger" variable nil nil [801 837])
+            ("RECEPTACLE_OBJECTS" variable nil nil [839 8673])
+            ("get_term_character" function nil nil [8675 8939])
+            ("process_alive" function
+               (:documentation "
+    Use kill(0) to determine if pid is alive
+    :param pid: process id
+    :rtype: bool
+    "
+                :arguments 
+                  ( ("pid" variable nil (reparse-symbol function_parameters) [8958 8961]))                  )
+                nil [8940 9171])
+            ("makedirs" function (:arguments 
+              ( ("directory" variable nil (reparse-symbol function_parameters) [9217 9226]))              ) nil [9204 9297])
+            ("distance" function (:arguments 
+              ( ("point1" variable nil (reparse-symbol function_parameters) [9311 9317])
+                ("point2" variable nil (reparse-symbol function_parameters) [9319 9325]))              ) nil [9298 9458])
+            ("key_for_point" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [9478 9479])
+                ("z" variable nil (reparse-symbol function_parameters) [9481 9482]))              ) nil [9460 9519])
+            ("Controller" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [9579 9616])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9625 9663])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9672 9713])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9722 9740])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9749 9770])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9779 9806])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9815 9839])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9848 9881])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9890 9912])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9921 9946])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9955 9981]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9564 9568]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9551 9982])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9997 10001])
+                            ("scene_name" variable nil (reparse-symbol function_parameters) [10003 10013]))                          )
+                        (reparse-symbol indented_block_body) [9987 10206])
+                    ("random_initialize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10246 10250])
+                            ("random_seed" variable nil (reparse-symbol function_parameters) [10264 10275])
+                            ("randomize_open" variable nil (reparse-symbol function_parameters) [10294 10308])
+                            ("unique_object_types" variable nil (reparse-symbol function_parameters) [10328 10347])
+                            ("exclude_receptacle_object_pairs" variable nil (reparse-symbol function_parameters) [10367 10398]))                          )
+                        (reparse-symbol indented_block_body) [10211 11636])
+                    ("scene_names" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11657 11661]))                          )
+                        (reparse-symbol indented_block_body) [11641 11866])
+                    ("next_interact_command" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11897 11901]))                          )
+                        (reparse-symbol indented_block_body) [11871 12549])
+                    ("interact" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12567 12571]))                          )
+                        (reparse-symbol indented_block_body) [12554 15192])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15207 15211])
+                            ("action" variable nil (reparse-symbol function_parameters) [15213 15219])
+                            ("raise_for_failure" variable nil (reparse-symbol function_parameters) [15221 15238]))                          )
+                        (reparse-symbol indented_block_body) [15198 16463])
+                    ("unity_command" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16486 16490])
+                            ("width" variable nil (reparse-symbol function_parameters) [16492 16497])
+                            ("height" variable nil (reparse-symbol function_parameters) [16499 16505])
+                            ("nogui" variable nil (reparse-symbol function_parameters) [16507 16512]))                          )
+                        (reparse-symbol indented_block_body) [16468 16801])
+                    ("_start_unity_thread" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16830 16834])
+                            ("env" variable nil (reparse-symbol function_parameters) [16836 16839])
+                            ("width" variable nil (reparse-symbol function_parameters) [16841 16846])
+                            ("height" variable nil (reparse-symbol function_parameters) [16848 16854])
+                            ("host" variable nil (reparse-symbol function_parameters) [16856 16860])
+                            ("port" variable nil (reparse-symbol function_parameters) [16862 16866])
+                            ("image_name" variable nil (reparse-symbol function_parameters) [16868 16878])
+                            ("nogui" variable nil (reparse-symbol function_parameters) [16880 16885]))                          )
+                        (reparse-symbol indented_block_body) [16806 17968])
+                    ("check_docker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17990 17994]))                          )
+                        (reparse-symbol indented_block_body) [17973 18354])
+                    ("check_x_display" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18379 18383])
+                            ("x_display" variable nil (reparse-symbol function_parameters) [18385 18394]))                          )
+                        (reparse-symbol indented_block_body) [18359 18691])
+                    ("_start_server_thread" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18721 18725]))                          )
+                        (reparse-symbol indented_block_body) [18696 18756])
+                    ("base_dir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18774 18778]))                          )
+                        (reparse-symbol indented_block_body) [18761 18846])
+                    ("build_name" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18866 18870]))                          )
+                        (reparse-symbol indented_block_body) [18851 18960])
+                    ("executable_path" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18985 18989]))                          )
+                        (reparse-symbol indented_block_body) [18965 19637])
+                    ("download_binary" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19662 19666]))                          )
+                        (reparse-symbol indented_block_body) [19642 20816])
+                    ("start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20851 20855])
+                            ("port" variable nil (reparse-symbol function_parameters) [20869 20873])
+                            ("start_unity" variable nil (reparse-symbol function_parameters) [20889 20900])
+                            ("player_screen_width" variable nil (reparse-symbol function_parameters) [20919 20938])
+                            ("player_screen_height" variable nil (reparse-symbol function_parameters) [20956 20976])
+                            ("x_display" variable nil (reparse-symbol function_parameters) [20994 21003])
+                            ("enable_remote_viewer" variable nil (reparse-symbol function_parameters) [21022 21042])
+                            ("nogui" variable nil (reparse-symbol function_parameters) [21062 21067]))                          )
+                        (reparse-symbol indented_block_body) [20828 23144])
+                    ("stop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23158 23162]))                          )
+                        (reparse-symbol indented_block_body) [23149 23307])
+                    ("stop_container" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23331 23335]))                          )
+                        (reparse-symbol indented_block_body) [23312 23466])
+                    ("stop_unity" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23486 23490]))                          )
+                        (reparse-symbol indented_block_body) [23471 23890]))                  
+                :type "class")
+                nil [9520 23890])
+            ("BFSSearchPoint" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [24012 24048])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24057 24100])
+                            ("self" code nil (reparse-symbol indented_block_body) [24109 24145])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24154 24188])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24197 24231]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23930 23934])
+                            ("start_position" variable nil (reparse-symbol function_parameters) [23936 23950])
+                            ("move_vector" variable nil (reparse-symbol function_parameters) [23952 23963])
+                            ("heading_angle" variable nil (reparse-symbol function_parameters) [23965 23978])
+                            ("horizon_angle" variable nil (reparse-symbol function_parameters) [23984 23997]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [23917 24232])
+                    ("target_point" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24254 24258]))                          )
+                        (reparse-symbol indented_block_body) [24237 24413]))                  
+                :type "class")
+                nil [23891 24413])
+            ("BFSController" type
+               (:superclasses ("Controller")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [24496 24533])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24542 24576])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24585 24613])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24622 24647])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24656 24676])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24685 24706])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24715 24736])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24745 24771]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24465 24469])
+                            ("grid_size" variable nil (reparse-symbol function_parameters) [24471 24480]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [24452 24772])
+                    ("visualize_points" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24798 24802])
+                            ("scene_name" variable nil (reparse-symbol function_parameters) [24804 24814])
+                            ("wait_key" variable nil (reparse-symbol function_parameters) [24816 24824]))                          )
+                        (reparse-symbol indented_block_body) [24777 25812])
+                    ("has_islands" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25834 25838]))                          )
+                        (reparse-symbol indented_block_body) [25818 26737])
+                    ("build_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26758 26762]))                          )
+                        (reparse-symbol indented_block_body) [26742 26933])
+                    ("key_for_point" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26956 26960])
+                            ("point" variable nil (reparse-symbol function_parameters) [26962 26967]))                          )
+                        (reparse-symbol indented_block_body) [26938 27021])
+                    ("_build_graph_point" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27049 27053])
+                            ("graph" variable nil (reparse-symbol function_parameters) [27055 27060])
+                            ("point" variable nil (reparse-symbol function_parameters) [27062 27067]))                          )
+                        (reparse-symbol indented_block_body) [27026 27337])
+                    ("move_relative_points" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27367 27371])
+                            ("all_points" variable nil (reparse-symbol function_parameters) [27373 27383])
+                            ("graph" variable nil (reparse-symbol function_parameters) [27385 27390])
+                            ("position" variable nil (reparse-symbol function_parameters) [27392 27400])
+                            ("rotation" variable nil (reparse-symbol function_parameters) [27402 27410]))                          )
+                        (reparse-symbol indented_block_body) [27342 28350])
+                    ("plan_horizons" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28373 28377])
+                            ("agent_horizon" variable nil (reparse-symbol function_parameters) [28379 28392])
+                            ("target_horizon" variable nil (reparse-symbol function_parameters) [28394 28408]))                          )
+                        (reparse-symbol indented_block_body) [28355 28838])
+                    ("plan_rotations" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28862 28866])
+                            ("agent_rotation" variable nil (reparse-symbol function_parameters) [28868 28882])
+                            ("target_rotation" variable nil (reparse-symbol function_parameters) [28884 28899]))                          )
+                        (reparse-symbol indented_block_body) [28843 29501])
+                    ("shortest_plan" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29524 29528])
+                            ("graph" variable nil (reparse-symbol function_parameters) [29530 29535])
+                            ("agent" variable nil (reparse-symbol function_parameters) [29537 29542])
+                            ("target" variable nil (reparse-symbol function_parameters) [29544 29550]))                          )
+                        (reparse-symbol indented_block_body) [29506 30511])
+                    ("enqueue_point" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30534 30538])
+                            ("point" variable nil (reparse-symbol function_parameters) [30540 30545]))                          )
+                        (reparse-symbol indented_block_body) [30516 30839])
+                    ("enqueue_points" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30863 30867])
+                            ("agent_position" variable nil (reparse-symbol function_parameters) [30869 30883]))                          )
+                        (reparse-symbol indented_block_body) [30844 31287])
+                    ("search_all_closed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31314 31318])
+                            ("scene_name" variable nil (reparse-symbol function_parameters) [31320 31330]))                          )
+                        (reparse-symbol indented_block_body) [31292 31694])
+                    ("start_search" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31777 31781])
+                            ("scene_name" variable nil (reparse-symbol function_parameters) [31795 31805])
+                            ("random_seed" variable nil (reparse-symbol function_parameters) [31819 31830])
+                            ("full_grid" variable nil (reparse-symbol function_parameters) [31844 31853])
+                            ("current_receptacle_object_pairs" variable nil (reparse-symbol function_parameters) [31867 31898])
+                            ("randomize" variable nil (reparse-symbol function_parameters) [31912 31921]))                          )
+                        (reparse-symbol indented_block_body) [31747 33216])
+                    ("prune_points" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33317 33321]))                          )
+                        (reparse-symbol indented_block_body) [33300 33999])
+                    ("is_object_visible" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34026 34030])
+                            ("object_id" variable nil (reparse-symbol function_parameters) [34032 34041]))                          )
+                        (reparse-symbol indented_block_body) [34004 34213])
+                    ("find_visible_receptacles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34247 34251]))                          )
+                        (reparse-symbol indented_block_body) [34218 38062])
+                    ("find_visible_objects" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38092 38096]))                          )
+                        (reparse-symbol indented_block_body) [38067 39500])
+                    ("initialize_scene" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39526 39530]))                          )
+                        (reparse-symbol indented_block_body) [39505 41647])
+                    ("queue_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [41667 41671]))                          )
+                        (reparse-symbol indented_block_body) [41652 42629]))                  
+                :type "class")
+                nil [24414 42629]))          
+      :file "controller.py"
+      :pointmax 42629
+      :fsize 42660
+      :lastmodtime '(23281 5705 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "docker.py"
+      :file "docker.py"
+      :fsize 3782
+      :lastmodtime '(23280 41554 0 0))
+    (semanticdb-table "downloader.py"
+      :file "downloader.py"
+      :fsize 1047
+      :lastmodtime '(23280 41554 0 0))
+    (semanticdb-table "server.py"
+      :file "server.py"
+      :fsize 8317
+      :lastmodtime '(23280 41554 0 0))
+    (semanticdb-table "_builds.py"
+      :file "_builds.py"
+      :fsize 487
+      :lastmodtime '(23280 41554 0 0)))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!external_libs!ai2thor!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,540 @@
+;; Object algos/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "algos/"
+  :tables
+  (list
+    (semanticdb-table "batch_polopt.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.base" include nil nil [1 41])
+            ("rllab.sampler" include nil nil [42 84])
+            ("rllab.sampler.base" include nil nil [85 127])
+            ("rllab.misc.logger" include nil nil [128 162])
+            ("rllab.plotter" include nil nil [163 194])
+            ("rllab.policies.base" include nil nil [195 233])
+            ("BatchSampler" type
+               (:superclasses ("BaseSampler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :type algo: BatchPolopt
+        \"\"\"" code nil (reparse-symbol indented_block_body) [307 354])
+                            ("self" variable nil (reparse-symbol indented_block_body) [363 379]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [286 290])
+                            ("algo" variable nil (reparse-symbol function_parameters) [292 296]))                          
+                        :documentation "
+        :type algo: BatchPolopt
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [273 380])
+                    ("start_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [402 406]))                          )
+                        (reparse-symbol indented_block_body) [385 504])
+                    ("shutdown_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [529 533]))                          )
+                        (reparse-symbol indented_block_body) [509 599])
+                    ("obtain_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [623 627])
+                            ("itr" variable nil (reparse-symbol function_parameters) [629 632]))                          )
+                        (reparse-symbol indented_block_body) [604 1122]))                  
+                :type "class")
+                nil [236 1122])
+            ("BatchPolopt" type
+               (:documentation "
+    Base class for batch sampling-based policy optimization methods.
+    This includes various policy gradient methods like vpg, npg, ppo, trpo, etc.
+    "
+                :superclasses ("RLAlgorithm")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param env: Environment
+        :param policy: Policy
+        :type policy: Policy
+        :param baseline: Baseline
+        :param scope: Scope for identifying the algorithm. Must be specified if running multiple algorithms
+        simultaneously, each using different environments and policies
+        :param n_itr: Number of iterations.
+        :param start_itr: Starting iteration.
+        :param batch_size: Number of samples per iteration.
+        :param max_path_length: Maximum length of a single rollout.
+        :param discount: Discount.
+        :param gae_lambda: Lambda used for generalized advantage estimation.
+        :param plot: Plot evaluation run after each iteration.
+        :param pause_for_plot: Whether to pause before contiuing when plotting.
+        :param center_adv: Whether to rescale the advantages so that they have mean 0 and standard deviation 1.
+        :param positive_adv: Whether to shift the advantages so that they are always positive. When used in
+        conjunction with center_adv the advantages will be standardized before shifting.
+        :param store_paths: Whether to save all paths data to the snapshot.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1882 3059])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3068 3082])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3091 3111])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3120 3144])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3153 3171])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3180 3198])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3207 3235])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3244 3272])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3281 3319])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3328 3352])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3361 3389])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3398 3414])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3423 3459])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3468 3496])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3505 3537])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3546 3576])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3585 3615])
+                            ("if" code nil (reparse-symbol indented_block_body) [3624 3687])
+                            ("if" code nil (reparse-symbol indented_block_body) [3695 3754])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3762 3810]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1353 1357])
+                            ("env" variable nil (reparse-symbol function_parameters) [1371 1374])
+                            ("policy" variable nil (reparse-symbol function_parameters) [1388 1394])
+                            ("baseline" variable nil (reparse-symbol function_parameters) [1408 1416])
+                            ("scope" variable nil (reparse-symbol function_parameters) [1430 1435])
+                            ("n_itr" variable nil (reparse-symbol function_parameters) [1454 1459])
+                            ("start_itr" variable nil (reparse-symbol function_parameters) [1477 1486])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [1502 1512])
+                            ("max_path_length" variable nil (reparse-symbol function_parameters) [1531 1546])
+                            ("discount" variable nil (reparse-symbol function_parameters) [1564 1572])
+                            ("gae_lambda" variable nil (reparse-symbol function_parameters) [1591 1601])
+                            ("plot" variable nil (reparse-symbol function_parameters) [1617 1621])
+                            ("pause_for_plot" variable nil (reparse-symbol function_parameters) [1641 1655])
+                            ("center_adv" variable nil (reparse-symbol function_parameters) [1675 1685])
+                            ("positive_adv" variable nil (reparse-symbol function_parameters) [1704 1716])
+                            ("store_paths" variable nil (reparse-symbol function_parameters) [1736 1747])
+                            ("whole_paths" variable nil (reparse-symbol function_parameters) [1767 1778])
+                            ("sampler_cls" variable nil (reparse-symbol function_parameters) [1797 1808])
+                            ("sampler_args" variable nil (reparse-symbol function_parameters) [1827 1839])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1858 1866]))                          
+                        :documentation "
+        :param env: Environment
+        :param policy: Policy
+        :type policy: Policy
+        :param baseline: Baseline
+        :param scope: Scope for identifying the algorithm. Must be specified if running multiple algorithms
+        simultaneously, each using different environments and policies
+        :param n_itr: Number of iterations.
+        :param start_itr: Starting iteration.
+        :param batch_size: Number of samples per iteration.
+        :param max_path_length: Maximum length of a single rollout.
+        :param discount: Discount.
+        :param gae_lambda: Lambda used for generalized advantage estimation.
+        :param plot: Plot evaluation run after each iteration.
+        :param pause_for_plot: Whether to pause before contiuing when plotting.
+        :param center_adv: Whether to rescale the advantages so that they have mean 0 and standard deviation 1.
+        :param positive_adv: Whether to shift the advantages so that they are always positive. When used in
+        conjunction with center_adv the advantages will be standardized before shifting.
+        :param store_paths: Whether to save all paths data to the snapshot.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1327 3811])
+                    ("start_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3833 3837]))                          )
+                        (reparse-symbol indented_block_body) [3816 3951])
+                    ("shutdown_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3976 3980]))                          )
+                        (reparse-symbol indented_block_body) [3956 4022])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4037 4041]))                          )
+                        (reparse-symbol indented_block_body) [4027 5136])
+                    ("log_diagnostics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5161 5165])
+                            ("paths" variable nil (reparse-symbol function_parameters) [5167 5172]))                          )
+                        (reparse-symbol indented_block_body) [5141 5303])
+                    ("init_opt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5321 5325]))                          
+                        :documentation "
+        Initialize the optimization procedure. If using theano / cgt, this may
+        include declaring all the variables and compiling functions
+        ")
+                        (reparse-symbol indented_block_body) [5308 5533])
+                    ("get_itr_snapshot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5559 5563])
+                            ("itr" variable nil (reparse-symbol function_parameters) [5565 5568])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [5570 5582]))                          
+                        :documentation "
+        Returns all the data that should be saved in the snapshot for this
+        iteration.
+        ")
+                        (reparse-symbol indented_block_body) [5538 5737])
+                    ("optimize_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5762 5766])
+                            ("itr" variable nil (reparse-symbol function_parameters) [5768 5771])
+                            ("samples_data" variable nil (reparse-symbol function_parameters) [5773 5785]))                          )
+                        (reparse-symbol indented_block_body) [5742 5822])
+                    ("update_plot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5843 5847]))                          )
+                        (reparse-symbol indented_block_body) [5827 5939]))                  
+                :type "class")
+                nil [1124 5939]))          
+      :file "batch_polopt.py"
+      :pointmax 5939
+      :fsize 5938
+      :lastmodtime '(22802 2790 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "base.py"
+      :file "base.py"
+      :fsize 122
+      :lastmodtime '(22795 34202 0 0))
+    (semanticdb-table "cem.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.base" include nil nil [1 41])
+            ("numpy" include nil nil [43 61])
+            ("rllab.misc.special" include nil nil [63 109])
+            ("rllab.sampler" include nil nil [110 167])
+            ("rllab.sampler.utils" include nil nil [168 207])
+            ("rllab.core.serializable" include nil nil [208 256])
+            ("rllab.misc.logger" include nil nil [257 291])
+            ("rllab.plotter" include nil nil [292 323])
+            ("_worker_rollout_policy" function (:arguments 
+              ( ("G" variable nil (reparse-symbol function_parameters) [353 354])
+                ("args" variable nil (reparse-symbol function_parameters) [356 360]))              ) nil [326 970])
+            ("CEM" type
+               (:superclasses ("RLAlgorithm" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param n_itr: Number of iterations.
+        :param max_path_length: Maximum length of a single rollout.
+        :param batch_size: # of samples from trajs from param distribution, when this
+        is set, n_samples is ignored
+        :param discount: Discount.
+        :param plot: Plot evaluation run after each iteration.
+        :param init_std: Initial std for param distribution
+        :param extra_std: Decaying std added to param distribution at each iteration
+        :param extra_decay_time: Iterations that it takes to decay extra std
+        :param n_samples: #of samples from param distribution
+        :param best_frac: Best fraction of the sampled params
+        :return:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1395 2106])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [2115 2154])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2163 2177])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2186 2206])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2215 2243])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2252 2268])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2277 2317])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2326 2352])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2361 2387])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2396 2422])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2431 2455])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2464 2488])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2497 2535])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2544 2562]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1040 1044])
+                            ("env" variable nil (reparse-symbol function_parameters) [1058 1061])
+                            ("policy" variable nil (reparse-symbol function_parameters) [1075 1081])
+                            ("n_itr" variable nil (reparse-symbol function_parameters) [1095 1100])
+                            ("max_path_length" variable nil (reparse-symbol function_parameters) [1118 1133])
+                            ("discount" variable nil (reparse-symbol function_parameters) [1151 1159])
+                            ("init_std" variable nil (reparse-symbol function_parameters) [1178 1186])
+                            ("n_samples" variable nil (reparse-symbol function_parameters) [1203 1212])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [1230 1240])
+                            ("best_frac" variable nil (reparse-symbol function_parameters) [1259 1268])
+                            ("extra_std" variable nil (reparse-symbol function_parameters) [1287 1296])
+                            ("extra_decay_time" variable nil (reparse-symbol function_parameters) [1313 1329])
+                            ("plot" variable nil (reparse-symbol function_parameters) [1347 1351])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1371 1379]))                          
+                        :documentation "
+        :param n_itr: Number of iterations.
+        :param max_path_length: Maximum length of a single rollout.
+        :param batch_size: # of samples from trajs from param distribution, when this
+        is set, n_samples is ignored
+        :param discount: Discount.
+        :param plot: Plot evaluation run after each iteration.
+        :param init_std: Initial std for param distribution
+        :param extra_std: Decaying std added to param distribution at each iteration
+        :param extra_decay_time: Iterations that it takes to decay extra std
+        :param n_samples: #of samples from param distribution
+        :param best_frac: Best fraction of the sampled params
+        :return:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1014 2563])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2578 2582]))                          )
+                        (reparse-symbol indented_block_body) [2568 5828]))                  
+                :type "class")
+                nil [972 5828]))          
+      :file "cem.py"
+      :pointmax 5828
+      :fsize 5827
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ddpg.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.base" include nil nil [1 41])
+            ("rllab.misc.overrides" include nil nil [42 84])
+            ("rllab.misc" include nil nil [85 115])
+            ("rllab.misc" include nil nil [116 142])
+            ("rllab.sampler" include nil nil [143 185])
+            ("rllab.plotter" include nil nil [186 219])
+            ("functools" include nil nil [220 249])
+            ("rllab.misc.logger" include nil nil [250 284])
+            ("theano.tensor" include nil nil [285 311])
+            ("pickle" include nil nil [312 335])
+            ("numpy" include nil nil [336 354])
+            ("pyprind" include nil nil [355 369])
+            ("lasagne" include nil nil [370 384])
+            ("parse_update_method" function (:arguments 
+              ( ("update_method" variable nil (reparse-symbol function_parameters) [411 424])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [426 434]))              ) nil [387 681])
+            ("SimpleReplayPool" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [804 843])
+                            ("self" variable nil (reparse-symbol indented_block_body) [852 881])
+                            ("self" variable nil (reparse-symbol indented_block_body) [890 925])
+                            ("self" variable nil (reparse-symbol indented_block_body) [934 1020])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1029 1105])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1114 1153])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1162 1218])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1227 1243])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1252 1265])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1274 1288]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [745 749])
+                            ("max_pool_size" variable nil (reparse-symbol function_parameters) [751 764])
+                            ("observation_dim" variable nil (reparse-symbol function_parameters) [766 781])
+                            ("action_dim" variable nil (reparse-symbol function_parameters) [783 793]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [719 1289])
+                    ("add_sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1309 1313])
+                            ("observation" variable nil (reparse-symbol function_parameters) [1315 1326])
+                            ("action" variable nil (reparse-symbol function_parameters) [1328 1334])
+                            ("reward" variable nil (reparse-symbol function_parameters) [1336 1342])
+                            ("terminal" variable nil (reparse-symbol function_parameters) [1344 1352]))                          )
+                        (reparse-symbol indented_block_body) [1294 1751])
+                    ("random_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1773 1777])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [1779 1789]))                          )
+                        (reparse-symbol indented_block_body) [1756 2879])
+                    ("size" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2907 2911]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2884 2940]))                  
+                :type "class")
+                nil [683 2940])
+            ("DDPG" type
+               (:documentation "
+    Deep Deterministic Policy Gradient.
+    "
+                :superclasses ("RLAlgorithm")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param env: Environment
+        :param policy: Policy
+        :param qf: Q function
+        :param es: Exploration strategy
+        :param batch_size: Number of samples for each minibatch.
+        :param n_epochs: Number of epochs. Policy will be evaluated after each epoch.
+        :param epoch_length: How many timesteps for each epoch.
+        :param min_pool_size: Minimum size of the pool to start training.
+        :param replay_pool_size: Size of the experience replay pool.
+        :param discount: Discount factor for the cumulative return.
+        :param max_path_length: Discount factor for the cumulative return.
+        :param qf_weight_decay: Weight decay factor for parameters of the Q function.
+        :param qf_update_method: Online optimization method for training Q function.
+        :param qf_learning_rate: Learning rate for training Q function.
+        :param policy_weight_decay: Weight decay factor for parameters of the policy.
+        :param policy_update_method: Online optimization method for training the policy.
+        :param policy_learning_rate: Learning rate for training the policy.
+        :param eval_samples: Number of samples (timesteps) for evaluating the policy.
+        :param soft_target_tau: Interpolation parameter for doing the soft target update.
+        :param n_updates_per_sample: Number of Q function and policy updates per new sample obtained
+        :param scale_reward: The scaling factor applied to the rewards when training
+        :param include_horizon_terminal_transitions: whether to include transitions with terminal=True because the
+        horizon was reached. This might make the Q value back up less stable for certain tasks.
+        :param plot: Whether to visualize the policy performance after each eval_interval.
+        :param pause_for_plot: Whether to pause before continuing when plotting.
+        :return:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [3849 5753])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5762 5776])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5785 5805])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5814 5826])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5835 5847])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5856 5884])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5893 5917])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5926 5958])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5967 6001])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6010 6050])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6059 6083])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6092 6130])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6139 6177])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6186 6340])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6349 6389])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6398 6444])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6453 6619])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6628 6676])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6685 6717])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6726 6764])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6773 6821])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6830 6910])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6919 6935])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6944 6980])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6990 7016])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7025 7055])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7064 7084])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7093 7113])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7122 7137])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7146 7171])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7180 7206])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7216 7248])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7258 7278]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3054 3058])
+                            ("env" variable nil (reparse-symbol function_parameters) [3072 3075])
+                            ("policy" variable nil (reparse-symbol function_parameters) [3089 3095])
+                            ("qf" variable nil (reparse-symbol function_parameters) [3109 3111])
+                            ("es" variable nil (reparse-symbol function_parameters) [3125 3127])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [3141 3151])
+                            ("n_epochs" variable nil (reparse-symbol function_parameters) [3168 3176])
+                            ("epoch_length" variable nil (reparse-symbol function_parameters) [3194 3206])
+                            ("min_pool_size" variable nil (reparse-symbol function_parameters) [3225 3238])
+                            ("replay_pool_size" variable nil (reparse-symbol function_parameters) [3258 3274])
+                            ("discount" variable nil (reparse-symbol function_parameters) [3296 3304])
+                            ("max_path_length" variable nil (reparse-symbol function_parameters) [3323 3338])
+                            ("qf_weight_decay" variable nil (reparse-symbol function_parameters) [3356 3371])
+                            ("qf_update_method" variable nil (reparse-symbol function_parameters) [3388 3404])
+                            ("qf_learning_rate" variable nil (reparse-symbol function_parameters) [3425 3441])
+                            ("policy_weight_decay" variable nil (reparse-symbol function_parameters) [3460 3479])
+                            ("policy_update_method" variable nil (reparse-symbol function_parameters) [3495 3515])
+                            ("policy_learning_rate" variable nil (reparse-symbol function_parameters) [3536 3556])
+                            ("eval_samples" variable nil (reparse-symbol function_parameters) [3575 3587])
+                            ("soft_target" variable nil (reparse-symbol function_parameters) [3607 3618])
+                            ("soft_target_tau" variable nil (reparse-symbol function_parameters) [3637 3652])
+                            ("n_updates_per_sample" variable nil (reparse-symbol function_parameters) [3672 3692])
+                            ("scale_reward" variable nil (reparse-symbol function_parameters) [3708 3720])
+                            ("include_horizon_terminal_transitions" variable nil (reparse-symbol function_parameters) [3738 3774])
+                            ("plot" variable nil (reparse-symbol function_parameters) [3794 3798])
+                            ("pause_for_plot" variable nil (reparse-symbol function_parameters) [3818 3832]))                          
+                        :documentation "
+        :param env: Environment
+        :param policy: Policy
+        :param qf: Q function
+        :param es: Exploration strategy
+        :param batch_size: Number of samples for each minibatch.
+        :param n_epochs: Number of epochs. Policy will be evaluated after each epoch.
+        :param epoch_length: How many timesteps for each epoch.
+        :param min_pool_size: Minimum size of the pool to start training.
+        :param replay_pool_size: Size of the experience replay pool.
+        :param discount: Discount factor for the cumulative return.
+        :param max_path_length: Discount factor for the cumulative return.
+        :param qf_weight_decay: Weight decay factor for parameters of the Q function.
+        :param qf_update_method: Online optimization method for training Q function.
+        :param qf_learning_rate: Learning rate for training Q function.
+        :param policy_weight_decay: Weight decay factor for parameters of the policy.
+        :param policy_update_method: Online optimization method for training the policy.
+        :param policy_learning_rate: Learning rate for training the policy.
+        :param eval_samples: Number of samples (timesteps) for evaluating the policy.
+        :param soft_target_tau: Interpolation parameter for doing the soft target update.
+        :param n_updates_per_sample: Number of Q function and policy updates per new sample obtained
+        :param scale_reward: The scaling factor applied to the rewards when training
+        :param include_horizon_terminal_transitions: whether to include transitions with terminal=True because the
+        horizon was reached. This might make the Q value back up less stable for certain tasks.
+        :param plot: Whether to visualize the policy performance after each eval_interval.
+        :param pause_for_plot: Whether to pause before continuing when plotting.
+        :return:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3028 7279])
+                    ("start_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7301 7305]))                          )
+                        (reparse-symbol indented_block_body) [7284 7445])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7475 7479]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7450 10548])
+                    ("init_opt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10566 10570]))                          )
+                        (reparse-symbol indented_block_body) [10553 12752])
+                    ("do_training" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12773 12777])
+                            ("itr" variable nil (reparse-symbol function_parameters) [12779 12782])
+                            ("batch" variable nil (reparse-symbol function_parameters) [12784 12789]))                          )
+                        (reparse-symbol indented_block_body) [12757 14060])
+                    ("evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14078 14082])
+                            ("epoch" variable nil (reparse-symbol function_parameters) [14084 14089])
+                            ("pool" variable nil (reparse-symbol function_parameters) [14091 14095]))                          )
+                        (reparse-symbol indented_block_body) [14065 17192])
+                    ("update_plot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17213 17217]))                          )
+                        (reparse-symbol indented_block_body) [17197 17309])
+                    ("get_epoch_snapshot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17337 17341])
+                            ("epoch" variable nil (reparse-symbol function_parameters) [17343 17348]))                          )
+                        (reparse-symbol indented_block_body) [17314 17621]))                  
+                :type "class")
+                nil [2942 17621]))          
+      :file "ddpg.py"
+      :pointmax 17621
+      :fsize 17620
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!RLFPS!external_libs!rllab!rllab!algos!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

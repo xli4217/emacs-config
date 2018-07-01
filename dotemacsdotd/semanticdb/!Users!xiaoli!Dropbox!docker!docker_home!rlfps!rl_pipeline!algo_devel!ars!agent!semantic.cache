@@ -1,0 +1,63 @@
+;; Object agent/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "agent/"
+  :tables
+  (list
+    (semanticdb-table "ars_agent.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rl_pipeline.agent.batch_agent_base" include nil nil [1 62])
+            ("rl_pipeline.algo_devel.ars.utils.utils" include nil nil [63 134])
+            ("numpy" include nil nil [136 154])
+            ("os" include nil nil [155 164])
+            ("future.utils" include nil nil [165 199])
+            ("ARSAgent" type
+               (:superclasses ("BatchAgentBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [528 746])
+                            ("self" variable nil (reparse-symbol indented_block_body) [756 782])
+                            ("self" variable nil (reparse-symbol indented_block_body) [791 811])
+                            ("self" variable nil (reparse-symbol indented_block_body) [820 840])
+                            ("self" variable nil (reparse-symbol indented_block_body) [849 893])
+                            ("self" variable nil (reparse-symbol indented_block_body) [902 948]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [251 255])
+                            ("agent_params" variable nil (reparse-symbol function_parameters) [274 286])
+                            ("policy" variable nil (reparse-symbol function_parameters) [305 311])
+                            ("optimizer" variable nil (reparse-symbol function_parameters) [330 339])
+                            ("deltas" variable nil (reparse-symbol function_parameters) [358 364])
+                            ("remote" variable nil (reparse-symbol function_parameters) [383 389])
+                            ("state_preprocessor" variable nil (reparse-symbol function_parameters) [408 426])
+                            ("reward_preprocessor" variable nil (reparse-symbol function_parameters) [445 464])
+                            ("logger" variable nil (reparse-symbol function_parameters) [483 489])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [508 516]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [238 949])
+                    ("log_results" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [978 982])
+                            ("logger_dict" variable nil (reparse-symbol function_parameters) [984 995]))                          )
+                        (reparse-symbol indented_block_body) [962 1143])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1167 1171])
+                            ("unscaled_batch" variable nil (reparse-symbol function_parameters) [1173 1187])
+                            ("scaled_batch" variable nil (reparse-symbol function_parameters) [1189 1201])
+                            ("total_deltas_idx" variable nil (reparse-symbol function_parameters) [1203 1219])
+                            ("itr" variable nil (reparse-symbol function_parameters) [1221 1224]))                          )
+                        (reparse-symbol indented_block_body) [1156 4277]))                  
+                :type "class")
+                nil [201 4277]))          
+      :file "ars_agent.py"
+      :pointmax 4277
+      :fsize 4276
+      :lastmodtime '(23234 54985 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!rl_pipeline!algo_devel!ars!agent!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

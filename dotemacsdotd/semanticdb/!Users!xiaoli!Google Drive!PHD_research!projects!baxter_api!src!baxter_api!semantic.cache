@@ -1,0 +1,137 @@
+;; Object baxter_api/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "baxter_api/"
+  :tables
+  (list
+    (semanticdb-table "baxter_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [24 34])
+            ("copy" include nil nil [35 46])
+            ("rospy" include nil nil [47 59])
+            ("moveit_commander" include nil nil [60 83])
+            ("moveit_msgs.msg" include nil nil [84 158])
+            ("moveit_msgs.srv" include nil nil [159 260])
+            ("geometry_msgs.msg" include nil nil [261 315])
+            ("types" include nil nil [316 346])
+            ("std_msgs.msg" include nil nil [347 378])
+            ("baxter_interface" include nil nil [379 402])
+            ("baxter_interface" include nil nil [403 445])
+            ("tf" include nil nil [446 455])
+            ("numpy" include nil nil [456 474])
+            ("perception.optitrack.get_env_info" include nil nil [476 534])
+            ("baxter_api.srv" include nil nil [536 564])
+            ("BaxterAPI" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("moveit_commander" code nil (reparse-symbol indented_block_body) [646 690])
+                            ("rospy" code nil (reparse-symbol indented_block_body) [699 755])
+                            ("self" variable nil (reparse-symbol indented_block_body) [765 811])
+                            ("self" variable nil (reparse-symbol indented_block_body) [821 875])
+                            ("self" code nil (reparse-symbol indented_block_body) [884 914])
+                            ("self" variable nil (reparse-symbol indented_block_body) [923 988])
+                            ("self" code nil (reparse-symbol indented_block_body) [1012 1065])
+                            ("self" code nil (reparse-symbol indented_block_body) [1174 1208])
+                            ("self" code nil (reparse-symbol indented_block_body) [1217 1248])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1275 1321])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1331 1361])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1373 1425])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1434 1482])
+                            ("print" code nil (reparse-symbol indented_block_body) [1500 1532])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1541 1595])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1604 1647])
+                            ("print" code nil (reparse-symbol indented_block_body) [1656 1683])
+                            ("self" code nil (reparse-symbol indented_block_body) [1692 1709])
+                            ("print" code nil (reparse-symbol indented_block_body) [1718 1749])
+                            ("self" code nil (reparse-symbol indented_block_body) [1758 1782])
+                            ("self" code nil (reparse-symbol indented_block_body) [1791 1810])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1820 1997])
+                            ("if" code nil (reparse-symbol indented_block_body) [2051 2188])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2196 2210])
+                            ("rospy" code nil (reparse-symbol indented_block_body) [2246 2282])
+                            ("try" code nil (reparse-symbol indented_block_body) [2291 2469])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2478 2512]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [604 608])
+                            ("arm" variable nil (reparse-symbol function_parameters) [610 613])
+                            ("config" variable nil (reparse-symbol function_parameters) [623 629]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [591 2545])
+                    ("inverse_kinematics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2585 2589])
+                            ("pose_stamped" variable nil (reparse-symbol function_parameters) [2591 2603])
+                            ("ik_timeout" variable nil (reparse-symbol function_parameters) [2632 2642])
+                            ("ik_attempts" variable nil (reparse-symbol function_parameters) [2676 2687])
+                            ("avoid_collisions" variable nil (reparse-symbol function_parameters) [2721 2737]))                          
+                        :documentation "
+        Do an IK call to pose_stamped pose.
+        :param geometry_msgs/PoseStamped pose_stamped: The 3D pose
+        (with header.frame_id)
+        to which compute the IK.
+        :param str group: The MoveIt! group.
+        :param float ik_timeout: The timeout for the IK call.
+        :param int ik_attemps: The maximum # of attemps for the IK.
+        :param bool avoid_collisions: If to compute collision aware IK.
+        ")
+                        (reparse-symbol indented_block_body) [2562 4528])
+                    ("forward_kinematics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4564 4568])
+                            ("joint_angles" variable nil (reparse-symbol function_parameters) [4570 4582]))                          )
+                        (reparse-symbol indented_block_body) [4541 5697])
+                    ("will_collide" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5723 5727])
+                            ("obs_name" variable nil (reparse-symbol function_parameters) [5729 5737])
+                            ("start_jp" variable nil (reparse-symbol function_parameters) [5739 5747])
+                            ("end_jp" variable nil (reparse-symbol function_parameters) [5749 5755]))                          )
+                        (reparse-symbol indented_block_body) [5706 6358])
+                    ("move_to_joint_position" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6407 6411])
+                            ("joint_positions" variable nil (reparse-symbol function_parameters) [6413 6428]))                          )
+                        (reparse-symbol indented_block_body) [6380 6685])
+                    ("move_to_target_pose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6722 6726])
+                            ("target" variable nil (reparse-symbol function_parameters) [6728 6734])
+                            ("plan" variable nil (reparse-symbol function_parameters) [6736 6740]))                          )
+                        (reparse-symbol indented_block_body) [6698 8732])
+                    ("move_to_neutral" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8773 8777]))                          )
+                        (reparse-symbol indented_block_body) [8753 8846])
+                    ("pick_n_place" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8876 8880])
+                            ("name" variable nil (reparse-symbol function_parameters) [8882 8886])
+                            ("goal_pose" variable nil (reparse-symbol function_parameters) [8888 8897])
+                            ("plan" variable nil (reparse-symbol function_parameters) [8899 8903]))                          )
+                        (reparse-symbol indented_block_body) [8859 11217])
+                    ("calculate_object2target_transform" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11272 11276])
+                            ("name" variable nil (reparse-symbol function_parameters) [11278 11282]))                          )
+                        (reparse-symbol indented_block_body) [11234 12150]))                  
+                :type "class")
+                nil [567 12150])
+            ("if" code nil nil [12161 12546]))          
+      :file "baxter_utils.py"
+      :pointmax 13534
+      :fsize 13533
+      :lastmodtime '(23097 31040 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!baxter_api!src!baxter_api!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

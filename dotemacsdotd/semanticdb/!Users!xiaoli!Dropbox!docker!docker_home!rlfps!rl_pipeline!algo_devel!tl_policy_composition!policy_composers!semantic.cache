@@ -1,0 +1,142 @@
+;; Object policy_composers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "policy_composers/"
+  :tables
+  (list
+    (semanticdb-table "q_table_based_policy_composition.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("copy" include nil nil [30 41])
+            ("future.utils" include nil nil [42 76])
+            ("rl_pipeline.algo_devel.tl_policy_composition.policy_composers.policy_composition_base" include nil nil [78 197])
+            ("lomap.algorithms.product" include nil nil [198 248])
+            ("lomap.classes" include nil nil [249 278])
+            ("tl_tools.fsa_reward" include nil nil [279 320])
+            ("QTableBasedPolicyComposer" type
+               (:superclasses ("PolicyCompositionBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''
+        base_policies (list of dictionaries) of form
+        [{\"name\": policy1,
+          \"fsa_reward\": fsa_reward1,
+          \"Q\": Q1},
+        {...},
+        ...]
+
+        config (dictionary) of form
+        { 'update_agent': {\"type\": QLearningAgent, 'hyperparams': {'max_itr': 1000, 'lr':0.1, 'gamma': 0.99, 'initial_epsilon': 1.0, 'decay_rate':0.999, 'episode_horizon': 1000}}}
+        
+        TODO: currently only supports conjunction of two policies
+        '''" code nil (reparse-symbol indented_block_body) [456 928])
+                            ("super" code nil (reparse-symbol indented_block_body) [937 1000])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1104 1135])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1144 1175])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1185 1234])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1243 1292])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1302 1334])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1343 1375])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1385 1473])
+                            ("self" code nil (reparse-symbol indented_block_body) [1482 1561])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1571 1601])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1681 1705])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1723 1736]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [397 401])
+                            ("config" variable nil (reparse-symbol function_parameters) [403 409])
+                            ("base_policies" variable nil (reparse-symbol function_parameters) [411 424])
+                            ("replay_pool" variable nil (reparse-symbol function_parameters) [426 437])
+                            ("logger" variable nil (reparse-symbol function_parameters) [439 445]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [384 1737])
+                    ("get_node_disjuntive_Q" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1776 1780])
+                            ("q0" variable nil (reparse-symbol function_parameters) [1782 1784])
+                            ("q1" variable nil (reparse-symbol function_parameters) [1786 1788])
+                            ("update_agent" variable nil (reparse-symbol function_parameters) [1790 1802]))                          )
+                        (reparse-symbol indented_block_body) [1750 2445])
+                    ("get_node_conjuntive_Q" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2476 2480])
+                            ("q0" variable nil (reparse-symbol function_parameters) [2482 2484])
+                            ("q1" variable nil (reparse-symbol function_parameters) [2486 2488])
+                            ("update_agent" variable nil (reparse-symbol function_parameters) [2490 2502]))                          )
+                        (reparse-symbol indented_block_body) [2450 3704])
+                    ("get_node_negation_Q" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3745 3749])
+                            ("q0" variable nil (reparse-symbol function_parameters) [3751 3753]))                          )
+                        (reparse-symbol indented_block_body) [3721 3819])
+                    ("get_fsa_disjunction_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3863 3867]))                          )
+                        (reparse-symbol indented_block_body) [3832 3883])
+                    ("get_fsa_conjunction_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3927 3931]))                          )
+                        (reparse-symbol indented_block_body) [3896 5551])
+                    ("get_fsa_negation_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5596 5600]))                          )
+                        (reparse-symbol indented_block_body) [5568 5616]))                  
+                :type "class")
+                nil [323 5616])
+            ("if" code nil nil [5618 8815]))          
+      :file "q_table_based_policy_composition.py"
+      :pointmax 8815
+      :fsize 8814
+      :lastmodtime '(23253 1247 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "policy_composition_base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("PolicyCompositionBase" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [86 106])
+                            ("self" variable nil (reparse-symbol indented_block_body) [115 135]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [55 59])
+                            ("config" variable nil (reparse-symbol function_parameters) [61 67])
+                            ("logger" variable nil (reparse-symbol function_parameters) [69 75]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [42 136])
+                    ("get_conjunction_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [168 172]))                          )
+                        (reparse-symbol indented_block_body) [141 188])
+                    ("get_disjunction_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [220 224]))                          )
+                        (reparse-symbol indented_block_body) [193 240])
+                    ("get_negation_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [269 273]))                          )
+                        (reparse-symbol indented_block_body) [245 288]))                  
+                :type "class")
+                nil [1 288]))          
+      :file "policy_composition_base.py"
+      :pointmax 288
+      :fsize 287
+      :lastmodtime '(23234 55610 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!rl_pipeline!algo_devel!tl_policy_composition!policy_composers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

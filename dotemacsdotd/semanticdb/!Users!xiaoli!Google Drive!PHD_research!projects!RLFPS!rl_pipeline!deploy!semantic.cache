@@ -1,0 +1,44 @@
+;; Object deploy/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "deploy/"
+  :tables
+  (list
+    (semanticdb-table "deploy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Deploy" type
+               (:members 
+                  ( ("'''
+    This is the base class for model serving
+    '''" code nil (reparse-symbol indented_block_body) [21 77])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [126 160]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [96 100])
+                            ("deploy_params" variable nil (reparse-symbol function_parameters) [102 115]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [83 161])
+                    ("load_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [181 185])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [187 196]))                          )
+                        (reparse-symbol indented_block_body) [166 231])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [251 255])
+                            ("obs" variable nil (reparse-symbol function_parameters) [257 260]))                          )
+                        (reparse-symbol indented_block_body) [236 294]))                  
+                :type "class")
+                nil [1 294]))          
+      :file "deploy.py"
+      :pointmax 294
+      :fsize 293
+      :lastmodtime '(23095 15040 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!RLFPS!rl_pipeline!deploy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

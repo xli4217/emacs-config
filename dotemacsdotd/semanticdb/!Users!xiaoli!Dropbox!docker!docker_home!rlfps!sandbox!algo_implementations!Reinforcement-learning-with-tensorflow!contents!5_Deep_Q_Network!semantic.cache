@@ -1,0 +1,213 @@
+;; Object 5_Deep_Q_Network/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "5_Deep_Q_Network/"
+  :tables
+  (list
+    (semanticdb-table "DQN_modified.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+This part of code is the Deep Q Network (DQN) brain.
+
+view the tensorboard picture about this DQN structure on: https://morvanzhou.github.io/tutorials/machine-learning/reinforcement-learning/4-3-DQN3/#modification
+
+View more on my tutorial page: https://morvanzhou.github.io/tutorials/
+
+Using:
+Tensorflow: r1.2
+\"\"\"" code nil nil [1 319])
+            ("numpy" include nil nil [321 339])
+            ("tensorflow" include nil nil [340 363])
+            ("np" code nil nil [365 382])
+            ("tf" code nil nil [383 404])
+            ("DeepQNetwork" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [803 829])
+                            ("self" variable nil (reparse-symbol indented_block_body) [838 866])
+                            ("self" variable nil (reparse-symbol indented_block_body) [875 898])
+                            ("self" variable nil (reparse-symbol indented_block_body) [907 932])
+                            ("self" variable nil (reparse-symbol indented_block_body) [941 968])
+                            ("self" variable nil (reparse-symbol indented_block_body) [977 1023])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1032 1062])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1071 1099])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1108 1151])
+                            ("self" code nil (reparse-symbol indented_block_body) [1216 1232])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1272 1299])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1356 1418])
+                            ("self" code nil (reparse-symbol indented_block_body) [1476 1493])
+                            ("t_params" variable nil (reparse-symbol indented_block_body) [1503 1582])
+                            ("e_params" variable nil (reparse-symbol indented_block_body) [1591 1668])
+                            ("with" code nil (reparse-symbol indented_block_body) [1678 1813])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1822 1846])
+                            ("if" code nil (reparse-symbol indented_block_body) [1856 1975])
+                            ("self" code nil (reparse-symbol indented_block_body) [1984 2032])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2041 2059]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [485 489])
+                            ("n_actions" variable nil (reparse-symbol function_parameters) [503 512])
+                            ("n_features" variable nil (reparse-symbol function_parameters) [526 536])
+                            ("learning_rate" variable nil (reparse-symbol function_parameters) [550 563])
+                            ("reward_decay" variable nil (reparse-symbol function_parameters) [582 594])
+                            ("e_greedy" variable nil (reparse-symbol function_parameters) [612 620])
+                            ("replace_target_iter" variable nil (reparse-symbol function_parameters) [638 657])
+                            ("memory_size" variable nil (reparse-symbol function_parameters) [675 686])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [704 714])
+                            ("e_greedy_increment" variable nil (reparse-symbol function_parameters) [731 749])
+                            ("output_graph" variable nil (reparse-symbol function_parameters) [768 780]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [459 2060])
+                    ("_build_net" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2080 2084]))                          )
+                        (reparse-symbol indented_block_body) [2065 4271])
+                    ("store_transition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4297 4301])
+                            ("s" variable nil (reparse-symbol function_parameters) [4303 4304])
+                            ("a" variable nil (reparse-symbol function_parameters) [4306 4307])
+                            ("r" variable nil (reparse-symbol function_parameters) [4309 4310])
+                            ("s_" variable nil (reparse-symbol function_parameters) [4312 4314]))                          )
+                        (reparse-symbol indented_block_body) [4276 4629])
+                    ("choose_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4652 4656])
+                            ("observation" variable nil (reparse-symbol function_parameters) [4658 4669]))                          )
+                        (reparse-symbol indented_block_body) [4634 5138])
+                    ("learn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5153 5157]))                          )
+                        (reparse-symbol indented_block_body) [5143 6281])
+                    ("plot_cost" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6300 6304]))                          )
+                        (reparse-symbol indented_block_body) [6286 6493]))                  
+                :type "class")
+                nil [435 6493])
+            ("if" code nil nil [6494 6567]))          
+      :file "DQN_modified.py"
+      :pointmax 6567
+      :fsize 6566
+      :lastmodtime '(23180 20973 0 0)
+      :unmatched-syntax '((NAME 6134 . 6138) (IF 6187 . 6189) (ELSE 6222 . 6226) (NAME 1160 . 1164) (IF 1177 . 1179) (ELSE 1211 . 1215)))
+    (semanticdb-table "RL_brain.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+This part of code is the DQN brain, which is a brain of the agent.
+All decisions are made in here.
+Using Tensorflow to build the neural network.
+
+View more on my tutorial page: https://morvanzhou.github.io/tutorials/
+
+Using:
+Tensorflow: 1.0
+gym: 0.7.3
+\"\"\"" code nil nil [1 260])
+            ("numpy" include nil nil [262 280])
+            ("pandas" include nil nil [281 300])
+            ("tensorflow" include nil nil [301 324])
+            ("np" code nil nil [326 343])
+            ("tf" code nil nil [344 365])
+            ("DeepQNetwork" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [764 790])
+                            ("self" variable nil (reparse-symbol indented_block_body) [799 827])
+                            ("self" variable nil (reparse-symbol indented_block_body) [836 859])
+                            ("self" variable nil (reparse-symbol indented_block_body) [868 893])
+                            ("self" variable nil (reparse-symbol indented_block_body) [902 929])
+                            ("self" variable nil (reparse-symbol indented_block_body) [938 984])
+                            ("self" variable nil (reparse-symbol indented_block_body) [993 1023])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1032 1060])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1069 1112])
+                            ("self" code nil (reparse-symbol indented_block_body) [1177 1193])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1233 1260])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1317 1379])
+                            ("self" code nil (reparse-symbol indented_block_body) [1437 1454])
+                            ("t_params" variable nil (reparse-symbol indented_block_body) [1463 1512])
+                            ("e_params" variable nil (reparse-symbol indented_block_body) [1521 1568])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1577 1655])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1665 1689])
+                            ("if" code nil (reparse-symbol indented_block_body) [1699 1889])
+                            ("self" code nil (reparse-symbol indented_block_body) [1898 1946])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1955 1973]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [446 450])
+                            ("n_actions" variable nil (reparse-symbol function_parameters) [464 473])
+                            ("n_features" variable nil (reparse-symbol function_parameters) [487 497])
+                            ("learning_rate" variable nil (reparse-symbol function_parameters) [511 524])
+                            ("reward_decay" variable nil (reparse-symbol function_parameters) [543 555])
+                            ("e_greedy" variable nil (reparse-symbol function_parameters) [573 581])
+                            ("replace_target_iter" variable nil (reparse-symbol function_parameters) [599 618])
+                            ("memory_size" variable nil (reparse-symbol function_parameters) [636 647])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [665 675])
+                            ("e_greedy_increment" variable nil (reparse-symbol function_parameters) [692 710])
+                            ("output_graph" variable nil (reparse-symbol function_parameters) [729 741]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [420 1974])
+                    ("_build_net" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1994 1998]))                          )
+                        (reparse-symbol indented_block_body) [1979 4856])
+                    ("store_transition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4882 4886])
+                            ("s" variable nil (reparse-symbol function_parameters) [4888 4889])
+                            ("a" variable nil (reparse-symbol function_parameters) [4891 4892])
+                            ("r" variable nil (reparse-symbol function_parameters) [4894 4895])
+                            ("s_" variable nil (reparse-symbol function_parameters) [4897 4899]))                          )
+                        (reparse-symbol indented_block_body) [4861 5217])
+                    ("choose_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5240 5244])
+                            ("observation" variable nil (reparse-symbol function_parameters) [5246 5257]))                          )
+                        (reparse-symbol indented_block_body) [5222 5726])
+                    ("learn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5741 5745]))                          )
+                        (reparse-symbol indented_block_body) [5731 8202])
+                    ("plot_cost" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8221 8225]))                          )
+                        (reparse-symbol indented_block_body) [8207 8414]))                  
+                :type "class")
+                nil [396 8414]))          
+      :file "RL_brain.py"
+      :pointmax 8417
+      :fsize 8416
+      :lastmodtime '(23180 20973 0 0)
+      :unmatched-syntax '((NAME 8055 . 8059) (IF 8108 . 8110) (ELSE 8143 . 8147) (NAME 1121 . 1125) (IF 1138 . 1140) (ELSE 1172 . 1176)))
+    (semanticdb-table "run_this.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("maze_env" include nil nil [1 26])
+            ("RL_brain" include nil nil [27 60])
+            ("run_maze" function nil nil [63 891])
+            ("if" code nil nil [893 1343]))          
+      :file "run_this.py"
+      :pointmax 1343
+      :fsize 1342
+      :lastmodtime '(23180 20973 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "maze_env.py"
+      :file "maze_env.py"
+      :fsize 4165
+      :lastmodtime '(23180 20973 0 0)))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!sandbox!algo_implementations!Reinforcement-learning-with-tensorflow!contents!5_Deep_Q_Network!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
