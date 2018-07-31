@@ -427,6 +427,14 @@
  ;; Non-nil means display source file containing the main routine at startup
  gdb-show-main t
  )
+ 
+ ;;;;;;;;;; key-chord ;;;;;;;;;;;;                                                                                                                                                                                                              
+(require 'key-chord)                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                               
+(key-chord-define-global "ff" 'find-file-in-project)                                                                                                                                                                                           
+                                                                                                                                                                                                                                               
+(key-chord-mode +1)  
+
 ; —— ediff —————
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ediff                                                                  ;;
