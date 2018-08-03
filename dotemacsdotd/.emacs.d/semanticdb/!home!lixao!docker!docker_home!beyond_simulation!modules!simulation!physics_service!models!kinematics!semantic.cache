@@ -1,0 +1,64 @@
+;; Object kinematics/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "kinematics/"
+  :tables
+  (list
+    (semanticdb-table "bicycle.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("physics_service.models.model_base" include nil nil [20 75])
+            ("os" include nil nil [77 86])
+            ("Bicycle" type
+               (:superclasses ("ModelBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''
+        x: [x, y, heading, v]
+        u: [steering_angle_radian, acc]
+        output: xp
+        '''" code nil (reparse-symbol indented_block_body) [235 339])
+                            ("super" code nil (reparse-symbol indented_block_body) [357 394])
+                            ("self" variable nil (reparse-symbol indented_block_body) [403 430])
+                            ("self" variable nil (reparse-symbol indented_block_body) [448 461])
+                            ("self" variable nil (reparse-symbol indented_block_body) [496 507])
+                            ("self" variable nil (reparse-symbol indented_block_body) [516 532])
+                            ("self" variable nil (reparse-symbol indented_block_body) [569 642])
+                            ("self" variable nil (reparse-symbol indented_block_body) [651 734]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [196 200])
+                            ("config" variable nil (reparse-symbol function_parameters) [202 208])
+                            ("init" variable nil (reparse-symbol function_parameters) [215 219]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [183 735])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [759 763])
+                            ("u" variable nil (reparse-symbol function_parameters) [765 766]))                          )
+                        (reparse-symbol indented_block_body) [748 1454])
+                    ("get_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1486 1490]))                          )
+                        (reparse-symbol indented_block_body) [1471 1539])
+                    ("restore_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1563 1567])
+                            ("params" variable nil (reparse-symbol function_parameters) [1569 1575])
+                            ("filename" variable nil (reparse-symbol function_parameters) [1582 1590]))                          )
+                        (reparse-symbol indented_block_body) [1544 1885]))                  
+                :type "class")
+                nil [153 1885])
+            ("if" code nil nil [1903 2062]))          
+      :file "bicycle.py"
+      :pointmax 2062
+      :fsize 2061
+      :lastmodtime '(23317 27481 393039 978000)
+      :unmatched-syntax nil))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!simulation!physics_service!models!kinematics!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

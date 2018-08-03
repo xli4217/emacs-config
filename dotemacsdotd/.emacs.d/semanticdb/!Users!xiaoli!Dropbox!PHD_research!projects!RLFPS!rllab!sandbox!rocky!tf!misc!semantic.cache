@@ -1,0 +1,64 @@
+;; Object misc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "misc/"
+  :tables
+  (list
+    (semanticdb-table "tensor_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("tensorflow" include nil nil [1 24])
+            ("numpy" include nil nil [25 43])
+            ("compile_function" function (:arguments 
+              ( ("inputs" variable nil (reparse-symbol function_parameters) [67 73])
+                ("outputs" variable nil (reparse-symbol function_parameters) [75 82])
+                ("log_name" variable nil (reparse-symbol function_parameters) [84 92]))              ) nil [46 262])
+            ("flatten_tensor_variables" function (:arguments 
+              ( ("ts" variable nil (reparse-symbol function_parameters) [293 295]))              ) nil [264 369])
+            ("unflatten_tensor_variables" function (:arguments 
+              ( ("flatarr" variable nil (reparse-symbol function_parameters) [402 409])
+                ("shapes" variable nil (reparse-symbol function_parameters) [411 417])
+                ("symb_arrs" variable nil (reparse-symbol function_parameters) [419 428]))              ) nil [371 656])
+            ("new_tensor" function (:arguments 
+              ( ("name" variable nil (reparse-symbol function_parameters) [673 677])
+                ("ndim" variable nil (reparse-symbol function_parameters) [679 683])
+                ("dtype" variable nil (reparse-symbol function_parameters) [685 690]))              ) nil [658 764])
+            ("new_tensor_like" function (:arguments 
+              ( ("name" variable nil (reparse-symbol function_parameters) [786 790])
+                ("arr_like" variable nil (reparse-symbol function_parameters) [792 800]))              ) nil [766 886])
+            ("concat_tensor_list" function (:arguments 
+              ( ("tensor_list" variable nil (reparse-symbol function_parameters) [911 922]))              ) nil [888 972])
+            ("concat_tensor_dict_list" function (:arguments 
+              ( ("tensor_dict_list" variable nil (reparse-symbol function_parameters) [1002 1018]))              ) nil [974 1371])
+            ("stack_tensor_list" function (:arguments 
+              ( ("tensor_list" variable nil (reparse-symbol function_parameters) [1395 1406]))              ) nil [1373 1442])
+            ("stack_tensor_dict_list" function
+               (:documentation "
+    Stack a list of dictionaries of {tensors or dictionary of tensors}.
+    :param tensor_dict_list: a list of dictionaries of {tensors or dictionary of tensors}.
+    :return: a dictionary of {stacked tensors or dictionary of stacked tensors}
+    "
+                :arguments 
+                  ( ("tensor_dict_list" variable nil (reparse-symbol function_parameters) [1632 1648]))                  )
+                nil [1605 2258])
+            ("split_tensor_dict_list" function (:arguments 
+              ( ("tensor_dict" variable nil (reparse-symbol function_parameters) [2287 2298]))              ) nil [2260 2657])
+            ("to_onehot_sym" function (:arguments 
+              ( ("inds" variable nil (reparse-symbol function_parameters) [2677 2681])
+                ("dim" variable nil (reparse-symbol function_parameters) [2683 2686]))              ) nil [2659 2753])
+            ("pad_tensor" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [2770 2771])
+                ("max_len" variable nil (reparse-symbol function_parameters) [2773 2780]))              ) nil [2755 2910])
+            ("pad_tensor_n" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [2929 2931])
+                ("max_len" variable nil (reparse-symbol function_parameters) [2933 2940]))              ) nil [2912 3097])
+            ("pad_tensor_dict" function (:arguments 
+              ( ("tensor_dict" variable nil (reparse-symbol function_parameters) [3119 3130])
+                ("max_len" variable nil (reparse-symbol function_parameters) [3132 3139]))              ) nil [3099 3407]))          
+      :file "tensor_utils.py"
+      :pointmax 3407
+      :fsize 3406
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!sandbox!rocky!tf!misc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

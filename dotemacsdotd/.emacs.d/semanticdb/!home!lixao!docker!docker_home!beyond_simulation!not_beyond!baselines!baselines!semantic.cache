@@ -1,0 +1,403 @@
+;; Object baselines/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "baselines/"
+  :tables
+  (list
+    (semanticdb-table "logger.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("sys" include nil nil [11 21])
+            ("shutil" include nil nil [22 35])
+            ("os.path" include nil nil [36 57])
+            ("json" include nil nil [58 69])
+            ("time" include nil nil [70 81])
+            ("datetime" include nil nil [82 97])
+            ("tempfile" include nil nil [98 113])
+            ("collections" include nil nil [114 149])
+            ("LOG_OUTPUT_FORMATS" variable nil nil [151 196])
+            ("DEBUG" variable nil nil [230 240])
+            ("INFO" variable nil nil [241 250])
+            ("WARN" variable nil nil [251 260])
+            ("ERROR" variable nil nil [261 271])
+            ("DISABLED" variable nil nil [273 286])
+            ("KVWriter" type
+               (:superclasses ("object")
+                :members 
+                  ( ("writekvs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [329 333])
+                            ("kvs" variable nil (reparse-symbol function_parameters) [335 338]))                          )
+                        (reparse-symbol indented_block_body) [316 375]))                  
+                :type "class")
+                nil [288 375])
+            ("SeqWriter" type
+               (:superclasses ("object")
+                :members 
+                  ( ("writeseq" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [418 422])
+                            ("seq" variable nil (reparse-symbol function_parameters) [424 427]))                          )
+                        (reparse-symbol indented_block_body) [405 464]))                  
+                :type "class")
+                nil [376 464])
+            ("HumanOutputFormat" type
+               (:superclasses ("KVWriter" "SeqWriter")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [561 876]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [528 532])
+                            ("filename_or_file" variable nil (reparse-symbol function_parameters) [534 550]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [515 876])
+                    ("writekvs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [894 898])
+                            ("kvs" variable nil (reparse-symbol function_parameters) [900 903]))                          )
+                        (reparse-symbol indented_block_body) [881 1969])
+                    ("_truncate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1988 1992])
+                            ("s" variable nil (reparse-symbol function_parameters) [1994 1995]))                          )
+                        (reparse-symbol indented_block_body) [1974 2050])
+                    ("writeseq" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2068 2072])
+                            ("seq" variable nil (reparse-symbol function_parameters) [2074 2077]))                          )
+                        (reparse-symbol indented_block_body) [2055 2193])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2208 2212]))                          )
+                        (reparse-symbol indented_block_body) [2198 2271]))                  
+                :type "class")
+                nil [465 2271])
+            ("JSONOutputFormat" type
+               (:superclasses ("KVWriter")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2348 2380]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2323 2327])
+                            ("filename" variable nil (reparse-symbol function_parameters) [2329 2337]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2310 2381])
+                    ("writekvs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2399 2403])
+                            ("kvs" variable nil (reparse-symbol function_parameters) [2405 2408]))                          )
+                        (reparse-symbol indented_block_body) [2386 2627])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2642 2646]))                          )
+                        (reparse-symbol indented_block_body) [2632 2675]))                  
+                :type "class")
+                nil [2272 2675])
+            ("CSVOutputFormat" type
+               (:superclasses ("KVWriter")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2751 2784])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2793 2807])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2816 2830]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2726 2730])
+                            ("filename" variable nil (reparse-symbol function_parameters) [2732 2740]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2713 2831])
+                    ("writekvs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2849 2853])
+                            ("kvs" variable nil (reparse-symbol function_parameters) [2855 2858]))                          )
+                        (reparse-symbol indented_block_body) [2836 3732])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3747 3751]))                          )
+                        (reparse-symbol indented_block_body) [3737 3780]))                  
+                :type "class")
+                nil [2676 3780])
+            ("TensorBoardOutputFormat" type
+               (:documentation "
+    Dumps key/value pairs into TensorBoard's numeric format.
+    "
+                :superclasses ("KVWriter")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("os" code nil (reparse-symbol indented_block_body) [3937 3968])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3977 3991])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4000 4013])
+                            ("prefix" variable nil (reparse-symbol indented_block_body) [4022 4039])
+                            ("path" variable nil (reparse-symbol indented_block_body) [4048 4089])
+                            ("tensorflow" include nil (reparse-symbol indented_block_body) [4098 4121])
+                            ("tensorflow.python" include nil (reparse-symbol indented_block_body) [4130 4177])
+                            ("tensorflow.core.util" include nil (reparse-symbol indented_block_body) [4186 4228])
+                            ("tensorflow.python.util" include nil (reparse-symbol indented_block_body) [4237 4278])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4287 4299])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4308 4334])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4343 4385])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4394 4461]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3917 3921])
+                            ("dir" variable nil (reparse-symbol function_parameters) [3923 3926]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3904 4462])
+                    ("writekvs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4480 4484])
+                            ("kvs" variable nil (reparse-symbol function_parameters) [4486 4489]))                          )
+                        (reparse-symbol indented_block_body) [4467 4972])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4987 4991]))                          )
+                        (reparse-symbol indented_block_body) [4977 5081]))                  
+                :type "class")
+                nil [3782 5081])
+            ("make_output_format" function (:arguments 
+              ( ("format" variable nil (reparse-symbol function_parameters) [5105 5111])
+                ("ev_dir" variable nil (reparse-symbol function_parameters) [5113 5119])
+                ("log_suffix" variable nil (reparse-symbol function_parameters) [5121 5131]))              ) nil [5082 5757])
+            ("logkv" function
+               (:documentation "
+    Log a value of some diagnostic
+    Call this once for each diagnostic quantity, each iteration
+    If called many times, last value will be used.
+    "
+                :arguments 
+                  ( ("key" variable nil (reparse-symbol function_parameters) [5909 5912])
+                    ("val" variable nil (reparse-symbol function_parameters) [5914 5917]))                  )
+                nil [5899 6121])
+            ("logkv_mean" function
+               (:documentation "
+    The same as logkv(), but if called many times, values averaged.
+    "
+                :arguments 
+                  ( ("key" variable nil (reparse-symbol function_parameters) [6137 6140])
+                    ("val" variable nil (reparse-symbol function_parameters) [6142 6145]))                  )
+                nil [6122 6272])
+            ("logkvs" function
+               (:documentation "
+    Log a dictionary of key-value pairs
+    "
+                :arguments 
+                  ( ("d" variable nil (reparse-symbol function_parameters) [6284 6285]))                  )
+                nil [6273 6393])
+            ("dumpkvs" function (:documentation "
+    Write all of the diagnostics from the current iteration
+
+    level: int. (see logger.py docs) If the global logger level is higher than
+                the level argument here, don't print to stdout.
+    ") nil [6394 6658])
+            ("getkvs" function nil nil [6659 6708])
+            ("log" function
+               (:documentation "
+    Write the sequence of args, with no separators, to the console and output files (if you've configured an output file).
+    "
+                :arguments 
+                  ( ("level" variable nil (reparse-symbol function_parameters) [6718 6723])
+                    ("args" variable nil (reparse-symbol function_parameters) [6730 6735]))                  )
+                nil [6710 6920])
+            ("debug" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [6931 6936]))              ) nil [6921 6967])
+            ("info" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [6977 6982]))              ) nil [6968 7012])
+            ("warn" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [7022 7027]))              ) nil [7013 7057])
+            ("error" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [7068 7073]))              ) nil [7058 7104])
+            ("set_level" function
+               (:documentation "
+    Set logging threshold on current logger.
+    "
+                :arguments 
+                  ( ("level" variable nil (reparse-symbol function_parameters) [7120 7125]))                  )
+                nil [7106 7225])
+            ("get_dir" function (:documentation "
+    Get directory that log files are being written to.
+    will be None if there is no output directory (i.e., if you didn't call start)
+    ") nil [7226 7430])
+            ("record_tabular" variable nil nil [7431 7453])
+            ("dump_tabular" variable nil nil [7454 7476])
+            ("ProfileKV" type
+               (:documentation "
+    Usage:
+    with logger.ProfileKV(\"interesting_scope\"):
+        code
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" code nil (reparse-symbol indented_block_body) [7618 7638]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7600 7604])
+                            ("n" variable nil (reparse-symbol function_parameters) [7606 7607]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7587 7639])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7657 7661]))                          )
+                        (reparse-symbol indented_block_body) [7643 7694])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7711 7715])
+                            ("type" variable nil (reparse-symbol function_parameters) [7717 7721])
+                            ("value" variable nil (reparse-symbol function_parameters) [7723 7728])
+                            ("traceback" variable nil (reparse-symbol function_parameters) [7730 7739]))                          )
+                        (reparse-symbol indented_block_body) [7698 7807]))                  
+                :type "class")
+                nil [7478 7807])
+            ("profile" function
+               (:documentation "
+    Usage:
+    @profile(\"my_func\")
+    def my_func(): code
+    "
+                :arguments 
+                  ( ("n" variable nil (reparse-symbol function_parameters) [7820 7821]))                  )
+                nil [7808 8112])
+            ("Logger" type
+               (:superclasses ("object")
+                :members 
+                  ( ("DEFAULT" variable nil (reparse-symbol indented_block_body) [8285 8299])
+                    ("CURRENT" variable nil (reparse-symbol indented_block_body) [8473 8487])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [8599 8633])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8667 8699])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8708 8725])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8734 8748])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8757 8793]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8563 8567])
+                            ("dir" variable nil (reparse-symbol function_parameters) [8569 8572])
+                            ("output_formats" variable nil (reparse-symbol function_parameters) [8574 8588]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8550 8794])
+                    ("logkv" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8885 8889])
+                            ("key" variable nil (reparse-symbol function_parameters) [8891 8894])
+                            ("val" variable nil (reparse-symbol function_parameters) [8896 8899]))                          )
+                        (reparse-symbol indented_block_body) [8875 8935])
+                    ("logkv_mean" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8955 8959])
+                            ("key" variable nil (reparse-symbol function_parameters) [8961 8964])
+                            ("val" variable nil (reparse-symbol function_parameters) [8966 8969]))                          )
+                        (reparse-symbol indented_block_body) [8940 9213])
+                    ("dumpkvs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9230 9234]))                          )
+                        (reparse-symbol indented_block_body) [9218 9465])
+                    ("log" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9478 9482])
+                            ("level" variable nil (reparse-symbol function_parameters) [9484 9489])
+                            ("args" variable nil (reparse-symbol function_parameters) [9496 9501]))                          )
+                        (reparse-symbol indented_block_body) [9470 9567])
+                    ("set_level" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9653 9657])
+                            ("level" variable nil (reparse-symbol function_parameters) [9659 9664]))                          )
+                        (reparse-symbol indented_block_body) [9639 9694])
+                    ("get_dir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9711 9715]))                          )
+                        (reparse-symbol indented_block_body) [9699 9742])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9757 9761]))                          )
+                        (reparse-symbol indented_block_body) [9747 9828])
+                    ("_do_log" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9903 9907])
+                            ("args" variable nil (reparse-symbol function_parameters) [9909 9913]))                          )
+                        (reparse-symbol indented_block_body) [9891 10044]))                  
+                :type "class")
+                nil [8259 10044])
+            ("Logger" variable nil nil [10045 10143])
+            ("configure" function (:arguments 
+              ( ("dir" variable nil (reparse-symbol function_parameters) [10159 10162])
+                ("format_strs" variable nil (reparse-symbol function_parameters) [10169 10180]))              ) nil [10145 10774])
+            ("reset" function nil nil [10775 10932])
+            ("scoped_configure" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [11025 11039])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11048 11078])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11087 11109]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10982 10986])
+                            ("dir" variable nil (reparse-symbol function_parameters) [10988 10991])
+                            ("format_strs" variable nil (reparse-symbol function_parameters) [10998 11009]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10969 11110])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11128 11132]))                          )
+                        (reparse-symbol indented_block_body) [11114 11238])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11255 11259])
+                            ("args" variable nil (reparse-symbol function_parameters) [11261 11266]))                          )
+                        (reparse-symbol indented_block_body) [11242 11341]))                  
+                :type "class")
+                nil [10933 11341])
+            ("_demo" function nil nil [11410 12006])
+            ("read_json" function (:arguments 
+              ( ("fname" variable nil (reparse-symbol function_parameters) [12167 12172]))              ) nil [12153 12335])
+            ("read_csv" function (:arguments 
+              ( ("fname" variable nil (reparse-symbol function_parameters) [12349 12354]))              ) nil [12336 12438])
+            ("read_tb" function
+               (:documentation "
+    path : a tensorboard file OR a directory, where we will find all TB files
+           of the form events.*
+    "
+                :arguments 
+                  ( ("path" variable nil (reparse-symbol function_parameters) [12451 12455]))                  )
+                nil [12439 13658])
+            ("if" code nil nil [13659 13698]))          
+      :file "logger.py"
+      :pointmax 13698
+      :fsize 13697
+      :lastmodtime '(23255 45012 50242 474000)
+      :unmatched-syntax '((NAME 10543 . 10554) (IF 10573 . 10575) (ELSE 10581 . 10585) (RETURN 2006 . 2012) (IF 2028 . 2030) (ELSE 2043 . 2047) (MULT 9496 . 9497) ($EOI 13698 . 13698) (NAME 10543 . 10554) (IF 10573 . 10575) (ELSE 10581 . 10585) (RETURN 2006 . 2012) (IF 2028 . 2030) (ELSE 2043 . 2047) (MULT 6730 . 6731) ($EOI 13698 . 13698) (NAME 10542 . 10553) (IF 10572 . 10574) (ELSE 10580 . 10584) (RETURN 2006 . 2012) (IF 2028 . 2030) (ELSE 2043 . 2047) ($EOI 13697 . 13697) (NAME 10543 . 10554) (IF 10573 . 10575) (ELSE 10581 . 10585) (RETURN 2006 . 2012) (IF 2028 . 2030) (ELSE 2043 . 2047))))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!not_beyond!baselines!baselines!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

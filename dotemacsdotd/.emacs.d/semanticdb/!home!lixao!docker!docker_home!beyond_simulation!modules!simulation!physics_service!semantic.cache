@@ -1,0 +1,132 @@
+;; Object physics_service/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "physics_service/"
+  :tables
+  (list
+    (semanticdb-table "physics_service.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_SIMULATION_PHYSICS_SERVICE_H_" variable (:constant-flag t) nil [290 327])
+            ("modules/state_estimation/proto/state_estimation.pb.h" include nil nil [329 392])
+            ("modules/planner/proto/planner.pb.h" include nil nil [393 438])
+            ("modules/simulation/vehicle_state.h" include nil nil [439 484])
+            ("modules/common/planner_utils/dynamics.h" include nil nil [485 535])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("kFrontWheelBias" variable
+                               (:typemodifiers ("extern")
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [580 616])
+                            ("RolloutEgo" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("ego_state" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("VehicleState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [846 876])
+                                    ("control" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("beyond::planner::SimpleControl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [893 939])
+                                    ("timestep" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [956 978])
+                                    ("new_state" variable
+                                       (:pointer 1
+                                        :type ("VehicleState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [979 1003])
+                                    ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [1020 1040]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [830 1041]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [556 1044]))                  
+                :type "namespace")
+                nil [537 1071]))          
+      :file "physics_service.h"
+      :pointmax 1101
+      :fsize 1100
+      :lastmodtime '(23191 1065 890938 602000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MODULES_SIMULATION_PHYSICS_SERVICE_H_")
+          )
+)
+    (semanticdb-table "physics_service.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [236 256])
+            ("cmath" include (:system-flag t) nil [257 273])
+            ("modules/simulation/physics_service/physics_service.h" include nil nil [274 337])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("beyond::state_estimation::WorldStateMsg" using (:type ("beyond::state_estimation::WorldStateMsg" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [382 428])
+                            ("beyond::planner::SimpleControl" using (:type ("beyond::planner::SimpleControl" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [429 466])
+                            ("beyond::state_estimation::EgoMsg" using (:type ("beyond::state_estimation::EgoMsg" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [467 506])
+                            ("beyond::common::planner_utils::CarDynamics" using (:type ("beyond::common::planner_utils::CarDynamics" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [507 556])
+                            ("std::sqrt" using (:type ("std::sqrt" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [557 573])
+                            ("std::sin" using (:type ("std::sin" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [574 589])
+                            ("std::pow" using (:type ("std::pow" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [590 605])
+                            ("RolloutEgo" function
+                               (:arguments 
+                                  ( ("ego_state" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("VehicleState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [623 653])
+                                    ("control" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SimpleControl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [654 683])
+                                    ("timestep" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [700 722])
+                                    ("new_state" variable
+                                       (:pointer 1
+                                        :type ("VehicleState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [723 747])
+                                    ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [764 784]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [607 2898]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [358 2901]))                  
+                :type "namespace")
+                nil [339 2928]))          
+      :file "physics_service.cc"
+      :pointmax 2950
+      :fsize 2949
+      :lastmodtime '(23313 52658 514427 600000)
+      :unmatched-syntax nil))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!simulation!physics_service!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,222 @@
+;; Object director_bak/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "director_bak/"
+  :tables
+  (list
+    (semanticdb-table "bag_player.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"This script \"\"\"" code nil nil [393 411])
+            ("threading" include nil nil [413 429])
+            ("thread" include nil nil [430 443])
+            ("time" include nil nil [444 455])
+            ("copy" include nil nil [456 467])
+            ("tqdm" include nil nil [469 490])
+            ("rosbag" include nil nil [492 505])
+            ("rospy" include nil nil [506 518])
+            ("rosgraph_msgs" include nil nil [519 539])
+            ("tf2_msgs" include nil nil [540 555])
+            ("log_conf" include nil nil [556 593])
+            ("modules.state_estimation.proto" include nil nil [594 657])
+            ("modules.simulation.proto" include nil nil [658 709])
+            ("numpy" include nil nil [711 729])
+            ("random" include nil nil [730 743])
+            ("WORLD_STATE_MSG_TOPIC" variable nil nil [745 807])
+            ("BagPlayer" type
+               (:documentation "
+    @brief      Class for command.
+    "
+                :superclasses ("threading.Thread")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        { item_description }
+        \"\"\"" code nil (reparse-symbol indented_block_body) [939 983])
+                            ("self" variable nil (reparse-symbol indented_block_body) [992 1016])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1025 1048])
+                            ("threading" code nil (reparse-symbol indented_block_body) [1057 1088])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1097 1210])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1219 1320])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1329 1456])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1496 1517])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1526 1557])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1566 1587])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1596 1633])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1642 1679])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1727 1759])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1768 1786])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1795 1820])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1838 1855]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [914 918])
+                            ("scenario" variable nil (reparse-symbol function_parameters) [920 928]))                          
+                        :documentation "
+        { item_description }
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [901 1856])
+                    ("sim_state_cb" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1879 1883])
+                            ("msg" variable nil (reparse-symbol function_parameters) [1885 1888]))                          )
+                        (reparse-symbol indented_block_body) [1862 1920])
+                    ("_key_input_thread" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1955 1959]))                          
+                        :documentation "
+        @brief      { thread to listen to keyboard input }
+        @param      self  The object
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [1933 2203])
+                    ("_sim_clock_func" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2228 2232])
+                            ("bag" variable nil (reparse-symbol function_parameters) [2234 2237]))                          
+                        :documentation "
+        @brief      { simulate ros clock using clock messages in rosbag }
+        @param      self  The object
+        @param      bag   The rosbag
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [2208 3434])
+                    ("_sim_clock_unlimited_func" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3469 3473])
+                            ("start_time_msg" variable nil (reparse-symbol function_parameters) [3475 3489]))                          
+                        :documentation "
+        @brief      { simulate ros clock }
+        @param      self  The object
+        @param      start_time_msg  The first clock message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [3439 5364])
+                    ("_remove_agents" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5405 5409])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [5411 5422]))                          
+                        :documentation "
+        @brief      { remove agent messages that are not needed by scenario }
+        @param      self  The object
+        @param      world_state  The original world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [5386 6048])
+                    ("_modify_agents" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6072 6076])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [6078 6089]))                          
+                        :documentation "
+        @brief      { modify agent message based on scenario }
+        @param      self  The object
+        @param      world_state  The original world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [6053 7025])
+                    ("_is_time_to_send_task" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7056 7060])
+                            ("agent_config" variable nil (reparse-symbol function_parameters) [7062 7074])
+                            ("timestamp" variable nil (reparse-symbol function_parameters) [7076 7085]))                          
+                        :documentation "
+        @brief      { check if it is time to send a agent task message }
+        @param      self  The object
+        @param      agent_config  The config from scenario file
+        @param      timestamp  The timestamp in seconds
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [7030 7592])
+                    ("_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7609 7613])
+                            ("action_str" variable nil (reparse-symbol function_parameters) [7615 7625]))                          
+                        :documentation "
+        @brief      { turn action string into protobuf message format }
+        @param      self  The object
+        @param      action_str  The action string
+        @return     { corresponding protobuf message }
+        ")
+                        (reparse-symbol indented_block_body) [7597 8208])
+                    ("_send_agent_tasks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8247 8251])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [8253 8264]))                          
+                        :documentation "
+        @brief      { send agent tasks which are active at the current timestamp }
+        @param      self  The object
+        @param      world_state  The world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [8225 14154])
+                    ("_add_path_id_to_lanes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14185 14189])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [14191 14202]))                          
+                        :documentation "
+        @brief      { process world state message }
+        @param      self  The object
+        @param      world_state  The world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [14159 14789])
+                    ("zero_ego_and_agents" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14818 14822])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [14824 14835]))                          )
+                        (reparse-symbol indented_block_body) [14794 15093])
+                    ("create_tmp_map" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15142 15146])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [15148 15159]))                          )
+                        (reparse-symbol indented_block_body) [15123 15956])
+                    ("_process_world_state_msg" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16013 16017])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [16019 16030]))                          
+                        :documentation "
+        @brief      { process world state message }
+        @param      self  The object
+        @param      world_state  The world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [15984 16978])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16991 16995]))                          
+                        :documentation "
+        @brief      { main function }
+        @param      self  The object
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [16983 19247]))                  
+                :type "class")
+                nil [810 19247])
+            ("if" code nil nil [19248 19618]))          
+      :file "bag_player.py"
+      :pointmax 19618
+      :fsize 19617
+      :lastmodtime '(23337 23968 475262 455000)
+      :unmatched-syntax nil)
+    (semanticdb-table "log_conf.py"
+      :file "log_conf.py"
+      :fsize 1153
+      :lastmodtime '(23191 1065 890938 602000)))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!simulation!director!director_bak!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

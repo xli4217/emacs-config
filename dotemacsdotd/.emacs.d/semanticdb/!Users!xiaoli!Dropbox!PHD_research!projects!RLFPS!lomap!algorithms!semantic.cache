@@ -1,0 +1,89 @@
+;; Object algorithms/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "algorithms/"
+  :tables
+  (list
+    (semanticdb-table "optimal_run.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("networkx" include nil nil [767 788])
+            ("itertools" include nil nil [789 805])
+            ("heapq" include nil nil [806 818])
+            ("Buchi" include nil nil [840 852])
+            ("ts_times_buchi" include nil nil [879 900])
+            ("sys" include nil nil [901 911])
+            ("traceback" include nil nil [912 928])
+            ("copy" include nil nil [929 940])
+            ("logging" include nil nil [965 979])
+            ("logger" variable nil nil [1015 1051])
+            ("SERVER_ADDR" variable nil nil [1355 1380])
+            ("pp_servers" variable nil nil [1381 1396])
+            ("SERVER_PORT" variable nil nil [1397 1416])
+            ("data_source" variable nil nil [1417 1457])
+            ("optimal_run" function (:arguments 
+              ( ("t" variable nil (reparse-symbol function_parameters) [1475 1476])
+                ("formula" variable nil (reparse-symbol function_parameters) [1478 1485])
+                ("opt_prop" variable nil (reparse-symbol function_parameters) [1487 1495]))              ) nil [1459 3247])
+            ("find_best_cycle" function (:arguments 
+              ( ("f" variable nil (reparse-symbol function_parameters) [3268 3269])
+                ("s" variable nil (reparse-symbol function_parameters) [3271 3272])
+                ("d_f_to_s" variable nil (reparse-symbol function_parameters) [3274 3282])
+                ("d_s_to_f" variable nil (reparse-symbol function_parameters) [3284 3292])
+                ("d_bot" variable nil (reparse-symbol function_parameters) [3294 3299]))              ) nil [3248 3916])
+            ("chunks" function (:arguments 
+              ( ("l" variable nil (reparse-symbol function_parameters) [3928 3929])
+                ("n" variable nil (reparse-symbol function_parameters) [3931 3932]))              ) nil [3917 3983])
+            ("job_worker" function (:arguments 
+              ( ("chunk" variable nil (reparse-symbol function_parameters) [3999 4004])
+                ("data_source" variable nil (reparse-symbol function_parameters) [4006 4017])
+                ("func_name" variable nil (reparse-symbol function_parameters) [4019 4028]))              ) nil [3984 4890])
+            ("job_dispatcher" function (:arguments 
+              ( ("job_server" variable nil (reparse-symbol function_parameters) [4910 4920])
+                ("func" variable nil (reparse-symbol function_parameters) [4922 4926])
+                ("arg_to_split" variable nil (reparse-symbol function_parameters) [4928 4940])
+                ("chunk_size" variable nil (reparse-symbol function_parameters) [4942 4952])
+                ("data_id" variable nil (reparse-symbol function_parameters) [4954 4961])
+                ("data" variable nil (reparse-symbol function_parameters) [4963 4967])
+                ("data_source" variable nil (reparse-symbol function_parameters) [4969 4980]))              ) nil [4891 6421])
+            ("min_bottleneck_cycle" function
+               (:documentation " Returns the minimum bottleneck cycle from s to f in graph g.
+	
+	An implementation of the Min-Bottleneck-Cycle Algortihm
+	in S.L. Smith, J. Tumova, C. Belta, D. Rus \" Optimal Path Planning
+	for Surveillance with Temporal Logic Constraints\", in IJRR.
+
+	Parameters
+	----------
+	g : NetworkX graph
+
+	s : A set of nodes
+		These nodes satisfy the optimizing proposition.
+		
+	f : A set of nodes
+		These nodes are the final states of B x T product.
+
+	Returns
+	-------
+	cycle : List of node labels.
+		The minimum bottleneck cycle S->F->S
+
+	Examples
+	--------
+
+	Notes
+	-----
+
+	"
+                :arguments 
+                  ( ("g" variable nil (reparse-symbol function_parameters) [6447 6448])
+                    ("s" variable nil (reparse-symbol function_parameters) [6450 6451])
+                    ("f" variable nil (reparse-symbol function_parameters) [6453 6454]))                  )
+                nil [6422 11335]))          
+      :file "optimal_run.py"
+      :pointmax 11335
+      :fsize 11334
+      :lastmodtime '(22787 52860 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!lomap!algorithms!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,187 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "sensor.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("gps_agent_pkg/sensor.h" include nil nil [1 34])
+            ("gps_agent_pkg/encodersensor.h" include nil nil [35 75])
+            ("gps_agent_pkg/rostopicsensor.h" include nil nil [76 117])
+            ("gps_control" using (:type ("gps_control" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [119 147])
+            ("create_sensor" function
+               (:pointer 1
+                :parent "Sensor"
+                :arguments 
+                  ( ("type" variable (:type ("SensorType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [200 216])
+                    ("n" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [217 236])
+                    ("plugin" variable
+                       (:pointer 1
+                        :type ("RobotPlugin" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [237 257])
+                    ("actuator_type" variable (:type ("gps::ActuatorType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [258 290]))                  
+                :type ("Sensor" type (:type "class") nil nil))
+                nil [170 703])
+            ("Sensor" function
+               (:constructor-flag t
+                :parent "Sensor"
+                :arguments 
+                  ( ("n" variable
+                       (:reference 1
+                        :type ("ros::NodeHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [736 755])
+                    ("plugin" variable
+                       (:pointer 1
+                        :type ("RobotPlugin" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [756 776]))                  
+                :type ("Sensor" type (:type "class") nil nil))
+                nil [721 802])
+            ("Sensor" function
+               (:destructor-flag t
+                :parent "Sensor"
+                :type "void")
+                nil [819 862])
+            ("reset" function
+               (:parent "Sensor"
+                :arguments 
+                  ( ("plugin" variable
+                       (:pointer 1
+                        :type ("RobotPlugin" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [969 989])
+                    ("current_time" variable (:type ("ros::Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [990 1013]))                  
+                :type "void")
+                nil [950 1039])
+            ("update" function
+               (:parent "Sensor"
+                :arguments 
+                  ( ("plugin" variable
+                       (:pointer 1
+                        :type ("RobotPlugin" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1103 1123])
+                    ("current_time" variable (:type ("ros::Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1124 1147])
+                    ("is_controller_step" variable (:type "bool") (reparse-symbol arg-sub-list) [1148 1172]))                  
+                :type "void")
+                nil [1083 1198])
+            ("set_update" function
+               (:parent "Sensor"
+                :arguments 
+                  ( ("new_sensor_step_length" variable (:type "double") (reparse-symbol arg-sub-list) [1252 1282]))                  
+                :type "void")
+                nil [1228 1336])
+            ("configure_sensor" function
+               (:parent "Sensor"
+                :arguments 
+                  ( ("options" variable
+                       (:reference 1
+                        :type ("OptionsMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1430 1450]))                  
+                :type "void")
+                nil [1400 1476])
+            ("set_sample_data_format" function
+               (:parent "Sensor"
+                :arguments 
+                  ( ("sample" variable
+                       (:reference 1
+                        :type ("boost::scoped_ptr" type
+                             (:template-specifier 
+                                ( ("Sample" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1514 1548]))                  
+                :type "void")
+                nil [1478 1553])
+            ("set_sample_data" function
+               (:parent "Sensor"
+                :arguments 
+                  ( ("sample" variable
+                       (:reference 1
+                        :type ("boost::scoped_ptr" type
+                             (:template-specifier 
+                                ( ("Sample" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1584 1618])
+                    ("t" variable (:type "int") (reparse-symbol arg-sub-list) [1619 1625]))                  
+                :type "void")
+                nil [1555 1630]))          
+      :file "sensor.cpp"
+      :pointmax 1631
+      :fsize 1630
+      :lastmodtime '(22653 24658 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "pr2plugin.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("gps_agent_pkg/pr2plugin.h" include nil nil [1 37])
+            ("gps_agent_pkg/positioncontroller.h" include nil nil [38 83])
+            ("gps_agent_pkg/trialcontroller.h" include nil nil [84 126])
+            ("gps_agent_pkg/encodersensor.h" include nil nil [127 167])
+            ("gps_agent_pkg/util.h" include nil nil [168 199])
+            ("gps_control" type
+               (:members 
+                  ( ("GPSPR2Plugin" function
+                       (:constructor-flag t
+                        :parent "GPSPR2Plugin"
+                        :type ("GPSPR2Plugin" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [249 387])
+                    ("GPSPR2Plugin" function
+                       (:destructor-flag t
+                        :parent "GPSPR2Plugin"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [404 523])
+                    ("init" function
+                       (:parent "GPSPR2Plugin"
+                        :arguments 
+                          ( ("robot" variable
+                               (:pointer 1
+                                :type ("pr2_mechanism_model::RobotState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [601 640])
+                            ("n" variable
+                               (:reference 1
+                                :type ("ros::NodeHandle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [641 660]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [577 5728])
+                    ("starting" function
+                       (:parent "GPSPR2Plugin"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5806 6503])
+                    ("stopping" function
+                       (:parent "GPSPR2Plugin"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6581 6641])
+                    ("update" function
+                       (:parent "GPSPR2Plugin"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6741 7631])
+                    ("get_current_time" function
+                       (:parent "GPSPR2Plugin"
+                        :type ("ros::Time" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7654 7736])
+                    ("get_joint_encoder_readings" function
+                       (:parent "GPSPR2Plugin"
+                        :arguments 
+                          ( ("angles" variable
+                               (:reference 1
+                                :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7835 7859])
+                            ("arm" variable (:type ("gps::ActuatorType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7860 7882]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7789 8566]))                  
+                :type "namespace")
+                nil [201 8569]))          
+      :file "pr2plugin.cpp"
+      :pointmax 8738
+      :fsize 8737
+      :lastmodtime '(22685 2940 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!src!gps_agent_pkg!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

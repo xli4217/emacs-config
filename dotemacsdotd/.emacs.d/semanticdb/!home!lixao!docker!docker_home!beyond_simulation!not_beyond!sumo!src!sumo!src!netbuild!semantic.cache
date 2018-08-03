@@ -1,0 +1,257 @@
+;; Object netbuild/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "netbuild/"
+  :tables
+  (list
+    (semanticdb-table "NBContHelper.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("config.h" include (:system-flag t) nil [1090 1109])
+            ("vector" include (:system-flag t) nil [1118 1135])
+            ("map" include (:system-flag t) nil [1136 1150])
+            ("cassert" include (:system-flag t) nil [1151 1169])
+            ("NBContHelper.h" include nil nil [1170 1195])
+            ("utils/geom/GeomHelper.h" include (:system-flag t) nil [1196 1230])
+            ("nextCW" function
+               (:parent "NBContHelper"
+                :arguments 
+                  ( ("edges" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("EdgeVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1613 1637])
+                    ("from" variable
+                       (:reference 1
+                        :type ("EdgeVector::const_iterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1638 1671]))                  
+                :type "void")
+                nil [1587 1754])
+            ("nextCCW" function
+               (:parent "NBContHelper"
+                :arguments 
+                  ( ("edges" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("EdgeVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1784 1808])
+                    ("from" variable
+                       (:reference 1
+                        :type ("EdgeVector::const_iterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1809 1842]))                  
+                :type "void")
+                nil [1757 1946])
+            ("out" function
+               (:parent "NBContHelper"
+                :arguments 
+                  ( ("os" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1981 1998])
+                    ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("bool" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1999 2026]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [1949 2148])
+            ("findConnectingEdge" function
+               (:pointer 1
+                :parent "NBContHelper"
+                :arguments 
+                  ( ("edges" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("EdgeVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2192 2216])
+                    ("from" variable
+                       (:pointer 1
+                        :type ("NBNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2250 2263])
+                    ("to" variable
+                       (:pointer 1
+                        :type ("NBNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2264 2275]))                  
+                :type ("NBEdge" type (:type "class") nil nil))
+                nil [2151 2482])
+            ("maxSpeed" function
+               (:parent "NBContHelper"
+                :arguments 
+                  ( ("ev" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("EdgeVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2516 2537]))                  
+                :type "double")
+                nil [2486 2801])
+            ("node_with_incoming_finder" function
+               (:constructor-flag t
+                :parent "NBContHelper::node_with_incoming_finder"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("NBEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3069 3091]))                  
+                :type ("node_with_incoming_finder" type (:type "class") nil nil))
+                nil [3002 3110])
+            ("()" function
+               (:operator-flag t
+                :parent "NBContHelper::node_with_incoming_finder"
+                :arguments 
+                  ( ("n" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("NBNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3170 3192]))                  
+                :type "bool")
+                nil [3113 3340])
+            ("node_with_outgoing_finder" function
+               (:constructor-flag t
+                :parent "NBContHelper::node_with_outgoing_finder"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("NBEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3608 3630]))                  
+                :type ("node_with_outgoing_finder" type (:type "class") nil nil))
+                nil [3541 3649])
+            ("()" function
+               (:operator-flag t
+                :parent "NBContHelper::node_with_outgoing_finder"
+                :arguments 
+                  ( ("n" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("NBNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3709 3731]))                  
+                :type "bool")
+                nil [3652 3879])
+            ("edge_with_destination_finder" function
+               (:constructor-flag t
+                :parent "NBContHelper::edge_with_destination_finder"
+                :arguments 
+                  ( ("dest" variable
+                       (:pointer 1
+                        :type ("NBNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4156 4169]))                  
+                :type ("edge_with_destination_finder" type (:type "class") nil nil))
+                nil [4083 4202])
+            ("()" function
+               (:operator-flag t
+                :parent "NBContHelper::edge_with_destination_finder"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("NBEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4265 4275]))                  
+                :type "bool")
+                nil [4205 4333])
+            ("()" function
+               (:operator-flag t
+                :parent "NBContHelper::relative_outgoing_edge_sorter"
+                :arguments 
+                  ( ("e1" variable
+                       (:pointer 1
+                        :type ("NBEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4596 4607])
+                    ("e2" variable
+                       (:pointer 1
+                        :type ("NBEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4608 4619]))                  
+                :type "int")
+                nil [4536 5842])
+            ("()" function
+               (:operator-flag t
+                :parent "NBContHelper::straightness_sorter"
+                :arguments 
+                  ( ("e1" variable
+                       (:pointer 1
+                        :type ("NBEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6086 6097])
+                    ("e2" variable
+                       (:pointer 1
+                        :type ("NBEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6098 6109]))                  
+                :type "int")
+                nil [6036 8887])
+            ("()" function
+               (:operator-flag t
+                :parent "NBContHelper::relative_incoming_edge_sorter"
+                :arguments 
+                  ( ("e1" variable
+                       (:pointer 1
+                        :type ("NBEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9151 9162])
+                    ("e2" variable
+                       (:pointer 1
+                        :type ("NBEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9163 9174]))                  
+                :type "int")
+                nil [9091 10455])
+            ("<<" function
+               (:operator-flag t
+                :arguments 
+                  ( ("os" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10483 10500])
+                    ("ev" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("EdgeVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10501 10522]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [10458 10715])
+            ("getMaxSpeed" function
+               (:parent "NBContHelper"
+                :arguments 
+                  ( ("edges" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("EdgeVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10753 10777]))                  
+                :type "double")
+                nil [10720 11074])
+            ("getMinSpeed" function
+               (:parent "NBContHelper"
+                :arguments 
+                  ( ("edges" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("EdgeVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11110 11134]))                  
+                :type "double")
+                nil [11077 11431])
+            ("()" function
+               (:operator-flag t
+                :parent "NBContHelper::edge_by_angle_to_nodeShapeCentroid_sorter"
+                :arguments 
+                  ( ("e1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("NBEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11506 11523])
+                    ("e2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("NBEdge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11524 11541]))                  
+                :type "int")
+                nil [11434 13151]))          
+      :file "NBContHelper.cpp"
+      :pointmax 13233
+      :fsize 13232
+      :lastmodtime '(23228 564 710212 621000)
+      :unmatched-syntax nil)
+    (semanticdb-table "NBContHelper.h"
+      :file "NBContHelper.h"
+      :fsize 13443
+      :lastmodtime '(23228 564 710212 621000)))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!not_beyond!sumo!src!sumo!src!netbuild!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
