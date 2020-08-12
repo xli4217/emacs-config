@@ -7,6 +7,9 @@
                   ("melpa" . "http://melpa.milkbox.net/packages/")
                   ))
 (add-to-list 'package-archives source t))
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
 (package-initialize)
 
 ;;;;;;;;;; these are the packages to install at startup ;;;;;;;;;;;
@@ -80,19 +83,7 @@
 )
  
 (add-hook 'c-mode-common-hook 'my-ac-clang-mode-common-hook)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" default)))
- '(ecb-options-version "2.40")
- '(inhibit-startup-screen t)
- '(package-selected-packages
-   (quote
-    (helm sublime-themes smartparens neotree magit key-chord json-mode helm-core ggtags flycheck-pyflakes flycheck-irony flycheck-google-cpplint flycheck-cask elpy ecb dumb-jump csv-mode cppcheck company-anaconda color-theme cmake-project cmake-ide cmake-font-lock buffer-move bracketed-paste auto-complete-c-headers))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -534,12 +525,13 @@
 ;;revert windows on exit - needs winner mode
 ;;(winner-mode)
 ;;(add-hook 'ediff-after-quit-hook-internal 'winner-undo)
+
 ;;----------------------------------------------------------------------------                                                                                                                                     
 ;; ipdb                                                                                                                                                                                                            
 ;; from: pedrokroger.net/2010/07/configuring-emacs-as-a-python-ide-2/                                                                                                                                              
 ;; Highlight ipdb lines:                                                                                                                                                                                           
 (defun annotate-pdb ()                                                                                                                                                                                             
-  (interactive)                                                                                                                                                                                                    
+  (interactive)
   (highlight-lines-matching-regexp "import pdb")                                                                                                                                                                   
   (highlight-lines-matching-regexp "pdb.set_trace()"))                                                                                                                                                             
                                                                                                                                                                                                                    
@@ -548,13 +540,14 @@
 ;;----------                                                                                                                                                                                                       
 ;; Keybinding to add breakpoint:                                                                                                                                                                                   
 (defun python-add-breakpoint ()                                                                                                                                                                                    
-  (interactive)                                                                                                                                                                                                    
+  (interactive)                                                                                                                       
   (newline-and-indent)                                                                                                                                                                                             
   (insert "import ipdb; ipdb.set_trace()")                                                                                                                                                                         
   (highlight-lines-matching-regexp "^[ ]*import ipdb; ipdb.set_trace()"))                                                                                                                                          
                                                                                                                                                                                                                    
 (key-chord-define-global "st" 'python-add-breakpoint)                                                                                                                                                              
-;;(define-key global-map (kbd "C-c C-t") 'python-add-breakpoint)                                                                                                                                                   
-                                                                                                                                                                                                                   
-;; (define-key python-mode-map (kbd "C-c C-t") 'python-add-breakpoint)                                                                                                                                             
-                                                                               
+;;(define-key global-map (kbd "C-c C-t") 'python-add-breakpoint)
+;; (define-key python-mode-map (kbd "C-c C-t") 'python-add-breakpoint)                                                                                                                                 
+;;(global-linum-mode t)
+
+(elpy-enable)
