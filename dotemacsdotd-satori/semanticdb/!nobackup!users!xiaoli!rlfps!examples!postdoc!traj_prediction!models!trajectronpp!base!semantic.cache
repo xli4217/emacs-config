@@ -1,0 +1,311 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("NonlinearKinematicBicycle" type
+               (:documentation "
+    Nonlinear Kalman Filter for a kinematic bicycle model, assuming constant longitudinal speed
+    and constant heading array
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [290 302])
+                            ("self" variable nil (reparse-symbol indented_block_body) [341 416])
+                            ("if" code nil (reparse-symbol indented_block_body) [461 1045])
+                            ("if" code nil (reparse-symbol indented_block_body) [1053 1109])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1150 1216])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1253 1347]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [215 219])
+                            ("dt" variable nil (reparse-symbol function_parameters) [221 223])
+                            ("sPos" variable nil (reparse-symbol function_parameters) [225 229])
+                            ("sHeading" variable nil (reparse-symbol function_parameters) [236 244])
+                            ("sVel" variable nil (reparse-symbol function_parameters) [251 255])
+                            ("sMeasurement" variable nil (reparse-symbol function_parameters) [262 274]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [202 1348])
+                    ("predict_and_update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1376 1380])
+                            ("x_vec_est" variable nil (reparse-symbol function_parameters) [1382 1391])
+                            ("u_vec" variable nil (reparse-symbol function_parameters) [1393 1398])
+                            ("P_matrix" variable nil (reparse-symbol function_parameters) [1400 1408])
+                            ("z_new" variable nil (reparse-symbol function_parameters) [1410 1415]))                          
+                        :documentation "
+        for background please refer to wikipedia: https://en.wikipedia.org/wiki/Extended_Kalman_filter
+        :param x_vec_est:
+        :param u_vec:
+        :param P_matrix:
+        :param z_new:
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [1353 2593])
+                    ("_kinematic_bicycle_model_rearCG" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2634 2638])
+                            ("x_old" variable nil (reparse-symbol function_parameters) [2640 2645])
+                            ("u" variable nil (reparse-symbol function_parameters) [2647 2648]))                          
+                        :documentation "
+        :param x: vehicle state vector = [x position, y position, heading, velocity]
+        :param u: control vector = [acceleration, steering array]
+        :param dt:
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [2598 3321])
+                    ("_cal_state_Jacobian" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3350 3354])
+                            ("x_vec" variable nil (reparse-symbol function_parameters) [3356 3361])
+                            ("u_vec" variable nil (reparse-symbol function_parameters) [3363 3368]))                          )
+                        (reparse-symbol indented_block_body) [3326 3944]))                  
+                :type "class")
+                nil [21 3944])
+            ("_heading_angle_correction" function
+               (:documentation "
+    correct heading array so that it always remains in [-pi, pi]
+    :param theta:
+    :return:
+    "
+                :arguments 
+                  ( ("theta" variable nil (reparse-symbol function_parameters) [3976 3981]))                  )
+                nil [3946 4184]))          
+      :file "kalman_filter.py"
+      :pointmax 4184
+      :fsize 4183
+      :lastmodtime '(24317 20858 994193 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("json" include nil nil [11 22])
+            ("numpy" include nil nil [23 41])
+            ("matplotlib.pyplot" include nil nil [42 73])
+            ("matplotlib.offsetbox" include nil nil [74 134])
+            ("matplotlib.patheffects" include nil nil [135 170])
+            ("scipy.ndimage" include nil nil [171 203])
+            ("seaborn" include nil nil [204 225])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.model.model_registrar" include nil nil [227 344])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.model" include nil nil [345 442])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.utils" include nil nil [443 563])
+            ("scipy.integrate" include nil nil [565 601])
+            ("line_colors" variable nil nil [603 672])
+            ("cars" variable nil nil [674 938])
+            ("robot" variable nil nil [940 990])
+            ("load_model" function (:arguments 
+              ( ("model_dir" variable nil (reparse-symbol function_parameters) [1008 1017])
+                ("env" variable nil (reparse-symbol function_parameters) [1019 1022])
+                ("ts" variable nil (reparse-symbol function_parameters) [1024 1026]))              ) nil [993 1536])
+            ("plot_vehicle_nice" function (:arguments 
+              ( ("ax" variable nil (reparse-symbol function_parameters) [1560 1562])
+                ("predictions" variable nil (reparse-symbol function_parameters) [1564 1575])
+                ("dt" variable nil (reparse-symbol function_parameters) [1577 1579])
+                ("max_hl" variable nil (reparse-symbol function_parameters) [1581 1587])
+                ("ph" variable nil (reparse-symbol function_parameters) [1592 1594])
+                ("map" variable nil (reparse-symbol function_parameters) [1598 1601])
+                ("x_min" variable nil (reparse-symbol function_parameters) [1608 1613])
+                ("y_min" variable nil (reparse-symbol function_parameters) [1617 1622]))              ) nil [1538 5090])
+            ("plot_vehicle_mm" function (:arguments 
+              ( ("ax" variable nil (reparse-symbol function_parameters) [5112 5114])
+                ("predictions" variable nil (reparse-symbol function_parameters) [5116 5127])
+                ("dt" variable nil (reparse-symbol function_parameters) [5129 5131])
+                ("max_hl" variable nil (reparse-symbol function_parameters) [5133 5139])
+                ("ph" variable nil (reparse-symbol function_parameters) [5144 5146])
+                ("map" variable nil (reparse-symbol function_parameters) [5150 5153])
+                ("x_min" variable nil (reparse-symbol function_parameters) [5160 5165])
+                ("y_min" variable nil (reparse-symbol function_parameters) [5169 5174]))              ) nil [5092 7109])
+            ("plot_vehicle_nice_mv" function (:arguments 
+              ( ("ax" variable nil (reparse-symbol function_parameters) [7136 7138])
+                ("predictions" variable nil (reparse-symbol function_parameters) [7140 7151])
+                ("dt" variable nil (reparse-symbol function_parameters) [7153 7155])
+                ("max_hl" variable nil (reparse-symbol function_parameters) [7157 7163])
+                ("ph" variable nil (reparse-symbol function_parameters) [7168 7170])
+                ("map" variable nil (reparse-symbol function_parameters) [7174 7177])
+                ("x_min" variable nil (reparse-symbol function_parameters) [7184 7189])
+                ("y_min" variable nil (reparse-symbol function_parameters) [7193 7198]))              ) nil [7111 10159])
+            ("plot_vehicle_nice_mv_robot" function (:arguments 
+              ( ("ax" variable nil (reparse-symbol function_parameters) [10192 10194])
+                ("predictions" variable nil (reparse-symbol function_parameters) [10196 10207])
+                ("dt" variable nil (reparse-symbol function_parameters) [10209 10211])
+                ("max_hl" variable nil (reparse-symbol function_parameters) [10213 10219])
+                ("ph" variable nil (reparse-symbol function_parameters) [10224 10226])
+                ("map" variable nil (reparse-symbol function_parameters) [10230 10233])
+                ("x_min" variable nil (reparse-symbol function_parameters) [10240 10245])
+                ("y_min" variable nil (reparse-symbol function_parameters) [10249 10254]))              ) nil [10161 12237])
+            ("integrate" function (:arguments 
+              ( ("f" variable nil (reparse-symbol function_parameters) [12253 12254])
+                ("dx" variable nil (reparse-symbol function_parameters) [12256 12258])
+                ("F0" variable nil (reparse-symbol function_parameters) [12260 12262]))              ) nil [12239 12361]))          
+      :file "helper.py"
+      :pointmax 12361
+      :fsize 12381
+      :lastmodtime '(24333 58626 48487 0)
+      :unmatched-syntax '(($EOI 12361 . 12361) ($EOI 12292 . 12292) ($EOI 12292 . 12292)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("sys" include nil nil [1 11])
+            ("os" include nil nil [12 21])
+            ("dill" include nil nil [22 33])
+            ("json" include nil nil [34 45])
+            ("argparse" include nil nil [46 61])
+            ("torch" include nil nil [62 74])
+            ("numpy" include nil nil [75 93])
+            ("pandas" include nil nil [94 113])
+            ("sys" code nil nil [115 147])
+            ("tqdm" include nil nil [148 169])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.model.model_registrar" include nil nil [170 287])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.model.trajectron" include nil nil [288 396])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.evaluation" include nil nil [397 497])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.utils" include nil nil [498 588])
+            ("scipy.interpolate" include nil nil [589 638])
+            ("seed" variable nil nil [640 648])
+            ("np" code nil nil [649 669])
+            ("torch" code nil nil [670 693])
+            ("if" code nil nil [694 761])
+            ("parser" variable nil nil [762 796])
+            ("parser" code nil nil [797 861])
+            ("parser" code nil nil [862 944])
+            ("parser" code nil nil [945 1015])
+            ("parser" code nil nil [1016 1094])
+            ("parser" code nil nil [1095 1173])
+            ("parser" code nil nil [1174 1248])
+            ("parser" code nil nil [1249 1354])
+            ("args" variable nil nil [1355 1381])
+            ("compute_road_violations" function (:arguments 
+              ( ("predicted_trajs" variable nil (reparse-symbol function_parameters) [1412 1427])
+                ("map" variable nil (reparse-symbol function_parameters) [1429 1432])
+                ("channel" variable nil (reparse-symbol function_parameters) [1434 1441]))              ) nil [1384 2130])
+            ("load_model" function (:arguments 
+              ( ("model_dir" variable nil (reparse-symbol function_parameters) [2147 2156])
+                ("env" variable nil (reparse-symbol function_parameters) [2158 2161])
+                ("ts" variable nil (reparse-symbol function_parameters) [2163 2165]))              ) nil [2132 2565])
+            ("if" code nil nil [2567 9569]))          
+      :file "evaluate.py"
+      :pointmax 9569
+      :fsize 9568
+      :lastmodtime '(24325 8919 133603 824000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("sys" include nil nil [1 11])
+            ("os" include nil nil [12 21])
+            ("collections" include nil nil [22 57])
+            ("numpy" include nil nil [58 76])
+            ("pandas" include nil nil [77 96])
+            ("dill" include nil nil [97 108])
+            ("argparse" include nil nil [109 124])
+            ("tqdm" include nil nil [125 146])
+            ("pyquaternion" include nil nil [147 182])
+            ("kalman_filter" include nil nil [183 234])
+            ("external_libs.nuscenes.nuscenes" include nil nil [336 388])
+            ("external_libs.nuscenes.prediction" include nil nil [389 448])
+            ("external_libs.nuscenes.map_expansion.map_api" include nil nil [449 517])
+            ("external_libs.nuscenes.eval.prediction.splits" include nil nil [518 606])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.environment" include nil nil [607 753])
+            ("FREQUENCY" variable nil nil [755 768])
+            ("dt" code nil nil [769 787])
+            ("data_columns_vehicle" variable nil nil [788 904])
+            ("data_columns_vehicle" variable nil nil [905 1021])
+            ("data_columns_vehicle" variable nil nil [1022 1142])
+            ("data_columns_pedestrian" variable nil nil [1144 1252])
+            ("curv_0_2" variable nil nil [1254 1266])
+            ("curv_0_1" variable nil nil [1267 1279])
+            ("total" variable nil nil [1280 1289])
+            ("standardization" variable nil nil [1291 2327])
+            ("augment_scene" function (:arguments 
+              ( ("scene" variable nil (reparse-symbol function_parameters) [2348 2353])
+                ("angle" variable nil (reparse-symbol function_parameters) [2355 2360]))              ) nil [2330 6007])
+            ("augment" function (:arguments 
+              ( ("scene" variable nil (reparse-symbol function_parameters) [6021 6026]))              ) nil [6009 6194])
+            ("trajectory_curvature" function (:arguments 
+              ( ("t" variable nil (reparse-symbol function_parameters) [6221 6222]))              ) nil [6196 6531])
+            ("aggregate_samples" function (:arguments 
+              ( ("nusc" variable nil (reparse-symbol function_parameters) [6555 6559])
+                ("all_sample_tokens" variable nil (reparse-symbol function_parameters) [6561 6578])
+                ("start" variable nil (reparse-symbol function_parameters) [6580 6585])
+                ("data_class" variable nil (reparse-symbol function_parameters) [6587 6597]))              ) nil [6533 7365])
+            ("process_scene" function (:arguments 
+              ( ("sample_token" variable nil (reparse-symbol function_parameters) [7385 7397])
+                ("processed_sample_tokens" variable nil (reparse-symbol function_parameters) [7399 7422])
+                ("all_sample_tokens" variable nil (reparse-symbol function_parameters) [7424 7441])
+                ("env" variable nil (reparse-symbol function_parameters) [7461 7464])
+                ("nusc" variable nil (reparse-symbol function_parameters) [7466 7470])
+                ("helper" variable nil (reparse-symbol function_parameters) [7472 7478])
+                ("data_path" variable nil (reparse-symbol function_parameters) [7480 7489])
+                ("data_class" variable nil (reparse-symbol function_parameters) [7491 7501]))              ) nil [7367 19127])
+            ("process_data" function (:arguments 
+              ( ("data_path" variable nil (reparse-symbol function_parameters) [19146 19155])
+                ("version" variable nil (reparse-symbol function_parameters) [19157 19164])
+                ("output_path" variable nil (reparse-symbol function_parameters) [19166 19177]))              ) nil [19129 21784])
+            ("if" code nil nil [21786 22498]))          
+      :file "process_data.py"
+      :pointmax 22498
+      :fsize 23054
+      :lastmodtime '(24335 18179 998023 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("sys" include nil nil [1 11])
+            ("os" include nil nil [12 21])
+            ("numpy" include nil nil [22 40])
+            ("pandas" include nil nil [41 60])
+            ("argparse" include nil nil [61 76])
+            ("tqdm" include nil nil [77 98])
+            ("pyquaternion" include nil nil [99 134])
+            ("kalman_filter" include nil nil [135 186])
+            ("sklearn.model_selection" include nil nil [187 239])
+            ("dill" include nil nil [240 251])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.environment" include nil nil [589 735])
+            ("external_libs.nuscenes.nuscenes" include nil nil [737 789])
+            ("external_libs.nuscenes.map_expansion.map_api" include nil nil [790 858])
+            ("external_libs.nuscenes.utils.splits" include nil nil [859 927])
+            ("scene_blacklist" variable nil nil [930 963])
+            ("FREQUENCY" variable nil nil [965 978])
+            ("dt" code nil nil [979 997])
+            ("data_columns_vehicle" variable nil nil [998 1114])
+            ("data_columns_vehicle" variable nil nil [1115 1231])
+            ("data_columns_vehicle" variable nil nil [1232 1352])
+            ("data_columns_pedestrian" variable nil nil [1354 1462])
+            ("curv_0_2" variable nil nil [1464 1476])
+            ("curv_0_1" variable nil nil [1477 1489])
+            ("total" variable nil nil [1490 1499])
+            ("standardization" variable nil nil [1501 2537])
+            ("augment_scene" function (:arguments 
+              ( ("scene" variable nil (reparse-symbol function_parameters) [2558 2563])
+                ("angle" variable nil (reparse-symbol function_parameters) [2565 2570]))              ) nil [2540 6091])
+            ("augment" function (:arguments 
+              ( ("scene" variable nil (reparse-symbol function_parameters) [6105 6110]))              ) nil [6093 6278])
+            ("trajectory_curvature" function (:arguments 
+              ( ("t" variable nil (reparse-symbol function_parameters) [6305 6306]))              ) nil [6280 6615])
+            ("process_scene" function (:arguments 
+              ( ("ns_scene" variable nil (reparse-symbol function_parameters) [6635 6643])
+                ("env" variable nil (reparse-symbol function_parameters) [6645 6648])
+                ("nusc" variable nil (reparse-symbol function_parameters) [6650 6654])
+                ("data_path" variable nil (reparse-symbol function_parameters) [6656 6665]))              ) nil [6617 17209])
+            ("process_data" function (:arguments 
+              ( ("data_path" variable nil (reparse-symbol function_parameters) [17228 17237])
+                ("version" variable nil (reparse-symbol function_parameters) [17239 17246])
+                ("output_path" variable nil (reparse-symbol function_parameters) [17248 17259])
+                ("val_split" variable nil (reparse-symbol function_parameters) [17261 17270]))              ) nil [17211 20005])
+            ("if" code nil nil [20007 20749]))          
+      :file "process_data_bak.py"
+      :pointmax 20749
+      :fsize 20759
+      :lastmodtime '(24326 23007 486420 0)
+      :unmatched-syntax nil))
+  :file "!nobackup!users!xiaoli!rlfps!examples!postdoc!traj_prediction!models!trajectronpp!base!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

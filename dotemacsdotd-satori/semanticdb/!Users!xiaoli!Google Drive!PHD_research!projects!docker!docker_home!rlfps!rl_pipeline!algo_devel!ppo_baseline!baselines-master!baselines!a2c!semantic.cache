@@ -1,0 +1,177 @@
+;; Object a2c/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a2c/"
+  :tables
+  (list
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("gym" include nil nil [11 21])
+            ("numpy" include nil nil [22 40])
+            ("tensorflow" include nil nil [41 64])
+            ("gym" include nil nil [65 87])
+            ("collections" include nil nil [88 117])
+            ("sample" function (:arguments 
+              ( ("logits" variable nil (reparse-symbol function_parameters) [130 136]))              ) nil [119 244])
+            ("cat_entropy" function (:arguments 
+              ( ("logits" variable nil (reparse-symbol function_parameters) [261 267]))              ) nil [245 467])
+            ("cat_entropy_softmax" function (:arguments 
+              ( ("p0" variable nil (reparse-symbol function_parameters) [492 494]))              ) nil [468 558])
+            ("mse" function (:arguments 
+              ( ("pred" variable nil (reparse-symbol function_parameters) [567 571])
+                ("target" variable nil (reparse-symbol function_parameters) [573 579]))              ) nil [559 619])
+            ("ortho_init" function (:arguments 
+              ( ("scale" variable nil (reparse-symbol function_parameters) [635 640]))              ) nil [620 1292])
+            ("conv" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1302 1303])
+                ("scope" variable nil (reparse-symbol function_parameters) [1305 1310])
+                ("nf" variable nil (reparse-symbol function_parameters) [1315 1317])
+                ("rf" variable nil (reparse-symbol function_parameters) [1319 1321])
+                ("stride" variable nil (reparse-symbol function_parameters) [1323 1329])
+                ("pad" variable nil (reparse-symbol function_parameters) [1331 1334])
+                ("init_scale" variable nil (reparse-symbol function_parameters) [1344 1354]))              ) nil [1293 1683])
+            ("fc" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1691 1692])
+                ("scope" variable nil (reparse-symbol function_parameters) [1694 1699])
+                ("nh" variable nil (reparse-symbol function_parameters) [1701 1703])
+                ("init_scale" variable nil (reparse-symbol function_parameters) [1708 1718])
+                ("init_bias" variable nil (reparse-symbol function_parameters) [1724 1733]))              ) nil [1684 2012])
+            ("batch_to_seq" function (:arguments 
+              ( ("h" variable nil (reparse-symbol function_parameters) [2030 2031])
+                ("nbatch" variable nil (reparse-symbol function_parameters) [2033 2039])
+                ("nsteps" variable nil (reparse-symbol function_parameters) [2041 2047])
+                ("flat" variable nil (reparse-symbol function_parameters) [2049 2053]))              ) nil [2013 2271])
+            ("seq_to_batch" function (:arguments 
+              ( ("h" variable nil (reparse-symbol function_parameters) [2289 2290])
+                ("flat" variable nil (reparse-symbol function_parameters) [2292 2296]))              ) nil [2272 2569])
+            ("lstm" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [2579 2581])
+                ("ms" variable nil (reparse-symbol function_parameters) [2583 2585])
+                ("s" variable nil (reparse-symbol function_parameters) [2587 2588])
+                ("scope" variable nil (reparse-symbol function_parameters) [2590 2595])
+                ("nh" variable nil (reparse-symbol function_parameters) [2597 2599])
+                ("init_scale" variable nil (reparse-symbol function_parameters) [2601 2611]))              ) nil [2570 3482])
+            ("_ln" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [3491 3492])
+                ("g" variable nil (reparse-symbol function_parameters) [3494 3495])
+                ("b" variable nil (reparse-symbol function_parameters) [3497 3498])
+                ("e" variable nil (reparse-symbol function_parameters) [3500 3501])
+                ("axes" variable nil (reparse-symbol function_parameters) [3508 3512]))              ) nil [3483 3628])
+            ("lnlstm" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [3640 3642])
+                ("ms" variable nil (reparse-symbol function_parameters) [3644 3646])
+                ("s" variable nil (reparse-symbol function_parameters) [3648 3649])
+                ("scope" variable nil (reparse-symbol function_parameters) [3651 3656])
+                ("nh" variable nil (reparse-symbol function_parameters) [3658 3660])
+                ("init_scale" variable nil (reparse-symbol function_parameters) [3662 3672]))              ) nil [3629 5091])
+            ("conv_to_fc" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [5107 5108]))              ) nil [5092 5211])
+            ("discount_with_dones" function (:arguments 
+              ( ("rewards" variable nil (reparse-symbol function_parameters) [5236 5243])
+                ("dones" variable nil (reparse-symbol function_parameters) [5245 5250])
+                ("gamma" variable nil (reparse-symbol function_parameters) [5252 5257]))              ) nil [5212 5466])
+            ("find_trainable_variables" function (:arguments 
+              ( ("key" variable nil (reparse-symbol function_parameters) [5496 5499]))              ) nil [5467 5575])
+            ("make_path" function (:arguments 
+              ( ("f" variable nil (reparse-symbol function_parameters) [5590 5591]))              ) nil [5576 5635])
+            ("constant" function (:arguments 
+              ( ("p" variable nil (reparse-symbol function_parameters) [5649 5650]))              ) nil [5636 5666])
+            ("linear" function (:arguments 
+              ( ("p" variable nil (reparse-symbol function_parameters) [5678 5679]))              ) nil [5667 5697])
+            ("middle_drop" function (:arguments 
+              ( ("p" variable nil (reparse-symbol function_parameters) [5714 5715]))              ) nil [5698 5787])
+            ("double_linear_con" function (:arguments 
+              ( ("p" variable nil (reparse-symbol function_parameters) [5810 5811]))              ) nil [5788 5891])
+            ("double_middle_drop" function (:arguments 
+              ( ("p" variable nil (reparse-symbol function_parameters) [5915 5916]))              ) nil [5892 6056])
+            ("schedules" variable nil nil [6057 6239])
+            ("Scheduler" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [6321 6332])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6341 6351])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6360 6382])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6391 6426]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6284 6288])
+                            ("v" variable nil (reparse-symbol function_parameters) [6290 6291])
+                            ("nvalues" variable nil (reparse-symbol function_parameters) [6293 6300])
+                            ("schedule" variable nil (reparse-symbol function_parameters) [6302 6310]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6271 6427])
+                    ("value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6442 6446]))                          )
+                        (reparse-symbol indented_block_body) [6432 6565])
+                    ("value_steps" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6586 6590])
+                            ("steps" variable nil (reparse-symbol function_parameters) [6592 6597]))                          )
+                        (reparse-symbol indented_block_body) [6570 6656]))                  
+                :type "class")
+                nil [6241 6656])
+            ("EpisodeStats" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [6725 6750])
+                            ("for" code nil (reparse-symbol indented_block_body) [6759 6826])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6834 6867])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6914 6947])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6994 7014])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7023 7041]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6695 6699])
+                            ("nsteps" variable nil (reparse-symbol function_parameters) [6701 6707])
+                            ("nenvs" variable nil (reparse-symbol function_parameters) [6709 6714]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6682 7042])
+                    ("feed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7056 7060])
+                            ("rewards" variable nil (reparse-symbol function_parameters) [7062 7069])
+                            ("masks" variable nil (reparse-symbol function_parameters) [7071 7076]))                          )
+                        (reparse-symbol indented_block_body) [7047 7627])
+                    ("mean_length" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7648 7652]))                          )
+                        (reparse-symbol indented_block_body) [7632 7814])
+                    ("mean_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7835 7839]))                          )
+                        (reparse-symbol indented_block_body) [7819 7947]))                  
+                :type "class")
+                nil [6658 7947])
+            ("get_by_index" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [7977 7978])
+                ("idx" variable nil (reparse-symbol function_parameters) [7980 7983]))              ) nil [7960 8250])
+            ("check_shape" function (:arguments 
+              ( ("ts" variable nil (reparse-symbol function_parameters) [8267 8269])
+                ("shapes" variable nil (reparse-symbol function_parameters) [8270 8276]))              ) nil [8251 8449])
+            ("avg_norm" function (:arguments 
+              ( ("t" variable nil (reparse-symbol function_parameters) [8463 8464]))              ) nil [8450 8540])
+            ("gradient_add" function (:arguments 
+              ( ("g1" variable nil (reparse-symbol function_parameters) [8558 8560])
+                ("g2" variable nil (reparse-symbol function_parameters) [8562 8564])
+                ("param" variable nil (reparse-symbol function_parameters) [8566 8571]))              ) nil [8541 8772])
+            ("q_explained_variance" function (:arguments 
+              ( ("qpred" variable nil (reparse-symbol function_parameters) [8798 8803])
+                ("q" variable nil (reparse-symbol function_parameters) [8805 8806]))              ) nil [8773 8985]))          
+      :file "utils.py"
+      :pointmax 8985
+      :fsize 8984
+      :lastmodtime '(23172 63484 0 0)
+      :unmatched-syntax '((MULT 1705 . 1706) (COMMA 1706 . 1707) (MULT 1312 . 1313) (COMMA 1313 . 1314) (NAME 1096 . 1097) (IF 1102 . 1104) (ELSE 1127 . 1131))))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!algo_devel!ppo_baseline!baselines-master!baselines!a2c!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

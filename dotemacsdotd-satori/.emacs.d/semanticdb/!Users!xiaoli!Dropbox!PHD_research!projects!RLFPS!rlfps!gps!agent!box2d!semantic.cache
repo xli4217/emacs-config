@@ -1,0 +1,205 @@
+;; Object box2d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "box2d/"
+  :tables
+  (list
+    (semanticdb-table "point_mass_world.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines an environment for the Box2D PointMass simulator. \"\"\"" code nil nil [1 76])
+            ("numpy" include nil nil [77 95])
+            ("Box2D" include nil nil [96 114])
+            ("gps.agent.box2d.framework" include nil nil [115 162])
+            ("gps.agent.box2d.settings" include nil nil [164 211])
+            ("gps.proto.gps_pb2" include nil nil [212 292])
+            ("PointMassWorld" type
+               (:documentation " This class defines the point mass and its environment."
+                :superclasses ("Framework")
+                :members 
+                  ( ("name" variable nil (reparse-symbol indented_block_body) [397 415])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [453 473])
+                            ("if" code nil (reparse-symbol indented_block_body) [482 631])
+                            ("self" variable nil (reparse-symbol indented_block_body) [639 670])
+                            ("self" variable nil (reparse-symbol indented_block_body) [679 717])
+                            ("self" variable nil (reparse-symbol indented_block_body) [726 755])
+                            ("self" variable nil (reparse-symbol indented_block_body) [764 809])
+                            ("self" variable nil (reparse-symbol indented_block_body) [818 851])
+                            ("ground" variable nil (reparse-symbol indented_block_body) [861 909])
+                            ("ground" code nil (reparse-symbol indented_block_body) [918 1076])
+                            ("xf1" variable nil (reparse-symbol indented_block_body) [1086 1108])
+                            ("xf1" code nil (reparse-symbol indented_block_body) [1117 1146])
+                            ("xf1" variable nil (reparse-symbol indented_block_body) [1155 1197])
+                            ("xf2" variable nil (reparse-symbol indented_block_body) [1207 1229])
+                            ("xf2" code nil (reparse-symbol indented_block_body) [1238 1268])
+                            ("xf2" variable nil (reparse-symbol indented_block_body) [1277 1320])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1329 1967])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1977 1994])
+                            ("for" code nil (reparse-symbol indented_block_body) [2003 2541]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [433 437])
+                            ("x0" variable nil (reparse-symbol function_parameters) [439 441])
+                            ("targets" variable nil (reparse-symbol function_parameters) [443 450])
+                            ("render" variable nil (reparse-symbol function_parameters) [452 458]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [420 2557])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2570 2574]))                          
+                        :documentation "Initiates the first time step
+        ")
+                        (reparse-symbol indented_block_body) [2562 2746])
+                    ("run_next" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2764 2768])
+                            ("action" variable nil (reparse-symbol function_parameters) [2770 2776]))                          
+                        :documentation "Moves forward in time one step. Calls the renderer if applicable.")
+                        (reparse-symbol indented_block_body) [2751 3194])
+                    ("Step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3208 3212])
+                            ("settings" variable nil (reparse-symbol function_parameters) [3214 3222])
+                            ("action" variable nil (reparse-symbol function_parameters) [3224 3230]))                          
+                        :documentation "Called upon every step. ")
+                        (reparse-symbol indented_block_body) [3199 3382])
+                    ("reset_world" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3403 3407]))                          
+                        :documentation " This resets the world to its initial state")
+                        (reparse-symbol indented_block_body) [3387 3727])
+                    ("get_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3746 3750]))                          
+                        :documentation " This retrieves the state of the point mass")
+                        (reparse-symbol indented_block_body) [3732 4017]))                  
+                :type "class")
+                nil [294 4017]))          
+      :file "point_mass_world.py"
+      :pointmax 4017
+      :fsize 4120
+      :lastmodtime '(22593 56055 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "framework.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+The file sets up the basics of a Box2d world.
+Future worlds should use this as the base class.
+\"\"\"" code nil nil [1027 1129])
+            ("Box2D" include nil nil [1130 1148])
+            ("time" include nil nil [1149 1170])
+            ("gps.agent.box2d.settings" include nil nil [1171 1218])
+            ("fwQueryCallback" type
+               (:documentation "
+    This callback for each fixture in the world.
+    "
+                :superclasses ("b2.b2QueryCallback")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1364 1403])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1412 1426])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1435 1454]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1346 1350])
+                            ("p" variable nil (reparse-symbol function_parameters) [1352 1353]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1333 1455])
+                    ("ReportFixture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1478 1482])
+                            ("fixture" variable nil (reparse-symbol function_parameters) [1484 1491]))                          
+                        :documentation "
+        This method is called to query for a fixture.
+        ")
+                        (reparse-symbol indented_block_body) [1460 1891]))                  
+                :type "class")
+                nil [1221 1891])
+            ("FrameworkBase" type
+               (:documentation "
+    The base of the main Box2D GUI framework.
+
+    "
+                :superclasses ("b2.b2ContactListener")
+                :members 
+                  ( ("name" variable nil (reparse-symbol indented_block_body) [2002 2015])
+                    ("description" variable nil (reparse-symbol indented_block_body) [2020 2038])
+                    ("TEXTLINE_START" variable nil (reparse-symbol indented_block_body) [2043 2062])
+                    ("colors" variable nil (reparse-symbol indented_block_body) [2067 2295])
+                    ("__reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2313 2317]))                          
+                        :documentation " Reset all of the variables to their starting values.
+        Not to be called except at initialization.")
+                        (reparse-symbol indented_block_body) [2301 2682])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [2715 2752])
+                            ("self" code nil (reparse-symbol indented_block_body) [2762 2776])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2817 2872])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2882 2915])
+                            ("self, self" code nil (reparse-symbol indented_block_body) [2924 2959]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2700 2704]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2687 2960])
+                    ("__del__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2977 2981]))                          )
+                        (reparse-symbol indented_block_body) [2965 2997])
+                    ("Step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3011 3015])
+                            ("settings" variable nil (reparse-symbol function_parameters) [3017 3025])
+                            ("action" variable nil (reparse-symbol function_parameters) [3027 3033]))                          
+                        :documentation "
+        The main physics step.
+
+        Takes care of physics drawing
+        (callbacks are executed after the world.Step() )
+        and drawing additional information.
+        ")
+                        (reparse-symbol indented_block_body) [3002 6092])
+                    ("SimulationLoop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6117 6121])
+                            ("action" variable nil (reparse-symbol function_parameters) [6123 6129]))                          
+                        :documentation "
+        The main simulation loop. Don't override this, override Step instead.
+        ")
+                        (reparse-symbol indented_block_body) [6098 6650])
+                    ("PreSolve" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6668 6672])
+                            ("contact" variable nil (reparse-symbol function_parameters) [6674 6681])
+                            ("old_manifold" variable nil (reparse-symbol function_parameters) [6683 6695]))                          
+                        :documentation "
+        This is a critical function when there are many contacts in the world.
+        It should be optimized as much as possible.
+        ")
+                        (reparse-symbol indented_block_body) [6655 7689]))                  
+                :type "class")
+                nil [1892 7689])
+            ("framework_module" variable nil nil [7691 7945])
+            ("Framework" variable nil nil [7946 8052]))          
+      :file "framework.py"
+      :pointmax 8055
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rlfps!gps!agent!box2d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

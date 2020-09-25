@@ -1,0 +1,316 @@
+;; Object gym/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gym/"
+  :tables
+  (list
+    (semanticdb-table "core.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logging" include nil nil [1 15])
+            ("logger" variable nil nil [16 52])
+            ("numpy" include nil nil [54 72])
+            ("gym" include nil nil [74 107])
+            ("gym.utils" include nil nil [108 136])
+            ("env_closer" variable nil nil [138 166])
+            ("Env" type
+               (:documentation "The main OpenAI Gym class. It encapsulates an environment with
+    arbitrary behind-the-scenes dynamics. An environment can be
+    partially or fully observed.
+
+    The main API methods that users of this class need to know are:
+
+        step
+        reset
+        render
+        close
+        seed
+
+    When implementing an environment, override the following methods
+    in your subclass:
+
+        _step
+        _reset
+        _render
+        _close
+        _seed
+
+    And set the following attributes:
+
+        action_space: The Space object corresponding to valid actions
+        observation_space: The Space object corresponding to valid observations
+        reward_range: A tuple corresponding to the min and max possible rewards
+
+    The methods are accessed publicly as \"step\", \"reset\", etc.. The
+    non-underscored versions are wrapper methods to which we may add
+    functionality to over time.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__new__" function (:arguments 
+                      ( ("cls" variable nil (reparse-symbol function_parameters) [1153 1156])
+                        ("args" variable nil (reparse-symbol function_parameters) [1158 1163])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [1165 1173]))                      ) (reparse-symbol indented_block_body) [1141 1626])
+                    ("metadata" variable nil (reparse-symbol indented_block_body) [1665 1696])
+                    ("reward_range" variable nil (reparse-symbol indented_block_body) [1701 1733])
+                    ("_close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1784 1788]))                          )
+                        (reparse-symbol indented_block_body) [1773 1804])
+                    ("action_space" variable nil (reparse-symbol indented_block_body) [1843 1862])
+                    ("observation_space" variable nil (reparse-symbol indented_block_body) [1867 1891])
+                    ("_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1940 1944])
+                            ("action" variable nil (reparse-symbol function_parameters) [1946 1952]))                          )
+                        (reparse-symbol indented_block_body) [1930 1981])
+                    ("_reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1996 2000]))                          )
+                        (reparse-symbol indented_block_body) [1985 2029])
+                    ("_render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2045 2049])
+                            ("mode" variable nil (reparse-symbol function_parameters) [2051 2055])
+                            ("close" variable nil (reparse-symbol function_parameters) [2065 2070]))                          )
+                        (reparse-symbol indented_block_body) [2033 2150])
+                    ("_seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2164 2168])
+                            ("seed" variable nil (reparse-symbol function_parameters) [2170 2174]))                          )
+                        (reparse-symbol indented_block_body) [2154 2192])
+                    ("monitor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2223 2227]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2197 2354])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2368 2372])
+                            ("action" variable nil (reparse-symbol function_parameters) [2374 2380]))                          
+                        :documentation "Run one timestep of the environment's dynamics. When end of
+        episode is reached, you are responsible for calling `reset()`
+        to reset this environment's state.
+
+        Accepts an action and returns a tuple (observation, reward, done, info).
+
+        Args:
+            action (object): an action provided by the environment
+
+        Returns:
+            observation (object): agent's observation of the current environment
+            reward (float) : amount of reward returned after previous action
+            done (boolean): whether the episode has ended, in which case further step() calls will return undefined results
+            info (dict): contains auxiliary diagnostic information (helpful for debugging, and sometimes learning)
+        ")
+                        (reparse-symbol indented_block_body) [2359 3891])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3906 3910]))                          
+                        :documentation "
+        Resets the state of the environment and returns an initial observation.
+
+        Returns:
+            observation (object): the initial observation of the space. (Initial reward is assumed to be 0.)
+        ")
+                        (reparse-symbol indented_block_body) [3896 4291])
+                    ("render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4307 4311])
+                            ("mode" variable nil (reparse-symbol function_parameters) [4313 4317])
+                            ("close" variable nil (reparse-symbol function_parameters) [4327 4332]))                          
+                        :documentation "Renders the environment.
+
+        The set of supported modes varies per environment. (And some
+        environments do not support rendering at all.) By convention,
+        if mode is:
+
+        - human: render to the current display or terminal and
+          return nothing. Usually for human consumption.
+        - rgb_array: Return an numpy.ndarray with shape (x, y, 3),
+          representing RGB values for an x-by-y pixel image, suitable
+          for turning into a video.
+        - ansi: Return a string (str) or StringIO.StringIO containing a
+          terminal-style text representation. The text can include newlines
+          and ANSI escape sequences (e.g. for colors).
+
+        Note:
+            Make sure that your class's metadata 'render.modes' key includes
+              the list of supported modes. It's recommended to call super()
+              in implementations to use the functionality of this method.
+
+        Args:
+            mode (str): the mode to render with
+            close (bool): close all open renderings
+
+        Example:
+
+        class MyEnv(Env):
+            metadata = {'render.modes': ['human', 'rgb_array']}
+
+            def render(self, mode='human'):
+                if mode == 'rgb_array':
+                    return np.array(...) # return RGB frame suitable for video
+                elif mode is 'human':
+                    ... # pop up a window and render
+                else:
+                    super(MyEnv, self).render(mode=mode) # just raise an exception
+        ")
+                        (reparse-symbol indented_block_body) [4296 6415])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6430 6434]))                          
+                        :documentation "Override _close in your subclass to perform any necessary cleanup.
+
+        Environments will automatically close() themselves when
+        garbage collected or when the program exits.
+        ")
+                        (reparse-symbol indented_block_body) [6420 7007])
+                    ("seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7021 7025])
+                            ("seed" variable nil (reparse-symbol function_parameters) [7027 7031]))                          
+                        :documentation "Sets the seed for this env's random number generator(s).
+
+        Note:
+            Some environments use multiple pseudorandom number generators.
+            We want to capture all such seeds used in order to ensure that
+            there aren't accidental correlations between multiple generators.
+
+        Returns:
+            list<bigint>: Returns the list of seeds used in this env's random
+              number generators. The first value in the list should be the
+              \"main\" seed, or the value which a reproducer should pass to
+              'seed'. Often, the main seed equals the provided 'seed', but
+              this won't be true if seed=None, for example.
+        ")
+                        (reparse-symbol indented_block_body) [7012 7774])
+                    ("__del__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7791 7795]))                          )
+                        (reparse-symbol indented_block_body) [7779 7819])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7836 7840]))                          )
+                        (reparse-symbol indented_block_body) [7824 7902]))                  
+                :type "class")
+                nil [196 7902])
+            ("Space" type
+               (:documentation "
+    Provides a classification state spaces and action spaces,
+    so you can write generic code that applies to any Environment.
+    E.g. to choose a random action.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8151 8155])
+                            ("seed" variable nil (reparse-symbol function_parameters) [8157 8161]))                          
+                        :documentation "
+        Uniformly randomly sample a random elemnt of this space
+        ")
+                        (reparse-symbol indented_block_body) [8140 8288])
+                    ("contains" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8306 8310])
+                            ("x" variable nil (reparse-symbol function_parameters) [8312 8313]))                          
+                        :documentation "
+        Return boolean specifying if x is a valid
+        member of this space
+        ")
+                        (reparse-symbol indented_block_body) [8293 8453])
+                    ("to_jsonable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8474 8478])
+                            ("sample_n" variable nil (reparse-symbol function_parameters) [8480 8488]))                          
+                        :documentation "Convert a batch of samples from this space to a JSONable data type.")
+                        (reparse-symbol indented_block_body) [8458 8647])
+                    ("from_jsonable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8670 8674])
+                            ("sample_n" variable nil (reparse-symbol function_parameters) [8676 8684]))                          
+                        :documentation "Convert a JSONable data type to a batch of samples from this space.")
+                        (reparse-symbol indented_block_body) [8652 8843]))                  
+                :type "class")
+                nil [7933 8843]))          
+      :file "core.py"
+      :pointmax 8843
+      :fsize 8842
+      :lastmodtime '(22352 36054 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "configuration.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logging" include nil nil [1 15])
+            ("sys" include nil nil [16 26])
+            ("gym" include nil nil [28 38])
+            ("logger" variable nil nil [40 76])
+            ("root_logger" variable nil nil [78 111])
+            ("requests_logger" variable nil nil [112 159])
+            ("formatter" variable nil nil [190 248])
+            ("handler" variable nil nil [249 292])
+            ("handler" code nil nil [293 324])
+            ("logger_setup" function (:arguments 
+              ( ("gym_logger" variable nil (reparse-symbol function_parameters) [437 447]))              ) nil [420 524])
+            ("undo_logger_setup" function (:documentation "Undoes the automatic logging setup done by OpenAI Gym. You should call
+    this function if you want to manually configure logging
+    yourself. Typical usage would involve putting something like the
+    following at the top of your script:
+
+    gym.undo_logger_setup()
+    logger = logging.getLogger()
+    logger.addHandler(logging.StreamHandler(sys.stderr))
+    ") nil [663 1187]))          
+      :file "configuration.py"
+      :pointmax 1187
+      :fsize 1186
+      :lastmodtime '(22352 36054 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("distutils.version" include nil nil [1 25])
+            ("logging" include nil nil [26 40])
+            ("sys" include nil nil [41 51])
+            ("gym" include nil nil [53 74])
+            ("gym.configuration" include nil nil [75 136])
+            ("gym.utils" include nil nil [137 166])
+            ("logger" variable nil nil [168 204])
+            ("sanity_check_dependencies" function nil nil [311 924])
+            ("logger_setup" code nil nil [1174 1194])
+            ("del" code nil nil [1195 1211])
+            ("sanity_check_dependencies" code nil nil [1213 1240])
+            ("gym.core" include nil nil [1242 1273])
+            ("gym.envs" include nil nil [1274 1305])
+            ("gym.scoreboard.api" include nil nil [1306 1343])
+            ("__all__" variable nil nil [1345 1397]))          
+      :file "__init__.py"
+      :pointmax 1398
+      :fsize 1397
+      :lastmodtime '(22352 36054 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "version.py"
+      :file "version.py"
+      :fsize 18
+      :lastmodtime '(22352 36054 0 0)))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!gym_algo!gym_src!gym!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

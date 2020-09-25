@@ -1,0 +1,388 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\" Script for computing metrics for a submission to the nuscenes prediction challenge. \"\"\"" code nil nil [61 152])
+            ("argparse" include nil nil [153 168])
+            ("json" include nil nil [169 180])
+            ("collections" include nil nil [181 216])
+            ("typing" include nil nil [217 251])
+            ("numpy" include nil nil [253 271])
+            ("nuscenes" include nil nil [273 302])
+            ("nuscenes.eval.prediction.config" include nil nil [303 387])
+            ("nuscenes.eval.prediction.data_classes" include nil nil [388 448])
+            ("nuscenes.prediction" include nil nil [449 494])
+            ("if" code nil nil [2646 3246]))          
+      :file "compute_metrics.py"
+      :pointmax 3246
+      :fsize 3245
+      :lastmodtime '(24254 64182 817438 0)
+      :unmatched-syntax '((INDENT_BLOCK 1922 . 2644) (COLON 1920 . 1921) (MINUS 1913 . 1914) (GT 1914 . 1915) (NAME 1868 . 1879) (COLON 1879 . 1880) (NAME 1837 . 1852) (COLON 1852 . 1853) (NAME 1821 . 1830) (COLON 1830 . 1831) (NAME 1807 . 1814) (COLON 1814 . 1815) (INDENT_BLOCK 640 . 1796) (COLON 638 . 639) (DEF 497 . 500) (MINUS 621 . 622) (GT 622 . 623) (NAME 595 . 601) (COLON 601 . 602) (COLON 578 . 579) (COMMA 550 . 551) (BRACK_BLOCK 534 . 550) (NAME 517 . 528) (COLON 528 . 529)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("json" include nil nil [73 84])
+            ("os" include nil nil [85 94])
+            ("typing" include nil nil [95 129])
+            ("nuscenes.eval.prediction.metrics" include nil nil [131 202])
+            ("nuscenes.prediction" include nil nil [203 248])
+            ("PredictionConfig" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Data class that specifies the prediction evaluation settings.
+        Initialized with:
+        metrics: List of nuscenes.eval.prediction.metric.Metric objects.
+        seconds: Number of seconds to predict for each agent.
+        frequency: Rate at which prediction is made, in Hz.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [420 726])
+                            ("self" variable nil (reparse-symbol indented_block_body) [735 757])
+                            ("self" variable nil (reparse-symbol indented_block_body) [766 788])
+                            ("self" variable nil (reparse-symbol indented_block_body) [797 823]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [293 297])
+                            ("int" variable nil (reparse-symbol function_parameters) [365 368])
+                            ("int" variable nil (reparse-symbol function_parameters) [402 405]))                          
+                        :documentation "
+        Data class that specifies the prediction evaluation settings.
+        Initialized with:
+        metrics: List of nuscenes.eval.prediction.metric.Metric objects.
+        seconds: Number of seconds to predict for each agent.
+        frequency: Rate at which prediction is made, in Hz.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [280 830])
+                    ("deserialize" function
+                       (:documentation " Initialize from serialized dictionary. "
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [1092 1095])
+                            ("PredictHelper" variable nil (reparse-symbol function_parameters) [1130 1143]))                          
+                        :decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1059 1338]))                  
+                :type "class")
+                nil [251 1338]))          
+      :file "config.py"
+      :pointmax 2080
+      :fsize 2079
+      :lastmodtime '(24254 64182 817607 0)
+      :unmatched-syntax '((INDENT_BLOCK 1456 . 2078) (COLON 1454 . 1455) (DEF 1340 . 1343) (MINUS 1435 . 1436) (GT 1436 . 1437) (NAME 1390 . 1401) (COLON 1401 . 1402) (NAME 1367 . 1373) (COLON 1373 . 1374) (COLON 1128 . 1129) (COMMA 1120 . 1121) (BRACK_BLOCK 1110 . 1120) (NAME 1097 . 1104) (COLON 1104 . 1105) (INDENT_BLOCK 874 . 1054) (NEWLINE 873 . 874) (COLON 872 . 873) (DEF 835 . 838) (MINUS 855 . 856) (GT 856 . 857) (NAME 391 . 400) (COLON 400 . 401) (COLON 363 . 364) (COMMA 337 . 338) (BRACK_BLOCK 329 . 337) (NAME 316 . 323) (COLON 323 . 324)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [60 88])
+            ("numpy" include nil nil [90 108])
+            ("nuscenes.eval.common.data_classes" include nil nil [110 166])
+            ("MAX_NUMBER_OF_MODES" variable nil nil [168 192])
+            ("Prediction" type
+               (:documentation "
+    Stores predictions of Models.
+    Metrics are calculated from Predictions.
+
+    Attributes:
+        instance: Instance token for prediction.
+        sample: Sample token for prediction.
+        prediction: Prediction of model [num_modes, n_timesteps, state_dim].
+        probabilities: Probabilities of each mode [num_modes].
+    "
+                :superclasses ("MetricData")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" code nil (reparse-symbol indented_block_body) [699 757])
+                            ("self" variable nil (reparse-symbol indented_block_body) [767 791])
+                            ("self" variable nil (reparse-symbol indented_block_body) [800 820])
+                            ("self" variable nil (reparse-symbol indented_block_body) [829 857])
+                            ("self" variable nil (reparse-symbol indented_block_body) [866 900]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [588 592])
+                            ("str" variable nil (reparse-symbol function_parameters) [604 607])
+                            ("str" variable nil (reparse-symbol function_parameters) [617 620])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [637 644])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [681 688]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [575 901])
+                    ("serialize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1013 1017]))                          
+                        :documentation " Serialize to json. ")
+                        (reparse-symbol indented_block_body) [999 1255])
+                    ("deserialize" function
+                       (:documentation " Initialize from serialized content. "
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [1293 1296]))                          
+                        :decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1260 1602])
+                    ("is_valid" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("instance" variable nil (reparse-symbol function_parameters) [1638 1646])
+                            ("sample" variable nil (reparse-symbol function_parameters) [1648 1654])
+                            ("prediction" variable nil (reparse-symbol function_parameters) [1656 1666])
+                            ("probabilities" variable nil (reparse-symbol function_parameters) [1668 1681]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1607 3092])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3110 3114]))                          )
+                        (reparse-symbol indented_block_body) [3097 3280]))                  
+                :type "class")
+                nil [195 3280]))          
+      :file "data_classes.py"
+      :pointmax 3281
+      :fsize 3280
+      :lastmodtime '(24254 64183 89284 0)
+      :unmatched-syntax '((BRACK_BLOCK 1311 . 1321) (NAME 1298 . 1305) (COLON 1305 . 1306) (INDENT_BLOCK 954 . 994) (NEWLINE 953 . 954) (COLON 952 . 953) (AT 906 . 907) (MINUS 946 . 947) (GT 947 . 948) (PERIOD 680 . 681) (NAME 663 . 676) (COLON 676 . 677) (PERIOD 636 . 637) (NAME 622 . 632) (COLON 632 . 633) (NAME 609 . 615) (COLON 615 . 616) (NAME 594 . 602) (COLON 602 . 603)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\" Implementation of metrics used in the nuScenes prediction challenge. \"\"\"" code nil nil [72 148])
+            ("abc" include nil nil [149 159])
+            ("typing" include nil nil [160 201])
+            ("numpy" include nil nil [203 221])
+            ("scipy" include nil nil [222 251])
+            ("nuscenes.eval.prediction.data_classes" include nil nil [253 313])
+            ("nuscenes.map_expansion.map_api" include nil nil [314 368])
+            ("nuscenes.prediction" include nil nil [369 414])
+            ("nuscenes.prediction.input_representation.static_layers" include nil nil [415 495])
+            ("returns_2d_array" function
+               (:documentation " Makes sure that the metric returns an array of shape [batch_size, num_modes]. "
+                :arguments 
+                  ( ("function" variable nil (reparse-symbol function_parameters) [519 527]))                  )
+                nil [498 922])
+            ("SerializableFunction" type
+               (:documentation " Function that can be serialized/deserialized to/from json. "
+                :superclasses ("abc.ABC")
+                :type "class")
+                nil [6062 6331])
+            ("Aggregator" type
+               (:documentation " Function that can aggregate many metrics across predictions. "
+                :superclasses ("SerializableFunction")
+                :type "class")
+                nil [6333 6552])
+            ("RowMean" type
+               (:superclasses ("Aggregator")
+                :type "class")
+                nil [6554 6839])
+            ("Metric" type
+               (:superclasses ("SerializableFunction")
+                :type "class")
+                nil [6841 7184])
+            ("MinADEK" type
+               (:superclasses ("Metric")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Computes the minimum average displacement error over the top k predictions.
+        :param k_to_report:  Will report the top k result for the k in this list.
+        :param aggregators: How to aggregate the results across the data set.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [7562 7821])
+                            ("super" code nil (reparse-symbol indented_block_body) [7830 7848])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7857 7887])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7896 7927]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7526 7530]))                          
+                        :documentation "
+        Computes the minimum average displacement error over the top k predictions.
+        :param k_to_report:  Will report the top k result for the k in this list.
+        :param aggregators: How to aggregate the results across the data set.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7513 7962])
+                    ("name" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8622 8626]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [8599 8654])
+                    ("shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8683 8687]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [8659 8727]))                  
+                :type "class")
+                nil [7485 8727])
+            ("MinFDEK" type
+               (:superclasses ("Metric")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Computes the minimum final displacement error over the top k predictions.
+        :param k_to_report:  Will report the top k result for the k in this list.
+        :param aggregators: How to aggregate the results across the data set.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [8795 9052])
+                            ("super" code nil (reparse-symbol indented_block_body) [9061 9079])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9088 9118])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9127 9158]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8770 8774])
+                            ("k_to_report" variable nil (reparse-symbol function_parameters) [8776 8787]))                          
+                        :documentation "
+        Computes the minimum final displacement error over the top k predictions.
+        :param k_to_report:  Will report the top k result for the k in this list.
+        :param aggregators: How to aggregate the results across the data set.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8757 9193])
+                    ("name" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9853 9857]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [9830 9885])
+                    ("shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9914 9918]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [9890 9958]))                  
+                :type "class")
+                nil [8729 9958])
+            ("MissRateTopK" type
+               (:superclasses ("Metric")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        If any point in the prediction is more than tolerance meters from the ground truth, it is a miss.
+        This metric computes the fraction of predictions that are misses over the top k most likely predictions.
+        :param k_to_report: Will report the top k result for the k in this list.
+        :param aggregators: How to aggregate the results across the data set.
+        :param tolerance: Threshold to consider if a prediction is a hit or not.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [10082 10556])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10565 10595])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10604 10635])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10644 10670]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10006 10010])
+                            ("float" variable nil (reparse-symbol function_parameters) [10095 10100]))                          
+                        :documentation "
+        If any point in the prediction is more than tolerance meters from the ground truth, it is a miss.
+        This metric computes the fraction of predictions that are misses over the top k most likely predictions.
+        :param k_to_report: Will report the top k result for the k in this list.
+        :param aggregators: How to aggregate the results across the data set.
+        :param tolerance: Threshold to consider if a prediction is a hit or not.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9993 10705])
+                    ("name" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11471 11475]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [11448 11526])
+                    ("shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11555 11559]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [11531 11599]))                  
+                :type "class")
+                nil [9960 11599])
+            ("OffRoadRate" type
+               (:superclasses ("Metric")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        The OffRoadRate is defined as the fraction of trajectories that are not entirely contained
+        in the drivable area of the map.
+        :param helper: Instance of PredictHelper. Used to determine the map version for each prediction.
+        :param aggregators: How to aggregate the results across the data set.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [11681 12019])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12028 12059])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12068 12088])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12097 12164])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12173 12199])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12208 12235]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11646 11650])
+                            ("PredictHelper" variable nil (reparse-symbol function_parameters) [11660 11673]))                          
+                        :documentation "
+        The OffRoadRate is defined as the fraction of trajectories that are not entirely contained
+        in the drivable area of the map.
+        :param helper: Instance of PredictHelper. Used to determine the map version for each prediction.
+        :param aggregators: How to aggregate the results across the data set.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [11633 12270])
+                    ("name" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15901 15905]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [15878 15937])
+                    ("shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15966 15970]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [15942 15990]))                  
+                :type "class")
+                nil [11601 15990]))          
+      :file "metrics.py"
+      :pointmax 18038
+      :fsize 18037
+      :lastmodtime '(24267 12054 306501 401000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("json" include nil nil [56 67])
+            ("os" include nil nil [68 77])
+            ("itertools" include nil nil [78 105])
+            ("typing" include nil nil [106 129])
+            ("nuscenes.utils.splits" include nil nil [131 185])
+            ("NUM_IN_TRAIN_VAL" variable nil nil [187 209]))          
+      :file "splits.py"
+      :pointmax 1445
+      :fsize 1444
+      :lastmodtime '(24254 64183 112179 0)
+      :unmatched-syntax '((INDENT_BLOCK 312 . 1445) (COLON 310 . 311) (DEF 212 . 215) (MINUS 298 . 299) (GT 299 . 300) (NAME 259 . 267) (COLON 267 . 268) (NAME 247 . 252) (COLON 252 . 253)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\" Script for running baseline models on a given nuscenes-split. \"\"\"" code nil nil [62 131])
+            ("argparse" include nil nil [133 148])
+            ("json" include nil nil [149 160])
+            ("os" include nil nil [161 170])
+            ("nuscenes" include nil nil [172 201])
+            ("nuscenes.eval.prediction.config" include nil nil [202 268])
+            ("nuscenes.eval.prediction.splits" include nil nil [269 343])
+            ("nuscenes.prediction" include nil nil [344 389])
+            ("nuscenes.prediction.models.physics" include nil nil [390 475])
+            ("if" code nil nil [1697 2385]))          
+      :file "baseline_model_inference.py"
+      :pointmax 2385
+      :fsize 2384
+      :lastmodtime '(24254 64182 817241 0)
+      :unmatched-syntax '((INDENT_BLOCK 614 . 1695) (COLON 612 . 613) (DEF 478 . 481) (MINUS 605 . 606) (GT 606 . 607) (NAME 560 . 571) (COLON 571 . 572) (NAME 543 . 553) (COLON 553 . 554) (NAME 526 . 536) (COLON 536 . 537) (NAME 501 . 510) (COLON 510 . 511) (NAME 487 . 494) (COLON 494 . 495))))
+  :file "!nobackup!users!xiaoli!rlfps!external_libs!nuscenes!eval!prediction!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,145 @@
+;; Object create_network/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "create_network/"
+  :tables
+  (list
+    (semanticdb-table "main.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("create_network_from_mongo" include nil nil [24 75])
+            ("pymongo" include nil nil [76 107])
+            ("client" variable nil nil [109 131])
+            ("db" variable nil nil [132 162])
+            ("collection" variable nil nil [163 185])
+            ("gexf_path" variable nil nil [187 321])
+            ("start_reference_list" variable nil nil [524 580])
+            ("temp" variable nil nil [618 746])
+            ("client" code nil nil [748 762]))          
+      :file "main.py"
+      :pointmax 765
+      :fsize 764
+      :lastmodtime '(22294 33247 0 0)
+      :unmatched-syntax '(($EOI 765 . 765)))
+    (semanticdb-table "create_network_from_pure_pyscholar.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [24 35])
+            ("os" include nil nil [36 55])
+            ("networkx" include nil nil [56 77])
+            ("collections" include nil nil [78 109])
+            ("CreateNetwork" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [282 308])
+                            ("self" variable nil (reparse-symbol indented_block_body) [317 347])
+                            ("self" variable nil (reparse-symbol indented_block_body) [356 377])
+                            ("self" variable nil (reparse-symbol indented_block_body) [451 488])
+                            ("self" code nil (reparse-symbol indented_block_body) [551 595])
+                            ("self" code nil (reparse-symbol indented_block_body) [648 676])
+                            ("self" code nil (reparse-symbol indented_block_body) [713 731]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [238 242])
+                            ("layer_paths" variable nil (reparse-symbol function_parameters) [244 255])
+                            ("gexf_path" variable nil (reparse-symbol function_parameters) [257 266]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [225 732])
+                    ("add_node" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [758 762])
+                            ("json_data" variable nil (reparse-symbol function_parameters) [764 773]))                          )
+                        (reparse-symbol indented_block_body) [745 1300])
+                    ("calculate_backward_citing_edge_matrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1353 1357]))                          )
+                        (reparse-symbol indented_block_body) [1311 2895])
+                    ("create_directed_edges" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3000 3004]))                          )
+                        (reparse-symbol indented_block_body) [2974 3145])
+                    ("output_gexf" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3167 3171]))                          )
+                        (reparse-symbol indented_block_body) [3151 3285]))                  
+                :type "class")
+                nil [112 3285]))          
+      :file "create_network_from_pure_pyscholar.py"
+      :pointmax 3286
+      :fsize 3285
+      :lastmodtime '(22212 50942 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "create_network_from_mongo.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [24 35])
+            ("os" include nil nil [36 55])
+            ("networkx" include nil nil [56 77])
+            ("collections" include nil nil [78 109])
+            ("CreateNetwork" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [329 355])
+                            ("self" variable nil (reparse-symbol indented_block_body) [364 385])
+                            ("self" variable nil (reparse-symbol indented_block_body) [394 420])
+                            ("self" variable nil (reparse-symbol indented_block_body) [429 457])
+                            ("self" variable nil (reparse-symbol indented_block_body) [466 497])
+                            ("self" variable nil (reparse-symbol indented_block_body) [506 554])
+                            ("self" variable nil (reparse-symbol indented_block_body) [636 673])
+                            ("self" code nil (reparse-symbol indented_block_body) [736 779])
+                            ("self" code nil (reparse-symbol indented_block_body) [832 860])
+                            ("self" code nil (reparse-symbol indented_block_body) [897 915]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [238 242])
+                            ("db_collection" variable nil (reparse-symbol function_parameters) [244 257])
+                            ("gexf_path" variable nil (reparse-symbol function_parameters) [259 268])
+                            ("start_reference_list" variable nil (reparse-symbol function_parameters) [270 290])
+                            ("key_phrase" variable nil (reparse-symbol function_parameters) [292 302])
+                            ("layer_num" variable nil (reparse-symbol function_parameters) [304 313]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [225 916])
+                    ("add_node" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [942 946])
+                            ("paper_list" variable nil (reparse-symbol function_parameters) [948 958]))                          )
+                        (reparse-symbol indented_block_body) [929 1211])
+                    ("expand_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1233 1237])
+                            ("reference_list" variable nil (reparse-symbol function_parameters) [1238 1252]))                          )
+                        (reparse-symbol indented_block_body) [1216 1852])
+                    ("calculate_forward_citing_edge_matrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1906 1910]))                          )
+                        (reparse-symbol indented_block_body) [1865 3133])
+                    ("create_directed_edges" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3182 3186]))                          )
+                        (reparse-symbol indented_block_body) [3156 3253])
+                    ("output_gexf" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3275 3279]))                          )
+                        (reparse-symbol indented_block_body) [3259 3346]))                  
+                :type "class")
+                nil [112 3346]))          
+      :file "create_network_from_mongo.py"
+      :pointmax 3347
+      :fsize 3346
+      :lastmodtime '(22294 32962 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!Projects!literature_network!scripts!create_network!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

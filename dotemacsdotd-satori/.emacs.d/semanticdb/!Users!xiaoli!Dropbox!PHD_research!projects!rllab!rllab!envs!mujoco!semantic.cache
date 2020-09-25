@@ -1,0 +1,299 @@
+;; Object mujoco/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mujoco/"
+  :tables
+  (list
+    (semanticdb-table "hopper_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("rllab.core.serializable" include nil nil [21 69])
+            ("rllab.envs.base" include nil nil [70 102])
+            ("rllab.envs.mujoco.mujoco_env" include nil nil [103 153])
+            ("rllab.misc" include nil nil [154 185])
+            ("rllab.misc" include nil nil [186 215])
+            ("rllab.misc.overrides" include nil nil [216 258])
+            ("HopperEnv" type
+               (:superclasses ("MujocoEnv" "Serializable")
+                :members 
+                  ( ("FILE" variable nil (reparse-symbol indented_block_body) [447 466])
+                    ("" code nil (reparse-symbol indented_block_body) [485 573])
+                    ("" code nil (reparse-symbol indented_block_body) [591 678])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [814 844])
+                            ("self" variable nil (reparse-symbol indented_block_body) [853 891])
+                            ("super" code nil (reparse-symbol indented_block_body) [900 948])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [957 996]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [709 713])
+                            ("alive_coeff" variable nil (reparse-symbol function_parameters) [727 738])
+                            ("ctrl_cost_coeff" variable nil (reparse-symbol function_parameters) [754 769])
+                            ("args" variable nil (reparse-symbol function_parameters) [788 793])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [795 803]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [683 997])
+                    ("get_current_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1037 1041]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1002 1344])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1373 1377])
+                            ("action" variable nil (reparse-symbol function_parameters) [1379 1385]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1349 1957])
+                    ("log_diagnostics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1997 2001])
+                            ("paths" variable nil (reparse-symbol function_parameters) [2003 2008]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1962 2413]))                  
+                :type "class")
+                nil [400 2413]))          
+      :file "hopper_env.py"
+      :pointmax 2413
+      :fsize 2412
+      :lastmodtime '(22354 18394 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "mujoco_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os.path" include nil nil [20 41])
+            ("rllab" include nil nil [43 67])
+            ("rllab.envs.base" include nil nil [68 99])
+            ("rllab.misc.overrides" include nil nil [100 142])
+            ("rllab.mujoco_py" include nil nil [143 188])
+            ("rllab.misc" include nil nil [189 220])
+            ("rllab.misc" include nil nil [221 250])
+            ("theano" include nil nil [251 264])
+            ("tempfile" include nil nil [265 280])
+            ("os" include nil nil [281 290])
+            ("mako.template" include nil nil [291 311])
+            ("mako.lookup" include nil nil [312 330])
+            ("MODEL_DIR" variable nil nil [332 449])
+            ("BIG" variable nil nil [452 461])
+            ("MujocoEnv" type
+               (:superclasses ("Env")
+                :members 
+                  ( ("FILE" variable nil (reparse-symbol indented_block_body) [490 501])
+                    ("" code nil (reparse-symbol indented_block_body) [520 677])
+                    ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [791 972])
+                            ("if" code nil (reparse-symbol indented_block_body) [980 1636])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1644 1671])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1680 1698])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1707 1744])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1753 1790])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1799 1836])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1845 1882])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1891 1926])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1935 1970])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1979 2014])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2023 2055])
+                            ("if" code nil (reparse-symbol indented_block_body) [2064 2360])
+                            ("if" code nil (reparse-symbol indented_block_body) [2368 2716])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2724 2740])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2749 2772])
+                            ("self" code nil (reparse-symbol indented_block_body) [2781 2793])
+                            ("super" code nil (reparse-symbol indented_block_body) [2802 2835]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [695 699])
+                            ("action_noise" variable nil (reparse-symbol function_parameters) [701 713])
+                            ("file_path" variable nil (reparse-symbol function_parameters) [719 728])
+                            ("template_args" variable nil (reparse-symbol function_parameters) [735 748]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [682 2836])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2887 2891]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil)
+                            ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2841 3027])
+                    ("observation_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3083 3087]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil)
+                            ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3032 3204])
+                    ("action_bounds" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3241 3245]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3209 3288])
+                    ("reset_mujoco" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3310 3314]))                          )
+                        (reparse-symbol indented_block_body) [3293 3672])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3702 3706]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3677 3914])
+                    ("get_current_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3939 3943]))                          )
+                        (reparse-symbol indented_block_body) [3919 3982])
+                    ("_get_full_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4005 4009]))                          )
+                        (reparse-symbol indented_block_body) [3987 4662])
+                    ("_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4692 4696]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4667 4819])
+                    ("inject_action_noise" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4848 4852])
+                            ("action" variable nil (reparse-symbol function_parameters) [4854 4860]))                          )
+                        (reparse-symbol indented_block_body) [4824 5164])
+                    ("forward_dynamics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5190 5194])
+                            ("action" variable nil (reparse-symbol function_parameters) [5196 5202]))                          )
+                        (reparse-symbol indented_block_body) [5169 5500])
+                    ("get_viewer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5520 5524]))                          )
+                        (reparse-symbol indented_block_body) [5505 5701])
+                    ("render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5717 5721]))                          )
+                        (reparse-symbol indented_block_body) [5706 5786])
+                    ("start_viewer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5808 5812]))                          )
+                        (reparse-symbol indented_block_body) [5791 5908])
+                    ("stop_viewer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5929 5933]))                          )
+                        (reparse-symbol indented_block_body) [5913 5993])
+                    ("release" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6010 6014]))                          )
+                        (reparse-symbol indented_block_body) [5998 6227])
+                    ("get_body_xmat" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6250 6254])
+                            ("body_name" variable nil (reparse-symbol function_parameters) [6256 6265]))                          )
+                        (reparse-symbol indented_block_body) [6232 6378])
+                    ("get_body_com" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6400 6404])
+                            ("body_name" variable nil (reparse-symbol function_parameters) [6406 6415]))                          )
+                        (reparse-symbol indented_block_body) [6383 6519])
+                    ("get_body_comvel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6544 6548])
+                            ("body_name" variable nil (reparse-symbol function_parameters) [6550 6559]))                          )
+                        (reparse-symbol indented_block_body) [6524 6659])
+                    ("print_stats" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6680 6684]))                          )
+                        (reparse-symbol indented_block_body) [6664 6790])
+                    ("action_from_key" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6815 6819])
+                            ("key" variable nil (reparse-symbol function_parameters) [6821 6824]))                          )
+                        (reparse-symbol indented_block_body) [6795 6861]))                  
+                :type "class")
+                nil [464 6861]))          
+      :file "mujoco_env.py"
+      :pointmax 6861
+      :fsize 6860
+      :lastmodtime '(22354 18394 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "swimmer_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.envs.base" include nil nil [1 33])
+            ("rllab.misc.overrides" include nil nil [34 76])
+            ("MujocoEnv" include nil nil [94 110])
+            ("numpy" include nil nil [111 129])
+            ("rllab.core.serializable" include nil nil [130 178])
+            ("rllab.misc" include nil nil [179 208])
+            ("rllab.misc" include nil nil [209 240])
+            ("SwimmerEnv" type
+               (:superclasses ("MujocoEnv" "Serializable")
+                :members 
+                  ( ("FILE" variable nil (reparse-symbol indented_block_body) [291 311])
+                    ("" code nil (reparse-symbol indented_block_body) [330 417])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [526 564])
+                            ("super" code nil (reparse-symbol indented_block_body) [573 622])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [631 670]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [448 452])
+                            ("ctrl_cost_coeff" variable nil (reparse-symbol function_parameters) [466 481])
+                            ("args" variable nil (reparse-symbol function_parameters) [500 505])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [507 515]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [422 671])
+                    ("get_current_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [696 700]))                          )
+                        (reparse-symbol indented_block_body) [676 881])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [895 899])
+                            ("action" variable nil (reparse-symbol function_parameters) [901 907]))                          )
+                        (reparse-symbol indented_block_body) [886 1325])
+                    ("log_diagnostics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1365 1369])
+                            ("paths" variable nil (reparse-symbol function_parameters) [1371 1376]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1330 1781]))                  
+                :type "class")
+                nil [243 1781]))          
+      :file "swimmer_env.py"
+      :pointmax 1781
+      :fsize 1780
+      :lastmodtime '(22361 39774 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!rllab!rllab!envs!mujoco!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

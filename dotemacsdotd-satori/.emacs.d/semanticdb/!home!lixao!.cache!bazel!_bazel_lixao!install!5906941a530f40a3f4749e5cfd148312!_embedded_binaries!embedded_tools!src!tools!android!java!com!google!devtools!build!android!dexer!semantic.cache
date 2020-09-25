@@ -1,0 +1,173 @@
+;; Object dexer/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dexer/"
+  :tables
+  (list
+    (semanticdb-table "Dexing.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("com.google.devtools.build.android.dexer" package nil nil [616 664])
+            ("com.android.dx.cf.direct.DirectClassFile" include nil nil [666 714])
+            ("com.android.dx.cf.direct.StdAttributeFactory" include nil nil [715 767])
+            ("com.android.dx.command.dexer.DxContext" include nil nil [768 814])
+            ("com.android.dx.dex.DexOptions" include nil nil [815 852])
+            ("com.android.dx.dex.cf.CfOptions" include nil nil [853 892])
+            ("com.android.dx.dex.cf.CfTranslator" include nil nil [893 935])
+            ("com.android.dx.dex.code.PositionList" include nil nil [936 980])
+            ("com.android.dx.dex.file.ClassDefItem" include nil nil [981 1025])
+            ("com.android.dx.dex.file.DexFile" include nil nil [1026 1065])
+            ("com.android.dx.util.ByteArray" include nil nil [1066 1103])
+            ("com.google.auto.value.AutoValue" include nil nil [1104 1143])
+            ("com.google.common.annotations.VisibleForTesting" include nil nil [1144 1199])
+            ("com.google.common.io.ByteStreams" include nil nil [1200 1240])
+            ("com.google.devtools.common.options.Converter" include nil nil [1241 1293])
+            ("com.google.devtools.common.options.Option" include nil nil [1294 1343])
+            ("com.google.devtools.common.options.OptionDocumentationCategory" include nil nil [1344 1414])
+            ("com.google.devtools.common.options.OptionEffectTag" include nil nil [1415 1473])
+            ("com.google.devtools.common.options.OptionsBase" include nil nil [1474 1528])
+            ("com.google.devtools.common.options.OptionsParsingException" include nil nil [1529 1595])
+            ("java.io.PrintStream" include nil nil [1596 1623])
+            ("java.lang.reflect.Field" include nil nil [1624 1655])
+            ("Dexing" type
+               (:members 
+                  ( ("nullout" variable
+                       (:typemodifiers ("static" "final")
+                        :type "PrintStream")
+                        (reparse-symbol class_member_declaration) [1755 1838])
+                    ("DexingOptions" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "OptionsBase"
+                        :members 
+                          ( ("localInfo" variable
+                               (:typemodifiers ("public")
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [3162 3187])
+                            ("optimize" variable
+                               (:typemodifiers ("public")
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [3516 3540])
+                            ("positionInfo" variable
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [4064 4088])
+                            ("printWarnings" variable
+                               (:typemodifiers ("public")
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [4397 4426])
+                            ("toCfOptions" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("context" variable (:type "DxContext") (reparse-symbol formal_parameters) [4461 4478]))                                  
+                                :type "CfOptions")
+                                (reparse-symbol class_member_declaration) [4432 4958])
+                            ("toDexOptions" function
+                               (:typemodifiers ("public")
+                                :type "DexOptions")
+                                (reparse-symbol class_member_declaration) [4964 5118]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [2756 5122])
+                    ("DexingKey" type
+                       (:typemodifiers ("abstract" "static")
+                        :members 
+                          ( ("create" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("localInfo" variable (:type "boolean") (reparse-symbol formal_parameters) [5304 5321])
+                                    ("optimize" variable (:type "boolean") (reparse-symbol formal_parameters) [5323 5339])
+                                    ("positionInfo" variable (:type "int") (reparse-symbol formal_parameters) [5341 5357])
+                                    ("classfileContent" variable
+                                       (:dereference 1
+                                        :type "byte")
+                                        (reparse-symbol formal_parameters) [5359 5382]))                                  
+                                :type "DexingKey")
+                                (reparse-symbol class_member_declaration) [5271 5582])
+                            ("localInfo" function
+                               (:typemodifiers ("abstract")
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [5683 5712])
+                            ("optimize" function
+                               (:typemodifiers ("abstract")
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [5812 5840])
+                            ("positionInfo" function
+                               (:typemodifiers ("abstract")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [5945 5973])
+                            ("classfileContent" function
+                               (:typemodifiers ("abstract")
+                                :type "byte[]")
+                                (reparse-symbol class_member_declaration) [6109 6144]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [5233 6148])
+                    ("context" variable
+                       (:typemodifiers ("private" "final")
+                        :type "DxContext")
+                        (reparse-symbol class_member_declaration) [6152 6184])
+                    ("dexOptions" variable
+                       (:typemodifiers ("private" "final")
+                        :type "DexOptions")
+                        (reparse-symbol class_member_declaration) [6187 6223])
+                    ("cfOptions" variable
+                       (:typemodifiers ("private" "final")
+                        :type "CfOptions")
+                        (reparse-symbol class_member_declaration) [6226 6260])
+                    ("Dexing" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("options" variable (:type "DexingOptions") (reparse-symbol formal_parameters) [6278 6299]))                          )
+                        (reparse-symbol class_member_declaration) [6264 6342])
+                    ("Dexing" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("context" variable (:type "DxContext") (reparse-symbol formal_parameters) [6360 6377])
+                            ("options" variable (:type "DexingOptions") (reparse-symbol formal_parameters) [6379 6400]))                          )
+                        (reparse-symbol class_member_declaration) [6346 6480])
+                    ("Dexing" function
+                       (:arguments 
+                          ( ("context" variable (:type "DxContext") (reparse-symbol formal_parameters) [6512 6529])
+                            ("dexOptions" variable (:type "DexOptions") (reparse-symbol formal_parameters) [6531 6552])
+                            ("cfOptions" variable (:type "CfOptions") (reparse-symbol formal_parameters) [6554 6573]))                          
+                        :type "@VisibleForTesting")
+                        (reparse-symbol class_member_declaration) [6484 6674])
+                    ("parseClassFile" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("classfile" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [6723 6739])
+                            ("classfilePath" variable (:type "String") (reparse-symbol formal_parameters) [6741 6761]))                          
+                        :type "DirectClassFile")
+                        (reparse-symbol class_member_declaration) [6678 7018])
+                    ("newDexFile" function
+                       (:typemodifiers ("public")
+                        :type "DexFile")
+                        (reparse-symbol class_member_declaration) [7022 7091])
+                    ("addToDexFile" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("dest" variable (:type "DexFile") (reparse-symbol formal_parameters) [7128 7140])
+                            ("classFile" variable (:type "DirectClassFile") (reparse-symbol formal_parameters) [7142 7167]))                          
+                        :type "ClassDefItem")
+                        (reparse-symbol class_member_declaration) [7095 7400])
+                    ("getDexingKey" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("classfile" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [7434 7450]))                          
+                        :type "DexingKey")
+                        (reparse-symbol class_member_declaration) [7404 7571]))                  
+                :type "class")
+                nil [1737 7573]))          
+      :file "Dexing.java"
+      :pointmax 7574
+      :fsize 7573
+      :lastmodtime '(28003 1986 0 0)
+      :unmatched-syntax '((STRING_LITERAL 6098 . 6107) (STRING_LITERAL 4358 . 4386) (IDENTIFIER 4351 . 4355) (EQ 4356 . 4357) (EQ 4336 . 4337) (COMMA 4314 . 4315) (BRACE_BLOCK 4289 . 4314) (IDENTIFIER 4276 . 4286) (EQ 4287 . 4288) (EQ 4225 . 4226) (COMMA 4195 . 4196) (STRING_LITERAL 4189 . 4195) (EQ 4187 . 4188) (COMMA 4154 . 4155) (STRING_LITERAL 4148 . 4154) (EQ 4146 . 4147) (COMMA 4125 . 4126) (STRING_LITERAL 4116 . 4125) (IDENTIFIER 4109 . 4113) (EQ 4114 . 4115) (STRING_LITERAL 3872 . 3918) (EQ 3870 . 3871) (COMMA 3857 . 3858) (CLASS 3852 . 3857) (IDENTIFIER 3811 . 3820) (EQ 3821 . 3822) (EQ 3796 . 3797) (COMMA 3774 . 3775) (BRACE_BLOCK 3749 . 3774) (IDENTIFIER 3736 . 3746) (EQ 3747 . 3748) (EQ 3685 . 3686) (COMMA 3655 . 3656) (STRING_LITERAL 3644 . 3655) (EQ 3642 . 3643) (COMMA 3609 . 3610) (STRING_LITERAL 3602 . 3609) (EQ 3600 . 3601) (COMMA 3579 . 3580) (STRING_LITERAL 3568 . 3579) (IDENTIFIER 3561 . 3565) (EQ 3566 . 3567) (STRING_LITERAL 3463 . 3505) (IDENTIFIER 3456 . 3460) (EQ 3461 . 3462) (EQ 3441 . 3442) (COMMA 3419 . 3420) (BRACE_BLOCK 3394 . 3419) (IDENTIFIER 3381 . 3391) (EQ 3392 . 3393) (EQ 3330 . 3331) (COMMA 3300 . 3301) (STRING_LITERAL 3289 . 3300) (EQ 3287 . 3288) (COMMA 3254 . 3255) (STRING_LITERAL 3248 . 3254) (EQ 3246 . 3247) (COMMA 3225 . 3226) (STRING_LITERAL 3215 . 3225) (IDENTIFIER 3208 . 3212) (EQ 3213 . 3214) (STRING_LITERAL 3085 . 3151) (IDENTIFIER 3078 . 3082) (EQ 3083 . 3084) (EQ 3063 . 3064) (COMMA 3041 . 3042) (BRACE_BLOCK 3016 . 3041) (IDENTIFIER 3003 . 3013) (EQ 3014 . 3015) (EQ 2952 . 2953) (COMMA 2922 . 2923) (STRING_LITERAL 2911 . 2922) (EQ 2909 . 2910) (COMMA 2876 . 2877) (STRING_LITERAL 2870 . 2876) (EQ 2868 . 2869) (COMMA 2847 . 2848) (STRING_LITERAL 2839 . 2847) (IDENTIFIER 2832 . 2836) (EQ 2837 . 2838) (GT 2023 . 2024) (PUBLIC 1946 . 1952) (LT 2015 . 2016))))
+  :file "!home!lixao!.cache!bazel!_bazel_lixao!install!5906941a530f40a3f4749e5cfd148312!_embedded_binaries!embedded_tools!src!tools!android!java!com!google!devtools!build!android!dexer!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

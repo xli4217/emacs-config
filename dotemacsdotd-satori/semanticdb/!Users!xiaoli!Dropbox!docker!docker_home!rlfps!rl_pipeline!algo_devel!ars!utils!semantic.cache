@@ -1,0 +1,134 @@
+;; Object utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utils/"
+  :tables
+  (list
+    (semanticdb-table "shared_noise_table.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("ray" include nil nil [20 30])
+            ("create_shared_noise" function (:arguments 
+              ( ("seed" variable nil (reparse-symbol function_parameters) [68 72]))              ) nil [44 190])
+            ("SharedNoiseTable" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [274 311])
+                            ("self" variable nil (reparse-symbol indented_block_body) [320 338])
+                            ("assert" code nil (reparse-symbol indented_block_body) [347 384]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [244 248])
+                            ("noise" variable nil (reparse-symbol function_parameters) [250 255])
+                            ("seed" variable nil (reparse-symbol function_parameters) [257 261]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [231 385])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [398 402])
+                            ("i" variable nil (reparse-symbol function_parameters) [404 405])
+                            ("dim" variable nil (reparse-symbol function_parameters) [407 410]))                          )
+                        (reparse-symbol indented_block_body) [390 448])
+                    ("sample_index" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [470 474])
+                            ("dim" variable nil (reparse-symbol function_parameters) [476 479]))                          )
+                        (reparse-symbol indented_block_body) [453 543])
+                    ("get_delta" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [562 566])
+                            ("dim" variable nil (reparse-symbol function_parameters) [568 571]))                          )
+                        (reparse-symbol indented_block_body) [548 649]))                  
+                :type "class")
+                nil [195 649]))          
+      :file "shared_noise_table.py"
+      :pointmax 649
+      :fsize 648
+      :lastmodtime '(23225 41705 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "optimizers.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("Optimizer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    for minimizing objectives
+    '''" code nil (reparse-symbol indented_block_body) [51 92])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [134 160])
+                            ("self" variable nil (reparse-symbol indented_block_body) [169 193])
+                            ("self" variable nil (reparse-symbol indented_block_body) [202 212]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [110 114])
+                            ("weights" variable nil (reparse-symbol function_parameters) [116 123]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [97 213])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [229 233])
+                            ("globalg" variable nil (reparse-symbol function_parameters) [235 242]))                          )
+                        (reparse-symbol indented_block_body) [218 414])
+                    ("compute_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [436 440])
+                            ("globalg" variable nil (reparse-symbol function_parameters) [442 449]))                          )
+                        (reparse-symbol indented_block_body) [419 484]))                  
+                :type "class")
+                nil [22 484])
+            ("SGD" type
+               (:superclasses ("Optimizer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Optimizer" code nil (reparse-symbol indented_block_body) [559 592])
+                            ("self" variable nil (reparse-symbol indented_block_body) [601 625]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [525 529])
+                            ("weights" variable nil (reparse-symbol function_parameters) [531 538])
+                            ("stepsize" variable nil (reparse-symbol function_parameters) [540 548]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [512 626])
+                    ("compute_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [648 652])
+                            ("globalg" variable nil (reparse-symbol function_parameters) [654 661]))                          )
+                        (reparse-symbol indented_block_body) [631 723]))                  
+                :type "class")
+                nil [486 723]))          
+      :file "optimizers.py"
+      :pointmax 723
+      :fsize 722
+      :lastmodtime '(23221 23919 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [107 125])
+            ("itergroups" function (:arguments 
+              ( ("items" variable nil (reparse-symbol function_parameters) [142 147])
+                ("group_size" variable nil (reparse-symbol function_parameters) [149 159]))              ) nil [127 382])
+            ("batched_weighted_sum" function (:arguments 
+              ( ("weights" variable nil (reparse-symbol function_parameters) [410 417])
+                ("vecs" variable nil (reparse-symbol function_parameters) [419 423])
+                ("batch_size" variable nil (reparse-symbol function_parameters) [425 435]))              ) nil [385 907]))          
+      :file "utils.py"
+      :pointmax 907
+      :fsize 906
+      :lastmodtime '(23224 4113 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!rl_pipeline!algo_devel!ars!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

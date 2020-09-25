@@ -1,0 +1,316 @@
+;; Object env/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "env/"
+  :tables
+  (list
+    (semanticdb-table "tensorforce_gym_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("tensorforce.contrib.openai_gym" include nil nil [21 73])
+            ("rl_pipeline.env.env" include nil nil [74 109])
+            ("TensorforceGymEnv" type
+               (:superclasses ("Env")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [193 244])
+                            ("video_output_dir" variable nil (reparse-symbol indented_block_body) [253 297])
+                            ("self" variable nil (reparse-symbol indented_block_body) [306 379]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [158 162])
+                            ("env_id" variable nil (reparse-symbol function_parameters) [164 170])
+                            ("env_params" variable nil (reparse-symbol function_parameters) [172 182]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [145 380])
+                    ("get_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [399 403]))                          )
+                        (reparse-symbol indented_block_body) [385 419])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [434 438]))                          )
+                        (reparse-symbol indented_block_body) [424 466])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [480 484])
+                            ("actions" variable nil (reparse-symbol function_parameters) [486 493]))                          )
+                        (reparse-symbol indented_block_body) [471 537])
+                    ("seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [551 555]))                          )
+                        (reparse-symbol indented_block_body) [542 571])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [586 590]))                          )
+                        (reparse-symbol indented_block_body) [576 618])
+                    ("state_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [653 657]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [623 691])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [735 739]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [704 774])
+                    ("test" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [788 792]))                          )
+                        (reparse-symbol indented_block_body) [779 808]))                  
+                :type "class")
+                nil [111 808]))          
+      :file "tensorforce_gym_env.py"
+      :pointmax 808
+      :fsize 807
+      :lastmodtime '(23119 62063 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "env_base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Env" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    Base class for an environment
+    '''" code nil (reparse-symbol indented_block_body) [24 69])
+                    ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [142 198])
+                            ("if" code nil (reparse-symbol indented_block_body) [206 250]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [87 91])
+                            ("env_params" variable nil (reparse-symbol function_parameters) [93 103])
+                            ("logger" variable nil (reparse-symbol function_parameters) [110 116])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [123 131]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [74 250])
+                    ("get_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [281 285])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [287 295]))                          )
+                        (reparse-symbol indented_block_body) [267 330])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [345 349])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [351 359]))                          )
+                        (reparse-symbol indented_block_body) [335 394])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [408 412])
+                            ("actions" variable nil (reparse-symbol function_parameters) [414 421])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [423 431]))                          )
+                        (reparse-symbol indented_block_body) [399 588])
+                    ("seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [602 606])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [608 616]))                          )
+                        (reparse-symbol indented_block_body) [593 651])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [666 670])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [672 680]))                          )
+                        (reparse-symbol indented_block_body) [656 715])
+                    ("state_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [750 754]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [720 921])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [957 961]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [926 1053])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1070 1074]))                          )
+                        (reparse-symbol indented_block_body) [1058 1147]))                  
+                :type "class")
+                nil [1 1147]))          
+      :file "env_base.py"
+      :pointmax 1156
+      :fsize 1155
+      :lastmodtime '(23155 29482 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "lunarlander_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("gym" include nil nil [1 11])
+            ("LunarLanderEnv" type
+               (:superclasses ("Env")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [153 209])
+                            ("self" variable nil (reparse-symbol indented_block_body) [218 255]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [98 102])
+                            ("env_params" variable nil (reparse-symbol function_parameters) [104 114])
+                            ("logger" variable nil (reparse-symbol function_parameters) [121 127])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [134 142]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [85 256])
+                    ("get_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [283 287])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [289 297]))                          )
+                        (reparse-symbol indented_block_body) [269 313])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [328 332])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [334 342]))                          )
+                        (reparse-symbol indented_block_body) [318 377])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [391 395])
+                            ("actions" variable nil (reparse-symbol function_parameters) [397 404])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [406 414]))                          )
+                        (reparse-symbol indented_block_body) [382 465])
+                    ("seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [479 483])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [485 493]))                          )
+                        (reparse-symbol indented_block_body) [470 528])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [543 547])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [549 557]))                          )
+                        (reparse-symbol indented_block_body) [533 592])
+                    ("state_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [627 631]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [597 716])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [760 764]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [729 857])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [882 886]))                          )
+                        (reparse-symbol indented_block_body) [870 959]))                  
+                :type "class")
+                nil [54 959]))          
+      :file "lunarlander_env.py"
+      :pointmax 968
+      :fsize 967
+      :lastmodtime '(23170 10413 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "pendulum_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("gym" include nil nil [1 11])
+            ("rl_pipeline.env.env_base" include nil nil [12 52])
+            ("numpy" include nil nil [53 71])
+            ("InvertedPendulumEnv" type
+               (:superclasses ("Env")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [188 249])
+                            ("if" code nil (reparse-symbol indented_block_body) [258 446])
+                            ("self" variable nil (reparse-symbol indented_block_body) [454 470]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [122 126])
+                            ("env_params" variable nil (reparse-symbol function_parameters) [128 138])
+                            ("seed" variable nil (reparse-symbol function_parameters) [145 149])
+                            ("logger" variable nil (reparse-symbol function_parameters) [156 162])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [169 177]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [109 471])
+                    ("get_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [498 502])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [504 512]))                          )
+                        (reparse-symbol indented_block_body) [484 528])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [543 547])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [549 557]))                          )
+                        (reparse-symbol indented_block_body) [533 592])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [606 610])
+                            ("actions" variable nil (reparse-symbol function_parameters) [612 619])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [621 629]))                          )
+                        (reparse-symbol indented_block_body) [597 680])
+                    ("seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [694 698])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [700 708]))                          )
+                        (reparse-symbol indented_block_body) [685 770])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [785 789])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [791 799]))                          )
+                        (reparse-symbol indented_block_body) [775 834])
+                    ("state_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [869 873]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [839 971])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1015 1019]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [984 1109])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1134 1138]))                          )
+                        (reparse-symbol indented_block_body) [1122 1211]))                  
+                :type "class")
+                nil [73 1211]))          
+      :file "pendulum_env.py"
+      :pointmax 1211
+      :fsize 1210
+      :lastmodtime '(23207 1973 0 0)
+      :unmatched-syntax nil)
+)
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!env!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,147 @@
+;; Object agent/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "agent/"
+  :tables
+  (list
+    (semanticdb-table "PPOAgent.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rl_pipeline.agent.batch_agent_base" include nil nil [1 62])
+            ("scipy.signal" include nil nil [63 82])
+            ("numpy" include nil nil [83 101])
+            ("tensorflow" include nil nil [103 126])
+            ("os" include nil nil [127 136])
+            ("PPOAgent" type
+               (:superclasses ("BatchAgentBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [372 604])
+                            ("tf" code nil (reparse-symbol indented_block_body) [614 659]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [188 192])
+                            ("agent_params" variable nil (reparse-symbol function_parameters) [211 223])
+                            ("sampler" variable nil (reparse-symbol function_parameters) [242 249])
+                            ("policy" variable nil (reparse-symbol function_parameters) [268 274])
+                            ("value" variable nil (reparse-symbol function_parameters) [293 298])
+                            ("logger" variable nil (reparse-symbol function_parameters) [322 328])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [352 360]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [175 660])
+                    ("discount" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [686 690])
+                            ("x" variable nil (reparse-symbol function_parameters) [692 693])
+                            ("gamma" variable nil (reparse-symbol function_parameters) [695 700]))                          
+                        :documentation " Calculate discounted forward sum of a sequence at each point ")
+                        (reparse-symbol indented_block_body) [673 853])
+                    ("add_disc_sum_rew" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [879 883])
+                            ("batch" variable nil (reparse-symbol function_parameters) [885 890])
+                            ("gamma" variable nil (reparse-symbol function_parameters) [892 897]))                          
+                        :documentation " Adds discounted sum of rewards to all time steps of all trajectories
+        Args:
+        batch: as returned by sampler.get_batch()
+        gamma: discount
+
+        Returns:
+        updated batch (mutates the batch dictionary to add 'Disc_sum_rewards')
+        ")
+                        (reparse-symbol indented_block_body) [858 1721])
+                    ("add_value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1752 1756])
+                            ("batch" variable nil (reparse-symbol function_parameters) [1758 1763]))                          
+                        :documentation " Adds estimated value to all time steps of all trajectories
+        Args:
+        batch: as returned by sampler.get_batch()
+ 
+        
+        Returns:
+        updated batch (mutates batch dictionary to add 'Values')
+        ")
+                        (reparse-symbol indented_block_body) [1738 2175])
+                    ("add_gae" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2192 2196])
+                            ("batch" variable nil (reparse-symbol function_parameters) [2198 2203])
+                            ("gamma" variable nil (reparse-symbol function_parameters) [2205 2210])
+                            ("lam" variable nil (reparse-symbol function_parameters) [2212 2215]))                          
+                        :documentation " Add generalized advantage estimator.
+        https://arxiv.org/pdf/1506.02438.pdf
+        Args:
+        batch: as returned by sampler.get_batch(), must include 'Values' key from add_value().
+        gamma: reward discount
+        lam: lambda (see paper).
+        lam=0 : use TD residuals
+        lam=1 : A =  Sum Discounted Rewards - V_hat(s)
+        
+        Returns:
+        updated batch (mutates batch dictionary to add 'Advantages')
+        ")
+                        (reparse-symbol indented_block_body) [2180 3343])
+                    ("build_training_set" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3380 3384])
+                            ("batch" variable nil (reparse-symbol function_parameters) [3386 3391]))                          
+                        :documentation "
+        Args:
+        batch: batch after processing by add_disc_sum_rew(),
+        add_value(), and add_gae()
+        
+        Returns: dictionary with keys \"Observations\", \"Actions\", \"Advantages\", \"Disc_sum_rew\"
+        ")
+                        (reparse-symbol indented_block_body) [3357 4659])
+                    ("build_logging_set" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4686 4690])
+                            ("batch" variable nil (reparse-symbol function_parameters) [4692 4697]))                          )
+                        (reparse-symbol indented_block_body) [4664 5026])
+                    ("log_batch_stats" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5063 5067])
+                            ("Observations" variable nil (reparse-symbol function_parameters) [5069 5081])
+                            ("Actions" variable nil (reparse-symbol function_parameters) [5083 5090])
+                            ("Advantages" variable nil (reparse-symbol function_parameters) [5092 5102])
+                            ("Sum_rew" variable nil (reparse-symbol function_parameters) [5104 5111])
+                            ("Disc_sum_rew" variable nil (reparse-symbol function_parameters) [5113 5125])
+                            ("iteration" variable nil (reparse-symbol function_parameters) [5127 5136]))                          
+                        :documentation " Log various batch statistics ")
+                        (reparse-symbol indented_block_body) [5043 6214])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6243 6247])
+                            ("scaled_batch" variable nil (reparse-symbol function_parameters) [6249 6261])
+                            ("unscaled_batch" variable nil (reparse-symbol function_parameters) [6263 6277])
+                            ("itr" variable nil (reparse-symbol function_parameters) [6279 6282]))                          )
+                        (reparse-symbol indented_block_body) [6232 7680])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7710 7714]))                          )
+                        (reparse-symbol indented_block_body) [7700 8556])
+                    ("exit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9340 9344]))                          )
+                        (reparse-symbol indented_block_body) [9331 9504]))                  
+                :type "class")
+                nil [138 9504]))          
+      :file "PPOAgent.py"
+      :pointmax 9504
+      :fsize 9503
+      :lastmodtime '(23179 40387 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!algo_devel!ppo!agent!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

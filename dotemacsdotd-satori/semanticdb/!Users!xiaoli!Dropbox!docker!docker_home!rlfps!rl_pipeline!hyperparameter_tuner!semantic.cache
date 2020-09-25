@@ -1,0 +1,178 @@
+;; Object hyperparameter_tuner/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hyperparameter_tuner/"
+  :tables
+  (list
+    (semanticdb-table "hyperparam_tuner_base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rl_pipeline.utils.utils" include nil nil [1 56])
+            ("HyperparamTunerBase" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    Base class for a hyperparameter tuner
+    '''" code nil (reparse-symbol indented_block_body) [98 151])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [220 276])
+                            ("self" variable nil (reparse-symbol indented_block_body) [285 343]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [169 173])
+                            ("hyperparam_tuning_params" variable nil (reparse-symbol function_parameters) [175 199])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [201 209]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [156 344])
+                    ("get_next_hyperparam_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [386 390])
+                            ("metric" variable nil (reparse-symbol function_parameters) [392 398])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [405 413]))                          )
+                        (reparse-symbol indented_block_body) [357 665])
+                    ("save_hyperparam_performance" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [702 706]))                          )
+                        (reparse-symbol indented_block_body) [670 851])
+                    ("make_hyperparam_string" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [883 887])
+                            ("hyperparam_dict" variable nil (reparse-symbol function_parameters) [889 904]))                          )
+                        (reparse-symbol indented_block_body) [856 959])
+                    ("save_hyperparm_tuner" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [990 994])
+                            ("save_dir" variable nil (reparse-symbol function_parameters) [996 1004]))                          )
+                        (reparse-symbol indented_block_body) [965 1104])
+                    ("restore_hyperparam_tuner" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1138 1142])
+                            ("restore_dir" variable nil (reparse-symbol function_parameters) [1144 1155]))                          )
+                        (reparse-symbol indented_block_body) [1109 1236]))                  
+                :type "class")
+                nil [58 1236]))          
+      :file "hyperparam_tuner_base.py"
+      :pointmax 1236
+      :fsize 1235
+      :lastmodtime '(23216 29674 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "random_search.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("pandas" include nil nil [20 39])
+            ("os" include nil nil [40 49])
+            ("future.utils" include nil nil [50 84])
+            ("rl_pipeline.hyperparameter_tuner.hyperparam_tuner_base" include nil nil [86 172])
+            ("RandomSearch" type
+               (:superclasses ("HyperparamTunerBase")
+                :members 
+                  ( ("'''
+    Base class for a hyperparameter tuner
+    '''" code nil (reparse-symbol indented_block_body) [219 272])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [350 410])
+                            ("self" variable nil (reparse-symbol indented_block_body) [419 479])
+                            ("self" variable nil (reparse-symbol indented_block_body) [488 521])
+                            ("self" variable nil (reparse-symbol indented_block_body) [530 548])
+                            ("self" variable nil (reparse-symbol indented_block_body) [557 576]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [290 294])
+                            ("hyperparam_tuning_params" variable nil (reparse-symbol function_parameters) [296 320])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [322 330]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [277 577])
+                    ("get_next_hyperparam_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [619 623])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [625 633]))                          )
+                        (reparse-symbol indented_block_body) [590 1214])
+                    ("save_hyperparam_performance" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1251 1255])
+                            ("new_metric" variable nil (reparse-symbol function_parameters) [1257 1267])
+                            ("save_path" variable nil (reparse-symbol function_parameters) [1269 1278]))                          )
+                        (reparse-symbol indented_block_body) [1219 1978]))                  
+                :type "class")
+                nil [174 1978]))          
+      :file "random_search.py"
+      :pointmax 1978
+      :fsize 1977
+      :lastmodtime '(23216 29674 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "skopt_tuner.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("pandas" include nil nil [20 39])
+            ("os" include nil nil [40 49])
+            ("future.utils" include nil nil [50 84])
+            ("skopt" include nil nil [85 97])
+            ("rl_pipeline.hyperparameter_tuner.hyperparam_tuner_base" include nil nil [99 185])
+            ("SkoptTuner" type
+               (:superclasses ("HyperparamTunerBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [277 317])
+                            ("self" variable nil (reparse-symbol indented_block_body) [326 386])
+                            ("self" variable nil (reparse-symbol indented_block_body) [395 428])
+                            ("self" variable nil (reparse-symbol indented_block_body) [437 455])
+                            ("self" variable nil (reparse-symbol indented_block_body) [464 484])
+                            ("self" variable nil (reparse-symbol indented_block_body) [493 529])
+                            ("self" variable nil (reparse-symbol indented_block_body) [538 557])
+                            ("self" variable nil (reparse-symbol indented_block_body) [599 614])
+                            ("for" code nil (reparse-symbol indented_block_body) [623 1381])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1406 1737]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [244 248])
+                            ("config" variable nil (reparse-symbol function_parameters) [250 256])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [258 266]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [231 1738])
+                    ("get_next_hyperparam_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1780 1784])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1786 1794]))                          )
+                        (reparse-symbol indented_block_body) [1751 2251])
+                    ("save_hyperparam_performance" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2300 2304])
+                            ("new_metric" variable nil (reparse-symbol function_parameters) [2306 2316])
+                            ("save_path" variable nil (reparse-symbol function_parameters) [2318 2327]))                          )
+                        (reparse-symbol indented_block_body) [2268 3135])
+                    ("save_hyperparm_tuner" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3173 3177])
+                            ("save_dir" variable nil (reparse-symbol function_parameters) [3179 3187]))                          )
+                        (reparse-symbol indented_block_body) [3148 3203])
+                    ("restore_hyperparam_tuner" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3237 3241])
+                            ("restore_dir" variable nil (reparse-symbol function_parameters) [3243 3254]))                          )
+                        (reparse-symbol indented_block_body) [3208 3270]))                  
+                :type "class")
+                nil [187 3270])
+            ("if" code nil nil [3279 4097]))          
+      :file "skopt_tuner.py"
+      :pointmax 4097
+      :fsize 4096
+      :lastmodtime '(23216 29674 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!rl_pipeline!hyperparameter_tuner!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

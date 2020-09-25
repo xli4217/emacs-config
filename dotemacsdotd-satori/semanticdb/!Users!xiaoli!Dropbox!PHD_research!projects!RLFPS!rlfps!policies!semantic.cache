@@ -1,0 +1,416 @@
+;; Object policies/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "policies/"
+  :tables
+  (list
+    (semanticdb-table "lin_gauss_policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the linear Gaussian policy class. \"\"\"" code nil nil [1 60])
+            ("numpy" include nil nil [61 79])
+            ("gps.utility.general_utils" include nil nil [81 130])
+            ("rllab.policies.base" include nil nil [132 180])
+            ("rllab.core.serializable" include nil nil [181 229])
+            ("rllab.misc.overrides" include nil nil [230 272])
+            ("rlfps.policies.lin_gauss_init" include nil nil [274 333])
+            ("LinearGaussianPolicy" type
+               (:documentation "
+    Time-varying linear Gaussian policy.
+    U = K*x + k + noise, where noise ~ N(0, chol_pol_covar)
+
+    adapt gps LinearGaussianPolicy to rllab
+    "
+                :superclasses ("StochasticPolicy" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("obs_dim" variable nil (reparse-symbol indented_block_body) [753 798])
+                            ("action_dim" variable nil (reparse-symbol indented_block_body) [807 850])
+                            ("if" code nil (reparse-symbol indented_block_body) [860 1077])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [1107 1146])
+                            ("super" code nil (reparse-symbol indented_block_body) [1155 1207])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1295 1314])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1323 1343])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1352 1372])
+                            ("check_shape" code nil (reparse-symbol indented_block_body) [1382 1415])
+                            ("check_shape" code nil (reparse-symbol indented_block_body) [1424 1474])
+                            ("check_shape" code nil (reparse-symbol indented_block_body) [1483 1538])
+                            ("check_shape" code nil (reparse-symbol indented_block_body) [1547 1601])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1611 1621])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1630 1640])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1649 1675])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1684 1720])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1729 1763]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [589 593])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [607 615])
+                            ("horizon" variable nil (reparse-symbol function_parameters) [629 636])
+                            ("step_size" variable nil (reparse-symbol function_parameters) [650 659])
+                            ("lqr_or_pd" variable nil (reparse-symbol function_parameters) [673 682])
+                            ("init_dict" variable nil (reparse-symbol function_parameters) [696 705])
+                            ("init_file" variable nil (reparse-symbol function_parameters) [719 728]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [563 1764])
+                    ("get_param_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2461 2465]))                          )
+                        (reparse-symbol indented_block_body) [2440 2718])
+                    ("set_param_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2752 2756])
+                            ("params_dict" variable nil (reparse-symbol function_parameters) [2758 2769]))                          )
+                        (reparse-symbol indented_block_body) [2731 3008])
+                    ("distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3056 3060]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3025 3083])
+                    ("dist_info_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3106 3110])
+                            ("obs_var" variable nil (reparse-symbol function_parameters) [3112 3119])
+                            ("state_info_vars" variable nil (reparse-symbol function_parameters) [3121 3136]))                          )
+                        (reparse-symbol indented_block_body) [3088 3164])
+                    ("dist_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3183 3187])
+                            ("obs" variable nil (reparse-symbol function_parameters) [3189 3192])
+                            ("state_infos" variable nil (reparse-symbol function_parameters) [3194 3205]))                          )
+                        (reparse-symbol indented_block_body) [3169 3227]))                  
+                :type "class")
+                nil [336 3227]))          
+      :file "lin_gauss_policy.py"
+      :pointmax 3227
+      :fsize 3226
+      :lastmodtime '(22749 17643 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "lin_gauss_init.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" Initializations for linear Gaussian controllers. \"\"\"" code nil nil [1 57])
+            ("copy" include nil nil [58 69])
+            ("numpy" include nil nil [70 88])
+            ("scipy" include nil nil [89 107])
+            ("gps.algorithm.dynamics.dynamics_utils" include nil nil [109 173])
+            ("init_lqr" function
+               (:documentation "
+    Return initial gains for a time-varying linear Gaussian controller
+    that tries to hold the initial position.
+    "
+                :arguments 
+                  ( ("INIT_LG_LQR" variable nil (reparse-symbol function_parameters) [256 267]))                  )
+                nil [243 4006])
+            ("init_pd" function
+               (:documentation "
+    This function initializes the linear-Gaussian controller as a
+    proportional-derivative (PD) controller with Gaussian noise. The
+    position gains are controlled by the variable pos_gains, velocity
+    gains are controlled by pos_gains*vel_gans_mult.
+    "
+                :arguments 
+                  ( ("INIT_LG_PD" variable nil (reparse-symbol function_parameters) [4040 4050])
+                    ("init_file" variable nil (reparse-symbol function_parameters) [4052 4061]))                  )
+                nil [4028 6069]))          
+      :file "lin_gauss_init.py"
+      :pointmax 6069
+      :fsize 6068
+      :lastmodtime '(22749 17643 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22749 17643 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "lin_gauss_policy_hi.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the linear Gaussian policy class. \"\"\"" code nil nil [1 60])
+            ("numpy" include nil nil [61 79])
+            ("gps.utility.general_utils" include nil nil [81 130])
+            ("rllab.policies.base" include nil nil [132 180])
+            ("rllab.core.serializable" include nil nil [181 229])
+            ("rllab.misc.overrides" include nil nil [230 272])
+            ("rlfps.policies.lin_gauss_init" include nil nil [274 333])
+            ("rlfps.policies.lin_gauss_policy" include nil nil [334 398])
+            ("rlfps.policies.gauss_policy" include nil nil [399 453])
+            ("scipy.ndimage" include nil nil [455 489])
+            ("HierarchicalLinearGaussianPolicy" type
+               (:documentation "
+    Time-varying linear Gaussian policy.
+
+    Options policys in the form 
+    U = K*x + k + noise, where noise ~ N(0, chol_pol_covar)
+
+    Gating policies in the form
+    N(o|mu_t, sigma_t)
+    
+    adapt gps LinearGaussianPolicy to rllab
+    "
+                :superclasses ("StochasticPolicy" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("obs_dim" variable nil (reparse-symbol indented_block_body) [1034 1079])
+                            ("action_dim" variable nil (reparse-symbol indented_block_body) [1088 1131])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1141 1171])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1180 1197])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1206 1231])
+                            ("for" code nil (reparse-symbol indented_block_body) [1241 1559])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [1601 1640])
+                            ("super" code nil (reparse-symbol indented_block_body) [1649 1713]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [850 854])
+                            ("options_num" variable nil (reparse-symbol function_parameters) [868 879])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [893 901])
+                            ("horizon" variable nil (reparse-symbol function_parameters) [915 922])
+                            ("step_size" variable nil (reparse-symbol function_parameters) [936 945])
+                            ("lqr_or_pd" variable nil (reparse-symbol function_parameters) [959 968])
+                            ("init_dict" variable nil (reparse-symbol function_parameters) [982 991])
+                            ("init_file" variable nil (reparse-symbol function_parameters) [1005 1014]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [824 1714])
+                    ("get_param_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2223 2227]))                          )
+                        (reparse-symbol indented_block_body) [2202 2372])
+                    ("set_param_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2406 2410])
+                            ("params_dict" variable nil (reparse-symbol function_parameters) [2412 2423]))                          )
+                        (reparse-symbol indented_block_body) [2385 2526])
+                    ("distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2574 2578]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2543 2601])
+                    ("dist_info_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2624 2628])
+                            ("obs_var" variable nil (reparse-symbol function_parameters) [2630 2637])
+                            ("state_info_vars" variable nil (reparse-symbol function_parameters) [2639 2654]))                          )
+                        (reparse-symbol indented_block_body) [2606 2682])
+                    ("dist_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2701 2705])
+                            ("obs" variable nil (reparse-symbol function_parameters) [2707 2710])
+                            ("state_infos" variable nil (reparse-symbol function_parameters) [2712 2723]))                          )
+                        (reparse-symbol indented_block_body) [2687 2745]))                  
+                :type "class")
+                nil [491 2745]))          
+      :file "lin_gauss_policy_hi.py"
+      :pointmax 2745
+      :fsize 2744
+      :lastmodtime '(22749 17643 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "gauss_policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the linear Gaussian policy class. \"\"\"" code nil nil [1 60])
+            ("numpy" include nil nil [61 79])
+            ("gps.utility.general_utils" include nil nil [81 130])
+            ("rllab.policies.base" include nil nil [132 180])
+            ("rllab.core.serializable" include nil nil [181 229])
+            ("rllab.misc.overrides" include nil nil [230 272])
+            ("rlfps.policies.lin_gauss_init" include nil nil [274 333])
+            ("GaussianPolicy" type
+               (:documentation "
+    Time-varying linear Gaussian policy.
+    U = mu + noise, where noise ~ N(0, chol_pol_covar)
+
+    adapt gps LinearGaussianPolicy to rllab
+    "
+                :superclasses ("StochasticPolicy" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("obs_dim" variable nil (reparse-symbol indented_block_body) [668 713])
+                            ("action_dim" variable nil (reparse-symbol indented_block_body) [722 765])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [775 814])
+                            ("super" code nil (reparse-symbol indented_block_body) [823 869])
+                            ("self" variable nil (reparse-symbol indented_block_body) [957 973])
+                            ("self" variable nil (reparse-symbol indented_block_body) [983 1027])
+                            ("self" code nil (reparse-symbol indented_block_body) [1036 1102])
+                            ("self" code nil (reparse-symbol indented_block_body) [1111 1182]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [577 581])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [595 603])
+                            ("output_dim" variable nil (reparse-symbol function_parameters) [617 627])
+                            ("horizon" variable nil (reparse-symbol function_parameters) [641 648]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [551 1183])
+                    ("get_param_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1527 1531]))                          )
+                        (reparse-symbol indented_block_body) [1506 1713])
+                    ("set_param_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1747 1751])
+                            ("params_dict" variable nil (reparse-symbol function_parameters) [1753 1764]))                          )
+                        (reparse-symbol indented_block_body) [1726 1913])
+                    ("distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1961 1965]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1930 1988])
+                    ("dist_info_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2011 2015])
+                            ("obs_var" variable nil (reparse-symbol function_parameters) [2017 2024])
+                            ("state_info_vars" variable nil (reparse-symbol function_parameters) [2026 2041]))                          )
+                        (reparse-symbol indented_block_body) [1993 2069])
+                    ("dist_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2088 2092])
+                            ("obs" variable nil (reparse-symbol function_parameters) [2094 2097])
+                            ("state_infos" variable nil (reparse-symbol function_parameters) [2099 2110]))                          )
+                        (reparse-symbol indented_block_body) [2074 2132]))                  
+                :type "class")
+                nil [335 2132]))          
+      :file "gauss_policy.py"
+      :pointmax 2132
+      :fsize 2131
+      :lastmodtime '(22749 17643 0 0)
+      :unmatched-syntax nil)
+
+    (semanticdb-table "deterministic_mlp_policy_tf.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.core.serializable" include nil nil [1 49])
+            ("sandbox.rocky.tf.policies.base" include nil nil [50 99])
+            ("rllab.misc.overrides" include nil nil [100 142])
+            ("rllab.misc" include nil nil [143 172])
+            ("sandbox.rocky.tf.misc" include nil nil [173 219])
+            ("tensorflow" include nil nil [220 243])
+            ("tensorflow.contrib.slim" include nil nil [244 282])
+            ("numpy" include nil nil [283 301])
+            ("DeterministicMLPPolicyTF" type
+               (:superclasses ("Policy" "Serializable")
+                :members 
+                  ( ("'''
+    create a simple feedforward neural network with TFSlim
+    '''" code nil (reparse-symbol indented_block_body) [361 431])
+                    ("__init__" function
+                       (:suite 
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [682 720])
+                            ("with" code nil (reparse-symbol indented_block_body) [785 2286])
+                            ("super" code nil (reparse-symbol indented_block_body) [2295 2351]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [462 466])
+                            ("policy_scope" variable nil (reparse-symbol function_parameters) [480 492])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [506 514])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [528 540])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [562 581])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [620 639])
+                            ("bn" variable nil (reparse-symbol function_parameters) [658 660]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [436 2352])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2379 2383])
+                            ("observation" variable nil (reparse-symbol function_parameters) [2385 2396]))                          )
+                        (reparse-symbol indented_block_body) [2364 2532])
+                    ("get_actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2553 2557])
+                            ("observations" variable nil (reparse-symbol function_parameters) [2559 2571]))                          )
+                        (reparse-symbol indented_block_body) [2537 2681])
+                    ("normalized_columns_initializer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2789 2793])
+                            ("std" variable nil (reparse-symbol function_parameters) [2795 2798]))                          )
+                        (reparse-symbol indented_block_body) [2754 3072])
+                    ("compile_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3098 3102])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [3104 3110])
+                            ("outputs" variable nil (reparse-symbol function_parameters) [3112 3119])
+                            ("log_name" variable nil (reparse-symbol function_parameters) [3121 3129]))                          )
+                        (reparse-symbol indented_block_body) [3077 3349]))                  
+                :type "class")
+                nil [303 3349]))          
+      :file "deterministic_mlp_policy_tf.py"
+      :pointmax 3349
+      :fsize 3348
+      :lastmodtime '(22802 11143 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "deterministic_mlp_policy_keras.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.core.serializable" include nil nil [1 49])
+            ("sandbox.rocky.tf.policies.base" include nil nil [50 99])
+            ("rllab.misc.overrides" include nil nil [100 142])
+            ("rllab.misc" include nil nil [143 172])
+            ("sandbox.rocky.tf.misc" include nil nil [173 219])
+            ("tensorflow" include nil nil [220 243])
+            ("DeterministicMLPPolicyKeras" type
+               (:superclasses ("Policy" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [531 569])
+                            ("with" code nil (reparse-symbol indented_block_body) [634 1046])
+                            ("super" code nil (reparse-symbol indented_block_body) [1067 1121])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1131 1248]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [333 337])
+                            ("name" variable nil (reparse-symbol function_parameters) [351 355])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [369 377])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [391 403])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [425 444])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [469 488])
+                            ("bn" variable nil (reparse-symbol function_parameters) [507 509]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [307 1249])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1269 1273])
+                            ("observation" variable nil (reparse-symbol function_parameters) [1275 1286]))                          )
+                        (reparse-symbol indented_block_body) [1254 1422])
+                    ("get_actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1443 1447])
+                            ("observations" variable nil (reparse-symbol function_parameters) [1449 1461]))                          )
+                        (reparse-symbol indented_block_body) [1427 1569]))                  
+                :type "class")
+                nil [246 1569]))          
+      :file "deterministic_mlp_policy_keras.py"
+      :pointmax 1569
+      :fsize 1568
+      :lastmodtime '(22802 15032 0 0)
+      :unmatched-syntax nil)
+)
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rlfps!policies!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

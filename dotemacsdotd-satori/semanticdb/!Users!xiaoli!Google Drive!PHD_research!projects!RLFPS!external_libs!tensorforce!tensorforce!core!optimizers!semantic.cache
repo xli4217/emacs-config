@@ -1,0 +1,300 @@
+;; Object optimizers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "optimizers/"
+  :tables
+  (list
+    (semanticdb-table "clipped_step.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [681 719])
+            ("__future__" include nil nil [720 757])
+            ("__future__" include nil nil [758 789])
+            ("six.moves" include nil nil [791 819])
+            ("tensorflow" include nil nil [820 843])
+            ("tensorforce.core.optimizers" include nil nil [845 898])
+            ("ClippedStep" type
+               (:documentation "
+    The multi-shep meta optimizer repeatedly applies the optimization step proposed by another  
+    optimizer a number of times.
+    "
+                :superclasses ("MetaOptimizer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Creates a new multi-step meta optimizer instance.
+
+        Args:
+            optimizer: The optimizer which is modified by this meta optimizer.
+            clipping_value: Clip deltas at this value.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1178 1400])
+                            ("super" code nil (reparse-symbol indented_block_body) [1409 1515])
+                            ("assert" code nil (reparse-symbol indented_block_body) [1525 1590])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1599 1635]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1099 1103])
+                            ("optimizer" variable nil (reparse-symbol function_parameters) [1105 1114])
+                            ("clipping_value" variable nil (reparse-symbol function_parameters) [1116 1130])
+                            ("summaries" variable nil (reparse-symbol function_parameters) [1132 1141])
+                            ("summary_labels" variable nil (reparse-symbol function_parameters) [1148 1162]))                          
+                        :documentation "
+        Creates a new multi-step meta optimizer instance.
+
+        Args:
+            optimizer: The optimizer which is modified by this meta optimizer.
+            clipping_value: Clip deltas at this value.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1086 1636])
+                    ("tf_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1653 1657])
+                            ("time" variable nil (reparse-symbol function_parameters) [1659 1663])
+                            ("variables" variable nil (reparse-symbol function_parameters) [1665 1674])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1676 1684]))                          
+                        :documentation "
+        Creates the TensorFlow operations for performing an optimization step.
+
+        Args:
+            time: Time tensor.
+            variables: List of variables to optimize.
+            **kwargs: Additional arguments passed on to the internal optimizer.
+
+        Returns:
+            List of delta tensors corresponding to the updates for each optimized variable.
+        ")
+                        (reparse-symbol indented_block_body) [1641 2861]))                  
+                :type "class")
+                nil [901 2861]))          
+      :file "clipped_step.py"
+      :pointmax 2861
+      :fsize 2860
+      :lastmodtime '(23097 11177 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "optimized_step.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [681 719])
+            ("__future__" include nil nil [720 757])
+            ("__future__" include nil nil [758 789])
+            ("tensorflow" include nil nil [791 814])
+            ("tensorforce" include nil nil [816 856])
+            ("tensorforce.core.optimizers" include nil nil [857 910])
+            ("tensorforce.core.optimizers.solvers" include nil nil [911 969])
+            ("OptimizedStep" type
+               (:documentation "
+    The optimized-step meta optimizer applies line search to the proposed optimization step of  
+    another optimizer to find a more optimal step size.
+    "
+                :superclasses ("MetaOptimizer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Creates a new optimized step meta optimizer instance.
+
+        Args:
+            optimizer: The optimizer which is modified by this meta optimizer.
+            ls_max_iterations: Maximum number of line search iterations.
+            ls_accept_ratio: Line search acceptance ratio.
+            ls_mode: Line search mode, see LineSearch solver.
+            ls_parameter: Line search parameter, see LineSearch solver.
+            ls_unroll_loop: Unroll line search loop if true.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1442 1940])
+                            ("super" code nil (reparse-symbol indented_block_body) [1949 2057])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2067 2291]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1204 1208])
+                            ("optimizer" variable nil (reparse-symbol function_parameters) [1218 1227])
+                            ("ls_max_iterations" variable nil (reparse-symbol function_parameters) [1237 1254])
+                            ("ls_accept_ratio" variable nil (reparse-symbol function_parameters) [1267 1282])
+                            ("ls_mode" variable nil (reparse-symbol function_parameters) [1296 1303])
+                            ("ls_parameter" variable nil (reparse-symbol function_parameters) [1327 1339])
+                            ("ls_unroll_loop" variable nil (reparse-symbol function_parameters) [1353 1367])
+                            ("summaries" variable nil (reparse-symbol function_parameters) [1383 1392])
+                            ("summary_labels" variable nil (reparse-symbol function_parameters) [1407 1421]))                          
+                        :documentation "
+        Creates a new optimized step meta optimizer instance.
+
+        Args:
+            optimizer: The optimizer which is modified by this meta optimizer.
+            ls_max_iterations: Maximum number of line search iterations.
+            ls_accept_ratio: Line search acceptance ratio.
+            ls_mode: Line search mode, see LineSearch solver.
+            ls_parameter: Line search parameter, see LineSearch solver.
+            ls_unroll_loop: Unroll line search loop if true.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1182 2292])
+                    ("tf_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2309 2313])
+                            ("time" variable nil (reparse-symbol function_parameters) [2315 2319])
+                            ("variables" variable nil (reparse-symbol function_parameters) [2321 2330])
+                            ("fn_loss" variable nil (reparse-symbol function_parameters) [2332 2339])
+                            ("fn_reference" variable nil (reparse-symbol function_parameters) [2341 2353])
+                            ("fn_compare" variable nil (reparse-symbol function_parameters) [2360 2370])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [2377 2385]))                          
+                        :documentation "
+        Creates the TensorFlow operations for performing an optimization step.
+
+        Args:
+            time: Time tensor.
+            variables: List of variables to optimize.
+            fn_loss: A callable returning the loss of the current model.
+            fn_reference: A callable returning the reference values necessary for comparison.
+            fn_compare: A callable comparing the current model to the reference model given by  
+                its values.
+            **kwargs: Additional arguments passed on to the internal optimizer.
+
+        Returns:
+            List of delta tensors corresponding to the updates for each optimized variable.
+        ")
+                        (reparse-symbol indented_block_body) [2297 5426]))                  
+                :type "class")
+                nil [972 5426]))          
+      :file "optimized_step.py"
+      :pointmax 5426
+      :fsize 5425
+      :lastmodtime '(23097 11177 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "natural_gradient.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [681 719])
+            ("__future__" include nil nil [720 757])
+            ("__future__" include nil nil [758 789])
+            ("tensorflow" include nil nil [791 814])
+            ("tensorforce.core.optimizers" include nil nil [816 865])
+            ("tensorforce.core.optimizers.solvers" include nil nil [866 931])
+            ("NaturalGradient" type
+               (:documentation "
+    Natural gradient optimizer.
+    "
+                :superclasses ("Optimizer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Creates a new natural gradient optimizer instance.
+
+        Args:
+            learning_rate: Learning rate, i.e. KL-divergence of distributions between optimization steps.
+            cg_max_iterations: Conjugate gradient solver max iterations.
+            cg_damping: Conjugate gradient solver damping factor.
+            cg_unroll_loop: Unroll conjugate gradient loop if true.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1224 1626])
+                            ("super" code nil (reparse-symbol indented_block_body) [1635 1724])
+                            ("assert" code nil (reparse-symbol indented_block_body) [1734 1760])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1769 1803])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1813 1972]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1043 1047])
+                            ("learning_rate" variable nil (reparse-symbol function_parameters) [1057 1070])
+                            ("cg_max_iterations" variable nil (reparse-symbol function_parameters) [1080 1097])
+                            ("cg_damping" variable nil (reparse-symbol function_parameters) [1110 1120])
+                            ("cg_unroll_loop" variable nil (reparse-symbol function_parameters) [1135 1149])
+                            ("summaries" variable nil (reparse-symbol function_parameters) [1165 1174])
+                            ("summary_labels" variable nil (reparse-symbol function_parameters) [1189 1203]))                          
+                        :documentation "
+        Creates a new natural gradient optimizer instance.
+
+        Args:
+            learning_rate: Learning rate, i.e. KL-divergence of distributions between optimization steps.
+            cg_max_iterations: Conjugate gradient solver max iterations.
+            cg_damping: Conjugate gradient solver damping factor.
+            cg_unroll_loop: Unroll conjugate gradient loop if true.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1021 1973])
+                    ("tf_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1990 1994])
+                            ("time" variable nil (reparse-symbol function_parameters) [1996 2000])
+                            ("variables" variable nil (reparse-symbol function_parameters) [2002 2011])
+                            ("fn_loss" variable nil (reparse-symbol function_parameters) [2013 2020])
+                            ("fn_kl_divergence" variable nil (reparse-symbol function_parameters) [2022 2038])
+                            ("return_estimated_improvement" variable nil (reparse-symbol function_parameters) [2040 2068])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [2076 2084]))                          
+                        :documentation "
+        Creates the TensorFlow operations for performing an optimization step.
+
+        Args:
+            time: Time tensor.
+            variables: List of variables to optimize.
+            fn_loss: A callable returning the loss of the current model.
+            fn_kl_divergence: A callable returning the KL-divergence relative to the current model.
+            return_estimated_improvement: Returns the estimated improvement resulting from the  
+                natural gradient calculation if true.
+            **kwargs: Additional arguments, not used.
+
+        Returns:
+            List of delta tensors corresponding to the updates for each optimized variable.
+        ")
+                        (reparse-symbol indented_block_body) [1978 6064]))                  
+                :type "class")
+                nil [934 6064]))          
+      :file "natural_gradient.py"
+      :pointmax 6064
+      :fsize 6063
+      :lastmodtime '(23097 11177 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "meta_optimizer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [681 719])
+            ("__future__" include nil nil [720 757])
+            ("__future__" include nil nil [758 789])
+            ("tensorforce.core.optimizers" include nil nil [791 840])
+            ("MetaOptimizer" type
+               (:documentation "
+    A meta optimizer takes the optimization implemented by another optimizer and  
+    modifies/optimizes its proposed result. For example, line search might be applied to find a  
+    more optimal step size.
+    "
+                :superclasses ("Optimizer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Creates a new meta optimizer instance.
+
+        Args:
+            optimizer: The optimizer which is modified by this meta optimizer.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1154 1310])
+                            ("super" code nil (reparse-symbol indented_block_body) [1319 1364])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1374 1441]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1118 1122])
+                            ("optimizer" variable nil (reparse-symbol function_parameters) [1124 1133])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1135 1143]))                          
+                        :documentation "
+        Creates a new meta optimizer instance.
+
+        Args:
+            optimizer: The optimizer which is modified by this meta optimizer.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1105 1442])
+                    ("get_variables" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1465 1469]))                          )
+                        (reparse-symbol indented_block_body) [1447 1563]))                  
+                :type "class")
+                nil [843 1563]))          
+      :file "meta_optimizer.py"
+      :pointmax 1563
+      :fsize 1562
+      :lastmodtime '(23097 11177 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!RLFPS!external_libs!tensorforce!tensorforce!core!optimizers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

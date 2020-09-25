@@ -1,0 +1,277 @@
+;; Object bench/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bench/"
+  :tables
+  (list
+    (semanticdb-table "geometry.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [2 21])
+            ("Eigen/Geometry" include (:system-flag t) nil [22 47])
+            ("bench/BenchTimer.h" include (:system-flag t) nil [48 77])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [79 99])
+            ("Eigen" using (:type ("Eigen" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [100 122])
+            ("SCALAR" variable (:constant-flag t) nil [147 153])
+            ("SIZE" variable (:constant-flag t) nil [189 193])
+            ("Scalar" type
+               (:typedef ("float")
+                :type "typedef")
+                nil [204 226])
+            ("RealScalar" variable (:type ("Real" type (:type "class") nil nil)) nil [254 270])
+            ("A" type
+               (:typedef ("Matrix" type
+                     (:template-specifier 
+                        ( ("RealScalar" type nil nil nil)
+                          ("Dynamic" type nil nil nil)
+                          ("Dynamic" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [271 316])
+            ("B" type
+               (:typedef ("Matrix" type
+                     (:template-specifier 
+                        ( ("Scalar" type nil nil nil)
+                          ("Dynamic" type nil nil nil)
+                          ("Dynamic" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [317 366])
+            ("C" type
+               (:typedef ("Matrix" type
+                     (:template-specifier 
+                        ( ("Scalar" type nil nil nil)
+                          ("Dynamic" type nil nil nil)
+                          ("Dynamic" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [367 408])
+            ("M" type
+               (:typedef ("Matrix" type
+                     (:template-specifier 
+                        ( ("RealScalar" type nil nil nil)
+                          ("Dynamic" type nil nil nil)
+                          ("Dynamic" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [409 454])
+            ("transform" function
+               (:arguments 
+                  ( ("t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Transformation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [538 562])
+                    ("data" variable
+                       (:reference 1
+                        :type ("Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [563 574]))                  
+                :type "void")
+                nil [523 655])
+            ("transform" function
+               (:arguments 
+                  ( ("t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Quaternion" type
+                             (:template-specifier 
+                                ( ("Scalar" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [731 759])
+                    ("data" variable
+                       (:reference 1
+                        :type ("Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [760 771]))                  
+                :type "void")
+                nil [716 911])
+            ("ToRotationMatrixWrapper" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("" type
+                       (:members 
+                          ( ("Dim" variable
+                               (:constant-flag t
+                                :default-value (981 982)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [975 982])
+                            ("Dim" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [984 988]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [969 989])
+                    ("Scalar" type
+                       (:typedef ("T::Scalar" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [992 1026])
+                    ("ToRotationMatrixWrapper" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("o" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1053 1064]))                          
+                        :type ("ToRotationMatrixWrapper" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1029 1079])
+                    ("object" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1082 1091]))                  )
+                nil [913 1094])
+            ("transform" function
+               (:arguments 
+                  ( ("t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ToRotationMatrixWrapper" type
+                             (:template-specifier 
+                                ( ("QType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1169 1209])
+                    ("data" variable
+                       (:reference 1
+                        :type ("Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1210 1221]))                  
+                :type "void")
+                nil [1154 1354])
+            ("transform" function
+               (:arguments 
+                  ( ("t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Transform" type
+                             (:template-specifier 
+                                ( ("Scalar" type nil nil nil)
+                                  ("Dim" type nil nil nil)
+                                  ("Projective" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1439 1481])
+                    ("data" variable
+                       (:reference 1
+                        :type ("Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1482 1493]))                  
+                :type "void")
+                nil [1424 1591])
+            ("get_dim" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("" type
+                       (:members 
+                          ( ("Dim" variable
+                               (:constant-flag t
+                                :default-value (1644 1645)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1638 1645])
+                            ("Dim" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1647 1652]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [1631 1653]))                  )
+                nil [1593 1656])
+            ("get_dim" type
+               (:template 
+                  ( ("S" type (:type "class") nil nil)
+                    ("int" type nil nil nil)
+                    ("int" type nil nil nil)
+                    ("int" type nil nil nil)
+                    ("int" type nil nil nil)
+                    ("int" type nil nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("" type
+                       (:members 
+                          ( ("Dim" variable
+                               (:constant-flag t
+                                :default-value (1769 1770)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1763 1770]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [1756 1773]))                  
+                :template-specifier 
+                  ( ("Matrix" type nil nil nil))                  )
+                nil [1657 1776])
+            ("bench_impl" type
+               (:template 
+                  ( ("Transformation" type (:type "class") nil nil)
+                    ("int" type nil nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("run" function
+                       (:arguments 
+                          ( ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Transformation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1875 1899]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1866 2174]))                  )
+                nil [1778 2177])
+            ("bench_impl" type
+               (:template 
+                  ( ("Transformation" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("run" function
+                       (:arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Transformation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2288 2310]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2279 2313]))                  
+                :template-specifier 
+                  ( ("Transformation" type nil nil nil)
+                    ("0"))                  )
+                nil [2180 2316])
+            ("bench" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2381 2404])
+                    ("t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Transformation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2405 2429]))                  
+                :type "void")
+                nil [2370 2519])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2530 2539])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2540 2553]))                  
+                :type "int")
+                nil [2521 3306]))          
+      :file "geometry.cpp"
+      :pointmax 3308
+      :fsize 3307
+      :lastmodtime '(22850 13020 0 0)
+      :unmatched-syntax '((symbol 2352 . 2369) (punctuation 2350 . 2351) (symbol 2336 . 2350) (TYPENAME 2327 . 2335) (punctuation 2326 . 2327) (TEMPLATE 2318 . 2326) (symbol 2261 . 2278) (STATIC 2254 . 2260) (symbol 1848 . 1865) (STATIC 1841 . 1847) (punctuation 1646 . 1647) (punctuation 1645 . 1646) (punctuation 1646 . 1647) (punctuation 1645 . 1646) (symbol 1406 . 1423) (punctuation 1404 . 1405) (symbol 1400 . 1404) (TYPENAME 1391 . 1399) (punctuation 1389 . 1390) (symbol 1386 . 1389) (INT 1382 . 1385) (punctuation 1380 . 1381) (symbol 1374 . 1380) (TYPENAME 1365 . 1373) (punctuation 1364 . 1365) (TEMPLATE 1356 . 1364) (symbol 1136 . 1153) (punctuation 1134 . 1135) (symbol 1130 . 1134) (TYPENAME 1121 . 1129) (punctuation 1119 . 1120) (symbol 1114 . 1119) (TYPENAME 1105 . 1113) (punctuation 1104 . 1105) (TEMPLATE 1096 . 1104) (punctuation 983 . 984) (punctuation 982 . 983) (punctuation 983 . 984) (punctuation 982 . 983) (symbol 698 . 715) (punctuation 696 . 697) (symbol 692 . 696) (TYPENAME 683 . 691) (punctuation 681 . 682) (symbol 675 . 681) (TYPENAME 666 . 674) (punctuation 665 . 666) (TEMPLATE 657 . 665) (symbol 505 . 522) (punctuation 503 . 504) (symbol 499 . 503) (TYPENAME 490 . 498) (punctuation 488 . 489) (symbol 474 . 488) (TYPENAME 465 . 473) (punctuation 464 . 465) (TEMPLATE 456 . 464) (punctuation 253 . 254) (punctuation 252 . 253) (punctuation 251 . 252) (symbol 245 . 251) (punctuation 244 . 245) (symbol 235 . 244) (TYPEDEF 227 . 234))
+      :lexical-table 
+        '(("SIZE" . ((number "8" 194 . 195)))
+          ("SCALAR" . ((FLOAT "float" 154 . 159)))
+          )
+))
+  :file "!home!lixao!.cache!bazel!_bazel_lixao!aa5dc75f310cfaaa784964cc6c6cfa64!external!eigen!bench!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,264 @@
+;; Object agent/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "agent/"
+  :tables
+  (list
+    (semanticdb-table "config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" Default configuration and hyperparameters for agent objects. \"\"\"" code nil nil [1 69])
+            ("logging" include nil nil [70 84])
+            ("numpy" include nil nil [86 104])
+            ("LOGGER" variable nil nil [107 143])
+            ("AGENT" variable nil nil [154 430])
+            ("AGENT_MUJOCO" variable nil nil [1848 2036])
+            ("AGENT_BOX2D" variable nil nil [2038 2075]))          
+      :file "config.py"
+      :pointmax 2076
+      :fsize 2075
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 1769 . 1832) (COLON 1767 . 1768) (AS 1763 . 1765) (EXCEPT 1725 . 1731) (INDENT_BLOCK 1664 . 1725) (COLON 1662 . 1663) (TRY 433 . 436) (AS 1658 . 1660)))
+    (semanticdb-table "agent_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines utility classes and functions for agents. \"\"\"" code nil nil [1 68])
+            ("numpy" include nil nil [69 87])
+            ("scipy.ndimage" include nil nil [88 122])
+            ("generate_noise" function
+               (:documentation "
+    Generate a T x dU gaussian-distributed noise vector. This will
+    approximately have mean 0 and variance 1, ignoring smoothing.
+
+    Args:
+        T: Number of time steps.
+        dU: Dimensionality of actions.
+    Hyperparams:
+        smooth: Whether or not to perform smoothing of noise.
+        var : If smooth=True, applies a Gaussian filter with this
+            variance.
+        renorm : If smooth=True, renormalizes data to have variance 1
+            after smoothing.
+    "
+                :arguments 
+                  ( ("T" variable nil (reparse-symbol function_parameters) [144 145])
+                    ("dU" variable nil (reparse-symbol function_parameters) [147 149])
+                    ("hyperparams" variable nil (reparse-symbol function_parameters) [151 162]))                  )
+                nil [125 1190])
+            ("setup" function
+               (:documentation " Go through various types of hyperparameters. "
+                :arguments 
+                  ( ("value" variable nil (reparse-symbol function_parameters) [1202 1207])
+                    ("n" variable nil (reparse-symbol function_parameters) [1209 1210]))                  )
+                nil [1192 1565]))          
+      :file "agent_utils.py"
+      :pointmax 1565
+      :fsize 1564
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "agent.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the base agent class. \"\"\"" code nil nil [1 48])
+            ("abc" include nil nil [49 59])
+            ("copy" include nil nil [60 71])
+            ("gps.agent.config" include nil nil [73 107])
+            ("gps.proto.gps_pb2" include nil nil [108 144])
+            ("gps.sample.sample_list" include nil nil [145 190])
+            ("Agent" type
+               (:documentation "
+    Agent superclass. The agent interacts with the environment to
+    collect samples.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [321 348])
+                    ("__init__" function
+                       (:suite 
+                          ( ("config" variable nil (reparse-symbol indented_block_body) [395 424])
+                            ("config" code nil (reparse-symbol indented_block_body) [433 459])
+                            ("self" variable nil (reparse-symbol indented_block_body) [468 494])
+                            ("self" variable nil (reparse-symbol indented_block_body) [576 644])
+                            ("self" variable nil (reparse-symbol indented_block_body) [653 684])
+                            ("self" variable nil (reparse-symbol indented_block_body) [693 743])
+                            ("self" variable nil (reparse-symbol indented_block_body) [753 807])
+                            ("self" variable nil (reparse-symbol indented_block_body) [816 870])
+                            ("if" code nil (reparse-symbol indented_block_body) [879 1040])
+                            ("self, i" code nil (reparse-symbol indented_block_body) [1106 1132])
+                            ("for" code nil (reparse-symbol indented_block_body) [1141 1312])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1320 1331])
+                            ("self, i" code nil (reparse-symbol indented_block_body) [1402 1426])
+                            ("for" code nil (reparse-symbol indented_block_body) [1435 1606])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1614 1625])
+                            ("self, i" code nil (reparse-symbol indented_block_body) [1694 1719])
+                            ("for" code nil (reparse-symbol indented_block_body) [1728 1901])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1909 1920])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1930 2056])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2065 2195])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2204 2337]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [367 371])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [373 384]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [354 2338])
+                    ("sample" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2378 2382])
+                            ("policy" variable nil (reparse-symbol function_parameters) [2384 2390])
+                            ("condition" variable nil (reparse-symbol function_parameters) [2392 2401])
+                            ("verbose" variable nil (reparse-symbol function_parameters) [2403 2410])
+                            ("save" variable nil (reparse-symbol function_parameters) [2417 2421])
+                            ("noisy" variable nil (reparse-symbol function_parameters) [2428 2433]))                          
+                        :documentation "
+        Draw a sample from the environment, using the specified policy
+        and under the specified condition, with or without noise.
+        ")
+                        (reparse-symbol indented_block_body) [2343 2672])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2687 2691])
+                            ("condition" variable nil (reparse-symbol function_parameters) [2693 2702]))                          
+                        :documentation " Reset environment to the specified condition. ")
+                        (reparse-symbol indented_block_body) [2677 2814])
+                    ("get_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2835 2839])
+                            ("condition" variable nil (reparse-symbol function_parameters) [2841 2850])
+                            ("start" variable nil (reparse-symbol function_parameters) [2852 2857])
+                            ("end" variable nil (reparse-symbol function_parameters) [2861 2864]))                          
+                        :documentation "
+        Return the requested samples based on the start and end indices.
+        Args:
+            start: Starting index of samples to return.
+            end: End index of samples to return.
+        ")
+                        (reparse-symbol indented_block_body) [2819 3234])
+                    ("clear_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3257 3261])
+                            ("condition" variable nil (reparse-symbol function_parameters) [3263 3272]))                          
+                        :documentation "
+        Reset the samples for a given condition, defaulting to all conditions.
+        Args:
+            condition: Condition for which to reset samples.
+        ")
+                        (reparse-symbol indented_block_body) [3239 3625])
+                    ("delete_last_sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3653 3657])
+                            ("condition" variable nil (reparse-symbol function_parameters) [3659 3668]))                          
+                        :documentation " Delete the last sample from the specified condition. ")
+                        (reparse-symbol indented_block_body) [3630 3779])
+                    ("get_idx_x" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3798 3802])
+                            ("sensor_name" variable nil (reparse-symbol function_parameters) [3804 3815]))                          
+                        :documentation "
+        Return the indices corresponding to a certain state sensor name.
+        Args:
+            sensor_name: The name of the sensor.
+        ")
+                        (reparse-symbol indented_block_body) [3784 4023])
+                    ("get_idx_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4044 4048])
+                            ("sensor_name" variable nil (reparse-symbol function_parameters) [4050 4061]))                          
+                        :documentation "
+        Return the indices corresponding to a certain observation sensor name.
+        Args:
+            sensor_name: The name of the sensor.
+        ")
+                        (reparse-symbol indented_block_body) [4028 4277])
+                    ("pack_data_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4300 4304])
+                            ("existing_mat" variable nil (reparse-symbol function_parameters) [4306 4318])
+                            ("data_to_insert" variable nil (reparse-symbol function_parameters) [4320 4334])
+                            ("data_types" variable nil (reparse-symbol function_parameters) [4336 4346])
+                            ("axes" variable nil (reparse-symbol function_parameters) [4370 4374]))                          
+                        :documentation "
+        Update the observation matrix with new data.
+        Args:
+            existing_mat: Current observation matrix.
+            data_to_insert: New data to insert into the existing matrix.
+            data_types: Name of the sensors to insert data for.
+            axes: Which axes to insert data. Defaults to the last axes.
+        ")
+                        (reparse-symbol indented_block_body) [4282 6155])
+                    ("pack_data_meta" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6179 6183])
+                            ("existing_mat" variable nil (reparse-symbol function_parameters) [6185 6197])
+                            ("data_to_insert" variable nil (reparse-symbol function_parameters) [6199 6213])
+                            ("data_types" variable nil (reparse-symbol function_parameters) [6215 6225])
+                            ("axes" variable nil (reparse-symbol function_parameters) [6250 6254]))                          
+                        :documentation "
+        Update the meta data matrix with new data.
+        Args:
+            existing_mat: Current meta data matrix.
+            data_to_insert: New data to insert into the existing matrix.
+            data_types: Name of the sensors to insert data for.
+            axes: Which axes to insert data. Defaults to the last axes.
+        ")
+                        (reparse-symbol indented_block_body) [6160 8034])
+                    ("pack_data_x" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8055 8059])
+                            ("existing_mat" variable nil (reparse-symbol function_parameters) [8061 8073])
+                            ("data_to_insert" variable nil (reparse-symbol function_parameters) [8075 8089])
+                            ("data_types" variable nil (reparse-symbol function_parameters) [8091 8101])
+                            ("axes" variable nil (reparse-symbol function_parameters) [8103 8107]))                          
+                        :documentation "
+        Update the state matrix with new data.
+        Args:
+            existing_mat: Current state matrix.
+            data_to_insert: New data to insert into the existing matrix.
+            data_types: Name of the sensors to insert data for.
+            axes: Which axes to insert data. Defaults to the last axes.
+        ")
+                        (reparse-symbol indented_block_body) [8039 9870])
+                    ("unpack_data_x" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9893 9897])
+                            ("existing_mat" variable nil (reparse-symbol function_parameters) [9899 9911])
+                            ("data_types" variable nil (reparse-symbol function_parameters) [9913 9923])
+                            ("axes" variable nil (reparse-symbol function_parameters) [9925 9929]))                          
+                        :documentation "
+        Returns the requested data from the state matrix.
+        Args:
+            existing_mat: State matrix to unpack from.
+            data_types: Names of the sensor to unpack.
+            axes: Which axes to unpack along. Defaults to the last axes.
+        ")
+                        (reparse-symbol indented_block_body) [9875 11307]))                  
+                :type "class")
+                nil [193 11307]))          
+      :file "agent.py"
+      :pointmax 11307
+      :fsize 11306
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22592 31744 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!agent!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

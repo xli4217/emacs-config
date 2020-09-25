@@ -1,0 +1,200 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables
+  (list
+    (semanticdb-table "run_sim.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("time" include nil nil [19 30])
+            ("try" code nil nil [32 506])
+            ("gripper_state" variable nil nil [567 587])
+            ("print" code nil nil [647 672])
+            ("vrep" code nil nil [673 692])
+            ("clientID" variable nil nil [739 831])
+            ("if" code nil nil [853 7859])
+            ("print" code nil nil [7859 7882]))          
+      :file "run_sim.py"
+      :pointmax 7883
+      :fsize 7882
+      :lastmodtime '(22472 13836 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "vrep_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.envs.base" include nil nil [1 38])
+            ("rllab.spaces" include nil nil [39 67])
+            ("numpy" include nil nil [68 86])
+            ("time" include nil nil [88 99])
+            ("try" code nil nil [101 575])
+            ("VrepEnv" type
+               (:superclasses ("Env")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("print" code nil (reparse-symbol indented_block_body) [701 726])
+                            ("vrep" code nil (reparse-symbol indented_block_body) [735 754])
+                            ("self" variable nil (reparse-symbol indented_block_body) [809 919])
+                            ("if" code nil (reparse-symbol indented_block_body) [949 1643])
+                            ("super" code nil (reparse-symbol indented_block_body) [1652 1683]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [686 690]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [673 1684])
+                    ("observation_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1725 1729]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1689 1779])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1815 1819]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1784 1869])
+                    ("_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1899 1903]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1874 1919])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1934 1938]))                          )
+                        (reparse-symbol indented_block_body) [1924 1988])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2002 2006])
+                            ("action" variable nil (reparse-symbol function_parameters) [2008 2014]))                          )
+                        (reparse-symbol indented_block_body) [1993 2064]))                  
+                :type "class")
+                nil [577 2064]))          
+      :file "vrep_env.py"
+      :pointmax 2064
+      :fsize 2063
+      :lastmodtime '(22494 64567 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ur5_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.envs.base" include nil nil [1 33])
+            ("rllab.spaces" include nil nil [34 62])
+            ("rllab.core.serializable" include nil nil [63 111])
+            ("rllab.misc.overrides" include nil nil [112 154])
+            ("rllab.misc" include nil nil [155 184])
+            ("numpy" include nil nil [186 204])
+            ("vrep_env" include nil nil [206 234])
+            ("vrep_utils" include nil nil [235 291])
+            ("vrep" include nil nil [293 304])
+            ("time" include nil nil [305 316])
+            ("math" include nil nil [318 329])
+            ("UR5Env" type
+               (:superclasses ("VrepEnv" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [474 504])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [513 552])
+                            ("self" variable nil (reparse-symbol indented_block_body) [562 581])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [642 763])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [772 907])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [916 1049])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [1058 1179])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [1188 1313])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [1322 1475])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [1484 1635])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [1644 1795])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [1804 1951])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [1960 2111])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2121 2148])
+                            ("for" code nil (reparse-symbol indented_block_body) [2157 2422])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [2431 2586])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [2635 2791])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [2800 2958])
+                            ("return_code, self" code nil (reparse-symbol indented_block_body) [2967 3111])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3158 3190])
+                            ("if" code nil (reparse-symbol indented_block_body) [3200 3649])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3691 3713])
+                            ("obs" variable nil (reparse-symbol indented_block_body) [3723 3751])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3760 3897]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [459 463]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [446 3898])
+                    ("observation_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3954 3958]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil)
+                            ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3903 4354])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4405 4409]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil)
+                            ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4359 4780])
+                    ("get_current_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4805 4809]))                          )
+                        (reparse-symbol indented_block_body) [4785 7023])
+                    ("execute_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7047 7051])
+                            ("action" variable nil (reparse-symbol function_parameters) [7053 7059]))                          )
+                        (reparse-symbol indented_block_body) [7028 8388])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8418 8422]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [8393 9851])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9880 9884])
+                            ("action" variable nil (reparse-symbol function_parameters) [9886 9892]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [9856 10619])
+                    ("log_diagnostics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10644 10648])
+                            ("paths" variable nil (reparse-symbol function_parameters) [10650 10655]))                          )
+                        (reparse-symbol indented_block_body) [10624 10699]))                  
+                :type "class")
+                nil [332 10699])
+            ("rllab.envs.normalized_env" include nil nil [11119 11166])
+            ("rllab.policies.gaussian_mlp_policy" include nil nil [11167 11231])
+            ("if" code nil nil [11267 12153]))          
+      :file "ur5_env.py"
+      :pointmax 12153
+      :fsize 12152
+      :lastmodtime '(22487 26288 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "vrep_utils.py"
+      :file "vrep_utils.py"
+      :fsize 743
+      :lastmodtime '(22490 65295 0 0))
+    (semanticdb-table "vrep.py"
+      :file "vrep.py"
+      :fsize 70252
+      :lastmodtime '(22490 62466 0 0)))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!V-rep_simulation!UR5_sim!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

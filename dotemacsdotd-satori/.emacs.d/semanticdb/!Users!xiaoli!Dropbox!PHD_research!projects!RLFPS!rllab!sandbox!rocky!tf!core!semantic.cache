@@ -1,0 +1,2060 @@
+;; Object core/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "core/"
+  :tables
+  (list
+    (semanticdb-table "network.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sandbox.rocky.tf.core.layers" include nil nil [1 41])
+            ("tensorflow" include nil nil [42 65])
+            ("numpy" include nil nil [66 84])
+            ("itertools" include nil nil [85 101])
+            ("rllab.core.serializable" include nil nil [102 150])
+            ("sandbox.rocky.tf.core.parameterized" include nil nil [151 212])
+            ("sandbox.rocky.tf.core.layers_powered" include nil nil [213 275])
+            ("MLP" type
+               (:superclasses ("LayersPowered" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [766 805])
+                            ("with" code nil (reparse-symbol indented_block_body) [815 2363]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [335 339])
+                            ("name" variable nil (reparse-symbol function_parameters) [341 345])
+                            ("output_dim" variable nil (reparse-symbol function_parameters) [347 357])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [359 371])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [373 392])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [411 430])
+                            ("hidden_W_init" variable nil (reparse-symbol function_parameters) [432 445])
+                            ("hidden_b_init" variable nil (reparse-symbol function_parameters) [476 489])
+                            ("output_W_init" variable nil (reparse-symbol function_parameters) [531 544])
+                            ("output_b_init" variable nil (reparse-symbol function_parameters) [575 588])
+                            ("input_var" variable nil (reparse-symbol function_parameters) [630 639])
+                            ("input_layer" variable nil (reparse-symbol function_parameters) [646 657])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [664 675])
+                            ("batch_normalization" variable nil (reparse-symbol function_parameters) [682 701])
+                            ("weight_normalization" variable nil (reparse-symbol function_parameters) [709 729]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [322 2363])
+                    ("input_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2398 2402]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2368 2431])
+                    ("output_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2467 2471]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2436 2501])
+                    ("input_var" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2534 2538]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2506 2577])
+                    ("layers" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2607 2611]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2582 2642])
+                    ("output" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2672 2676]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2647 2707]))                  
+                :type "class")
+                nil [278 2707])
+            ("ConvNetwork" type
+               (:superclasses ("LayersPowered" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [3272 3311])
+                            ("\"\"\"
+        A network composed of several convolution layers followed by some fc layers.
+        input_shape: (width,height,channel)
+            HOWEVER, network inputs are assumed flattened. This network will first unflatten the inputs and then apply the standard convolutions and so on.
+        conv_filters: a list of numbers of convolution kernel
+        conv_filter_sizes: a list of sizes (int) of the convolution kernels
+        conv_strides: a list of strides (int) of the conv kernels
+        conv_pads: a list of pad formats (either 'SAME' or 'VALID')
+        hidden_nonlinearity: a nonlinearity from tf.nn, shared by all conv and fc layers
+        hidden_sizes: a list of numbers of hidden units for all fc layers
+        \"\"\"" code nil (reparse-symbol indented_block_body) [3320 4055])
+                            ("with" code nil (reparse-symbol indented_block_body) [4064 7125])
+                            ("LayersPowered" code nil (reparse-symbol indented_block_body) [7181 7216]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2774 2778])
+                            ("name" variable nil (reparse-symbol function_parameters) [2780 2784])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [2786 2797])
+                            ("output_dim" variable nil (reparse-symbol function_parameters) [2799 2809])
+                            ("conv_filters" variable nil (reparse-symbol function_parameters) [2828 2840])
+                            ("conv_filter_sizes" variable nil (reparse-symbol function_parameters) [2842 2859])
+                            ("conv_strides" variable nil (reparse-symbol function_parameters) [2861 2873])
+                            ("conv_pads" variable nil (reparse-symbol function_parameters) [2875 2884])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [2903 2915])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [2917 2936])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [2938 2957])
+                            ("hidden_W_init" variable nil (reparse-symbol function_parameters) [2976 2989])
+                            ("hidden_b_init" variable nil (reparse-symbol function_parameters) [3020 3033])
+                            ("output_W_init" variable nil (reparse-symbol function_parameters) [3075 3088])
+                            ("output_b_init" variable nil (reparse-symbol function_parameters) [3119 3132])
+                            ("input_var" variable nil (reparse-symbol function_parameters) [3174 3183])
+                            ("input_layer" variable nil (reparse-symbol function_parameters) [3190 3201])
+                            ("batch_normalization" variable nil (reparse-symbol function_parameters) [3208 3227])
+                            ("weight_normalization" variable nil (reparse-symbol function_parameters) [3235 3255]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2761 7217])
+                    ("input_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7252 7256]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7222 7285])
+                    ("output_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7321 7325]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7290 7355])
+                    ("input_var" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7388 7392]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7360 7431]))                  
+                :type "class")
+                nil [2709 7431])
+            ("GRUNetwork" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("with" code nil (reparse-symbol indented_block_body) [7703 9995]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7476 7480])
+                            ("name" variable nil (reparse-symbol function_parameters) [7482 7486])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [7488 7499])
+                            ("output_dim" variable nil (reparse-symbol function_parameters) [7501 7511])
+                            ("hidden_dim" variable nil (reparse-symbol function_parameters) [7513 7523])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [7525 7544])
+                            ("gru_layer_cls" variable nil (reparse-symbol function_parameters) [7574 7587])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [7617 7636])
+                            ("input_var" variable nil (reparse-symbol function_parameters) [7643 7652])
+                            ("input_layer" variable nil (reparse-symbol function_parameters) [7659 7670])
+                            ("layer_args" variable nil (reparse-symbol function_parameters) [7677 7687]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7463 9995])
+                    ("state_dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10028 10032]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10000 10067])
+                    ("hidden_dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10101 10105]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10072 10140])
+                    ("input_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10175 10179]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10145 10208])
+                    ("input_var" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10241 10245]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10213 10284])
+                    ("output_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10320 10324]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10289 10354])
+                    ("recurrent_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10393 10397]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10359 10427])
+                    ("step_input_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10467 10471]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10432 10508])
+                    ("step_prev_state_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10553 10557]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10513 10599])
+                    ("step_hidden_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10640 10644]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10604 10682])
+                    ("step_state_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10722 10726]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10687 10763])
+                    ("step_output_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10804 10808]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10768 10846])
+                    ("hid_init_param" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10884 10888]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10851 10927])
+                    ("state_init_param" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10967 10971]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [10932 11010]))                  
+                :type "class")
+                nil [7433 11010])
+            ("LSTMNetwork" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("with" code nil (reparse-symbol indented_block_body) [11340 14075]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11056 11060])
+                            ("name" variable nil (reparse-symbol function_parameters) [11062 11066])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [11068 11079])
+                            ("output_dim" variable nil (reparse-symbol function_parameters) [11081 11091])
+                            ("hidden_dim" variable nil (reparse-symbol function_parameters) [11093 11103])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [11105 11124])
+                            ("lstm_layer_cls" variable nil (reparse-symbol function_parameters) [11154 11168])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [11199 11218])
+                            ("input_var" variable nil (reparse-symbol function_parameters) [11225 11234])
+                            ("input_layer" variable nil (reparse-symbol function_parameters) [11241 11252])
+                            ("forget_bias" variable nil (reparse-symbol function_parameters) [11259 11270])
+                            ("use_peepholes" variable nil (reparse-symbol function_parameters) [11276 11289])
+                            ("layer_args" variable nil (reparse-symbol function_parameters) [11314 11324]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [11043 14075])
+                    ("state_dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14108 14112]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14080 14151])
+                    ("input_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14186 14190]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14156 14219])
+                    ("input_var" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14252 14256]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14224 14295])
+                    ("output_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14331 14335]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14300 14365])
+                    ("recurrent_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14404 14408]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14370 14439])
+                    ("step_input_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14479 14483]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14444 14520])
+                    ("step_prev_state_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14565 14569]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14525 14611])
+                    ("step_hidden_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14652 14656]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14616 14694])
+                    ("step_state_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14734 14738]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14699 14775])
+                    ("step_cell_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14814 14818]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14780 14854])
+                    ("step_output_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14895 14899]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14859 14937])
+                    ("hid_init_param" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14975 14979]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [14942 15018])
+                    ("cell_init_param" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15057 15061]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [15023 15101])
+                    ("state_init_param" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15141 15145]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [15106 15235]))                  
+                :type "class")
+                nil [11012 15235])
+            ("ConvMergeNetwork" type
+               (:documentation "
+    This network allows the input to consist of a convolution-friendly component, plus a non-convolution-friendly
+    component. These two components will be concatenated in the fully connected layers. There can also be a list of
+    optional layers for the non-convolution-friendly component alone.
+
+
+    The input to the network should be a matrix where each row is a single input entry, with both the aforementioned
+    components flattened out and then concatenated together
+    "
+                :superclasses ("LayersPowered" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Serializable" code nil (reparse-symbol indented_block_body) [16340 16379])
+                            ("if" code nil (reparse-symbol indented_block_body) [16389 16456])
+                            ("with" code nil (reparse-symbol indented_block_body) [16465 19494]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15803 15807])
+                            ("name" variable nil (reparse-symbol function_parameters) [15809 15813])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [15815 15826])
+                            ("extra_input_shape" variable nil (reparse-symbol function_parameters) [15828 15845])
+                            ("output_dim" variable nil (reparse-symbol function_parameters) [15847 15857])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [15859 15871])
+                            ("conv_filters" variable nil (reparse-symbol function_parameters) [15890 15902])
+                            ("conv_filter_sizes" variable nil (reparse-symbol function_parameters) [15904 15921])
+                            ("conv_strides" variable nil (reparse-symbol function_parameters) [15923 15935])
+                            ("conv_pads" variable nil (reparse-symbol function_parameters) [15937 15946])
+                            ("extra_hidden_sizes" variable nil (reparse-symbol function_parameters) [15965 15983])
+                            ("hidden_W_init" variable nil (reparse-symbol function_parameters) [16007 16020])
+                            ("hidden_b_init" variable nil (reparse-symbol function_parameters) [16051 16064])
+                            ("output_W_init" variable nil (reparse-symbol function_parameters) [16106 16119])
+                            ("output_b_init" variable nil (reparse-symbol function_parameters) [16150 16163])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [16205 16224])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [16254 16273])
+                            ("input_var" variable nil (reparse-symbol function_parameters) [16297 16306])
+                            ("input_layer" variable nil (reparse-symbol function_parameters) [16313 16324]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [15790 19494])
+                    ("input_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19529 19533]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [19499 19562])
+                    ("output_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19598 19602]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [19567 19632])
+                    ("input_var" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19665 19669]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [19637 19708]))                  
+                :type "class")
+                nil [15237 19708]))          
+      :file "network.py"
+      :pointmax 19708
+      :fsize 19707
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "layers.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("functools" include nil nil [25 41])
+            ("numpy" include nil nil [42 60])
+            ("math" include nil nil [61 72])
+            ("tensorflow" include nil nil [73 96])
+            ("tensorflow.python.training" include nil nil [97 151])
+            ("collections" include nil nil [152 187])
+            ("collections" include nil nil [188 217])
+            ("itertools" include nil nil [218 245])
+            ("inspect" include nil nil [246 276])
+            ("difflib" include nil nil [277 314])
+            ("warnings" include nil nil [315 340])
+            ("G" type
+               (:superclasses ("object")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [364 368]))                  
+                :type "class")
+                nil [343 369])
+            ("G" variable nil nil [371 386])
+            ("create_param" function (:arguments 
+              ( ("spec" variable nil (reparse-symbol function_parameters) [406 410])
+                ("shape" variable nil (reparse-symbol function_parameters) [412 417])
+                ("name" variable nil (reparse-symbol function_parameters) [419 423])
+                ("trainable" variable nil (reparse-symbol function_parameters) [425 434])
+                ("regularizable" variable nil (reparse-symbol function_parameters) [441 454]))              ) nil [389 957])
+            ("as_tuple" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [972 973])
+                ("N" variable nil (reparse-symbol function_parameters) [975 976])
+                ("t" variable nil (reparse-symbol function_parameters) [978 979]))              ) nil [959 1441])
+            ("conv_output_length" function
+               (:documentation "Helper function to compute the output size of a convolution operation
+    This function computes the length along a single axis, which corresponds
+    to a 1D convolution. It can also be used for convolutions with higher
+    dimensionalities by using it individually for each axis.
+    Parameters
+    ----------
+    input_length : int or None
+        The size of the input.
+    filter_size : int
+        The size of the filter.
+    stride : int
+        The stride of the convolution operation.
+    pad : int, 'full' or 'same' (default: 0)
+        By default, the convolution is only computed where the input and the
+        filter fully overlap (a valid convolution). When ``stride=1``, this
+        yields an output that is smaller than the input by ``filter_size - 1``.
+        The `pad` argument allows you to implicitly pad the input with zeros,
+        extending the output size.
+        A single integer results in symmetric zero-padding of the given size on
+        both borders.
+        ``'full'`` pads with one less than the filter size on both sides. This
+        is equivalent to computing the convolution wherever the input and the
+        filter overlap by at least one position.
+        ``'same'`` pads with half the filter size on both sides (one less on
+        the second side for an even filter size). When ``stride=1``, this
+        results in an output size equal to the input size.
+    Returns
+    -------
+    int or None
+        The output size corresponding to the given convolution parameters, or
+        ``None`` if `input_size` is ``None``.
+    Raises
+    ------
+    ValueError
+        When an invalid padding is specified, a `ValueError` is raised.
+    "
+                :arguments 
+                  ( ("input_length" variable nil (reparse-symbol function_parameters) [1466 1478])
+                    ("filter_size" variable nil (reparse-symbol function_parameters) [1480 1491])
+                    ("stride" variable nil (reparse-symbol function_parameters) [1493 1499])
+                    ("pad" variable nil (reparse-symbol function_parameters) [1501 1504]))                  )
+                nil [1443 3805])
+            ("Layer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [3940 4155])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4163 4190])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4199 4247])
+                            ("if" code nil (reparse-symbol indented_block_body) [4257 4367])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4376 4392])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4401 4437])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4446 4473])
+                            ("if" code nil (reparse-symbol indented_block_body) [4483 4805]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3845 3849])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [3851 3859])
+                            ("name" variable nil (reparse-symbol function_parameters) [3861 3865])
+                            ("variable_reuse" variable nil (reparse-symbol function_parameters) [3872 3886])
+                            ("weight_normalization" variable nil (reparse-symbol function_parameters) [3893 3913])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [3921 3929]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3832 4805])
+                    ("output_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4841 4845]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4810 5392])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5422 5426])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [5428 5439]))                          )
+                        (reparse-symbol indented_block_body) [5397 5476])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5500 5504])
+                            ("input" variable nil (reparse-symbol function_parameters) [5506 5511])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [5513 5521]))                          )
+                        (reparse-symbol indented_block_body) [5481 5558])
+                    ("add_param_plain" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5583 5587])
+                            ("spec" variable nil (reparse-symbol function_parameters) [5589 5593])
+                            ("shape" variable nil (reparse-symbol function_parameters) [5595 5600])
+                            ("name" variable nil (reparse-symbol function_parameters) [5602 5606])
+                            ("tags" variable nil (reparse-symbol function_parameters) [5608 5614]))                          )
+                        (reparse-symbol indented_block_body) [5563 5988])
+                    ("add_param" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6007 6011])
+                            ("spec" variable nil (reparse-symbol function_parameters) [6013 6017])
+                            ("shape" variable nil (reparse-symbol function_parameters) [6019 6024])
+                            ("name" variable nil (reparse-symbol function_parameters) [6026 6030])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [6032 6040]))                          )
+                        (reparse-symbol indented_block_body) [5993 7028])
+                    ("get_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7048 7052])
+                            ("tags" variable nil (reparse-symbol function_parameters) [7054 7060]))                          )
+                        (reparse-symbol indented_block_body) [7033 7677]))                  
+                :type "class")
+                nil [3807 7677])
+            ("InputLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [7769 7818])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7827 7845])
+                            ("if" code nil (reparse-symbol indented_block_body) [7854 8151])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8159 8185]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7721 7725])
+                            ("shape" variable nil (reparse-symbol function_parameters) [7727 7732])
+                            ("input_var" variable nil (reparse-symbol function_parameters) [7734 7743])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [7750 7758]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7708 8186])
+                    ("output_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8239 8243]))                          
+                        :decorators 
+                          ( ("Layer.output_shape.getter" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [8191 8272]))                  
+                :type "class")
+                nil [7679 8272])
+            ("MergeLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [8363 8535])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8544 8699])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8708 8724])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8733 8760])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8769 8796]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8316 8320])
+                            ("incomings" variable nil (reparse-symbol function_parameters) [8322 8331])
+                            ("name" variable nil (reparse-symbol function_parameters) [8333 8337])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [8344 8352]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8303 8797])
+                    ("output_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8850 8854]))                          
+                        :decorators 
+                          ( ("Layer.output_shape.getter" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [8802 9402])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9432 9436])
+                            ("input_shapes" variable nil (reparse-symbol function_parameters) [9438 9450]))                          )
+                        (reparse-symbol indented_block_body) [9407 9487])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9511 9515])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [9517 9523])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [9525 9533]))                          )
+                        (reparse-symbol indented_block_body) [9492 9570]))                  
+                :type "class")
+                nil [8274 9570])
+            ("ConcatLayer" type
+               (:documentation "
+    Concatenates multiple inputs along the specified axis. Inputs should have
+    the same shape except for the dimension specified in axis, which can have
+    different sizes.
+    Parameters
+    -----------
+    incomings : a list of :class:`Layer` instances or tuples
+        The layers feeding into this layer, or expected input shapes
+    axis : int
+        Axis which inputs are joined over
+    "
+                :superclasses ("MergeLayer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [10076 10130])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10139 10155]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10032 10036])
+                            ("incomings" variable nil (reparse-symbol function_parameters) [10038 10047])
+                            ("axis" variable nil (reparse-symbol function_parameters) [10049 10053])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [10057 10065]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10019 10156])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10186 10190])
+                            ("input_shapes" variable nil (reparse-symbol function_parameters) [10192 10204]))                          )
+                        (reparse-symbol indented_block_body) [10161 11272])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11296 11300])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [11302 11308])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [11310 11318]))                          )
+                        (reparse-symbol indented_block_body) [11277 11659]))                  
+                :type "class")
+                nil [9572 11659])
+            ("concat" variable nil nil [11661 11681])
+            ("XavierUniformInitializer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11753 11757])
+                            ("shape" variable nil (reparse-symbol function_parameters) [11759 11764])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [11766 11771])
+                            ("args" variable nil (reparse-symbol function_parameters) [11784 11789])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [11791 11799]))                          )
+                        (reparse-symbol indented_block_body) [11740 12202]))                  
+                :type "class")
+                nil [11696 12202])
+            ("HeUniformInitializer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12257 12261])
+                            ("shape" variable nil (reparse-symbol function_parameters) [12263 12268])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [12270 12275])
+                            ("args" variable nil (reparse-symbol function_parameters) [12288 12293])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [12295 12303]))                          )
+                        (reparse-symbol indented_block_body) [12244 12627]))                  
+                :type "class")
+                nil [12204 12627])
+            ("py_ortho_init" function (:arguments 
+              ( ("scale" variable nil (reparse-symbol function_parameters) [12647 12652]))              ) nil [12629 12803])
+            ("OrthogonalInitializer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [12885 12903]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12859 12863])
+                            ("scale" variable nil (reparse-symbol function_parameters) [12865 12870]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [12846 12904])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12922 12926])
+                            ("shape" variable nil (reparse-symbol function_parameters) [12928 12933])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [12935 12940])
+                            ("args" variable nil (reparse-symbol function_parameters) [12953 12958])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [12960 12968]))                          )
+                        (reparse-symbol indented_block_body) [12909 13104]))                  
+                :type "class")
+                nil [12805 13104])
+            ("ParamLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [13257 13309])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13318 13344])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13353 13494]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13148 13152])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [13154 13162])
+                            ("num_units" variable nil (reparse-symbol function_parameters) [13164 13173])
+                            ("param" variable nil (reparse-symbol function_parameters) [13175 13180])
+                            ("trainable" variable nil (reparse-symbol function_parameters) [13222 13231])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [13238 13246]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13135 13495])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13525 13529])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [13531 13542]))                          )
+                        (reparse-symbol indented_block_body) [13500 13597])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13621 13625])
+                            ("input" variable nil (reparse-symbol function_parameters) [13627 13632])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [13634 13642]))                          )
+                        (reparse-symbol indented_block_body) [13602 13921]))                  
+                :type "class")
+                nil [13106 13921])
+            ("OpLayer" type
+               (:superclasses ("MergeLayer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [14058 14101])
+                            ("incomings" code nil (reparse-symbol indented_block_body) [14109 14140])
+                            ("super" code nil (reparse-symbol indented_block_body) [14149 14199])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14208 14220])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14229 14253])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14262 14288]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13967 13971])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [13973 13981])
+                            ("op" variable nil (reparse-symbol function_parameters) [13983 13985])
+                            ("shape_op" variable nil (reparse-symbol function_parameters) [14004 14012])
+                            ("extras" variable nil (reparse-symbol function_parameters) [14026 14032])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [14039 14047]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13954 14289])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14319 14323])
+                            ("input_shapes" variable nil (reparse-symbol function_parameters) [14325 14337]))                          )
+                        (reparse-symbol indented_block_body) [14294 14384])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14408 14412])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [14414 14420])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [14422 14430]))                          )
+                        (reparse-symbol indented_block_body) [14389 14465]))                  
+                :type "class")
+                nil [13923 14465])
+            ("DenseLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [14647 14699])
+                            ("nonlinearity" code nil (reparse-symbol indented_block_body) [14769 14781])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14791 14817])
+                            ("num_inputs" variable nil (reparse-symbol indented_block_body) [14827 14874])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14884 14945])
+                            ("if" code nil (reparse-symbol indented_block_body) [14954 15092]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14509 14513])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [14515 14523])
+                            ("num_units" variable nil (reparse-symbol function_parameters) [14525 14534])
+                            ("nonlinearity" variable nil (reparse-symbol function_parameters) [14536 14548])
+                            ("W" variable nil (reparse-symbol function_parameters) [14555 14556])
+                            ("b" variable nil (reparse-symbol function_parameters) [14585 14586])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [14628 14636]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [14496 15092])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15122 15126])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [15128 15139]))                          )
+                        (reparse-symbol indented_block_body) [15097 15190])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15214 15218])
+                            ("input" variable nil (reparse-symbol function_parameters) [15220 15225])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [15227 15235]))                          )
+                        (reparse-symbol indented_block_body) [15195 15653]))                  
+                :type "class")
+                nil [14467 15653])
+            ("BaseConvLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Input is assumed to be of shape batch*height*width*channels
+        \"\"\"" code nil (reparse-symbol indented_block_body) [15944 16027])
+                            ("super" code nil (reparse-symbol indented_block_body) [16036 16091])
+                            ("if" code nil (reparse-symbol indented_block_body) [16100 16228])
+                            ("if" code nil (reparse-symbol indented_block_body) [16237 16633])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16641 16651])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16660 16690])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16699 16747])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16756 16794])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16803 16835])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16845 16859])
+                            ("if" code nil (reparse-symbol indented_block_body) [16869 17052])
+                            ("self" variable nil (reparse-symbol indented_block_body) [17061 17117])
+                            ("if" code nil (reparse-symbol indented_block_body) [17126 17496]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15700 15704])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [15706 15714])
+                            ("num_filters" variable nil (reparse-symbol function_parameters) [15716 15727])
+                            ("filter_size" variable nil (reparse-symbol function_parameters) [15729 15740])
+                            ("stride" variable nil (reparse-symbol function_parameters) [15742 15748])
+                            ("pad" variable nil (reparse-symbol function_parameters) [15752 15755])
+                            ("untie_biases" variable nil (reparse-symbol function_parameters) [15782 15794])
+                            ("W" variable nil (reparse-symbol function_parameters) [15819 15820])
+                            ("b" variable nil (reparse-symbol function_parameters) [15849 15850])
+                            ("nonlinearity" variable nil (reparse-symbol function_parameters) [15892 15904])
+                            ("n" variable nil (reparse-symbol function_parameters) [15917 15918])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [15925 15933]))                          
+                        :documentation "
+        Input is assumed to be of shape batch*height*width*channels
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [15687 17496])
+                    ("get_W_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17517 17521]))                          
+                        :documentation "Get the shape of the weight matrix `W`.
+        Returns
+        -------
+        tuple of int
+            The shape of the weight matrix.
+        ")
+                        (reparse-symbol indented_block_body) [17501 17807])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17837 17841])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [17843 17854]))                          )
+                        (reparse-symbol indented_block_body) [17812 18500])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18524 18528])
+                            ("input" variable nil (reparse-symbol function_parameters) [18530 18535])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [18537 18545]))                          )
+                        (reparse-symbol indented_block_body) [18505 18930])
+                    ("convolve" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18948 18952])
+                            ("input" variable nil (reparse-symbol function_parameters) [18954 18959])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [18961 18969]))                          
+                        :documentation "
+        Symbolically convolves `input` with ``self.W``, producing an output of
+        shape ``self.output_shape``. To be implemented by subclasses.
+        Parameters
+        ----------
+        input : Theano tensor
+            The input minibatch to convolve
+        **kwargs
+            Any additional keyword arguments from :meth:`get_output_for`
+        Returns
+        -------
+        Theano tensor
+            `input` convolved according to the configuration of this layer,
+            without any bias or nonlinearity applied.
+        ")
+                        (reparse-symbol indented_block_body) [18935 19751]))                  
+                :type "class")
+                nil [15655 19751])
+            ("Conv2DLayer" type
+               (:superclasses ("BaseConvLayer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [20088 20377])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20386 20416]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19804 19808])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [19810 19818])
+                            ("num_filters" variable nil (reparse-symbol function_parameters) [19820 19831])
+                            ("filter_size" variable nil (reparse-symbol function_parameters) [19833 19844])
+                            ("stride" variable nil (reparse-symbol function_parameters) [19846 19852])
+                            ("pad" variable nil (reparse-symbol function_parameters) [19878 19881])
+                            ("untie_biases" variable nil (reparse-symbol function_parameters) [19891 19903])
+                            ("W" variable nil (reparse-symbol function_parameters) [19928 19929])
+                            ("b" variable nil (reparse-symbol function_parameters) [19958 19959])
+                            ("nonlinearity" variable nil (reparse-symbol function_parameters) [20001 20013])
+                            ("convolution" variable nil (reparse-symbol function_parameters) [20043 20054])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [20069 20077]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [19791 20417])
+                    ("convolve" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20435 20439])
+                            ("input" variable nil (reparse-symbol function_parameters) [20441 20446])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [20448 20456]))                          )
+                        (reparse-symbol indented_block_body) [20422 20583]))                  
+                :type "class")
+                nil [19753 20583])
+            ("pool_output_length" function (:arguments 
+              ( ("input_length" variable nil (reparse-symbol function_parameters) [20608 20620])
+                ("pool_size" variable nil (reparse-symbol function_parameters) [20622 20631])
+                ("stride" variable nil (reparse-symbol function_parameters) [20633 20639])
+                ("pad" variable nil (reparse-symbol function_parameters) [20641 20644]))              ) nil [20585 20883])
+            ("Pool2DLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [21012 21065])
+                            ("self" variable nil (reparse-symbol indented_block_body) [21075 21114])
+                            ("if" code nil (reparse-symbol indented_block_body) [21124 21431])
+                            ("if" code nil (reparse-symbol indented_block_body) [21440 21560])
+                            ("self" variable nil (reparse-symbol indented_block_body) [21569 21583])
+                            ("self" variable nil (reparse-symbol indented_block_body) [21593 21609]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20928 20932])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [20934 20942])
+                            ("pool_size" variable nil (reparse-symbol function_parameters) [20944 20953])
+                            ("stride" variable nil (reparse-symbol function_parameters) [20955 20961])
+                            ("pad" variable nil (reparse-symbol function_parameters) [20968 20971])
+                            ("mode" variable nil (reparse-symbol function_parameters) [20981 20985])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [20993 21001]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [20915 21610])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21640 21644])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [21646 21657]))                          )
+                        (reparse-symbol indented_block_body) [21615 22391])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22415 22419])
+                            ("input" variable nil (reparse-symbol function_parameters) [22421 22426])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [22428 22436]))                          )
+                        (reparse-symbol indented_block_body) [22396 22682]))                  
+                :type "class")
+                nil [20885 22682])
+            ("spatial_expected_softmax" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [22713 22714])
+                ("temp" variable nil (reparse-symbol function_parameters) [22716 22720]))              ) nil [22684 23310])
+            ("SpatialExpectedSoftmaxLayer" type
+               (:documentation "
+    Computes the softmax across a spatial region, separately for each channel, followed by an expectation operation.
+    "
+                :superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [23540 23576]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23505 23509])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [23511 23519])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [23521 23529]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [23492 23577])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23695 23699])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [23701 23712]))                          )
+                        (reparse-symbol indented_block_body) [23670 23768])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23792 23796])
+                            ("input" variable nil (reparse-symbol function_parameters) [23798 23803])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [23805 23813]))                          )
+                        (reparse-symbol indented_block_body) [23773 23876]))                  
+                :type "class")
+                nil [23312 23876])
+            ("DropoutLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [25407 25461])
+                            ("self" variable nil (reparse-symbol indented_block_body) [25470 25480])
+                            ("self" variable nil (reparse-symbol indented_block_body) [25489 25511]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25351 25355])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [25357 25365])
+                            ("p" variable nil (reparse-symbol function_parameters) [25367 25368])
+                            ("rescale" variable nil (reparse-symbol function_parameters) [25374 25381])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [25388 25396]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [25338 25512])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25536 25540])
+                            ("input" variable nil (reparse-symbol function_parameters) [25542 25547])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [25549 25562])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [25570 25578]))                          
+                        :documentation "
+        Parameters
+        ----------
+        input : tensor
+            output from the previous layer
+        deterministic : bool
+            If true dropout and scaling is disabled, see notes
+        ")
+                        (reparse-symbol indented_block_body) [25517 26206])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26236 26240])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [26242 26253]))                          )
+                        (reparse-symbol indented_block_body) [26211 26283]))                  
+                :type "class")
+                nil [25307 26283])
+            ("FlattenLayer" type
+               (:documentation "
+    A layer that flattens its input. The leading ``outdim-1`` dimensions of
+    the output will have the same shape as the input. The remaining dimensions
+    are collapsed into the last dimension.
+    Parameters
+    ----------
+    incoming : a :class:`Layer` instance or a tuple
+        The layer feeding into this layer, or the expected input shape.
+    outdim : int
+        The number of dimensions in the output.
+    See Also
+    --------
+    flatten  : Shortcut
+    "
+                :superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [26883 26937])
+                            ("self" variable nil (reparse-symbol indented_block_body) [26946 26966])
+                            ("if" code nil (reparse-symbol indented_block_body) [26976 27054]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26838 26842])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [26844 26852])
+                            ("outdim" variable nil (reparse-symbol function_parameters) [26854 26860])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [26864 26872]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [26825 27054])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27084 27088])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [27090 27101]))                          )
+                        (reparse-symbol indented_block_body) [27059 27356])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27380 27384])
+                            ("input" variable nil (reparse-symbol function_parameters) [27386 27391])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [27393 27401]))                          )
+                        (reparse-symbol indented_block_body) [27361 27683]))                  
+                :type "class")
+                nil [26310 27683])
+            ("flatten" variable nil nil [27685 27707])
+            ("ReshapeLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [27808 27862])
+                            ("shape" variable nil (reparse-symbol indented_block_body) [27871 27891])
+                            ("for" code nil (reparse-symbol indented_block_body) [27900 28772])
+                            ("if" code nil (reparse-symbol indented_block_body) [28780 28883])
+                            ("self" variable nil (reparse-symbol indented_block_body) [28891 28909])
+                            ("self" code nil (reparse-symbol indented_block_body) [28982 29025]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27766 27770])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [27772 27780])
+                            ("shape" variable nil (reparse-symbol function_parameters) [27782 27787])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [27789 27797]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [27753 29026])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29056 29060])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [29062 29073])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [29075 29083]))                          )
+                        (reparse-symbol indented_block_body) [29031 31907])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31931 31935])
+                            ("input" variable nil (reparse-symbol function_parameters) [31937 31942])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [31944 31952]))                          )
+                        (reparse-symbol indented_block_body) [31912 32307]))                  
+                :type "class")
+                nil [27722 32307])
+            ("reshape" variable nil nil [32309 32331])
+            ("SliceLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [32441 32493])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32502 32522])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32531 32547]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32388 32392])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [32394 32402])
+                            ("indices" variable nil (reparse-symbol function_parameters) [32404 32411])
+                            ("axis" variable nil (reparse-symbol function_parameters) [32413 32417])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [32422 32430]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [32375 32548])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32578 32582])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [32584 32595]))                          )
+                        (reparse-symbol indented_block_body) [32553 32977])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33001 33005])
+                            ("input" variable nil (reparse-symbol function_parameters) [33007 33012])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [33014 33022]))                          )
+                        (reparse-symbol indented_block_body) [32982 33504]))                  
+                :type "class")
+                nil [32346 33504])
+            ("DimshuffleLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [33597 33654])
+                            ("used_dims" variable nil (reparse-symbol indented_block_body) [33699 33716])
+                            ("for" code nil (reparse-symbol indented_block_body) [33725 34249])
+                            ("self" variable nil (reparse-symbol indented_block_body) [34258 34280])
+                            ("self" code nil (reparse-symbol indented_block_body) [34354 34397]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33553 33557])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [33559 33567])
+                            ("pattern" variable nil (reparse-symbol function_parameters) [33569 33576])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [33578 33586]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [33540 34398])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34428 34432])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [34434 34445]))                          )
+                        (reparse-symbol indented_block_body) [34403 35697])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [35721 35725])
+                            ("input" variable nil (reparse-symbol function_parameters) [35727 35732])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [35734 35742]))                          )
+                        (reparse-symbol indented_block_body) [35702 35794]))                  
+                :type "class")
+                nil [33506 35794])
+            ("dimshuffle" variable nil nil [35796 35824])
+            ("apply_ln" function (:arguments 
+              ( ("layer" variable nil (reparse-symbol function_parameters) [35852 35857]))              ) nil [35839 36664])
+            ("GRULayer" type
+               (:documentation "
+    A gated recurrent unit implements the following update mechanism:
+    Reset gate:        r(t) = f_r(x(t) @ W_xr + h(t-1) @ W_hr + b_r)
+    Update gate:       u(t) = f_u(x(t) @ W_xu + h(t-1) @ W_hu + b_u)
+    Cell gate:         c(t) = f_c(x(t) @ W_xc + r(t) * (h(t-1) @ W_hc) + b_c)
+    New hidden state:  h(t) = (1 - u(t)) * h(t-1) + u_t * c(t)
+    Note that the reset, update, and cell vectors must have the same dimension as the hidden state
+    "
+                :superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [37517 37595])
+                            ("if" code nil (reparse-symbol indented_block_body) [37604 37678])
+                            ("super" code nil (reparse-symbol indented_block_body) [37687 37737])
+                            ("input_shape" variable nil (reparse-symbol indented_block_body) [37747 37781])
+                            ("input_dim" variable nil (reparse-symbol indented_block_body) [37791 37823])
+                            ("self" variable nil (reparse-symbol indented_block_body) [37833 37879])
+                            ("self" variable nil (reparse-symbol indented_block_body) [37936 38085])
+                            ("self" variable nil (reparse-symbol indented_block_body) [38131 38204])
+                            ("self" variable nil (reparse-symbol indented_block_body) [38213 38286])
+                            ("self" variable nil (reparse-symbol indented_block_body) [38295 38375])
+                            ("self" variable nil (reparse-symbol indented_block_body) [38422 38495])
+                            ("self" variable nil (reparse-symbol indented_block_body) [38504 38577])
+                            ("self" variable nil (reparse-symbol indented_block_body) [38586 38666])
+                            ("self" variable nil (reparse-symbol indented_block_body) [38711 38784])
+                            ("self" variable nil (reparse-symbol indented_block_body) [38793 38866])
+                            ("self" variable nil (reparse-symbol indented_block_body) [38875 38955])
+                            ("self" variable nil (reparse-symbol indented_block_body) [38965 39039])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39048 39122])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39131 39193])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39202 39264])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39273 39342])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39352 39394])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39403 39429])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39438 39477])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39486 39511])
+                            ("h_dummy" variable nil (reparse-symbol indented_block_body) [39598 39681])
+                            ("x_dummy" variable nil (reparse-symbol indented_block_body) [39690 39773])
+                            ("self" code nil (reparse-symbol indented_block_body) [39782 39809]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37171 37175])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [37177 37185])
+                            ("num_units" variable nil (reparse-symbol function_parameters) [37187 37196])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [37198 37217])
+                            ("gate_nonlinearity" variable nil (reparse-symbol function_parameters) [37236 37253])
+                            ("W_x_init" variable nil (reparse-symbol function_parameters) [37269 37277])
+                            ("W_h_init" variable nil (reparse-symbol function_parameters) [37306 37314])
+                            ("b_init" variable nil (reparse-symbol function_parameters) [37357 37363])
+                            ("hidden_init" variable nil (reparse-symbol function_parameters) [37388 37399])
+                            ("hidden_init_trainable" variable nil (reparse-symbol function_parameters) [37424 37445])
+                            ("layer_normalization" variable nil (reparse-symbol function_parameters) [37470 37489])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [37497 37505]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [37158 39810])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39824 39828])
+                            ("hprev" variable nil (reparse-symbol function_parameters) [39830 39835])
+                            ("x" variable nil (reparse-symbol function_parameters) [39837 39838]))                          )
+                        (reparse-symbol indented_block_body) [39815 41020])
+                    ("get_step_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [41044 41048])
+                            ("l_in" variable nil (reparse-symbol function_parameters) [41050 41054])
+                            ("l_prev_hidden" variable nil (reparse-symbol function_parameters) [41056 41069])
+                            ("name" variable nil (reparse-symbol function_parameters) [41071 41075]))                          )
+                        (reparse-symbol indented_block_body) [41025 41177])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [41207 41211])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [41213 41224]))                          )
+                        (reparse-symbol indented_block_body) [41182 41318])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [41342 41346])
+                            ("input" variable nil (reparse-symbol function_parameters) [41348 41353])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [41355 41363]))                          )
+                        (reparse-symbol indented_block_body) [41323 42211]))                  
+                :type "class")
+                nil [36666 42211])
+            ("GRUStepLayer" type
+               (:superclasses ("MergeLayer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [42315 42370])
+                            ("self" variable nil (reparse-symbol indented_block_body) [42379 42412]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42262 42266])
+                            ("incomings" variable nil (reparse-symbol function_parameters) [42268 42277])
+                            ("recurrent_layer" variable nil (reparse-symbol function_parameters) [42279 42294])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [42296 42304]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [42249 42413])
+                    ("get_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42433 42437])
+                            ("tags" variable nil (reparse-symbol function_parameters) [42439 42445]))                          )
+                        (reparse-symbol indented_block_body) [42418 42498])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42528 42532])
+                            ("input_shapes" variable nil (reparse-symbol function_parameters) [42534 42546]))                          )
+                        (reparse-symbol indented_block_body) [42503 42636])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42660 42664])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [42666 42672])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [42674 42682]))                          )
+                        (reparse-symbol indented_block_body) [42641 42894]))                  
+                :type "class")
+                nil [42213 42894])
+            ("TfGRULayer" type
+               (:documentation "
+    Use TensorFlow's built-in GRU implementation
+    "
+                :superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("assert" code nil (reparse-symbol indented_block_body) [43131 43169])
+                            ("input_dim" variable nil (reparse-symbol indented_block_body) [43178 43207])
+                            ("gru" variable nil (reparse-symbol indented_block_body) [43216 43297])
+                            ("self" variable nil (reparse-symbol indented_block_body) [43306 43332])
+                            ("self" variable nil (reparse-symbol indented_block_body) [43341 43363])
+                            ("self" variable nil (reparse-symbol indented_block_body) [43372 43386])
+                            ("self" variable nil (reparse-symbol indented_block_body) [43395 43441])
+                            ("Layer" code nil (reparse-symbol indented_block_body) [43450 43499])
+                            ("input_dummy" variable nil (reparse-symbol indented_block_body) [43539 43613])
+                            ("hidden_dummy" variable nil (reparse-symbol indented_block_body) [43622 43698])
+                            ("with" code nil (reparse-symbol indented_block_body) [43708 44048])
+                            ("for" code nil (reparse-symbol indented_block_body) [44057 44160])
+                            ("for" code nil (reparse-symbol indented_block_body) [44168 44293])
+                            ("self" variable nil (reparse-symbol indented_block_body) [44301 44461]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [43004 43008])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [43010 43018])
+                            ("num_units" variable nil (reparse-symbol function_parameters) [43020 43029])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [43031 43050])
+                            ("horizon" variable nil (reparse-symbol function_parameters) [43052 43059])
+                            ("hidden_init_trainable" variable nil (reparse-symbol function_parameters) [43066 43087])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [43112 43120]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [42991 44462])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [44476 44480])
+                            ("hprev" variable nil (reparse-symbol function_parameters) [44482 44487])
+                            ("x" variable nil (reparse-symbol function_parameters) [44489 44490]))                          )
+                        (reparse-symbol indented_block_body) [44467 44548])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [44572 44576])
+                            ("input" variable nil (reparse-symbol function_parameters) [44578 44583])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [44585 44593]))                          )
+                        (reparse-symbol indented_block_body) [44553 45699])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [45729 45733])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [45735 45746]))                          )
+                        (reparse-symbol indented_block_body) [45704 45840])
+                    ("get_step_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [45864 45868])
+                            ("l_in" variable nil (reparse-symbol function_parameters) [45870 45874])
+                            ("l_prev_hidden" variable nil (reparse-symbol function_parameters) [45876 45889])
+                            ("name" variable nil (reparse-symbol function_parameters) [45891 45895]))                          )
+                        (reparse-symbol indented_block_body) [45845 45997]))                  
+                :type "class")
+                nil [42896 45997])
+            ("PseudoLSTMLayer" type
+               (:documentation "
+    A Pseudo LSTM unit implements the following update mechanism:
+
+    Incoming gate:     i(t) = σ(W_hi @ h(t-1)) + W_xi @ x(t) + b_i)
+    Forget gate:       f(t) = σ(W_hf @ h(t-1)) + W_xf @ x(t) + b_f)
+    Out gate:          o(t) = σ(W_ho @ h(t-1)) + W_xo @ x(t) + b_o)
+    New cell gate:     c_new(t) = ϕ(W_hc @ (o(t) * h(t-1)) + W_xc @ x(t) + b_c)
+    Cell gate:         c(t) = f(t) * c(t-1) + i(t) * c_new(t)
+    Hidden state:      h(t) = ϕ(c(t))
+    Output:            out  = h(t)
+
+    If gate_squash_inputs is set to True, we have the following updates instead:
+
+    Out gate:          o(t) = σ(W_ho @ h(t-1)) + W_xo @ x(t) + b_o)
+    Incoming gate:     i(t) = σ(W_hi @ (o(t) * h(t-1)) + W_xi @ x(t) + b_i)
+    Forget gate:       f(t) = σ(W_hf @ (o(t) * h(t-1)) + W_xf @ x(t) + b_f)
+    New cell gate:     c_new(t) = ϕ(W_hc @ (o(t) * h(t-1)) + W_xc @ x(t) + b_c)
+    Cell state:        c(t) = f(t) * c(t-1) + i(t) * c_new(t)
+    Hidden state:      h(t) = ϕ(c(t))
+    Output:            out  = h(t)
+
+    Note that the incoming, forget, cell, and out vectors must have the same dimension as the hidden state
+
+    The notation is slightly different from
+    http://r2rt.com/written-memories-understanding-deriving-and-extending-the-lstm.html: here we introduce the cell
+    gate and swap its role with the hidden state, so that the output is the same as the hidden state (and we can use
+    this as a drop-in replacement for LSTMLayer).
+    "
+                :superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [47978 48056])
+                            ("if" code nil (reparse-symbol indented_block_body) [48065 48139])
+                            ("super" code nil (reparse-symbol indented_block_body) [48148 48205])
+                            ("self" variable nil (reparse-symbol indented_block_body) [48215 48261])
+                            ("input_shape" variable nil (reparse-symbol indented_block_body) [48271 48305])
+                            ("input_dim" variable nil (reparse-symbol indented_block_body) [48315 48347])
+                            ("self" variable nil (reparse-symbol indented_block_body) [48599 48748])
+                            ("self" variable nil (reparse-symbol indented_block_body) [48802 48947])
+                            ("self" variable nil (reparse-symbol indented_block_body) [48996 49069])
+                            ("self" variable nil (reparse-symbol indented_block_body) [49078 49151])
+                            ("self" variable nil (reparse-symbol indented_block_body) [49160 49240])
+                            ("self" variable nil (reparse-symbol indented_block_body) [49287 49360])
+                            ("self" variable nil (reparse-symbol indented_block_body) [49369 49442])
+                            ("self" variable nil (reparse-symbol indented_block_body) [49451 49531])
+                            ("self" variable nil (reparse-symbol indented_block_body) [49575 49648])
+                            ("self" variable nil (reparse-symbol indented_block_body) [49657 49730])
+                            ("self" variable nil (reparse-symbol indented_block_body) [49739 49819])
+                            ("self" variable nil (reparse-symbol indented_block_body) [49864 49937])
+                            ("self" variable nil (reparse-symbol indented_block_body) [49946 50019])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50028 50108])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50118 50160])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50169 50195])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50204 50243])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50252 50282])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50291 50335])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50345 50419])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50428 50502])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50512 50574])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50583 50645])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50655 50680]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [47503 47507])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [47509 47517])
+                            ("num_units" variable nil (reparse-symbol function_parameters) [47519 47528])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [47530 47549])
+                            ("gate_nonlinearity" variable nil (reparse-symbol function_parameters) [47576 47593])
+                            ("W_x_init" variable nil (reparse-symbol function_parameters) [47609 47617])
+                            ("W_h_init" variable nil (reparse-symbol function_parameters) [47646 47654])
+                            ("forget_bias" variable nil (reparse-symbol function_parameters) [47697 47708])
+                            ("b_init" variable nil (reparse-symbol function_parameters) [47714 47720])
+                            ("hidden_init" variable nil (reparse-symbol function_parameters) [47745 47756])
+                            ("hidden_init_trainable" variable nil (reparse-symbol function_parameters) [47798 47819])
+                            ("cell_init" variable nil (reparse-symbol function_parameters) [47827 47836])
+                            ("cell_init_trainable" variable nil (reparse-symbol function_parameters) [47861 47880])
+                            ("gate_squash_inputs" variable nil (reparse-symbol function_parameters) [47905 47923])
+                            ("layer_normalization" variable nil (reparse-symbol function_parameters) [47931 47950])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [47958 47966]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [47490 50681])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [50695 50699])
+                            ("hcprev" variable nil (reparse-symbol function_parameters) [50701 50707])
+                            ("x" variable nil (reparse-symbol function_parameters) [50709 50710]))                          )
+                        (reparse-symbol indented_block_body) [50686 53784])
+                    ("get_step_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [53808 53812])
+                            ("l_in" variable nil (reparse-symbol function_parameters) [53814 53818])
+                            ("l_prev_state" variable nil (reparse-symbol function_parameters) [53820 53832])
+                            ("name" variable nil (reparse-symbol function_parameters) [53834 53838]))                          )
+                        (reparse-symbol indented_block_body) [53789 53940])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [53970 53974])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [53976 53987]))                          )
+                        (reparse-symbol indented_block_body) [53945 54081])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [54105 54109])
+                            ("input" variable nil (reparse-symbol function_parameters) [54111 54116])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [54118 54126]))                          )
+                        (reparse-symbol indented_block_body) [54086 54893]))                  
+                :type "class")
+                nil [45999 54893])
+            ("LSTMLayer" type
+               (:documentation "
+    A LSTM unit implements the following update mechanism:
+
+    Incoming gate:     i(t) = f_i(x(t) @ W_xi + h(t-1) @ W_hi + w_ci * c(t-1) + b_i)
+    Forget gate:       f(t) = f_f(x(t) @ W_xf + h(t-1) @ W_hf + w_cf * c(t-1) + b_f)
+    Cell gate:         c(t) = f(t) * c(t - 1) + i(t) * f_c(x(t) @ W_xc + h(t-1) @ W_hc + b_c)
+    Out gate:          o(t) = f_o(x(t) @ W_xo + h(t-1) W_ho + w_co * c(t) + b_o)
+    New hidden state:  h(t) = o(t) * f_h(c(t))
+
+    Note that the incoming, forget, cell, and out vectors must have the same dimension as the hidden state
+    "
+                :superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [56049 56127])
+                            ("if" code nil (reparse-symbol indented_block_body) [56136 56210])
+                            ("super" code nil (reparse-symbol indented_block_body) [56219 56270])
+                            ("self" variable nil (reparse-symbol indented_block_body) [56280 56326])
+                            ("input_shape" variable nil (reparse-symbol indented_block_body) [56336 56370])
+                            ("input_dim" variable nil (reparse-symbol indented_block_body) [56380 56412])
+                            ("self" variable nil (reparse-symbol indented_block_body) [56468 56617])
+                            ("self" variable nil (reparse-symbol indented_block_body) [56671 56816])
+                            ("self" variable nil (reparse-symbol indented_block_body) [56865 56938])
+                            ("self" variable nil (reparse-symbol indented_block_body) [56947 57020])
+                            ("if" code nil (reparse-symbol indented_block_body) [57029 57121])
+                            ("self" variable nil (reparse-symbol indented_block_body) [57129 57209])
+                            ("self" variable nil (reparse-symbol indented_block_body) [57256 57329])
+                            ("self" variable nil (reparse-symbol indented_block_body) [57338 57411])
+                            ("if" code nil (reparse-symbol indented_block_body) [57420 57512])
+                            ("self" variable nil (reparse-symbol indented_block_body) [57520 57600])
+                            ("self" variable nil (reparse-symbol indented_block_body) [57645 57718])
+                            ("self" variable nil (reparse-symbol indented_block_body) [57727 57800])
+                            ("self" variable nil (reparse-symbol indented_block_body) [57809 57889])
+                            ("self" variable nil (reparse-symbol indented_block_body) [57935 58008])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58017 58090])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58099 58179])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58223 58296])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58305 58378])
+                            ("if" code nil (reparse-symbol indented_block_body) [58387 58479])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58487 58567])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58576 58618])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58627 58653])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58662 58701])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58710 58740])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58749 58783])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58793 58879])
+                            ("self" variable nil (reparse-symbol indented_block_body) [58888 58974])
+                            ("if" code nil (reparse-symbol indented_block_body) [58984 59089])
+                            ("self" variable nil (reparse-symbol indented_block_body) [59098 59123]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [55513 55517])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [55519 55527])
+                            ("num_units" variable nil (reparse-symbol function_parameters) [55529 55538])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [55540 55559])
+                            ("gate_nonlinearity" variable nil (reparse-symbol function_parameters) [55586 55603])
+                            ("W_x_init" variable nil (reparse-symbol function_parameters) [55619 55627])
+                            ("W_h_init" variable nil (reparse-symbol function_parameters) [55656 55664])
+                            ("forget_bias" variable nil (reparse-symbol function_parameters) [55707 55718])
+                            ("use_peepholes" variable nil (reparse-symbol function_parameters) [55724 55737])
+                            ("w_init" variable nil (reparse-symbol function_parameters) [55745 55751])
+                            ("b_init" variable nil (reparse-symbol function_parameters) [55811 55817])
+                            ("hidden_init" variable nil (reparse-symbol function_parameters) [55842 55853])
+                            ("hidden_init_trainable" variable nil (reparse-symbol function_parameters) [55878 55899])
+                            ("cell_init" variable nil (reparse-symbol function_parameters) [55924 55933])
+                            ("cell_init_trainable" variable nil (reparse-symbol function_parameters) [55958 55977])
+                            ("layer_normalization" variable nil (reparse-symbol function_parameters) [55985 56004])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [56029 56037]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [55500 59124])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [59138 59142])
+                            ("hcprev" variable nil (reparse-symbol function_parameters) [59144 59150])
+                            ("x" variable nil (reparse-symbol function_parameters) [59152 59153]))                          
+                        :documentation "
+            Incoming gate:     i(t) = f_i(x(t) @ W_xi + h(t-1) @ W_hi + w_ci * c(t-1) + b_i)
+            Forget gate:       f(t) = f_f(x(t) @ W_xf + h(t-1) @ W_hf + w_cf * c(t-1) + b_f)
+            Cell gate:         c(t) = f(t) * c(t - 1) + i(t) * f_c(x(t) @ W_xc + h(t-1) @ W_hc + b_c)
+            Out gate:          o(t) = f_o(x(t) @ W_xo + h(t-1) W_ho + w_co * c(t) + b_o)
+            New hidden state:  h(t) = o(t) * f_h(c(t))
+        ")
+                        (reparse-symbol indented_block_body) [59129 60785])
+                    ("get_step_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [60809 60813])
+                            ("l_in" variable nil (reparse-symbol function_parameters) [60815 60819])
+                            ("l_prev_state" variable nil (reparse-symbol function_parameters) [60821 60833])
+                            ("name" variable nil (reparse-symbol function_parameters) [60835 60839]))                          )
+                        (reparse-symbol indented_block_body) [60790 60941])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [60971 60975])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [60977 60988]))                          )
+                        (reparse-symbol indented_block_body) [60946 61082])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [61106 61110])
+                            ("input" variable nil (reparse-symbol function_parameters) [61112 61117])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [61119 61127]))                          )
+                        (reparse-symbol indented_block_body) [61087 62084]))                  
+                :type "class")
+                nil [54895 62084])
+            ("LSTMStepLayer" type
+               (:superclasses ("MergeLayer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [62189 62245])
+                            ("self" variable nil (reparse-symbol indented_block_body) [62254 62293]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62136 62140])
+                            ("incomings" variable nil (reparse-symbol function_parameters) [62142 62151])
+                            ("recurrent_layer" variable nil (reparse-symbol function_parameters) [62153 62168])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [62170 62178]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [62123 62294])
+                    ("get_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62314 62318])
+                            ("tags" variable nil (reparse-symbol function_parameters) [62320 62326]))                          )
+                        (reparse-symbol indented_block_body) [62299 62385])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62415 62419])
+                            ("input_shapes" variable nil (reparse-symbol function_parameters) [62421 62433]))                          )
+                        (reparse-symbol indented_block_body) [62390 62533])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62557 62561])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [62563 62569])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [62571 62579]))                          )
+                        (reparse-symbol indented_block_body) [62538 62762]))                  
+                :type "class")
+                nil [62086 62762])
+            ("TfBasicLSTMLayer" type
+               (:documentation "
+    Use TensorFlow's built-in (basic) LSTM implementation
+    "
+                :superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("assert" code nil (reparse-symbol indented_block_body) [63052 63118])
+                            ("assert" code nil (reparse-symbol indented_block_body) [63127 63165])
+                            ("input_dim" variable nil (reparse-symbol indented_block_body) [63174 63203])
+                            ("lstm" variable nil (reparse-symbol indented_block_body) [63212 63404])
+                            ("self" variable nil (reparse-symbol indented_block_body) [63413 63439])
+                            ("self" variable nil (reparse-symbol indented_block_body) [63448 63470])
+                            ("self" variable nil (reparse-symbol indented_block_body) [63479 63495])
+                            ("self" variable nil (reparse-symbol indented_block_body) [63504 63550])
+                            ("Layer" code nil (reparse-symbol indented_block_body) [63559 63608])
+                            ("input_dummy" variable nil (reparse-symbol indented_block_body) [63648 63722])
+                            ("hidden_dummy" variable nil (reparse-symbol indented_block_body) [63731 63807])
+                            ("cell_dummy" variable nil (reparse-symbol indented_block_body) [63816 63888])
+                            ("with" code nil (reparse-symbol indented_block_body) [63898 64253])
+                            ("for" code nil (reparse-symbol indented_block_body) [64262 64365])
+                            ("for" code nil (reparse-symbol indented_block_body) [64373 64498])
+                            ("self" variable nil (reparse-symbol indented_block_body) [64507 64667])
+                            ("self" variable nil (reparse-symbol indented_block_body) [64676 64836]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62887 62891])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [62893 62901])
+                            ("num_units" variable nil (reparse-symbol function_parameters) [62903 62912])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [62914 62933])
+                            ("horizon" variable nil (reparse-symbol function_parameters) [62935 62942])
+                            ("hidden_init_trainable" variable nil (reparse-symbol function_parameters) [62949 62970])
+                            ("forget_bias" variable nil (reparse-symbol function_parameters) [62995 63006])
+                            ("use_peepholes" variable nil (reparse-symbol function_parameters) [63012 63025])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [63033 63041]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [62874 64837])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [64851 64855])
+                            ("hcprev" variable nil (reparse-symbol function_parameters) [64857 64863])
+                            ("x" variable nil (reparse-symbol function_parameters) [64865 64866]))                          )
+                        (reparse-symbol indented_block_body) [64842 65118])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [65142 65146])
+                            ("input" variable nil (reparse-symbol function_parameters) [65148 65153])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [65155 65163]))                          )
+                        (reparse-symbol indented_block_body) [65123 66612])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [66642 66646])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [66648 66659]))                          )
+                        (reparse-symbol indented_block_body) [66617 66753])
+                    ("get_step_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [66777 66781])
+                            ("l_in" variable nil (reparse-symbol function_parameters) [66783 66787])
+                            ("l_prev_state" variable nil (reparse-symbol function_parameters) [66789 66801])
+                            ("name" variable nil (reparse-symbol function_parameters) [66803 66807]))                          )
+                        (reparse-symbol indented_block_body) [66758 66909]))                  
+                :type "class")
+                nil [62764 66909])
+            ("get_all_layers" function
+               (:documentation "
+    :type layer: Layer | list[Layer]
+    :rtype: list[Layer]
+    "
+                :arguments 
+                  ( ("layer" variable nil (reparse-symbol function_parameters) [66930 66935])
+                    ("treat_as_input" variable nil (reparse-symbol function_parameters) [66937 66951]))                  )
+                nil [66911 68681])
+            ("NonlinearityLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [68792 68851])
+                            ("self" variable nil (reparse-symbol indented_block_body) [68860 68964]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [68732 68736])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [68738 68746])
+                            ("nonlinearity" variable nil (reparse-symbol function_parameters) [68748 68760])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [68773 68781]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [68719 68965])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [68989 68993])
+                            ("input" variable nil (reparse-symbol function_parameters) [68995 69000])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [69002 69010]))                          )
+                        (reparse-symbol indented_block_body) [68970 69053])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [69083 69087])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [69089 69100]))                          )
+                        (reparse-symbol indented_block_body) [69058 69130]))                  
+                :type "class")
+                nil [68683 69130])
+            ("BatchNormLayer" type
+               (:superclasses ("Layer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [69432 69488])
+                            ("self" variable nil (reparse-symbol indented_block_body) [69498 69518])
+                            ("self" variable nil (reparse-symbol indented_block_body) [69527 69545])
+                            ("self" variable nil (reparse-symbol indented_block_body) [69554 69576])
+                            ("self" variable nil (reparse-symbol indented_block_body) [69585 69603])
+                            ("input_shape" variable nil (reparse-symbol indented_block_body) [69613 69648])
+                            ("axis" variable nil (reparse-symbol indented_block_body) [69657 69697])
+                            ("params_shape" variable nil (reparse-symbol indented_block_body) [69706 69737])
+                            ("if" code nil (reparse-symbol indented_block_body) [69747 69916])
+                            ("if" code nil (reparse-symbol indented_block_body) [69924 70095])
+                            ("self" variable nil (reparse-symbol indented_block_body) [70104 70270])
+                            ("self" variable nil (reparse-symbol indented_block_body) [70279 70461])
+                            ("self" variable nil (reparse-symbol indented_block_body) [70470 70486]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [69178 69182])
+                            ("incoming" variable nil (reparse-symbol function_parameters) [69184 69192])
+                            ("center" variable nil (reparse-symbol function_parameters) [69194 69200])
+                            ("scale" variable nil (reparse-symbol function_parameters) [69207 69212])
+                            ("epsilon" variable nil (reparse-symbol function_parameters) [69220 69227])
+                            ("decay" variable nil (reparse-symbol function_parameters) [69235 69240])
+                            ("beta" variable nil (reparse-symbol function_parameters) [69263 69267])
+                            ("gamma" variable nil (reparse-symbol function_parameters) [69292 69297])
+                            ("moving_mean" variable nil (reparse-symbol function_parameters) [69321 69332])
+                            ("moving_variance" variable nil (reparse-symbol function_parameters) [69374 69389])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [69413 69421]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [69165 70487])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [70511 70515])
+                            ("input" variable nil (reparse-symbol function_parameters) [70517 70522])
+                            ("phase" variable nil (reparse-symbol function_parameters) [70524 70529])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [70539 70547]))                          )
+                        (reparse-symbol indented_block_body) [70492 71601])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [71631 71635])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [71637 71648]))                          )
+                        (reparse-symbol indented_block_body) [71606 71678]))                  
+                :type "class")
+                nil [69132 71678])
+            ("batch_norm" function (:arguments 
+              ( ("layer" variable nil (reparse-symbol function_parameters) [71695 71700])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [71702 71710]))              ) nil [71680 72408])
+            ("ElemwiseSumLayer" type
+               (:superclasses ("MergeLayer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [72499 72558]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [72463 72467])
+                            ("incomings" variable nil (reparse-symbol function_parameters) [72469 72478])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [72480 72488]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [72450 72559])
+                    ("get_output_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [72583 72587])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [72589 72595])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [72597 72605]))                          )
+                        (reparse-symbol indented_block_body) [72564 72656])
+                    ("get_output_shape_for" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [72686 72690])
+                            ("input_shapes" variable nil (reparse-symbol function_parameters) [72692 72704]))                          )
+                        (reparse-symbol indented_block_body) [72661 72781]))                  
+                :type "class")
+                nil [72410 72781])
+            ("get_output" function (:arguments 
+              ( ("layer_or_layers" variable nil (reparse-symbol function_parameters) [72798 72813])
+                ("inputs" variable nil (reparse-symbol function_parameters) [72815 72821])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [72828 72836]))              ) nil [72783 76180])
+            ("unique" function
+               (:documentation "Filters duplicates of iterable.
+    Create a new list from l with duplicate entries removed,
+    while preserving the original order.
+    Parameters
+    ----------
+    l : iterable
+        Input iterable to filter of duplicates.
+    Returns
+    -------
+    list
+        A list of elements of `l` without duplicates and in the same order.
+    "
+                :arguments 
+                  ( ("l" variable nil (reparse-symbol function_parameters) [76193 76194]))                  )
+                nil [76182 76707])
+            ("get_all_params" function
+               (:documentation "
+    :type layer: Layer|list[Layer]
+    "
+                :arguments 
+                  ( ("layer" variable nil (reparse-symbol function_parameters) [76728 76733])
+                    ("tags" variable nil (reparse-symbol function_parameters) [76735 76741]))                  )
+                nil [76709 76927]))          
+      :file "layers.py"
+      :pointmax 76927
+      :fsize 76946
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax '((NAME 73012 . 73026) (IF 73049 . 73051) (ELSE 73077 . 73081) (COLON 59815 . 59816) (NAME 59795 . 59797) (MULT 59810 . 59811) (COLON 50915 . 50916) (NAME 50895 . 50897) (MULT 50910 . 50911) (NAME 14708 . 14712) (IF 14740 . 14742) (ELSE 14764 . 14768) (NAME 11123 . 11134) (IF 11142 . 11144) (ELSE 11175 . 11179)))
+    (semanticdb-table "parameterized.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("contextlib" include nil nil [1 38])
+            ("rllab.core.serializable" include nil nil [40 88])
+            ("rllab.misc.tensor_utils" include nil nil [89 159])
+            ("tensorflow" include nil nil [160 183])
+            ("load_params" variable nil nil [186 204])
+            ("suppress_params_loading" function (:decorators 
+              ( ("contextmanager" function (:type "decorator") nil nil))              ) nil [206 333])
+            ("Parameterized" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [396 420])
+                            ("self" variable nil (reparse-symbol indented_block_body) [429 459])
+                            ("self" variable nil (reparse-symbol indented_block_body) [468 498])
+                            ("self" variable nil (reparse-symbol indented_block_body) [507 535])
+                            ("self" variable nil (reparse-symbol indented_block_body) [544 581]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [381 385]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [368 582])
+                    ("get_params_internal" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [611 615])
+                            ("tags" variable nil (reparse-symbol function_parameters) [617 623]))                          
+                        :documentation "
+        Internal method to be implemented which does not perform caching
+        ")
+                        (reparse-symbol indented_block_body) [587 757])
+                    ("get_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [777 781])
+                            ("tags" variable nil (reparse-symbol function_parameters) [783 789]))                          
+                        :documentation "
+        Get the list of parameters, filtered by the provided tags.
+        Some common tags include 'regularizable' and 'trainable'
+        ")
+                        (reparse-symbol indented_block_body) [762 1195])
+                    ("get_param_dtypes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1221 1225])
+                            ("tags" variable nil (reparse-symbol function_parameters) [1227 1233]))                          )
+                        (reparse-symbol indented_block_body) [1200 1613])
+                    ("get_param_shapes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1639 1643])
+                            ("tags" variable nil (reparse-symbol function_parameters) [1645 1651]))                          )
+                        (reparse-symbol indented_block_body) [1618 2031])
+                    ("get_param_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2057 2061])
+                            ("tags" variable nil (reparse-symbol function_parameters) [2063 2069]))                          )
+                        (reparse-symbol indented_block_body) [2036 2218])
+                    ("set_param_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2244 2248])
+                            ("flattened_params" variable nil (reparse-symbol function_parameters) [2250 2266])
+                            ("tags" variable nil (reparse-symbol function_parameters) [2268 2274]))                          )
+                        (reparse-symbol indented_block_body) [2223 3243])
+                    ("flat_to_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3267 3271])
+                            ("flattened_params" variable nil (reparse-symbol function_parameters) [3273 3289])
+                            ("tags" variable nil (reparse-symbol function_parameters) [3291 3297]))                          )
+                        (reparse-symbol indented_block_body) [3248 3382])
+                    ("__getstate__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3404 3408]))                          )
+                        (reparse-symbol indented_block_body) [3387 3573])
+                    ("__setstate__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3595 3599])
+                            ("d" variable nil (reparse-symbol function_parameters) [3601 3602]))                          )
+                        (reparse-symbol indented_block_body) [3578 3832]))                  
+                :type "class")
+                nil [335 3832])
+            ("JointParameterized" type
+               (:superclasses ("Parameterized")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [3919 3961])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3970 3998]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3892 3896])
+                            ("components" variable nil (reparse-symbol function_parameters) [3898 3908]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3879 3999])
+                    ("get_params_internal" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4028 4032])
+                            ("tags" variable nil (reparse-symbol function_parameters) [4034 4040]))                          )
+                        (reparse-symbol indented_block_body) [4004 4227]))                  
+                :type "class")
+                nil [3834 4227]))          
+      :file "parameterized.py"
+      :pointmax 4227
+      :fsize 4226
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "layers_powered.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sandbox.rocky.tf.core.parameterized" include nil nil [1 62])
+            ("sandbox.rocky.tf.core.layers" include nil nil [63 103])
+            ("itertools" include nil nil [104 120])
+            ("LayersPowered" type
+               (:superclasses ("Parameterized")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [226 261])
+                            ("self" variable nil (reparse-symbol indented_block_body) [270 303])
+                            ("Parameterized" code nil (reparse-symbol indented_block_body) [312 340]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [177 181])
+                            ("output_layers" variable nil (reparse-symbol function_parameters) [183 196])
+                            ("input_layers" variable nil (reparse-symbol function_parameters) [198 210]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [164 341])
+                    ("get_params_internal" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [370 374])
+                            ("tags" variable nil (reparse-symbol function_parameters) [376 382]))                          )
+                        (reparse-symbol indented_block_body) [346 592]))                  
+                :type "class")
+                nil [123 592]))          
+      :file "layers_powered.py"
+      :pointmax 593
+      :fsize 592
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!sandbox!rocky!tf!core!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

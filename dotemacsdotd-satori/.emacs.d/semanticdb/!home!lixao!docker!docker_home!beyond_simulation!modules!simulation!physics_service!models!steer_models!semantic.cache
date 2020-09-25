@@ -1,0 +1,65 @@
+;; Object steer_models/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "steer_models/"
+  :tables
+  (list
+    (semanticdb-table "steer_model.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("physics_service.models.model_base" include nil nil [20 75])
+            ("os" include nil nil [77 86])
+            ("SteerModel" type
+               (:superclasses ("ModelBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''
+        x: [front_wheel_angle, front_wheel_angular_vel]
+        u: [torque] or [torque, v]
+        output: [front_wheel_angle]
+        '''" code nil (reparse-symbol indented_block_body) [178 320])
+                            ("super" code nil (reparse-symbol indented_block_body) [329 369])
+                            ("self" variable nil (reparse-symbol indented_block_body) [378 403])
+                            ("self" variable nil (reparse-symbol indented_block_body) [413 423])
+                            ("self" variable nil (reparse-symbol indented_block_body) [432 444])
+                            ("self" variable nil (reparse-symbol indented_block_body) [453 464])
+                            ("self" variable nil (reparse-symbol indented_block_body) [474 487])
+                            ("self" variable nil (reparse-symbol indented_block_body) [497 576])
+                            ("self" variable nil (reparse-symbol indented_block_body) [585 668]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [139 143])
+                            ("config" variable nil (reparse-symbol function_parameters) [145 151])
+                            ("init" variable nil (reparse-symbol function_parameters) [158 162]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [126 669])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [693 697])
+                            ("u" variable nil (reparse-symbol function_parameters) [699 700]))                          )
+                        (reparse-symbol indented_block_body) [682 1022])
+                    ("get_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1042 1046]))                          )
+                        (reparse-symbol indented_block_body) [1027 1110])
+                    ("restore_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1134 1138])
+                            ("params" variable nil (reparse-symbol function_parameters) [1140 1146])
+                            ("filename" variable nil (reparse-symbol function_parameters) [1153 1161]))                          )
+                        (reparse-symbol indented_block_body) [1115 1487]))                  
+                :type "class")
+                nil [88 1487])
+            ("if" code nil nil [1505 1628]))          
+      :file "steer_model.py"
+      :pointmax 1628
+      :fsize 1627
+      :lastmodtime '(23317 37494 101319 218000)
+      :unmatched-syntax nil))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!simulation!physics_service!models!steer_models!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

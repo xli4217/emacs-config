@@ -1,0 +1,140 @@
+;; Object 5.1_Double_DQN/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "5.1_Double_DQN/"
+  :tables
+  (list
+    (semanticdb-table "RL_brain.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+The double DQN based on this paper: https://arxiv.org/abs/1509.06461
+
+View more on my tutorial page: https://morvanzhou.github.io/tutorials/
+
+Using:
+Tensorflow: 1.0
+gym: 0.8.0
+\"\"\"" code nil nil [1 184])
+            ("numpy" include nil nil [186 204])
+            ("tensorflow" include nil nil [205 228])
+            ("np" code nil nil [230 247])
+            ("tf" code nil nil [248 269])
+            ("DoubleDQN" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [689 715])
+                            ("self" variable nil (reparse-symbol indented_block_body) [724 752])
+                            ("self" variable nil (reparse-symbol indented_block_body) [761 784])
+                            ("self" variable nil (reparse-symbol indented_block_body) [793 818])
+                            ("self" variable nil (reparse-symbol indented_block_body) [827 854])
+                            ("self" variable nil (reparse-symbol indented_block_body) [863 909])
+                            ("self" variable nil (reparse-symbol indented_block_body) [918 948])
+                            ("self" variable nil (reparse-symbol indented_block_body) [957 985])
+                            ("self" variable nil (reparse-symbol indented_block_body) [994 1037])
+                            ("self" code nil (reparse-symbol indented_block_body) [1102 1118])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1128 1152])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1197 1224])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1233 1291])
+                            ("self" code nil (reparse-symbol indented_block_body) [1300 1317])
+                            ("t_params" variable nil (reparse-symbol indented_block_body) [1326 1375])
+                            ("e_params" variable nil (reparse-symbol indented_block_body) [1384 1431])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1440 1518])
+                            ("if" code nil (reparse-symbol indented_block_body) [1528 1686])
+                            ("if" code nil (reparse-symbol indented_block_body) [1694 1771])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1779 1797]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [319 323])
+                            ("n_actions" variable nil (reparse-symbol function_parameters) [337 346])
+                            ("n_features" variable nil (reparse-symbol function_parameters) [360 370])
+                            ("learning_rate" variable nil (reparse-symbol function_parameters) [384 397])
+                            ("reward_decay" variable nil (reparse-symbol function_parameters) [417 429])
+                            ("e_greedy" variable nil (reparse-symbol function_parameters) [447 455])
+                            ("replace_target_iter" variable nil (reparse-symbol function_parameters) [473 492])
+                            ("memory_size" variable nil (reparse-symbol function_parameters) [510 521])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [540 550])
+                            ("e_greedy_increment" variable nil (reparse-symbol function_parameters) [567 585])
+                            ("output_graph" variable nil (reparse-symbol function_parameters) [604 616])
+                            ("double_q" variable nil (reparse-symbol function_parameters) [636 644])
+                            ("sess" variable nil (reparse-symbol function_parameters) [663 667]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [293 1798])
+                    ("_build_net" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1818 1822]))                          )
+                        (reparse-symbol indented_block_body) [1803 3828])
+                    ("store_transition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3854 3858])
+                            ("s" variable nil (reparse-symbol function_parameters) [3860 3861])
+                            ("a" variable nil (reparse-symbol function_parameters) [3863 3864])
+                            ("r" variable nil (reparse-symbol function_parameters) [3866 3867])
+                            ("s_" variable nil (reparse-symbol function_parameters) [3869 3871]))                          )
+                        (reparse-symbol indented_block_body) [3833 4137])
+                    ("choose_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4160 4164])
+                            ("observation" variable nil (reparse-symbol function_parameters) [4166 4177]))                          )
+                        (reparse-symbol indented_block_body) [4142 4738])
+                    ("learn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4753 4757]))                          )
+                        (reparse-symbol indented_block_body) [4743 6675]))                  
+                :type "class")
+                nil [272 6675]))          
+      :file "RL_brain.py"
+      :pointmax 6679
+      :fsize 6678
+      :lastmodtime '(23180 20973 0 0)
+      :unmatched-syntax '((NAME 6528 . 6532) (IF 6581 . 6583) (ELSE 6616 . 6620) (NAME 1046 . 1050) (IF 1063 . 1065) (ELSE 1097 . 1101)))
+    (semanticdb-table "run_Pendulum.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Double DQN & Natural DQN comparison,
+The Pendulum example.
+
+View more on my tutorial page: https://morvanzhou.github.io/tutorials/
+
+Using:
+Tensorflow: 1.0
+gym: 0.8.0
+\"\"\"" code nil nil [1 174])
+            ("gym" include nil nil [177 187])
+            ("RL_brain" include nil nil [188 218])
+            ("numpy" include nil nil [219 237])
+            ("matplotlib.pyplot" include nil nil [238 269])
+            ("tensorflow" include nil nil [270 293])
+            ("env" variable nil nil [296 325])
+            ("env" variable nil nil [326 345])
+            ("env" code nil nil [346 357])
+            ("MEMORY_SIZE" variable nil nil [358 376])
+            ("ACTION_SPACE" variable nil nil [377 394])
+            ("sess" variable nil nil [396 415])
+            ("with" code nil nil [416 621])
+            ("with" code nil nil [622 838])
+            ("sess" code nil nil [839 882])
+            ("train" function (:arguments 
+              ( ("RL" variable nil (reparse-symbol function_parameters) [895 897]))              ) nil [885 1871])
+            ("q_natural" variable nil nil [1872 1902])
+            ("q_double" variable nil nil [1903 1931])
+            ("plt" code nil nil [1933 1986])
+            ("plt" code nil nil [1987 2038])
+            ("plt" code nil nil [2039 2061])
+            ("plt" code nil nil [2062 2082])
+            ("plt" code nil nil [2083 2111])
+            ("plt" code nil nil [2112 2122])
+            ("plt" code nil nil [2123 2133]))          
+      :file "run_Pendulum.py"
+      :pointmax 2134
+      :fsize 2133
+      :lastmodtime '(23180 20973 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!sandbox!algo_implementations!Reinforcement-learning-with-tensorflow!contents!5.1_Double_DQN!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

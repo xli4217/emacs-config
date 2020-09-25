@@ -1,0 +1,559 @@
+;; Object deepq/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "deepq/"
+  :tables
+  (list
+    (semanticdb-table "simple.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("tempfile" include nil nil [11 26])
+            ("tensorflow" include nil nil [28 51])
+            ("zipfile" include nil nil [52 66])
+            ("cloudpickle" include nil nil [67 85])
+            ("numpy" include nil nil [86 104])
+            ("gym" include nil nil [106 116])
+            ("baselines.common.tf_util" include nil nil [117 153])
+            ("baselines" include nil nil [154 182])
+            ("baselines.common.schedules" include nil nil [183 236])
+            ("deepq" include nil nil [237 249])
+            ("ActWrapper" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [456 471])
+                            ("self" variable nil (reparse-symbol indented_block_body) [480 509]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [424 428])
+                            ("act" variable nil (reparse-symbol function_parameters) [430 433])
+                            ("act_params" variable nil (reparse-symbol function_parameters) [435 445]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [411 510])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1158 1162])
+                            ("args" variable nil (reparse-symbol function_parameters) [1164 1169])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1171 1179]))                          )
+                        (reparse-symbol indented_block_body) [1145 1224])
+                    ("save" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1238 1242])
+                            ("path" variable nil (reparse-symbol function_parameters) [1244 1248]))                          
+                        :documentation "Save model to a pickle located at `path`")
+                        (reparse-symbol indented_block_body) [1229 2115]))                  
+                :type "class")
+                nil [381 2115])
+            ("load" function
+               (:documentation "Load act function that was returned by learn function.
+
+    Parameters
+    ----------
+    path: str
+        path to the act function pickle
+
+    Returns
+    -------
+    act: ActWrapper
+        function that takes a batch of observations
+        and returns actions.
+    "
+                :arguments 
+                  ( ("path" variable nil (reparse-symbol function_parameters) [2126 2130]))                  )
+                nil [2117 2447])
+            ("learn" function
+               (:documentation "Train a deepq model.
+
+    Parameters
+    -------
+    env: gym.Env
+        environment to train on
+    q_func: (tf.Variable, int, str, bool) -> tf.Variable
+        the model that takes the following inputs:
+            observation_in: object
+                the output of observation placeholder
+            num_actions: int
+                number of actions
+            scope: str
+            reuse: bool
+                should be passed to outer variable scope
+        and returns a tensor of shape (batch_size, num_actions) with values of every action.
+    lr: float
+        learning rate for adam optimizer
+    max_timesteps: int
+        number of env steps to optimizer for
+    buffer_size: int
+        size of the replay buffer
+    exploration_fraction: float
+        fraction of entire training period over which the exploration rate is annealed
+    exploration_final_eps: float
+        final value of random action probability
+    train_freq: int
+        update the model every `train_freq` steps.
+        set to None to disable printing
+    batch_size: int
+        size of a batched sampled from replay buffer for training
+    print_freq: int
+        how often to print out training progress
+        set to None to disable printing
+    checkpoint_freq: int
+        how often to save the model. This is so that the best version is restored
+        at the end of the training. If you do not wish to restore the best version at
+        the end of the training set this variable to None.
+    learning_starts: int
+        how many steps of the model to collect transitions for before learning starts
+    gamma: float
+        discount factor
+    target_network_update_freq: int
+        update the target network every `target_network_update_freq` steps.
+    prioritized_replay: True
+        if True prioritized replay buffer will be used.
+    prioritized_replay_alpha: float
+        alpha parameter for prioritized replay buffer
+    prioritized_replay_beta0: float
+        initial value of beta for prioritized replay buffer
+    prioritized_replay_beta_iters: int
+        number of iterations over which beta will be annealed from initial value
+        to 1.0. If set to None equals to max_timesteps.
+    prioritized_replay_eps: float
+        epsilon to add to the TD errors when updating priorities.
+    callback: (locals, globals) -> None
+        function called at every steps with state of the algorithm.
+        If callback returns true training stops.
+
+    Returns
+    -------
+    act: ActWrapper
+        Wrapper over act function. Adds ability to save it and load it.
+        See header of baselines/deepq/categorical.py for details on the act function.
+    "
+                :arguments 
+                  ( ("env" variable nil (reparse-symbol function_parameters) [2459 2462])
+                    ("q_func" variable nil (reparse-symbol function_parameters) [2474 2480])
+                    ("lr" variable nil (reparse-symbol function_parameters) [2492 2494])
+                    ("max_timesteps" variable nil (reparse-symbol function_parameters) [2511 2524])
+                    ("buffer_size" variable nil (reparse-symbol function_parameters) [2543 2554])
+                    ("exploration_fraction" variable nil (reparse-symbol function_parameters) [2572 2592])
+                    ("exploration_final_eps" variable nil (reparse-symbol function_parameters) [2608 2629])
+                    ("train_freq" variable nil (reparse-symbol function_parameters) [2646 2656])
+                    ("batch_size" variable nil (reparse-symbol function_parameters) [2670 2680])
+                    ("print_freq" variable nil (reparse-symbol function_parameters) [2695 2705])
+                    ("checkpoint_freq" variable nil (reparse-symbol function_parameters) [2721 2736])
+                    ("learning_starts" variable nil (reparse-symbol function_parameters) [2754 2769])
+                    ("gamma" variable nil (reparse-symbol function_parameters) [2786 2791])
+                    ("target_network_update_freq" variable nil (reparse-symbol function_parameters) [2807 2833])
+                    ("prioritized_replay" variable nil (reparse-symbol function_parameters) [2849 2867])
+                    ("prioritized_replay_alpha" variable nil (reparse-symbol function_parameters) [2885 2909])
+                    ("prioritized_replay_beta0" variable nil (reparse-symbol function_parameters) [2925 2949])
+                    ("prioritized_replay_beta_iters" variable nil (reparse-symbol function_parameters) [2965 2994])
+                    ("prioritized_replay_eps" variable nil (reparse-symbol function_parameters) [3011 3033])
+                    ("param_noise" variable nil (reparse-symbol function_parameters) [3050 3061])
+                    ("callback" variable nil (reparse-symbol function_parameters) [3079 3087]))                  )
+                nil [2449 11599]))          
+      :file "simple.py"
+      :pointmax 11599
+      :fsize 11598
+      :lastmodtime '(23255 53289 76792 837000)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("deepq" include nil nil [1 25])
+            ("wrap_atari_dqn" function (:arguments 
+              ( ("env" variable nil (reparse-symbol function_parameters) [238 241]))              ) nil [219 365]))          
+      :file "__init__.py"
+      :pointmax 365
+      :fsize 364
+      :lastmodtime '(23255 37022 389378 318000)
+      :unmatched-syntax nil)
+    (semanticdb-table "build_graph.py"
+      :file "build_graph.py"
+      :fsize 20616
+      :lastmodtime '(23246 21522 206686 231000))
+    (semanticdb-table "replay_buffer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("random" include nil nil [20 33])
+            ("baselines.common.segment_tree" include nil nil [35 107])
+            ("ReplayBuffer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Create Replay buffer.
+
+        Parameters
+        ----------
+        size: int
+            Max number of transitions to store in the buffer. When the buffer
+            overflows the old memories are dropped.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [176 399])
+                            ("self" variable nil (reparse-symbol indented_block_body) [408 426])
+                            ("self" variable nil (reparse-symbol indented_block_body) [435 455])
+                            ("self" variable nil (reparse-symbol indented_block_body) [464 482]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [155 159])
+                            ("size" variable nil (reparse-symbol function_parameters) [161 165]))                          
+                        :documentation "Create Replay buffer.
+
+        Parameters
+        ----------
+        size: int
+            Max number of transitions to store in the buffer. When the buffer
+            overflows the old memories are dropped.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [142 483])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [500 504]))                          )
+                        (reparse-symbol indented_block_body) [488 541])
+                    ("add" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [554 558])
+                            ("obs_t" variable nil (reparse-symbol function_parameters) [560 565])
+                            ("action" variable nil (reparse-symbol function_parameters) [567 573])
+                            ("reward" variable nil (reparse-symbol function_parameters) [575 581])
+                            ("obs_tp1" variable nil (reparse-symbol function_parameters) [583 590])
+                            ("done" variable nil (reparse-symbol function_parameters) [592 596]))                          )
+                        (reparse-symbol indented_block_body) [546 867])
+                    ("_encode_sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [891 895])
+                            ("idxes" variable nil (reparse-symbol function_parameters) [897 902]))                          )
+                        (reparse-symbol indented_block_body) [872 1442])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1458 1462])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [1464 1474]))                          
+                        :documentation "Sample a batch of experiences.
+
+        Parameters
+        ----------
+        batch_size: int
+            How many transitions to sample.
+
+        Returns
+        -------
+        obs_batch: np.array
+            batch of observations
+        act_batch: np.array
+            batch of actions executed given obs_batch
+        rew_batch: np.array
+            rewards received as results of executing act_batch
+        next_obs_batch: np.array
+            next set of observations seen after executing act_batch
+        done_mask: np.array
+            done_mask[i] = 1 if executing act_batch[i] resulted in
+            the end of an episode and 0 otherwise.
+        ")
+                        (reparse-symbol indented_block_body) [1447 2282]))                  
+                :type "class")
+                nil [110 2282])
+            ("PrioritizedReplayBuffer" type
+               (:superclasses ("ReplayBuffer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Create Prioritized Replay buffer.
+
+        Parameters
+        ----------
+        size: int
+            Max number of transitions to store in the buffer. When the buffer
+            overflows the old memories are dropped.
+        alpha: float
+            how much prioritization is used
+            (0 - no prioritization, 1 - full prioritization)
+
+        See Also
+        --------
+        ReplayBuffer.__init__
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2374 2800])
+                            ("super" code nil (reparse-symbol indented_block_body) [2809 2860])
+                            ("assert" code nil (reparse-symbol indented_block_body) [2869 2885])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2894 2913])
+                            ("it_capacity" variable nil (reparse-symbol indented_block_body) [2923 2938])
+                            ("while" code nil (reparse-symbol indented_block_body) [2947 3002])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3011 3053])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3062 3104])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3113 3137]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2346 2350])
+                            ("size" variable nil (reparse-symbol function_parameters) [2352 2356])
+                            ("alpha" variable nil (reparse-symbol function_parameters) [2358 2363]))                          
+                        :documentation "Create Prioritized Replay buffer.
+
+        Parameters
+        ----------
+        size: int
+            Max number of transitions to store in the buffer. When the buffer
+            overflows the old memories are dropped.
+        alpha: float
+            how much prioritization is used
+            (0 - no prioritization, 1 - full prioritization)
+
+        See Also
+        --------
+        ReplayBuffer.__init__
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2333 3138])
+                    ("add" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3151 3155])
+                            ("args" variable nil (reparse-symbol function_parameters) [3157 3162])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [3164 3172]))                          
+                        :documentation "See ReplayBuffer.store_effect")
+                        (reparse-symbol indented_block_body) [3143 3438])
+                    ("_sample_proportional" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3468 3472])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [3474 3484]))                          )
+                        (reparse-symbol indented_block_body) [3443 3781])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3797 3801])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [3803 3813])
+                            ("beta" variable nil (reparse-symbol function_parameters) [3815 3819]))                          
+                        :documentation "Sample a batch of experiences.
+
+        compared to ReplayBuffer.sample
+        it also returns importance weights and idxes
+        of sampled experiences.
+
+
+        Parameters
+        ----------
+        batch_size: int
+            How many transitions to sample.
+        beta: float
+            To what degree to use importance weights
+            (0 - no corrections, 1 - full correction)
+
+        Returns
+        -------
+        obs_batch: np.array
+            batch of observations
+        act_batch: np.array
+            batch of actions executed given obs_batch
+        rew_batch: np.array
+            rewards received as results of executing act_batch
+        next_obs_batch: np.array
+            next set of observations seen after executing act_batch
+        done_mask: np.array
+            done_mask[i] = 1 if executing act_batch[i] resulted in
+            the end of an episode and 0 otherwise.
+        weights: np.array
+            Array of shape (batch_size,) and dtype np.float32
+            denoting importance weight of each sampled transition
+        idxes: np.array
+            Array of shape (batch_size,) and dtype np.int32
+            idexes in buffer of sampled experiences
+        ")
+                        (reparse-symbol indented_block_body) [3786 5611])
+                    ("update_priorities" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5638 5642])
+                            ("idxes" variable nil (reparse-symbol function_parameters) [5644 5649])
+                            ("priorities" variable nil (reparse-symbol function_parameters) [5651 5661]))                          
+                        :documentation "Update priorities of sampled transitions.
+
+        sets priority of transition at index idxes[i] in buffer
+        to priorities[i].
+
+        Parameters
+        ----------
+        idxes: [int]
+            List of idxes of sampled transitions
+        priorities: [float]
+            List of updated priorities corresponding to
+            transitions at the sampled idxes denoted by
+            variable `idxes`.
+        ")
+                        (reparse-symbol indented_block_body) [5616 6458]))                  
+                :type "class")
+                nil [2284 6458]))          
+      :file "replay_buffer.py"
+      :pointmax 6458
+      :fsize 6457
+      :lastmodtime '(23255 51996 210524 501000)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("tensorflow" include nil nil [12 35])
+            ("load_state" function (:arguments 
+              ( ("fname" variable nil (reparse-symbol function_parameters) [206 211]))              ) nil [191 294])
+            ("save_state" function (:arguments 
+              ( ("fname" variable nil (reparse-symbol function_parameters) [310 315]))              ) nil [295 490])
+            ("TfInput" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Generalized Tensorflow placeholder. The main differences are:
+            - possibly uses multiple placeholders internally and returns multiple values
+            - can apply light postprocessing to the value feed to placeholder.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [674 918])
+                            ("self" variable nil (reparse-symbol indented_block_body) [927 943]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [681 685])
+                            ("name" variable nil (reparse-symbol function_parameters) [687 691]))                          
+                        :documentation "Generalized Tensorflow placeholder. The main differences are:
+            - possibly uses multiple placeholders internally and returns multiple values
+            - can apply light postprocessing to the value feed to placeholder.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [668 984])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [997 1001]))                          
+                        :documentation "Return the tf variable(s) representing the possibly postprocessed value
+        of placeholder(s).
+        ")
+                        (reparse-symbol indented_block_body) [989 1157])
+                    ("make_feed_dict" function
+                       (:documentation "Given data input it to the placeholder(s)."
+                        :arguments 
+                          ( ("data" variable nil (reparse-symbol function_parameters) [1181 1185]))                          )
+                        (reparse-symbol indented_block_body) [1162 1276]))                  
+                :type "class")
+                nil [641 1276])
+            ("PlaceholderTfInput" type
+               (:superclasses ("TfInput")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Wrapper for regular tensorflow placeholder.\"\"\"" code nil (reparse-symbol indented_block_body) [1318 1367])
+                            ("super" code nil (reparse-symbol indented_block_body) [1376 1434])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1443 1474]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1330 1334])
+                            ("placeholder" variable nil (reparse-symbol function_parameters) [1336 1347]))                          
+                        :documentation "Wrapper for regular tensorflow placeholder."
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1317 1515])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1528 1532]))                          )
+                        (reparse-symbol indented_block_body) [1520 1568])
+                    ("make_feed_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1592 1596])
+                            ("data" variable nil (reparse-symbol function_parameters) [1598 1602]))                          )
+                        (reparse-symbol indented_block_body) [1573 1646]))                  
+                :type "class")
+                nil [1278 1646])
+            ("BatchInput" type
+               (:superclasses ("PlaceholderTfInput")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Creates a placeholder for a batch of tensors of a given shape and dtype
+
+        Parameters
+        ----------
+        shape: [int]
+            shape of a single elemenet of the batch
+        dtype: tf.dtype
+            number representation used for tensor contents
+        name: str
+            name of the underlying placeholder
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1713 2059])
+                            ("super" code nil (reparse-symbol indented_block_body) [2068 2156]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1702 1706])
+                            ("shape" variable nil (reparse-symbol function_parameters) [1708 1713])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [1715 1720])
+                            ("name" variable nil (reparse-symbol function_parameters) [1733 1737]))                          
+                        :documentation "Creates a placeholder for a batch of tensors of a given shape and dtype
+
+        Parameters
+        ----------
+        shape: [int]
+            shape of a single elemenet of the batch
+        dtype: tf.dtype
+            number representation used for tensor contents
+        name: str
+            name of the underlying placeholder
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1689 2197]))                  
+                :type "class")
+                nil [1647 2197])
+            ("Uint8Input" type
+               (:superclasses ("PlaceholderTfInput")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Takes input in uint8 format which is cast to float32 and divided by 255
+        before passing it to the model.
+
+        On GPU this ensures lower data transfer times.
+
+        Parameters
+        ----------
+        shape: [int]
+            shape of the tensor.
+        name: str
+            name of the underlying placeholder
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2246 2586])
+                            ("super" code nil (reparse-symbol indented_block_body) [2596 2686])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2695 2714])
+                            ("self" code nil (reparse-symbol indented_block_body) [2723 2780]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2253 2257])
+                            ("shape" variable nil (reparse-symbol function_parameters) [2259 2264])
+                            ("name" variable nil (reparse-symbol function_parameters) [2266 2270]))                          
+                        :documentation "Takes input in uint8 format which is cast to float32 and divided by 255
+        before passing it to the model.
+
+        On GPU this ensures lower data transfer times.
+
+        Parameters
+        ----------
+        shape: [int]
+            shape of the tensor.
+        name: str
+            name of the underlying placeholder
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2240 2821])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2834 2838]))                          )
+                        (reparse-symbol indented_block_body) [2826 2868]))                  
+                :type "class")
+                nil [2198 2868]))          
+      :file "utils.py"
+      :pointmax 2868
+      :fsize 2867
+      :lastmodtime '(23255 52268 732699 700000)
+      :unmatched-syntax nil))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!not_beyond!learning_pipeline!deepq!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

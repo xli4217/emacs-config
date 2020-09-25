@@ -1,0 +1,195 @@
+;; Object sumolib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sumolib/"
+  :tables
+  (list
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [649 687])
+            ("os" include nil nil [688 697])
+            ("sys" include nil nil [698 708])
+            ("subprocess" include nil nil [709 726])
+            ("xml.sax" include nil nil [727 767])
+            ("optparse" include nil nil [768 822])
+            ("shapes" include nil nil [1002 1044])
+            ("sensors" include nil nil [1002 1044])
+            ("output" include nil nil [1002 1044])
+            ("net" include nil nil [1002 1044])
+            ("files" include nil nil [1002 1044])
+            ("route" include nil nil [1052 1103])
+            ("options" include nil nil [1052 1103])
+            ("miscutils" include nil nil [1052 1103])
+            ("geomhelper" include nil nil [1052 1103])
+            ("color" include nil nil [1052 1103])
+            ("writeHeader" include nil nil [1114 1150])
+            ("ConfigurationReader" type
+               (:documentation "Reads a configuration template, storing the options in an OptionParser"
+                :superclasses ("handler.ContentHandler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1346 1367])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1376 1397])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1406 1429])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1438 1462]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1304 1308])
+                            ("optParse" variable nil (reparse-symbol function_parameters) [1310 1318])
+                            ("groups" variable nil (reparse-symbol function_parameters) [1320 1326])
+                            ("options" variable nil (reparse-symbol function_parameters) [1328 1335]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1291 1463])
+                    ("startElement" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1485 1489])
+                            ("name" variable nil (reparse-symbol function_parameters) [1491 1495])
+                            ("attrs" variable nil (reparse-symbol function_parameters) [1497 1502]))                          )
+                        (reparse-symbol indented_block_body) [1468 2544])
+                    ("endElement" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2564 2568])
+                            ("name" variable nil (reparse-symbol function_parameters) [2570 2574]))                          )
+                        (reparse-symbol indented_block_body) [2549 2735]))                  
+                :type "class")
+                nil [1153 2735])
+            ("pullOptions" function (:arguments 
+              ( ("executable" variable nil (reparse-symbol function_parameters) [2753 2763])
+                ("optParse" variable nil (reparse-symbol function_parameters) [2765 2773])
+                ("groups" variable nil (reparse-symbol function_parameters) [2775 2781])
+                ("options" variable nil (reparse-symbol function_parameters) [2788 2795]))              ) nil [2737 2993])
+            ("saveConfiguration" function (:arguments 
+              ( ("executable" variable nil (reparse-symbol function_parameters) [3017 3027])
+                ("options" variable nil (reparse-symbol function_parameters) [3029 3036])
+                ("filename" variable nil (reparse-symbol function_parameters) [3038 3046]))              ) nil [2995 3121])
+            ("call" function (:arguments 
+              ( ("executable" variable nil (reparse-symbol function_parameters) [3132 3142])
+                ("options" variable nil (reparse-symbol function_parameters) [3144 3151]))              ) nil [3123 3599])
+            ("exeExists" function (:arguments 
+              ( ("binary" variable nil (reparse-symbol function_parameters) [3615 3621]))              ) nil [3601 3733])
+            ("checkBinary" function
+               (:documentation "
+    Checks for the given binary in the places, defined by the environment
+    variables SUMO_HOME and <NAME>_BINARY.
+    "
+                :arguments 
+                  ( ("name" variable nil (reparse-symbol function_parameters) [3751 3755])
+                    ("bindir" variable nil (reparse-symbol function_parameters) [3757 3763]))                  )
+                nil [3735 4569])
+            ("_Running" type
+               (:documentation "
+    A generator of running, numerical IDs
+    Should be enhanced by:
+    - a member method for returning the size
+    - a member iterator over the stored ids
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Contructor\"\"\"" code nil (reparse-symbol indented_block_body) [4823 4839])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4913 4937])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5009 5025])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5084 5098])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5162 5174]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4780 4784])
+                            ("orig_ids" variable nil (reparse-symbol function_parameters) [4786 4794])
+                            ("warn" variable nil (reparse-symbol function_parameters) [4802 4806]))                          
+                        :documentation "Contructor"
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4767 5175])
+                    ("g" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5186 5190])
+                            ("id" variable nil (reparse-symbol function_parameters) [5192 5194]))                          
+                        :documentation "
+        If the given id is known, the numerical representation is returned,
+        otherwise a new running number is assigned to the id and returned")
+                        (reparse-symbol indented_block_body) [5180 5846])
+                    ("k" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5857 5861])
+                            ("id" variable nil (reparse-symbol function_parameters) [5863 5865]))                          
+                        :documentation "
+        Returns whether the given id is known.")
+                        (reparse-symbol indented_block_body) [5851 5959])
+                    ("d" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5970 5974])
+                            ("id" variable nil (reparse-symbol function_parameters) [5976 5978]))                          
+                        :documentation "
+        Removed the element.")
+                        (reparse-symbol indented_block_body) [5964 6049]))                  
+                :type "class")
+                nil [4571 6049])
+            ("TeeFile" type
+               (:documentation "A helper class which allows simultaneous writes to several files"
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [6183 6201]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6160 6164])
+                            ("files" variable nil (reparse-symbol function_parameters) [6166 6172]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6147 6202])
+                    ("write" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6217 6221])
+                            ("txt" variable nil (reparse-symbol function_parameters) [6223 6226]))                          
+                        :documentation "Writes the text to all files")
+                        (reparse-symbol indented_block_body) [6207 6328])
+                    ("flush" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6343 6347]))                          
+                        :documentation "flushes all file contents to disc")
+                        (reparse-symbol indented_block_body) [6333 6623]))                  
+                :type "class")
+                nil [6051 6623])
+            ("_intTime" function
+               (:documentation "
+    Converts a time given as a string containing a float into an integer representation.
+    "
+                :arguments 
+                  ( ("tStr" variable nil (reparse-symbol function_parameters) [6638 6642]))                  )
+                nil [6625 6778])
+            ("_laneID2edgeID" function (:arguments 
+              ( ("laneID" variable nil (reparse-symbol function_parameters) [6799 6805]))              ) nil [6780 6846]))          
+      :file "__init__.py"
+      :pointmax 6846
+      :fsize 6845
+      :lastmodtime '(23228 566 894230 79000)
+      :unmatched-syntax '((FROM 1104 . 1108) (PERIOD 1109 . 1110) (FROM 1045 . 1049) (PERIOD 1050 . 1051) (PERIOD 1000 . 1001) (INDENT_BLOCK 886 . 995) (COLON 884 . 885) (TRY 824 . 827) (AS 880 . 882) (FROM 833 . 837) (PERIOD 838 . 839)))
+    (semanticdb-table "route.py"
+      :file "route.py"
+      :fsize 3144
+      :lastmodtime '(23228 566 894230 79000))
+    (semanticdb-table "options.py"
+      :file "options.py"
+      :fsize 1873
+      :lastmodtime '(23228 566 894230 79000))
+    (semanticdb-table "miscutils.py"
+      :file "miscutils.py"
+      :fsize 8579
+      :lastmodtime '(23228 566 894230 79000))
+    (semanticdb-table "geomhelper.py"
+      :file "geomhelper.py"
+      :fsize 5542
+      :lastmodtime '(23228 566 894230 79000))
+    (semanticdb-table "color.py"
+      :file "color.py"
+      :fsize 960
+      :lastmodtime '(23228 566 894230 79000)))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!not_beyond!sumo!src!sumo!tools!sumolib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

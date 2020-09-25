@@ -1,0 +1,919 @@
+;; Object net/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "net/"
+  :tables
+  (list
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+This file contains a content handler for parsing sumo network xml files.
+It uses other classes from this module to represent the road network.
+\"\"\"" code nil nil [621 771])
+            ("__future__" include nil nil [773 810])
+            ("__future__" include nil nil [811 849])
+            ("os" include nil nil [850 859])
+            ("sys" include nil nil [860 870])
+            ("math" include nil nil [871 882])
+            ("re" include nil nil [883 892])
+            ("xml.sax" include nil nil [893 937])
+            ("copy" include nil nil [938 959])
+            ("itertools" include nil nil [960 983])
+            ("collections" include nil nil [984 1019])
+            ("sumolib" include nil nil [1021 1035])
+            ("roundabout" include nil nil [1043 1090])
+            ("connection" include nil nil [1043 1090])
+            ("node" include nil nil [1043 1090])
+            ("edge" include nil nil [1043 1090])
+            ("lane" include nil nil [1043 1090])
+            ("Lane" include nil nil [1102 1113])
+            ("Edge" include nil nil [1125 1136])
+            ("Node" include nil nil [1148 1159])
+            ("Connection" include nil nil [1177 1194])
+            ("Roundabout" include nil nil [1212 1229])
+            ("TLS" type
+               (:documentation "Traffic Light Signal for a sumo network"
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1331 1344])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1353 1375])
+                            ("self" code nil (reparse-symbol indented_block_body) [1384 1410])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1419 1438]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1312 1316])
+                            ("id" variable nil (reparse-symbol function_parameters) [1318 1320]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1299 1439])
+                    ("addConnection" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1462 1466])
+                            ("inLane" variable nil (reparse-symbol function_parameters) [1468 1474])
+                            ("outLane" variable nil (reparse-symbol function_parameters) [1476 1483])
+                            ("linkNo" variable nil (reparse-symbol function_parameters) [1485 1491]))                          )
+                        (reparse-symbol indented_block_body) [1444 1640])
+                    ("getConnections" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1664 1668]))                          )
+                        (reparse-symbol indented_block_body) [1645 1704])
+                    ("getID" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1719 1723]))                          )
+                        (reparse-symbol indented_block_body) [1709 1750])
+                    ("getLinks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1768 1772]))                          )
+                        (reparse-symbol indented_block_body) [1755 1997])
+                    ("getEdges" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2015 2019]))                          )
+                        (reparse-symbol indented_block_body) [2002 2139])
+                    ("addProgram" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2159 2163])
+                            ("program" variable nil (reparse-symbol function_parameters) [2165 2172]))                          )
+                        (reparse-symbol indented_block_body) [2144 2221])
+                    ("removePrograms" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2245 2249]))                          )
+                        (reparse-symbol indented_block_body) [2226 2283])
+                    ("toXML" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2298 2302]))                          )
+                        (reparse-symbol indented_block_body) [2288 2432])
+                    ("getPrograms" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2453 2457]))                          )
+                        (reparse-symbol indented_block_body) [2437 2490]))                  
+                :type "class")
+                nil [1232 2490])
+            ("TLSProgram" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2561 2574])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2583 2600])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2609 2630])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2639 2656]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2528 2532])
+                            ("id" variable nil (reparse-symbol function_parameters) [2534 2536])
+                            ("offset" variable nil (reparse-symbol function_parameters) [2538 2544])
+                            ("type" variable nil (reparse-symbol function_parameters) [2546 2550]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2515 2657])
+                    ("addPhase" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2675 2679])
+                            ("state" variable nil (reparse-symbol function_parameters) [2681 2686])
+                            ("duration" variable nil (reparse-symbol function_parameters) [2688 2696]))                          )
+                        (reparse-symbol indented_block_body) [2662 2746])
+                    ("toXML" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2761 2765])
+                            ("tlsID" variable nil (reparse-symbol function_parameters) [2767 2772]))                          )
+                        (reparse-symbol indented_block_body) [2751 3095])
+                    ("getPhases" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3114 3118]))                          )
+                        (reparse-symbol indented_block_body) [3100 3149]))                  
+                :type "class")
+                nil [2492 3149])
+            ("Net" type
+               (:documentation "The whole sumo network."
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3230 3249])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3258 3276])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3285 3303])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3312 3352])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3361 3378])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3387 3403])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3412 3428])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3437 3452])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3461 3510])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3519 3541])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3550 3568])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3577 3596])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3605 3625])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3634 3673]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3215 3219]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3202 3674])
+                    ("setLocation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3695 3699])
+                            ("netOffset" variable nil (reparse-symbol function_parameters) [3701 3710])
+                            ("convBoundary" variable nil (reparse-symbol function_parameters) [3712 3724])
+                            ("origBoundary" variable nil (reparse-symbol function_parameters) [3726 3738])
+                            ("projParameter" variable nil (reparse-symbol function_parameters) [3740 3753]))                          )
+                        (reparse-symbol indented_block_body) [3679 3968])
+                    ("addNode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3985 3989])
+                            ("id" variable nil (reparse-symbol function_parameters) [3991 3993])
+                            ("type" variable nil (reparse-symbol function_parameters) [3995 3999])
+                            ("coord" variable nil (reparse-symbol function_parameters) [4006 4011])
+                            ("incLanes" variable nil (reparse-symbol function_parameters) [4018 4026])
+                            ("intLanes" variable nil (reparse-symbol function_parameters) [4033 4041]))                          )
+                        (reparse-symbol indented_block_body) [3973 4396])
+                    ("setAdditionalNodeInfo" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4427 4431])
+                            ("node" variable nil (reparse-symbol function_parameters) [4433 4437])
+                            ("type" variable nil (reparse-symbol function_parameters) [4439 4443])
+                            ("coord" variable nil (reparse-symbol function_parameters) [4445 4450])
+                            ("incLanes" variable nil (reparse-symbol function_parameters) [4452 4460])
+                            ("intLanes" variable nil (reparse-symbol function_parameters) [4462 4470]))                          )
+                        (reparse-symbol indented_block_body) [4401 5110])
+                    ("addEdge" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5127 5131])
+                            ("id" variable nil (reparse-symbol function_parameters) [5133 5135])
+                            ("fromID" variable nil (reparse-symbol function_parameters) [5137 5143])
+                            ("toID" variable nil (reparse-symbol function_parameters) [5145 5149])
+                            ("prio" variable nil (reparse-symbol function_parameters) [5151 5155])
+                            ("function" variable nil (reparse-symbol function_parameters) [5157 5165])
+                            ("name" variable nil (reparse-symbol function_parameters) [5167 5171]))                          )
+                        (reparse-symbol indented_block_body) [5115 5453])
+                    ("addLane" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5470 5474])
+                            ("edge" variable nil (reparse-symbol function_parameters) [5476 5480])
+                            ("speed" variable nil (reparse-symbol function_parameters) [5482 5487])
+                            ("length" variable nil (reparse-symbol function_parameters) [5489 5495])
+                            ("width" variable nil (reparse-symbol function_parameters) [5497 5502])
+                            ("allow" variable nil (reparse-symbol function_parameters) [5504 5509])
+                            ("disallow" variable nil (reparse-symbol function_parameters) [5516 5524]))                          )
+                        (reparse-symbol indented_block_body) [5458 5602])
+                    ("addRoundabout" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5625 5629])
+                            ("nodes" variable nil (reparse-symbol function_parameters) [5631 5636])
+                            ("edges" variable nil (reparse-symbol function_parameters) [5638 5643]))                          )
+                        (reparse-symbol indented_block_body) [5607 5752])
+                    ("addConnection" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5775 5779])
+                            ("fromEdge" variable nil (reparse-symbol function_parameters) [5781 5789])
+                            ("toEdge" variable nil (reparse-symbol function_parameters) [5791 5797])
+                            ("fromlane" variable nil (reparse-symbol function_parameters) [5799 5807])
+                            ("tolane" variable nil (reparse-symbol function_parameters) [5809 5815])
+                            ("direction" variable nil (reparse-symbol function_parameters) [5817 5826])
+                            ("tls" variable nil (reparse-symbol function_parameters) [5828 5831])
+                            ("tllink" variable nil (reparse-symbol function_parameters) [5833 5839])
+                            ("state" variable nil (reparse-symbol function_parameters) [5841 5846])
+                            ("viaLaneID" variable nil (reparse-symbol function_parameters) [5848 5857]))                          )
+                        (reparse-symbol indented_block_body) [5757 6097])
+                    ("getEdges" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6115 6119]))                          )
+                        (reparse-symbol indented_block_body) [6102 6149])
+                    ("getRoundabouts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6173 6177]))                          )
+                        (reparse-symbol indented_block_body) [6154 6213])
+                    ("hasEdge" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6230 6234])
+                            ("id" variable nil (reparse-symbol function_parameters) [6236 6238]))                          )
+                        (reparse-symbol indented_block_body) [6218 6276])
+                    ("getEdge" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6293 6297])
+                            ("id" variable nil (reparse-symbol function_parameters) [6299 6301]))                          )
+                        (reparse-symbol indented_block_body) [6281 6337])
+                    ("getLane" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6354 6358])
+                            ("laneID" variable nil (reparse-symbol function_parameters) [6360 6366]))                          )
+                        (reparse-symbol indented_block_body) [6342 6483])
+                    ("_initRTree" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6503 6507])
+                            ("shapeList" variable nil (reparse-symbol function_parameters) [6509 6518])
+                            ("includeJunctions" variable nil (reparse-symbol function_parameters) [6520 6536]))                          )
+                        (reparse-symbol indented_block_body) [6488 6765])
+                    ("getNeighboringEdges" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6863 6867])
+                            ("x" variable nil (reparse-symbol function_parameters) [6869 6870])
+                            ("y" variable nil (reparse-symbol function_parameters) [6872 6873])
+                            ("r" variable nil (reparse-symbol function_parameters) [6875 6876])
+                            ("includeJunctions" variable nil (reparse-symbol function_parameters) [6882 6898]))                          )
+                        (reparse-symbol indented_block_body) [6839 7837])
+                    ("getNeighboringLanes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7866 7870])
+                            ("x" variable nil (reparse-symbol function_parameters) [7872 7873])
+                            ("y" variable nil (reparse-symbol function_parameters) [7875 7876])
+                            ("r" variable nil (reparse-symbol function_parameters) [7878 7879])
+                            ("includeJunctions" variable nil (reparse-symbol function_parameters) [7885 7901]))                          )
+                        (reparse-symbol indented_block_body) [7842 8820])
+                    ("hasNode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8837 8841])
+                            ("id" variable nil (reparse-symbol function_parameters) [8843 8845]))                          )
+                        (reparse-symbol indented_block_body) [8825 8883])
+                    ("getNode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8900 8904])
+                            ("id" variable nil (reparse-symbol function_parameters) [8906 8908]))                          )
+                        (reparse-symbol indented_block_body) [8888 8944])
+                    ("getNodes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8962 8966]))                          )
+                        (reparse-symbol indented_block_body) [8949 8996])
+                    ("getTLSSecure" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9018 9022])
+                            ("tlid" variable nil (reparse-symbol function_parameters) [9024 9028]))                          )
+                        (reparse-symbol indented_block_body) [9001 9234])
+                    ("getTrafficLights" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9260 9264]))                          )
+                        (reparse-symbol indented_block_body) [9239 9293])
+                    ("addTLS" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9309 9313])
+                            ("tlid" variable nil (reparse-symbol function_parameters) [9315 9319])
+                            ("inLane" variable nil (reparse-symbol function_parameters) [9321 9327])
+                            ("outLane" variable nil (reparse-symbol function_parameters) [9329 9336])
+                            ("linkNo" variable nil (reparse-symbol function_parameters) [9338 9344]))                          )
+                        (reparse-symbol indented_block_body) [9298 9455])
+                    ("addTLSProgram" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9478 9482])
+                            ("tlid" variable nil (reparse-symbol function_parameters) [9484 9488])
+                            ("programID" variable nil (reparse-symbol function_parameters) [9490 9499])
+                            ("offset" variable nil (reparse-symbol function_parameters) [9501 9507])
+                            ("type" variable nil (reparse-symbol function_parameters) [9509 9513])
+                            ("removeOthers" variable nil (reparse-symbol function_parameters) [9515 9527]))                          )
+                        (reparse-symbol indented_block_body) [9460 9735])
+                    ("setFoes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9752 9756])
+                            ("junctionID" variable nil (reparse-symbol function_parameters) [9758 9768])
+                            ("index" variable nil (reparse-symbol function_parameters) [9770 9775])
+                            ("foes" variable nil (reparse-symbol function_parameters) [9777 9781])
+                            ("prohibits" variable nil (reparse-symbol function_parameters) [9783 9792]))                          )
+                        (reparse-symbol indented_block_body) [9740 9861])
+                    ("forbids" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9878 9882])
+                            ("possProhibitor" variable nil (reparse-symbol function_parameters) [9884 9898])
+                            ("possProhibited" variable nil (reparse-symbol function_parameters) [9900 9914]))                          )
+                        (reparse-symbol indented_block_body) [9866 10009])
+                    ("getDownstreamEdges" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10037 10041])
+                            ("edge" variable nil (reparse-symbol function_parameters) [10043 10047])
+                            ("distance" variable nil (reparse-symbol function_parameters) [10049 10057])
+                            ("stopOnTLS" variable nil (reparse-symbol function_parameters) [10059 10068]))                          )
+                        (reparse-symbol indented_block_body) [10014 11205])
+                    ("getEdgesByOrigID" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11231 11235])
+                            ("origID" variable nil (reparse-symbol function_parameters) [11237 11243]))                          )
+                        (reparse-symbol indented_block_body) [11210 11565])
+                    ("getBBoxXY" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11584 11588]))                          
+                        :documentation "
+        Get the bounding box (bottom left and top right coordinates) for a net;
+        Coordinates are in X and Y (not Lat and Lon)
+
+        :return [(bottom_left_X, bottom_left_Y), (top_right_X, top_right_Y)]
+        ")
+                        (reparse-symbol indented_block_body) [11570 11942])
+                    ("getBBoxDiameter" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12019 12023]))                          )
+                        (reparse-symbol indented_block_body) [11999 12173])
+                    ("getGeoProj" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12193 12197]))                          )
+                        (reparse-symbol indented_block_body) [12178 12514])
+                    ("getLocationOffset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12541 12545]))                          
+                        :documentation " offset to be added after converting from geo-coordinates to UTM")
+                        (reparse-symbol indented_block_body) [12519 12699])
+                    ("convertLonLat2XY" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12725 12729])
+                            ("lon" variable nil (reparse-symbol function_parameters) [12731 12734])
+                            ("lat" variable nil (reparse-symbol function_parameters) [12736 12739])
+                            ("rawUTM" variable nil (reparse-symbol function_parameters) [12741 12747]))                          )
+                        (reparse-symbol indented_block_body) [12704 12948])
+                    ("convertXY2LonLat" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12974 12978])
+                            ("x" variable nil (reparse-symbol function_parameters) [12980 12981])
+                            ("y" variable nil (reparse-symbol function_parameters) [12983 12984])
+                            ("rawUTM" variable nil (reparse-symbol function_parameters) [12986 12992]))                          )
+                        (reparse-symbol indented_block_body) [12953 13175])
+                    ("move" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13189 13193])
+                            ("dx" variable nil (reparse-symbol function_parameters) [13195 13197])
+                            ("dy" variable nil (reparse-symbol function_parameters) [13199 13201])
+                            ("dz" variable nil (reparse-symbol function_parameters) [13203 13205]))                          )
+                        (reparse-symbol indented_block_body) [13180 13523]))                  
+                :type "class")
+                nil [3151 13523])
+            ("NetReader" type
+               (:documentation "Reads a network, storing the edge geometries, lane numbers and max. speeds"
+                :superclasses ("handler.ContentHandler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [13695 13731])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13740 13764])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13773 13797])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13806 13830])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13839 13891])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13900 13961])
+                            ("if" code nil (reparse-symbol indented_block_body) [13970 14030])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14038 14097])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14106 14151])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14160 14214]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13670 13674])
+                            ("others" variable nil (reparse-symbol function_parameters) [13676 13684]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13657 14215])
+                    ("startElement" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14237 14241])
+                            ("name" variable nil (reparse-symbol function_parameters) [14243 14247])
+                            ("attrs" variable nil (reparse-symbol function_parameters) [14249 14254]))                          )
+                        (reparse-symbol indented_block_body) [14220 20906])
+                    ("endElement" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20926 20930])
+                            ("name" variable nil (reparse-symbol function_parameters) [20932 20936]))                          )
+                        (reparse-symbol indented_block_body) [20911 21350])
+                    ("getNet" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21366 21370]))                          )
+                        (reparse-symbol indented_block_body) [21355 21398]))                  
+                :type "class")
+                nil [13525 21398])
+            ("convertShape" function
+               (:documentation " Convert xml shape string into float tuples.
+
+    This method converts the 2d or 3d shape string from SUMO's xml file
+    into a list containing 3d float-tuples. Non existant z coordinates default
+    to zero. If shapeString is empty, an empty list will be returned.
+    "
+                :arguments 
+                  ( ("shapeString" variable nil (reparse-symbol function_parameters) [21417 21428]))                  )
+                nil [21400 22106])
+            ("readNet" function
+               (:documentation " load a .net.xml file
+    The following named options are supported:
+
+        'net' : initialize data structurs with an existing net object (default Net())
+        'withPrograms' : import all traffic light programs (default False)
+        'withLatestPrograms' : import only the last program for each traffic light.
+                               This is the program that would be active in sumo by default.
+                               (default False)
+        'withConnections' : import all connections (default True)
+        'withFoes' : import right-of-way information (default True)
+        'withInternal' : import internal edges and lanes (default False)
+    "
+                :arguments 
+                  ( ("filename" variable nil (reparse-symbol function_parameters) [22120 22128])
+                    ("others" variable nil (reparse-symbol function_parameters) [22130 22138]))                  )
+                nil [22108 23249]))          
+      :file "__init__.py"
+      :pointmax 23249
+      :fsize 23248
+      :lastmodtime '(23228 566 894230 79000)
+      :unmatched-syntax '((FROM 1195 . 1199) (PERIOD 1200 . 1201) (FROM 1160 . 1164) (PERIOD 1165 . 1166) (FROM 1137 . 1141) (PERIOD 1142 . 1143) (FROM 1114 . 1118) (PERIOD 1119 . 1120) (FROM 1091 . 1095) (PERIOD 1096 . 1097) (FROM 1036 . 1040) (PERIOD 1041 . 1042)))
+    (semanticdb-table "roundabout.py"
+      :file "roundabout.py"
+      :fsize 794
+      :lastmodtime '(23228 566 894230 79000))
+    (semanticdb-table "connection.py"
+      :file "connection.py"
+      :fsize 2323
+      :lastmodtime '(23228 566 894230 79000))
+    (semanticdb-table "node.py"
+      :file "node.py"
+      :fsize 4375
+      :lastmodtime '(23228 566 894230 79000))
+    (semanticdb-table "edge.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Connection" include nil nil [607 624])
+            ("addJunctionPos" include nil nil [636 657])
+            ("Edge" type
+               (:documentation " Edges from a sumo network "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [782 795])
+                            ("self" variable nil (reparse-symbol indented_block_body) [804 822])
+                            ("self" variable nil (reparse-symbol indented_block_body) [831 845])
+                            ("self" variable nil (reparse-symbol indented_block_body) [854 875])
+                            ("if" code nil (reparse-symbol indented_block_body) [884 930])
+                            ("if" code nil (reparse-symbol indented_block_body) [938 980])
+                            ("self" variable nil (reparse-symbol indented_block_body) [988 1004])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1013 1031])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1040 1059])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1068 1087])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1096 1115])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1124 1142])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1151 1182])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1191 1211])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1220 1253])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1262 1283])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1292 1315])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1324 1349])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1358 1374])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1383 1400]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [729 733])
+                            ("id" variable nil (reparse-symbol function_parameters) [735 737])
+                            ("fromN" variable nil (reparse-symbol function_parameters) [739 744])
+                            ("toN" variable nil (reparse-symbol function_parameters) [746 749])
+                            ("prio" variable nil (reparse-symbol function_parameters) [751 755])
+                            ("function" variable nil (reparse-symbol function_parameters) [757 765])
+                            ("name" variable nil (reparse-symbol function_parameters) [767 771]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [716 1401])
+                    ("getName" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1418 1422]))                          )
+                        (reparse-symbol indented_block_body) [1406 1451])
+                    ("isSpecial" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1470 1474]))                          
+                        :documentation " Check if the edge has a special function.
+
+        Returns False if edge's function is 'normal', else False, e.g. for
+        internal edges or connector edges ")
+                        (reparse-symbol indented_block_body) [1456 1690])
+                    ("getFunction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1711 1715]))                          )
+                        (reparse-symbol indented_block_body) [1695 1748])
+                    ("getPriority" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1769 1773]))                          )
+                        (reparse-symbol indented_block_body) [1753 1806])
+                    ("getTLS" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1822 1826]))                          )
+                        (reparse-symbol indented_block_body) [1811 1854])
+                    ("addLane" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1871 1875])
+                            ("lane" variable nil (reparse-symbol function_parameters) [1877 1881]))                          )
+                        (reparse-symbol indented_block_body) [1859 1995])
+                    ("addOutgoing" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2016 2020])
+                            ("conn" variable nil (reparse-symbol function_parameters) [2022 2026]))                          )
+                        (reparse-symbol indented_block_body) [2000 2160])
+                    ("_addIncoming" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2182 2186])
+                            ("conn" variable nil (reparse-symbol function_parameters) [2188 2192]))                          )
+                        (reparse-symbol indented_block_body) [2165 2332])
+                    ("setRawShape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2353 2357])
+                            ("shape" variable nil (reparse-symbol function_parameters) [2359 2364]))                          )
+                        (reparse-symbol indented_block_body) [2337 2400])
+                    ("getID" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2415 2419]))                          )
+                        (reparse-symbol indented_block_body) [2405 2446])
+                    ("getIncoming" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2467 2471]))                          )
+                        (reparse-symbol indented_block_body) [2451 2504])
+                    ("getOutgoing" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2525 2529]))                          )
+                        (reparse-symbol indented_block_body) [2509 2562])
+                    ("getRawShape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2583 2587]))                          
+                        :documentation "Return the shape that was used in netconvert for building this edge (2D).")
+                        (reparse-symbol indented_block_body) [2567 2772])
+                    ("getRawShape3D" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2795 2799]))                          
+                        :documentation "Return the shape that was used in netconvert for building this edge (3D).")
+                        (reparse-symbol indented_block_body) [2777 2986])
+                    ("getShape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3004 3008])
+                            ("includeJunctions" variable nil (reparse-symbol function_parameters) [3010 3026]))                          
+                        :documentation "Return the 2D shape that is the average of all lane shapes (segment-wise)")
+                        (reparse-symbol indented_block_body) [2991 3287])
+                    ("getShape3D" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3307 3311])
+                            ("includeJunctions" variable nil (reparse-symbol function_parameters) [3313 3329]))                          )
+                        (reparse-symbol indented_block_body) [3292 3506])
+                    ("getBoundingBox" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3530 3534])
+                            ("includeJunctions" variable nil (reparse-symbol function_parameters) [3536 3552]))                          )
+                        (reparse-symbol indented_block_body) [3511 3977])
+                    ("getClosestLanePosDist" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4008 4012])
+                            ("point" variable nil (reparse-symbol function_parameters) [4014 4019])
+                            ("perpendicular" variable nil (reparse-symbol function_parameters) [4021 4034]))                          )
+                        (reparse-symbol indented_block_body) [3982 4385])
+                    ("getSpeed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4403 4407]))                          )
+                        (reparse-symbol indented_block_body) [4390 4437])
+                    ("getLaneNumber" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4460 4464]))                          )
+                        (reparse-symbol indented_block_body) [4442 4499])
+                    ("getLane" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4516 4520])
+                            ("idx" variable nil (reparse-symbol function_parameters) [4522 4525]))                          )
+                        (reparse-symbol indented_block_body) [4504 4560])
+                    ("getLanes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4578 4582]))                          )
+                        (reparse-symbol indented_block_body) [4565 4612])
+                    ("rebuildShape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4634 4638]))                          )
+                        (reparse-symbol indented_block_body) [4617 5949])
+                    ("getLength" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5968 5972]))                          )
+                        (reparse-symbol indented_block_body) [5954 6017])
+                    ("setTLS" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6033 6037])
+                            ("tls" variable nil (reparse-symbol function_parameters) [6039 6042]))                          )
+                        (reparse-symbol indented_block_body) [6022 6069])
+                    ("getFromNode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6090 6094]))                          )
+                        (reparse-symbol indented_block_body) [6074 6123])
+                    ("getToNode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6142 6146]))                          )
+                        (reparse-symbol indented_block_body) [6128 6173])
+                    ("is_fringe" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6192 6196])
+                            ("connections" variable nil (reparse-symbol function_parameters) [6198 6209]))                          
+                        :documentation "true if this edge has no incoming or no outgoing connections (except turnarounds)
+           If connections is given, only those connections are considered")
+                        (reparse-symbol indented_block_body) [6178 6669])
+                    ("allows" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6685 6689])
+                            ("vClass" variable nil (reparse-symbol function_parameters) [6691 6697]))                          
+                        :documentation "true if this edge has a lane which allows the given vehicle class")
+                        (reparse-symbol indented_block_body) [6674 6902])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6920 6924]))                          )
+                        (reparse-symbol indented_block_body) [6907 7168]))                  
+                :type "class")
+                nil [660 7168]))          
+      :file "edge.py"
+      :pointmax 7168
+      :fsize 7167
+      :lastmodtime '(23228 566 894230 79000)
+      :unmatched-syntax '((FROM 625 . 629) (PERIOD 630 . 631) (PERIOD 595 . 596)))
+    (semanticdb-table "lane.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sumolib.geomhelper" include nil nil [591 616])
+            ("functools" include nil nil [617 645])
+            ("SUMO_VEHICLE_CLASSES" variable nil nil [703 1435])
+            ("get_allowed" function
+               (:documentation " Normalize the given string attributes as a list of all allowed vClasses."
+                :arguments 
+                  ( ("allow" variable nil (reparse-symbol function_parameters) [1454 1459])
+                    ("disallow" variable nil (reparse-symbol function_parameters) [1461 1469]))                  )
+                nil [1438 1814])
+            ("addJunctionPos" function
+               (:documentation "Extends shape with the given positions in case they differ from the
+    existing endpoints. assumes that shape and positions have the same dimensionality"
+                :arguments 
+                  ( ("shape" variable nil (reparse-symbol function_parameters) [1835 1840])
+                    ("fromPos" variable nil (reparse-symbol function_parameters) [1842 1849])
+                    ("toPos" variable nil (reparse-symbol function_parameters) [1851 1856]))                  )
+                nil [1816 2186])
+            ("Lane" type
+               (:documentation " Lanes from a sumo network "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2317 2334])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2343 2362])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2371 2392])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2401 2420])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2429 2447])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2456 2476])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2485 2516])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2525 2558])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2567 2586])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2595 2612])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2621 2665])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2674 2692])
+                            ("edge" code nil (reparse-symbol indented_block_body) [2701 2719]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2257 2261])
+                            ("edge" variable nil (reparse-symbol function_parameters) [2263 2267])
+                            ("speed" variable nil (reparse-symbol function_parameters) [2269 2274])
+                            ("length" variable nil (reparse-symbol function_parameters) [2276 2282])
+                            ("width" variable nil (reparse-symbol function_parameters) [2284 2289])
+                            ("allow" variable nil (reparse-symbol function_parameters) [2291 2296])
+                            ("disallow" variable nil (reparse-symbol function_parameters) [2298 2306]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2244 2720])
+                    ("getSpeed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2738 2742]))                          )
+                        (reparse-symbol indented_block_body) [2725 2772])
+                    ("getLength" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2791 2795]))                          )
+                        (reparse-symbol indented_block_body) [2777 2826])
+                    ("getWidth" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2844 2848]))                          )
+                        (reparse-symbol indented_block_body) [2831 2878])
+                    ("setShape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2896 2900])
+                            ("shape" variable nil (reparse-symbol function_parameters) [2902 2907]))                          
+                        :documentation "Set the shape of the lane
+
+        shape must be a list containing x,y,z coords as numbers
+        to represent the shape of the lane
+        ")
+                        (reparse-symbol indented_block_body) [2883 3274])
+                    ("getShape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3292 3296])
+                            ("includeJunctions" variable nil (reparse-symbol function_parameters) [3298 3314]))                          
+                        :documentation "Returns the shape of the lane in 2d.
+
+        This function returns the shape of the lane, as defined in the net.xml
+        file. The returned shape is a list containing numerical
+        2-tuples representing the x,y coordinates of the shape points.
+
+        For includeJunctions=True the returned list will contain
+        additionally the coords (x,y) of the fromNode of the
+        corresponding edge as first element and the coords (x,y)
+        of the toNode as last element.
+
+        For internal lanes, includeJunctions is ignored and the unaltered
+        shape of the lane is returned.
+        ")
+                        (reparse-symbol indented_block_body) [3279 4383])
+                    ("getShape3D" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4403 4407])
+                            ("includeJunctions" variable nil (reparse-symbol function_parameters) [4409 4425]))                          
+                        :documentation "Returns the shape of the lane in 3d.
+
+        This function returns the shape of the lane, as defined in the net.xml
+        file. The returned shape is a list containing numerical
+        3-tuples representing the x,y,z coordinates of the shape points
+        where z defaults to zero.
+
+        For includeJunction=True the returned list will contain
+        additionally the coords (x,y,z) of the fromNode of the
+        corresponding edge as first element and the coords (x,y,z)
+        of the toNode as last element.
+
+        For internal lanes, includeJunctions is ignored and the unaltered
+        shape of the lane is returned.
+        ")
+                        (reparse-symbol indented_block_body) [4388 5611])
+                    ("getBoundingBox" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5635 5639])
+                            ("includeJunctions" variable nil (reparse-symbol function_parameters) [5641 5657]))                          )
+                        (reparse-symbol indented_block_body) [5616 6050])
+                    ("getClosestLanePosAndDist" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6084 6088])
+                            ("point" variable nil (reparse-symbol function_parameters) [6090 6095])
+                            ("perpendicular" variable nil (reparse-symbol function_parameters) [6097 6110]))                          )
+                        (reparse-symbol indented_block_body) [6055 6224])
+                    ("getIndex" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6242 6246]))                          )
+                        (reparse-symbol indented_block_body) [6229 6294])
+                    ("getID" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6309 6313]))                          )
+                        (reparse-symbol indented_block_body) [6299 6375])
+                    ("getEdge" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6392 6396]))                          )
+                        (reparse-symbol indented_block_body) [6380 6425])
+                    ("addOutgoing" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6446 6450])
+                            ("conn" variable nil (reparse-symbol function_parameters) [6452 6456]))                          )
+                        (reparse-symbol indented_block_body) [6430 6495])
+                    ("getOutgoing" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6516 6520]))                          )
+                        (reparse-symbol indented_block_body) [6500 6553])
+                    ("getIncoming" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6574 6578]))                          
+                        :documentation "
+        Returns all incoming lanes for this lane, i.e. lanes, which have a connection to this lane.
+        ")
+                        (reparse-symbol indented_block_body) [6558 6899])
+                    ("setNeigh" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6917 6921])
+                            ("neigh" variable nil (reparse-symbol function_parameters) [6923 6928]))                          )
+                        (reparse-symbol indented_block_body) [6904 6959])
+                    ("getNeigh" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6977 6981]))                          )
+                        (reparse-symbol indented_block_body) [6964 7011])
+                    ("setParam" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7029 7033])
+                            ("key" variable nil (reparse-symbol function_parameters) [7035 7038])
+                            ("value" variable nil (reparse-symbol function_parameters) [7040 7045]))                          )
+                        (reparse-symbol indented_block_body) [7016 7082])
+                    ("getParam" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7100 7104])
+                            ("key" variable nil (reparse-symbol function_parameters) [7106 7109])
+                            ("default" variable nil (reparse-symbol function_parameters) [7111 7118]))                          )
+                        (reparse-symbol indented_block_body) [7087 7172]))                  
+                :type "class")
+                nil [2188 7172]))          
+      :file "lane.py"
+      :pointmax 7172
+      :fsize 7171
+      :lastmodtime '(23228 566 894230 79000)
+      :unmatched-syntax nil))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!not_beyond!sumo!src!sumo!tools!sumolib!net!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

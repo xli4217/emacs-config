@@ -1,0 +1,155 @@
+;; Object maze/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "maze/"
+  :tables
+  (list
+    (semanticdb-table "swimmer_maze_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.envs.mujoco.maze.maze_env" include nil nil [1 52])
+            ("rllab.envs.mujoco.swimmer_env" include nil nil [53 105])
+            ("SwimmerMazeEnv" type
+               (:superclasses ("MazeEnv")
+                :members 
+                  ( ("MODEL_CLASS" variable nil (reparse-symbol indented_block_body) [144 168])
+                    ("ORI_IND" variable nil (reparse-symbol indented_block_body) [173 184])
+                    ("MAZE_HEIGHT" variable nil (reparse-symbol indented_block_body) [190 207])
+                    ("MAZE_SIZE_SCALING" variable nil (reparse-symbol indented_block_body) [212 233])
+                    ("MAZE_MAKE_CONTACTS" variable nil (reparse-symbol indented_block_body) [238 263]))                  
+                :type "class")
+                nil [108 264]))          
+      :file "swimmer_maze_env.py"
+      :pointmax 265
+      :fsize 264
+      :lastmodtime '(22354 18394 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "maze_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os.path" include nil nil [1 22])
+            ("tempfile" include nil nil [23 38])
+            ("xml.etree.ElementTree" include nil nil [39 73])
+            ("math" include nil nil [74 85])
+            ("numpy" include nil nil [87 105])
+            ("rllab" include nil nil [107 131])
+            ("rllab.envs.base" include nil nil [132 164])
+            ("rllab.envs.proxy_env" include nil nil [165 206])
+            ("rllab.core.serializable" include nil nil [208 256])
+            ("rllab.envs.mujoco.mujoco_env" include nil nil [257 312])
+            ("rllab.misc.overrides" include nil nil [313 355])
+            ("rllab.envs.mujoco.maze.maze_env_utils" include nil nil [356 443])
+            ("MazeEnv" type
+               (:superclasses ("ProxyEnv" "Serializable")
+                :members 
+                  ( ("MODEL_CLASS" variable nil (reparse-symbol indented_block_body) [490 508])
+                    ("ORI_IND" variable nil (reparse-symbol indented_block_body) [513 527])
+                    ("MAZE_HEIGHT" variable nil (reparse-symbol indented_block_body) [533 551])
+                    ("MAZE_SIZE_SCALING" variable nil (reparse-symbol indented_block_body) [556 580])
+                    ("MAZE_MAKE_CONTACTS" variable nil (reparse-symbol indented_block_body) [585 611])
+                    ("MAZE_STRUCTURE" variable nil (reparse-symbol indented_block_body) [616 769])
+                    ("MANUAL_COLLISION" variable nil (reparse-symbol indented_block_body) [775 799])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [974 995])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1004 1037])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1046 1077])
+                            ("model_cls" variable nil (reparse-symbol indented_block_body) [1087 1125])
+                            ("if" code nil (reparse-symbol indented_block_body) [1134 1201])
+                            ("xml_path" variable nil (reparse-symbol indented_block_body) [1209 1255])
+                            ("tree" variable nil (reparse-symbol indented_block_body) [1264 1289])
+                            ("worldbody" variable nil (reparse-symbol indented_block_body) [1298 1335])
+                            ("size_scaling" variable nil (reparse-symbol indented_block_body) [1345 1392])
+                            ("height" variable nil (reparse-symbol indented_block_body) [1401 1436])
+                            ("structure" variable nil (reparse-symbol indented_block_body) [1445 1486])
+                            ("torso_x, torso_y" code nil (reparse-symbol indented_block_body) [1496 1533])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1542 1570])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1579 1607])
+                            ("for" code nil (reparse-symbol indented_block_body) [1617 2582])
+                            ("torso" variable nil (reparse-symbol indented_block_body) [2591 2634])
+                            ("geoms" variable nil (reparse-symbol indented_block_body) [2643 2675])
+                            ("for" code nil (reparse-symbol indented_block_body) [2684 2864])
+                            ("if" code nil (reparse-symbol indented_block_body) [2873 3436])
+                            ("_, file_path" code nil (reparse-symbol indented_block_body) [3445 3487])
+                            ("tree" code nil (reparse-symbol indented_block_body) [3496 3517])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3527 3569])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3578 3606])
+                            ("inner_env" variable nil (reparse-symbol indented_block_body) [3616 3675])
+                            ("ProxyEnv" code nil (reparse-symbol indented_block_body) [3684 3718])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [3727 3766]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [831 835])
+                            ("n_bins" variable nil (reparse-symbol function_parameters) [849 855])
+                            ("sensor_range" variable nil (reparse-symbol function_parameters) [872 884])
+                            ("sensor_span" variable nil (reparse-symbol function_parameters) [902 913])
+                            ("args" variable nil (reparse-symbol function_parameters) [935 940])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [954 962]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [805 3767])
+                    ("get_current_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3792 3796]))                          )
+                        (reparse-symbol indented_block_body) [3772 7027])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7042 7046]))                          )
+                        (reparse-symbol indented_block_body) [7032 7120])
+                    ("viewer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7150 7154]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7125 7196])
+                    ("observation_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7252 7256]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil)
+                            ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7201 7373])
+                    ("_find_robot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7394 7398]))                          )
+                        (reparse-symbol indented_block_body) [7378 7720])
+                    ("_find_goal_range" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7746 7750]))                          )
+                        (reparse-symbol indented_block_body) [7725 8385])
+                    ("_is_in_collision" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8411 8415])
+                            ("pos" variable nil (reparse-symbol function_parameters) [8417 8420]))                          )
+                        (reparse-symbol indented_block_body) [8390 9143])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9157 9161])
+                            ("action" variable nil (reparse-symbol function_parameters) [9163 9169]))                          )
+                        (reparse-symbol indented_block_body) [9148 10159])
+                    ("action_from_key" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10184 10188])
+                            ("key" variable nil (reparse-symbol function_parameters) [10190 10193]))                          )
+                        (reparse-symbol indented_block_body) [10164 10249]))                  
+                :type "class")
+                nil [447 10249]))          
+      :file "maze_env.py"
+      :pointmax 10249
+      :fsize 10248
+      :lastmodtime '(22362 59755 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "maze_env_utils.py"
+      :file "maze_env_utils.py"
+      :fsize 2565
+      :lastmodtime '(22354 18394 0 0)))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!rllab!rllab!envs!mujoco!maze!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

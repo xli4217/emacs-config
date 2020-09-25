@@ -1,0 +1,113 @@
+;; Object CEM/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "CEM/"
+  :tables
+  (list
+    (semanticdb-table "cem.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("gym" include nil nil [20 30])
+            ("gym.spaces" include nil nil [31 67])
+            ("DeterministicDiscreteActionLinearPolicy" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        dim_ob: dimension of observations
+        n_actions: number of actions
+        theta: flat vector of parameters
+        \"\"\"" code nil (reparse-symbol indented_block_body) [338 473])
+                            ("dim_ob" variable nil (reparse-symbol indented_block_body) [482 508])
+                            ("n_actions" variable nil (reparse-symbol indented_block_body) [517 539])
+                            ("assert" code nil (reparse-symbol indented_block_body) [548 593])
+                            ("self" variable nil (reparse-symbol indented_block_body) [602 667])
+                            ("self" variable nil (reparse-symbol indented_block_body) [676 739]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [288 292])
+                            ("theta" variable nil (reparse-symbol function_parameters) [294 299])
+                            ("ob_space" variable nil (reparse-symbol function_parameters) [301 309])
+                            ("ac_space" variable nil (reparse-symbol function_parameters) [311 319]))                          
+                        :documentation "
+        dim_ob: dimension of observations
+        n_actions: number of actions
+        theta: flat vector of parameters
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [275 732])
+                    ("act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [745 749])
+                            ("ob" variable nil (reparse-symbol function_parameters) [751 753]))                          
+                        :documentation "
+        ")
+                        (reparse-symbol indented_block_body) [737 856]))                  
+                :type "class")
+                nil [215 856])
+            ("DeterministicContinuousActionLinearPolicy" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        dim_ob: dimension of observations
+        dim_ac: dimension of action vector
+        theta: flat vector of parameters
+        \"\"\"" code nil (reparse-symbol indented_block_body) [982 1123])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1132 1156])
+                            ("dim_ob" variable nil (reparse-symbol indented_block_body) [1165 1191])
+                            ("dim_ac" variable nil (reparse-symbol indented_block_body) [1200 1226])
+                            ("assert" code nil (reparse-symbol indented_block_body) [1235 1277])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1286 1345])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1354 1392]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [932 936])
+                            ("theta" variable nil (reparse-symbol function_parameters) [938 943])
+                            ("ob_space" variable nil (reparse-symbol function_parameters) [945 953])
+                            ("ac_space" variable nil (reparse-symbol function_parameters) [955 963]))                          
+                        :documentation "
+        dim_ob: dimension of observations
+        dim_ac: dimension of action vector
+        theta: flat vector of parameters
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [919 1385])
+                    ("act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1398 1402])
+                            ("ob" variable nil (reparse-symbol function_parameters) [1404 1406]))                          )
+                        (reparse-symbol indented_block_body) [1390 1510]))                  
+                :type "class")
+                nil [857 1510])
+            ("do_episode" function (:arguments 
+              ( ("policy" variable nil (reparse-symbol function_parameters) [1526 1532])
+                ("env" variable nil (reparse-symbol function_parameters) [1534 1537])
+                ("num_steps" variable nil (reparse-symbol function_parameters) [1539 1548])
+                ("render" variable nil (reparse-symbol function_parameters) [1550 1556]))              ) nil [1511 1825])
+            ("env" variable nil nil [1826 1836])
+            ("noisy_evaluation" function (:arguments 
+              ( ("theta" variable nil (reparse-symbol function_parameters) [1858 1863]))              ) nil [1837 1958])
+            ("make_policy" function (:arguments 
+              ( ("theta" variable nil (reparse-symbol function_parameters) [1975 1980]))              ) nil [1959 2350])
+            ("env" variable nil nil [2368 2397])
+            ("num_steps" variable nil nil [2417 2432])
+            ("n_iter" variable nil nil [2477 2489])
+            ("batch_size" variable nil nil [2520 2535])
+            ("elite_frac" variable nil nil [2566 2582])
+            ("if" code nil nil [2624 2894])
+            ("theta_mean" variable nil nil [2936 2968])
+            ("theta_std" variable nil nil [2969 2999])
+            ("for" code nil nil [3026 3636]))          
+      :file "cem.py"
+      :pointmax 3636
+      :fsize 3635
+      :lastmodtime '(22352 33320 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!gym!CEM!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

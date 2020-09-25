@@ -1,0 +1,109 @@
+;; Object status/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "status/"
+  :tables
+  (list
+    (semanticdb-table "status.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_COMMON_STATUS_STATUS_H_" variable (:constant-flag t) nil [302 333])
+            ("string" include (:system-flag t) nil [335 352])
+            ("google/protobuf/descriptor.h" include nil nil [354 393])
+            ("modules/common/proto/error_code.pb.h" include nil nil [394 441])
+            ("beyond" type
+               (:members 
+                  ( ("common" type
+                       (:members 
+                          ( ("Status" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [766 773])
+                                    ("Status" function
+                                       (:constructor-flag t
+                                        :type ("Status" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [825 867])
+                                    ("Status" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("code" variable (:type ("ErrorCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1137 1152])
+                                            ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1153 1176]))                                          
+                                        :type ("Status" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1130 1204])
+                                    ("OK" function
+                                       (:typemodifiers ("static")
+                                        :type ("Status" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1290 1329])
+                                    ("ok" function (:type "bool") (reparse-symbol classsubparts) [1474 1524])
+                                    ("code" function (:type ("ErrorCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1600 1640])
+                                    ("==" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("rh" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Status" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1737 1754]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1721 1831])
+                                    ("!=" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("rh" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Status" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1930 1947]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1914 1980])
+                                    ("error_message" function
+                                       (:constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2108 2165])
+                                    ("ToString" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2341 2464])
+                                    ("Save" function
+                                       (:arguments 
+                                          ( ("status_pb" variable
+                                               (:pointer 1
+                                                :type ("StatusPb" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2613 2633]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2603 2782])
+                                    ("private" label nil (reparse-symbol classsubparts) [2785 2793])
+                                    ("code_" variable (:type ("ErrorCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2796 2812])
+                                    ("msg_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2815 2832]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [750 2835])
+                            ("<<" function
+                               (:operator-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("os" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2869 2886])
+                                    ("s" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Status" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2887 2903]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2837 2942]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [524 2945]))                  
+                :type "namespace")
+                nil [505 2968]))          
+      :file "status.h"
+      :pointmax 3034
+      :fsize 3033
+      :lastmodtime '(23191 1065 614936 886000)
+      :unmatched-syntax '((punctuation 889 . 890) (DEFAULT 882 . 889) (punctuation 880 . 881) (semantic-list 877 . 879) (symbol 871 . 877) (punctuation 870 . 871))
+      :lexical-table 
+        '(("MODULES_COMMON_STATUS_STATUS_H_")
+          )
+))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!common!status!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

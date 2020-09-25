@@ -1,0 +1,178 @@
+;; Object aws/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "aws/"
+  :tables
+  (list
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(23216 24110 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [1 39])
+            ("__future__" include nil nil [40 71])
+            ("__future__" include nil nil [72 109])
+            ("distutils.version" include nil nil [111 154])
+            ("json" include nil nil [155 166])
+            ("logging" include nil nil [167 181])
+            ("os" include nil nil [182 191])
+            ("time" include nil nil [192 203])
+            ("boto3" include nil nil [205 217])
+            ("botocore.config" include nil nil [218 252])
+            ("ray.ray_constants" include nil nil [254 300])
+            ("RAY" variable nil nil [302 324])
+            ("DEFAULT_RAY_INSTANCE_PROFILE" code nil nil [325 367])
+            ("DEFAULT_RAY_IAM_ROLE" code nil nil [368 402])
+            ("SECURITY_GROUP_TEMPLATE" code nil nil [403 440])
+            ("assert" code nil nil [442 576])
+            ("key_pair" function
+               (:documentation "Returns the ith default (aws_key_pair_name, key_pair_path)."
+                :arguments 
+                  ( ("i" variable nil (reparse-symbol function_parameters) [592 593])
+                    ("region" variable nil (reparse-symbol function_parameters) [595 601]))                  )
+                nil [579 949])
+            ("logging" code nil nil [1006 1061])
+            ("bootstrap_aws" function (:arguments 
+              ( ("config" variable nil (reparse-symbol function_parameters) [1082 1088]))              ) nil [1064 1641])
+            ("_configure_iam_role" function (:arguments 
+              ( ("config" variable nil (reparse-symbol function_parameters) [1667 1673]))              ) nil [1643 3525])
+            ("_configure_key_pair" function (:arguments 
+              ( ("config" variable nil (reparse-symbol function_parameters) [3551 3557]))              ) nil [3527 4830])
+            ("_configure_subnet" function (:arguments 
+              ( ("config" variable nil (reparse-symbol function_parameters) [4854 4860]))              ) nil [4832 6930])
+            ("_configure_security_group" function (:arguments 
+              ( ("config" variable nil (reparse-symbol function_parameters) [6962 6968]))              ) nil [6932 8708])
+            ("_get_subnet_or_die" function (:arguments 
+              ( ("config" variable nil (reparse-symbol function_parameters) [8733 8739])
+                ("subnet_id" variable nil (reparse-symbol function_parameters) [8741 8750]))              ) nil [8710 8993])
+            ("_get_security_group" function (:arguments 
+              ( ("config" variable nil (reparse-symbol function_parameters) [9019 9025])
+                ("vpc_id" variable nil (reparse-symbol function_parameters) [9027 9033])
+                ("group_name" variable nil (reparse-symbol function_parameters) [9035 9045]))              ) nil [8995 9303])
+            ("_get_role" function (:arguments 
+              ( ("role_name" variable nil (reparse-symbol function_parameters) [9319 9328])
+                ("config" variable nil (reparse-symbol function_parameters) [9330 9336]))              ) nil [9305 9496])
+            ("_get_instance_profile" function (:arguments 
+              ( ("profile_name" variable nil (reparse-symbol function_parameters) [9524 9536])
+                ("config" variable nil (reparse-symbol function_parameters) [9538 9544]))              ) nil [9498 9727])
+            ("_get_key" function (:arguments 
+              ( ("key_name" variable nil (reparse-symbol function_parameters) [9742 9750])
+                ("config" variable nil (reparse-symbol function_parameters) [9752 9758]))              ) nil [9729 9956])
+            ("_client" function (:arguments 
+              ( ("name" variable nil (reparse-symbol function_parameters) [9970 9974])
+                ("config" variable nil (reparse-symbol function_parameters) [9976 9982]))              ) nil [9958 10135])
+            ("_resource" function (:arguments 
+              ( ("name" variable nil (reparse-symbol function_parameters) [10151 10155])
+                ("config" variable nil (reparse-symbol function_parameters) [10157 10163]))              ) nil [10137 10327]))          
+      :file "config.py"
+      :pointmax 10327
+      :fsize 10326
+      :lastmodtime '(23216 24110 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "node_provider.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [1 39])
+            ("__future__" include nil nil [40 71])
+            ("__future__" include nil nil [72 109])
+            ("boto3" include nil nil [111 123])
+            ("botocore.config" include nil nil [124 158])
+            ("ray.autoscaler.node_provider" include nil nil [160 213])
+            ("ray.autoscaler.tags" include nil nil [214 266])
+            ("ray.ray_constants" include nil nil [267 313])
+            ("AWSNodeProvider" type
+               (:superclasses ("NodeProvider")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("NodeProvider" code nil (reparse-symbol indented_block_body) [416 474])
+                            ("config" variable nil (reparse-symbol indented_block_body) [483 543])
+                            ("self" variable nil (reparse-symbol indented_block_body) [552 651])
+                            ("self" variable nil (reparse-symbol indented_block_body) [781 803])
+                            ("self" variable nil (reparse-symbol indented_block_body) [886 913])
+                            ("self" variable nil (reparse-symbol indented_block_body) [922 949]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [370 374])
+                            ("provider_config" variable nil (reparse-symbol function_parameters) [376 391])
+                            ("cluster_name" variable nil (reparse-symbol function_parameters) [393 405]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [357 950])
+                    ("nodes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [965 969])
+                            ("tag_filters" variable nil (reparse-symbol function_parameters) [971 982]))                          )
+                        (reparse-symbol indented_block_body) [955 1607])
+                    ("is_running" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1627 1631])
+                            ("node_id" variable nil (reparse-symbol function_parameters) [1633 1640]))                          )
+                        (reparse-symbol indented_block_body) [1612 1725])
+                    ("is_terminated" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1748 1752])
+                            ("node_id" variable nil (reparse-symbol function_parameters) [1754 1761]))                          )
+                        (reparse-symbol indented_block_body) [1730 1885])
+                    ("node_tags" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1904 1908])
+                            ("node_id" variable nil (reparse-symbol function_parameters) [1910 1917]))                          )
+                        (reparse-symbol indented_block_body) [1890 2067])
+                    ("external_ip" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2088 2092])
+                            ("node_id" variable nil (reparse-symbol function_parameters) [2094 2101]))                          )
+                        (reparse-symbol indented_block_body) [2072 2354])
+                    ("internal_ip" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2375 2379])
+                            ("node_id" variable nil (reparse-symbol function_parameters) [2381 2388]))                          )
+                        (reparse-symbol indented_block_body) [2359 2642])
+                    ("set_node_tags" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2665 2669])
+                            ("node_id" variable nil (reparse-symbol function_parameters) [2671 2678])
+                            ("tags" variable nil (reparse-symbol function_parameters) [2680 2684]))                          )
+                        (reparse-symbol indented_block_body) [2647 2904])
+                    ("create_node" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2925 2929])
+                            ("node_config" variable nil (reparse-symbol function_parameters) [2931 2942])
+                            ("tags" variable nil (reparse-symbol function_parameters) [2944 2948])
+                            ("count" variable nil (reparse-symbol function_parameters) [2950 2955]))                          )
+                        (reparse-symbol indented_block_body) [2909 3611])
+                    ("terminate_node" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3635 3639])
+                            ("node_id" variable nil (reparse-symbol function_parameters) [3641 3648]))                          )
+                        (reparse-symbol indented_block_body) [3616 3711])
+                    ("_node" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3726 3730])
+                            ("node_id" variable nil (reparse-symbol function_parameters) [3732 3739]))                          )
+                        (reparse-symbol indented_block_body) [3716 4003]))                  
+                :type "class")
+                nil [316 4003]))          
+      :file "node_provider.py"
+      :pointmax 4003
+      :fsize 4002
+      :lastmodtime '(23216 24110 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!external_libs!ray!python!ray!autoscaler!aws!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

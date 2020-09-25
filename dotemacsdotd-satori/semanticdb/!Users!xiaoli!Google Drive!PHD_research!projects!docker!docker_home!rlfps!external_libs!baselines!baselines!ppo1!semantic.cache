@@ -1,0 +1,81 @@
+;; Object ppo1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ppo1/"
+  :tables
+  (list
+    (semanticdb-table "pposgd_simple.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("baselines.common" include nil nil [1 75])
+            ("baselines" include nil nil [76 104])
+            ("baselines.common.tf_util" include nil nil [105 141])
+            ("numpy" include nil nil [142 178])
+            ("tensorflow" include nil nil [142 178])
+            ("time" include nil nil [179 190])
+            ("baselines.common.mpi_adam" include nil nil [191 236])
+            ("baselines.common.mpi_moments" include nil nil [237 289])
+            ("mpi4py" include nil nil [290 312])
+            ("collections" include nil nil [313 342])
+            ("traj_segment_generator" function (:arguments 
+              ( ("pi" variable nil (reparse-symbol function_parameters) [371 373])
+                ("env" variable nil (reparse-symbol function_parameters) [375 378])
+                ("horizon" variable nil (reparse-symbol function_parameters) [380 387])
+                ("stochastic" variable nil (reparse-symbol function_parameters) [389 399]))              ) nil [344 2191])
+            ("add_vtarg_and_adv" function
+               (:documentation "
+    Compute target value using TD(lambda) estimator, and advantage with GAE(lambda)
+    "
+                :arguments 
+                  ( ("seg" variable nil (reparse-symbol function_parameters) [2214 2217])
+                    ("gamma" variable nil (reparse-symbol function_parameters) [2219 2224])
+                    ("lam" variable nil (reparse-symbol function_parameters) [2226 2229]))                  )
+                nil [2192 2882])
+            ("learn" function (:arguments 
+              ( ("env" variable nil (reparse-symbol function_parameters) [2893 2896])
+                ("policy_fn" variable nil (reparse-symbol function_parameters) [2898 2907])
+                ("timesteps_per_actorbatch" variable nil (reparse-symbol function_parameters) [2920 2944])
+                ("clip_param" variable nil (reparse-symbol function_parameters) [2987 2997])
+                ("entcoeff" variable nil (reparse-symbol function_parameters) [2999 3007])
+                ("optim_epochs" variable nil (reparse-symbol function_parameters) [3061 3073])
+                ("optim_stepsize" variable nil (reparse-symbol function_parameters) [3075 3089])
+                ("optim_batchsize" variable nil (reparse-symbol function_parameters) [3091 3106])
+                ("gamma" variable nil (reparse-symbol function_parameters) [3137 3142])
+                ("lam" variable nil (reparse-symbol function_parameters) [3144 3147])
+                ("max_timesteps" variable nil (reparse-symbol function_parameters) [3180 3193])
+                ("max_episodes" variable nil (reparse-symbol function_parameters) [3197 3209])
+                ("max_iters" variable nil (reparse-symbol function_parameters) [3213 3222])
+                ("max_seconds" variable nil (reparse-symbol function_parameters) [3226 3237])
+                ("callback" variable nil (reparse-symbol function_parameters) [3268 3276])
+                ("adam_epsilon" variable nil (reparse-symbol function_parameters) [3365 3377])
+                ("schedule" variable nil (reparse-symbol function_parameters) [3392 3400]))              ) nil [2883 9400])
+            ("flatten_lists" function (:arguments 
+              ( ("listoflists" variable nil (reparse-symbol function_parameters) [9419 9430]))              ) nil [9401 9490]))          
+      :file "pposgd_simple.py"
+      :pointmax 9490
+      :fsize 9489
+      :lastmodtime '(23172 63484 0 0)
+      :unmatched-syntax '((MULT 7748 . 7749) (MULT 2909 . 2910) (COMMA 2910 . 2911)))
+    (semanticdb-table "run_atari.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("mpi4py" include nil nil [25 47])
+            ("baselines.common" include nil nil [48 93])
+            ("baselines" include nil nil [94 121])
+            ("os.path" include nil nil [122 143])
+            ("baselines" include nil nil [144 172])
+            ("baselines.common.atari_wrappers" include nil nil [173 242])
+            ("baselines.common.cmd_util" include nil nil [243 297])
+            ("train" function (:arguments 
+              ( ("env_id" variable nil (reparse-symbol function_parameters) [309 315])
+                ("num_timesteps" variable nil (reparse-symbol function_parameters) [317 330])
+                ("seed" variable nil (reparse-symbol function_parameters) [332 336]))              ) nil [299 1389])
+            ("main" function nil nil [1390 1515])
+            ("if" code nil nil [1516 1554]))          
+      :file "run_atari.py"
+      :pointmax 1554
+      :fsize 1553
+      :lastmodtime '(23172 63484 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!external_libs!baselines!baselines!ppo1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

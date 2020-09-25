@@ -1,0 +1,102 @@
+;; Object 11_Dyna_Q/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "11_Dyna_Q/"
+  :tables
+  (list
+    (semanticdb-table "RL_brain.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+This part of code is the Dyna-Q learning brain, which is a brain of the agent.
+All decisions and learning processes are made in here.
+
+View more on my tutorial page: https://morvanzhou.github.io/tutorials/
+\"\"\"" code nil nil [1 214])
+            ("numpy" include nil nil [216 234])
+            ("pandas" include nil nil [235 254])
+            ("QLearningTable" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [372 394])
+                            ("self" variable nil (reparse-symbol indented_block_body) [413 436])
+                            ("self" variable nil (reparse-symbol indented_block_body) [445 470])
+                            ("self" variable nil (reparse-symbol indented_block_body) [479 502])
+                            ("self" variable nil (reparse-symbol indented_block_body) [511 560]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [296 300])
+                            ("actions" variable nil (reparse-symbol function_parameters) [302 309])
+                            ("learning_rate" variable nil (reparse-symbol function_parameters) [311 324])
+                            ("reward_decay" variable nil (reparse-symbol function_parameters) [331 343])
+                            ("e_greedy" variable nil (reparse-symbol function_parameters) [349 357]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [283 561])
+                    ("choose_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [584 588])
+                            ("observation" variable nil (reparse-symbol function_parameters) [590 601]))                          )
+                        (reparse-symbol indented_block_body) [566 1106])
+                    ("learn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1121 1125])
+                            ("s" variable nil (reparse-symbol function_parameters) [1127 1128])
+                            ("a" variable nil (reparse-symbol function_parameters) [1130 1131])
+                            ("r" variable nil (reparse-symbol function_parameters) [1133 1134])
+                            ("s_" variable nil (reparse-symbol function_parameters) [1136 1138]))                          )
+                        (reparse-symbol indented_block_body) [1111 1487])
+                    ("check_state_exist" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1514 1518])
+                            ("state" variable nil (reparse-symbol function_parameters) [1520 1525]))                          )
+                        (reparse-symbol indented_block_body) [1492 1844]))                  
+                :type "class")
+                nil [257 1844])
+            ("EnvModel" type
+               (:documentation "Similar to the memory buffer in DQN, you can store past experiences in here.
+    Alternatively, the model can generate next state and reward signal accurately."
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2183 2205])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2214 2276]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2049 2053])
+                            ("actions" variable nil (reparse-symbol function_parameters) [2055 2062]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2036 2277])
+                    ("store_transition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2303 2307])
+                            ("s" variable nil (reparse-symbol function_parameters) [2309 2310])
+                            ("a" variable nil (reparse-symbol function_parameters) [2312 2313])
+                            ("r" variable nil (reparse-symbol function_parameters) [2315 2316])
+                            ("s_" variable nil (reparse-symbol function_parameters) [2318 2320]))                          )
+                        (reparse-symbol indented_block_body) [2282 2632])
+                    ("sample_s_a" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2652 2656]))                          )
+                        (reparse-symbol indented_block_body) [2637 2825])
+                    ("get_r_s_" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2843 2847])
+                            ("s" variable nil (reparse-symbol function_parameters) [2849 2850])
+                            ("a" variable nil (reparse-symbol function_parameters) [2852 2853]))                          )
+                        (reparse-symbol indented_block_body) [2830 2916]))                  
+                :type "class")
+                nil [1846 2916]))          
+      :file "RL_brain.py"
+      :pointmax 2916
+      :fsize 2915
+      :lastmodtime '(23180 20973 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!sandbox!Reinforcement-learning-with-tensorflow!contents!11_Dyna_Q!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

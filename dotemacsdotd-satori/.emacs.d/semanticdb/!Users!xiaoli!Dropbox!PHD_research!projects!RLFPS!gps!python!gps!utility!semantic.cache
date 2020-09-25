@@ -1,0 +1,264 @@
+;; Object utility/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utility/"
+  :tables
+  (list
+    (semanticdb-table "data_logger.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the data logger. \"\"\"" code nil nil [1 43])
+            ("logging" include nil nil [44 58])
+            ("try" code nil nil [59 117])
+            ("LOGGER" variable nil nil [119 155])
+            ("DataLogger" type
+               (:documentation "
+    This class pickles data into files and unpickles data from files.
+    TODO: Handle logging text to terminal, GUI text, and/or log file at
+        DEBUG, INFO, WARN, ERROR, FATAL levels.
+    TODO: Handle logging data to terminal, GUI text/plots, and/or data
+          files.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [510 514]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [495 499]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [482 515])
+                    ("pickle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [531 535])
+                            ("filename" variable nil (reparse-symbol function_parameters) [537 545])
+                            ("data" variable nil (reparse-symbol function_parameters) [547 551]))                          
+                        :documentation " Pickle data into file specified by filename. ")
+                        (reparse-symbol indented_block_body) [520 663])
+                    ("unpickle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [681 685])
+                            ("filename" variable nil (reparse-symbol function_parameters) [687 695]))                          
+                        :documentation " Unpickle data from file specified by filename. ")
+                        (reparse-symbol indented_block_body) [668 950]))                  
+                :type "class")
+                nil [158 950]))          
+      :file "data_logger.py"
+      :pointmax 950
+      :fsize 949
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "general_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines general utility functions and classes. \"\"\"" code nil nil [1 65])
+            ("numpy" include nil nil [66 84])
+            ("BundleType" type
+               (:documentation "
+    This class bundles many fields, similar to a record or a mutable
+    namedtuple.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("for" code nil (reparse-symbol indented_block_body) [257 339]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [231 235])
+                            ("variables" variable nil (reparse-symbol function_parameters) [237 246]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [218 339])
+                    ("__setattr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [407 411])
+                            ("key" variable nil (reparse-symbol function_parameters) [413 416])
+                            ("value" variable nil (reparse-symbol function_parameters) [418 423]))                          )
+                        (reparse-symbol indented_block_body) [391 579]))                  
+                :type "class")
+                nil [87 579])
+            ("check_shape" function
+               (:documentation "
+    Throws a ValueError if value.shape != expected_shape.
+    Args:
+        value: Matrix to shape check.
+        expected_shape: A tuple or list of integers.
+        name: An optional name to add to the exception message.
+    "
+                :arguments 
+                  ( ("value" variable nil (reparse-symbol function_parameters) [597 602])
+                    ("expected_shape" variable nil (reparse-symbol function_parameters) [604 618])
+                    ("name" variable nil (reparse-symbol function_parameters) [620 624]))                  )
+                nil [581 1054])
+            ("finite_differences" function
+               (:documentation "
+    Computes gradients via finite differences.
+    derivative = (func(x+epsilon) - func(x-epsilon)) / (2*epsilon)
+    Args:
+        func: Function to compute gradient of. Inputs and outputs can be
+            arbitrary dimension.
+        inputs: Vector value to compute gradient at.
+        func_output_shape: Shape of the output of func. Default is
+            empty-tuple, which works for scalar-valued functions.
+        epsilon: Difference to use for computing gradient.
+    Returns:
+        Gradient vector of each dimension of func with respect to each
+        dimension of input.
+    "
+                :arguments 
+                  ( ("func" variable nil (reparse-symbol function_parameters) [1079 1083])
+                    ("inputs" variable nil (reparse-symbol function_parameters) [1085 1091])
+                    ("func_output_shape" variable nil (reparse-symbol function_parameters) [1093 1110])
+                    ("epsilon" variable nil (reparse-symbol function_parameters) [1115 1122]))                  )
+                nil [1056 2240])
+            ("approx_equal" function
+               (:documentation "
+    Return whether two numbers are equal within an absolute threshold.
+    Returns:
+        True if a and b are equal within threshold.
+    "
+                :arguments 
+                  ( ("a" variable nil (reparse-symbol function_parameters) [2259 2260])
+                    ("b" variable nil (reparse-symbol function_parameters) [2262 2263])
+                    ("threshold" variable nil (reparse-symbol function_parameters) [2265 2274]))                  )
+                nil [2242 2479])
+            ("extract_condition" function
+               (:documentation "
+    Pull the relevant hyperparameters corresponding to the specified
+    condition, and return a new hyperparameter dictionary.
+    "
+                :arguments 
+                  ( ("hyperparams" variable nil (reparse-symbol function_parameters) [2503 2514])
+                    ("m" variable nil (reparse-symbol function_parameters) [2516 2517]))                  )
+                nil [2481 2771])
+            ("get_ee_points" function
+               (:documentation "
+    Helper method for computing the end effector points given a
+    position, rotation matrix, and offsets for each of the ee points.
+
+    Args:
+        offsets: N x 3 array where N is the number of points.
+        ee_pos: 1 x 3 array of the end effector position.
+        ee_rot: 3 x 3 rotation matrix of the end effector.
+    Returns:
+        3 x N array of end effector points.
+    "
+                :arguments 
+                  ( ("offsets" variable nil (reparse-symbol function_parameters) [2791 2798])
+                    ("ee_pos" variable nil (reparse-symbol function_parameters) [2800 2806])
+                    ("ee_rot" variable nil (reparse-symbol function_parameters) [2808 2814]))                  )
+                nil [2773 3258]))          
+      :file "general_utils.py"
+      :pointmax 3258
+      :fsize 3257
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "gmm.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines a Gaussian mixture model class. \"\"\"" code nil nil [1 58])
+            ("logging" include nil nil [59 73])
+            ("numpy" include nil nil [75 93])
+            ("scipy.linalg" include nil nil [94 113])
+            ("LOGGER" variable nil nil [116 152])
+            ("logsum" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [166 169])
+                ("axis" variable nil (reparse-symbol function_parameters) [171 175])
+                ("keepdims" variable nil (reparse-symbol function_parameters) [179 187]))              ) nil [155 393])
+            ("GMM" type
+               (:documentation " Gaussian Mixture Model. "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [535 573])
+                            ("self" variable nil (reparse-symbol indented_block_body) [582 602])
+                            ("self" variable nil (reparse-symbol indented_block_body) [611 637])
+                            ("self" variable nil (reparse-symbol indented_block_body) [646 663]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [467 471])
+                            ("init_sequential" variable nil (reparse-symbol function_parameters) [473 488])
+                            ("eigreg" variable nil (reparse-symbol function_parameters) [496 502])
+                            ("warmstart" variable nil (reparse-symbol function_parameters) [510 519]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [454 664])
+                    ("inference" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [683 687])
+                            ("pts" variable nil (reparse-symbol function_parameters) [689 692]))                          
+                        :documentation "
+        Evaluate dynamics prior.
+        Args:
+            pts: A N x D array of points.
+        ")
+                        (reparse-symbol indented_block_body) [669 1181])
+                    ("estep" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1196 1200])
+                            ("data" variable nil (reparse-symbol function_parameters) [1202 1206]))                          
+                        :documentation "
+        Compute log observation probabilities under GMM.
+        Args:
+            data: A N x D array of points.
+        Returns:
+            logobs: A N x K array of log probabilities (for each point
+                on each cluster).
+        ")
+                        (reparse-symbol indented_block_body) [1186 2032])
+                    ("moments" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2049 2053])
+                            ("logwts" variable nil (reparse-symbol function_parameters) [2055 2061]))                          
+                        :documentation "
+        Compute the moments of the cluster mixture with logwts.
+        Args:
+            logwts: A K x 1 array of log cluster probabilities.
+        Returns:
+            mu: A (D,) mean vector.
+            sigma: A D x D covariance matrix.
+        ")
+                        (reparse-symbol indented_block_body) [2037 2918])
+                    ("clusterwts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2938 2942])
+                            ("data" variable nil (reparse-symbol function_parameters) [2944 2948]))                          
+                        :documentation "
+        Compute cluster weights for specified points under GMM.
+        Args:
+            data: An N x D array of points
+        Returns:
+            A K x 1 array of average cluster log probabilities.
+        ")
+                        (reparse-symbol indented_block_body) [2923 3505])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3521 3525])
+                            ("data" variable nil (reparse-symbol function_parameters) [3527 3531])
+                            ("K" variable nil (reparse-symbol function_parameters) [3533 3534])
+                            ("max_iterations" variable nil (reparse-symbol function_parameters) [3536 3550]))                          
+                        :documentation "
+        Run EM to update clusters.
+        Args:
+            data: An N x D data matrix, where N = number of data points.
+            K: Number of clusters to use.
+        ")
+                        (reparse-symbol indented_block_body) [3510 7336]))                  
+                :type "class")
+                nil [395 7336]))          
+      :file "gmm.py"
+      :pointmax 7336
+      :fsize 7335
+      :lastmodtime '(22700 26521 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!utility!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

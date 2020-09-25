@@ -1,0 +1,395 @@
+;; Object logging/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "logging/"
+  :tables
+  (list
+    (semanticdb-table "logger_base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logger" include nil nil [1 14])
+            ("os" include nil nil [15 24])
+            ("cloudpickle" include nil nil [25 43])
+            ("LoggerBase" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [320 352])
+                            ("self" variable nil (reparse-symbol indented_block_body) [361 383])
+                            ("self" variable nil (reparse-symbol indented_block_body) [392 418])
+                            ("self" variable nil (reparse-symbol indented_block_body) [427 465])
+                            ("self" variable nil (reparse-symbol indented_block_body) [474 502])
+                            ("self" variable nil (reparse-symbol indented_block_body) [511 535])
+                            ("self" variable nil (reparse-symbol indented_block_body) [553 589])
+                            ("self" variable nil (reparse-symbol indented_block_body) [599 619])
+                            ("self" code nil (reparse-symbol indented_block_body) [628 698]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [88 92])
+                            ("csv_data_dir" variable nil (reparse-symbol function_parameters) [111 123])
+                            ("log_dir" variable nil (reparse-symbol function_parameters) [142 149])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [168 177])
+                            ("transitions_dir" variable nil (reparse-symbol function_parameters) [196 211])
+                            ("config_dir" variable nil (reparse-symbol function_parameters) [230 240])
+                            ("info_dir" variable nil (reparse-symbol function_parameters) [259 267])
+                            ("logging_params" variable nil (reparse-symbol function_parameters) [286 300]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [75 699])
+                    ("csv_record_tabular" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [727 731])
+                            ("name" variable nil (reparse-symbol function_parameters) [733 737])
+                            ("value" variable nil (reparse-symbol function_parameters) [739 744]))                          )
+                        (reparse-symbol indented_block_body) [704 795])
+                    ("csv_dump_tabular" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [821 825]))                          )
+                        (reparse-symbol indented_block_body) [800 880])
+                    ("save_content" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [902 906])
+                            ("content" variable nil (reparse-symbol function_parameters) [908 915])
+                            ("path" variable nil (reparse-symbol function_parameters) [917 921])
+                            ("itr" variable nil (reparse-symbol function_parameters) [923 926])
+                            ("interval" variable nil (reparse-symbol function_parameters) [933 941])
+                            ("file_type" variable nil (reparse-symbol function_parameters) [948 957]))                          )
+                        (reparse-symbol indented_block_body) [885 1758])
+                    ("save_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1786 1790])
+                            ("model" variable nil (reparse-symbol function_parameters) [1792 1797])
+                            ("model_name" variable nil (reparse-symbol function_parameters) [1799 1809])
+                            ("itr" variable nil (reparse-symbol function_parameters) [1811 1814])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1816 1824]))                          )
+                        (reparse-symbol indented_block_body) [1771 1949])
+                    ("save_config" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2486 2490])
+                            ("config" variable nil (reparse-symbol function_parameters) [2492 2498]))                          )
+                        (reparse-symbol indented_block_body) [2470 2740]))                  
+                :type "class")
+                nil [45 2740]))          
+      :file "logger_base.py"
+      :pointmax 2744
+      :fsize 2743
+      :lastmodtime '(23154 20914 187659 118000)
+      :unmatched-syntax '(($EOI 2744 . 2744) ($EOI 2758 . 2758) ($EOI 2765 . 2765)))
+    (semanticdb-table "logger.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("enum" include nil nil [1 22])
+            ("contextlib" include nil nil [132 169])
+            ("numpy" include nil nil [170 188])
+            ("os" include nil nil [189 198])
+            ("os.path" include nil nil [199 220])
+            ("sys" include nil nil [221 231])
+            ("datetime" include nil nil [232 247])
+            ("dateutil.tz" include nil nil [248 266])
+            ("csv" include nil nil [267 277])
+            ("joblib" include nil nil [278 291])
+            ("json" include nil nil [292 303])
+            ("pickle" include nil nil [304 317])
+            ("base64" include nil nil [318 331])
+            ("_prefixes" variable nil nil [333 347])
+            ("_prefix_str" variable nil nil [348 364])
+            ("_tabular_prefixes" variable nil nil [366 388])
+            ("_tabular_prefix_str" variable nil nil [389 413])
+            ("_tabular" variable nil nil [415 428])
+            ("_text_outputs" variable nil nil [430 448])
+            ("_tabular_outputs" variable nil nil [449 470])
+            ("_text_fds" variable nil nil [472 486])
+            ("_tabular_fds" variable nil nil [487 504])
+            ("_tabular_header_written" variable nil nil [505 536])
+            ("_snapshot_dir" variable nil nil [538 558])
+            ("_snapshot_mode" variable nil nil [559 581])
+            ("_snapshot_gap" variable nil nil [582 599])
+            ("_log_tabular_only" variable nil nil [601 626])
+            ("_header_printed" variable nil nil [627 650])
+            ("_add_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [669 678])
+                ("arr" variable nil (reparse-symbol function_parameters) [680 683])
+                ("fds" variable nil (reparse-symbol function_parameters) [685 688])
+                ("mode" variable nil (reparse-symbol function_parameters) [690 694]))              ) nil [653 851])
+            ("_remove_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [872 881])
+                ("arr" variable nil (reparse-symbol function_parameters) [883 886])
+                ("fds" variable nil (reparse-symbol function_parameters) [888 891]))              ) nil [853 1007])
+            ("push_prefix" function (:arguments 
+              ( ("prefix" variable nil (reparse-symbol function_parameters) [1025 1031]))              ) nil [1009 1123])
+            ("add_text_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1145 1154]))              ) nil [1125 1220])
+            ("remove_text_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1245 1254]))              ) nil [1222 1313])
+            ("add_tabular_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1338 1347]))              ) nil [1315 1419])
+            ("remove_tabular_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1447 1456]))              ) nil [1421 1644])
+            ("set_snapshot_dir" function (:arguments 
+              ( ("dir_name" variable nil (reparse-symbol function_parameters) [1667 1675]))              ) nil [1646 1732])
+            ("get_snapshot_dir" function nil nil [1734 1783])
+            ("get_snapshot_mode" function nil nil [1785 1836])
+            ("set_snapshot_mode" function (:arguments 
+              ( ("mode" variable nil (reparse-symbol function_parameters) [1860 1864]))              ) nil [1838 1919])
+            ("get_snapshot_gap" function nil nil [1920 1969])
+            ("set_snapshot_gap" function (:arguments 
+              ( ("gap" variable nil (reparse-symbol function_parameters) [1991 1994]))              ) nil [1970 2046])
+            ("set_log_tabular_only" function (:arguments 
+              ( ("log_tabular_only" variable nil (reparse-symbol function_parameters) [2072 2088]))              ) nil [2047 2161])
+            ("get_log_tabular_only" function nil nil [2163 2220])
+            ("log" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2230 2231])
+                ("with_prefix" variable nil (reparse-symbol function_parameters) [2233 2244])
+                ("with_timestamp" variable nil (reparse-symbol function_parameters) [2251 2265])
+                ("color" variable nil (reparse-symbol function_parameters) [2272 2277]))              ) nil [2222 2800])
+            ("record_tabular" function (:arguments 
+              ( ("key" variable nil (reparse-symbol function_parameters) [2821 2824])
+                ("val" variable nil (reparse-symbol function_parameters) [2826 2829]))              ) nil [2802 2896])
+            ("push_tabular_prefix" function (:arguments 
+              ( ("key" variable nil (reparse-symbol function_parameters) [2922 2925]))              ) nil [2898 3046])
+            ("pop_tabular_prefix" function nil nil [3048 3188])
+            ("prefix" function
+               (:decorators 
+                  ( ("contextmanager" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("key" variable nil (reparse-symbol function_parameters) [3217 3220]))                  )
+                nil [3190 3301])
+            ("tabular_prefix" function
+               (:decorators 
+                  ( ("contextmanager" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("key" variable nil (reparse-symbol function_parameters) [3338 3341]))                  )
+                nil [3303 3408])
+            ("TerminalTablePrinter" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3511 3530])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3539 3557]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3463 3467]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3450 3525])
+                    ("print_tabular" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3548 3552])
+                            ("new_tabular" variable nil (reparse-symbol function_parameters) [3554 3565]))                          )
+                        (reparse-symbol indented_block_body) [3530 3808])
+                    ("refresh" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3825 3829]))                          )
+                        (reparse-symbol indented_block_body) [3813 4100]))                  
+                :type "class")
+                nil [3410 4100])
+            ("table_printer" variable nil nil [4102 4140])
+            ("dump_tabular" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [4160 4165])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [4167 4175]))              ) nil [4143 4996])
+            ("pop_prefix" function nil nil [4998 5098])
+            ("save_itr_params" function (:arguments 
+              ( ("itr" variable nil (reparse-symbol function_parameters) [5120 5123])
+                ("params" variable nil (reparse-symbol function_parameters) [5125 5131]))              ) nil [5100 5828])
+            ("log_parameters" function (:arguments 
+              ( ("log_file" variable nil (reparse-symbol function_parameters) [5849 5857])
+                ("args" variable nil (reparse-symbol function_parameters) [5859 5863])
+                ("classes" variable nil (reparse-symbol function_parameters) [5865 5872]))              ) nil [5830 6601])
+            ("stub_to_json" function (:arguments 
+              ( ("stub_sth" variable nil (reparse-symbol function_parameters) [6620 6628]))              ) nil [6603 8154])
+            ("MyEncoder" type
+               (:superclasses ("json.JSONEncoder")
+                :members 
+                  ( ("default" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8207 8211])
+                            ("o" variable nil (reparse-symbol function_parameters) [8213 8214]))                          )
+                        (reparse-symbol indented_block_body) [8195 8482]))                  
+                :type "class")
+                nil [8156 8482])
+            ("log_parameters_lite" function (:arguments 
+              ( ("log_file" variable nil (reparse-symbol function_parameters) [8508 8516])
+                ("args" variable nil (reparse-symbol function_parameters) [8518 8522]))              ) nil [8484 9347])
+            ("log_variant" function (:arguments 
+              ( ("log_file" variable nil (reparse-symbol function_parameters) [9365 9373])
+                ("variant_data" variable nil (reparse-symbol function_parameters) [9375 9387]))              ) nil [9349 9667])
+            ("record_tabular_misc_stat" function (:arguments 
+              ( ("key" variable nil (reparse-symbol function_parameters) [9698 9701])
+                ("values" variable nil (reparse-symbol function_parameters) [9703 9709])
+                ("placement" variable nil (reparse-symbol function_parameters) [9711 9720]))              ) nil [9669 10506]))          
+      :file "logger.py"
+      :pointmax 10506
+      :fsize 10505
+      :lastmodtime '(23154 20943 95895 911000)
+      :unmatched-syntax nil)
+    (semanticdb-table "tabulate.py"
+      :file "tabulate.py"
+      :fsize 28995
+      :lastmodtime '(23154 20885 43420 220000))
+    (semanticdb-table "console.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [1 11])
+            ("time" include nil nil [12 23])
+            ("os" include nil nil [24 33])
+            ("errno" include nil nil [34 46])
+            ("shlex" include nil nil [47 59])
+            ("pydoc" include nil nil [60 72])
+            ("inspect" include nil nil [73 87])
+            ("collections" include nil nil [88 106])
+            ("color2num" variable nil nil [108 252])
+            ("colorize" function (:arguments 
+              ( ("string" variable nil (reparse-symbol function_parameters) [268 274])
+                ("color" variable nil (reparse-symbol function_parameters) [276 281])
+                ("bold" variable nil (reparse-symbol function_parameters) [283 287])
+                ("highlight" variable nil (reparse-symbol function_parameters) [295 304]))              ) nil [255 512])
+            ("mkdir_p" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [526 530]))              ) nil [514 721])
+            ("log" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [731 732]))              ) nil [723 798])
+            ("SimpleMessage" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [879 893])
+                            ("self" variable nil (reparse-symbol indented_block_body) [902 922]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [847 851])
+                            ("msg" variable nil (reparse-symbol function_parameters) [853 856])
+                            ("logger" variable nil (reparse-symbol function_parameters) [858 864]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [834 923])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [942 946]))                          )
+                        (reparse-symbol indented_block_body) [928 1007])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1025 1029])
+                            ("etype" variable nil (reparse-symbol function_parameters) [1031 1036])
+                            ("args" variable nil (reparse-symbol function_parameters) [1038 1043]))                          )
+                        (reparse-symbol indented_block_body) [1012 1218]))                  
+                :type "class")
+                nil [800 1218])
+            ("MESSAGE_DEPTH" variable nil nil [1220 1237])
+            ("Message" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1301 1315]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1281 1285])
+                            ("msg" variable nil (reparse-symbol function_parameters) [1287 1290]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1268 1316])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1335 1339]))                          )
+                        (reparse-symbol indented_block_body) [1321 1533])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1551 1555])
+                            ("etype" variable nil (reparse-symbol function_parameters) [1557 1562])
+                            ("args" variable nil (reparse-symbol function_parameters) [1564 1569]))                          )
+                        (reparse-symbol indented_block_body) [1538 1843]))                  
+                :type "class")
+                nil [1240 1843])
+            ("prefix_log" function (:arguments 
+              ( ("prefix" variable nil (reparse-symbol function_parameters) [1860 1866])
+                ("logger" variable nil (reparse-symbol function_parameters) [1868 1874]))              ) nil [1845 1921])
+            ("tee_log" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1935 1944]))              ) nil [1923 2089])
+            ("collect_args" function nil nil [2091 2269])
+            ("type_hint" function (:arguments 
+              ( ("arg_name" variable nil (reparse-symbol function_parameters) [2285 2293])
+                ("arg_type" variable nil (reparse-symbol function_parameters) [2295 2303]))              ) nil [2271 2526])
+            ("tweak" function (:arguments 
+              ( ("fun_or_val" variable nil (reparse-symbol function_parameters) [2538 2548])
+                ("identifier" variable nil (reparse-symbol function_parameters) [2550 2560]))              ) nil [2528 2713])
+            ("tweakval" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [2728 2731])
+                ("identifier" variable nil (reparse-symbol function_parameters) [2733 2743]))              ) nil [2715 3099])
+            ("tweakfun" function
+               (:documentation "Make the arguments (or the function itself) tweakable from command line.
+    See tests/test_misc_console.py for examples.
+
+    NOTE: this only works for the initial launched process, since other processes
+    will get different argv. What this means is that tweak() calls wrapped in a function
+    to be invoked in a child process might not behave properly.
+    "
+                :arguments 
+                  ( ("fun" variable nil (reparse-symbol function_parameters) [3114 3117])
+                    ("alt" variable nil (reparse-symbol function_parameters) [3119 3122]))                  )
+                nil [3101 5576])
+            ("query_yes_no" function
+               (:documentation "Ask a yes/no question via raw_input() and return their answer.
+
+    \"question\" is a string that is presented to the user.
+    \"default\" is the presumed answer if the user just hits <Enter>.
+        It must be \"yes\" (the default), \"no\" or None (meaning
+        an answer is required of the user).
+
+    The \"answer\" return value is True for \"yes\" or False for \"no\".
+    "
+                :arguments 
+                  ( ("question" variable nil (reparse-symbol function_parameters) [5595 5603])
+                    ("default" variable nil (reparse-symbol function_parameters) [5605 5612]))                  )
+                nil [5578 6693]))          
+      :file "console.py"
+      :pointmax 6693
+      :fsize 6692
+      :lastmodtime '(23154 20885 43420 220000)
+      :unmatched-syntax '((NAME 1661 . 1670) (IF 1676 . 1678) (ELSE 1693 . 1697) (NAME 1054 . 1063) (IF 1069 . 1071) (ELSE 1086 . 1090) (INDENT_BLOCK 610 . 721) (NEWLINE 609 . 610) (COLON 593 . 594) (TRY 537 . 540) (AS 587 . 589)))
+    (semanticdb-table "autoargs.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("console" include nil nil [1 29])
+            ("inspect" include nil nil [30 44])
+            ("arg" function (:arguments 
+              ( ("name" variable nil (reparse-symbol function_parameters) [126 130])
+                ("type" variable nil (reparse-symbol function_parameters) [132 136])
+                ("help" variable nil (reparse-symbol function_parameters) [143 147])
+                ("nargs" variable nil (reparse-symbol function_parameters) [154 159])
+                ("mapper" variable nil (reparse-symbol function_parameters) [166 172])
+                ("choices" variable nil (reparse-symbol function_parameters) [179 186])
+                ("prefix" variable nil (reparse-symbol function_parameters) [201 207]))              ) nil [118 570])
+            ("prefix" function (:arguments 
+              ( ("prefix_" variable nil (reparse-symbol function_parameters) [583 590]))              ) nil [572 724])
+            ("_get_prefix" function (:arguments 
+              ( ("cls" variable nil (reparse-symbol function_parameters) [742 745]))              ) nil [726 1274])
+            ("_get_info" function (:arguments 
+              ( ("cls_or_fn" variable nil (reparse-symbol function_parameters) [1290 1299]))              ) nil [1276 1588])
+            ("_t_or_f" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [1602 1603]))              ) nil [1590 1809])
+            ("add_args" function (:arguments 
+              ( ("_" variable nil (reparse-symbol function_parameters) [1824 1825]))              ) nil [1811 2382])
+            ("new_from_args" function (:arguments 
+              ( ("_" variable nil (reparse-symbol function_parameters) [2402 2403]))              ) nil [2384 3309])
+            ("inherit" function (:arguments 
+              ( ("base_func" variable nil (reparse-symbol function_parameters) [3323 3332]))              ) nil [3311 3589])
+            ("get_all_parameters" function (:arguments 
+              ( ("cls" variable nil (reparse-symbol function_parameters) [3614 3617])
+                ("parsed_args" variable nil (reparse-symbol function_parameters) [3619 3630]))              ) nil [3591 4530]))          
+      :file "autoargs.py"
+      :pointmax 4530
+      :fsize 4529
+      :lastmodtime '(23154 20958 240019 895000)
+      :unmatched-syntax nil))
+  :file "!home!lixao!docker!docker_home!rl_pipeline!logging!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

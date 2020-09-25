@@ -1,0 +1,300 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "graph.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cgi" include nil nil [49 59])
+            ("graphviz" include nil nil [60 88])
+            ("colour" include nil nil [89 113])
+            ("numpy" include nil nil [114 135])
+            ("manage_res" include nil nil [136 209])
+            ("manage_res" include nil nil [210 282])
+            ("manage_res" include nil nil [283 359])
+            ("manage_res" include nil nil [360 427])
+            ("manage_res" include nil nil [428 473])
+            ("MAX_EXP_X" variable nil nil [475 488])
+            ("SIZE_MIN" variable nil nil [489 501])
+            ("SIZE_MAX" variable nil nil [502 515])
+            ("SIZE_AUTHOR" variable nil nil [516 533])
+            ("SIZE_AUTH_MAX" variable nil nil [534 551])
+            ("SIZE_AUTH_MIN" variable nil nil [552 571])
+            ("MIN_CITATIONS" variable nil nil [572 589])
+            ("MIN_YEAR" variable nil nil [590 605])
+            ("MIN_YEAR_LAYERS" variable nil nil [606 628])
+            ("EXPORT_ATTRS" variable nil nil [630 741])
+            ("str_" function (:arguments 
+              ( ("pos" variable nil (reparse-symbol function_parameters) [753 756]))              ) nil [744 808])
+            ("normalize" function (:arguments 
+              ( ("e" variable nil (reparse-symbol function_parameters) [824 825])
+                ("min_v" variable nil (reparse-symbol function_parameters) [827 832])
+                ("max_v" variable nil (reparse-symbol function_parameters) [834 839]))              ) nil [810 879])
+            ("get_step" function (:arguments 
+              ( ("start" variable nil (reparse-symbol function_parameters) [894 899])
+                ("end" variable nil (reparse-symbol function_parameters) [901 904])
+                ("steps" variable nil (reparse-symbol function_parameters) [906 911]))              ) nil [881 950])
+            ("exp2" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [961 962]))              ) nil [952 981])
+            ("get_steps_list" function (:arguments 
+              ( ("start" variable nil (reparse-symbol function_parameters) [1002 1007])
+                ("end" variable nil (reparse-symbol function_parameters) [1009 1012])
+                ("steps" variable nil (reparse-symbol function_parameters) [1014 1019]))              ) nil [983 1326])
+            ("color_range" function (:arguments 
+              ( ("steps" variable nil (reparse-symbol function_parameters) [1344 1349])
+                ("start" variable nil (reparse-symbol function_parameters) [1351 1356])
+                ("end" variable nil (reparse-symbol function_parameters) [1372 1375]))              ) nil [1328 1674])
+            ("Grapher" type
+               (:documentation "docstring for Grapher"
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1765 1796])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1805 1822])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1831 1853])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1862 1882])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1891 1911])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1920 1940])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1949 2645])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2654 2674])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2683 2705])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2714 2736])
+                            ("self, self" code nil (reparse-symbol indented_block_body) [2745 2780])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2789 2812]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1750 1754]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1737 2813])
+                    ("add_authors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2834 2838])
+                            ("authors" variable nil (reparse-symbol function_parameters) [2840 2847]))                          )
+                        (reparse-symbol indented_block_body) [2818 2882])
+                    ("add_first_layer_articles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2916 2920])
+                            ("articles" variable nil (reparse-symbol function_parameters) [2922 2930]))                          )
+                        (reparse-symbol indented_block_body) [2887 3008])
+                    ("add_second_layer_articles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3043 3047])
+                            ("articles" variable nil (reparse-symbol function_parameters) [3049 3057]))                          )
+                        (reparse-symbol indented_block_body) [3013 3223])
+                    ("add_third_layer_articles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3257 3261])
+                            ("articles" variable nil (reparse-symbol function_parameters) [3263 3271]))                          )
+                        (reparse-symbol indented_block_body) [3228 3462])
+                    ("get_size_of_auth" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3488 3492])
+                            ("a" variable nil (reparse-symbol function_parameters) [3494 3495]))                          )
+                        (reparse-symbol indented_block_body) [3467 3665])
+                    ("get_size_of_art" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3690 3694])
+                            ("key" variable nil (reparse-symbol function_parameters) [3696 3699]))                          )
+                        (reparse-symbol indented_block_body) [3670 3956])
+                    ("get_color_of_node" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3983 3987])
+                            ("key" variable nil (reparse-symbol function_parameters) [3989 3992]))                          )
+                        (reparse-symbol indented_block_body) [3961 4124])
+                    ("add_authors_nodes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4151 4155])
+                            ("g" variable nil (reparse-symbol function_parameters) [4157 4158])
+                            ("pos" variable nil (reparse-symbol function_parameters) [4160 4163]))                          )
+                        (reparse-symbol indented_block_body) [4129 4637])
+                    ("get_tooltip" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4658 4662])
+                            ("key" variable nil (reparse-symbol function_parameters) [4664 4667]))                          )
+                        (reparse-symbol indented_block_body) [4642 4835])
+                    ("add_first_layer_nodes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4866 4870])
+                            ("g" variable nil (reparse-symbol function_parameters) [4872 4873])
+                            ("pos" variable nil (reparse-symbol function_parameters) [4875 4878]))                          )
+                        (reparse-symbol indented_block_body) [4840 5611])
+                    ("add_second_layer_nodes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5643 5647])
+                            ("g" variable nil (reparse-symbol function_parameters) [5649 5650])
+                            ("pos" variable nil (reparse-symbol function_parameters) [5652 5655]))                          )
+                        (reparse-symbol indented_block_body) [5616 6311])
+                    ("add_invis_auth_paths" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6341 6345])
+                            ("g" variable nil (reparse-symbol function_parameters) [6347 6348]))                          )
+                        (reparse-symbol indented_block_body) [6316 6524])
+                    ("add_invis_art_paths" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6553 6557])
+                            ("g" variable nil (reparse-symbol function_parameters) [6559 6560]))                          )
+                        (reparse-symbol indented_block_body) [6529 7381])
+                    ("add_invis_list_to_list_paths" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7419 7423])
+                            ("g" variable nil (reparse-symbol function_parameters) [7425 7426])
+                            ("l1" variable nil (reparse-symbol function_parameters) [7428 7430])
+                            ("l2" variable nil (reparse-symbol function_parameters) [7432 7434]))                          )
+                        (reparse-symbol indented_block_body) [7386 7919])
+                    ("add_auth_paths" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7943 7947])
+                            ("g" variable nil (reparse-symbol function_parameters) [7949 7950]))                          )
+                        (reparse-symbol indented_block_body) [7924 8332])
+                    ("add_cit_paths" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8355 8359])
+                            ("g" variable nil (reparse-symbol function_parameters) [8361 8362])
+                            ("nodes" variable nil (reparse-symbol function_parameters) [8364 8369])
+                            ("color" variable nil (reparse-symbol function_parameters) [8371 8376])
+                            ("archs" variable nil (reparse-symbol function_parameters) [8378 8383]))                          )
+                        (reparse-symbol indented_block_body) [8337 8943])
+                    ("generate_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8967 8971]))                          )
+                        (reparse-symbol indented_block_body) [8948 10121])
+                    ("export_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10143 10147])
+                            ("g" variable nil (reparse-symbol function_parameters) [10149 10150])
+                            ("attrs" variable nil (reparse-symbol function_parameters) [10152 10157]))                          )
+                        (reparse-symbol indented_block_body) [10126 10286]))                  
+                :type "class")
+                nil [1676 10286])
+            ("load_dict" function (:arguments 
+              ( ("f" variable nil (reparse-symbol function_parameters) [10302 10303]))              ) nil [10288 10514])
+            ("main" function nil nil [10516 11123])
+            ("if" code nil nil [11125 11163]))          
+      :file "graph.py"
+      :pointmax 11163
+      :fsize 11162
+      :lastmodtime '(22152 43136 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "manage_res.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [48 59])
+            ("os" include nil nil [60 69])
+            ("collections" include nil nil [70 105])
+            ("'''json schema:
+    [{
+    \"num_versions\": 74,
+    \"url_citation\": null,
+    \"title\": \"A fast learning algorithm for deep belief nets\",
+    \"url\": \"http://www.mitpressjournals.org/doi/abs/10.1162/neco.2006.18.7.1527\",
+    \"url_versions\": \"http://scholar.google.com/scholar?cluster=4412725301034087472&hl=en&as_sdt=1,5&as_vis=1\",
+    \"year\": \"2006\",
+    \"excerpt\": \"... (2015) Deep learning applications and challenges in big data analytics. Journal of Big Data 2.Online publication date: 1-Dec-2015. ... Yoshua Bengio, Honglak Lee. (2015) Editorial introductionto the Neural Networks special issue on Deep Learning of Representations. ...\",
+    \"url_pdf\": null,
+    \"num_citations\": 3109,
+    \"cluster_id\": \"4412725301034087472\",
+    \"authors\": \"GE Hinton, S Osindero, YW Teh - Neural computation\",
+    \"url_citations\": \"http://scholar.google.com/scholar?cites=4412725301034087472&as_sdt=2005&sciodt=1,5&hl=en\"
+    }]'''" code nil nil [107 1027])
+            ("import_json" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1046 1055]))              ) nil [1030 1135])
+            ("dump_json" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1151 1160])
+                ("data" variable nil (reparse-symbol function_parameters) [1162 1166]))              ) nil [1137 1260])
+            ("'''Grapher json schema:
+    {\"4412725301034087472\":{
+    \"num_versions\": 74,
+    \"url_citation\": null,
+    \"title\": \"A fast learning algorithm for deep belief nets\",
+    \"url\": \"http://www.mitpressjournals.org/doi/abs/10.1162/neco.2006.18.7.1527\",
+    \"url_versions\": \"http://scholar.google.com/scholar?cluster=4412725301034087472&hl=en&as_sdt=1,5&as_vis=1\",
+    \"year\": \"2006\",
+    \"excerpt\": \"... (2015) Deep learning applications and challenges in big data analytics. Journal of Big Data 2.Online publication date: 1-Dec-2015. ... Yoshua Bengio, Honglak Lee. (2015) Editorial introductionto the Neural Networks special issue on Deep Learning of Representations. ...\",
+    \"url_pdf\": null,
+    \"num_citations\": 3109,
+    \"cluster_id\": \"4412725301034087472\",
+    \"authors\": \"GE Hinton, S Osindero, YW Teh - Neural computation\",
+    \"url_citations\": \"http://scholar.google.com/scholar?cites=4412725301034087472&as_sdt=2005&sciodt=1,5&hl=en\"
+    }}'''" code nil nil [1261 2211])
+            ("build_res_dict" function (:arguments 
+              ( ("res_list" variable nil (reparse-symbol function_parameters) [2233 2241]))              ) nil [2214 2324])
+            ("authors_from_string" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2350 2351]))              ) nil [2326 2542])
+            ("authors_of_article" function (:arguments 
+              ( ("article" variable nil (reparse-symbol function_parameters) [2567 2574]))              ) nil [2544 2628])
+            ("build_authors_dict" function (:arguments 
+              ( ("res_dict" variable nil (reparse-symbol function_parameters) [2653 2661]))              ) nil [2630 2799])
+            ("build_authors_set" function (:arguments 
+              ( ("authors_dict" variable nil (reparse-symbol function_parameters) [2823 2835]))              ) nil [2801 2971])
+            ("merge_results_lists" function (:arguments 
+              ( ("directory" variable nil (reparse-symbol function_parameters) [2997 3006]))              ) nil [2973 3580])
+            ("sort_articles" function (:arguments 
+              ( ("articles" variable nil (reparse-symbol function_parameters) [3600 3608]))              ) nil [3582 4037])
+            ("get_most_cited" function (:arguments 
+              ( ("num" variable nil (reparse-symbol function_parameters) [4058 4061])
+                ("d" variable nil (reparse-symbol function_parameters) [4063 4064]))              ) nil [4039 4203])
+            ("get_most_pertinent" function (:arguments 
+              ( ("phrase" variable nil (reparse-symbol function_parameters) [4228 4234])
+                ("d" variable nil (reparse-symbol function_parameters) [4236 4237]))              ) nil [4205 4375])
+            ("citation_avg" function (:arguments 
+              ( ("d" variable nil (reparse-symbol function_parameters) [4394 4395]))              ) nil [4377 4558])
+            ("get_in_year" function (:arguments 
+              ( ("year" variable nil (reparse-symbol function_parameters) [4576 4580])
+                ("d" variable nil (reparse-symbol function_parameters) [4582 4583]))              ) nil [4560 4749])
+            ("get_before_and_in_year" function (:arguments 
+              ( ("year" variable nil (reparse-symbol function_parameters) [4778 4782])
+                ("d" variable nil (reparse-symbol function_parameters) [4784 4785])
+                ("after_year" variable nil (reparse-symbol function_parameters) [4787 4797]))              ) nil [4751 5002])
+            ("get_min_year" function (:arguments 
+              ( ("year" variable nil (reparse-symbol function_parameters) [5021 5025])
+                ("d" variable nil (reparse-symbol function_parameters) [5027 5028]))              ) nil [5004 5194])
+            ("save_res_list" function (:arguments 
+              ( ("d" variable nil (reparse-symbol function_parameters) [5214 5215])
+                ("file_name" variable nil (reparse-symbol function_parameters) [5217 5226]))              ) nil [5196 5368])
+            ("not_yet_done" function (:arguments 
+              ( ("tot_dict" variable nil (reparse-symbol function_parameters) [5387 5395])
+                ("directory" variable nil (reparse-symbol function_parameters) [5397 5406]))              ) nil [5370 5653])
+            ("get_cited_by_dict" function nil nil [5655 6254])
+            ("get_all_authors" function (:arguments 
+              ( ("articles" variable nil (reparse-symbol function_parameters) [6276 6284]))              ) nil [6256 6539])
+            ("get_max_cit_num" function (:arguments 
+              ( ("articles" variable nil (reparse-symbol function_parameters) [6561 6569]))              ) nil [6541 6713])
+            ("get_min_and_max_year" function (:arguments 
+              ( ("articles" variable nil (reparse-symbol function_parameters) [6740 6748]))              ) nil [6715 6976])
+            ("delete_uselss_records" function (:arguments 
+              ( ("directory" variable nil (reparse-symbol function_parameters) [7004 7013])
+                ("useless_authors_file" variable nil (reparse-symbol function_parameters) [7015 7035]))              ) nil [6978 7624])
+            ("author_citations" function (:arguments 
+              ( ("author" variable nil (reparse-symbol function_parameters) [7647 7653])
+                ("articles" variable nil (reparse-symbol function_parameters) [7655 7663]))              ) nil [7626 7803])
+            ("max_author_citations" function (:arguments 
+              ( ("authors" variable nil (reparse-symbol function_parameters) [7830 7837])
+                ("articles" variable nil (reparse-symbol function_parameters) [7839 7847]))              ) nil [7805 8108]))          
+      :file "manage_res.py"
+      :pointmax 8108
+      :fsize 8087
+      :lastmodtime '(22152 47421 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Desktop!search!PyScholarGraph!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

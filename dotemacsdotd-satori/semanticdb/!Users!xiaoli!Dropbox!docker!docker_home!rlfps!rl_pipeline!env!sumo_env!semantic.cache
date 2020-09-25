@@ -1,0 +1,147 @@
+;; Object sumo_env/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sumo_env/"
+  :tables
+  (list
+    (semanticdb-table "sumo_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [1 38])
+            ("os" include nil nil [40 49])
+            ("sys" include nil nil [50 60])
+            ("optparse" include nil nil [61 76])
+            ("subprocess" include nil nil [77 94])
+            ("random" include nil nil [95 108])
+            ("pprint" include nil nil [109 122])
+            ("numpy" include nil nil [123 141])
+            ("future.utils" include nil nil [142 176])
+            ("try" code nil nil [179 621])
+            ("SumoEnv" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''
+        Required args for config
+        'gui': whether to invoke sumo-gui
+        'sumocfg_path': path where the desired sumocfg resides
+        'scope': this is for invoking multiple simulations
+        '''" code nil (reparse-symbol indented_block_body) [716 928])
+                            ("self" variable nil (reparse-symbol indented_block_body) [942 962])
+                            ("if" code nil (reparse-symbol indented_block_body) [971 1104])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1113 1197])
+                            ("traci" code nil (reparse-symbol indented_block_body) [1227 1293])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1303 1338])
+                            ("traci" code nil (reparse-symbol indented_block_body) [1348 1397])
+                            ("traci" code nil (reparse-symbol indented_block_body) [1454 1604])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1614 1665])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1674 1723])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1733 1750])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1759 1776]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [664 668])
+                            ("config" variable nil (reparse-symbol function_parameters) [670 676])
+                            ("seed" variable nil (reparse-symbol function_parameters) [683 687])
+                            ("logger" variable nil (reparse-symbol function_parameters) [694 700]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [651 1777])
+                    ("get_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1829 1833])
+                            ("state" variable nil (reparse-symbol function_parameters) [1835 1840])
+                            ("action" variable nil (reparse-symbol function_parameters) [1847 1853])
+                            ("next_state" variable nil (reparse-symbol function_parameters) [1860 1870]))                          )
+                        (reparse-symbol indented_block_body) [1814 1985])
+                    ("get_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2011 2015]))                          )
+                        (reparse-symbol indented_block_body) [1998 2036])
+                    ("get_done" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2054 2058])
+                            ("state" variable nil (reparse-symbol function_parameters) [2060 2065])
+                            ("action" variable nil (reparse-symbol function_parameters) [2072 2078])
+                            ("next_state" variable nil (reparse-symbol function_parameters) [2085 2095]))                          )
+                        (reparse-symbol indented_block_body) [2041 2248])
+                    ("get_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2267 2271]))                          )
+                        (reparse-symbol indented_block_body) [2253 5690])
+                    ("get_lane_gap_and_speed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5734 5738])
+                            ("lane_veh_pos" variable nil (reparse-symbol function_parameters) [5740 5752])
+                            ("lane_veh_speed" variable nil (reparse-symbol function_parameters) [5754 5768])
+                            ("ego_pos" variable nil (reparse-symbol function_parameters) [5770 5777]))                          )
+                        (reparse-symbol indented_block_body) [5707 7032])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7055 7059]))                          )
+                        (reparse-symbol indented_block_body) [7045 7209])
+                    ("act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7222 7226])
+                            ("action" variable nil (reparse-symbol function_parameters) [7228 7234]))                          )
+                        (reparse-symbol indented_block_body) [7214 8439])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8461 8465])
+                            ("action" variable nil (reparse-symbol function_parameters) [8467 8473]))                          )
+                        (reparse-symbol indented_block_body) [8452 8988])
+                    ("seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9023 9027])
+                            ("seed" variable nil (reparse-symbol function_parameters) [9029 9033]))                          )
+                        (reparse-symbol indented_block_body) [9014 9095])
+                    ("save" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9109 9113])
+                            ("save_dir" variable nil (reparse-symbol function_parameters) [9115 9123]))                          )
+                        (reparse-symbol indented_block_body) [9100 9139])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9156 9160])
+                            ("restore_dir" variable nil (reparse-symbol function_parameters) [9162 9173]))                          )
+                        (reparse-symbol indented_block_body) [9144 9189])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9204 9208]))                          )
+                        (reparse-symbol indented_block_body) [9194 9260])
+                    ("state_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9318 9322]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [9288 9435])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9471 9475]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [9440 9564]))                  
+                :type "class")
+                nil [623 9564])
+            ("if" code nil nil [9575 9980]))          
+      :file "sumo_env.py"
+      :pointmax 9980
+      :fsize 9979
+      :lastmodtime '(23315 1333 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!rl_pipeline!env!sumo_env!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

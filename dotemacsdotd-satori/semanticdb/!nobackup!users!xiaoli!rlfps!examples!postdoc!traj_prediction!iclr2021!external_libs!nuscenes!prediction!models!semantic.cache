@@ -1,0 +1,204 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("math" include nil nil [83 94])
+            ("random" include nil nil [95 108])
+            ("typing" include nil nil [109 139])
+            ("torch" include nil nil [141 153])
+            ("torch" include nil nil [154 174])
+            ("torch.nn" include nil nil [175 211])
+            ("external_libs.nuscenes.prediction.models.backbone" include nil nil [213 305])
+            ("ASV_DIM" variable nil nil [349 360])
+            ("MTP" type
+               (:documentation "
+    Implementation of Multiple-Trajectory Prediction (MTP) model
+    based on https://arxiv.org/pdf/1809.10732.pdf
+    "
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Inits the MTP network.
+        :param backbone: CNN Backbone to use.
+        :param num_modes: Number of predicted paths to estimate for each agent.
+        :param seconds: Number of seconds into the future to predict.
+            Default for the challenge is 6.
+        :param frequency_in_hz: Frequency between timesteps in the prediction (in Hz).
+            Highest frequency is nuScenes is 2 Hz.
+        :param n_hidden_layers: Size of fully connected layer after the CNN
+            backbone processes the image.
+        :param input_shape: Shape of the input expected by the network.
+            This is needed because the size of the fully connected layer after
+            the backbone depends on the backbone and its version.
+
+        Note:
+            Although seconds and frequency_in_hz are typed as floats, their
+            product should be an int.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [899 1787])
+                            ("super" code nil (reparse-symbol indented_block_body) [1797 1815])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1829 1853])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1862 1888])
+                            ("backbone_feature_dim" variable nil (reparse-symbol indented_block_body) [1897 1973])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1983 2064])
+                            ("predictions_per_mode" code nil (reparse-symbol indented_block_body) [2073 2130])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2140 2228])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2238 2280])
+                            ("self" code nil (reparse-symbol indented_block_body) [2290 2343])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2352 2375]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [534 538])
+                            ("Module" variable nil (reparse-symbol function_parameters) [570 576])
+                            ("int" variable nil (reparse-symbol function_parameters) [606 609])
+                            ("float" variable nil (reparse-symbol function_parameters) [637 642])
+                            ("float" variable nil (reparse-symbol function_parameters) [682 687])
+                            ("int" variable nil (reparse-symbol function_parameters) [727 730])
+                            ("int" variable nil (reparse-symbol function_parameters) [834 837])
+                            ("str" variable nil (reparse-symbol function_parameters) [876 879]))                          
+                        :documentation "
+        Inits the MTP network.
+        :param backbone: CNN Backbone to use.
+        :param num_modes: Number of predicted paths to estimate for each agent.
+        :param seconds: Number of seconds into the future to predict.
+            Default for the challenge is 6.
+        :param frequency_in_hz: Frequency between timesteps in the prediction (in Hz).
+            Highest frequency is nuScenes is 2 Hz.
+        :param n_hidden_layers: Size of fully connected layer after the CNN
+            backbone processes the image.
+        :param input_shape: Shape of the input expected by the network.
+            This is needed because the size of the fully connected layer after
+            the backbone depends on the backbone and its version.
+
+        Note:
+            Although seconds and frequency_in_hz are typed as floats, their
+            product should be an int.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [521 2376])
+                    ("get_env_feature" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2409 2413]))                          )
+                        (reparse-symbol indented_block_body) [2389 2448]))                  
+                :type "class")
+                nil [363 4277])
+            ("MTPLoss" type
+               (:documentation " Computes the loss for the MTP model. "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Inits MTP loss.
+        :param num_modes: How many modes are being predicted for each agent.
+        :param regression_loss_weight: Coefficient applied to the regression loss to
+            balance classification and regression performance.
+        :param angle_threshold_degrees: Minimum angle needed between a predicted trajectory
+            and the ground to consider it a match.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [4516 4923])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4932 4958])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4967 5010])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5068 5120])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5129 5175]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4361 4365])
+                            ("int" variable nil (reparse-symbol function_parameters) [4395 4398])
+                            ("float" variable nil (reparse-symbol function_parameters) [4441 4446])
+                            ("float" variable nil (reparse-symbol function_parameters) [4495 4500]))                          
+                        :documentation "
+        Inits MTP loss.
+        :param num_modes: How many modes are being predicted for each agent.
+        :param regression_loss_weight: Coefficient applied to the regression loss to
+            balance classification and regression performance.
+        :param angle_threshold_degrees: Minimum angle needed between a predicted trajectory
+            and the ground to consider it a match.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4348 5176]))                  
+                :type "class")
+                nil [4279 13699]))          
+      :file "mtp.py"
+      :pointmax 13699
+      :fsize 13698
+      :lastmodtime '(24425 41350 732210 576000)
+      :unmatched-syntax '((INDENT_BLOCK 11352 . 13699) (NEWLINE 11351 . 11352) (COLON 11350 . 11351) (MINUS 11335 . 11336) (GT 11336 . 11337) (PERIOD 11326 . 11327) (NAME 11312 . 11319) (COLON 11319 . 11320) (PERIOD 11303 . 11304) (NAME 11285 . 11296) (COLON 11296 . 11297) (INDENT_BLOCK 9203 . 11257) (NEWLINE 9202 . 9203) (COLON 9201 . 9202) (MINUS 9195 . 9196) (GT 9196 . 9197) (PERIOD 9186 . 9187) (NAME 9167 . 9179) (COLON 9179 . 9180) (PERIOD 9158 . 9159) (COLON 9151 . 9152) (COMMA 9116 . 9117) (BRACK_BLOCK 9097 . 9116) (NAME 9067 . 9091) (COLON 9091 . 9092) (INDENT_BLOCK 8277 . 9006) (NEWLINE 8276 . 8277) (COLON 8275 . 8276) (MINUS 8249 . 8250) (GT 8250 . 8251) (PERIOD 8240 . 8241) (NAME 8221 . 8233) (COLON 8233 . 8234) (PERIOD 8170 . 8171) (NAME 8157 . 8163) (COLON 8163 . 8164) (INDENT_BLOCK 7797 . 8108) (NEWLINE 7796 . 7797) (COLON 7795 . 7796) (MINUS 7787 . 7788) (GT 7788 . 7789) (PERIOD 7778 . 7779) (NAME 7765 . 7771) (COLON 7771 . 7772) (INDENT_BLOCK 6208 . 7716) (NEWLINE 6207 . 6208) (COLON 6206 . 6207) (MINUS 6198 . 6199) (GT 6199 . 6200) (PERIOD 6189 . 6190) (NAME 6167 . 6182) (COLON 6182 . 6183) (PERIOD 6135 . 6136) (NAME 6120 . 6128) (COLON 6128 . 6129) (INDENT_BLOCK 5321 . 6078) (NEWLINE 5320 . 5321) (COLON 5319 . 5320) (DEF 5181 . 5184) (MINUS 5283 . 5284) (GT 5284 . 5285) (PERIOD 5274 . 5275) (NAME 5251 . 5267) (COLON 5267 . 5268) (NAME 4470 . 4493) (COLON 4493 . 4494) (NAME 4417 . 4439) (COLON 4439 . 4440) (NAME 4384 . 4393) (COLON 4393 . 4394) (INDENT_BLOCK 2631 . 4277) (NEWLINE 2630 . 2631) (COLON 2629 . 2630) (DEF 2461 . 2464) (MINUS 2614 . 2615) (GT 2615 . 2616) (PERIOD 2600 . 2601) (NAME 2589 . 2594) (COLON 2594 . 2595) (PERIOD 2564 . 2565) (NAME 2539 . 2557) (COLON 2557 . 2558) (PERIOD 2514 . 2515) (NAME 2495 . 2507) (COLON 2507 . 2508) (NAME 858 . 875) (COLON 875 . 876) (COLON 833 . 834) (COMMA 805 . 806) (PAREN_BLOCK 792 . 805) (ASSIGN 790 . 791) (BRACK_BLOCK 774 . 789) (NAME 756 . 767) (COLON 767 . 768) (NAME 710 . 725) (COLON 725 . 726) (NAME 665 . 680) (COLON 680 . 681) (NAME 628 . 635) (COLON 635 . 636) (NAME 595 . 604) (COLON 604 . 605) (PERIOD 569 . 570) (NAME 557 . 565) (COLON 565 . 566) (NAME 858 . 875) (COLON 875 . 876) (COLON 833 . 834) (COMMA 805 . 806) (PAREN_BLOCK 792 . 805) (ASSIGN 790 . 791) (BRACK_BLOCK 774 . 789) (NAME 756 . 767) (COLON 767 . 768) (NAME 710 . 725) (COLON 725 . 726) (NAME 665 . 680) (COLON 680 . 681) (NAME 628 . 635) (COLON 635 . 636) (NAME 595 . 604) (COLON 604 . 605) (PERIOD 569 . 570) (NAME 557 . 565) (COLON 565 . 566)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [60 84])
+            ("torch" include nil nil [86 98])
+            ("torch" include nil nil [99 119])
+            ("" code nil nil [151 249])
+            ("RESNET_VERSION_TO_MODEL" variable nil nil [949 1143])
+            ("ResNetBackbone" type
+               (:documentation "
+    Outputs tensor after last convolution before the fully connected layer.
+
+    Allowed versions: resnet18, resnet34, resnet50, resnet101, resnet152.
+    "
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Inits ResNetBackbone
+        :param version: resnet version to use.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1393 1484])
+                            ("super" code nil (reparse-symbol indented_block_body) [1493 1511])
+                            ("if" code nil (reparse-symbol indented_block_body) [1521 1723])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1732 1809]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1364 1368])
+                            ("str" variable nil (reparse-symbol function_parameters) [1379 1382]))                          
+                        :documentation "
+        Inits ResNetBackbone
+        :param version: resnet version to use.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1351 1810]))                  
+                :type "class")
+                nil [1146 2274])
+            ("MobileNetBackbone" type
+               (:documentation "
+    Outputs tensor after last convolution before the fully connected layer.
+
+    Allowed versions: mobilenet_v2.
+    "
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Inits MobileNetBackbone.
+        :param version: mobilenet version to use.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2488 2586])
+                            ("super" code nil (reparse-symbol indented_block_body) [2595 2613])
+                            ("if" code nil (reparse-symbol indented_block_body) [2623 2755])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2764 2821]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2459 2463])
+                            ("str" variable nil (reparse-symbol function_parameters) [2474 2477]))                          
+                        :documentation "
+        Inits MobileNetBackbone.
+        :param version: mobilenet version to use.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2446 2822]))                  
+                :type "class")
+                nil [2276 3275]))          
+      :file "backbone.py"
+      :pointmax 3275
+      :fsize 3274
+      :lastmodtime '(24393 11582 790841 0)
+      :unmatched-syntax '((INDENT_BLOCK 2890 . 3275) (NEWLINE 2889 . 2890) (COLON 2888 . 2889) (DEF 2827 . 2830) (MINUS 2873 . 2874) (GT 2874 . 2875) (PERIOD 2864 . 2865) (NAME 2845 . 2857) (COLON 2857 . 2858) (NAME 2465 . 2472) (COLON 2472 . 2473) (INDENT_BLOCK 1878 . 2274) (NEWLINE 1877 . 1878) (COLON 1876 . 1877) (DEF 1815 . 1818) (MINUS 1861 . 1862) (GT 1862 . 1863) (PERIOD 1852 . 1853) (NAME 1833 . 1845) (COLON 1845 . 1846) (NAME 1370 . 1377) (COLON 1377 . 1378) (INDENT_BLOCK 747 . 947) (COLON 745 . 746) (MINUS 739 . 740) (GT 740 . 741) (BRACK_BLOCK 722 . 737) (NAME 704 . 715) (COLON 715 . 716) (INDENT_BLOCK 329 . 657) (COLON 327 . 328) (DEF 252 . 255) (MINUS 315 . 316) (GT 316 . 317) (NAME 298 . 303) (COLON 303 . 304) (PERIOD 289 . 290) (NAME 278 . 285) (COLON 285 . 286))))
+  :file "!nobackup!users!xiaoli!rlfps!examples!postdoc!traj_prediction!iclr2021!external_libs!nuscenes!prediction!models!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

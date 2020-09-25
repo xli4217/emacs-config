@@ -1,0 +1,954 @@
+;; Object python2.7/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python2.7/"
+  :tables
+  (list
+    (semanticdb-table "threading.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"Thread module emulating a subset of Java's threading model.\"\"\"" code nil nil [1 66])
+            ("sys" include nil nil [68 86])
+            ("try" code nil nil [88 172])
+            ("warnings" include nil nil [173 188])
+            ("collections" include nil nil [190 229])
+            ("itertools" include nil nil [230 267])
+            ("time" include nil nil [268 315])
+            ("traceback" include nil nil [316 363])
+            ("__all__" variable nil nil [944 1206])
+            ("_start_new_thread" variable nil nil [1208 1251])
+            ("_allocate_lock" variable nil nil [1252 1289])
+            ("_get_ident" variable nil nil [1290 1319])
+            ("ThreadError" variable nil nil [1320 1346])
+            ("del" code nil nil [1347 1357])
+            ("warnings" code nil nil [1472 1603])
+            ("_VERBOSE" variable nil nil [1886 1902])
+            ("if" code nil nil [1904 2827])
+            ("_profile_hook" variable nil nil [2867 2887])
+            ("_trace_hook" variable nil nil [2888 2906])
+            ("setprofile" function
+               (:documentation "Set a profile function for all threads started from the threading module.
+
+    The func will be passed to sys.setprofile() for each thread, before its
+    run() method is called.
+
+    "
+                :arguments 
+                  ( ("func" variable nil (reparse-symbol function_parameters) [2923 2927]))                  )
+                nil [2908 3175])
+            ("settrace" function
+               (:documentation "Set a trace function for all threads started from the threading module.
+
+    The func will be passed to sys.settrace() for each thread, before its run()
+    method is called.
+
+    "
+                :arguments 
+                  ( ("func" variable nil (reparse-symbol function_parameters) [3189 3193]))                  )
+                nil [3176 3433])
+            ("Lock" variable nil nil [3461 3482])
+            ("RLock" function
+               (:documentation "Factory function that returns a new reentrant lock.
+
+    A reentrant lock must be released by the thread that acquired it. Once a
+    thread has acquired a reentrant lock, the same thread may acquire it again
+    without blocking; the thread must release it once for each time it has
+    acquired it.
+
+    "
+                :arguments 
+                  ( ("args" variable nil (reparse-symbol function_parameters) [3494 3499])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [3501 3509]))                  )
+                nil [3484 3864])
+            ("_RLock" type
+               (:documentation "A reentrant lock must be released by the thread that acquired it. Once a
+       thread has acquired a reentrant lock, the same thread may acquire it
+       again without blocking; the thread must release it once for each time it
+       has acquired it.
+    "
+                :superclasses ("_Verbose")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("_Verbose" code nil (reparse-symbol indented_block_body) [4204 4236])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4245 4276])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4285 4304])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4313 4329]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4175 4179])
+                            ("verbose" variable nil (reparse-symbol function_parameters) [4181 4188]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4162 4330])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4348 4352]))                          )
+                        (reparse-symbol indented_block_body) [4335 4585])
+                    ("acquire" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4602 4606])
+                            ("blocking" variable nil (reparse-symbol function_parameters) [4608 4616]))                          
+                        :documentation "Acquire a lock, blocking or non-blocking.
+
+        When invoked without arguments: if this thread already owns the lock,
+        increment the recursion level by one, and return immediately. Otherwise,
+        if another thread owns the lock, block until the lock is unlocked. Once
+        the lock is unlocked (not owned by any thread), then grab ownership, set
+        the recursion level to one, and return. If more than one thread is
+        blocked waiting until the lock is unlocked, only one at a time will be
+        able to grab ownership of the lock. There is no return value in this
+        case.
+
+        When invoked with the blocking argument set to true, do the same thing
+        as when called without arguments, and return true.
+
+        When invoked with the blocking argument set to false, do not block. If a
+        call without an argument would block, return false immediately;
+        otherwise, do the same thing as when called without arguments, and
+        return true.
+
+        ")
+                        (reparse-symbol indented_block_body) [4590 6220])
+                    ("__enter__" variable nil (reparse-symbol indented_block_body) [6225 6244])
+                    ("release" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6262 6266]))                          
+                        :documentation "Release a lock, decrementing the recursion level.
+
+        If after the decrement it is zero, reset the lock to unlocked (not owned
+        by any thread), and if any other threads are blocked waiting for the
+        lock to become unlocked, allow exactly one of them to proceed. If after
+        the decrement the recursion level is still nonzero, the lock remains
+        locked and owned by the calling thread.
+
+        Only call this method when the calling thread owns the lock. A
+        RuntimeError is raised if this method is called when the lock is
+        unlocked.
+
+        There is no return value.
+
+        ")
+                        (reparse-symbol indented_block_body) [6250 7347])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7365 7369])
+                            ("t" variable nil (reparse-symbol function_parameters) [7371 7372])
+                            ("v" variable nil (reparse-symbol function_parameters) [7374 7375])
+                            ("tb" variable nil (reparse-symbol function_parameters) [7377 7379]))                          )
+                        (reparse-symbol indented_block_body) [7352 7405])
+                    ("_acquire_restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7483 7487])
+                            ("count_owner" variable nil (reparse-symbol function_parameters) [7489 7500]))                          )
+                        (reparse-symbol indented_block_body) [7462 7703])
+                    ("_release_save" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7726 7730]))                          )
+                        (reparse-symbol indented_block_body) [7708 7978])
+                    ("_is_owned" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7997 8001]))                          )
+                        (reparse-symbol indented_block_body) [7983 8048]))                  
+                :type "class")
+                nil [3865 8048])
+            ("Condition" function
+               (:documentation "Factory function that returns a new condition variable object.
+
+    A condition variable allows one or more threads to wait until they are
+    notified by another thread.
+
+    If the lock argument is given and not None, it must be a Lock or RLock
+    object, and it is used as the underlying lock. Otherwise, a new RLock object
+    is created and used as the underlying lock.
+
+    "
+                :arguments 
+                  ( ("args" variable nil (reparse-symbol function_parameters) [8064 8069])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [8071 8079]))                  )
+                nil [8050 8513])
+            ("_Condition" type
+               (:documentation "Condition variables allow one or more threads to wait until they are
+       notified by another thread.
+    "
+                :superclasses ("_Verbose")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("_Verbose" code nil (reparse-symbol indented_block_body) [8719 8751])
+                            ("if" code nil (reparse-symbol indented_block_body) [8760 8804])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8812 8830])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8899 8926])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8935 8962])
+                            ("try" code nil (reparse-symbol indented_block_body) [9186 9291])
+                            ("try" code nil (reparse-symbol indented_block_body) [9299 9410])
+                            ("try" code nil (reparse-symbol indented_block_body) [9418 9515])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9523 9542]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8679 8683])
+                            ("lock" variable nil (reparse-symbol function_parameters) [8685 8689])
+                            ("verbose" variable nil (reparse-symbol function_parameters) [8696 8703]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8666 9543])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9562 9566]))                          )
+                        (reparse-symbol indented_block_body) [9548 9608])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9626 9630])
+                            ("args" variable nil (reparse-symbol function_parameters) [9632 9637]))                          )
+                        (reparse-symbol indented_block_body) [9613 9683])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9701 9705]))                          )
+                        (reparse-symbol indented_block_body) [9688 9782])
+                    ("_release_save" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9805 9809]))                          )
+                        (reparse-symbol indented_block_body) [9787 9871])
+                    ("_acquire_restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9897 9901])
+                            ("x" variable nil (reparse-symbol function_parameters) [9903 9904]))                          )
+                        (reparse-symbol indented_block_body) [9876 9968])
+                    ("_is_owned" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9987 9991]))                          )
+                        (reparse-symbol indented_block_body) [9973 10257])
+                    ("wait" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10271 10275])
+                            ("timeout" variable nil (reparse-symbol function_parameters) [10277 10284]))                          
+                        :documentation "Wait until notified or until a timeout occurs.
+
+        If the calling thread has not acquired the lock when this method is
+        called, a RuntimeError is raised.
+
+        This method releases the underlying lock, and then blocks until it is
+        awakened by a notify() or notifyAll() call for the same condition
+        variable in another thread, or until the optional timeout occurs. Once
+        awakened or timed out, it re-acquires the lock and returns.
+
+        When the timeout argument is present and not None, it should be a
+        floating point number specifying a timeout for the operation in seconds
+        (or fractions thereof).
+
+        When the underlying lock is an RLock, it is not released using its
+        release() method, since this may not actually unlock the lock when it
+        was acquired multiple times recursively. Instead, an internal interface
+        of the RLock class is used, which really unlocks it even when it has
+        been recursively acquired several times. Another internal interface is
+        then used to restore the recursion level when the lock is reacquired.
+
+        ")
+                        (reparse-symbol indented_block_body) [10262 13224])
+                    ("notify" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13240 13244])
+                            ("n" variable nil (reparse-symbol function_parameters) [13246 13247]))                          
+                        :documentation "Wake up one or more threads waiting on this condition, if any.
+
+        If the calling thread has not acquired the lock when this method is
+        called, a RuntimeError is raised.
+
+        This method wakes up at most n of the threads waiting for the condition
+        variable; it is a no-op if no threads are waiting.
+
+        ")
+                        (reparse-symbol indented_block_body) [13229 14170])
+                    ("notifyAll" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14189 14193]))                          
+                        :documentation "Wake up all threads waiting on this condition.
+
+        If the calling thread has not acquired the lock when this method
+        is called, a RuntimeError is raised.
+
+        ")
+                        (reparse-symbol indented_block_body) [14175 14427])
+                    ("notify_all" variable nil (reparse-symbol indented_block_body) [14432 14454]))                  
+                :type "class")
+                nil [8514 14455])
+            ("Semaphore" function
+               (:documentation "A factory function that returns a new semaphore.
+
+    Semaphores manage a counter representing the number of release() calls minus
+    the number of acquire() calls, plus an initial value. The acquire() method
+    blocks if necessary until it can return without making the counter
+    negative. If not given, value defaults to 1.
+
+    "
+                :arguments 
+                  ( ("args" variable nil (reparse-symbol function_parameters) [14471 14476])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [14478 14486]))                  )
+                nil [14457 14874])
+            ("_Semaphore" type
+               (:documentation "Semaphores manage a counter representing the number of release() calls
+       minus the number of acquire() calls, plus an initial value. The acquire()
+       method blocks if necessary until it can return without making the counter
+       negative. If not given, value defaults to 1.
+
+    "
+                :superclasses ("_Verbose")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [15338 15421])
+                            ("_Verbose" code nil (reparse-symbol indented_block_body) [15429 15461])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15470 15501])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15510 15530]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15300 15304])
+                            ("value" variable nil (reparse-symbol function_parameters) [15306 15311])
+                            ("verbose" variable nil (reparse-symbol function_parameters) [15315 15322]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [15287 15531])
+                    ("acquire" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15548 15552])
+                            ("blocking" variable nil (reparse-symbol function_parameters) [15554 15562]))                          
+                        :documentation "Acquire a semaphore, decrementing the internal counter by one.
+
+        When invoked without arguments: if the internal counter is larger than
+        zero on entry, decrement it by one and return immediately. If it is zero
+        on entry, block, waiting until some other thread has called release() to
+        make it larger than zero. This is done with proper interlocking so that
+        if multiple acquire() calls are blocked, release() will wake exactly one
+        of them up. The implementation may pick one at random, so the order in
+        which blocked threads are awakened should not be relied on. There is no
+        return value in this case.
+
+        When invoked with blocking set to true, do the same thing as when called
+        without arguments, and return true.
+
+        When invoked with blocking set to false, do not block. If a call without
+        an argument would block, return false immediately; otherwise, do the
+        same thing as when called without arguments, and return true.
+
+        ")
+                        (reparse-symbol indented_block_body) [15536 17198])
+                    ("__enter__" variable nil (reparse-symbol indented_block_body) [17203 17222])
+                    ("release" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17240 17244]))                          
+                        :documentation "Release a semaphore, incrementing the internal counter by one.
+
+        When the counter is zero on entry and another thread is waiting for it
+        to become larger than zero again, wake up that thread.
+
+        ")
+                        (reparse-symbol indented_block_body) [17228 17710])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17728 17732])
+                            ("t" variable nil (reparse-symbol function_parameters) [17734 17735])
+                            ("v" variable nil (reparse-symbol function_parameters) [17737 17738])
+                            ("tb" variable nil (reparse-symbol function_parameters) [17740 17742]))                          )
+                        (reparse-symbol indented_block_body) [17715 17768]))                  
+                :type "class")
+                nil [14875 17768])
+            ("BoundedSemaphore" function
+               (:documentation "A factory function that returns a new bounded semaphore.
+
+    A bounded semaphore checks to make sure its current value doesn't exceed its
+    initial value. If it does, ValueError is raised. In most situations
+    semaphores are used to guard resources with limited capacity.
+
+    If the semaphore is released too many times it's a sign of a bug. If not
+    given, value defaults to 1.
+
+    Like regular semaphores, bounded semaphores manage a counter representing
+    the number of release() calls minus the number of acquire() calls, plus an
+    initial value. The acquire() method blocks if necessary until it can return
+    without making the counter negative. If not given, value defaults to 1.
+
+    "
+                :arguments 
+                  ( ("args" variable nil (reparse-symbol function_parameters) [17791 17796])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [17798 17806]))                  )
+                nil [17770 18572])
+            ("_BoundedSemaphore" type
+               (:documentation "A bounded semaphore checks to make sure its current value doesn't exceed
+       its initial value. If it does, ValueError is raised. In most situations
+       semaphores are used to guard resources with limited capacity.
+    "
+                :superclasses ("_Semaphore")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("_Semaphore" code nil (reparse-symbol indented_block_body) [18902 18943])
+                            ("self" variable nil (reparse-symbol indented_block_body) [18952 18979]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18864 18868])
+                            ("value" variable nil (reparse-symbol function_parameters) [18870 18875])
+                            ("verbose" variable nil (reparse-symbol function_parameters) [18879 18886]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [18851 18980])
+                    ("release" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18997 19001]))                          
+                        :documentation "Release a semaphore, incrementing the internal counter by one.
+
+        When the counter is zero on entry and another thread is waiting for it
+        to become larger than zero again, wake up that thread.
+
+        If the number of releases exceeds the number of acquires,
+        raise a ValueError.
+
+        ")
+                        (reparse-symbol indented_block_body) [18985 19580]))                  
+                :type "class")
+                nil [18573 19580])
+            ("Event" function
+               (:documentation "A factory function that returns a new event.
+
+    Events manage a flag that can be set to true with the set() method and reset
+    to false with the clear() method. The wait() method blocks until the flag is
+    true.
+
+    "
+                :arguments 
+                  ( ("args" variable nil (reparse-symbol function_parameters) [19592 19597])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [19599 19607]))                  )
+                nil [19582 19879])
+            ("_Event" type
+               (:documentation "A factory function that returns a new event object. An event manages a
+       flag that can be set to true with the set() method and reset to false
+       with the clear() method. The wait() method blocks until the flag is true.
+
+    "
+                :superclasses ("_Verbose")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("_Verbose" code nil (reparse-symbol indented_block_body) [20255 20287])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20296 20327])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20336 20355]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20226 20230])
+                            ("verbose" variable nil (reparse-symbol function_parameters) [20232 20239]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [20213 20356])
+                    ("_reset_internal_locks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20387 20391]))                          )
+                        (reparse-symbol indented_block_body) [20361 20507])
+                    ("isSet" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20522 20526]))                          )
+                        (reparse-symbol indented_block_body) [20512 20620])
+                    ("is_set" variable nil (reparse-symbol indented_block_body) [20625 20639])
+                    ("set" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20653 20657]))                          
+                        :documentation "Set the internal flag to true.
+
+        All threads waiting for the flag to become true are awakened. Threads
+        that call wait() once the flag is true will not block at all.
+
+        ")
+                        (reparse-symbol indented_block_body) [20645 20958])
+                    ("clear" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20973 20977]))                          
+                        :documentation "Reset the internal flag to false.
+
+        Subsequently, threads calling wait() will block until set() is called to
+        set the internal flag to true again.
+
+        ")
+                        (reparse-symbol indented_block_body) [20963 21223])
+                    ("wait" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21237 21241])
+                            ("timeout" variable nil (reparse-symbol function_parameters) [21243 21250]))                          
+                        :documentation "Block until the internal flag is true.
+
+        If the internal flag is true on entry, return immediately. Otherwise,
+        block until another thread calls set() to set the flag to true, or until
+        the optional timeout occurs.
+
+        When the timeout argument is present and not None, it should be a
+        floating point number specifying a timeout for the operation in seconds
+        (or fractions thereof).
+
+        This method returns the internal flag on exit, so it will always return
+        True except if a timeout is given and the operation times out.
+
+        ")
+                        (reparse-symbol indented_block_body) [21228 21988]))                  
+                :type "class")
+                nil [19880 21988])
+            ("_counter" variable nil nil [22027 22051])
+            ("_counter" code nil nil [22052 22062])
+            ("_newname" function (:arguments 
+              ( ("template" variable nil (reparse-symbol function_parameters) [22123 22131]))              ) nil [22110 22179])
+            ("_active_limbo_lock" variable nil nil [22211 22248])
+            ("_active" variable nil nil [22249 22261])
+            ("_limbo" variable nil nil [22299 22310])
+            ("Thread" type
+               (:documentation "A class that represents a thread of control.
+
+    This class can be safely subclassed in a limited fashion.
+
+    "
+                :superclasses ("_Verbose")
+                :members 
+                  ( ("__initialized" variable nil (reparse-symbol indented_block_body) [22491 22512])
+                    ("__exc_info" variable nil (reparse-symbol indented_block_body) [22763 22789])
+                    ("__exc_clear" variable nil (reparse-symbol indented_block_body) [22892 22920])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"This constructor should always be called with keyword arguments. Arguments are:
+
+        *group* should be None; reserved for future extension when a ThreadGroup
+        class is implemented.
+
+        *target* is the callable object to be invoked by the run()
+        method. Defaults to None, meaning nothing is called.
+
+        *name* is the thread name. By default, a unique name is constructed of
+        the form \"Thread-N\" where N is a small decimal number.
+
+        *args* is the argument tuple for the target invocation. Defaults to ().
+
+        *kwargs* is a dictionary of keyword arguments for the target
+        invocation. Defaults to {}.
+
+        If a subclass overrides the constructor, it must make sure to invoke
+        the base class constructor (Thread.__init__()) before doing anything
+        else to the thread.
+
+\"\"\"" code nil (reparse-symbol indented_block_body) [23043 23884])
+                            ("assert" code nil (reparse-symbol indented_block_body) [23893 23952])
+                            ("_Verbose" code nil (reparse-symbol indented_block_body) [23961 23993])
+                            ("if" code nil (reparse-symbol indented_block_body) [24002 24045])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24053 24075])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24084 24121])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24130 24148])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24157 24179])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24188 24224])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24233 24252])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24261 24285])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24294 24316])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24325 24357])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24366 24391])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24518 24545]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22939 22943])
+                            ("group" variable nil (reparse-symbol function_parameters) [22945 22950])
+                            ("target" variable nil (reparse-symbol function_parameters) [22957 22963])
+                            ("name" variable nil (reparse-symbol function_parameters) [22970 22974])
+                            ("args" variable nil (reparse-symbol function_parameters) [22998 23002])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [23007 23013])
+                            ("verbose" variable nil (reparse-symbol function_parameters) [23020 23027]))                          
+                        :documentation "This constructor should always be called with keyword arguments. Arguments are:
+
+        *group* should be None; reserved for future extension when a ThreadGroup
+        class is implemented.
+
+        *target* is the callable object to be invoked by the run()
+        method. Defaults to None, meaning nothing is called.
+
+        *name* is the thread name. By default, a unique name is constructed of
+        the form \"Thread-N\" where N is a small decimal number.
+
+        *args* is the argument tuple for the target invocation. Defaults to ().
+
+        *kwargs* is a dictionary of keyword arguments for the target
+        invocation. Defaults to {}.
+
+        If a subclass overrides the constructor, it must make sure to invoke
+        the base class constructor (Thread.__init__()) before doing anything
+        else to the thread.
+
+"
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [22926 24546])
+                    ("_reset_internal_locks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24577 24581]))                          )
+                        (reparse-symbol indented_block_body) [24551 24896])
+                    ("_block" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24926 24930]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [24901 24990])
+                    ("_set_daemon" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25011 25015]))                          )
+                        (reparse-symbol indented_block_body) [24995 25110])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25128 25132]))                          )
+                        (reparse-symbol indented_block_body) [25115 25576])
+                    ("start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25591 25595]))                          
+                        :documentation "Start the thread's activity.
+
+        It must be called at most once per thread object. It arranges for the
+        object's run() method to be invoked in a separate thread of control.
+
+        This method will raise a RuntimeError if called more than once on the
+        same thread object.
+
+        ")
+                        (reparse-symbol indented_block_body) [25581 26471])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26484 26488]))                          
+                        :documentation "Method representing the thread's activity.
+
+        You may override this method in a subclass. The standard run() method
+        invokes the callable object passed to the object's constructor as the
+        target argument, if any, with sequential and keyword arguments taken
+        from the args and kwargs arguments, respectively.
+
+        ")
+                        (reparse-symbol indented_block_body) [26476 27172])
+                    ("__bootstrap" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27193 27197]))                          )
+                        (reparse-symbol indented_block_body) [27177 28176])
+                    ("_set_ident" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28196 28200]))                          )
+                        (reparse-symbol indented_block_body) [28181 28239])
+                    ("__bootstrap_inner" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28266 28270]))                          )
+                        (reparse-symbol indented_block_body) [28244 31677])
+                    ("__stop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31693 31697]))                          )
+                        (reparse-symbol indented_block_body) [31682 32020])
+                    ("__delete" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32038 32042]))                          )
+                        (reparse-symbol indented_block_body) [32025 33839])
+                    ("join" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33853 33857])
+                            ("timeout" variable nil (reparse-symbol function_parameters) [33859 33866]))                          
+                        :documentation "Wait until the thread terminates.
+
+        This blocks the calling thread until the thread whose join() method is
+        called terminates -- either normally or through an unhandled exception
+        or until the optional timeout occurs.
+
+        When the timeout argument is present and not None, it should be a
+        floating point number specifying a timeout for the operation in seconds
+        (or fractions thereof). As join() always returns None, you must call
+        isAlive() after join() to decide whether a timeout happened -- if the
+        thread is still alive, the join() call timed out.
+
+        When the timeout argument is not present or None, the operation will
+        block until the thread terminates.
+
+        A thread can be join()ed many times.
+
+        join() raises a RuntimeError if an attempt is made to join the current
+        thread as that would cause a deadlock. It is also an error to join() a
+        thread before it has been started and attempts to do so raises the same
+        exception.
+
+        ")
+                        (reparse-symbol indented_block_body) [33844 36173])
+                    ("name" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36201 36205]))                          
+                        :documentation "A string used for identification purposes only.
+
+        It has no semantics. Multiple threads may be given the same name. The
+        initial name is set by the constructor.
+
+        ")
+                        (reparse-symbol indented_block_body) [36178 36500])
+                    ("name" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36531 36535])
+                            ("name" variable nil (reparse-symbol function_parameters) [36537 36541]))                          
+                        :decorators 
+                          ( ("name.setter" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [36505 36642])
+                    ("ident" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36671 36675]))                          
+                        :documentation "Thread identifier of this thread or None if it has not been started.
+
+        This is a nonzero integer. See the thread.get_ident() function. Thread
+        identifiers may be recycled when a thread exits and another thread is
+        created. The identifier is available even after the thread has exited.
+
+        ")
+                        (reparse-symbol indented_block_body) [36647 37102])
+                    ("isAlive" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37119 37123]))                          
+                        :documentation "Return whether the thread is alive.
+
+        This method returns True just before the run() method starts until just
+        after the run() method terminates. The module function enumerate()
+        returns a list of all alive threads.
+
+        ")
+                        (reparse-symbol indented_block_body) [37107 37515])
+                    ("is_alive" variable nil (reparse-symbol indented_block_body) [37520 37538])
+                    ("daemon" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37569 37573]))                          
+                        :documentation "A boolean value indicating whether this thread is a daemon thread (True) or not (False).
+
+        This must be set before start() is called, otherwise RuntimeError is
+        raised. Its initial value is inherited from the creating thread; the
+        main thread is not a daemon thread and therefore all threads created in
+        the main thread default to daemon = False.
+
+        The entire Python program exits when no alive non-daemon threads are
+        left.
+
+        ")
+                        (reparse-symbol indented_block_body) [37544 38164])
+                    ("daemon" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38199 38203])
+                            ("daemonic" variable nil (reparse-symbol function_parameters) [38205 38213]))                          
+                        :decorators 
+                          ( ("daemon.setter" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [38169 38462])
+                    ("isDaemon" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38480 38484]))                          )
+                        (reparse-symbol indented_block_body) [38467 38514])
+                    ("setDaemon" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38533 38537])
+                            ("daemonic" variable nil (reparse-symbol function_parameters) [38539 38547]))                          )
+                        (reparse-symbol indented_block_body) [38519 38581])
+                    ("getName" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38598 38602]))                          )
+                        (reparse-symbol indented_block_body) [38586 38630])
+                    ("setName" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38647 38651])
+                            ("name" variable nil (reparse-symbol function_parameters) [38653 38657]))                          )
+                        (reparse-symbol indented_block_body) [38635 38685]))                  
+                :type "class")
+                nil [22339 38685])
+            ("Timer" function
+               (:documentation "Factory function to create a Timer object.
+
+    Timers call a function after a specified number of seconds:
+
+        t = Timer(30.0, f, args=[], kwargs={})
+        t.start()
+        t.cancel()     # stop the timer's action if it's still waiting
+
+    "
+                :arguments 
+                  ( ("args" variable nil (reparse-symbol function_parameters) [38757 38762])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [38764 38772]))                  )
+                nil [38747 39071])
+            ("_Timer" type
+               (:documentation "Call a function after a specified number of seconds:
+
+            t = Timer(30.0, f, args=[], kwargs={})
+            t.start()
+            t.cancel()     # stop the timer's action if it's still waiting
+
+    "
+                :superclasses ("Thread")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Thread" code nil (reparse-symbol indented_block_body) [39385 39406])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39415 39439])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39448 39472])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39481 39497])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39506 39526])
+                            ("self" variable nil (reparse-symbol indented_block_body) [39535 39558]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39330 39334])
+                            ("interval" variable nil (reparse-symbol function_parameters) [39336 39344])
+                            ("function" variable nil (reparse-symbol function_parameters) [39346 39354])
+                            ("args" variable nil (reparse-symbol function_parameters) [39356 39360])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [39365 39371]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [39317 39559])
+                    ("cancel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39575 39579]))                          
+                        :documentation "Stop the timer if it hasn't finished yet")
+                        (reparse-symbol indented_block_body) [39564 39665])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39678 39682]))                          )
+                        (reparse-symbol indented_block_body) [39670 39847]))                  
+                :type "class")
+                nil [39072 39847])
+            ("_MainThread" type
+               (:superclasses ("Thread")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Thread" code nil (reparse-symbol indented_block_body) [40013 40053])
+                            ("self" code nil (reparse-symbol indented_block_body) [40062 40089])
+                            ("self" code nil (reparse-symbol indented_block_body) [40098 40115])
+                            ("with" code nil (reparse-symbol indented_block_body) [40124 40190]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39998 40002]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [39985 40190])
+                    ("_set_daemon" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [40211 40215]))                          )
+                        (reparse-symbol indented_block_body) [40195 40239])
+                    ("_exitfunc" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [40258 40262]))                          )
+                        (reparse-symbol indented_block_body) [40244 40617]))                  
+                :type "class")
+                nil [39953 40617])
+            ("_pickSomeNonDaemonThread" function nil nil [40618 40755])
+            ("_DummyThread" type
+               (:superclasses ("Thread")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Thread" code nil (reparse-symbol indented_block_body) [41254 41302])
+                            ("del" code nil (reparse-symbol indented_block_body) [41522 41545])
+                            ("self" code nil (reparse-symbol indented_block_body) [41555 41582])
+                            ("self" code nil (reparse-symbol indented_block_body) [41591 41608])
+                            ("with" code nil (reparse-symbol indented_block_body) [41617 41683]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [41239 41243]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [41226 41683])
+                    ("_set_daemon" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [41704 41708]))                          )
+                        (reparse-symbol indented_block_body) [41688 41731])
+                    ("join" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [41745 41749])
+                            ("timeout" variable nil (reparse-symbol function_parameters) [41751 41758]))                          )
+                        (reparse-symbol indented_block_body) [41736 41817]))                  
+                :type "class")
+                nil [41193 41817])
+            ("currentThread" function (:documentation "Return the current Thread object, corresponding to the caller's thread of control.
+
+    If the caller's thread of control was not created through the threading
+    module, a dummy thread object with limited functionality is returned.
+
+    ") nil [41843 42283])
+            ("current_thread" variable nil nil [42284 42314])
+            ("activeCount" function (:documentation "Return the number of Thread objects currently alive.
+
+    The returned count is equal to the length of the list returned by
+    enumerate().
+
+    ") nil [42316 42563])
+            ("active_count" variable nil nil [42564 42590])
+            ("_enumerate" function nil nil [42592 42724])
+            ("enumerate" function (:documentation "Return a list of all Thread objects currently alive.
+
+    The list includes daemonic threads, dummy thread objects created by
+    current_thread(), and the main thread. It excludes terminated threads and
+    threads that have not yet been started.
+
+    ") nil [42725 43085])
+            ("thread" include nil nil [43086 43115])
+            ("_shutdown" variable nil nil [43231 43266])
+            ("try" code nil nil [43365 43468])
+            ("_after_fork" function nil nil [43470 44846])
+            ("_test" function nil nil [44866 47093])
+            ("if" code nil nil [47094 47133]))          
+      :file "threading.py"
+      :pointmax 47133
+      :fsize 47132
+      :lastmodtime '(22392 17330 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 31326 . 31361) (NEWLINE 31110 . 31111) (COLON 31109 . 31110) (FINALLY 31102 . 31109)))
+    (semanticdb-table "warnings.py"
+      :file "warnings.py"
+      :fsize 14748
+      :lastmodtime '(22392 17330 0 0))
+    (semanticdb-table "collections.py"
+      :file "collections.py"
+      :fsize 27798
+      :lastmodtime '(22392 17330 0 0))
+    (semanticdb-table "traceback.py"
+      :file "traceback.py"
+      :fsize 11285
+      :lastmodtime '(22392 17330 0 0)))
+  :file "!Users!xiaoli!anaconda!lib!python2.7!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

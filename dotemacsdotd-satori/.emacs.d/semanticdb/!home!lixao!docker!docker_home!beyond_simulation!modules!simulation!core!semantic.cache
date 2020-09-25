@@ -1,0 +1,786 @@
+;; Object core/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "core/"
+  :tables
+  (list
+    (semanticdb-table "simulation.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_SIMULATION_SIMULATION_H_" variable (:constant-flag t) nil [285 317])
+            ("tf2_ros/transform_broadcaster.h" include (:system-flag t) nil [319 361])
+            ("deque" include (:system-flag t) nil [362 378])
+            ("memory" include (:system-flag t) nil [379 396])
+            ("mutex" include (:system-flag t) nil [397 413])
+            ("string" include (:system-flag t) nil [414 431])
+            ("vector" include (:system-flag t) nil [432 449])
+            ("modules/common/beyond_app.h" include nil nil [450 488])
+            ("modules/common/monitor/proto/monitor.pb.h" include nil nil [489 541])
+            ("modules/common/planner_utils/dynamics.h" include nil nil [542 592])
+            ("modules/planner/proto/planner.pb.h" include nil nil [593 638])
+            ("modules/simulation/core/generalized_agent/agent_service.h" include nil nil [639 707])
+            ("modules/simulation/core/map_service/map_service.h" include nil nil [708 768])
+            ("modules/simulation/proto/simulation.pb.h" include nil nil [769 820])
+            ("modules/simulation/core/generalized_agent/vehicle_state.h" include nil nil [821 889])
+            ("modules/state_estimation/proto/state_estimation.pb.h" include nil nil [890 953])
+            ("modules/visualizer/proto/visualizer.pb.h" include nil nil [954 1005])
+            ("modules/controller/proto/controller.pb.h" include nil nil [1006 1057])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("Simulation" type
+                               (:superclasses 
+                                  ( ("beyond::common::BeyondApp" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1306 1313])
+                                    ("Simulation" function
+                                       (:constructor-flag t
+                                        :type ("Simulation" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1318 1368])
+                                    ("override" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1523 1538])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [1662 1671])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [1778 1787])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [1848 1857])
+                                    ("private" label nil (reparse-symbol classsubparts) [1863 1871])
+                                    ("timer_" variable (:type ("ros::Timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1897 1915])
+                                    ("tf_buffer_" variable (:type ("tf2_ros::Buffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1918 1945])
+                                    ("tf_listener_" variable
+                                       (:default-value "nullptr"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("tf2_ros::TransformListener" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1948 2015])
+                                    ("transform_broadcaster" variable
+                                       (:default-value "nullptr"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("tf2_ros::TransformBroadcaster" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [2018 2097])
+                                    ("start_time_" variable (:type "double") (reparse-symbol classsubparts) [2101 2120])
+                                    ("prev_time_" variable (:type "double") (reparse-symbol classsubparts) [2123 2141])
+                                    ("reset_time_" variable (:type "double") (reparse-symbol classsubparts) [2144 2163])
+                                    ("started_" variable (:type "bool") (reparse-symbol classsubparts) [2166 2180])
+                                    ("mutex_" variable
+                                       (:typemodifiers ("mutable")
+                                        :type ("std::mutex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2183 2209])
+                                    ("speed_limit_" variable
+                                       (:default-value "24.0"
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [2213 2240])
+                                    ("simulation_world_msg" variable (:type ("beyond::simulation::SimulationWorldMsg" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2244 2304])
+                                    ("agent_service" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("AgentService" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2308 2352])
+                                    ("map_service" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("MapService" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2355 2395])
+                                    ("current_control" variable (:type ("beyond::simulation::SimulationWorldControls" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2399 2459])
+                                    ("control_queue" variable (:type ("std::deque" type
+                                         (:template-specifier 
+                                            ( ("beyond::simulation::SimulationWorldControls" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2462 2532])
+                                    ("control_updated" variable (:type "bool") (reparse-symbol classsubparts) [2535 2556])
+                                    ("InitializeSimulation" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("world_msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::simulation::SimulationWorldMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2629 2685]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2596 2686])
+                                    ("OnInitWorldStateMsg" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("world_msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::simulation::SimulationWorldMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2722 2778]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2690 2779])
+                                    ("OnVisualizerCommandMsg" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("visualizer_command_msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::visualizer::VisualizerCommandMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2820 2891]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2785 2892])
+                                    ("OnSimulationWorldControls" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("simulation_world_controls" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::simulation::SimulationWorldControls" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2934 3011]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2896 3012])
+                                    ("UpdateSimulationWorldMsg" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [3048 3068]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3018 3069])
+                                    ("PublishSimulationWorldMsg" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3073 3106])
+                                    ("OnTimer" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ros::TimerEvent" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3153 3177]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3140 3178]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1250 3186]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1148 3189]))                  
+                :type "namespace")
+                nil [1129 3216]))          
+      :file "simulation.h"
+      :pointmax 3283
+      :fsize 3282
+      :lastmodtime '(23346 41391 129529 480000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MODULES_SIMULATION_SIMULATION_H_")
+          )
+)
+    (semanticdb-table "simulation.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [237 257])
+            ("string" include (:system-flag t) nil [258 275])
+            ("modules/common/adapters/adapter_manager.h" include nil nil [277 329])
+            ("modules/common/planner_utils/dynamics.h" include nil nil [330 380])
+            ("modules/common/time/time.h" include nil nil [381 418])
+            ("modules/simulation/common/simulation_gflags.h" include nil nil [458 514])
+            ("modules/simulation/core/physics_service/physics_service.h" include nil nil [515 583])
+            ("modules/simulation/core/simulation.h" include nil nil [584 631])
+            ("beyond::common::time::Clock" using (:type ("beyond::common::time::Clock" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [633 667])
+            ("beyond::common::Status" using (:type ("beyond::common::Status" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [668 697])
+            ("beyond::common::adapter::AdapterManager" using (:type ("beyond::common::adapter::AdapterManager" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [698 744])
+            ("beyond::state_estimation::MapMsg" using (:type ("beyond::state_estimation::MapMsg" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [745 784])
+            ("beyond::state_estimation::LaneMsg" using (:type ("beyond::state_estimation::LaneMsg" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [785 825])
+            ("beyond::state_estimation::LaneID" using (:type ("beyond::state_estimation::LaneID" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [826 865])
+            ("beyond::visualizer::VisualizerCommandMsg" using (:type ("beyond::visualizer::VisualizerCommandMsg" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [866 913])
+            ("beyond::visualizer::VisualizerCommandType" using (:type ("beyond::visualizer::VisualizerCommandType" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [914 962])
+            ("beyond::common::planner_utils::CarDynamics" using (:type ("beyond::common::planner_utils::CarDynamics" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [963 1012])
+            ("beyond::simulation::SimulationAgentControl" using (:type ("beyond::simulation::SimulationAgentControl" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1013 1062])
+            ("beyond::simulation::SimulationWorldControls" using (:type ("beyond::simulation::SimulationWorldControls" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1063 1113])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("Name" function
+                               (:parent "Simulation"
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1158 1222])
+                            ("Init" function
+                               (:parent "Simulation"
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1224 2124])
+                            ("Start" function
+                               (:parent "Simulation"
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2126 2351])
+                            ("Stop" function
+                               (:parent "Simulation"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2353 2379])
+                            ("InitializeSimulation" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("world_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SimulationWorldMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2420 2456]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2382 2517])
+                            ("OnInitWorldStateMsg" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("world_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SimulationWorldMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2556 2592]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2519 2990])
+                            ("OnSimulationWorldControls" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("simulation_world_controls" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SimulationWorldControls" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3037 3094]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2994 3268])
+                            ("OnVisualizerCommandMsg" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("visualizer_command_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("beyond::visualizer::VisualizerCommandMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3312 3383]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3272 3385])
+                            ("PublishSimulationWorldMsg" function
+                               (:parent "Simulation"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3388 3602])
+                            ("OnTimer" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::TimerEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3634 3658]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3609 4936])
+                            ("UpdateSimulationWorldMsg" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [4984 5004]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4942 5238]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1134 5242]))                  
+                :type "namespace")
+                nil [1115 5269]))          
+      :file "simulation.cc"
+      :pointmax 5292
+      :fsize 5291
+      :lastmodtime '(23349 15581 998083 661000)
+      :unmatched-syntax nil)
+    (semanticdb-table "simulation.cc.bak"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [237 257])
+            ("string" include (:system-flag t) nil [258 275])
+            ("modules/common/adapters/adapter_manager.h" include nil nil [277 329])
+            ("modules/common/planner_utils/dynamics.h" include nil nil [330 380])
+            ("modules/common/time/time.h" include nil nil [381 418])
+            ("modules/simulation/common/simulation_gflags.h" include nil nil [458 514])
+            ("modules/simulation/core/physics_service/physics_service.h" include nil nil [515 583])
+            ("modules/simulation/core/simulation.h" include nil nil [584 631])
+            ("beyond::common::time::Clock" using (:type ("beyond::common::time::Clock" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [633 667])
+            ("beyond::common::Status" using (:type ("beyond::common::Status" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [668 697])
+            ("beyond::common::adapter::AdapterManager" using (:type ("beyond::common::adapter::AdapterManager" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [698 744])
+            ("beyond::state_estimation::WorldStateMsg" using (:type ("beyond::state_estimation::WorldStateMsg" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [745 791])
+            ("beyond::state_estimation::EgoMsg" using (:type ("beyond::state_estimation::EgoMsg" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [792 831])
+            ("beyond::state_estimation::MapMsg" using (:type ("beyond::state_estimation::MapMsg" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [832 871])
+            ("beyond::state_estimation::LaneMsg" using (:type ("beyond::state_estimation::LaneMsg" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [872 912])
+            ("beyond::state_estimation::AgentMsg" using (:type ("beyond::state_estimation::AgentMsg" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [913 954])
+            ("beyond::state_estimation::LaneID" using (:type ("beyond::state_estimation::LaneID" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [955 994])
+            ("beyond::state_estimation::LaneQuality" using (:type ("beyond::state_estimation::LaneQuality" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [995 1039])
+            ("beyond::state_estimation::LaneChangeFlag" using (:type ("beyond::state_estimation::LaneChangeFlag" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1040 1087])
+            ("beyond::state_estimation::AgentLaneStatus" using (:type ("beyond::state_estimation::AgentLaneStatus" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1088 1136])
+            ("beyond::visualizer::VisualizerCommandMsg" using (:type ("beyond::visualizer::VisualizerCommandMsg" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1137 1184])
+            ("beyond::visualizer::VisualizerCommandType" using (:type ("beyond::visualizer::VisualizerCommandType" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1185 1233])
+            ("beyond::planner::ControlTarget" using (:type ("beyond::planner::ControlTarget" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1234 1271])
+            ("beyond::planner::SimpleControl" using (:type ("beyond::planner::SimpleControl" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1272 1309])
+            ("beyond::planner::PlannerOutputMsg" using (:type ("beyond::planner::PlannerOutputMsg" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1310 1350])
+            ("beyond::planner::MotionPlanOutputMsg" using (:type ("beyond::planner::MotionPlanOutputMsg" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1351 1394])
+            ("beyond::planner::TrajectoryPoint" using (:type ("beyond::planner::TrajectoryPoint" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1395 1434])
+            ("beyond::common::planner_utils::CarDynamics" using (:type ("beyond::common::planner_utils::CarDynamics" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1435 1484])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("Name" function
+                               (:parent "Simulation"
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1529 1593])
+                            ("Init" function
+                               (:parent "Simulation"
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1595 3015])
+                            ("Start" function
+                               (:parent "Simulation"
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3017 3242])
+                            ("Stop" function
+                               (:parent "Simulation"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3244 3270])
+                            ("UpdateSimulatedEgo" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("timestep" variable (:type "double") (reparse-symbol arg-sub-list) [3309 3325])
+                                    ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [3326 3346]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3273 5273])
+                            ("OnInitWorldStateMsg" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("world_state_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WorldStateMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5312 5349]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5275 5766])
+                            ("OnWorldStateMsg" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("world_state_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WorldStateMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5805 5842]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5772 8535])
+                            ("InitializeSimulation" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("world_state_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WorldStateMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8575 8612]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8537 11233])
+                            ("OnSimulationWorldControls" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("simulation_world_controls" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SimulationWorldControls" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11279 11336]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11236 11380])
+                            ("OnControlTarget" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("control_target" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ControlTarget" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11421 11457]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11388 11831])
+                            ("OnVisualizerCommandMsg" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("visualizer_command_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("VisualizerCommandMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11878 11929]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11833 12936])
+                            ("OnSimulationDirectorMsg" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("simulation_director_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("beyond::simulation::SimulationDirectorMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12984 13057]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [12938 13172])
+                            ("PublishSimulatedWorldState" function
+                               (:parent "Simulation"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [13174 13404])
+                            ("PublishPastTrajectory" function
+                               (:parent "Simulation"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [13406 15287])
+                            ("OnTimer" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ros::TimerEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15318 15342]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [15293 16516])
+                            ("UpdateSimulatedWorldState" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [16565 16585]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [16522 17938])
+                            ("GetOriginalEgoCarMsg" function
+                               (:parent "Simulation"
+                                :arguments 
+                                  ( ("world_state_msg" variable
+                                       (:pointer 1
+                                        :type ("WorldStateMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17978 18009])
+                                    ("target_frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18048 18073]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [17940 19795]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1505 19798]))                  
+                :type "namespace")
+                nil [1486 19825]))          
+      :file "simulation.cc.bak"
+      :pointmax 19848
+      :fsize 19847
+      :lastmodtime '(23349 4241 279362 441000)
+      :unmatched-syntax nil)
+    (semanticdb-table "simulation.h.bak"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_SIMULATION_SIMULATION_H_" variable (:constant-flag t) nil [285 317])
+            ("tf2_ros/transform_broadcaster.h" include (:system-flag t) nil [319 361])
+            ("deque" include (:system-flag t) nil [362 378])
+            ("memory" include (:system-flag t) nil [379 396])
+            ("mutex" include (:system-flag t) nil [397 413])
+            ("string" include (:system-flag t) nil [414 431])
+            ("vector" include (:system-flag t) nil [432 449])
+            ("modules/common/beyond_app.h" include nil nil [450 488])
+            ("modules/common/monitor/proto/monitor.pb.h" include nil nil [489 541])
+            ("modules/common/planner_utils/dynamics.h" include nil nil [542 592])
+            ("modules/planner/proto/planner.pb.h" include nil nil [593 638])
+            ("modules/simulation/core/agent_service/agent_service.h" include nil nil [639 703])
+            ("modules/simulation/core/map_service/map_service.h" include nil nil [704 764])
+            ("modules/simulation/proto/simulation.pb.h" include nil nil [765 816])
+            ("modules/simulation/core/generalized_agent/vehicle_state.h" include nil nil [817 885])
+            ("modules/state_estimation/proto/state_estimation.pb.h" include nil nil [886 949])
+            ("modules/visualizer/proto/visualizer.pb.h" include nil nil [950 1001])
+            ("modules/controller/proto/controller.pb.h" include nil nil [1002 1053])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("Simulation" type
+                               (:superclasses 
+                                  ( ("beyond::common::BeyondApp" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1302 1309])
+                                    ("Simulation" function
+                                       (:constructor-flag t
+                                        :type ("Simulation" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1314 1393])
+                                    ("override" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1548 1563])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [1687 1696])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [1803 1812])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [1873 1882])
+                                    ("private" label nil (reparse-symbol classsubparts) [1888 1896])
+                                    ("timer_" variable (:type ("ros::Timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1922 1940])
+                                    ("tf_buffer_" variable (:type ("tf2_ros::Buffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1943 1970])
+                                    ("tf_listener_" variable
+                                       (:default-value "nullptr"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("tf2_ros::TransformListener" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1973 2040])
+                                    ("transform_broadcaster_" variable
+                                       (:default-value "nullptr"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("tf2_ros::TransformBroadcaster" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [2043 2129])
+                                    ("simulated_world_state_" variable (:type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2132 2195])
+                                    ("original_world_state_" variable (:type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2198 2260])
+                                    ("latest_world_state_" variable (:type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2263 2323])
+                                    ("initial_world_state_" variable (:type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2326 2387])
+                                    ("simulated_ego_state_" variable (:type ("VehicleState" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2405 2439])
+                                    ("orig_ego_state_" variable (:type ("VehicleState" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2442 2471])
+                                    ("latest_director_msg_" variable (:type ("SimulationDirectorMsg" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2475 2518])
+                                    ("start_time_" variable (:type "double") (reparse-symbol classsubparts) [2522 2541])
+                                    ("prev_time_" variable (:type "double") (reparse-symbol classsubparts) [2544 2562])
+                                    ("reset_time_" variable (:type "double") (reparse-symbol classsubparts) [2565 2584])
+                                    ("started_" variable (:type "bool") (reparse-symbol classsubparts) [2587 2601])
+                                    ("mutex_" variable
+                                       (:typemodifiers ("mutable")
+                                        :type ("std::mutex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2604 2630])
+                                    ("current_control_" variable (:type ("beyond::planner::SimpleControl" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2633 2681])
+                                    ("control_queue_" variable (:type ("std::deque" type
+                                         (:template-specifier 
+                                            ( ("beyond::planner::SimpleControl" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2684 2742])
+                                    ("ego_control_updated_" variable (:type "bool") (reparse-symbol classsubparts) [2745 2771])
+                                    ("speed_limit_" variable
+                                       (:default-value "24.0"
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [2774 2801])
+                                    ("control_delay_" variable (:type "int") (reparse-symbol classsubparts) [2805 2824])
+                                    ("past_points_" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("geometry_msgs::PoseStamped" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2828 2881])
+                                    ("agent_service_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("AgentService" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2885 2930])
+                                    ("map_service_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("MapService" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2933 2974])
+                                    ("InitializeSimulation" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("world_state_msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3048 3111]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3015 3112])
+                                    ("OnWorldStateMsg" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("world_state_msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3144 3207]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3116 3208])
+                                    ("OnInitWorldStateMsg" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("world_state_msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3245 3308]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3212 3309])
+                                    ("OnControlTarget" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("control_target" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::planner::ControlTarget" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3369 3422]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3341 3423])
+                                    ("OnVisualizerCommandMsg" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("visualizer_command_msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::visualizer::VisualizerCommandMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3462 3533]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3427 3534])
+                                    ("OnSimulationDirectorMsg" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("simulation_director_msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::simulation::SimulationDirectorMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3574 3647]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3538 3648])
+                                    ("OnSimulationWorldControls" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("simulation_world_controls" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("beyond::simulation::SimulationWorldControls" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3690 3767]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3652 3768])
+                                    ("UpdateSimulatedWorldState" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [3805 3825]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3774 3826])
+                                    ("PublishSimulatedWorldState" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3830 3864])
+                                    ("PublishSimulationWorld" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3868 3898])
+                                    ("PublishPastTrajectory" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3904 3933])
+                                    ("OnTimer" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ros::TimerEvent" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3980 4004]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3967 4005])
+                                    ("GetOriginalEgoCarMsg" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("world_state_msg" variable
+                                               (:pointer 1
+                                                :type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4040 4097])
+                                            ("target_frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4102 4127]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4009 4134])
+                                    ("UpdateSimulatedEgo" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("timestep" variable (:type "double") (reparse-symbol arg-sub-list) [4162 4178])
+                                            ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [4179 4199]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4138 4200]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1246 4209]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1144 4212]))                  
+                :type "namespace")
+                nil [1125 4239]))          
+      :file "simulation.h.bak"
+      :pointmax 4306
+      :fsize 4305
+      :lastmodtime '(23346 41152 543408 504000)
+      :unmatched-syntax '((semantic-list 1870 . 1872) (symbol 1866 . 1870) (VOID 1861 . 1865) (semantic-list 1800 . 1802) (symbol 1795 . 1800) (symbol 1788 . 1794) (punctuation 1787 . 1788) (punctuation 1786 . 1787) (symbol 1780 . 1786) (punctuation 1779 . 1780) (punctuation 1778 . 1779) (symbol 1772 . 1778) (semantic-list 1684 . 1686) (symbol 1680 . 1684) (symbol 1673 . 1679) (punctuation 1672 . 1673) (punctuation 1671 . 1672) (symbol 1665 . 1671) (punctuation 1664 . 1665) (punctuation 1663 . 1664) (symbol 1657 . 1663) (semantic-list 1545 . 1547) (symbol 1541 . 1545) (symbol 1534 . 1540) (punctuation 1533 . 1534) (punctuation 1532 . 1533) (symbol 1529 . 1532) (punctuation 1421 . 1422) (DEFAULT 1414 . 1421) (punctuation 1412 . 1413) (semantic-list 1409 . 1411) (symbol 1399 . 1409) (punctuation 1398 . 1399) (semantic-list 1870 . 1872) (symbol 1866 . 1870) (VOID 1861 . 1865) (semantic-list 1800 . 1802) (symbol 1795 . 1800) (symbol 1788 . 1794) (punctuation 1787 . 1788) (punctuation 1786 . 1787) (symbol 1780 . 1786) (punctuation 1779 . 1780) (punctuation 1778 . 1779) (symbol 1772 . 1778) (semantic-list 1684 . 1686) (symbol 1680 . 1684) (symbol 1673 . 1679) (punctuation 1672 . 1673) (punctuation 1671 . 1672) (symbol 1665 . 1671) (punctuation 1664 . 1665) (punctuation 1663 . 1664) (symbol 1657 . 1663) (semantic-list 1545 . 1547) (symbol 1541 . 1545) (symbol 1534 . 1540) (punctuation 1533 . 1534) (punctuation 1532 . 1533) (symbol 1529 . 1532) (punctuation 1421 . 1422) (DEFAULT 1414 . 1421) (punctuation 1412 . 1413) (semantic-list 1409 . 1411) (symbol 1399 . 1409) (punctuation 1398 . 1399))
+      :lexical-table 
+        '(("MODULES_SIMULATION_SIMULATION_H_")
+          )
+))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!simulation!core!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

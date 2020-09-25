@@ -1,0 +1,1051 @@
+;; Object simple_example/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "simple_example/"
+  :tables
+  (list
+    (semanticdb-table "simple_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("gym" include nil nil [20 30])
+            ("gym" include nil nil [31 53])
+            ("gym.utils" include nil nil [54 83])
+            ("numpy" include nil nil [84 102])
+            ("os" include nil nil [103 122])
+            ("SimpleEnv" type
+               (:superclasses ("gym.Env")
+                :members 
+                  ( ("metadata" variable nil (reparse-symbol indented_block_body) [156 262])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [300 316])
+                            ("self" variable nil (reparse-symbol indented_block_body) [325 343])
+                            ("self" variable nil (reparse-symbol indented_block_body) [352 363])
+                            ("self" variable nil (reparse-symbol indented_block_body) [372 390])
+                            ("high" variable nil (reparse-symbol indented_block_body) [400 444])
+                            ("low" variable nil (reparse-symbol indented_block_body) [453 499])
+                            ("self" variable nil (reparse-symbol indented_block_body) [508 594])
+                            ("self" variable nil (reparse-symbol indented_block_body) [603 658])
+                            ("self" code nil (reparse-symbol indented_block_body) [668 680])
+                            ("self" variable nil (reparse-symbol indented_block_body) [689 713]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [285 289]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [272 738])
+                    ("_seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [757 761])
+                            ("seed" variable nil (reparse-symbol function_parameters) [763 767]))                          )
+                        (reparse-symbol indented_block_body) [747 852])
+                    ("_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [867 871])
+                            ("u" variable nil (reparse-symbol function_parameters) [872 873]))                          )
+                        (reparse-symbol indented_block_body) [857 1477])
+                    ("_reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1493 1497]))                          )
+                        (reparse-symbol indented_block_body) [1482 1701])
+                    ("_get_obs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1719 1723]))                          )
+                        (reparse-symbol indented_block_body) [1706 1839])
+                    ("_render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1856 1860])
+                            ("mode" variable nil (reparse-symbol function_parameters) [1862 1866])
+                            ("close" variable nil (reparse-symbol function_parameters) [1876 1881]))                          )
+                        (reparse-symbol indented_block_body) [1844 3088]))                  
+                :type "class")
+                nil [125 3088])
+            ("angle_normalize" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [3123 3124]))              ) nil [3103 3172])
+            ("if" code nil nil [3174 3323]))          
+      :file "simple_env.py"
+      :pointmax 3323
+      :fsize 3322
+      :lastmodtime '(23003 54868 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("get_rewards" include nil nil [30 75])
+            ("EXPERIMENT_NAME" variable nil nil [147 171])
+            ("file_path" variable nil nil [173 211])
+            ("file_dir" variable nil nil [212 234])
+            ("experiment_dir" variable nil nil [235 306])
+            ("formula_idx" variable nil nil [412 427])
+            ("reward_type" variable nil nil [428 452])
+            ("spaces, rewards" code nil nil [453 542]))          
+      :file "config.py"
+      :pointmax 1945
+      :fsize 1944
+      :lastmodtime '(23044 44100 0 0)
+      :unmatched-syntax '((NAME 544 . 550) ($EOI 1945 . 1945) (NAME 544 . 550) ($EOI 1944 . 1944) (NAME 544 . 550) ($EOI 1944 . 1944) (NAME 544 . 550) ($EOI 1945 . 1945) (NAME 544 . 550) ($EOI 1945 . 1945) (NAME 544 . 550) ($EOI 1946 . 1946) (NAME 544 . 550) ($EOI 1944 . 1944) (NAME 544 . 550) ($EOI 1945 . 1945) (NAME 544 . 550) ($EOI 1945 . 1945) (NAME 544 . 550) ($EOI 1945 . 1945) (NAME 544 . 550) ($EOI 1945 . 1945) (NAME 544 . 550) ($EOI 1945 . 1945) (NAME 544 . 550) ($EOI 1946 . 1946) (NAME 544 . 550) ($EOI 1946 . 1946) (NAME 544 . 550) ($EOI 1946 . 1946) (NAME 544 . 550) ($EOI 1946 . 1946) (NAME 544 . 550) ($EOI 1946 . 1946) (NAME 544 . 550) ($EOI 1946 . 1946) (NAME 544 . 550) ($EOI 1946 . 1946) ($EOI 1946 . 1946)))
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("gym.envs.registration" include nil nil [1 43])
+            ("register" code nil nil [45 175]))          
+      :file "__init__.py"
+      :pointmax 319
+      :fsize 318
+      :lastmodtime '(23046 8251 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "mlp_policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("tensorflow" include nil nil [20 43])
+            ("os" include nil nil [80 89])
+            ("MlpPolicy" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [177 214])
+                            ("self" variable nil (reparse-symbol indented_block_body) [223 243])
+                            ("self" variable nil (reparse-symbol indented_block_body) [252 283])
+                            ("self" variable nil (reparse-symbol indented_block_body) [292 321])
+                            ("self" variable nil (reparse-symbol indented_block_body) [330 367])
+                            ("self" variable nil (reparse-symbol indented_block_body) [376 411])
+                            ("self" variable nil (reparse-symbol indented_block_body) [420 447])
+                            ("self" variable nil (reparse-symbol indented_block_body) [456 505])
+                            ("self" variable nil (reparse-symbol indented_block_body) [514 563])
+                            ("self" variable nil (reparse-symbol indented_block_body) [581 629])
+                            ("self" variable nil (reparse-symbol indented_block_body) [638 687])
+                            ("self" code nil (reparse-symbol indented_block_body) [696 715])
+                            ("if" code nil (reparse-symbol indented_block_body) [724 835])
+                            ("if" code nil (reparse-symbol indented_block_body) [844 888]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [127 131])
+                            ("config" variable nil (reparse-symbol function_parameters) [133 139])
+                            ("logger" variable nil (reparse-symbol function_parameters) [141 147])
+                            ("deploy" variable nil (reparse-symbol function_parameters) [154 160]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [114 888])
+                    ("_save_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [909 913]))                          )
+                        (reparse-symbol indented_block_body) [893 1023])
+                    ("_build_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1172 1176]))                          )
+                        (reparse-symbol indented_block_body) [1155 1525])
+                    ("_placeholders" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1560 1564]))                          )
+                        (reparse-symbol indented_block_body) [1542 2244])
+                    ("_policy_nn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2264 2268]))                          )
+                        (reparse-symbol indented_block_body) [2249 4059])
+                    ("_logprob" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4078 4082]))                          
+                        :documentation " Calculate log probabilities of a batch of observations & actions
+        Calculates log probabilities using previous step's model parameters and
+        new parameters being trained.
+        ")
+                        (reparse-symbol indented_block_body) [4065 4773])
+                    ("_kl_entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4795 4799]))                          
+                        :documentation "
+        Add to Graph:
+        1. KL divergence between old and new distributions
+        2. Entropy of present policy given states and actions
+        https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Kullback.E2.80.93Leibler_divergence
+        https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Entropy
+        ")
+                        (reparse-symbol indented_block_body) [4779 5780])
+                    ("_sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5806 5810]))                          
+                        :documentation " Sample from distribution, given observation ")
+                        (reparse-symbol indented_block_body) [5794 6041])
+                    ("_loss_train_op" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6066 6070]))                          
+                        :documentation "
+        Three loss terms:
+        1) standard policy gradient
+        2) D_KL(pi_old || pi_new)
+        3) Hinge loss on [D_KL - kl_targ]^2
+        See: https://arxiv.org/pdf/1707.02286.pdf
+        ")
+                        (reparse-symbol indented_block_body) [6047 7229])
+                    ("_init_session" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7253 7257]))                          
+                        :documentation "Launch TensorFlow session and initialize variables")
+                        (reparse-symbol indented_block_body) [7235 7403])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7428 7432])
+                            ("obs" variable nil (reparse-symbol function_parameters) [7434 7437]))                          
+                        :documentation "Draw sample from policy distribution")
+                        (reparse-symbol indented_block_body) [7417 7599])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7615 7619])
+                            ("observes" variable nil (reparse-symbol function_parameters) [7621 7629])
+                            ("actions" variable nil (reparse-symbol function_parameters) [7631 7638])
+                            ("advantages" variable nil (reparse-symbol function_parameters) [7640 7650])
+                            ("itr" variable nil (reparse-symbol function_parameters) [7652 7655]))                          
+                        :documentation " Update policy based on observations, actions and advantages
+        Args:
+        observes: observations, shape = (N, obs_dim)
+        actions: actions, shape = (N, act_dim)
+        advantages: advantages, shape = (N,)
+        logger: Logger object, see utils.py
+        ")
+                        (reparse-symbol indented_block_body) [7604 10058])
+                    ("close_sess" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10086 10090]))                          
+                        :documentation " Close TensorFlow session ")
+                        (reparse-symbol indented_block_body) [10071 10159]))                  
+                :type "class")
+                nil [91 10159]))          
+      :file "mlp_policy.py"
+      :pointmax 10159
+      :fsize 10158
+      :lastmodtime '(23044 50069 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ppo.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+PPO: Proximal Policy Optimization
+Written by Patrick Coady (pat-coady.github.io)
+PPO uses a loss function and gradient descent to approximate
+Trust Region Policy Optimization (TRPO). See these papers for
+details:
+
+TRPO / PPO:
+https://arxiv.org/pdf/1502.05477.pdf (Schulman et al., 2016)
+
+Distributed PPO:
+https://arxiv.org/abs/1707.02286 (Heess et al., 2017)
+
+Generalized Advantage Estimation:
+https://arxiv.org/pdf/1506.02438.pdf
+
+And, also, this GitHub repo which was helpful to me during
+implementation:
+https://github.com/joschu/modular_rl
+
+\"\"\"" code nil nil [1 553])
+            ("gym" include nil nil [555 565])
+            ("baxter_example.simple_example" include nil nil [566 602])
+            ("gym" include nil nil [603 627])
+            ("baxter_example.simple_example.mlp_policy" include nil nil [628 690])
+            ("baxter_example.simple_example.mlp_value" include nil nil [691 751])
+            ("scipy.signal" include nil nil [752 771])
+            ("utils" include nil nil [772 804])
+            ("datetime" include nil nil [805 834])
+            ("os" include nil nil [835 844])
+            ("signal" include nil nil [845 858])
+            ("config" include nil nil [859 884])
+            ("rlfps.misc.logger" include nil nil [885 919])
+            ("numpy" include nil nil [920 938])
+            ("tensorflow" include nil nil [939 962])
+            ("logger" code nil nil [965 1036])
+            ("GracefulKiller" type
+               (:documentation " Gracefully exit program on CTRL-C "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1138 1159])
+                            ("signal" code nil (reparse-symbol indented_block_body) [1168 1218])
+                            ("signal" code nil (reparse-symbol indented_block_body) [1227 1278]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1123 1127]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1110 1279])
+                    ("exit_gracefully" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1304 1308])
+                            ("signum" variable nil (reparse-symbol function_parameters) [1310 1316])
+                            ("frame" variable nil (reparse-symbol function_parameters) [1318 1323]))                          )
+                        (reparse-symbol indented_block_body) [1284 1355]))                  
+                :type "class")
+                nil [1038 1355])
+            ("init_gym" function (:documentation "
+    Initialize gym environment, return dimension of observation
+    and action spaces.
+    Args:
+    env_name: str environment name (e.g. \"Humanoid-v1\")
+    Returns: 3-tuple
+    gym environment (object)
+    number of observation dimensions (int)
+    number of action dimensions (int)
+    ") nil [1357 1830])
+            ("run_episode" function
+               (:documentation " Run single episode with option to animate
+    Args:
+    env: ai gym environment
+    policy: policy object with sample() method
+    scaler: scaler object, used to scale/offset each observation dimension
+    to a similar range
+    animate: boolean, True uses env.render() method to animate episode
+    
+    Returns: 4-tuple of NumPy arrays
+    observes: shape = (episode len, obs_dim)
+    actions: shape = (episode len, act_dim)
+    rewards: shape = (episode len,)
+    unscaled_obs: useful for training scaler, shape = (episode len, obs_dim)
+    "
+                :arguments 
+                  ( ("env" variable nil (reparse-symbol function_parameters) [1848 1851])
+                    ("policy" variable nil (reparse-symbol function_parameters) [1853 1859])
+                    ("scaler" variable nil (reparse-symbol function_parameters) [1861 1867])
+                    ("animate" variable nil (reparse-symbol function_parameters) [1869 1876]))                  )
+                nil [1832 3346])
+            ("run_policy" function
+               (:documentation " Run policy and collect data for a minimum of min_steps and min_episodes
+    Args:
+             env: a gym environment
+             policy: policy object with sample() method
+             scaler: scaler object, used to scale/offset each observation dimension
+                 to a similar range
+             episodes: total episodes to run
+         Returns: list of trajectory dictionaries, list length = number of episodes
+             'observes' : NumPy array of states from episode
+             'actions' : NumPy array of actions from episode
+             'rewards' : NumPy array of (un-discounted) rewards from episode
+             'unscaled_obs' : NumPy array of (un-discounted) rewards from episode
+     "
+                :arguments 
+                  ( ("env" variable nil (reparse-symbol function_parameters) [3362 3365])
+                    ("policy" variable nil (reparse-symbol function_parameters) [3367 3373])
+                    ("scaler" variable nil (reparse-symbol function_parameters) [3375 3381])
+                    ("batch_size" variable nil (reparse-symbol function_parameters) [3383 3393]))                  )
+                nil [3347 5435])
+            ("discount" function
+               (:documentation " Calculate discounted forward sum of a sequence at each point "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [5449 5450])
+                    ("gamma" variable nil (reparse-symbol function_parameters) [5452 5457]))                  )
+                nil [5436 5602])
+            ("add_disc_sum_rew" function
+               (:documentation " Adds discounted sum of rewards to all time steps of all trajectories
+    Args:
+    trajectories: as returned by run_policy()
+    gamma: discount
+
+    Returns:
+    None (mutates trajectories dictionary to add 'disc_sum_rew')
+    "
+                :arguments 
+                  ( ("trajectories" variable nil (reparse-symbol function_parameters) [5625 5637])
+                    ("gamma" variable nil (reparse-symbol function_parameters) [5639 5644]))                  )
+                nil [5604 6193])
+            ("add_value" function
+               (:documentation " Adds estimated value to all time steps of all trajectories
+    Args:
+    trajectories: as returned by run_policy()
+    val_func: object with predict() method, takes observations
+    and returns predicted state value
+    Returns:
+    None (mutates trajectories dictionary to add 'values')
+    "
+                :arguments 
+                  ( ("trajectories" variable nil (reparse-symbol function_parameters) [6209 6221])
+                    ("val_func" variable nil (reparse-symbol function_parameters) [6223 6231]))                  )
+                nil [6195 6698])
+            ("add_gae" function
+               (:documentation " Add generalized advantage estimator.
+    https://arxiv.org/pdf/1506.02438.pdf
+    Args:
+    trajectories: as returned by run_policy(), must include 'values'
+    key from add_value().
+    gamma: reward discount
+    lam: lambda (see paper).
+    lam=0 : use TD residuals
+    lam=1 : A =  Sum Discounted Rewards - V_hat(s)
+
+    Returns:
+    None (mutates trajectories dictionary to add 'advantages')
+    "
+                :arguments 
+                  ( ("trajectories" variable nil (reparse-symbol function_parameters) [6712 6724])
+                    ("gamma" variable nil (reparse-symbol function_parameters) [6726 6731])
+                    ("lam" variable nil (reparse-symbol function_parameters) [6733 6736]))                  )
+                nil [6700 7588])
+            ("build_train_set" function
+               (:documentation "
+    Args:
+    trajectories: trajectories after processing by add_disc_sum_rew(),
+    add_value(), and add_gae()
+
+    Returns: 4-tuple of NumPy arrays
+    observes: shape = (N, obs_dim)
+    actions: shape = (N, act_dim)
+    advantages: shape = (N,)
+    disc_sum_rew: shape = (N,)
+    "
+                :arguments 
+                  ( ("trajectories" variable nil (reparse-symbol function_parameters) [7610 7622]))                  )
+                nil [7590 8372])
+            ("log_batch_stats" function
+               (:documentation " Log various batch statistics "
+                :arguments 
+                  ( ("observes" variable nil (reparse-symbol function_parameters) [8394 8402])
+                    ("actions" variable nil (reparse-symbol function_parameters) [8404 8411])
+                    ("advantages" variable nil (reparse-symbol function_parameters) [8413 8423])
+                    ("disc_sum_rew" variable nil (reparse-symbol function_parameters) [8425 8437])
+                    ("iteration" variable nil (reparse-symbol function_parameters) [8439 8448]))                  )
+                nil [8374 9546])
+            ("train" function
+               (:documentation " Main training loop
+    Args:
+    env_name: OpenAI Gym environment name, e.g. 'Hopper-v1'
+    num_episodes: maximum number of episodes to run
+    gamma: reward discount factor (float)
+    lam: lambda from Generalized Advantage Estimate
+    kl_targ: D_KL target for policy update [D_KL(pi_old || pi_new)
+    batch_size: number of episodes per policy training batch
+    "
+                :arguments 
+                  ( ("max_iterations" variable nil (reparse-symbol function_parameters) [9562 9576])
+                    ("gamma" variable nil (reparse-symbol function_parameters) [9578 9583])
+                    ("lam" variable nil (reparse-symbol function_parameters) [9585 9588])
+                    ("batch_size" variable nil (reparse-symbol function_parameters) [9590 9600]))                  )
+                nil [9552 11693])
+            ("policy" code nil nil [11647 11666])
+            ("if" code nil nil [11695 12019]))          
+      :file "ppo.py"
+      :pointmax 12023
+      :fsize 12022
+      :lastmodtime '(23044 43920 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "tensorforce_ppo.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("tensorforce" include nil nil [21 58])
+            ("tensorforce.agents" include nil nil [59 98])
+            ("tensorforce.core.networks" include nil nil [99 160])
+            ("tensorforce.execution" include nil nil [161 201])
+            ("tensorforce.contrib.openai_gym" include nil nil [202 254])
+            ("baxter_example.simple_example" include nil nil [256 292])
+            ("env" variable nil nil [328 359])
+            ("agent" variable nil nil [411 801])
+            ("runner" variable nil nil [823 868])
+            ("episode_finished" function (:arguments 
+              ( ("r" variable nil (reparse-symbol function_parameters) [940 941]))              ) nil [919 1182])
+            ("runner" code nil nil [1201 1280])
+            ("print" code nil nil [1301 1773]))          
+      :file "tensorforce_ppo.py"
+      :pointmax 1778
+      :fsize 1777
+      :lastmodtime '(23035 17914 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "mlp_value.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("tensorflow" include nil nil [20 43])
+            ("os" include nil nil [80 89])
+            ("sklearn.utils" include nil nil [90 123])
+            ("MlpValue" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [191 227])
+                            ("self" variable nil (reparse-symbol indented_block_body) [237 285])
+                            ("self" variable nil (reparse-symbol indented_block_body) [294 321])
+                            ("self" variable nil (reparse-symbol indented_block_body) [330 357])
+                            ("self" variable nil (reparse-symbol indented_block_body) [366 401])
+                            ("self" variable nil (reparse-symbol indented_block_body) [410 424])
+                            ("self" code nil (reparse-symbol indented_block_body) [471 490])
+                            ("self" variable nil (reparse-symbol indented_block_body) [499 535])
+                            ("self" code nil (reparse-symbol indented_block_body) [544 568])
+                            ("self" variable nil (reparse-symbol indented_block_body) [665 685]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [160 164])
+                            ("config" variable nil (reparse-symbol function_parameters) [166 172])
+                            ("logger" variable nil (reparse-symbol function_parameters) [174 180]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [147 686])
+                    ("_build_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [716 720]))                          )
+                        (reparse-symbol indented_block_body) [699 2707])
+                    ("fit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2720 2724])
+                            ("x" variable nil (reparse-symbol function_parameters) [2726 2727])
+                            ("y" variable nil (reparse-symbol function_parameters) [2729 2730])
+                            ("itr" variable nil (reparse-symbol function_parameters) [2732 2735]))                          
+                        :documentation " Fit model to current data batch + previous data batch
+        Args:
+        x: features
+        y: target
+        ")
+                        (reparse-symbol indented_block_body) [2712 4427])
+                    ("predict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4452 4456])
+                            ("x" variable nil (reparse-symbol function_parameters) [4458 4459]))                          
+                        :documentation " Predict method ")
+                        (reparse-symbol indented_block_body) [4440 4637])
+                    ("close_sess" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4657 4661]))                          
+                        :documentation " Close TensorFlow session ")
+                        (reparse-symbol indented_block_body) [4642 4730]))                  
+                :type "class")
+                nil [125 4730]))          
+      :file "mlp_value.py"
+      :pointmax 4730
+      :fsize 4729
+      :lastmodtime '(23044 39765 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Logging and Data Scaling Utilities
+
+Written by Patrick Coady (pat-coady.github.io)
+\"\"\"" code nil nil [1 91])
+            ("numpy" include nil nil [92 110])
+            ("os" include nil nil [111 120])
+            ("shutil" include nil nil [121 134])
+            ("glob" include nil nil [135 146])
+            ("csv" include nil nil [147 157])
+            ("Scaler" type
+               (:documentation " Generate scale and offset based on running mean and stddev along axis=0
+
+        offset = running mean
+        scale = 1 / (stddev + 0.1) / 3 (i.e. 3x stddev = +/- 1.0)
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Args:
+            obs_dim: dimension of axis=1
+        \"\"\"" code nil (reparse-symbol indented_block_body) [409 479])
+                            ("self" variable nil (reparse-symbol indented_block_body) [488 517])
+                            ("self" variable nil (reparse-symbol indented_block_body) [526 556])
+                            ("self" variable nil (reparse-symbol indented_block_body) [565 575])
+                            ("self" variable nil (reparse-symbol indented_block_body) [584 594])
+                            ("self" variable nil (reparse-symbol indented_block_body) [603 625]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [385 389])
+                            ("obs_dim" variable nil (reparse-symbol function_parameters) [391 398]))                          
+                        :documentation "
+        Args:
+            obs_dim: dimension of axis=1
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [372 626])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [642 646])
+                            ("x" variable nil (reparse-symbol function_parameters) [648 649]))                          
+                        :documentation " Update running mean and variance (this is an exact method)
+        Args:
+            x: NumPy array, shape = (N, obs_dim)
+
+        see: https://stats.stackexchange.com/questions/43159/how-to-calculate-pooled-
+               variance-of-two-groups-given-known-group-variances-mean
+        ")
+                        (reparse-symbol indented_block_body) [631 1764])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1777 1781]))                          
+                        :documentation " returns 2-tuple: (scale, offset) ")
+                        (reparse-symbol indented_block_body) [1769 1891]))                  
+                :type "class")
+                nil [160 1891])
+            ("Logger" type
+               (:documentation " Simple training logger: saves to file and optionally prints to stdout "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Args:
+            logname: name for log (e.g. 'Hopper-v1')
+            now: unique sub-directory name (e.g. date/time string)
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2043 2192])
+                            ("path" variable nil (reparse-symbol indented_block_body) [2201 2247])
+                            ("os" code nil (reparse-symbol indented_block_body) [2256 2273])
+                            ("filenames" variable nil (reparse-symbol indented_block_body) [2282 2311])
+                            ("for" code nil (reparse-symbol indented_block_body) [2363 2450])
+                            ("path" variable nil (reparse-symbol indented_block_body) [2458 2494])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2504 2528])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2537 2556])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2565 2589])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2598 2616]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2014 2018])
+                            ("logname" variable nil (reparse-symbol function_parameters) [2020 2027])
+                            ("now" variable nil (reparse-symbol function_parameters) [2029 2032]))                          
+                        :documentation "
+        Args:
+            logname: name for log (e.g. 'Hopper-v1')
+            now: unique sub-directory name (e.g. date/time string)
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2001 2673])
+                    ("write" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2688 2692])
+                            ("display" variable nil (reparse-symbol function_parameters) [2694 2701]))                          
+                        :documentation " Write 1 log entry to file, and optionally to stdout
+        Log fields preceded by '_' will not be printed to stdout
+
+        Args:
+            display: boolean, print to stdout
+        ")
+                        (reparse-symbol indented_block_body) [2678 3280])
+                    ("disp" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("log" variable nil (reparse-symbol function_parameters) [3312 3315]))                          
+                        :documentation "Print metrics to stdout")
+                        (reparse-symbol indented_block_body) [3285 3770])
+                    ("log" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3783 3787])
+                            ("items" variable nil (reparse-symbol function_parameters) [3789 3794]))                          
+                        :documentation " Update fields in log (does not write to file, used to collect updates.
+
+        Args:
+            items: dictionary of items to update
+        ")
+                        (reparse-symbol indented_block_body) [3775 3993])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4008 4012]))                          
+                        :documentation " Close log file - log cannot be written after this ")
+                        (reparse-symbol indented_block_body) [3998 4104]))                  
+                :type "class")
+                nil [1893 4104]))          
+      :file "utils.py"
+      :pointmax 4104
+      :fsize 4103
+      :lastmodtime '(22999 65173 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "pick_n_place_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("gym" include nil nil [20 30])
+            ("gym" include nil nil [31 53])
+            ("gym.utils" include nil nil [54 83])
+            ("numpy" include nil nil [84 102])
+            ("os" include nil nil [103 122])
+            ("config" include nil nil [123 148])
+            ("PickNPlaceEnv" type
+               (:superclasses ("gym.Env")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [214 268])
+                            ("self" variable nil (reparse-symbol indented_block_body) [277 331])
+                            ("self" variable nil (reparse-symbol indented_block_body) [341 397])
+                            ("self" variable nil (reparse-symbol indented_block_body) [406 462])
+                            ("self" variable nil (reparse-symbol indented_block_body) [472 546])
+                            ("self" variable nil (reparse-symbol indented_block_body) [556 627])
+                            ("self" code nil (reparse-symbol indented_block_body) [636 648])
+                            ("self" variable nil (reparse-symbol indented_block_body) [658 693])
+                            ("self" variable nil (reparse-symbol indented_block_body) [739 780])
+                            ("if" code nil (reparse-symbol indented_block_body) [874 1112])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1121 1145])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1154 1179])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1188 1214])
+                            ("self" code nil (reparse-symbol indented_block_body) [1263 1276]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [198 202]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [185 1277])
+                    ("_seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1300 1304])
+                            ("seed" variable nil (reparse-symbol function_parameters) [1306 1310]))                          )
+                        (reparse-symbol indented_block_body) [1290 1394])
+                    ("_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1409 1413])
+                            ("u" variable nil (reparse-symbol function_parameters) [1415 1416]))                          )
+                        (reparse-symbol indented_block_body) [1399 2903])
+                    ("_reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2944 2948]))                          )
+                        (reparse-symbol indented_block_body) [2933 4357]))                  
+                :type "class")
+                nil [150 4357])
+            ("if" code nil nil [4368 4557]))          
+      :file "pick_n_place_env.py"
+      :pointmax 4642
+      :fsize 4641
+      :lastmodtime '(23044 42121 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "deploy_model.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("tensorflow" include nil nil [20 43])
+            ("os" include nil nil [44 53])
+            ("mlp_policy" include nil nil [54 86])
+            ("pick_n_place_env" include nil nil [87 129])
+            ("DeployModel" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [231 275])
+                            ("if" code nil (reparse-symbol indented_block_body) [284 694])
+                            ("self" variable nil (reparse-symbol indented_block_body) [715 769])
+                            ("self" variable nil (reparse-symbol indented_block_body) [778 832])
+                            ("self" variable nil (reparse-symbol indented_block_body) [842 898])
+                            ("self" variable nil (reparse-symbol indented_block_body) [907 963])
+                            ("self" variable nil (reparse-symbol indented_block_body) [973 1008])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1017 1051]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [170 174])
+                            ("config" variable nil (reparse-symbol function_parameters) [176 182])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [184 193]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [157 1052])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1072 1076])
+                            ("obs" variable nil (reparse-symbol function_parameters) [1078 1081]))                          )
+                        (reparse-symbol indented_block_body) [1057 1296]))                  
+                :type "class")
+                nil [131 1296])
+            ("if" code nil nil [1337 1530]))          
+      :file "deploy_model.py"
+      :pointmax 8286
+      :fsize 8285
+      :lastmodtime '(23044 43937 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("'''
+    s = [(x,y)_hand, (x,y)_red_box]
+    astate takes 0,1,2,3
+    formula_idx = 1: phi_1 = (hand_in_red_button -> F red_box_in_red_plate) ^  (!(hand_in_red_button v hand_in_black_plate) -> F red_box_in_black_plate)
+    formula_idx = 2: phi_2 = (hand_in_blue_button -> F blue_box_in_blue_plate) ^  (!(hand_in_blue_button v hand_in_black_plate) -> F blue_box_in_black_plate)
+    formula_idx = 3: phi_3 = hand_in_black_plate -> F( red_box_in_blue_plate)
+
+    formula_idx = 4: phi_4 = hand_in_black_plate -> F( blue_box_in_red_plate)
+
+    formula_idx = 5: phi_5 = phi_1 ^ phi_2
+
+    formula_idx = 6: phi_6 = phi_1 ^ phi_2 ^ phi_3
+
+    formula_idx = 7: phi_7 = phi_1 ^ phi_2  ^ phi_3 ^ phi_4
+    
+    returns: next_astate, reward, done, robustness of disjunction of outgoing predicates at (s,astate) (D^astate_phi)
+ '''" code nil nil [21 838])
+            ("config_bak" include nil nil [900 937])
+            ("Q" variable nil nil [939 986])
+            ("s" variable nil nil [987 1010])
+            ("q" variable nil nil [1011 1016])
+            ("formula_idx" variable nil nil [1017 1032])
+            ("qn1, r1, done1, Q1, Dq1" code nil nil [1035 1106])
+            ("print" code nil nil [1108 1136])
+            ("rlfps.rewards.TL.automata_guided_reward.fsa_reward" include nil nil [1180 1252])
+            ("config_bak" include nil nil [1253 1290])
+            ("external_libs.lomap.classes" include nil nil [1291 1334])
+            ("rlfps.automata_utils.plot_dynamic_graph" include nil nil [1335 1406])
+            ("h" variable nil nil [1408 1479])
+            ("b" variable nil nil [1480 1549])
+            ("hbl" variable nil nil [1550 1624])
+            ("reward_dict" variable nil nil [1626 2025])
+            ("spec" variable nil nil [2027 2072])
+            ("aut" variable nil nil [2073 2084])
+            ("aut" code nil nil [2085 2107])
+            ("aut" code nil nil [2108 2128])
+            ("aut" code nil nil [2129 2156])
+            ("aut_plot" variable nil nil [2158 2193])
+            ("fsa_reward" variable nil nil [2195 2235])
+            ("a" variable nil nil [2237 2242])
+            ("sp" variable nil nil [2243 2249])
+            ("qn2, r2, edge, done2, Dq2" code nil nil [2251 2331])
+            ("print" code nil nil [2333 2360])
+            ("print" code nil nil [2361 2389])
+            ("aut_plot" code nil nil [2533 2559])
+            ("input_list" variable nil nil [3100 3118]))          
+      :file "test.py"
+      :pointmax 3170
+      :fsize 3169
+      :lastmodtime '(23042 17785 0 0)
+      :unmatched-syntax '((NAME 3119 . 3129) ($EOI 3170 . 3170)))
+    (semanticdb-table "config_bak.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("baxter_example.simple_example.baxter_tl.scripts.config" include nil nil [30 120])
+            ("baxter_example.simple_example.baxter_tl.scripts.config" include nil nil [121 200])
+            ("EXPERIMENT_NAME" variable nil nil [272 296])
+            ("formula_idx" variable nil nil [323 338])
+            ("num_automata_states" variable nil nil [339 362])
+            ("file_path" variable nil nil [364 402])
+            ("file_dir" variable nil nil [403 425])
+            ("experiment_dir" variable nil nil [426 497])
+            ("table_origin" variable nil nil [570 601])
+            ("table_width" variable nil nil [655 673])
+            ("table_length" variable nil nil [674 693])
+            ("table_thickness" variable nil nil [694 713])
+            ("table_planar_ub" variable nil nil [715 796])
+            ("table_planar_lb" variable nil nil [797 878])
+            ("red_button_xy" variable nil nil [975 1047])
+            ("red_button_r" code nil nil [1048 1121])
+            ("blue_button_xy" variable nil nil [1123 1197])
+            ("blue_button_r" code nil nil [1198 1273])
+            ("red_plate_xy" variable nil nil [1275 1345])
+            ("red_plate_width" variable nil nil [1346 1419])
+            ("red_plate_length" variable nil nil [1430 1504])
+            ("blue_plate_xy" variable nil nil [1516 1588])
+            ("blue_plate_width" variable nil nil [1589 1664])
+            ("blue_plate_length" variable nil nil [1675 1751])
+            ("black_plate_xy" variable nil nil [1763 1837])
+            ("black_plate_width" variable nil nil [1838 1915])
+            ("black_plate_length" variable nil nil [1926 2004])
+            ("hand_in_red" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2032 2033]))              ) nil [2016 2183])
+            ("hand_in_blue" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2201 2202]))              ) nil [2184 2355])
+            ("hand_in_black" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2374 2375]))              ) nil [2356 2743])
+            ("automata_states1" variable nil nil [2808 2845])
+            ("TL1_get_reward" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2866 2867])
+                ("astate" variable nil (reparse-symbol function_parameters) [2869 2875]))              ) nil [2847 4105])
+            ("TL1_robustness_func" function (:arguments 
+              ( ("traj" variable nil (reparse-symbol function_parameters) [4130 4134]))              ) nil [4106 4952])
+            ("get_robustness" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [4979 4980])
+                ("s_type" variable nil (reparse-symbol function_parameters) [4981 4987])
+                ("instruction" variable nil (reparse-symbol function_parameters) [4988 4999]))              ) nil [4960 9261])
+            ("automata_states2" variable nil nil [9282 9323])
+            ("TL2_get_reward" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [9344 9345])
+                ("astate" variable nil (reparse-symbol function_parameters) [9347 9353])
+                ("formula_idx" variable nil (reparse-symbol function_parameters) [9355 9366]))              ) nil [9325 15327])
+            ("TL2_robustness_func" function (:arguments 
+              ( ("traj" variable nil (reparse-symbol function_parameters) [15381 15385])
+                ("formula_idx" variable nil (reparse-symbol function_parameters) [15387 15398]))              ) nil [15357 18772])
+            ("heuristic_reward2" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [18803 18804])
+                ("hr" variable nil (reparse-symbol function_parameters) [18806 18808])
+                ("hb" variable nil (reparse-symbol function_parameters) [18810 18812])
+                ("hbl" variable nil (reparse-symbol function_parameters) [18814 18817])
+                ("formula_idx" variable nil (reparse-symbol function_parameters) [18819 18830]))              ) nil [18781 21275]))          
+      :file "config_bak.py"
+      :pointmax 24381
+      :fsize 24380
+      :lastmodtime '(23036 60399 0 0)
+      :unmatched-syntax '((NAME 21387 . 21393) ($EOI 24381 . 24381)))
+    (semanticdb-table "get_rewards.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("rlfps.rewards.TL.automata_guided_reward.fsa_reward" include nil nil [30 102])
+            ("external_libs.lomap.classes" include nil nil [103 146])
+            ("rlfps.automata_utils.plot_dynamic_graph" include nil nil [147 218])
+            ("table_origin" variable nil nil [447 478])
+            ("table_width" variable nil nil [532 550])
+            ("table_length" variable nil nil [551 570])
+            ("table_thickness" variable nil nil [571 590])
+            ("table_planar_ub" variable nil nil [592 673])
+            ("table_planar_lb" variable nil nil [674 755])
+            ("print" code nil nil [757 798])
+            ("red_button_xy" variable nil nil [894 966])
+            ("red_button_r" code nil nil [967 1040])
+            ("blue_button_xy" variable nil nil [1042 1116])
+            ("blue_button_r" code nil nil [1117 1192])
+            ("shrink" variable nil nil [1195 1208])
+            ("red_plate_xy" variable nil nil [1210 1280])
+            ("red_plate_width" code nil nil [1281 1363])
+            ("red_plate_length" code nil nil [1374 1457])
+            ("blue_plate_xy" variable nil nil [1469 1541])
+            ("blue_plate_width" code nil nil [1542 1626])
+            ("blue_plate_length" code nil nil [1637 1722])
+            ("black_plate_xy" variable nil nil [1734 1808])
+            ("black_plate_width" code nil nil [1809 1895])
+            ("black_plate_length" code nil nil [1906 1992])
+            ("hand_in_red" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2020 2021]))              ) nil [2004 2171])
+            ("hand_in_blue" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2189 2190]))              ) nil [2172 2343])
+            ("hand_in_black" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2362 2363]))              ) nil [2344 2731])
+            ("get_robustness" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2787 2788])
+                ("s_type" variable nil (reparse-symbol function_parameters) [2789 2795])
+                ("instruction" variable nil (reparse-symbol function_parameters) [2796 2807]))              ) nil [2768 7069])
+            ("TL2_robustness_func" function (:arguments 
+              ( ("traj" variable nil (reparse-symbol function_parameters) [7122 7126])
+                ("formula_idx" variable nil (reparse-symbol function_parameters) [7128 7139]))              ) nil [7098 10501])
+            ("heuristic_reward2" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [10532 10533])
+                ("hr" variable nil (reparse-symbol function_parameters) [10535 10537])
+                ("hb" variable nil (reparse-symbol function_parameters) [10539 10541])
+                ("hbl" variable nil (reparse-symbol function_parameters) [10543 10546])
+                ("formula_idx" variable nil (reparse-symbol function_parameters) [10548 10559]))              ) nil [10510 12992])
+            ("reward_dict" variable nil nil [13000 13886])
+            ("'''
+s = [(x,y)_hand, (x,y)_red_box]
+astate takes 0,1,2,3
+
+formula_idx = 1: phi_1 = (hand_in_red_button -> F red_box_in_red_plate) ^  (!hand_in_red_button -> F red_box_in_black_plate)
+
+formula_idx = 2: phi_1 = (hand_in_red_button -> F red_box_in_red_plate) ^  (!(hand_in_red_button v hand_in_black_plate) -> F red_box_in_black_plate)
+
+formula_idx = 3: phi_2 = (hand_in_blue_button -> F blue_box_in_blue_plate) ^  (!(hand_in_blue_button v hand_in_black_plate) -> F blue_box_in_black_plate)
+
+formula_idx = 4: phi_3 = hand_in_black_plate -> F( red_box_in_blue_plate)
+
+formula_idx = 5: phi_4 = hand_in_black_plate -> F( blue_box_in_red_plate)
+
+formula_idx = 6: phi_5 = phi_2 ^ phi_3
+
+formula_idx = 7: phi_7 = phi_2 ^ phi_3  ^ phi_4 ^ phi_5
+    
+'''" code nil nil [13889 14632])
+            ("spec1" variable nil nil [14634 14676])
+            ("spec2" variable nil nil [14677 14728])
+            ("spec3" variable nil nil [14729 14780])
+            ("spec4" variable nil nil [14781 14805])
+            ("spec5" variable nil nil [14806 14830])
+            ("spec6" code nil nil [14831 14861])
+            ("spec7" code nil nil [14862 14926])
+            ("specs" variable nil nil [14928 14979])
+            ("get_reward_and_spaces" function (:arguments 
+              ( ("formula_idx" variable nil (reparse-symbol function_parameters) [15009 15020])
+                ("reward_type" variable nil (reparse-symbol function_parameters) [15022 15033]))              ) nil [14983 17329]))          
+      :file "get_rewards.py"
+      :pointmax 17329
+      :fsize 17328
+      :lastmodtime '(23045 3975 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "baxter_config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("'''
+Baxter Frame
+^ z         (Window)
+|   ^ y
+|  /
+| /
+|/
+---------->x
+'''" code nil nil [22 96])
+            ("baxter_frame" variable nil nil [98 169])
+            ("'''
+Motive Frame
+^ y         (Window)
+|   ^ x
+|  /
+| /
+|/
+---------->z
+'''" code nil nil [172 246])
+            ("motive_frame" variable nil nil [249 320])
+            ("mocap_frame" variable nil nil [322 395])
+            ("p_in_baxter_frame" variable nil nil [397 438])
+            ("p_in_motive_frame" variable nil nil [439 482])
+            ("p_in_mocap_frame" variable nil nil [483 524])
+            ("rot_motive2baxter" variable nil nil [592 679])
+            ("T_motive2baxter" variable nil nil [681 708])
+            ("T_motive2baxter" variable nil nil [709 751])
+            ("T_motive2baxter" code nil nil [752 884])
+            ("T_blue_box" variable nil nil [1035 1362])
+            ("T_red_box" variable nil nil [1364 1749])
+            ("table_center" variable nil nil [1823 1875])
+            ("table_dim" variable nil nil [1876 1906])
+            ("red_plate_dim" variable nil nil [1936 1967])
+            ("red_plate_center" variable nil nil [1968 2005])
+            ("red_plate_center" variable nil nil [2006 2065])
+            ("red_plate_center" variable nil nil [2066 2093])
+            ("green_plate_dim" variable nil nil [2095 2130])
+            ("green_plate_center" variable nil nil [2131 2170])
+            ("green_plate_center" variable nil nil [2171 2234])
+            ("green_plate_center" variable nil nil [2235 2264])
+            ("green_plate_center" variable nil nil [2265 2294])
+            ("blue_plate_dim" variable nil nil [2296 2328])
+            ("blue_plate_center" variable nil nil [2329 2367])
+            ("blue_plate_center" variable nil nil [2368 2429])
+            ("blue_plate_center" variable nil nil [2430 2457])
+            ("blue_plate_center" variable nil nil [2458 2486])
+            ("red_sphere_dim" variable nil nil [2488 2522])
+            ("red_sphere_center" variable nil nil [2523 2561])
+            ("red_sphere_center" variable nil nil [2562 2622])
+            ("red_sphere_center" variable nil nil [2623 2665])
+            ("green_sphere_dim" variable nil nil [2667 2703])
+            ("green_sphere_center" variable nil nil [2704 2744])
+            ("green_sphere_center" variable nil nil [2745 2809])
+            ("green_sphere_center" variable nil nil [2810 2856])
+            ("green_sphere_center" variable nil nil [2857 2903])
+            ("blue_sphere_dim" variable nil nil [2905 2940])
+            ("blue_sphere_center" variable nil nil [2941 2980])
+            ("blue_sphere_center" variable nil nil [2981 3043])
+            ("blue_sphere_center" variable nil nil [3044 3088])
+            ("blue_sphere_center" variable nil nil [3089 3133])
+            ("CONFIG" variable nil nil [3208 6159]))          
+      :file "baxter_config.py"
+      :pointmax 6542
+      :fsize 6541
+      :lastmodtime '(23045 3960 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!publications!ICLR-2018!src!baxter_example!simple_example!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

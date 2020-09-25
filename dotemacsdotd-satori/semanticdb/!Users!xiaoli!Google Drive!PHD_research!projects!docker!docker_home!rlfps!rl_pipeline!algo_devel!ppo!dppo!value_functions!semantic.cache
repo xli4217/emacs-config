@@ -1,0 +1,92 @@
+;; Object value_functions/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "value_functions/"
+  :tables
+  (list
+    (semanticdb-table "mlp_value.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("tensorflow" include nil nil [20 43])
+            ("os" include nil nil [44 53])
+            ("sklearn.utils" include nil nil [54 87])
+            ("birdseye" include nil nil [88 112])
+            ("MlpValue" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [192 212])
+                            ("self" variable nil (reparse-symbol indented_block_body) [222 254])
+                            ("self" variable nil (reparse-symbol indented_block_body) [263 290])
+                            ("self" variable nil (reparse-symbol indented_block_body) [299 326])
+                            ("self" variable nil (reparse-symbol indented_block_body) [335 370])
+                            ("self" variable nil (reparse-symbol indented_block_body) [379 420])
+                            ("self" variable nil (reparse-symbol indented_block_body) [429 443])
+                            ("self" variable nil (reparse-symbol indented_block_body) [490 539])
+                            ("self" variable nil (reparse-symbol indented_block_body) [548 564])
+                            ("self" code nil (reparse-symbol indented_block_body) [575 594])
+                            ("self" variable nil (reparse-symbol indented_block_body) [603 634])
+                            ("self" variable nil (reparse-symbol indented_block_body) [736 756]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [150 154])
+                            ("config" variable nil (reparse-symbol function_parameters) [156 162])
+                            ("sess" variable nil (reparse-symbol function_parameters) [164 168])
+                            ("logger" variable nil (reparse-symbol function_parameters) [170 176]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [137 757])
+                    ("_build_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [792 796]))                          )
+                        (reparse-symbol indented_block_body) [775 3001])
+                    ("save" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3015 3019])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [3021 3030])
+                            ("model_name" variable nil (reparse-symbol function_parameters) [3032 3042]))                          )
+                        (reparse-symbol indented_block_body) [3006 3125])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3142 3146])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [3148 3157]))                          )
+                        (reparse-symbol indented_block_body) [3130 3237])
+                    ("fit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3251 3255])
+                            ("x" variable nil (reparse-symbol function_parameters) [3257 3258])
+                            ("y" variable nil (reparse-symbol function_parameters) [3260 3261])
+                            ("itr" variable nil (reparse-symbol function_parameters) [3263 3266]))                          
+                        :documentation " Fit model to current data batch + previous data batch
+
+        Args:
+            x: features
+            y: target
+        ")
+                        (reparse-symbol indented_block_body) [3243 4859])
+                    ("predict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4884 4888])
+                            ("x" variable nil (reparse-symbol function_parameters) [4890 4891]))                          
+                        :documentation " Predict method ")
+                        (reparse-symbol indented_block_body) [4872 5069])
+                    ("close_sess" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5089 5093]))                          
+                        :documentation " Close TensorFlow session ")
+                        (reparse-symbol indented_block_body) [5074 5162]))                  
+                :type "class")
+                nil [115 5162]))          
+      :file "mlp_value.py"
+      :pointmax 5162
+      :fsize 5161
+      :lastmodtime '(23180 35857 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!algo_devel!ppo!dppo!value_functions!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

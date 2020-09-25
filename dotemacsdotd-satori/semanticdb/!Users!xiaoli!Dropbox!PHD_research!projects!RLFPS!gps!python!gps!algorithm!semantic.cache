@@ -1,0 +1,541 @@
+;; Object algorithm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "algorithm/"
+  :tables
+  (list
+    (semanticdb-table "algorithm_mdgps.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the MD-based GPS algorithm. \"\"\"" code nil nil [1 54])
+            ("copy" include nil nil [55 66])
+            ("logging" include nil nil [67 81])
+            ("numpy" include nil nil [83 101])
+            ("scipy" include nil nil [102 120])
+            ("gps.algorithm.algorithm" include nil nil [122 167])
+            ("gps.algorithm.algorithm_utils" include nil nil [168 220])
+            ("gps.algorithm.config" include nil nil [221 263])
+            ("gps.sample.sample_list" include nil nil [264 309])
+            ("LOGGER" variable nil nil [311 347])
+            ("AlgorithmMDGPS" type
+               (:documentation "
+    Sample-based joint policy learning and trajectory optimization with
+    (approximate) mirror descent guided policy search algorithm.
+    "
+                :superclasses ("Algorithm")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("config" variable nil (reparse-symbol indented_block_body) [581 614])
+                            ("config" code nil (reparse-symbol indented_block_body) [623 649])
+                            ("Algorithm" code nil (reparse-symbol indented_block_body) [658 690])
+                            ("policy_prior" variable nil (reparse-symbol indented_block_body) [700 748])
+                            ("for" code nil (reparse-symbol indented_block_body) [757 951])
+                            ("self" variable nil (reparse-symbol indented_block_body) [960 1090]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [553 557])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [559 570]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [540 1091])
+                    ("iteration" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1110 1114])
+                            ("sample_lists" variable nil (reparse-symbol function_parameters) [1116 1128]))                          
+                        :documentation "
+        Run iteration of MDGPS-based guided policy search.
+
+        Args:
+            sample_lists: List of SampleList objects for each condition.
+        ")
+                        (reparse-symbol indented_block_body) [1096 2179])
+                    ("_update_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2203 2207]))                          
+                        :documentation " Compute the new policy. ")
+                        (reparse-symbol indented_block_body) [2184 3534])
+                    ("_update_policy_fit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3562 3566])
+                            ("m" variable nil (reparse-symbol function_parameters) [3568 3569]))                          
+                        :documentation "
+        Re-estimate the local policy values in the neighborhood of the
+        trajectory.
+        Args:
+            m: Condition
+            init: Whether this is the initial fitting of the policy.
+        ")
+                        (reparse-symbol indented_block_body) [3539 4709])
+                    ("_advance_iteration_variables" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4747 4751]))                          
+                        :documentation "
+        Move all 'cur' variables to 'prev', reinitialize 'cur'
+        variables, and advance iteration counter.
+        ")
+                        (reparse-symbol indented_block_body) [4714 5155])
+                    ("_stepadjust" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5176 5180]))                          
+                        :documentation "
+        Calculate new step sizes. This version uses the same step size
+        for all conditions.
+        ")
+                        (reparse-symbol indented_block_body) [5160 7907])
+                    ("compute_costs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7930 7934])
+                            ("m" variable nil (reparse-symbol function_parameters) [7936 7937])
+                            ("eta" variable nil (reparse-symbol function_parameters) [7939 7942]))                          
+                        :documentation " Compute cost estimates used in the LQR backward pass. ")
+                        (reparse-symbol indented_block_body) [7912 9263]))                  
+                :type "class")
+                nil [350 9263]))          
+      :file "algorithm_mdgps.py"
+      :pointmax 9263
+      :fsize 9262
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "algorithm.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the base algorithm class. \"\"\"" code nil nil [1 52])
+            ("abc" include nil nil [54 64])
+            ("copy" include nil nil [65 76])
+            ("logging" include nil nil [77 91])
+            ("random" include nil nil [93 106])
+            ("numpy" include nil nil [107 125])
+            ("gps.algorithm.config" include nil nil [127 163])
+            ("gps.algorithm.algorithm_utils" include nil nil [164 235])
+            ("gps.utility.general_utils" include nil nil [236 291])
+            ("LOGGER" variable nil nil [294 330])
+            ("Algorithm" type
+               (:documentation " Algorithm superclass. "
+                :superclasses ("object")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [396 423])
+                    ("__init__" function
+                       (:suite 
+                          ( ("config" variable nil (reparse-symbol indented_block_body) [470 497])
+                            ("config" code nil (reparse-symbol indented_block_body) [506 532])
+                            ("self" variable nil (reparse-symbol indented_block_body) [541 567])
+                            ("if" code nil (reparse-symbol indented_block_body) [577 954])
+                            ("self" variable nil (reparse-symbol indented_block_body) [962 986])
+                            ("agent" variable nil (reparse-symbol indented_block_body) [1040 1074])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1083 1124])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1133 1177])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1186 1230])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1239 1283])
+                            ("init_traj_distr" variable nil (reparse-symbol indented_block_body) [1293 1336])
+                            ("init_traj_distr" variable nil (reparse-symbol indented_block_body) [1345 1377])
+                            ("init_traj_distr" variable nil (reparse-symbol indented_block_body) [1386 1418])
+                            ("init_traj_distr" variable nil (reparse-symbol indented_block_body) [1427 1459])
+                            ("del" code nil (reparse-symbol indented_block_body) [1468 1498])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1590 1641])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1650 1702])
+                            ("if" code nil (reparse-symbol indented_block_body) [1712 1803])
+                            ("for" code nil (reparse-symbol indented_block_body) [1812 2228])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2237 2331])
+                            ("if" code nil (reparse-symbol indented_block_body) [2340 2686])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2694 2742]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [442 446])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [448 459]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [429 2743])
+                    ("iteration" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2786 2790])
+                            ("sample_list" variable nil (reparse-symbol function_parameters) [2792 2803]))                          
+                        :documentation " Run iteration of the algorithm. ")
+                        (reparse-symbol indented_block_body) [2748 2923])
+                    ("_update_dynamics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2949 2953]))                          
+                        :documentation "
+        Instantiate dynamics objects and update prior. Fit dynamics to
+        current samples.
+        ")
+                        (reparse-symbol indented_block_body) [2928 3386]))                  
+                :type "class")
+                nil [333 3386])
+            ("x0" variable nil nil [3431 3446]))          
+      :file "algorithm.py"
+      :pointmax 8874
+      :fsize 8873
+      :lastmodtime '(22699 46236 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "algorithm_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines utility classes and functions for algorithms. \"\"\"" code nil nil [1 72])
+            ("numpy" include nil nil [73 91])
+            ("gps.utility.general_utils" include nil nil [93 141])
+            ("gps.algorithm.policy.lin_gauss_policy" include nil nil [142 212])
+            ("IterationData" type
+               (:documentation " Collection of iteration variables. "
+                :superclasses ("BundleType")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("variables" variable nil (reparse-symbol indented_block_body) [327 906])
+                            ("BundleType" code nil (reparse-symbol indented_block_body) [915 951]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [312 316]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [299 952]))                  
+                :type "class")
+                nil [215 952])
+            ("TrajectoryInfo" type
+               (:documentation " Collection of trajectory-related variables. "
+                :superclasses ("BundleType")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("variables" variable nil (reparse-symbol indented_block_body) [1076 1577])
+                            ("BundleType" code nil (reparse-symbol indented_block_body) [1586 1622]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1061 1065]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1048 1623]))                  
+                :type "class")
+                nil [954 1623])
+            ("PolicyInfo" type
+               (:documentation " Collection of policy-related variables. "
+                :superclasses ("BundleType")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("T, dU, dX" code nil (reparse-symbol indented_block_body) [1752 1818])
+                            ("variables" variable nil (reparse-symbol indented_block_body) [1827 2773])
+                            ("BundleType" code nil (reparse-symbol indented_block_body) [2782 2818]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1724 1728])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [1730 1741]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1711 2819])
+                    ("traj_distr" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2839 2843]))                          
+                        :documentation " Create a trajectory distribution object from policy info. ")
+                        (reparse-symbol indented_block_body) [2824 3375]))                  
+                :type "class")
+                nil [1625 3375])
+            ("estimate_moments" function
+               (:documentation " Estimate the moments for a given linearized policy. "
+                :arguments 
+                  ( ("X" variable nil (reparse-symbol function_parameters) [3398 3399])
+                    ("mu" variable nil (reparse-symbol function_parameters) [3401 3403])
+                    ("covar" variable nil (reparse-symbol function_parameters) [3405 3410]))                  )
+                nil [3377 3998])
+            ("gauss_fit_joint_prior" function
+               (:documentation " Perform Gaussian fit to data with a prior. "
+                :arguments 
+                  ( ("pts" variable nil (reparse-symbol function_parameters) [4026 4029])
+                    ("mu0" variable nil (reparse-symbol function_parameters) [4031 4034])
+                    ("Phi" variable nil (reparse-symbol function_parameters) [4036 4039])
+                    ("m" variable nil (reparse-symbol function_parameters) [4041 4042])
+                    ("n0" variable nil (reparse-symbol function_parameters) [4044 4046])
+                    ("dwts" variable nil (reparse-symbol function_parameters) [4048 4052])
+                    ("dX" variable nil (reparse-symbol function_parameters) [4054 4056])
+                    ("dU" variable nil (reparse-symbol function_parameters) [4058 4060])
+                    ("sig_reg" variable nil (reparse-symbol function_parameters) [4062 4069]))                  )
+                nil [4000 4918]))          
+      :file "algorithm_utils.py"
+      :pointmax 4918
+      :fsize 4917
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" Default configuration and hyperparameter values for algorithms. \"\"\"" code nil nil [1 72])
+            ("ALG" variable nil nil [86 1004])
+            ("ALG_BADMM" variable nil nil [1024 1385])
+            ("ALG_MDGPS" variable nil nil [1401 1613])
+            ("ALG_PI2" variable nil nil [1637 1725]))          
+      :file "config.py"
+      :pointmax 1902
+      :fsize 1901
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax '((NAME 1744 . 1753) ($EOI 1902 . 1902)))
+    (semanticdb-table "algorithm_traj_opt.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the iLQG-based trajectory optimization method. \"\"\"" code nil nil [1 73])
+            ("logging" include nil nil [74 88])
+            ("numpy" include nil nil [90 108])
+            ("gps.algorithm.algorithm" include nil nil [110 155])
+            ("LOGGER" variable nil nil [158 194])
+            ("AlgorithmTrajOpt" type
+               (:documentation " Sample-based trajectory optimization. "
+                :superclasses ("Algorithm")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Algorithm" code nil (reparse-symbol indented_block_body) [327 364]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [299 303])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [305 316]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [286 365])
+                    ("iteration" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [384 388])
+                            ("sample_lists" variable nil (reparse-symbol function_parameters) [390 402]))                          
+                        :documentation "
+        Run iteration of LQR.
+        Args:
+            sample_lists: List of SampleList objects for each condition.
+        ")
+                        (reparse-symbol indented_block_body) [370 978])
+                    ("_update_step_size" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1005 1009]))                          
+                        :documentation " Evaluate costs on samples, and adjust the step size. ")
+                        (reparse-symbol indented_block_body) [983 1412])
+                    ("_stepadjust" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1433 1437])
+                            ("m" variable nil (reparse-symbol function_parameters) [1439 1440]))                          
+                        :documentation "
+        Calculate new step sizes.
+        Args:
+            m: Condition
+        ")
+                        (reparse-symbol indented_block_body) [1417 3727])
+                    ("compute_costs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3750 3754])
+                            ("m" variable nil (reparse-symbol function_parameters) [3756 3757])
+                            ("eta" variable nil (reparse-symbol function_parameters) [3759 3762]))                          
+                        :documentation " Compute cost estimates used in the LQR backward pass. ")
+                        (reparse-symbol indented_block_body) [3732 4792]))                  
+                :type "class")
+                nil [197 4792]))          
+      :file "algorithm_traj_opt.py"
+      :pointmax 4792
+      :fsize 4791
+      :lastmodtime '(22697 58337 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "algorithm_traj_opt_pi2.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the PI2-based trajectory optimization method. \"\"\"" code nil nil [1 72])
+            ("copy" include nil nil [73 84])
+            ("numpy" include nil nil [85 103])
+            ("gps.algorithm.algorithm" include nil nil [105 150])
+            ("gps.algorithm.config" include nil nil [151 191])
+            ("AlgorithmTrajOptPi2" type
+               (:documentation " Sample-based trajectory optimization with PI2. "
+                :superclasses ("Algorithm")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("config" variable nil (reparse-symbol indented_block_body) [336 367])
+                            ("config" code nil (reparse-symbol indented_block_body) [376 402])
+                            ("Algorithm" code nil (reparse-symbol indented_block_body) [411 443]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [308 312])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [314 325]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [295 444])
+                    ("iteration" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [464 468])
+                            ("sample_lists" variable nil (reparse-symbol function_parameters) [470 482]))                          
+                        :documentation "
+        Run iteration of PI2.
+        Args:
+            sample_lists: List of SampleList objects for each condition.
+        ")
+                        (reparse-symbol indented_block_body) [450 1098]))                  
+                :type "class")
+                nil [194 1098]))          
+      :file "algorithm_traj_opt_pi2.py"
+      :pointmax 1098
+      :fsize 1097
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "algorithm_badmm.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the BADMM-based GPS algorithm. \"\"\"" code nil nil [1 57])
+            ("copy" include nil nil [58 69])
+            ("logging" include nil nil [70 84])
+            ("numpy" include nil nil [86 104])
+            ("scipy" include nil nil [105 123])
+            ("gps.algorithm.algorithm" include nil nil [125 170])
+            ("gps.algorithm.algorithm_utils" include nil nil [171 223])
+            ("gps.algorithm.config" include nil nil [224 266])
+            ("gps.sample.sample_list" include nil nil [267 312])
+            ("LOGGER" variable nil nil [315 351])
+            ("AlgorithmBADMM" type
+               (:documentation "
+    Sample-based joint policy learning and trajectory optimization with
+    BADMM-based guided policy search algorithm.
+    "
+                :superclasses ("Algorithm")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("config" variable nil (reparse-symbol indented_block_body) [568 601])
+                            ("config" code nil (reparse-symbol indented_block_body) [610 636])
+                            ("Algorithm" code nil (reparse-symbol indented_block_body) [645 677])
+                            ("policy_prior" variable nil (reparse-symbol indented_block_body) [687 735])
+                            ("for" code nil (reparse-symbol indented_block_body) [744 938])
+                            ("self" variable nil (reparse-symbol indented_block_body) [947 1077]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [540 544])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [546 557]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [527 1078])
+                    ("iteration" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1097 1101])
+                            ("sample_lists" variable nil (reparse-symbol function_parameters) [1103 1115]))                          
+                        :documentation "
+        Run iteration of BADMM-based guided policy search.
+
+        Args:
+            sample_lists: List of SampleList objects for each condition.
+        ")
+                        (reparse-symbol indented_block_body) [1083 2486])
+                    ("_set_interp_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2514 2518]))                          
+                        :documentation "
+        Use iteration-based interpolation to set values of some
+        schedule-based parameters.
+        ")
+                        (reparse-symbol indented_block_body) [2491 3692])
+                    ("_update_step_size" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3719 3723]))                          
+                        :documentation " Evaluate costs on samples, and adjust the step size. ")
+                        (reparse-symbol indented_block_body) [3697 4147])
+                    ("_update_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4171 4175])
+                            ("inner_itr" variable nil (reparse-symbol function_parameters) [4177 4186]))                          
+                        :documentation " Compute the new policy. ")
+                        (reparse-symbol indented_block_body) [4152 5965])
+                    ("_update_policy_fit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5993 5997])
+                            ("m" variable nil (reparse-symbol function_parameters) [5999 6000])
+                            ("init" variable nil (reparse-symbol function_parameters) [6002 6006]))                          
+                        :documentation "
+        Re-estimate the local policy values in the neighborhood of the
+        trajectory.
+        Args:
+            m: Condition
+            init: Whether this is the initial fitting of the policy.
+        ")
+                        (reparse-symbol indented_block_body) [5970 7288])
+                    ("_policy_dual_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7315 7319])
+                            ("m" variable nil (reparse-symbol function_parameters) [7321 7322])
+                            ("step" variable nil (reparse-symbol function_parameters) [7324 7328]))                          
+                        :documentation "
+        Update the dual variables for the specified condition.
+        Args:
+            m: Condition
+            step: Whether or not to update pol_wt.
+        ")
+                        (reparse-symbol indented_block_body) [7293 10957])
+                    ("_advance_iteration_variables" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10995 10999]))                          
+                        :documentation "
+        Move all 'cur' variables to 'prev', reinitialize 'cur'
+        variables, and advance iteration counter.
+        ")
+                        (reparse-symbol indented_block_body) [10962 11403])
+                    ("_stepadjust" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11424 11428])
+                            ("m" variable nil (reparse-symbol function_parameters) [11430 11431]))                          
+                        :documentation "
+        Calculate new step sizes.
+        Args:
+            m: Condition
+        ")
+                        (reparse-symbol indented_block_body) [11408 15840])
+                    ("_policy_kl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15860 15864])
+                            ("m" variable nil (reparse-symbol function_parameters) [15866 15867])
+                            ("prev" variable nil (reparse-symbol function_parameters) [15869 15873]))                          
+                        :documentation "
+        Monte-Carlo estimate of KL divergence between policy and
+        trajectory.
+        ")
+                        (reparse-symbol indented_block_body) [15845 18758])
+                    ("_estimate_cost" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18782 18786])
+                            ("traj_distr" variable nil (reparse-symbol function_parameters) [18788 18798])
+                            ("traj_info" variable nil (reparse-symbol function_parameters) [18800 18809])
+                            ("pol_info" variable nil (reparse-symbol function_parameters) [18811 18819])
+                            ("m" variable nil (reparse-symbol function_parameters) [18821 18822]))                          
+                        :documentation "
+        Compute Laplace approximation to expected cost.
+        Args:
+            traj_distr: A linear Gaussian policy object.
+            traj_info: A TrajectoryInfo object.
+            pol_info: Policy linearization info.
+            m: Condition number.
+        ")
+                        (reparse-symbol indented_block_body) [18763 20818])
+                    ("compute_costs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20841 20845])
+                            ("m" variable nil (reparse-symbol function_parameters) [20847 20848])
+                            ("eta" variable nil (reparse-symbol function_parameters) [20850 20853]))                          
+                        :documentation " Compute cost estimates used in the LQR backward pass. ")
+                        (reparse-symbol indented_block_body) [20823 23202]))                  
+                :type "class")
+                nil [354 23202]))          
+      :file "algorithm_badmm.py"
+      :pointmax 23202
+      :fsize 23201
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!algorithm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,485 @@
+;; Object utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utils/"
+  :tables
+  (list
+    (semanticdb-table "distributions.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("tensorflow" include nil nil [1 24])
+            ("numpy" include nil nil [25 43])
+            ("baselines.common.tf_util" include nil nil [44 80])
+            ("tensorflow.python.ops" include nil nil [81 123])
+            ("Pd" type
+               (:documentation "
+    A particular probability distribution
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("flatparam" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [219 223]))                          )
+                        (reparse-symbol indented_block_body) [205 260])
+                    ("mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [273 277]))                          )
+                        (reparse-symbol indented_block_body) [264 314])
+                    ("neglogp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [330 334])
+                            ("x" variable nil (reparse-symbol function_parameters) [336 337]))                          )
+                        (reparse-symbol indented_block_body) [318 435])
+                    ("kl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [446 450])
+                            ("other" variable nil (reparse-symbol function_parameters) [452 457]))                          )
+                        (reparse-symbol indented_block_body) [439 494])
+                    ("entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [510 514]))                          )
+                        (reparse-symbol indented_block_body) [498 551])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [566 570]))                          )
+                        (reparse-symbol indented_block_body) [555 607])
+                    ("logp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [620 624])
+                            ("x" variable nil (reparse-symbol function_parameters) [626 627]))                          )
+                        (reparse-symbol indented_block_body) [611 663]))                  
+                :type "class")
+                nil [125 663])
+            ("PdType" type
+               (:documentation "
+    Parametrized family of probability distributions
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("pdclass" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [771 775]))                          )
+                        (reparse-symbol indented_block_body) [759 812])
+                    ("pdfromflat" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [831 835])
+                            ("flat" variable nil (reparse-symbol function_parameters) [837 841]))                          )
+                        (reparse-symbol indented_block_body) [816 880])
+                    ("param_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [900 904]))                          )
+                        (reparse-symbol indented_block_body) [884 941])
+                    ("sample_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [962 966]))                          )
+                        (reparse-symbol indented_block_body) [945 1003])
+                    ("sample_dtype" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1024 1028]))                          )
+                        (reparse-symbol indented_block_body) [1007 1065])
+                    ("param_placeholder" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1092 1096])
+                            ("prepend_shape" variable nil (reparse-symbol function_parameters) [1098 1111])
+                            ("name" variable nil (reparse-symbol function_parameters) [1113 1117]))                          )
+                        (reparse-symbol indented_block_body) [1070 1224])
+                    ("sample_placeholder" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1251 1255])
+                            ("prepend_shape" variable nil (reparse-symbol function_parameters) [1257 1270])
+                            ("name" variable nil (reparse-symbol function_parameters) [1272 1276]))                          )
+                        (reparse-symbol indented_block_body) [1228 1393]))                  
+                :type "class")
+                nil [664 1393])
+            ("CategoricalPdType" type
+               (:superclasses ("PdType")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1465 1481]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1444 1448])
+                            ("ncat" variable nil (reparse-symbol function_parameters) [1450 1454]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1431 1482])
+                    ("pdclass" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1498 1502]))                          )
+                        (reparse-symbol indented_block_body) [1486 1534])
+                    ("param_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1554 1558]))                          )
+                        (reparse-symbol indented_block_body) [1538 1588])
+                    ("sample_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1609 1613]))                          )
+                        (reparse-symbol indented_block_body) [1592 1634])
+                    ("sample_dtype" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1655 1659]))                          )
+                        (reparse-symbol indented_block_body) [1638 1686]))                  
+                :type "class")
+                nil [1394 1686])
+            ("MultiCategoricalPdType" type
+               (:superclasses ("PdType")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1764 1781]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1743 1747])
+                            ("nvec" variable nil (reparse-symbol function_parameters) [1749 1753]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1730 1782])
+                    ("pdclass" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1798 1802]))                          )
+                        (reparse-symbol indented_block_body) [1786 1839])
+                    ("pdfromflat" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1858 1862])
+                            ("flat" variable nil (reparse-symbol function_parameters) [1864 1868]))                          )
+                        (reparse-symbol indented_block_body) [1843 1923])
+                    ("param_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1943 1947]))                          )
+                        (reparse-symbol indented_block_body) [1927 1983])
+                    ("sample_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2004 2008]))                          )
+                        (reparse-symbol indented_block_body) [1987 2044])
+                    ("sample_dtype" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2065 2069]))                          )
+                        (reparse-symbol indented_block_body) [2048 2096]))                  
+                :type "class")
+                nil [1688 2096])
+            ("DiagGaussianPdType" type
+               (:superclasses ("PdType")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2169 2185]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2148 2152])
+                            ("size" variable nil (reparse-symbol function_parameters) [2154 2158]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2135 2186])
+                    ("pdclass" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2202 2206]))                          )
+                        (reparse-symbol indented_block_body) [2190 2239])
+                    ("param_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2259 2263]))                          )
+                        (reparse-symbol indented_block_body) [2243 2295])
+                    ("sample_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2316 2320]))                          )
+                        (reparse-symbol indented_block_body) [2299 2350])
+                    ("sample_dtype" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2371 2375]))                          )
+                        (reparse-symbol indented_block_body) [2354 2404]))                  
+                :type "class")
+                nil [2097 2404])
+            ("BernoulliPdType" type
+               (:superclasses ("PdType")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2474 2490]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2453 2457])
+                            ("size" variable nil (reparse-symbol function_parameters) [2459 2463]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2440 2491])
+                    ("pdclass" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2507 2511]))                          )
+                        (reparse-symbol indented_block_body) [2495 2541])
+                    ("param_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2561 2565]))                          )
+                        (reparse-symbol indented_block_body) [2545 2595])
+                    ("sample_shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2616 2620]))                          )
+                        (reparse-symbol indented_block_body) [2599 2650])
+                    ("sample_dtype" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2671 2675]))                          )
+                        (reparse-symbol indented_block_body) [2654 2702]))                  
+                :type "class")
+                nil [2405 2702])
+            ("CategoricalPd" type
+               (:superclasses ("Pd")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3682 3702]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2745 2749])
+                            ("logits" variable nil (reparse-symbol function_parameters) [2751 2757]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2732 2789])
+                    ("flatparam" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2807 2811]))                          )
+                        (reparse-symbol indented_block_body) [2793 2841])
+                    ("mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2854 2858]))                          )
+                        (reparse-symbol indented_block_body) [2845 2908])
+                    ("neglogp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2924 2928])
+                            ("x" variable nil (reparse-symbol function_parameters) [2930 2931]))                          )
+                        (reparse-symbol indented_block_body) [2912 3387])
+                    ("kl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3398 3402])
+                            ("other" variable nil (reparse-symbol function_parameters) [3404 3409]))                          )
+                        (reparse-symbol indented_block_body) [3391 3838])
+                    ("entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3854 3858]))                          )
+                        (reparse-symbol indented_block_body) [3842 4106])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4121 4125]))                          )
+                        (reparse-symbol indented_block_body) [4110 4249])
+                    ("fromflat" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [4283 4286])
+                            ("flat" variable nil (reparse-symbol function_parameters) [4288 4292]))                          )
+                        (reparse-symbol indented_block_body) [4253 4320]))                  
+                :type "class")
+                nil [2703 4320])
+            ("MultiCategoricalPd" type
+               (:superclasses ("Pd")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [5309 5325])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5334 5409]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4368 4372])
+                            ("nvec" variable nil (reparse-symbol function_parameters) [4374 4378])
+                            ("flat" variable nil (reparse-symbol function_parameters) [4380 4384]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4355 4496])
+                    ("flatparam" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4514 4518]))                          )
+                        (reparse-symbol indented_block_body) [4500 4546])
+                    ("mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4559 4563]))                          )
+                        (reparse-symbol indented_block_body) [4550 4657])
+                    ("neglogp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4673 4677])
+                            ("x" variable nil (reparse-symbol function_parameters) [4679 4680]))                          )
+                        (reparse-symbol indented_block_body) [4661 4784])
+                    ("kl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4795 4799])
+                            ("other" variable nil (reparse-symbol function_parameters) [4801 4806]))                          )
+                        (reparse-symbol indented_block_body) [4788 4899])
+                    ("entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4915 4919]))                          )
+                        (reparse-symbol indented_block_body) [4903 4988])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5003 5007]))                          )
+                        (reparse-symbol indented_block_body) [4992 5103])
+                    ("fromflat" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [5137 5140])
+                            ("flat" variable nil (reparse-symbol function_parameters) [5142 5146]))                          )
+                        (reparse-symbol indented_block_body) [5107 5183]))                  
+                :type "class")
+                nil [4321 5183])
+            ("DiagGaussianPd" type
+               (:superclasses ("Pd")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [6162 6178])
+                            ("mean, logstd" code nil (reparse-symbol indented_block_body) [6187 6268])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6277 6293])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6302 6322])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6331 6356]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5227 5231])
+                            ("flat" variable nil (reparse-symbol function_parameters) [5233 5237]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [5214 5443])
+                    ("flatparam" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5461 5465]))                          )
+                        (reparse-symbol indented_block_body) [5447 5493])
+                    ("mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5506 5510]))                          )
+                        (reparse-symbol indented_block_body) [5497 5538])
+                    ("neglogp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5554 5558])
+                            ("x" variable nil (reparse-symbol function_parameters) [5560 5561]))                          )
+                        (reparse-symbol indented_block_body) [5542 5778])
+                    ("kl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5789 5793])
+                            ("other" variable nil (reparse-symbol function_parameters) [5795 5800]))                          )
+                        (reparse-symbol indented_block_body) [5782 6015])
+                    ("entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6031 6035]))                          )
+                        (reparse-symbol indented_block_body) [6019 6123])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6138 6142]))                          )
+                        (reparse-symbol indented_block_body) [6127 6221])
+                    ("fromflat" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [6255 6258])
+                            ("flat" variable nil (reparse-symbol function_parameters) [6260 6264]))                          )
+                        (reparse-symbol indented_block_body) [6225 6292]))                  
+                :type "class")
+                nil [5184 6292])
+            ("BernoulliPd" type
+               (:superclasses ("Pd")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [7270 7290])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7299 7327]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6333 6337])
+                            ("logits" variable nil (reparse-symbol function_parameters) [6339 6345]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6320 6414])
+                    ("flatparam" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6432 6436]))                          )
+                        (reparse-symbol indented_block_body) [6418 6466])
+                    ("mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6479 6483]))                          )
+                        (reparse-symbol indented_block_body) [6470 6519])
+                    ("neglogp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6535 6539])
+                            ("x" variable nil (reparse-symbol function_parameters) [6541 6542]))                          )
+                        (reparse-symbol indented_block_body) [6523 6667])
+                    ("kl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6678 6682])
+                            ("other" variable nil (reparse-symbol function_parameters) [6684 6689]))                          )
+                        (reparse-symbol indented_block_body) [6671 6910])
+                    ("entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6926 6930]))                          )
+                        (reparse-symbol indented_block_body) [6914 7048])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7063 7067]))                          )
+                        (reparse-symbol indented_block_body) [7052 7173])
+                    ("fromflat" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [7207 7210])
+                            ("flat" variable nil (reparse-symbol function_parameters) [7212 7216]))                          )
+                        (reparse-symbol indented_block_body) [7177 7244]))                  
+                :type "class")
+                nil [6293 7244])
+            ("make_pdtype" function (:arguments 
+              ( ("ac_space" variable nil (reparse-symbol function_parameters) [7261 7269]))              ) nil [7245 7770])
+            ("shape_el" function (:arguments 
+              ( ("v" variable nil (reparse-symbol function_parameters) [7784 7785])
+                ("i" variable nil (reparse-symbol function_parameters) [7787 7788]))              ) nil [7771 7907])
+            ("test_probtypes" function (:decorators 
+              ( ("U.in_session" function (:type "decorator") nil nil))              ) nil [7908 8782])
+            ("validate_probtype" function (:arguments 
+              ( ("probtype" variable nil (reparse-symbol function_parameters) [8806 8814])
+                ("pdparam" variable nil (reparse-symbol function_parameters) [8816 8823]))              ) nil [8784 10173]))          
+      :file "distributions.py"
+      :pointmax 10174
+      :fsize 10173
+      :lastmodtime '(23179 14389 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!algo_devel!ppo_baseline!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

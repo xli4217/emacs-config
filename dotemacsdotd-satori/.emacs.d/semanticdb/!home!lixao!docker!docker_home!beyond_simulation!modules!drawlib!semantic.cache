@@ -1,0 +1,200 @@
+;; Object drawlib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "drawlib/"
+  :tables
+  (list
+    (semanticdb-table "sample.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("modules/drawlib/sample.h" include nil nil [236 271])
+            ("cinttypes" include (:system-flag t) nil [272 292])
+            ("modules/common/adapters/adapter_manager.h" include nil nil [293 345])
+            ("third_party/json/json.hpp" include nil nil [346 382])
+            ("beyond::common::ErrorCode" variable (:type "int") nil [392 418])
+            ("beyond::common::Status" variable (:type "int") nil [427 450])
+            ("beyond::common::adapter::AdapterManager" variable (:type "int") nil [459 499])
+            ("beyond" type
+               (:members 
+                  ( ("draw" type
+                       (:members 
+                          ( ("Name" function
+                               (:parent "Sample"
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [538 600])
+                            ("Init" function
+                               (:parent "Sample"
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [602 4866])
+                            ("Start" function
+                               (:parent "Sample"
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [4868 4955])
+                            ("Stop" function
+                               (:parent "Sample"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4957 5017])
+                            ("OnCostMap" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::planner::CostMapMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5050 5083]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5019 5311])
+                            ("OnGround" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::sensors::Ground" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5343 5372]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5313 5465])
+                            ("OnMobileye" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::can::MobileyeReport" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5499 5532]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5467 5584])
+                            ("draw" function
+                               (:parent "Sample"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5586 10136])
+                            ("OnVizCommand" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::visualizer::VisualizerCommandMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10177 10223]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [10138 10282])
+                            ("OnControlTarget" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::controller::ControlOutput" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10321 10360]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [10284 10404])
+                            ("OnWorldState" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10445 10490]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [10406 11110])
+                            ("OnWorldStateWithDrawing" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::state_estimation::WorldStateMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11162 11207]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11112 16201])
+                            ("OnVehicleSpeed" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::can::VehicleSpeed" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16239 16270]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [16203 16301])
+                            ("OnVehicleSteering" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::can::VehicleSteeringAngle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16342 16381]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [16303 16412])
+                            ("OnLocalMap" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::slam::LocalMap" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16446 16474]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [16414 16529])
+                            ("OnPaths" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::perception::PathTracks" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16560 16596]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [16531 16641])
+                            ("OnObjects" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::perception::PerceptionObjects" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16674 16717]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [16643 16768])
+                            ("OnPrediction" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::prediction::PredictionOutputMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16809 16854]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [16770 16954])
+                            ("OnPlanner" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("beyond::planner::PlannerOutputMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16987 17026]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [16956 17278])
+                            ("parse_pc_message" function
+                               (:arguments 
+                                  ( ("message" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("sensor_msgs::PointCloud2" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17313 17353]))                                  
+                                :type ("Eigen::MatrixXf" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [17280 18875])
+                            ("OnPointCloud" function
+                               (:parent "Sample"
+                                :arguments 
+                                  ( ("message" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("sensor_msgs::PointCloud2" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18903 18943]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [18877 19014]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [520 19017]))                  
+                :type "namespace")
+                nil [501 19038]))          
+      :file "sample.cc"
+      :pointmax 19060
+      :fsize 19059
+      :lastmodtime '(23313 52658 514427 600000)
+      :unmatched-syntax '((punctuation 16986 . 16987) (punctuation 16985 . 16986) (CONST 16979 . 16984) (punctuation 16808 . 16809) (punctuation 16807 . 16808) (CONST 16801 . 16806) (punctuation 16673 . 16674) (punctuation 16672 . 16673) (CONST 16666 . 16671) (punctuation 16559 . 16560) (punctuation 16558 . 16559) (CONST 16552 . 16557) (punctuation 16445 . 16446) (punctuation 16444 . 16445) (CONST 16438 . 16443) (punctuation 16341 . 16342) (punctuation 16340 . 16341) (CONST 16334 . 16339) (punctuation 16238 . 16239) (punctuation 16237 . 16238) (CONST 16231 . 16236) (punctuation 11161 . 11162) (punctuation 11160 . 11161) (CONST 11154 . 11159) (punctuation 10444 . 10445) (punctuation 10443 . 10444) (CONST 10437 . 10442) (punctuation 10320 . 10321) (punctuation 10319 . 10320) (CONST 10313 . 10318) (punctuation 10176 . 10177) (punctuation 10175 . 10176) (CONST 10169 . 10174) (punctuation 5498 . 5499) (punctuation 5497 . 5498) (CONST 5491 . 5496) (punctuation 5342 . 5343) (punctuation 5341 . 5342) (CONST 5335 . 5340) (punctuation 5049 . 5050) (punctuation 5048 . 5049) (CONST 5042 . 5047) (punctuation 458 . 459) (USING 451 . 456) (punctuation 426 . 427) (USING 419 . 424) (punctuation 391 . 392) (USING 384 . 389)))
+    (semanticdb-table "sample.h"
+      :file "sample.h"
+      :fsize 3827
+      :lastmodtime '(23313 52658 514427 600000)))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!drawlib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

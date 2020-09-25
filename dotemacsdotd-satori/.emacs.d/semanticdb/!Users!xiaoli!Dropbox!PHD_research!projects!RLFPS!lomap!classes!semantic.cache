@@ -1,0 +1,521 @@
+;; Object classes/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "classes/"
+  :tables
+  (list
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Buchi" include nil nil [779 791])
+            ("Fsa" include nil nil [802 812])
+            ("Rabin" include nil nil [825 837])
+            ("Model" include nil nil [850 862])
+            ("Ts" include nil nil [872 881])
+            ("Markov" include nil nil [895 908])
+            ("Timer" include nil nil [921 933]))          
+      :file "__init__.py"
+      :pointmax 934
+      :fsize 933
+      :lastmodtime '(22751 47667 0 0)
+      :unmatched-syntax '((FROM 909 . 913) (PERIOD 914 . 915) (FROM 882 . 886) (PERIOD 887 . 888) (FROM 863 . 867) (PERIOD 868 . 869) (FROM 838 . 842) (PERIOD 843 . 844) (FROM 813 . 817) (PERIOD 818 . 819) (FROM 792 . 796) (PERIOD 797 . 798) (PERIOD 772 . 773)))
+    (semanticdb-table "Buchi.py"
+      :file "Buchi.py"
+      :fsize 9577
+      :lastmodtime '(22753 1261 0 0))
+    (semanticdb-table "Fsa.py"
+      :file "Fsa.py"
+      :fsize 12756
+      :lastmodtime '(22753 131 0 0))
+    (semanticdb-table "Rabin.py"
+      :file "Rabin.py"
+      :fsize 12031
+      :lastmodtime '(22752 29157 0 0))
+    (semanticdb-table "Model.py"
+      :file "Model.py"
+      :fsize 2626
+      :lastmodtime '(22752 64835 0 0))
+    (semanticdb-table "Ts.py"
+      :file "Ts.py"
+      :fsize 6535
+      :lastmodtime '(22751 47668 0 0))
+    (semanticdb-table "Markov.py"
+      :file "Markov.py"
+      :fsize 6659
+      :lastmodtime '(22751 47667 0 0))
+    (semanticdb-table "Timer.py"
+      :file "Timer.py"
+      :fsize 1635
+      :lastmodtime '(22751 47668 0 0))
+    (semanticdb-table "buchi.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [767 776])
+            ("subprocess" include nil nil [777 800])
+            ("shlex" include nil nil [801 813])
+            ("operator" include nil nil [814 835])
+            ("logging" include nil nil [836 850])
+            ("Model" include nil nil [864 876])
+            ("functools" include nil nil [877 905])
+            ("logger" variable nil nil [931 967])
+            ("ltl2ba" variable nil nil [1011 1051])
+            ("Buchi" type
+               (:documentation "
+    Base class for non-deterministic Buchi automata.
+    "
+                :superclasses ("Model")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        LOMAP Buchi Automaton object constructor
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1219 1283])
+                            ("Model" code nil (reparse-symbol indented_block_body) [1292 1344])
+                            ("if" code nil (reparse-symbol indented_block_body) [1362 1704])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1889 1940]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1165 1169])
+                            ("props" variable nil (reparse-symbol function_parameters) [1171 1176])
+                            ("directed" variable nil (reparse-symbol function_parameters) [1183 1191])
+                            ("multi" variable nil (reparse-symbol function_parameters) [1198 1203]))                          
+                        :documentation "
+        LOMAP Buchi Automaton object constructor
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1152 1941])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1963 1967]))                          )
+                        (reparse-symbol indented_block_body) [1950 2440])
+                    ("clone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2459 2463]))                          )
+                        (reparse-symbol indented_block_body) [2449 2679])
+                    ("from_formula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2701 2705])
+                            ("formula" variable nil (reparse-symbol function_parameters) [2707 2714]))                          
+                        :documentation "
+        Creates a Buchi automaton in-place from the given LTL formula.
+        ")
+                        (reparse-symbol indented_block_body) [2684 5459])
+                    ("get_guard_bitmap" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5485 5489])
+                            ("guard" variable nil (reparse-symbol function_parameters) [5491 5496]))                          
+                        :documentation "
+        Creates the bitmaps from guard string. The guard is a boolean expression
+        over the atomic propositions.
+        ")
+                        (reparse-symbol indented_block_body) [5464 6328])
+                    ("symbols_w_prop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6352 6356])
+                            ("prop" variable nil (reparse-symbol function_parameters) [6358 6362]))                          
+                        :documentation "
+        Returns symbols from the automaton's alphabet which contain the given
+        atomic proposition.
+        ")
+                        (reparse-symbol indented_block_body) [6333 6598])
+                    ("symbols_wo_prop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6623 6627])
+                            ("prop" variable nil (reparse-symbol function_parameters) [6629 6633]))                          
+                        :documentation "
+        Returns symbols from the automaton's alphabet which does not contain the
+        given atomic proposition.
+        ")
+                        (reparse-symbol indented_block_body) [6603 6842])
+                    ("bitmap_of_props" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6868 6872])
+                            ("props" variable nil (reparse-symbol function_parameters) [6874 6879]))                          
+                        :documentation "
+        Returns bitmap corresponding the set of atomic propositions.
+        ")
+                        (reparse-symbol indented_block_body) [6848 7047])
+                    ("next_states" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7068 7072])
+                            ("q" variable nil (reparse-symbol function_parameters) [7074 7075])
+                            ("props" variable nil (reparse-symbol function_parameters) [7077 7082]))                          
+                        :documentation "
+        Returns the next states of state q given input proposition set props. 
+        ")
+                        (reparse-symbol indented_block_body) [7052 7478])
+                    ("determinize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7499 7503]))                          )
+                        (reparse-symbol indented_block_body) [7483 9578]))                  
+                :type "class")
+                nil [1054 9578]))          
+      :file "buchi.py"
+      :pointmax 9578
+      :fsize 9577
+      :lastmodtime '(22753 1261 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "model.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("networkx" include nil nil [767 788])
+            ("networkx.drawing.nx_pydot" include nil nil [789 846])
+            ("matplotlib.pyplot" include nil nil [847 878])
+            ("pydot" include nil nil [879 891])
+            ("os" include nil nil [892 901])
+            ("Model" type
+               (:documentation "
+    Base class for various system models.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Empty LOMAP Model object constructor.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1042 1103])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1112 1130])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1139 1173])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1182 1200])
+                            ("if" code nil (reparse-symbol indented_block_body) [1209 1474])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1482 1506])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1515 1533]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1000 1004])
+                            ("directed" variable nil (reparse-symbol function_parameters) [1006 1014])
+                            ("multi" variable nil (reparse-symbol function_parameters) [1021 1026]))                          
+                        :documentation "
+        Empty LOMAP Model object constructor.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [987 1534])
+                    ("nodes_w_prop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1556 1560])
+                            ("propset" variable nil (reparse-symbol function_parameters) [1562 1569]))                          
+                        :documentation "
+        Returns the set of nodes with given properties.
+        ")
+                        (reparse-symbol indented_block_body) [1539 1848])
+                    ("size" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1862 1866]))                          )
+                        (reparse-symbol indented_block_body) [1853 1937])
+                    ("visualize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1965 1969])
+                            ("edgelabel" variable nil (reparse-symbol function_parameters) [1971 1980])
+                            ("draw" variable nil (reparse-symbol function_parameters) [1987 1991]))                          
+                        :documentation "
+        Visualizes a LOMAP system model
+        ")
+                        (reparse-symbol indented_block_body) [1951 2627]))                  
+                :type "class")
+                nil [903 2627]))          
+      :file "model.py"
+      :pointmax 2627
+      :fsize 2626
+      :lastmodtime '(22752 64835 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "fsa.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("networkx" include nil nil [767 788])
+            ("re" include nil nil [789 798])
+            ("subprocess" include nil nil [799 822])
+            ("shlex" include nil nil [823 835])
+            ("operator" include nil nil [836 857])
+            ("logging" include nil nil [858 872])
+            ("Model" include nil nil [886 898])
+            ("functools" include nil nil [899 927])
+            ("logger" variable nil nil [953 989])
+            ("ltl2fsa" variable nil nil [1033 1077])
+            ("Fsa" type
+               (:documentation "
+    Base class for deterministic finite state automata.
+    "
+                :superclasses ("Model")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        LOMAP Fsa Automaton object constructor
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1246 1308])
+                            ("Model" code nil (reparse-symbol indented_block_body) [1317 1369])
+                            ("if" code nil (reparse-symbol indented_block_body) [1387 1729])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1914 1965]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1192 1196])
+                            ("props" variable nil (reparse-symbol function_parameters) [1198 1203])
+                            ("directed" variable nil (reparse-symbol function_parameters) [1210 1218])
+                            ("multi" variable nil (reparse-symbol function_parameters) [1225 1230]))                          
+                        :documentation "
+        LOMAP Fsa Automaton object constructor
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1179 1966])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1988 1992]))                          )
+                        (reparse-symbol indented_block_body) [1975 2537])
+                    ("clone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2556 2560]))                          )
+                        (reparse-symbol indented_block_body) [2546 2774])
+                    ("infix_formula_to_prefix" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("formula" variable nil (reparse-symbol function_parameters) [2825 2832]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2779 5991])
+                    ("from_formula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6013 6017])
+                            ("formula" variable nil (reparse-symbol function_parameters) [6019 6026])
+                            ("load" variable nil (reparse-symbol function_parameters) [6028 6032]))                          
+                        :documentation "
+        Creates a finite state automaton in-place from the given scLTL formula.
+        ")
+                        (reparse-symbol indented_block_body) [5996 9020])
+                    ("get_guard_bitmap" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9046 9050])
+                            ("guard" variable nil (reparse-symbol function_parameters) [9052 9057]))                          
+                        :documentation "
+        Creates the bitmaps from guard string. The guard is a boolean expression
+        over the atomic propositions.
+        ")
+                        (reparse-symbol indented_block_body) [9025 9889])
+                    ("add_trap_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9913 9917]))                          
+                        :documentation "
+        Adds a trap state and completes the automaton. Returns True whenever a
+        trap state has been added to the automaton.
+        ")
+                        (reparse-symbol indented_block_body) [9894 10899])
+                    ("remove_trap_states" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10931 10935]))                          )
+                        (reparse-symbol indented_block_body) [10908 11600])
+                    ("symbols_w_prop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11624 11628])
+                            ("prop" variable nil (reparse-symbol function_parameters) [11630 11634]))                          
+                        :documentation "
+        Returns symbols from the automaton's alphabet which contain the given
+        atomic proposition.
+        ")
+                        (reparse-symbol indented_block_body) [11605 11870])
+                    ("symbols_wo_prop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11895 11899])
+                            ("prop" variable nil (reparse-symbol function_parameters) [11901 11905]))                          
+                        :documentation "
+        Returns symbols from the automaton's alphabet which does not contain the
+        given atomic proposition.
+        ")
+                        (reparse-symbol indented_block_body) [11875 12114])
+                    ("bitmap_of_props" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12140 12144])
+                            ("props" variable nil (reparse-symbol function_parameters) [12146 12151]))                          
+                        :documentation "
+        Returns bitmap corresponding the set of atomic propositions.
+        ")
+                        (reparse-symbol indented_block_body) [12120 12319])
+                    ("next_states_of_fsa" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12347 12351])
+                            ("q" variable nil (reparse-symbol function_parameters) [12353 12354])
+                            ("props" variable nil (reparse-symbol function_parameters) [12356 12361]))                          
+                        :documentation "
+        Returns the next states of state q given input proposition set props. 
+        ")
+                        (reparse-symbol indented_block_body) [12324 12757]))                  
+                :type "class")
+                nil [1080 12757]))          
+      :file "fsa.py"
+      :pointmax 12757
+      :fsize 12756
+      :lastmodtime '(22753 131 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "rabin.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [770 779])
+            ("subprocess" include nil nil [780 803])
+            ("shlex" include nil nil [804 816])
+            ("collections" include nil nil [817 859])
+            ("operator" include nil nil [860 881])
+            ("logging" include nil nil [882 896])
+            ("copy" include nil nil [897 922])
+            ("networkx" include nil nil [924 945])
+            ("Model" include nil nil [959 971])
+            ("functools" include nil nil [972 1000])
+            ("logger" variable nil nil [1025 1061])
+            ("ltl2filt" variable nil nil [1106 1147])
+            ("ltl2rabin" variable nil nil [1148 1250])
+            ("Rabin" type
+               (:documentation "
+    Base class for deterministic Rabin automata.
+    "
+                :superclasses ("Model")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        LOMAP Rabin Automaton object constructor
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1414 1478])
+                            ("Model" code nil (reparse-symbol indented_block_body) [1487 1539])
+                            ("if" code nil (reparse-symbol indented_block_body) [1557 1899])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2092 2143]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1360 1364])
+                            ("props" variable nil (reparse-symbol function_parameters) [1366 1371])
+                            ("directed" variable nil (reparse-symbol function_parameters) [1378 1386])
+                            ("multi" variable nil (reparse-symbol function_parameters) [1393 1398]))                          
+                        :documentation "
+        LOMAP Rabin Automaton object constructor
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1347 2144])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2166 2170]))                          )
+                        (reparse-symbol indented_block_body) [2153 2788])
+                    ("clone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2807 2811]))                          )
+                        (reparse-symbol indented_block_body) [2797 3032])
+                    ("from_formula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3058 3062])
+                            ("formula" variable nil (reparse-symbol function_parameters) [3064 3071])
+                            ("prune" variable nil (reparse-symbol function_parameters) [3073 3078])
+                            ("load" variable nil (reparse-symbol function_parameters) [3086 3090]))                          
+                        :documentation "
+        Creates a Rabin automaton in-place from the given LTL formula.
+        
+        TODO: add support for loading and saving.
+        ")
+                        (reparse-symbol indented_block_body) [3041 7097])
+                    ("prune" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7116 7120]))                          
+                        :documentation "TODO:
+        ")
+                        (reparse-symbol indented_block_body) [7106 8127])
+                    ("guard_from_bitmaps" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8159 8163])
+                            ("bitmaps" variable nil (reparse-symbol function_parameters) [8165 8172]))                          
+                        :documentation "TODO:
+        ")
+                        (reparse-symbol indented_block_body) [8136 8229])
+                    ("get_guard_bitmap" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8259 8263])
+                            ("guard" variable nil (reparse-symbol function_parameters) [8265 8270]))                          
+                        :documentation "
+        Creates the bitmaps from guard string. The guard is a boolean expression
+        over the atomic propositions.
+        ")
+                        (reparse-symbol indented_block_body) [8238 8978])
+                    ("add_trap_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9002 9006]))                          
+                        :documentation "
+        Adds a trap state and completes the automaton. Returns True whenever a
+        trap state has been added to the automaton.
+        ")
+                        (reparse-symbol indented_block_body) [8983 9988])
+                    ("remove_trap_states" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10044 10048]))                          
+                        :decorators 
+                          ( ("DeprecationWarning" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [9997 10713])
+                    ("symbols_w_prop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10737 10741])
+                            ("prop" variable nil (reparse-symbol function_parameters) [10743 10747]))                          
+                        :documentation "
+        Returns symbols from the automaton's alphabet which contain the given
+        atomic proposition.
+        ")
+                        (reparse-symbol indented_block_body) [10718 10983])
+                    ("symbols_wo_prop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11021 11025])
+                            ("prop" variable nil (reparse-symbol function_parameters) [11027 11031]))                          
+                        :documentation "
+        Returns symbols from the automaton's alphabet which does not contain the
+        given atomic proposition.
+        ")
+                        (reparse-symbol indented_block_body) [11001 11240])
+                    ("bitmap_of_props" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11269 11273])
+                            ("props" variable nil (reparse-symbol function_parameters) [11275 11280]))                          
+                        :documentation "
+        Returns bitmap corresponding the set of atomic propositions.
+        ")
+                        (reparse-symbol indented_block_body) [11249 11448])
+                    ("next_states_of_rabin" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11478 11482])
+                            ("q" variable nil (reparse-symbol function_parameters) [11484 11485])
+                            ("props" variable nil (reparse-symbol function_parameters) [11487 11492]))                          
+                        :documentation "
+        Returns the next states of state q given input proposition set props. 
+        ")
+                        (reparse-symbol indented_block_body) [11453 11888]))                  
+                :type "class")
+                nil [1253 11888])
+            ("if" code nil nil [11890 12032]))          
+      :file "rabin.py"
+      :pointmax 12032
+      :fsize 12031
+      :lastmodtime '(22752 29157 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!lomap!classes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

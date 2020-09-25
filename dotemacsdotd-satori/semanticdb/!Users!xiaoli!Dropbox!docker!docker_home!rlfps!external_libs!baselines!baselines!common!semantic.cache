@@ -1,0 +1,202 @@
+;; Object common/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "common/"
+  :tables
+  (list
+    (semanticdb-table "segment_tree.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("operator" include nil nil [1 16])
+            ("SegmentTree" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Build a Segment Tree data structure.
+
+        https://en.wikipedia.org/wiki/Segment_tree
+
+        Can be used as regular array, but with two
+        important differences:
+
+            a) setting item's value is slightly slower.
+               It is O(lg capacity) instead of O(1).
+            b) user has access to an efficient `reduce`
+               operation which reduces `operation` over
+               a contiguous subsequence of items in the
+               array.
+
+        Paramters
+        ---------
+        capacity: int
+            Total size of the array - must be a power of two.
+        operation: lambda obj, obj -> obj
+            and operation for combining elements (eg. sum, max)
+            must for a mathematical group together with the set of
+            possible values for array elements.
+        neutral_element: obj
+            neutral element for the operation above. eg. float('-inf')
+            for max and 0 for sum.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [116 1079])
+                            ("assert" code nil (reparse-symbol indented_block_body) [1088 1189])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1198 1223])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1232 1292])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1301 1328]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [63 67])
+                            ("capacity" variable nil (reparse-symbol function_parameters) [69 77])
+                            ("operation" variable nil (reparse-symbol function_parameters) [79 88])
+                            ("neutral_element" variable nil (reparse-symbol function_parameters) [90 105]))                          
+                        :documentation "Build a Segment Tree data structure.
+
+        https://en.wikipedia.org/wiki/Segment_tree
+
+        Can be used as regular array, but with two
+        important differences:
+
+            a) setting item's value is slightly slower.
+               It is O(lg capacity) instead of O(1).
+            b) user has access to an efficient `reduce`
+               operation which reduces `operation` over
+               a contiguous subsequence of items in the
+               array.
+
+        Paramters
+        ---------
+        capacity: int
+            Total size of the array - must be a power of two.
+        operation: lambda obj, obj -> obj
+            and operation for combining elements (eg. sum, max)
+            must for a mathematical group together with the set of
+            possible values for array elements.
+        neutral_element: obj
+            neutral element for the operation above. eg. float('-inf')
+            for max and 0 for sum.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [50 1329])
+                    ("_reduce_helper" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1353 1357])
+                            ("start" variable nil (reparse-symbol function_parameters) [1359 1364])
+                            ("end" variable nil (reparse-symbol function_parameters) [1366 1369])
+                            ("node" variable nil (reparse-symbol function_parameters) [1371 1375])
+                            ("node_start" variable nil (reparse-symbol function_parameters) [1377 1387])
+                            ("node_end" variable nil (reparse-symbol function_parameters) [1389 1397]))                          )
+                        (reparse-symbol indented_block_body) [1334 2011])
+                    ("reduce" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2027 2031])
+                            ("start" variable nil (reparse-symbol function_parameters) [2033 2038])
+                            ("end" variable nil (reparse-symbol function_parameters) [2042 2045]))                          
+                        :documentation "Returns result of applying `self.operation`
+        to a contiguous subsequence of the array.
+
+            self.operation(arr[start], operation(arr[start+1], operation(... arr[end])))
+
+        Parameters
+        ----------
+        start: int
+            beginning of the subsequence
+        end: int
+            end of the subsequences
+
+        Returns
+        -------
+        reduced: obj
+            result of reducing self.operation over the specified range of array elements.
+        ")
+                        (reparse-symbol indented_block_body) [2016 2757])
+                    ("__setitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2778 2782])
+                            ("idx" variable nil (reparse-symbol function_parameters) [2784 2787])
+                            ("val" variable nil (reparse-symbol function_parameters) [2789 2792]))                          )
+                        (reparse-symbol indented_block_body) [2762 3089])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3110 3114])
+                            ("idx" variable nil (reparse-symbol function_parameters) [3116 3119]))                          )
+                        (reparse-symbol indented_block_body) [3094 3212]))                  
+                :type "class")
+                nil [19 3212])
+            ("SumSegmentTree" type
+               (:superclasses ("SegmentTree")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [3291 3437]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3266 3270])
+                            ("capacity" variable nil (reparse-symbol function_parameters) [3272 3280]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3253 3438])
+                    ("sum" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3451 3455])
+                            ("start" variable nil (reparse-symbol function_parameters) [3457 3462])
+                            ("end" variable nil (reparse-symbol function_parameters) [3466 3469]))                          
+                        :documentation "Returns arr[start] + ... + arr[end]")
+                        (reparse-symbol indented_block_body) [3443 3589])
+                    ("find_prefixsum_idx" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3617 3621])
+                            ("prefixsum" variable nil (reparse-symbol function_parameters) [3623 3632]))                          
+                        :documentation "Find the highest index `i` in the array such that
+            sum(arr[0] + arr[1] + ... + arr[i - i]) <= prefixsum
+
+        if array values are probabilities, this function
+        allows to sample indexes according to the discrete
+        probability efficiently.
+
+        Parameters
+        ----------
+        perfixsum: float
+            upperbound on the sum of array prefix
+
+        Returns
+        -------
+        idx: int
+            highest index satisfying the prefixsum constraint
+        ")
+                        (reparse-symbol indented_block_body) [3594 4487]))                  
+                :type "class")
+                nil [3214 4487])
+            ("MinSegmentTree" type
+               (:superclasses ("SegmentTree")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [4566 4712]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4541 4545])
+                            ("capacity" variable nil (reparse-symbol function_parameters) [4547 4555]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4528 4713])
+                    ("min" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4726 4730])
+                            ("start" variable nil (reparse-symbol function_parameters) [4732 4737])
+                            ("end" variable nil (reparse-symbol function_parameters) [4741 4744]))                          
+                        :documentation "Returns min(arr[start], ...,  arr[end])")
+                        (reparse-symbol indented_block_body) [4718 4869]))                  
+                :type "class")
+                nil [4489 4869]))          
+      :file "segment_tree.py"
+      :pointmax 4869
+      :fsize 4868
+      :lastmodtime '(23195 17922 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!external_libs!baselines!baselines!common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

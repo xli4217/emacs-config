@@ -1,0 +1,88 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "activations.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("activations.h" include nil nil [1 25])
+            ("math.h" include (:system-flag t) nil [27 44])
+            ("stdio.h" include (:system-flag t) nil [45 63])
+            ("stdlib.h" include (:system-flag t) nil [64 83])
+            ("string.h" include (:system-flag t) nil [84 103])
+            ("get_activation_string" function
+               (:pointer 1
+                :arguments 
+                  ( ("a" variable (:type ("ACTIVATION" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [133 146]))                  
+                :type "char")
+                nil [105 850])
+            ("get_activation" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [878 886]))                  
+                :type ("ACTIVATION" type (:type "class") nil nil))
+                nil [852 1575])
+            ("activate" function
+               (:arguments 
+                  ( ("x" variable (:type "float") (reparse-symbol arg-sub-list) [1592 1600])
+                    ("a" variable (:type ("ACTIVATION" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1601 1614]))                  
+                :type "float")
+                nil [1577 2407])
+            ("activate_array" function
+               (:arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2429 2438])
+                    ("n" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2439 2451])
+                    ("a" variable
+                       (:constant-flag t
+                        :type ("ACTIVATION" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2452 2471]))                  
+                :type "void")
+                nil [2409 2554])
+            ("gradient" function
+               (:arguments 
+                  ( ("x" variable (:type "float") (reparse-symbol arg-sub-list) [2571 2579])
+                    ("a" variable (:type ("ACTIVATION" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2580 2593]))                  
+                :type "float")
+                nil [2556 3386])
+            ("gradient_array" function
+               (:arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [3408 3423])
+                    ("n" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [3424 3436])
+                    ("a" variable
+                       (:constant-flag t
+                        :type ("ACTIVATION" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3437 3456])
+                    ("delta" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [3457 3470]))                  
+                :type "void")
+                nil [3388 3558]))          
+      :file "activations.c"
+      :pointmax 3561
+      :fsize 3560
+      :lastmodtime '(22737 40696 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "activations.h"
+      :file "activations.h"
+      :fsize 2822
+      :lastmodtime '(22737 36708 0 0)))
+  :file "!Users!xiaoli!Desktop!darknet!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

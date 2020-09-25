@@ -1,0 +1,539 @@
+;; Object generalized_agent/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "generalized_agent/"
+  :tables
+  (list
+    (semanticdb-table "vehicle_state.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_SIMULATION_VEHICLE_STATE_H_" variable (:constant-flag t) nil [288 323])
+            ("tf2/LinearMath/Quaternion.h" include (:system-flag t) nil [325 363])
+            ("geometry_msgs/TransformStamped.h" include (:system-flag t) nil [364 407])
+            ("string" include (:system-flag t) nil [409 426])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("VehicleState" type
+                               (:members 
+                                  ( ("pos_latitude_" variable (:type "double") (reparse-symbol classsubparts) [584 605])
+                                    ("pos_longitude_" variable (:type "double") (reparse-symbol classsubparts) [608 630])
+                                    ("pos_altitude_" variable (:type "double") (reparse-symbol classsubparts) [633 654])
+                                    ("orientation_" variable (:type "double") (reparse-symbol classsubparts) [657 677])
+                                    ("speed_" variable (:type "double") (reparse-symbol classsubparts) [680 694])
+                                    ("acceleration_" variable (:type "double") (reparse-symbol classsubparts) [697 718])
+                                    ("steering_angle_degree_" variable (:type "double") (reparse-symbol classsubparts) [721 751])
+                                    ("path_id_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [754 775])
+                                    ("timestamp_" variable (:type "double") (reparse-symbol classsubparts) [779 797])
+                                    ("transform_world_to_vehicle_" variable (:type ("geometry_msgs::TransformStamped" type (:type "class") nil nil)) (reparse-symbol classsubparts) [800 860])
+                                    ("id_" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [881 893])
+                                    ("type_" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [896 910])
+                                    ("lane_status_" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [913 934])
+                                    ("cut_in_status_" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [937 960])
+                                    ("brake_light_" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [963 984])
+                                    ("blinker_info_" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [987 1009])
+                                    ("valid_" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1012 1027])
+                                    ("age_" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1030 1043])
+                                    ("leading_" variable
+                                       (:default-value "0"
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1046 1064])
+                                    ("length_" variable (:type "double") (reparse-symbol classsubparts) [1093 1108])
+                                    ("width_" variable (:type "double") (reparse-symbol classsubparts) [1111 1125])
+                                    ("height_" variable (:type "double") (reparse-symbol classsubparts) [1128 1143])
+                                    ("=" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("VehicleState" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1172 1194]))                                          
+                                        :type ("VehicleState" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1147 1933]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [541 1936]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [517 1939]))                  
+                :type "namespace")
+                nil [498 1966]))          
+      :file "vehicle_state.h"
+      :pointmax 1996
+      :fsize 1995
+      :lastmodtime '(23340 4123 186104 37000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MODULES_SIMULATION_VEHICLE_STATE_H_")
+          )
+)
+    (semanticdb-table "agent.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_SIMULATION_AGENT_H_" variable (:constant-flag t) nil [280 307])
+            ("tf2_ros/transform_broadcaster.h" include (:system-flag t) nil [309 351])
+            ("tf2_ros/transform_listener.h" include (:system-flag t) nil [352 391])
+            ("map" include (:system-flag t) nil [393 407])
+            ("memory" include (:system-flag t) nil [408 425])
+            ("string" include (:system-flag t) nil [426 443])
+            ("modules/simulation/core/map_service/map_service.h" include nil nil [445 505])
+            ("modules/simulation/proto/simulation.pb.h" include nil nil [506 557])
+            ("modules/simulation/core/generalized_agent/vehicle_state.h" include nil nil [558 626])
+            ("modules/state_estimation/proto/state_estimation.pb.h" include nil nil [627 690])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("GeneralizedSimulationAgent" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [904 911])
+                                    ("GeneralizedSimulationAgent" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("id" variable
+                                               (:default-value "-1"
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [952 963]))                                          
+                                        :type ("GeneralizedSimulationAgent" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [925 977])
+                                    ("GeneralizedSimulationAgent" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [983 1015])
+                                    ("vehicle_state" variable (:type ("VehicleState" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1046 1073])
+                                    ("GetId" function
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1118 1157])
+                                    ("GetState" function
+                                       (:constant-flag t
+                                        :type ("VehicleState" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1163 1225])
+                                    ("Step" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("timestep" variable (:type "double") (reparse-symbol arg-sub-list) [1335 1351])
+                                            ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [1352 1372])
+                                            ("steer" variable (:type "double") (reparse-symbol arg-sub-list) [1373 1386])
+                                            ("accel" variable (:type "double") (reparse-symbol arg-sub-list) [1387 1400]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1325 1401])
+                                    ("Step" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("timestep" variable (:type "double") (reparse-symbol arg-sub-list) [1509 1525])
+                                            ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [1526 1546])
+                                            ("x" variable (:type "double") (reparse-symbol arg-sub-list) [1547 1556])
+                                            ("y" variable (:type "double") (reparse-symbol arg-sub-list) [1557 1566])
+                                            ("orientation" variable (:type "double") (reparse-symbol arg-sub-list) [1567 1586]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1499 1587])
+                                    ("private" label nil (reparse-symbol classsubparts) [1602 1610])
+                                    ("id_" variable (:type "int") (reparse-symbol classsubparts) [1640 1648]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [867 1691]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [711 1702]))                  
+                :type "namespace")
+                nil [692 1704]))          
+      :file "agent.h"
+      :pointmax 1713
+      :fsize 1712
+      :lastmodtime '(23349 15651 618702 953000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MODULES_SIMULATION_AGENT_H_")
+          )
+)
+    (semanticdb-table "agent_service.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_SIMULATION_AGENT_SERVICE_H_" variable (:constant-flag t) nil [288 323])
+            ("tf2_ros/transform_broadcaster.h" include (:system-flag t) nil [325 367])
+            ("tf2_ros/transform_listener.h" include (:system-flag t) nil [368 407])
+            ("map" include (:system-flag t) nil [409 423])
+            ("memory" include (:system-flag t) nil [424 441])
+            ("string" include (:system-flag t) nil [442 459])
+            ("modules/simulation/core/map_service/map_service.h" include nil nil [461 521])
+            ("modules/simulation/proto/simulation.pb.h" include nil nil [522 573])
+            ("modules/simulation/core/generalized_agent/agent.h" include nil nil [574 634])
+            ("modules/simulation/core/generalized_agent/vehicle_state.h" include nil nil [635 703])
+            ("modules/state_estimation/proto/state_estimation.pb.h" include nil nil [704 767])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("beyond::simulation::GeneralizedSimulationAgent" using (:type ("beyond::simulation::GeneralizedSimulationAgent" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [812 865])
+                            ("AgentService" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [894 901])
+                                    ("AgentService" function
+                                       (:constructor-flag t
+                                        :type ("AgentService" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [906 923])
+                                    ("AgentService" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [929 947])
+                                    ("agents" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("unsigned int" type nil nil nil)
+                                              ("GeneralizedSimulationAgent" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [979 1037])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1082 1094])
+                                    ("StepAgents" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("timestep" variable (:type "double") (reparse-symbol arg-sub-list) [1120 1136])
+                                            ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [1137 1157])
+                                            ("sim_world_controls" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("SimulationWorldControls" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1158 1208]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1104 1209])
+                                    ("StepAgentsWithSimulationWorldMsg" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("world_msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("SimulationWorldMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1253 1289])
+                                            ("frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1290 1308]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1215 1309])
+                                    ("GetAgentMsgs" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("sim_world_msg" variable
+                                               (:pointer 1
+                                                :type ("SimulationWorldMsg" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1337 1371])
+                                            ("target_frame" variable
+                                               (:constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1372 1403]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1319 1404])
+                                    ("SetTransformBroadcaster" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("p_tb" variable (:type ("std::shared_ptr" type
+                                                 (:template-specifier 
+                                                    ( ("tf2_ros::TransformBroadcaster" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [1443 1495]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1414 1496])
+                                    ("SetMapServer" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("map_server" variable (:type ("std::shared_ptr" type
+                                                 (:template-specifier 
+                                                    ( ("MapService" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [1520 1559]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1502 1560])
+                                    ("ClearAgents" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1566 1585])
+                                    ("private" label nil (reparse-symbol classsubparts) [1588 1596])
+                                    ("tf_buffer" variable (:type ("tf2_ros::Buffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1626 1652])
+                                    ("tf_listener" variable
+                                       (:default-value "nullptr"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("tf2_ros::TransformListener" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1657 1723])
+                                    ("transform_broadcaster" variable
+                                       (:default-value "nullptr"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("tf2_ros::TransformBroadcaster" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1728 1807])
+                                    ("map_service" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("MapService" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1812 1852])
+                                    ("initialized" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1858 1883])
+                                    ("time_threshold_cleanup" variable
+                                       (:default-value "0.3"
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [1888 1924]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [871 1968]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [788 1971]))                  
+                :type "namespace")
+                nil [769 1973]))          
+      :file "agent_service.h"
+      :pointmax 1981
+      :fsize 1980
+      :lastmodtime '(23349 15672 190885 943000)
+      :unmatched-syntax '((punctuation 947 . 948) (punctuation 923 . 924) (punctuation 947 . 948))
+      :lexical-table 
+        '(("MODULES_SIMULATION_AGENT_SERVICE_H_")
+          )
+)
+    (semanticdb-table "agent_planning_utils.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("MODULES_SIMULATION_AGENT_SERVICE_H_" variable (:constant-flag t) nil [288 323])
+            ("tf2_ros/transform_broadcaster.h" include (:system-flag t) nil [325 367])
+            ("tf2_ros/transform_listener.h" include (:system-flag t) nil [368 407])
+            ("map" include (:system-flag t) nil [409 423])
+            ("memory" include (:system-flag t) nil [424 441])
+            ("string" include (:system-flag t) nil [442 459])
+            ("modules/simulation/core/map_service/map_service.h" include nil nil [461 521])
+            ("modules/simulation/proto/simulation.pb.h" include nil nil [522 573])
+            ("modules/simulation/core/generalized_agent/vehicle_state.h" include nil nil [574 642])
+            ("modules/state_estimation/proto/state_estimation.pb.h" include nil nil [643 706])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("SimulationAgentPlanningUtils" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [789 796])
+                                    ("SimulationAgentPlanningUtils" function (:type "int") (reparse-symbol classsubparts) [801 834])
+                                    ("SimulationAgentPlanningUtils" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [839 873])
+                                    ("StepFollowLane" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [960 975])
+                                            ("accel" variable (:type "double") (reparse-symbol arg-sub-list) [976 989])
+                                            ("target_speed" variable (:type "double") (reparse-symbol arg-sub-list) [990 1010]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [940 1011])
+                                    ("StepChangeLane" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [1037 1052])
+                                            ("accel" variable (:type "double") (reparse-symbol arg-sub-list) [1053 1066])
+                                            ("target_speed" variable (:type "double") (reparse-symbol arg-sub-list) [1067 1087]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1017 1088]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [751 1097]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [727 1104]))                  
+                :type "namespace")
+                nil [708 1106]))          
+      :file "agent_planning_utils.h"
+      :pointmax 1115
+      :fsize 1114
+      :lastmodtime '(23341 24454 971420 157000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MODULES_SIMULATION_AGENT_SERVICE_H_")
+          )
+)
+    (semanticdb-table "agent_planning_utils.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("modules/simulation/core/generalized_agent/agent_planning_utils.h" include nil nil [236 311])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("StepFollowLane" function
+                               (:parent "SimulationAgentPlanningUtils"
+                                :arguments 
+                                  ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [411 426])
+                                    ("accel" variable (:type "double") (reparse-symbol arg-sub-list) [427 440])
+                                    ("target_speed" variable (:type "double") (reparse-symbol arg-sub-list) [441 461]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [361 464])
+                            ("StepChangeLane" function
+                               (:parent "SimulationAgentPlanningUtils"
+                                :arguments 
+                                  ( ("delta_t" variable (:type "double") (reparse-symbol arg-sub-list) [520 535])
+                                    ("accel" variable (:type "double") (reparse-symbol arg-sub-list) [536 549])
+                                    ("target_speed" variable (:type "double") (reparse-symbol arg-sub-list) [550 570]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [470 573]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [333 580]))                  
+                :type "namespace")
+                nil [314 582]))          
+      :file "agent_planning_utils.cc"
+      :pointmax 583
+      :fsize 582
+      :lastmodtime '(23341 24584 296509 532000)
+      :unmatched-syntax '((semantic-list 410 . 461) (symbol 396 . 410) (punctuation 395 . 396) (punctuation 394 . 395) (symbol 366 . 394) (VOID 361 . 365)))
+    (semanticdb-table "agent.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("modules/simulation/core/generalized_agent/agent.h" include nil nil [236 296])
+            ("modules/simulation/core/physics_service/physics_service.h" include nil nil [297 365])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("Step" function
+                               (:parent "GeneralizedSimulationAgent"
+                                :arguments 
+                                  ( ("timestep" variable (:type "double") (reparse-symbol arg-sub-list) [452 468])
+                                    ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [511 531])
+                                    ("steer" variable (:type "double") (reparse-symbol arg-sub-list) [574 587])
+                                    ("accel" variable (:type "double") (reparse-symbol arg-sub-list) [630 643]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [414 745])
+                            ("Step" function
+                               (:parent "GeneralizedSimulationAgent"
+                                :arguments 
+                                  ( ("timestep" variable (:type "double") (reparse-symbol arg-sub-list) [793 809])
+                                    ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [810 830])
+                                    ("x" variable (:type "double") (reparse-symbol arg-sub-list) [831 840])
+                                    ("y" variable (:type "double") (reparse-symbol arg-sub-list) [841 850])
+                                    ("orientation" variable (:type "double") (reparse-symbol arg-sub-list) [851 870]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [755 887]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [386 894]))                  
+                :type "namespace")
+                nil [367 896]))          
+      :file "agent.cc"
+      :pointmax 898
+      :fsize 897
+      :lastmodtime '(23349 9896 899574 488000)
+      :unmatched-syntax nil)
+    (semanticdb-table "agent_service.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("geometry_msgs/PoseStamped.h" include (:system-flag t) nil [236 274])
+            ("tf2/LinearMath/Quaternion.h" include (:system-flag t) nil [275 313])
+            ("tf2/utils.h" include (:system-flag t) nil [314 336])
+            ("algorithm" include (:system-flag t) nil [338 358])
+            ("vector" include (:system-flag t) nil [359 376])
+            ("memory" include (:system-flag t) nil [377 394])
+            ("modules/simulation/core/generalized_agent/agent_service.h" include nil nil [396 464])
+            ("beyond" type
+               (:members 
+                  ( ("simulation" type
+                       (:members 
+                          ( ("beyond::simulation::SimulationAgentMsg" using (:type ("beyond::simulation::SimulationAgentMsg" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [513 558])
+                            ("Init" function
+                               (:parent "AgentService"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [568 761])
+                            ("StepAgents" function
+                               (:parent "AgentService"
+                                :arguments 
+                                  ( ("timestep" variable (:type "double") (reparse-symbol arg-sub-list) [801 817])
+                                    ("current_time" variable (:type "double") (reparse-symbol arg-sub-list) [818 838])
+                                    ("sim_world_controls" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SimulationWorldControls" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [839 889]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [771 1584])
+                            ("StepAgentsWithSimulationWorldMsg" function
+                               (:parent "AgentService"
+                                :arguments 
+                                  ( ("world_msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SimulationWorldMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1642 1678])
+                                    ("frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1679 1697]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1590 5712])
+                            ("GetAgentMsgs" function
+                               (:parent "AgentService"
+                                :arguments 
+                                  ( ("sim_world_msg" variable
+                                       (:pointer 1
+                                        :type ("SimulationWorldMsg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5754 5788])
+                                    ("target_frame" variable
+                                       (:constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5789 5820]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5722 8366])
+                            ("SetTransformBroadcaster" function
+                               (:parent "AgentService"
+                                :arguments 
+                                  ( ("p_tb" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("tf2_ros::TransformBroadcaster" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [8419 8471]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8376 8517])
+                            ("SetMapServer" function
+                               (:parent "AgentService"
+                                :arguments 
+                                  ( ("map_server" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("MapService" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [8555 8594]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8523 8636])
+                            ("ClearAgents" function
+                               (:parent "AgentService"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8642 8733]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [485 8740]))                  
+                :type "namespace")
+                nil [466 8742]))          
+      :file "agent_service.cc"
+      :pointmax 8743
+      :fsize 8742
+      :lastmodtime '(23349 13062 731638 900000)
+      :unmatched-syntax nil))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!simulation!core!generalized_agent!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
