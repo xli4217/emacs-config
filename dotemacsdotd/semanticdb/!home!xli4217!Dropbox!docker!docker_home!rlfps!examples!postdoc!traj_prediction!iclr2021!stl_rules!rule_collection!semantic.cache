@@ -1,0 +1,474 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("time" include nil nil [30 41])
+            ("future.utils" include nil nil [42 76])
+            ("torch" include nil nil [77 89])
+            ("utils.utils" include nil nil [90 162])
+            ("logging" include nil nil [163 177])
+            ("external_libs.stlcg.src.stlcg" include nil nil [179 224])
+            ("external_libs.stlcg.src.stlviz" include nil nil [225 269])
+            ("external_libs.stlcg.src.stlcg" include nil nil [271 323])
+            ("external_libs.stlcg.src.utils" include nil nil [324 389])
+            ("default_config" variable nil nil [391 438])
+            ("RuleBase" type
+               (:superclasses ("torch.nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("torch" code nil (reparse-symbol indented_block_body) [551 581])
+                            ("self" variable nil (reparse-symbol indented_block_body) [599 627])
+                            ("self" code nil (reparse-symbol indented_block_body) [636 662])
+                            ("self" variable nil (reparse-symbol indented_block_body) [677 703])
+                            ("self" variable nil (reparse-symbol indented_block_body) [712 738])
+                            ("self" variable nil (reparse-symbol indented_block_body) [748 770])
+                            ("self" code nil (reparse-symbol indented_block_body) [780 807])
+                            ("self" code nil (reparse-symbol indented_block_body) [816 840]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [492 496])
+                            ("config" variable nil (reparse-symbol function_parameters) [498 504])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [509 518])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [525 534]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [479 841])
+                    ("render_stl_parse_tree" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [917 921]))                          )
+                        (reparse-symbol indented_block_body) [891 1045])
+                    ("construct_formula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1084 1088]))                          )
+                        (reparse-symbol indented_block_body) [1062 1129])
+                    ("get_variable_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1238 1242])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1254 1258]))                          )
+                        (reparse-symbol indented_block_body) [1216 1302])
+                    ("get_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1321 1325])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1337 1341]))                          )
+                        (reparse-symbol indented_block_body) [1307 1385])
+                    ("get_robustness" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1409 1413])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1424 1428])
+                            ("float" variable nil (reparse-symbol function_parameters) [1441 1446])
+                            ("float" variable nil (reparse-symbol function_parameters) [1457 1462]))                          )
+                        (reparse-symbol indented_block_body) [1390 1724])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1753 1757])
+                            ("robustness_input" variable nil (reparse-symbol function_parameters) [1759 1775])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [1777 1783])
+                            ("scale" variable nil (reparse-symbol function_parameters) [1785 1790]))                          )
+                        (reparse-symbol indented_block_body) [1741 1888]))                  
+                :type "class")
+                nil [441 1888]))          
+      :file "rule_base.py"
+      :pointmax 1901
+      :fsize 1900
+      :lastmodtime '(24406 33435 694022 979000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("time" include nil nil [30 41])
+            ("future.utils" include nil nil [42 76])
+            ("torch" include nil nil [77 89])
+            ("utils.utils" include nil nil [90 162])
+            ("logging" include nil nil [163 177])
+            ("stlcg.src.stlcg" include nil nil [179 210])
+            ("stlcg.src.stlviz" include nil nil [211 241])
+            ("stlcg.src.stlcg" include nil nil [243 281])
+            ("stlcg.src.utils" include nil nil [282 333])
+            ("networkx" include nil nil [393 414])
+            ("graphviz" include nil nil [415 430])
+            ("pydot" include nil nil [431 443])
+            ("default_config" variable nil nil [445 484])
+            ("AlwaysStayCloseToBaseCtrl" type
+               (:superclasses ("RuleBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [623 651])
+                            ("self" code nil (reparse-symbol indented_block_body) [660 686])
+                            ("self" variable nil (reparse-symbol indented_block_body) [695 727])
+                            ("self" variable nil (reparse-symbol indented_block_body) [737 768])
+                            ("super" code nil (reparse-symbol indented_block_body) [778 856])
+                            ("print" code nil (reparse-symbol indented_block_body) [985 1046]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [547 551])
+                            ("dict" variable nil (reparse-symbol function_parameters) [560 564])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [569 578])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [585 594]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [534 1034])
+                    ("construct_parameters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1064 1068]))                          )
+                        (reparse-symbol indented_block_body) [1039 1185])
+                    ("construct_formula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1215 1219]))                          )
+                        (reparse-symbol indented_block_body) [1193 1363])
+                    ("get_variable_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1394 1398])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1410 1414]))                          )
+                        (reparse-symbol indented_block_body) [1372 1480])
+                    ("get_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1499 1503])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1515 1519]))                          )
+                        (reparse-symbol indented_block_body) [1485 2210]))                  
+                :type "class")
+                nil [486 2210]))          
+      :file "always_stay_close_to_base_ctrl.py"
+      :pointmax 2211
+      :fsize 2210
+      :lastmodtime '(24401 30400 241671 349000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("time" include nil nil [30 41])
+            ("future.utils" include nil nil [42 76])
+            ("torch" include nil nil [77 89])
+            ("utils.utils" include nil nil [90 162])
+            ("logging" include nil nil [163 177])
+            ("stlcg.src.stlcg" include nil nil [179 210])
+            ("stlcg.src.stlviz" include nil nil [211 241])
+            ("stlcg.src.stlcg" include nil nil [243 281])
+            ("stlcg.src.utils" include nil nil [282 333])
+            ("networkx" include nil nil [393 414])
+            ("graphviz" include nil nil [415 430])
+            ("pydot" include nil nil [431 443])
+            ("default_config" variable nil nil [445 484])
+            ("AlwaysStayCloseToBasePrediction" type
+               (:superclasses ("RuleBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [629 657])
+                            ("self" code nil (reparse-symbol indented_block_body) [666 692])
+                            ("self" variable nil (reparse-symbol indented_block_body) [701 733])
+                            ("self" variable nil (reparse-symbol indented_block_body) [743 774])
+                            ("super" code nil (reparse-symbol indented_block_body) [784 899])
+                            ("print" code nil (reparse-symbol indented_block_body) [909 973]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [553 557])
+                            ("dict" variable nil (reparse-symbol function_parameters) [566 570])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [575 584])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [591 600]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [540 961])
+                    ("construct_parameters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [991 995]))                          )
+                        (reparse-symbol indented_block_body) [966 1112])
+                    ("construct_formula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1142 1146]))                          )
+                        (reparse-symbol indented_block_body) [1120 1290])
+                    ("get_variable_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1321 1325])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1337 1341]))                          )
+                        (reparse-symbol indented_block_body) [1299 1407])
+                    ("get_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1426 1430])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1442 1446]))                          )
+                        (reparse-symbol indented_block_body) [1412 3044]))                  
+                :type "class")
+                nil [486 3044]))          
+      :file "always_stay_close_to_base_prediction.py"
+      :pointmax 3045
+      :fsize 3044
+      :lastmodtime '(24401 30406 229661 17000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("time" include nil nil [30 41])
+            ("future.utils" include nil nil [42 76])
+            ("torch" include nil nil [77 89])
+            ("utils.utils" include nil nil [90 162])
+            ("logging" include nil nil [163 177])
+            ("external_libs.stlcg.src.stlcg" include nil nil [179 224])
+            ("external_libs.stlcg.src.stlviz" include nil nil [225 269])
+            ("external_libs.stlcg.src.stlcg" include nil nil [271 323])
+            ("external_libs.stlcg.src.utils" include nil nil [324 389])
+            ("default_config" variable nil nil [449 486])
+            ("AlwaysStayCloseToBaseSteering" type
+               (:superclasses ("RuleBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [629 657])
+                            ("self" code nil (reparse-symbol indented_block_body) [666 692])
+                            ("self" variable nil (reparse-symbol indented_block_body) [702 743])
+                            ("self" variable nil (reparse-symbol indented_block_body) [753 784])
+                            ("super" code nil (reparse-symbol indented_block_body) [793 844])
+                            ("print" code nil (reparse-symbol indented_block_body) [977 1039]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [553 557])
+                            ("dict" variable nil (reparse-symbol function_parameters) [566 570])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [575 584])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [591 600]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [540 1027])
+                    ("construct_parameters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1057 1061]))                          )
+                        (reparse-symbol indented_block_body) [1032 1178])
+                    ("construct_formula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1217 1221]))                          )
+                        (reparse-symbol indented_block_body) [1195 1374])
+                    ("get_variable_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1407 1411])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1423 1427]))                          )
+                        (reparse-symbol indented_block_body) [1385 1493])
+                    ("get_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1512 1516])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1528 1532]))                          )
+                        (reparse-symbol indented_block_body) [1498 2137]))                  
+                :type "class")
+                nil [488 2137]))          
+      :file "always_stay_close_to_base_steering.py"
+      :pointmax 2142
+      :fsize 2141
+      :lastmodtime '(24401 30411 781651 536000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("time" include nil nil [30 41])
+            ("future.utils" include nil nil [42 76])
+            ("torch" include nil nil [77 89])
+            ("utils.utils" include nil nil [90 162])
+            ("logging" include nil nil [163 177])
+            ("external_libs.stlcg.src.stlcg" include nil nil [179 224])
+            ("external_libs.stlcg.src.stlviz" include nil nil [225 269])
+            ("external_libs.stlcg.src.stlcg" include nil nil [271 323])
+            ("external_libs.stlcg.src.utils" include nil nil [324 389])
+            ("stl_rules.rule_collection.rule_base" include nil nil [391 447])
+            ("default_config" variable nil nil [449 486])
+            ("AlwaysStayCloseToLane" type
+               (:superclasses ("RuleBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [608 636])
+                            ("self" code nil (reparse-symbol indented_block_body) [645 671])
+                            ("self" variable nil (reparse-symbol indented_block_body) [681 723])
+                            ("self" variable nil (reparse-symbol indented_block_body) [733 764])
+                            ("super" code nil (reparse-symbol indented_block_body) [773 824])
+                            ("print" code nil (reparse-symbol indented_block_body) [834 895]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [545 549])
+                            ("dict" variable nil (reparse-symbol function_parameters) [558 562])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [567 576])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [583 592]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [532 896])
+                    ("construct_parameters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [926 930]))                          )
+                        (reparse-symbol indented_block_body) [901 1047])
+                    ("construct_formula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1169 1173]))                          )
+                        (reparse-symbol indented_block_body) [1147 1317])
+                    ("get_variable_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1350 1354])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1366 1370]))                          )
+                        (reparse-symbol indented_block_body) [1328 1436])
+                    ("get_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1455 1459])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1471 1475]))                          )
+                        (reparse-symbol indented_block_body) [1441 2429]))                  
+                :type "class")
+                nil [488 2429]))          
+      :file "always_stay_close_to_lane.py"
+      :pointmax 2434
+      :fsize 2433
+      :lastmodtime '(24406 33827 917781 278000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("time" include nil nil [30 41])
+            ("future.utils" include nil nil [42 76])
+            ("torch" include nil nil [77 89])
+            ("utils.utils" include nil nil [90 162])
+            ("logging" include nil nil [163 177])
+            ("external_libs.stlcg.src.stlcg" include nil nil [179 224])
+            ("external_libs.stlcg.src.stlviz" include nil nil [225 269])
+            ("external_libs.stlcg.src.stlcg" include nil nil [271 323])
+            ("external_libs.stlcg.src.utils" include nil nil [324 389])
+            ("default_config" variable nil nil [449 486])
+            ("AlwaysStayCloseToObservedCtrl" type
+               (:superclasses ("RuleBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [573 601])
+                            ("self" code nil (reparse-symbol indented_block_body) [610 636])
+                            ("self" variable nil (reparse-symbol indented_block_body) [646 680])
+                            ("self" variable nil (reparse-symbol indented_block_body) [690 721])
+                            ("super" code nil (reparse-symbol indented_block_body) [730 781])
+                            ("print" code nil (reparse-symbol indented_block_body) [914 979]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [553 557])
+                            ("dict" variable nil (reparse-symbol function_parameters) [566 570])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [575 584])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [591 600]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [540 1023])
+                    ("construct_parameters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1053 1057]))                          )
+                        (reparse-symbol indented_block_body) [1028 1174])
+                    ("construct_formula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1213 1217]))                          )
+                        (reparse-symbol indented_block_body) [1191 1357])
+                    ("get_variable_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1390 1394])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1406 1410]))                          )
+                        (reparse-symbol indented_block_body) [1368 1476])
+                    ("get_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1495 1499])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1511 1515]))                          )
+                        (reparse-symbol indented_block_body) [1481 2296]))                  
+                :type "class")
+                nil [488 2296]))          
+      :file "always_stay_close_to_observed_ctrl.py"
+      :pointmax 2301
+      :fsize 2300
+      :lastmodtime '(24401 30201 934085 33000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("time" include nil nil [30 41])
+            ("future.utils" include nil nil [42 76])
+            ("torch" include nil nil [77 89])
+            ("utils.utils" include nil nil [90 162])
+            ("logging" include nil nil [163 177])
+            ("external_libs.stlcg.src.stlcg" include nil nil [179 224])
+            ("external_libs.stlcg.src.stlviz" include nil nil [225 269])
+            ("external_libs.stlcg.src.stlcg" include nil nil [271 323])
+            ("external_libs.stlcg.src.utils" include nil nil [324 389])
+            ("default_config" variable nil nil [449 486])
+            ("AlwaysStayCloseToObservedVelocity" type
+               (:superclasses ("RuleBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [633 661])
+                            ("self" code nil (reparse-symbol indented_block_body) [670 696])
+                            ("self" variable nil (reparse-symbol indented_block_body) [706 748])
+                            ("self" variable nil (reparse-symbol indented_block_body) [758 789])
+                            ("super" code nil (reparse-symbol indented_block_body) [798 849])
+                            ("print" code nil (reparse-symbol indented_block_body) [982 1048]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [557 561])
+                            ("dict" variable nil (reparse-symbol function_parameters) [570 574])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [579 588])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [595 604]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [544 1036])
+                    ("construct_parameters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1066 1070]))                          )
+                        (reparse-symbol indented_block_body) [1041 1187])
+                    ("construct_formula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1226 1230]))                          )
+                        (reparse-symbol indented_block_body) [1204 1374])
+                    ("get_variable_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1407 1411])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1423 1427]))                          )
+                        (reparse-symbol indented_block_body) [1385 1493])
+                    ("get_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1512 1516])
+                            ("dict" variable nil (reparse-symbol function_parameters) [1528 1532]))                          )
+                        (reparse-symbol indented_block_body) [1498 2106]))                  
+                :type "class")
+                nil [488 2106]))          
+      :file "always_stay_close_to_observed_vel.py"
+      :pointmax 2111
+      :fsize 2110
+      :lastmodtime '(24401 30420 777636 372000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!rlfps!examples!postdoc!traj_prediction!iclr2021!stl_rules!rule_collection!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

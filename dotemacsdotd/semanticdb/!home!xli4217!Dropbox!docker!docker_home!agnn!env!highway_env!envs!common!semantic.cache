@@ -1,0 +1,113 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("typing" include nil nil [11 59])
+            ("numpy" include nil nil [60 78])
+            ("pygame" include nil nil [79 92])
+            ("gym.spaces" include nil nil [93 124])
+            ("highway_env.envs.common.action" include nil nil [126 217])
+            ("highway_env.road.graphics" include nil nil [218 282])
+            ("highway_env.vehicle.graphics" include nil nil [283 339])
+            ("if" code nil nil [341 460])
+            ("EnvViewer" type
+               (:documentation "A viewer to render a highway driving environment."
+                :superclasses ("object")
+                :members 
+                  ( ("SAVE_IMAGES" variable nil (reparse-symbol indented_block_body) [553 572]))                  
+                :type "class")
+                nil [462 6878])
+            ("EventHandler" type
+               (:superclasses ("object")
+                :type "class")
+                nil [6880 9397]))          
+      :file "graphics.py"
+      :pointmax 9397
+      :fsize 9396
+      :lastmodtime '(24620 3358 314944 231000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "action.py"
+      :fsize 8419
+      :lastmodtime '(24612 60259 387813 949000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("copy" include nil nil [1 12])
+            ("os" include nil nil [13 22])
+            ("typing" include nil nil [23 73])
+            ("gym" include nil nil [74 84])
+            ("gym" include nil nil [85 108])
+            ("gym.utils" include nil nil [109 138])
+            ("numpy" include nil nil [139 157])
+            ("highway_env" include nil nil [159 188])
+            ("highway_env.envs.common.action" include nil nil [189 286])
+            ("highway_env.envs.common.observation" include nil nil [287 371])
+            ("highway_env.envs.common.finite_mdp" include nil nil [372 429])
+            ("highway_env.envs.common.graphics" include nil nil [430 484])
+            ("highway_env.vehicle.behavior" include nil nil [485 551])
+            ("highway_env.vehicle.controller" include nil nil [552 605])
+            ("highway_env.vehicle.kinematics" include nil nil [606 656])
+            ("Observation" variable nil nil [658 682])
+            ("AbstractEnv" type
+               (:documentation "
+    A generic environment for various tasks involving a vehicle driving on a road.
+
+    The environment contains a road populated with vehicles, and a controlled ego-vehicle that can change lane and
+    speed. The action space is fixed, but the observation space and reward function must be defined in the
+    environment implementations.
+    "
+                :superclasses ("gym.Env")
+                :members 
+                  ( ("ObservationType" code nil (reparse-symbol indented_block_body) [1091 1106])
+                    ("ActionType" code nil (reparse-symbol indented_block_body) [1124 1134])
+                    ("Optional" code nil (reparse-symbol indented_block_body) [1169 1187])
+                    ("metadata" variable nil (reparse-symbol indented_block_body) [1192 1243])
+                    ("PERCEPTION_DISTANCE" code nil (reparse-symbol indented_block_body) [1249 1297])
+                    ("\"\"\"The maximum distance of any vehicle present in the observation [m]\"\"\"" code nil (reparse-symbol indented_block_body) [1302 1374])
+                    ("to_finite_mdp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14331 14335]))                          )
+                        (reparse-symbol indented_block_body) [14313 14423])
+                    ("__deepcopy__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14445 14449])
+                            ("memo" variable nil (reparse-symbol function_parameters) [14451 14455]))                          
+                        :documentation "Perform a deep copy but without copying the environment viewer.")
+                        (reparse-symbol indented_block_body) [14428 14882]))                  
+                :type "class")
+                nil [685 14882])
+            ("MultiAgentWrapper" type
+               (:superclasses ("Wrapper")
+                :members 
+                  ( ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14931 14935])
+                            ("action" variable nil (reparse-symbol function_parameters) [14937 14943]))                          )
+                        (reparse-symbol indented_block_body) [14922 15116]))                  
+                :type "class")
+                nil [14884 15116]))          
+      :file "abstract.py"
+      :pointmax 15116
+      :fsize 15115
+      :lastmodtime '(24620 3410 644716 200000)
+      :unmatched-syntax '((INDENT_BLOCK 14123 . 14308) (NEWLINE 14122 . 14123) (COLON 14121 . 14122) (MINUS 14105 . 14106) (GT 14106 . 14107) (INDENT_BLOCK 13805 . 14070) (NEWLINE 13804 . 13805) (COLON 13803 . 13804) (MINUS 13787 . 13788) (GT 13788 . 13789) (BRACK_BLOCK 13765 . 13785) (NAME 13754 . 13758) (COLON 13758 . 13759) (INDENT_BLOCK 13508 . 13719) (NEWLINE 13507 . 13508) (COLON 13506 . 13507) (MINUS 13490 . 13491) (GT 13491 . 13492) (BRACK_BLOCK 13475 . 13488) (NAME 13464 . 13468) (COLON 13468 . 13469) (INDENT_BLOCK 13236 . 13431) (NEWLINE 13235 . 13236) (COLON 13234 . 13235) (MINUS 13218 . 13219) (GT 13219 . 13220) (NAME 13208 . 13211) (COLON 13211 . 13212) (INDENT_BLOCK 12764 . 13167) (NEWLINE 12763 . 12764) (COLON 12762 . 12763) (MINUS 12746 . 12747) (GT 12747 . 12748) (NAME 12718 . 12732) (COLON 12732 . 12733) (INDENT_BLOCK 12042 . 12684) (NEWLINE 12041 . 12042) (COLON 12040 . 12041) (MINUS 12024 . 12025) (GT 12025 . 12026) (NAME 11999 . 12017) (COLON 12017 . 12018) (INDENT_BLOCK 11464 . 11968) (NEWLINE 11463 . 11464) (COLON 11462 . 11463) (MINUS 11446 . 11447) (GT 11447 . 11448) (INDENT_BLOCK 10699 . 11422) (NEWLINE 10698 . 10699) (COLON 10697 . 10698) (MINUS 10690 . 10691) (GT 10691 . 10692) (INDENT_BLOCK 9185 . 10654) (NEWLINE 9184 . 9185) (COLON 9183 . 9184) (MINUS 9171 . 9172) (GT 9172 . 9173) (INDENT_BLOCK 8902 . 9134) (NEWLINE 8901 . 8902) (COLON 8900 . 8901) (MINUS 8893 . 8894) (GT 8894 . 8895) (INDENT_BLOCK 8173 . 8872) (NEWLINE 8172 . 8173) (COLON 8171 . 8172) (MINUS 8148 . 8149) (GT 8149 . 8150) (NAME 8111 . 8115) (COLON 8115 . 8116) (INDENT_BLOCK 7118 . 8089) (NEWLINE 7117 . 7118) (COLON 7116 . 7117) (MINUS 7109 . 7110) (GT 7110 . 7111) (ASSIGN 7087 . 7088) (BRACK_BLOCK 7078 . 7086) (NAME 7062 . 7068) (COLON 7068 . 7069) (INDENT_BLOCK 5962 . 7037) (NEWLINE 5961 . 5962) (COLON 5960 . 5961) (MINUS 5920 . 5921) (GT 5921 . 5922) (NAME 5890 . 5896) (COLON 5896 . 5897) (INDENT_BLOCK 5695 . 5861) (NEWLINE 5694 . 5695) (COLON 5693 . 5694) (MINUS 5686 . 5687) (GT 5687 . 5688) (INDENT_BLOCK 5186 . 5664) (NEWLINE 5185 . 5186) (COLON 5184 . 5185) (MINUS 5170 . 5171) (GT 5171 . 5172) (INDENT_BLOCK 4800 . 5149) (NEWLINE 4799 . 4800) (COLON 4798 . 4799) (MINUS 4790 . 4791) (GT 4791 . 4792) (NAME 4774 . 4780) (COLON 4780 . 4781) (INDENT_BLOCK 4596 . 4753) (NEWLINE 4595 . 4596) (COLON 4594 . 4595) (MINUS 4587 . 4588) (GT 4588 . 4589) (INDENT_BLOCK 4319 . 4559) (NEWLINE 4318 . 4319) (COLON 4317 . 4318) (MINUS 4309 . 4310) (GT 4310 . 4311) (NAME 4293 . 4299) (COLON 4299 . 4300) (INDENT_BLOCK 3901 . 4270) (NEWLINE 3900 . 3901) (COLON 3899 . 3900) (MINUS 3892 . 3893) (GT 3893 . 3894) (INDENT_BLOCK 3793 . 3851) (NEWLINE 3792 . 3793) (COLON 3791 . 3792) (MINUS 3784 . 3785) (GT 3785 . 3786) (NAME 3770 . 3776) (COLON 3776 . 3777) (INDENT_BLOCK 3668 . 3745) (NEWLINE 3667 . 3668) (COLON 3666 . 3667) (MINUS 3654 . 3655) (GT 3655 . 3656) (NAME 3636 . 3640) (COLON 3640 . 3641) (INDENT_BLOCK 2659 . 3611) (NEWLINE 2658 . 2659) (COLON 2657 . 2658) (MINUS 2650 . 2651) (GT 2651 . 2652) (INDENT_BLOCK 2512 . 2604) (NEWLINE 2511 . 2512) (COLON 2510 . 2511) (MINUS 2503 . 2504) (GT 2504 . 2505) (NAME 2485 . 2492) (COLON 2492 . 2493) (INDENT_BLOCK 2311 . 2442) (NEWLINE 2310 . 2311) (COLON 2309 . 2310) (MINUS 2299 . 2300) (GT 2300 . 2301) (INDENT_BLOCK 1453 . 2262) (NEWLINE 1428 . 1429) (COLON 1427 . 1428) (DEF 1380 . 1383) (MINUS 1420 . 1421) (GT 1421 . 1422) (NAME 1399 . 1405) (COLON 1405 . 1406) (NAME 1139 . 1167) (COLON 1167 . 1168) (NAME 1111 . 1122) (COLON 1122 . 1123) (NAME 1073 . 1089) (COLON 1089 . 1090) (INDENT_BLOCK 3793 . 3851) (NEWLINE 3792 . 3793) (COLON 3791 . 3792) (MINUS 3784 . 3785) (GT 3785 . 3786) (NAME 3770 . 3776) (COLON 3776 . 3777) (INDENT_BLOCK 3668 . 3745) (NEWLINE 3667 . 3668) (COLON 3666 . 3667) (MINUS 3654 . 3655) (GT 3655 . 3656) (NAME 3636 . 3640) (COLON 3640 . 3641) (INDENT_BLOCK 2659 . 3611) (NEWLINE 2658 . 2659) (COLON 2657 . 2658) (MINUS 2650 . 2651) (GT 2651 . 2652) (INDENT_BLOCK 2512 . 2604) (NEWLINE 2511 . 2512) (COLON 2510 . 2511) (MINUS 2503 . 2504) (GT 2504 . 2505) (NAME 2485 . 2492) (COLON 2492 . 2493) (INDENT_BLOCK 2311 . 2442) (NEWLINE 2310 . 2311) (COLON 2309 . 2310) (MINUS 2299 . 2300) (GT 2300 . 2301) (INDENT_BLOCK 1453 . 2262) (NEWLINE 1428 . 1429) (COLON 1427 . 1428) (DEF 1380 . 1383) (MINUS 1420 . 1421) (GT 1421 . 1422) (NAME 1399 . 1405) (COLON 1405 . 1406) (NAME 1139 . 1167) (COLON 1167 . 1168) (NAME 1111 . 1122) (COLON 1122 . 1123) (NAME 1073 . 1089) (COLON 1089 . 1090) (INDENT_BLOCK 12729 . 13132) (NEWLINE 12728 . 12729) (COLON 12727 . 12728) (MINUS 12711 . 12712) (GT 12712 . 12713) (NAME 12683 . 12697) (COLON 12697 . 12698) (INDENT_BLOCK 12007 . 12649) (NEWLINE 12006 . 12007) (COLON 12005 . 12006) (MINUS 11989 . 11990) (GT 11990 . 11991) (NAME 11964 . 11982) (COLON 11982 . 11983) (INDENT_BLOCK 11429 . 11933) (NEWLINE 11428 . 11429) (COLON 11427 . 11428) (MINUS 11411 . 11412) (GT 11412 . 11413) (INDENT_BLOCK 10664 . 11387) (NEWLINE 10663 . 10664) (COLON 10662 . 10663) (MINUS 10655 . 10656) (GT 10656 . 10657) (INDENT_BLOCK 9150 . 10619) (NEWLINE 9149 . 9150) (COLON 9148 . 9149) (MINUS 9136 . 9137) (GT 9137 . 9138) (INDENT_BLOCK 8867 . 9099) (NEWLINE 8866 . 8867) (COLON 8865 . 8866) (MINUS 8858 . 8859) (GT 8859 . 8860) (INDENT_BLOCK 8157 . 8837) (NEWLINE 8156 . 8157) (COLON 8155 . 8156) (MINUS 8132 . 8133) (GT 8133 . 8134) (NAME 8111 . 8115) (COLON 8115 . 8116) (INDENT_BLOCK 7118 . 8089) (NEWLINE 7117 . 7118) (COLON 7116 . 7117) (MINUS 7109 . 7110) (GT 7110 . 7111) (ASSIGN 7087 . 7088) (BRACK_BLOCK 7078 . 7086) (NAME 7062 . 7068) (COLON 7068 . 7069) (INDENT_BLOCK 5962 . 7037) (NEWLINE 5961 . 5962) (COLON 5960 . 5961) (MINUS 5920 . 5921) (GT 5921 . 5922) (NAME 5890 . 5896) (COLON 5896 . 5897) (INDENT_BLOCK 5695 . 5861) (NEWLINE 5694 . 5695) (COLON 5693 . 5694) (MINUS 5686 . 5687) (GT 5687 . 5688) (INDENT_BLOCK 5186 . 5664) (NEWLINE 5185 . 5186) (COLON 5184 . 5185) (MINUS 5170 . 5171) (GT 5171 . 5172) (INDENT_BLOCK 4800 . 5149) (NEWLINE 4799 . 4800) (COLON 4798 . 4799) (MINUS 4790 . 4791) (GT 4791 . 4792) (NAME 4774 . 4780) (COLON 4780 . 4781) (INDENT_BLOCK 4596 . 4753) (NEWLINE 4595 . 4596) (COLON 4594 . 4595) (MINUS 4587 . 4588) (GT 4588 . 4589) (INDENT_BLOCK 4319 . 4559) (NEWLINE 4318 . 4319) (COLON 4317 . 4318) (MINUS 4309 . 4310) (GT 4310 . 4311) (NAME 4293 . 4299) (COLON 4299 . 4300) (INDENT_BLOCK 3901 . 4270) (NEWLINE 3900 . 3901) (COLON 3899 . 3900) (MINUS 3892 . 3893) (GT 3893 . 3894) (INDENT_BLOCK 3793 . 3851) (NEWLINE 3792 . 3793) (COLON 3791 . 3792) (MINUS 3784 . 3785) (GT 3785 . 3786) (NAME 3770 . 3776) (COLON 3776 . 3777) (INDENT_BLOCK 3668 . 3745) (NEWLINE 3667 . 3668) (COLON 3666 . 3667) (MINUS 3654 . 3655) (GT 3655 . 3656) (NAME 3636 . 3640) (COLON 3640 . 3641) (INDENT_BLOCK 2659 . 3611) (NEWLINE 2658 . 2659) (COLON 2657 . 2658) (MINUS 2650 . 2651) (GT 2651 . 2652) (INDENT_BLOCK 2512 . 2604) (NEWLINE 2511 . 2512) (COLON 2510 . 2511) (MINUS 2503 . 2504) (GT 2504 . 2505) (NAME 2485 . 2492) (COLON 2492 . 2493) (INDENT_BLOCK 2311 . 2442) (NEWLINE 2310 . 2311) (COLON 2309 . 2310) (MINUS 2299 . 2300) (GT 2300 . 2301) (INDENT_BLOCK 1453 . 2262) (NEWLINE 1428 . 1429) (COLON 1427 . 1428) (DEF 1380 . 1383) (MINUS 1420 . 1421) (GT 1421 . 1422) (NAME 1399 . 1405) (COLON 1405 . 1406) (NAME 1139 . 1167) (COLON 1167 . 1168) (NAME 1111 . 1122) (COLON 1122 . 1123) (NAME 1073 . 1089) (COLON 1089 . 1090)))
+    (semanticdb-table "semanticdb-table"
+      :file "observation.py"
+      :fsize 16269
+      :lastmodtime '(24612 60259 455813 65000))
+    (semanticdb-table "semanticdb-table"
+      :file "finite_mdp.py"
+      :fsize 7512
+      :lastmodtime '(24612 60259 431813 377000)))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!env!highway_env!envs!common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

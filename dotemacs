@@ -4,12 +4,14 @@
                   ("elpa" . "http://tromey.com/elpa/")
                   ;; TODO: Maybe, use this after emacs24 is released
                   ;; (development versions of packages)
-                  ("melpa" . "http://melpa.milkbox.net/packages/")
+                  ("melpa" . "http://melpa.org/packages/")
                   ))
 (add-to-list 'package-archives source t))
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
+                                       
+;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+;; (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+;; (add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
+
 (package-initialize)
 
 ;;;;;;;;;; these are the packages to install at startup ;;;;;;;;;;;
@@ -443,18 +445,14 @@
  gdb-show-main t
  )
  
- ;;;;;;;;;; key-chord ;;;;;;;;;;;;                                                                                                                                                                                                              
-(require 'key-chord)                                                                                                                                                                                                                           
-                                                                                                                                                                                                                                               
-(key-chord-define-global "ff" 'find-file-in-project)   
-(key-chord-define-global "ms" 'magit-status)                                                                                                                                                                                           
-(key-chord-define-global "fs" 'find-file-in-project-by-selected) 
-(key-chord-define-global "oo" (lambda() (interactive)(find-file "~/notes.org"))) 
-;(key-chord-define-global "oo" 'helm-occur)
-(key-chord-define-global "tt" 'helm-top)
+ ;;;;;;;;;; key-chord ;;;;;;;;;;;;
+
+(require 'key-chord)                                                                                   (key-chord-define-global "ff" 'find-file-in-project)   
+(key-chord-define-global "ms" 'magit-status)                                                                                                              ;(key-chord-define-global "oo" 'helm-occur)
 (key-chord-define-global "cc" 'compile)
 (key-chord-define-global "fd" 'helm-semantic-or-imenu)    
- 
+(key-chord-define-global "ef" 'find-file)    
+
 (key-chord-mode +1)  
 
 ;;;;;;;; helm ;;;;;;;;;
@@ -466,6 +464,9 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t) 
 
+(setq jedi:server-args `("--log-level=DEBUG"
+                         ,(format "--log=%s" (expand-file-name "~/jediepcserver.log"))
+                         "--log-traceback"))
 
  ;;;;;;; helm-swoop ;;;;;;
  (global-set-key (kbd "C-s") #'helm-multi-swoop-all)

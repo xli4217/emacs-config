@@ -1,0 +1,314 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("pandas" include nil nil [20 39])
+            ("logging" include nil nil [40 54])
+            ("typing" include nil nil [55 116])
+            ("highway_env.road.lane" include nil nil [118 188])
+            ("highway_env.road.objects" include nil nil [189 234])
+            ("if" code nil nil [236 342])
+            ("logger" variable nil nil [343 379])
+            ("LaneIndex" variable nil nil [381 413])
+            ("Route" variable nil nil [414 437])
+            ("RoadNetwork" type
+               (:superclasses ("object")
+                :members 
+                  ( ("Dict" code nil (reparse-symbol indented_block_body) [478 518])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [552 567]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [537 541]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [524 568]))                  
+                :type "class")
+                nil [440 9954])
+            ("Road" type
+               (:documentation "A road is a set of lanes, and a set of vehicles driving on these lanes."
+                :superclasses ("object")
+                :members 
+                  ( ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14154 14158]))                          )
+                        (reparse-symbol indented_block_body) [14141 14201]))                  
+                :type "class")
+                nil [9956 14201]))          
+      :file "road.py"
+      :pointmax 14201
+      :fsize 14200
+      :lastmodtime '(24591 40649 298318 68000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("abc" include nil nil [1 40])
+            ("typing" include nil nil [41 71])
+            ("numpy" include nil nil [72 90])
+            ("highway_env" include nil nil [92 121])
+            ("highway_env.types" include nil nil [122 158])
+            ("AbstractLane" type
+               (:documentation "A lane on the road, described by its central curve."
+                :superclasses ("object")
+                :members 
+                  ( ("metaclass__" variable nil (reparse-symbol indented_block_body) [257 278])
+                    ("float" variable nil (reparse-symbol indented_block_body) [298 307])
+                    ("float" variable nil (reparse-symbol indented_block_body) [328 337])
+                    ("float" variable nil (reparse-symbol indented_block_body) [350 359])
+                    ("List" code nil (reparse-symbol indented_block_body) [376 392])
+                    ("distance" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3415 3419])
+                            ("position" variable nil (reparse-symbol function_parameters) [3421 3429]))                          
+                        :documentation "Compute the L1 distance [m] from a position to the lane.")
+                        (reparse-symbol indented_block_body) [3402 3615]))                  
+                :type "class")
+                nil [161 3615])
+            ("LineType" type
+               (:documentation "A lane side line type."
+                :members 
+                  ( ("NONE" variable nil (reparse-symbol indented_block_body) [3672 3680])
+                    ("STRIPED" variable nil (reparse-symbol indented_block_body) [3685 3696])
+                    ("CONTINUOUS" variable nil (reparse-symbol indented_block_body) [3701 3715])
+                    ("CONTINUOUS_LINE" variable nil (reparse-symbol indented_block_body) [3720 3739]))                  
+                :type "class")
+                nil [3617 3740])
+            ("StraightLane" type
+               (:documentation "A lane going in straight line."
+                :superclasses ("AbstractLane")
+                :type "class")
+                nil [3742 5764])
+            ("SineLane" type
+               (:documentation "A sinusoidal lane."
+                :superclasses ("StraightLane")
+                :type "class")
+                nil [5766 7466])
+            ("CircularLane" type
+               (:documentation "A lane going in circle arc."
+                :superclasses ("AbstractLane")
+                :type "class")
+                nil [7468 9457]))          
+      :file "lane.py"
+      :pointmax 9457
+      :fsize 9456
+      :lastmodtime '(24582 6540 36613 635000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("abc" include nil nil [1 20])
+            ("typing" include nil nil [21 55])
+            ("numpy" include nil nil [57 75])
+            ("LaneIndex" variable nil nil [77 109])
+            ("RoadObject" type
+               (:documentation "
+    Common interface for objects that appear on the road, beside vehicles.
+
+    For now we assume all objects are rectangular.
+    "
+                :superclasses ("ABC")
+                :members 
+                  ( ("LENGTH" variable nil (reparse-symbol indented_block_body) [284 296])
+                    ("WIDTH" variable nil (reparse-symbol indented_block_body) [322 333])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param road: the road instance where the object is placed in
+        :param position: cartesian position of object in the surface
+        :param speed: cartesian speed of object in the surface
+        :param heading: the angle from positive direction of horizontal axis
+        \"\"\"" code nil (reparse-symbol indented_block_body) [460 753])
+                            ("self" variable nil (reparse-symbol indented_block_body) [762 778])
+                            ("self" variable nil (reparse-symbol indented_block_body) [787 837])
+                            ("self" variable nil (reparse-symbol indented_block_body) [846 864])
+                            ("self" variable nil (reparse-symbol indented_block_body) [873 895])
+                            ("self" variable nil (reparse-symbol indented_block_body) [957 973]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [372 376])
+                            ("road" variable nil (reparse-symbol function_parameters) [378 382])
+                            ("float" variable nil (reparse-symbol function_parameters) [418 423])
+                            ("float" variable nil (reparse-symbol function_parameters) [439 444]))                          
+                        :documentation "
+        :param road: the road instance where the object is placed in
+        :param position: cartesian position of object in the surface
+        :param speed: cartesian speed of object in the surface
+        :param heading: the angle from positive direction of horizontal axis
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [359 974])
+                    ("make_on_lane" function
+                       (:documentation "
+        Create an object on a given lane at a longitudinal position.
+
+        :param road: the road instance where the object is placed in
+        :param lane_index: a tuple (origin node, destination node, lane id on the road).
+        :param longitudinal: longitudinal position along the lane
+        :return: An object with at the specified position
+        "
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [1013 1016])
+                            ("road" variable nil (reparse-symbol function_parameters) [1018 1022])
+                            ("LaneIndex" variable nil (reparse-symbol function_parameters) [1036 1045])
+                            ("float" variable nil (reparse-symbol function_parameters) [1061 1066]))                          
+                        :decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [979 1582])
+                    ("to_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1642 1646])
+                            ("origin_vehicle" variable nil (reparse-symbol function_parameters) [1648 1662])
+                            ("observe_intentions" variable nil (reparse-symbol function_parameters) [1669 1687]))                          )
+                        (reparse-symbol indented_block_body) [1630 2255])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2272 2276]))                          )
+                        (reparse-symbol indented_block_body) [2260 2362])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2380 2384]))                          )
+                        (reparse-symbol indented_block_body) [2367 2417]))                  
+                :type "class")
+                nil [112 2417])
+            ("Obstacle" type
+               (:documentation "Obstacles on the road."
+                :superclasses ("RoadObject")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [2486 2490]))                  
+                :type "class")
+                nil [2419 2491])
+            ("Landmark" type
+               (:documentation "Landmarks of certain areas on the road that must be reached."
+                :superclasses ("RoadObject")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [2598 2602]))                  
+                :type "class")
+                nil [2493 2603]))          
+      :file "objects.py"
+      :pointmax 2603
+      :fsize 2602
+      :lastmodtime '(24484 61841 463893 619000)
+      :unmatched-syntax '((NAME 1047 . 1059) (COLON 1059 . 1060) (NAME 1024 . 1034) (COLON 1034 . 1035) (NAME 430 . 437) (COLON 437 . 438) (COLON 416 . 417) (COMMA 409 . 410) (BRACK_BLOCK 402 . 409) (NAME 384 . 392) (COLON 392 . 393) (NAME 1047 . 1059) (COLON 1059 . 1060) (NAME 1024 . 1034) (COLON 1034 . 1035) (NAME 430 . 437) (COLON 437 . 438) (COLON 416 . 417) (COMMA 409 . 410) (BRACK_BLOCK 402 . 409) (NAME 384 . 392) (COLON 392 . 393)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 31])
+            ("numpy" include nil nil [33 51])
+            ("highway_env" include nil nil [53 82])
+            ("highway_env.road.road" include nil nil [83 134])
+            ("highway_env.vehicle.controller" include nil nil [135 207])
+            ("highway_env.vehicle.kinematics" include nil nil [208 268])
+            ("RegulatedRoad" type
+               (:superclasses ("Road")
+                :members 
+                  ( ("Tuple" variable nil (reparse-symbol indented_block_body) [318 351])
+                    ("int" variable nil (reparse-symbol indented_block_body) [378 385])
+                    ("float" variable nil (reparse-symbol indented_block_body) [406 416]))                  
+                :type "class")
+                nil [271 3721]))          
+      :file "regulation.py"
+      :pointmax 3721
+      :fsize 3720
+      :lastmodtime '(24484 61841 463893 619000)
+      :unmatched-syntax '((INDENT_BLOCK 2991 . 3721) (NEWLINE 2990 . 2991) (COLON 2989 . 2990) (MINUS 2982 . 2983) (GT 2983 . 2984) (NAME 2962 . 2966) (COLON 2966 . 2967) (NAME 2944 . 2951) (COLON 2951 . 2952) (NAME 2921 . 2923) (COLON 2923 . 2924) (NAME 2898 . 2900) (COLON 2900 . 2901) (INDENT_BLOCK 2364 . 2850) (NEWLINE 2363 . 2364) (COLON 2362 . 2363) (MINUS 2352 . 2353) (GT 2353 . 2354) (NAME 2339 . 2341) (COLON 2341 . 2342) (NAME 2326 . 2328) (COLON 2328 . 2329) (INDENT_BLOCK 985 . 2280) (NEWLINE 984 . 985) (COLON 983 . 984) (MINUS 976 . 977) (GT 977 . 978) (INDENT_BLOCK 778 . 942) (NEWLINE 777 . 778) (COLON 776 . 777) (MINUS 769 . 770) (GT 770 . 771) (NAME 758 . 760) (COLON 760 . 761) (INDENT_BLOCK 633 . 738) (NEWLINE 632 . 633) (COLON 631 . 632) (DEF 422 . 425) (MINUS 624 . 625) (GT 625 . 626) (NAME 594 . 608) (COLON 608 . 609) (PERIOD 573 . 574) (PERIOD 566 . 567) (NAME 553 . 562) (COLON 562 . 563) (ASSIGN 528 . 529) (BRACK_BLOCK 517 . 527) (NAME 502 . 511) (COLON 511 . 512) (ASSIGN 494 . 495) (BRACK_BLOCK 484 . 493) (NAME 470 . 478) (COLON 478 . 479) (NAME 441 . 448) (COLON 448 . 449) (NAME 390 . 404) (COLON 404 . 405) (NAME 356 . 376) (COLON 376 . 377) (NAME 302 . 316) (COLON 316 . 317)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 53])
+            ("numpy" include nil nil [55 73])
+            ("pygame" include nil nil [74 87])
+            ("highway_env.road.lane" include nil nil [89 145])
+            ("highway_env.road.road" include nil nil [146 184])
+            ("highway_env.types" include nil nil [185 221])
+            ("highway_env.vehicle.graphics" include nil nil [222 278])
+            ("highway_env.road.objects" include nil nil [279 334])
+            ("if" code nil nil [336 406])
+            ("PositionType" variable nil nil [407 460])
+            ("WorldSurface" type
+               (:documentation "A pygame Surface implementing a local coordinate system so that we can move and zoom in the displayed area."
+                :superclasses ("pygame.Surface")
+                :members 
+                  ( ("BLACK" variable nil (reparse-symbol indented_block_body) [623 640])
+                    ("GREY" variable nil (reparse-symbol indented_block_body) [645 667])
+                    ("GREEN" variable nil (reparse-symbol indented_block_body) [672 692])
+                    ("YELLOW" variable nil (reparse-symbol indented_block_body) [697 719])
+                    ("WHITE" variable nil (reparse-symbol indented_block_body) [724 747])
+                    ("INITIAL_SCALING" variable nil (reparse-symbol indented_block_body) [752 773])
+                    ("INITIAL_CENTERING" variable nil (reparse-symbol indented_block_body) [778 808])
+                    ("SCALING_FACTOR" variable nil (reparse-symbol indented_block_body) [813 833])
+                    ("MOVING_FACTOR" variable nil (reparse-symbol indented_block_body) [838 857]))                  
+                :type "class")
+                nil [463 3573])
+            ("LaneGraphics" type
+               (:documentation "A visualization of a lane."
+                :superclasses ("object")
+                :members 
+                  ( ("float" variable nil (reparse-symbol indented_block_body) [3662 3671])
+                    ("\"\"\" Offset between stripes [m]\"\"\"" code nil (reparse-symbol indented_block_body) [3676 3709])
+                    ("float" variable nil (reparse-symbol indented_block_body) [3730 3739])
+                    ("\"\"\" Length of a stripe [m]\"\"\"" code nil (reparse-symbol indented_block_body) [3744 3773])
+                    ("float" variable nil (reparse-symbol indented_block_body) [3793 3804])
+                    ("\"\"\" Width of a stripe [m]\"\"\"" code nil (reparse-symbol indented_block_body) [3809 3837]))                  
+                :type "class")
+                nil [3575 9379])
+            ("RoadGraphics" type
+               (:documentation "A visualization of a road lanes and vehicles."
+                :superclasses ("object")
+                :type "class")
+                nil [9381 11140])
+            ("RoadObjectGraphics" type
+               (:documentation "A visualization of objects on the road."
+                :members 
+                  ( ("YELLOW" variable nil (reparse-symbol indented_block_body) [11224 11246])
+                    ("BLUE" variable nil (reparse-symbol indented_block_body) [11251 11273])
+                    ("RED" variable nil (reparse-symbol indented_block_body) [11278 11299])
+                    ("GREEN" variable nil (reparse-symbol indented_block_body) [11304 11324])
+                    ("BLACK" variable nil (reparse-symbol indented_block_body) [11329 11349])
+                    ("DEFAULT_COLOR" variable nil (reparse-symbol indented_block_body) [11354 11376])
+                    ("display" function
+                       (:documentation "
+        Display a road objects on a pygame surface.
+
+        The objects is represented as a colored rotated rectangle
+
+        :param object_: the vehicle to be drawn
+        :param surface: the surface to draw the object on
+        :param transparent: whether the object should be drawn slightly transparent
+        :param offscreen: whether the rendering should be done offscreen or not
+        "
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [11411 11414])
+                            ("WorldSurface" variable nil (reparse-symbol function_parameters) [11448 11460])
+                            ("bool" variable nil (reparse-symbol function_parameters) [11475 11479])
+                            ("bool" variable nil (reparse-symbol function_parameters) [11516 11520]))                          
+                        :decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [11382 12673])
+                    ("get_color" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [14211 14214])
+                            ("bool" variable nil (reparse-symbol function_parameters) [14252 14256]))                          )
+                        (reparse-symbol indented_block_body) [14180 14788]))                  
+                :type "class")
+                nil [11142 14788]))          
+      :file "graphics.py"
+      :pointmax 14788
+      :fsize 14787
+      :lastmodtime '(24596 57512 657566 229000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!highway_env!road!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

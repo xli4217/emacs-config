@@ -1,0 +1,232 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("time" include nil nil [30 41])
+            ("torch" include nil nil [42 54])
+            ("cloudpickle" include nil nil [56 74])
+            ("tqdm" include nil nil [75 86])
+            ("utils.utils" include nil nil [88 215])
+            ("utils.configuration" include nil nil [216 261])
+            ("env.nuscenes.agents.nuscenes_agent" include nil nil [263 323])
+            ("external_libs.nuscenes.eval.prediction.splits" include nil nil [324 412])
+            ("pandas" include nil nil [414 433])
+            ("pathlib" include nil nil [434 458])
+            ("utils.utils" include nil nil [460 509])
+            ("utils.configuration" include nil nil [510 555])
+            ("zarr" include nil nil [556 567])
+            ("models.dynamics" include nil nil [569 623])
+            ("random" include nil nil [624 637])
+            ("get_data_from_sample_df" function (:arguments 
+              ( ("sample_df" variable nil (reparse-symbol function_parameters) [667 676])
+                ("sample_idx" variable nil (reparse-symbol function_parameters) [678 688])
+                ("num_closest_obs" variable nil (reparse-symbol function_parameters) [690 705])
+                ("pred_steps" variable nil (reparse-symbol function_parameters) [707 717]))              ) nil [639 3131])
+            ("get_closest_n_moving_vehicles_or_pedestrians" function (:arguments 
+              ( ("sample_df" variable nil (reparse-symbol function_parameters) [3182 3191])
+                ("n" variable nil (reparse-symbol function_parameters) [3193 3194]))              ) nil [3133 4513])
+            ("ProcessTrainingData" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [4625 4882])
+                            ("self" code nil (reparse-symbol indented_block_body) [4892 4918])
+                            ("if" code nil (reparse-symbol indented_block_body) [4936 5036])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5045 5108])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5119 5187])
+                            ("random" code nil (reparse-symbol indented_block_body) [5196 5227])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5475 5528]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4568 4572])
+                            ("config" variable nil (reparse-symbol function_parameters) [4574 4580]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4555 5529])
+                    ("update_all_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5563 5567]))                          )
+                        (reparse-symbol indented_block_body) [5543 5616])
+                    ("save_to_zarr" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5638 5642])
+                            ("dict" variable nil (reparse-symbol function_parameters) [5664 5668])
+                            ("str" variable nil (reparse-symbol function_parameters) [5686 5689]))                          )
+                        (reparse-symbol indented_block_body) [5621 6310])
+                    ("process_training_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6353 6357]))                          )
+                        (reparse-symbol indented_block_body) [6327 7465])
+                    ("process" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7491 7495])
+                            ("list" variable nil (reparse-symbol function_parameters) [7508 7512]))                          )
+                        (reparse-symbol indented_block_body) [7479 10223]))                  
+                :type "class")
+                nil [4515 10223])
+            ("ProcessedTrainingDataAnalysisAndFilter" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [10334 10360])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10369 10392]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10305 10309])
+                            ("data_dict" variable nil (reparse-symbol function_parameters) [10311 10320]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10292 10393])
+                    ("set_data_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10416 10420])
+                            ("data_dict" variable nil (reparse-symbol function_parameters) [10422 10431]))                          )
+                        (reparse-symbol indented_block_body) [10398 10472])
+                    ("ego_future_velocity" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10509 10513])
+                            ("filter_data" variable nil (reparse-symbol function_parameters) [10515 10526]))                          )
+                        (reparse-symbol indented_block_body) [10485 11310])
+                    ("filter_and_save_analysis" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11356 11360])
+                            ("save_dir" variable nil (reparse-symbol function_parameters) [11362 11370])
+                            ("filename" variable nil (reparse-symbol function_parameters) [11372 11380])
+                            ("filter_data" variable nil (reparse-symbol function_parameters) [11382 11393]))                          )
+                        (reparse-symbol indented_block_body) [11327 11590]))                  
+                :type "class")
+                nil [10233 11590])
+            ("if" code nil nil [11599 11635]))          
+      :file "process_training_data.py"
+      :pointmax 11644
+      :fsize 11643
+      :lastmodtime '(24676 64483 957018 21000)
+      :unmatched-syntax '((NAME 7497 . 7507) (COLON 7507 . 7508) (NAME 5673 . 5685) (COLON 5685 . 5686) (NAME 5644 . 5663) (COLON 5663 . 5664)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("torch" include nil nil [20 32])
+            ("matplotlib.pyplot" include nil nil [33 64])
+            ("utils.utils" include nil nil [65 127])
+            ("pandas" include nil nil [128 147])
+            ("plot_pred_powerset_dict" function (:arguments 
+              ( ("pred_powerset_dict" variable nil (reparse-symbol function_parameters) [179 197])
+                ("tb_logger" variable nil (reparse-symbol function_parameters) [199 208])
+                ("title_prefix" variable nil (reparse-symbol function_parameters) [210 222])
+                ("step" variable nil (reparse-symbol function_parameters) [224 228]))              ) nil [151 990])
+            ("EvaluationMetrics" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [1129 1133]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1114 1118]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1101 1134])
+                    ("get_accel_from_pos" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1162 1166])
+                            ("traj" variable nil (reparse-symbol function_parameters) [1168 1172]))                          )
+                        (reparse-symbol indented_block_body) [1139 1354])
+                    ("get_ade_and_fde" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1384 1388])
+                            ("batch" variable nil (reparse-symbol function_parameters) [1390 1395])
+                            ("out" variable nil (reparse-symbol function_parameters) [1397 1400]))                          )
+                        (reparse-symbol indented_block_body) [1364 1582])
+                    ("get_avg_accel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1605 1609])
+                            ("batch" variable nil (reparse-symbol function_parameters) [1611 1616])
+                            ("out" variable nil (reparse-symbol function_parameters) [1618 1621]))                          )
+                        (reparse-symbol indented_block_body) [1587 1963])
+                    ("get_dist_to_lane" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1997 2001])
+                            ("batch" variable nil (reparse-symbol function_parameters) [2003 2008])
+                            ("out" variable nil (reparse-symbol function_parameters) [2010 2013]))                          )
+                        (reparse-symbol indented_block_body) [1976 2815])
+                    ("get_min_dist_to_agents" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2855 2859])
+                            ("batch" variable nil (reparse-symbol function_parameters) [2861 2866])
+                            ("out" variable nil (reparse-symbol function_parameters) [2868 2871]))                          )
+                        (reparse-symbol indented_block_body) [2828 3829])
+                    ("get_metrics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3858 3862])
+                            ("batch" variable nil (reparse-symbol function_parameters) [3864 3869])
+                            ("out" variable nil (reparse-symbol function_parameters) [3871 3874]))                          )
+                        (reparse-symbol indented_block_body) [3842 4587]))                  
+                :type "class")
+                nil [1063 4587])
+            ("plot_scene" function
+               (:decorators 
+                  ( ("timeit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("idx" variable nil (reparse-symbol function_parameters) [4690 4693])
+                    ("title_prefix" variable nil (reparse-symbol function_parameters) [4710 4722])
+                    ("tokens" variable nil (reparse-symbol function_parameters) [4739 4745])
+                    ("target_traj" variable nil (reparse-symbol function_parameters) [4762 4773])
+                    ("pred_traj" variable nil (reparse-symbol function_parameters) [4790 4799])
+                    ("ego_observations" variable nil (reparse-symbol function_parameters) [4816 4832])
+                    ("ade" variable nil (reparse-symbol function_parameters) [4849 4852])
+                    ("scene_graphics" variable nil (reparse-symbol function_parameters) [4869 4883])
+                    ("current_epoch" variable nil (reparse-symbol function_parameters) [4900 4913])
+                    ("tb_logger" variable nil (reparse-symbol function_parameters) [4930 4939]))                  )
+                nil [4667 6482])
+            ("log_train_step" function (:arguments 
+              ( ("info_dict" variable nil (reparse-symbol function_parameters) [6504 6513])
+                ("tb_logger" variable nil (reparse-symbol function_parameters) [6518 6527])
+                ("agnn" variable nil (reparse-symbol function_parameters) [6534 6538])
+                ("log_interval" variable nil (reparse-symbol function_parameters) [6545 6557])
+                ("global_step" variable nil (reparse-symbol function_parameters) [6561 6572]))              ) nil [6485 7934])
+            ("log_validation_epoch_end" function (:arguments 
+              ( ("scene_graphics" variable nil (reparse-symbol function_parameters) [7974 7988])
+                ("ego_observations" variable nil (reparse-symbol function_parameters) [8019 8035])
+                ("tokens" variable nil (reparse-symbol function_parameters) [8066 8072])
+                ("metrics" variable nil (reparse-symbol function_parameters) [8103 8110])
+                ("target_traj" variable nil (reparse-symbol function_parameters) [8141 8152])
+                ("pred_traj" variable nil (reparse-symbol function_parameters) [8183 8192])
+                ("tb_logger" variable nil (reparse-symbol function_parameters) [8223 8232])
+                ("current_epoch" variable nil (reparse-symbol function_parameters) [8263 8276])
+                ("plot_top" variable nil (reparse-symbol function_parameters) [8307 8315])
+                ("log_scene_interval" variable nil (reparse-symbol function_parameters) [8348 8366])
+                ("pred_powerset_dict" variable nil (reparse-symbol function_parameters) [8400 8418]))              ) nil [7945 9895])
+            ("get_batch_stats" function (:arguments 
+              ( ("token_str" variable nil (reparse-symbol function_parameters) [9931 9940])
+                ("ndarray" variable nil (reparse-symbol function_parameters) [9978 9985])
+                ("ndarray" variable nil (reparse-symbol function_parameters) [10024 10031])
+                ("ndarray" variable nil (reparse-symbol function_parameters) [10070 10077])
+                ("dict" variable nil (reparse-symbol function_parameters) [10122 10126])
+                ("dict" variable nil (reparse-symbol function_parameters) [10171 10175]))              ) nil [9911 13258]))          
+      :file "utils.py"
+      :pointmax 13258
+      :fsize 13257
+      :lastmodtime '(24676 64483 957018 21000)
+      :unmatched-syntax '((NAME 10148 . 10169) (COLON 10169 . 10170) (NAME 10099 . 10120) (COLON 10120 . 10121) (PERIOD 10069 . 10070) (NAME 10053 . 10066) (COLON 10066 . 10067) (PERIOD 10023 . 10024) (NAME 10007 . 10019) (COLON 10019 . 10020) (PERIOD 9977 . 9978) (NAME 9962 . 9973) (COLON 9973 . 9974))))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!agn2!models!agn!nuscenes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

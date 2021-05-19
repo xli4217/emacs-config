@@ -1,0 +1,136 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("torch" include nil nil [20 32])
+            ("time" include nil nil [33 44])
+            ("external_libs.nuscenes.prediction.helper" include nil nil [45 115])
+            ("external_libs.nuscenes.eval.common.utils" include nil nil [116 183])
+            ("pyquaternion" include nil nil [184 219])
+            ("typing" include nil nil [220 260])
+            ("importlib" include nil nil [261 277])
+            ("IPython" include nil nil [280 325])
+            ("pyvirtualdisplay" include nil nil [326 362])
+            ("pathlib" include nil nil [363 387])
+            ("base64" include nil nil [388 401])
+            ("celluloid" include nil nil [402 430])
+            ("display" variable nil nil [432 478])
+            ("display" code nil nil [479 494])
+            ("show_video_in_jupyter" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [3151 3155]))              ) nil [3125 3599])
+            ("generate_video_from_images" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [3632 3636])
+                    ("str" variable nil (reparse-symbol function_parameters) [3647 3650])
+                    ("str" variable nil (reparse-symbol function_parameters) [3668 3671]))                  )
+                nil [3601 4287])
+            ("timeit" function (:arguments 
+              ( ("method" variable nil (reparse-symbol function_parameters) [4501 4507]))              ) nil [4490 4919])
+            ("Maxish" type
+               (:superclasses ("torch.nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [5009 5039])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5048 5070]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4973 4977])
+                            ("name" variable nil (reparse-symbol function_parameters) [4979 4983]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4960 5071])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5088 5092])
+                            ("x" variable nil (reparse-symbol function_parameters) [5094 5095])
+                            ("scale" variable nil (reparse-symbol function_parameters) [5097 5102])
+                            ("dim" variable nil (reparse-symbol function_parameters) [5104 5107])
+                            ("keepdim" variable nil (reparse-symbol function_parameters) [5111 5118]))                          )
+                        (reparse-symbol indented_block_body) [5076 5504]))                  
+                :type "class")
+                nil [4925 5504])
+            ("Minish" type
+               (:superclasses ("torch.nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [5589 5619])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5628 5650]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5553 5557])
+                            ("name" variable nil (reparse-symbol function_parameters) [5559 5563]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [5540 5651])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5668 5672])
+                            ("x" variable nil (reparse-symbol function_parameters) [5674 5675])
+                            ("scale" variable nil (reparse-symbol function_parameters) [5677 5682])
+                            ("dim" variable nil (reparse-symbol function_parameters) [5684 5687])
+                            ("keepdim" variable nil (reparse-symbol function_parameters) [5691 5698]))                          )
+                        (reparse-symbol indented_block_body) [5656 6085]))                  
+                :type "class")
+                nil [5505 6085])
+            ("assert_type" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [6103 6104])
+                ("name" variable nil (reparse-symbol function_parameters) [6106 6110])
+                ("expected_type" variable nil (reparse-symbol function_parameters) [6112 6125]))              ) nil [6087 6209])
+            ("assert_shape" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [6235 6236])
+                ("name" variable nil (reparse-symbol function_parameters) [6238 6242])
+                ("expected_shape" variable nil (reparse-symbol function_parameters) [6244 6258]))              ) nil [6218 6674])
+            ("assert_type_and_shape" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [7191 7192])
+                ("name" variable nil (reparse-symbol function_parameters) [7194 7198])
+                ("expected_type" variable nil (reparse-symbol function_parameters) [7200 7213])
+                ("expected_shape" variable nil (reparse-symbol function_parameters) [7215 7229]))              ) nil [7165 7325])
+            ("distance_from_point_to_discretized_lane" function (:arguments 
+              ( ("Tensor" variable nil (reparse-symbol function_parameters) [7388 7394])
+                ("Tensor" variable nil (reparse-symbol function_parameters) [7408 7414]))              ) nil [7326 7960])
+            ("batch_distance_from_trajectory_to_discretized_lanes" function (:arguments 
+              ( ("Tensor" variable nil (reparse-symbol function_parameters) [8035 8041])
+                ("Tensor" variable nil (reparse-symbol function_parameters) [8061 8067]))              ) nil [7961 9218])
+            ("distance_from_point_to_quadratic_curve" function (:arguments 
+              ( ("Tensor" variable nil (reparse-symbol function_parameters) [9278 9284])
+                ("Tensor" variable nil (reparse-symbol function_parameters) [9298 9304]))              ) nil [9223 10513])
+            ("split_list_for_multi_worker" function (:arguments 
+              ( ("list" variable nil (reparse-symbol function_parameters) [10561 10565])
+                ("int" variable nil (reparse-symbol function_parameters) [10578 10581]))              ) nil [10518 11031])
+            ("timing_val" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [11047 11051]))              ) nil [11032 11294])
+            ("get_distance" function (:arguments 
+              ( ("ndarray" variable nil (reparse-symbol function_parameters) [11331 11338])
+                ("ndarray" variable nil (reparse-symbol function_parameters) [11356 11363]))              ) nil [11299 12769])
+            ("set_function_arguments_decorator" function (:arguments 
+              ( ("config" variable nil (reparse-symbol function_parameters) [12808 12814]))              ) nil [12771 13533])
+            ("set_function_arguments_for_class" function (:arguments 
+              ( ("Cls" variable nil (reparse-symbol function_parameters) [13571 13574]))              ) nil [13534 13687])
+            ("set_function_arguments" function (:arguments 
+              ( ("dict" variable nil (reparse-symbol function_parameters) [13734 13738])
+                ("dict" variable nil (reparse-symbol function_parameters) [13753 13757]))              ) nil [13693 14198])
+            ("log_data" function (:arguments 
+              ( ("dict" variable nil (reparse-symbol function_parameters) [14223 14227])
+                ("py_logger" variable nil (reparse-symbol function_parameters) [14232 14241])
+                ("tb_logger" variable nil (reparse-symbol function_parameters) [14248 14257]))              ) nil [14199 15228])
+            ("if" code nil nil [15252 15333]))          
+      :file "utils.py"
+      :pointmax 15333
+      :fsize 15332
+      :lastmodtime '(24668 10102 248822 156000)
+      :unmatched-syntax '((NAME 14212 . 14221) (COLON 14221 . 14222) (NAME 13745 . 13751) (COLON 13751 . 13752) (NAME 13720 . 13733) (COLON 13733 . 13734) (PERIOD 11355 . 11356) (NAME 11340 . 11352) (COLON 11352 . 11353) (PERIOD 11330 . 11331) (NAME 11316 . 11327) (COLON 11327 . 11328) (NAME 10567 . 10577) (COLON 10577 . 10578) (NAME 10550 . 10560) (COLON 10560 . 10561) (PERIOD 9297 . 9298) (NAME 9286 . 9291) (COLON 9291 . 9292) (PERIOD 9277 . 9278) (NAME 9266 . 9271) (COLON 9271 . 9272) (PERIOD 8060 . 8061) (NAME 8043 . 8053) (COLON 8053 . 8054) (PERIOD 8034 . 8035) (NAME 8017 . 8027) (COLON 8027 . 8028) (PERIOD 7407 . 7408) (NAME 7396 . 7401) (COLON 7401 . 7402) (PERIOD 7387 . 7388) (NAME 7370 . 7380) (COLON 7380 . 7381) (INDENT_BLOCK 4337 . 4488) (COLON 4335 . 4336) (DEF 4293 . 4296) (MINUS 4324 . 4325) (GT 4325 . 4326) (NAME 4313 . 4317) (COLON 4317 . 4318) (NAME 3652 . 3667) (COLON 3667 . 3668) (NAME 3638 . 3646) (COLON 3646 . 3647) (INDENT_BLOCK 2463 . 3123) (COLON 2461 . 2462) (MINUS 2448 . 2449) (GT 2449 . 2450) (BRACK_BLOCK 2418 . 2446) (COLON 2411 . 2412) (COMMA 2366 . 2367) (BRACK_BLOCK 2345 . 2366) (NAME 2327 . 2338) (COLON 2338 . 2339) (PERIOD 2282 . 2283) (NAME 2267 . 2278) (COLON 2278 . 2279) (INDENT_BLOCK 1407 . 2230) (COLON 1405 . 1406) (MINUS 1392 . 1393) (GT 1393 . 1394) (BRACK_BLOCK 1362 . 1390) (COLON 1355 . 1356) (COMMA 1310 . 1311) (BRACK_BLOCK 1289 . 1310) (NAME 1271 . 1282) (COLON 1282 . 1283) (PERIOD 1226 . 1227) (NAME 1211 . 1222) (COLON 1222 . 1223) (INDENT_BLOCK 908 . 1174) (COLON 906 . 907) (MINUS 893 . 894) (GT 894 . 895) (NAME 868 . 884) (COLON 884 . 885) (INDENT_BLOCK 540 . 838) (COLON 538 . 539) (DEF 496 . 499) (MINUS 530 . 531) (GT 531 . 532) (NAME 518 . 521) (COLON 521 . 522)))
+    (semanticdb-table "semanticdb-table"
+      :file "configuration.py"
+      :fsize 1803
+      :lastmodtime '(24668 10102 320821 844000)))
+  :file "!home!xli4217!Dropbox!docker!docker_home!nuscenes_ioc!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

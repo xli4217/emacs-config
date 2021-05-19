@@ -1,0 +1,296 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("torch" include nil nil [14 34])
+            ("os" include nil nil [35 44])
+            ("numpy" include nil nil [45 63])
+            ("pytorch_lightning" include nil nil [64 94])
+            ("pytorch_lightning" include nil nil [95 133])
+            ("pandas" include nil nil [184 203])
+            ("cloudpickle" include nil nil [204 222])
+            ("utils.utils" include nil nil [223 290])
+            ("utils.configuration" include nil nil [291 336])
+            ("future.utils" include nil nil [337 371])
+            ("loguru" include nil nil [372 397])
+            ("copy" include nil nil [399 410])
+            ("ModelBase" type
+               (:superclasses ("pl.LightningModule")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [540 684])
+                            ("self" code nil (reparse-symbol indented_block_body) [693 722])
+                            ("pl" code nil (reparse-symbol indented_block_body) [732 765])
+                            ("self" variable nil (reparse-symbol indented_block_body) [774 797])
+                            ("if" code nil (reparse-symbol indented_block_body) [815 1085])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1094 1120])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1129 1155])
+                            ("if" code nil (reparse-symbol indented_block_body) [1165 1430])
+                            ("if" code nil (reparse-symbol indented_block_body) [1464 1641]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [468 472])
+                            ("config" variable nil (reparse-symbol function_parameters) [474 480])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [485 494])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [501 510])
+                            ("hparams" variable nil (reparse-symbol function_parameters) [517 524]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [455 1641])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1671 1675]))                          )
+                        (reparse-symbol indented_block_body) [1658 1703])
+                    ("update_all_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1728 1732]))                          )
+                        (reparse-symbol indented_block_body) [1708 1787])
+                    ("save_config" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1816 1820])
+                            ("str" variable nil (reparse-symbol function_parameters) [1839 1842]))                          )
+                        (reparse-symbol indented_block_body) [1800 1958])
+                    ("get_example_model_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1991 1995]))                          )
+                        (reparse-symbol indented_block_body) [1963 2050])
+                    ("_on_validation_epoch_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2092 2096]))                          )
+                        (reparse-symbol indented_block_body) [2063 2112]))                  
+                :type "class")
+                nil [413 2112]))          
+      :file "model_base.py"
+      :pointmax 2112
+      :fsize 2111
+      :lastmodtime '(24684 63403 506990 171000)
+      :unmatched-syntax '((NAME 1822 . 1838) (COLON 1838 . 1839) (INDENT_BLOCK 1959 . 2112) ($EOI 2112 . 2112) (INDENT_BLOCK 1704 . 2112) ($EOI 2112 . 2112) (NAME 1800 . 1816) (COLON 1816 . 1817)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("utils.utils" include nil nil [14 50])
+            ("shapely" include nil nil [51 65])
+            ("shapely" include nil nil [66 94])
+            ("numpy" include nil nil [95 113])
+            ("copy" include nil nil [114 125])
+            ("create_polynomial_features" function
+               (:documentation " Creates polynomial interpolation features, to allow more efficient leveraging of lane information.
+
+    Parameters
+    ----------
+    ln_coords: list, list of lane coordinates.
+    horizon: float, the horizon for which we want the approximation to be good.
+    stepsize: float, the step size for sample points.
+    degree: int, the degree of the polynomial
+
+    Returns
+    -------
+    result_polynomial_features: np.array, of size n_points x (2xdegree), to capture polynomial coefficients on x,y.
+    "
+                :arguments 
+                  ( ("ln_coords" variable nil (reparse-symbol function_parameters) [158 167])
+                    ("horizon" variable nil (reparse-symbol function_parameters) [169 176])
+                    ("stepsize" variable nil (reparse-symbol function_parameters) [180 188])
+                    ("degree" variable nil (reparse-symbol function_parameters) [194 200]))                  )
+                nil [127 1801])
+            ("second_order_unicycle_one_step" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1837 1838])
+                ("u" variable nil (reparse-symbol function_parameters) [1840 1841])
+                ("dt" variable nil (reparse-symbol function_parameters) [1843 1845]))              ) nil [1802 2962])
+            ("get_single_integrator_ctrl_from_traj" function (:arguments 
+              ( ("Tensor" variable nil (reparse-symbol function_parameters) [3016 3022]))              ) nil [2963 3197])
+            ("get_estimated_yaw_from_pos_traj" function (:arguments 
+              ( ("Tensor" variable nil (reparse-symbol function_parameters) [3250 3256])
+                ("float" variable nil (reparse-symbol function_parameters) [3270 3275]))              ) nil [3198 3658])
+            ("get_unicycle_ctrl_from_traj" function (:arguments 
+              ( ("Tensor" variable nil (reparse-symbol function_parameters) [3711 3717])
+                ("float" variable nil (reparse-symbol function_parameters) [3725 3730])
+                ("int" variable nil (reparse-symbol function_parameters) [3744 3747]))              ) nil [3667 4095])
+            ("get_unicycle_ctrl_from_2d_traj" function (:arguments 
+              ( ("Tensor" variable nil (reparse-symbol function_parameters) [4143 4149])
+                ("float" variable nil (reparse-symbol function_parameters) [4157 4162])
+                ("float" variable nil (reparse-symbol function_parameters) [4176 4181]))              ) nil [4096 4861])
+            ("single_integrator" function (:arguments 
+              ( ("Tensor" variable nil (reparse-symbol function_parameters) [4893 4899])
+                ("Tensor" variable nil (reparse-symbol function_parameters) [4910 4916])
+                ("float" variable nil (reparse-symbol function_parameters) [4921 4926]))              ) nil [4862 5147])
+            ("unicycle" function (:arguments 
+              ( ("Tensor" variable nil (reparse-symbol function_parameters) [5175 5181])
+                ("Tensor" variable nil (reparse-symbol function_parameters) [5205 5211])
+                ("float" variable nil (reparse-symbol function_parameters) [5230 5235])
+                ("frame" variable nil (reparse-symbol function_parameters) [5250 5255]))              ) nil [5153 6131])
+            ("create_traj_from_control" function (:arguments 
+              ( ("Tensor" variable nil (reparse-symbol function_parameters) [6175 6181])
+                ("Tensor" variable nil (reparse-symbol function_parameters) [6220 6226])
+                ("float" variable nil (reparse-symbol function_parameters) [6261 6266])
+                ("model" variable nil (reparse-symbol function_parameters) [6297 6302])
+                ("frame" variable nil (reparse-symbol function_parameters) [6353 6358]))              ) nil [6136 7312]))          
+      :file "dynamics.py"
+      :pointmax 7312
+      :fsize 7311
+      :lastmodtime '(24676 64481 284973 231000)
+      :unmatched-syntax '((NAME 6257 . 6259) (COLON 6259 . 6260) (PERIOD 6219 . 6220) (NAME 6212 . 6213) (COLON 6213 . 6214) (PERIOD 6174 . 6175) (NAME 6165 . 6167) (COLON 6167 . 6168) (NAME 5226 . 5228) (COLON 5228 . 5229) (PERIOD 5204 . 5205) (NAME 5196 . 5197) (COLON 5197 . 5198) (PERIOD 5174 . 5175) (NAME 5166 . 5167) (COLON 5167 . 5168) (NAME 4918 . 4920) (COLON 4920 . 4921) (PERIOD 4909 . 4910) (NAME 4901 . 4902) (COLON 4902 . 4903) (PERIOD 4892 . 4893) (NAME 4884 . 4885) (COLON 4885 . 4886) (NAME 4164 . 4174) (COLON 4174 . 4175) (NAME 4151 . 4155) (COLON 4155 . 4156) (PERIOD 4142 . 4143) (NAME 4131 . 4135) (COLON 4135 . 4136) (NAME 3732 . 3742) (COLON 3742 . 3743) (NAME 3719 . 3723) (COLON 3723 . 3724) (PERIOD 3710 . 3711) (NAME 3699 . 3703) (COLON 3703 . 3704) (NAME 3258 . 3268) (COLON 3268 . 3269) (PERIOD 3249 . 3250) (NAME 3234 . 3242) (COLON 3242 . 3243) (PERIOD 3015 . 3016) (NAME 3004 . 3008) (COLON 3008 . 3009)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("pathlib" include nil nil [1 25])
+            ("utils.utils" include nil nil [26 75])
+            ("utils.configuration" include nil nil [76 121])
+            ("numpy" include nil nil [122 140])
+            ("tqdm" include nil nil [141 152])
+            ("os" include nil nil [153 162])
+            ("cloudpickle" include nil nil [163 181])
+            ("torch.utils.data" include nil nil [182 218])
+            ("zarr" include nil nil [219 230])
+            ("torch" include nil nil [231 243])
+            ("AgnDataset" type
+               (:superclasses ("Dataset")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [317 397])
+                            ("self" code nil (reparse-symbol indented_block_body) [406 432])
+                            ("self" variable nil (reparse-symbol indented_block_body) [450 475])
+                            ("print" code nil (reparse-symbol indented_block_body) [485 549])
+                            ("self" variable nil (reparse-symbol indented_block_body) [558 622])
+                            ("print" code nil (reparse-symbol indented_block_body) [632 689]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [290 294])
+                            ("config" variable nil (reparse-symbol function_parameters) [296 302]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [277 690])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [708 712]))                          )
+                        (reparse-symbol indented_block_body) [696 751])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [773 777])
+                            ("index" variable nil (reparse-symbol function_parameters) [779 784]))                          )
+                        (reparse-symbol indented_block_body) [757 1104]))                  
+                :type "class")
+                nil [245 1104]))          
+      :file "dataset.py"
+      :pointmax 1104
+      :fsize 1103
+      :lastmodtime '(24689 10140 585316 286000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("torch.nn" include nil nil [14 35])
+            ("os" include nil nil [36 45])
+            ("numpy" include nil nil [46 64])
+            ("pytorch_lightning" include nil nil [65 95])
+            ("utils.utils" include nil nil [96 132])
+            ("Encoder" type
+               (:superclasses ("pl.LightningModule")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        cell_size is the size of cell_state.
+        hidden_size is the size of hidden_state, or say the output_state of each step
+        \"\"\"" code nil (reparse-symbol indented_block_body) [258 404])
+                            ("self" variable nil (reparse-symbol indented_block_body) [413 535])
+                            ("self" code nil (reparse-symbol indented_block_body) [553 579])
+                            ("super" code nil (reparse-symbol indented_block_body) [596 632])
+                            ("self" code nil (reparse-symbol indented_block_body) [642 725])
+                            ("self" variable nil (reparse-symbol indented_block_body) [735 837])
+                            ("self" variable nil (reparse-symbol indented_block_body) [913 934]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [231 235])
+                            ("config" variable nil (reparse-symbol function_parameters) [238 244]))                          
+                        :documentation "
+        cell_size is the size of cell_state.
+        hidden_size is the size of hidden_state, or say the output_state of each step
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [216 935])
+                    ("get_sample_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [970 974])
+                            ("seq_len" variable nil (reparse-symbol function_parameters) [976 983])
+                            ("feature_dim" variable nil (reparse-symbol function_parameters) [985 996]))                          )
+                        (reparse-symbol indented_block_body) [949 1050])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1077 1081])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [1098 1104])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [1126 1132])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [1157 1163]))                          )
+                        (reparse-symbol indented_block_body) [1063 1925]))                  
+                :type "class")
+                nil [177 1925])
+            ("Decoder" type
+               (:superclasses ("pl.LightningModule")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        cell_size is the size of cell_state.
+        hidden_size is the size of hidden_state, or say the output_state of each step
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2010 2156])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2166 2317])
+                            ("self" code nil (reparse-symbol indented_block_body) [2326 2352])
+                            ("super" code nil (reparse-symbol indented_block_body) [2361 2397])
+                            ("input_size" variable nil (reparse-symbol indented_block_body) [2407 2445])
+                            ("output_size" variable nil (reparse-symbol indented_block_body) [2454 2494])
+                            ("hidden_size_per_layer" variable nil (reparse-symbol indented_block_body) [2503 2563])
+                            ("num_layers" variable nil (reparse-symbol indented_block_body) [2572 2610])
+                            ("self" code nil (reparse-symbol indented_block_body) [2628 2681])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2691 2763])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2772 2832]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1982 1986])
+                            ("config" variable nil (reparse-symbol function_parameters) [1989 1995]))                          
+                        :documentation "
+        cell_size is the size of cell_state.
+        hidden_size is the size of hidden_state, or say the output_state of each step
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1967 2833])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2860 2864])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [2881 2887])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [2909 2915])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [2935 2941]))                          )
+                        (reparse-symbol indented_block_body) [2846 3495]))                  
+                :type "class")
+                nil [1928 3495])
+            ("make_mlp" function (:arguments 
+              ( ("dim_list" variable nil (reparse-symbol function_parameters) [3514 3522])
+                ("activation" variable nil (reparse-symbol function_parameters) [3524 3534])
+                ("batch_norm" variable nil (reparse-symbol function_parameters) [3543 3553])
+                ("dropout" variable nil (reparse-symbol function_parameters) [3561 3568])
+                ("output_activation" variable nil (reparse-symbol function_parameters) [3572 3589])
+                ("output_scale" variable nil (reparse-symbol function_parameters) [3596 3608]))              ) nil [3501 4286]))          
+      :file "model_utils.py"
+      :pointmax 4286
+      :fsize 4285
+      :lastmodtime '(24676 64481 424975 581000)
+      :unmatched-syntax '((PERIOD 2934 . 2935) (NAME 2917 . 2927) (COLON 2927 . 2928) (PERIOD 2908 . 2909) (NAME 2889 . 2901) (COLON 2901 . 2902) (PERIOD 2880 . 2881) (NAME 2867 . 2873) (COLON 2873 . 2874) (PERIOD 1156 . 1157) (NAME 1139 . 1149) (COLON 1149 . 1150) (PERIOD 1125 . 1126) (NAME 1106 . 1118) (COLON 1118 . 1119) (PERIOD 1097 . 1098) (NAME 1084 . 1090) (COLON 1090 . 1091))))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!agn2!models!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

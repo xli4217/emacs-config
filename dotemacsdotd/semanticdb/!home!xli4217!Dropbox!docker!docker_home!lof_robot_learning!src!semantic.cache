@@ -1,0 +1,321 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("os.path" include nil nil [11 53])
+            ("pyrep" include nil nil [54 77])
+            ("pyrep.robots.arms.panda" include nil nil [78 119])
+            ("pyrep.objects.shape" include nil nil [120 157])
+            ("numpy" include nil nil [159 177])
+            ("gym" include nil nil [178 188])
+            ("torch" include nil nil [189 201])
+            ("time" include nil nil [202 213])
+            ("robot_env" include nil nil [214 244])
+            ("argparse" include nil nil [245 260])
+            ("rlbench.gym" include nil nil [262 280])
+            ("spinup.algos.pytorch.ppo.ppo" include nil nil [281 325])
+            ("HEADLESS" variable nil nil [423 438])
+            ("logger_kwargs" variable nil nil [440 560])
+            ("ac_kwargs" variable nil nil [562 717])
+            ("env" variable nil nil [1084 1125])
+            ("print" code nil nil [1543 1557]))          
+      :file "train.py"
+      :pointmax 1559
+      :fsize 1558
+      :lastmodtime '(24602 21994 981843 598000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"
+An example of how one might use PyRep to create their RL environments.
+In this case, the Franka Panda must reach a randomly placed target.
+This script contains examples of:
+    - RL environment example.
+    - Scene manipulation.
+    - Environment resets.
+    - Setting joint properties (control loop disabled, motor locked at 0 vel)
+\"\"\"" code nil nil [1 341])
+            ("os" include nil nil [342 351])
+            ("os.path" include nil nil [352 394])
+            ("pyrep" include nil nil [395 418])
+            ("pyrep.robots.arms.panda" include nil nil [419 460])
+            ("pyrep.objects.shape" include nil nil [461 498])
+            ("numpy" include nil nil [499 517])
+            ("gym" include nil nil [518 528])
+            ("spinup.algos.pytorch.ppo.ppo" include nil nil [529 573])
+            ("torch" include nil nil [574 586])
+            ("time" include nil nil [587 598])
+            ("pyrep.const" include nil nil [600 634])
+            ("pyrep.objects.dummy" include nil nil [635 672])
+            ("pyrep.objects.vision_sensor" include nil nil [673 725])
+            ("pyrep.objects.proximity_sensor" include nil nil [726 784])
+            ("pyrep.robots.end_effectors.panda_gripper" include nil nil [785 850])
+            ("SCENE_FILE" variable nil nil [852 962])
+            ("sample_region_dim" variable nil nil [1017 1062])
+            ("sample_region_pos" variable nil nil [1063 1109])
+            ("POS_MIN, POS_MAX" code nil nil [1110 1221])
+            ("RobotEnv" type
+               (:superclasses ("gym.Env")
+                :members 
+                  ( ("metadata" variable nil (reparse-symbol indented_block_body) [1255 1306])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1415 1432])
+                            ("self" code nil (reparse-symbol indented_block_body) [1441 1486])
+                            ("self" code nil (reparse-symbol indented_block_body) [1495 1510])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1519 1539])
+                            ("self" code nil (reparse-symbol indented_block_body) [1548 1590])
+                            ("self" code nil (reparse-symbol indented_block_body) [1599 1649])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1698 1738])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1747 1810])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1896 1932])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1941 1971])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1989 2018])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2027 2066])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2084 2144])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2154 2181])
+                            ("if" code nil (reparse-symbol indented_block_body) [2190 2414])
+                            ("action_high" variable nil (reparse-symbol indented_block_body) [2423 2464])
+                            ("action_low" variable nil (reparse-symbol indented_block_body) [2473 2514])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2524 2610])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2619 2726])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2735 2756])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2766 2800])
+                            ("if" code nil (reparse-symbol indented_block_body) [2809 3091])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3109 3142])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3151 3188])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3197 3232])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3241 3278])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3287 3328])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3337 3376])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3386 3415])
+                            ("self" code nil (reparse-symbol indented_block_body) [3433 3455]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1325 1329])
+                            ("headless" variable nil (reparse-symbol function_parameters) [1331 1339])
+                            ("render_camera" variable nil (reparse-symbol function_parameters) [1346 1359])
+                            ("option_rollout" variable nil (reparse-symbol function_parameters) [1367 1381])
+                            ("episode_len" variable nil (reparse-symbol function_parameters) [1389 1400]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1312 3456])
+                    ("render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3480 3484]))                          )
+                        (reparse-symbol indented_block_body) [3469 3558])
+                    ("update_all_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3583 3587]))                          )
+                        (reparse-symbol indented_block_body) [3563 4665])
+                    ("_get_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4698 4702]))                          )
+                        (reparse-symbol indented_block_body) [4683 5345])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5368 5372]))                          )
+                        (reparse-symbol indented_block_body) [5358 6214])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6228 6232])
+                            ("action" variable nil (reparse-symbol function_parameters) [6234 6240])
+                            ("obj_name" variable nil (reparse-symbol function_parameters) [6242 6250]))                          )
+                        (reparse-symbol indented_block_body) [6219 8798])
+                    ("gripper_actuate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8823 8827])
+                            ("amount" variable nil (reparse-symbol function_parameters) [8829 8835])
+                            ("velocity" variable nil (reparse-symbol function_parameters) [8837 8845]))                          )
+                        (reparse-symbol indented_block_body) [8803 8861])
+                    ("shutdown" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8887 8891]))                          )
+                        (reparse-symbol indented_block_body) [8874 8944]))                  
+                :type "class")
+                nil [1225 8944])
+            ("if" code nil nil [8947 10967]))          
+      :file "robot_env.py"
+      :pointmax 10967
+      :fsize 10966
+      :lastmodtime '(24602 22806 180488 788000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("robot_env" include nil nil [1 31])
+            ("os" include nil nil [32 41])
+            ("torch" include nil nil [42 54])
+            ("gym" include nil nil [55 65])
+            ("time" include nil nil [66 77])
+            ("Option" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [183 214])
+                            ("print" code nil (reparse-symbol indented_block_body) [223 237])
+                            ("print" code nil (reparse-symbol indented_block_body) [246 266]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [153 157])
+                            ("str" variable nil (reparse-symbol function_parameters) [169 172]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [140 267])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [295 299])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [314 320]))                          )
+                        (reparse-symbol indented_block_body) [280 463])
+                    ("get_value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [482 486])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [501 507]))                          )
+                        (reparse-symbol indented_block_body) [468 542])
+                    ("is_terminated" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [565 569])
+                            ("state" variable nil (reparse-symbol function_parameters) [571 576]))                          )
+                        (reparse-symbol indented_block_body) [547 600])
+                    ("environment_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [626 630]))                          )
+                        (reparse-symbol indented_block_body) [605 646]))                  
+                :type "class")
+                nil [114 646])
+            ("option_load_path" variable nil nil [705 810])
+            ("option" variable nil nil [811 844])
+            ("render_camera" variable nil nil [900 921])
+            ("env" variable nil nil [922 981])
+            ("run_rollout" function (:arguments 
+              ( ("policy" variable nil (reparse-symbol function_parameters) [1047 1053])
+                ("env" variable nil (reparse-symbol function_parameters) [1055 1058])
+                ("num_episodes" variable nil (reparse-symbol function_parameters) [1060 1072]))              ) nil [1031 1466])
+            ("run_rollout" code nil nil [1468 1496]))          
+      :file "rollout.py"
+      :pointmax 1497
+      :fsize 1496
+      :lastmodtime '(24603 17077 819176 658000)
+      :unmatched-syntax '((PERIOD 500 . 501) (NAME 488 . 493) (COLON 493 . 494) (PERIOD 313 . 314) (NAME 301 . 306) (COLON 306 . 307) (NAME 159 . 168) (COLON 168 . 169) (PERIOD 500 . 501) (NAME 488 . 493) (COLON 493 . 494) (PERIOD 313 . 314) (NAME 301 . 306) (COLON 306 . 307) (NAME 159 . 168) (COLON 168 . 169)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("gym" include nil nil [1 11])
+            ("rlbench.gym" include nil nil [12 30])
+            ("rlbench.gym.rlbench_env" include nil nil [32 78])
+            ("typing" include nil nil [79 109])
+            ("numpy" include nil nil [110 128])
+            ("pyrep.objects.shape" include nil nil [129 166])
+            ("pyrep.objects.proximity_sensor" include nil nil [167 225])
+            ("rlbench.const" include nil nil [226 258])
+            ("rlbench.backend.task" include nil nil [259 296])
+            ("rlbench.backend.spawn_boundary" include nil nil [297 353])
+            ("rlbench.backend.conditions" include nil nil [354 410])
+            ("rlbench.environment" include nil nil [412 455])
+            ("rlbench.action_modes" include nil nil [456 514])
+            ("rlbench.observation_config" include nil nil [515 571])
+            ("ReachTarget" type
+               (:superclasses ("Task")
+                :type "class")
+                nil [574 2238])
+            ("ReachTargetEnv" variable nil nil [2240 2336])
+            ("if" code nil nil [2338 2513]))          
+      :file "rl_bench_robot_env.py"
+      :pointmax 3637
+      :fsize 3636
+      :lastmodtime '(24587 45323 241009 250000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("robot_env" include nil nil [1 31])
+            ("os" include nil nil [32 41])
+            ("torch" include nil nil [42 54])
+            ("gym" include nil nil [55 65])
+            ("time" include nil nil [66 77])
+            ("numpy" include nil nil [79 97])
+            ("Option" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [244 275])
+                            ("print" code nil (reparse-symbol indented_block_body) [284 298])
+                            ("print" code nil (reparse-symbol indented_block_body) [307 327])
+                            ("self" variable nil (reparse-symbol indented_block_body) [337 362])
+                            ("self" variable nil (reparse-symbol indented_block_body) [371 405]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [171 175])
+                            ("str" variable nil (reparse-symbol function_parameters) [187 190])
+                            ("pick_or_place" variable nil (reparse-symbol function_parameters) [192 205])
+                            ("target" variable nil (reparse-symbol function_parameters) [214 220]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [158 406])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [434 438])
+                            ("dict" variable nil (reparse-symbol function_parameters) [450 454]))                          )
+                        (reparse-symbol indented_block_body) [419 1001])
+                    ("get_value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1028 1032])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [1047 1053]))                          )
+                        (reparse-symbol indented_block_body) [1014 1088])
+                    ("get_target_name" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1113 1117]))                          )
+                        (reparse-symbol indented_block_body) [1093 1152])
+                    ("is_terminated" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1183 1187])
+                            ("state" variable nil (reparse-symbol function_parameters) [1189 1194]))                          )
+                        (reparse-symbol indented_block_body) [1165 1218])
+                    ("environment_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1244 1248]))                          )
+                        (reparse-symbol indented_block_body) [1223 1264]))                  
+                :type "class")
+                nil [132 1264])
+            ("option_load_path" variable nil nil [1322 1401])
+            ("pick_red_option" variable nil nil [1402 1487])
+            ("place_red_option" variable nil nil [1488 1573])
+            ("pick_green_option" variable nil nil [1574 1663])
+            ("place_green_option" variable nil nil [1664 1753])
+            ("render_camera" variable nil nil [1809 1830])
+            ("env" variable nil nil [1831 1928])
+            ("run_rollout" function (:arguments 
+              ( ("options" variable nil (reparse-symbol function_parameters) [1994 2001])
+                ("env" variable nil (reparse-symbol function_parameters) [2003 2006])
+                ("num_episodes" variable nil (reparse-symbol function_parameters) [2008 2020]))              ) nil [1978 2755])
+            ("options_dict" variable nil nil [2794 2955])
+            ("run_rollout" code nil nil [2956 2990]))          
+      :file "option_rollout.py"
+      :pointmax 3057
+      :fsize 3056
+      :lastmodtime '(24597 630 121223 593000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!lof_robot_learning!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

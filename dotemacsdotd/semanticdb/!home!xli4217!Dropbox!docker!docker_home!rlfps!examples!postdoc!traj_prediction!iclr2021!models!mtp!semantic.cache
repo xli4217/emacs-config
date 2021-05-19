@@ -1,0 +1,189 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("nuscenes.prediction.input_representation.static_layers" include nil nil [1 89])
+            ("nuscenes.prediction.input_representation.agents" include nil nil [90 176])
+            ("nuscenes.prediction.input_representation.interface" include nil nil [177 259])
+            ("nuscenes.prediction.input_representation.combinators" include nil nil [260 335])
+            ("nuscenes.prediction.helper" include nil nil [336 388])
+            ("torch" include nil nil [390 402])
+            ("numpy" include nil nil [403 421])
+            ("cloudpickle" include nil nil [422 440])
+            ("agents.nuscenes_agent" include nil nil [442 489])
+            ("collections" include nil nil [490 525])
+            ("utils.utils" include nil nil [526 562])
+            ("default_config" variable nil nil [564 619])
+            ("MtpDft" type
+               (:superclasses ("NuScenesAgent")
+                :members 
+                  ( ("'''
+    A class to construct input representations and labels from instance and sample token (token lists)
+    '''" code nil (reparse-symbol indented_block_body) [655 769])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [828 856])
+                            ("self" code nil (reparse-symbol indented_block_body) [865 891])
+                            ("super" code nil (reparse-symbol indented_block_body) [901 1006])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1024 1044])
+                            ("self" code nil (reparse-symbol indented_block_body) [1054 1119])
+                            ("self" code nil (reparse-symbol indented_block_body) [1128 1195])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1243 1308])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1317 1427])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1436 1554]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [787 791])
+                            ("config" variable nil (reparse-symbol function_parameters) [793 799])
+                            ("helper" variable nil (reparse-symbol function_parameters) [816 822])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [829 838])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [845 854]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [774 1628])
+                    ("construct_input_representations" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1677 1681])
+                            ("sample_token" variable nil (reparse-symbol function_parameters) [1683 1695])
+                            ("instance_token" variable nil (reparse-symbol function_parameters) [1697 1711]))                          )
+                        (reparse-symbol indented_block_body) [1641 2437])
+                    ("construct_target" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2480 2484])
+                            ("sample_token" variable nil (reparse-symbol function_parameters) [2486 2498])
+                            ("instance_token" variable nil (reparse-symbol function_parameters) [2500 2514]))                          )
+                        (reparse-symbol indented_block_body) [2459 3118])
+                    ("construct_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3151 3155])
+                            ("sample_token" variable nil (reparse-symbol function_parameters) [3157 3169])
+                            ("instance_token" variable nil (reparse-symbol function_parameters) [3171 3185]))                          )
+                        (reparse-symbol indented_block_body) [3132 3609]))                  
+                :type "class")
+                nil [622 3609])
+            ("if" code nil nil [3668 4351]))          
+      :file "mtp_dft.py"
+      :pointmax 4351
+      :fsize 4350
+      :lastmodtime '(24402 40379 314962 818000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("torch" include nil nil [14 34])
+            ("torch.nn" include nil nil [35 71])
+            ("torch.optim.lr_scheduler" include nil nil [72 134])
+            ("numpy" include nil nil [136 154])
+            ("time" include nil nil [155 166])
+            ("future.utils" include nil nil [167 201])
+            ("logging" include nil nil [202 216])
+            ("external_libs.nuscenes.prediction.models.backbone" include nil nil [218 313])
+            ("external_libs.nuscenes.prediction.models.mtp" include nil nil [314 385])
+            ("external_libs.nuscenes.prediction.models.mtp" include nil nil [386 450])
+            ("external_libs.nuscenes.prediction.helper" include nil nil [452 535])
+            ("pytorch_lightning" include nil nil [537 567])
+            ("pytorch_lightning" include nil nil [568 606])
+            ("models.mtp.mtp_dft" include nil nil [608 645])
+            ("agents.nuscenes_agent" include nil nil [646 693])
+            ("models.model_base" include nil nil [694 733])
+            ("utils.utils" include nil nil [735 774])
+            ("MetricsCallback" type
+               (:superclasses ("Callback")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [881 899])
+                            ("self" variable nil (reparse-symbol indented_block_body) [908 925]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [866 870]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [853 926])
+                    ("on_validation_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [953 957])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [959 966])
+                            ("pl_module" variable nil (reparse-symbol function_parameters) [968 977]))                          )
+                        (reparse-symbol indented_block_body) [931 1034]))                  
+                :type "class")
+                nil [815 1034])
+            ("default_config" variable nil nil [1091 1309])
+            ("Mtp" type
+               (:superclasses ("ModelBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1473 1501])
+                            ("self" code nil (reparse-symbol indented_block_body) [1510 1536])
+                            ("super" code nil (reparse-symbol indented_block_body) [1546 1665])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1674 1691])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1740 1789])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1850 2167])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2176 2321])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2332 2416])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2426 2478]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1351 1355])
+                            ("config" variable nil (reparse-symbol function_parameters) [1357 1363])
+                            ("helper" variable nil (reparse-symbol function_parameters) [1368 1374])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [1381 1390])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [1397 1406])
+                            ("hparams" variable nil (reparse-symbol function_parameters) [1413 1420]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1338 2479])
+                    ("update_all_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2512 2516]))                          )
+                        (reparse-symbol indented_block_body) [2492 2532])
+                    ("get_sample_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2558 2562]))                          )
+                        (reparse-symbol indented_block_body) [2537 2643])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2777 2781])
+                            ("model_input" variable nil (reparse-symbol function_parameters) [2783 2794])
+                            ("args" variable nil (reparse-symbol function_parameters) [2796 2801])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [2803 2811]))                          )
+                        (reparse-symbol indented_block_body) [2765 3366])
+                    ("training_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3397 3401])
+                            ("batch" variable nil (reparse-symbol function_parameters) [3403 3408])
+                            ("batch_idx" variable nil (reparse-symbol function_parameters) [3410 3419]))                          )
+                        (reparse-symbol indented_block_body) [3379 3834])
+                    ("validation_epoch_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5761 5765])
+                            ("outputs" variable nil (reparse-symbol function_parameters) [5767 5774]))                          )
+                        (reparse-symbol indented_block_body) [5736 5828])
+                    ("configure_optimizers" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5867 5871]))                          )
+                        (reparse-symbol indented_block_body) [5842 6154]))                  
+                :type "class")
+                nil [1311 6154])
+            ("if" code nil nil [6163 7342]))          
+      :file "mtp.py"
+      :pointmax 7367
+      :fsize 7366
+      :lastmodtime '(24409 21903 310909 920000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!rlfps!examples!postdoc!traj_prediction!iclr2021!models!mtp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

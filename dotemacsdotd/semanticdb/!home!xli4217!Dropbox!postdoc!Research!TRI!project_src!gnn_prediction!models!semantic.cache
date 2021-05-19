@@ -1,0 +1,214 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("torch.nn" include nil nil [14 35])
+            ("AttrProxy" type
+               (:documentation "
+    Translates index lookups into attribute lookups.
+    To implement some trick which able to use list of nn.Module in a nn.Module
+    see https://discuss.pytorch.org/t/list-of-nn-module-in-a-nn-module/219/2
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [335 355])
+                            ("self" variable nil (reparse-symbol indented_block_body) [364 384]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [304 308])
+                            ("module" variable nil (reparse-symbol function_parameters) [310 316])
+                            ("prefix" variable nil (reparse-symbol function_parameters) [318 324]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [291 385])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [406 410])
+                            ("i" variable nil (reparse-symbol function_parameters) [412 413]))                          )
+                        (reparse-symbol indented_block_body) [390 474]))                  
+                :type "class")
+                nil [37 474])
+            ("Propogator" type
+               (:documentation "
+    Gated Propogator for GGNN
+    Using LSTM gating mechanism
+    "
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [648 682])
+                            ("self" variable nil (reparse-symbol indented_block_body) [692 712])
+                            ("self" variable nil (reparse-symbol indented_block_body) [721 753])
+                            ("self" variable nil (reparse-symbol indented_block_body) [763 877])
+                            ("self" variable nil (reparse-symbol indented_block_body) [886 1001])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1010 1120]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [600 604])
+                            ("state_dim" variable nil (reparse-symbol function_parameters) [606 615])
+                            ("n_node" variable nil (reparse-symbol function_parameters) [617 623])
+                            ("n_edge_types" variable nil (reparse-symbol function_parameters) [625 637]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [587 1121])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1138 1142])
+                            ("state_in" variable nil (reparse-symbol function_parameters) [1144 1152])
+                            ("state_out" variable nil (reparse-symbol function_parameters) [1154 1163])
+                            ("state_cur" variable nil (reparse-symbol function_parameters) [1165 1174])
+                            ("A" variable nil (reparse-symbol function_parameters) [1176 1177]))                          )
+                        (reparse-symbol indented_block_body) [1126 1676]))                  
+                :type "class")
+                nil [476 1676])
+            ("GGNN" type
+               (:documentation "
+    Gated Graph Sequence Neural Networks (GGNN)
+    Mode: SelectNode
+    Implementation based on https://arxiv.org/abs/1511.05493
+    "
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1884 1912])
+                            ("assert" code nil (reparse-symbol indented_block_body) [1922 2034])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2044 2074])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2083 2123])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2132 2168])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2177 2201])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2210 2236])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2245 2277])
+                            ("for" code nil (reparse-symbol indented_block_body) [2287 2608])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2617 2653])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2662 2700])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2738 2814])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2847 3037])
+                            ("self" code nil (reparse-symbol indented_block_body) [3047 3069]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1864 1868])
+                            ("opt" variable nil (reparse-symbol function_parameters) [1870 1873]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1851 3070])
+                    ("_initialization" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3095 3099]))                          )
+                        (reparse-symbol indented_block_body) [3075 3262])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3279 3283])
+                            ("prop_state" variable nil (reparse-symbol function_parameters) [3285 3295])
+                            ("annotation" variable nil (reparse-symbol function_parameters) [3297 3307])
+                            ("A" variable nil (reparse-symbol function_parameters) [3309 3310]))                          )
+                        (reparse-symbol indented_block_body) [3267 4165]))                  
+                :type "class")
+                nil [1678 4165]))          
+      :file "model.py"
+      :pointmax 4165
+      :fsize 4164
+      :lastmodtime '(24709 45905 31234 514000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("torch" include nil nil [11 23])
+            ("torch" include nil nil [24 44])
+            ("numpy" include nil nil [45 63])
+            ("torch.nn" include nil nil [64 100])
+            ("torch.utils.data" include nil nil [101 169])
+            ("pytorch_lightning" include nil nil [170 200])
+            ("pandas" include nil nil [201 220])
+            ("argparse" include nil nil [221 236])
+            ("pytorch_lightning.metrics.functional" include nil nil [237 294])
+            ("pl_bolts.datasets" include nil nil [295 337])
+            ("models.model" include nil nil [338 367])
+            ("GatedGNN" type
+               (:superclasses ("pl.LightningModule")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [629 647])
+                            ("self" variable nil (reparse-symbol indented_block_body) [656 682])
+                            ("self" variable nil (reparse-symbol indented_block_body) [691 719])
+                            ("self" variable nil (reparse-symbol indented_block_body) [728 752])
+                            ("self" variable nil (reparse-symbol indented_block_body) [761 783])
+                            ("self" variable nil (reparse-symbol indented_block_body) [792 824])
+                            ("self" code nil (reparse-symbol indented_block_body) [833 895])
+                            ("self" variable nil (reparse-symbol indented_block_body) [967 1059])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1108 1210])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1219 1245])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1254 1291])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1300 1326])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1389 1569])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1578 1635])
+                            ("params" variable nil (reparse-symbol indented_block_body) [1646 1669])
+                            ("params" variable nil (reparse-symbol indented_block_body) [1678 1701])
+                            ("params" variable nil (reparse-symbol indented_block_body) [1710 1728])
+                            ("params" variable nil (reparse-symbol indented_block_body) [1737 1769])
+                            ("params" variable nil (reparse-symbol indented_block_body) [1778 1820])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1863 1898])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1907 2012]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [424 428])
+                            ("n_nodes" variable nil (reparse-symbol function_parameters) [447 454])
+                            ("input_dim" variable nil (reparse-symbol function_parameters) [477 486])
+                            ("output_dim" variable nil (reparse-symbol function_parameters) [508 518])
+                            ("feat_dim" variable nil (reparse-symbol function_parameters) [540 548])
+                            ("n_edge_types" variable nil (reparse-symbol function_parameters) [571 583])
+                            ("params" variable nil (reparse-symbol function_parameters) [606 612]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [411 2013])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2031 2035])
+                            ("x" variable nil (reparse-symbol function_parameters) [2037 2038])
+                            ("pred_len" variable nil (reparse-symbol function_parameters) [2040 2048]))                          )
+                        (reparse-symbol indented_block_body) [2019 3234])
+                    ("training_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3257 3261])
+                            ("batch" variable nil (reparse-symbol function_parameters) [3263 3268])
+                            ("batch_idx" variable nil (reparse-symbol function_parameters) [3270 3279]))                          )
+                        (reparse-symbol indented_block_body) [3239 3492])
+                    ("test_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3548 3552])
+                            ("batch" variable nil (reparse-symbol function_parameters) [3554 3559])
+                            ("batch_idx" variable nil (reparse-symbol function_parameters) [3561 3570]))                          )
+                        (reparse-symbol indented_block_body) [3534 3839])
+                    ("configure_optimizers" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3906 3910]))                          )
+                        (reparse-symbol indented_block_body) [3881 4003]))                  
+                :type "class")
+                nil [370 4003])
+            ("create_prediction_dataset" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [4035 4039])
+                ("train_ratio" variable nil (reparse-symbol function_parameters) [4048 4059])
+                ("normalize_data" variable nil (reparse-symbol function_parameters) [4067 4081]))              ) nil [4005 7056])
+            ("if" code nil nil [7058 8848]))          
+      :file "train_gated_gnn.py"
+      :pointmax 8848
+      :fsize 8849
+      :lastmodtime '(24713 59105 307965 8000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!gnn_prediction!models!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,411 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("torch" include nil nil [20 32])
+            ("torch.optim" include nil nil [33 61])
+            ("gym" include nil nil [62 72])
+            ("time" include nil nil [73 84])
+            ("spinup.algos.pytorch.ppo.core" include nil nil [85 129])
+            ("spinup.utils.logx" include nil nil [130 171])
+            ("spinup.utils.mpi_pytorch" include nil nil [172 258])
+            ("spinup.utils.mpi_tools" include nil nil [259 354])
+            ("torch.utils.tensorboard" include nil nil [355 404])
+            ("PPOBuffer" type
+               (:documentation "
+    A buffer for storing trajectories experienced by a PPO agent interacting
+    with the environment, and using Generalized Advantage Estimation (GAE-Lambda)
+    for calculating the advantages of state-action pairs.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [736 813])
+                            ("self" variable nil (reparse-symbol indented_block_body) [822 899])
+                            ("self" variable nil (reparse-symbol indented_block_body) [908 955])
+                            ("self" variable nil (reparse-symbol indented_block_body) [964 1011])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1020 1067])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1076 1123])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1132 1180])
+                            ("self, self" code nil (reparse-symbol indented_block_body) [1189 1222])
+                            ("self, self, self" code nil (reparse-symbol indented_block_body) [1231 1288]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [675 679])
+                            ("obs_dim" variable nil (reparse-symbol function_parameters) [681 688])
+                            ("act_dim" variable nil (reparse-symbol function_parameters) [690 697])
+                            ("size" variable nil (reparse-symbol function_parameters) [699 703])
+                            ("gamma" variable nil (reparse-symbol function_parameters) [705 710])
+                            ("lam" variable nil (reparse-symbol function_parameters) [717 720]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [662 1289])
+                    ("store" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1304 1308])
+                            ("obs" variable nil (reparse-symbol function_parameters) [1310 1313])
+                            ("act" variable nil (reparse-symbol function_parameters) [1315 1318])
+                            ("rew" variable nil (reparse-symbol function_parameters) [1320 1323])
+                            ("val" variable nil (reparse-symbol function_parameters) [1325 1328])
+                            ("logp" variable nil (reparse-symbol function_parameters) [1330 1334]))                          
+                        :documentation "
+        Append one timestep of agent-environment interaction to the buffer.
+        ")
+                        (reparse-symbol indented_block_body) [1294 1733])
+                    ("finish_path" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1754 1758])
+                            ("last_val" variable nil (reparse-symbol function_parameters) [1760 1768]))                          
+                        :documentation "
+        Call this at the end of a trajectory, or when one gets cut off
+        by an epoch ending. This looks back in the buffer to where the
+        trajectory started, and uses rewards and value estimates from
+        the whole trajectory to compute advantage estimates with GAE-Lambda,
+        as well as compute the rewards-to-go for each state, to use as
+        the targets for the value function.
+
+        The \"last_val\" argument should be 0 if the trajectory ended
+        because the agent reached a terminal state (died), and otherwise
+        should be V(s_T), the value function estimated for the last state.
+        This allows us to bootstrap the reward-to-go calculation to account
+        for timesteps beyond the arbitrary episode horizon (or epoch cutoff).
+        ")
+                        (reparse-symbol indented_block_body) [1738 3205])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3218 3222]))                          
+                        :documentation "
+        Call this at the end of an epoch to get all of the data from
+        the buffer, with advantages appropriately normalized (shifted to have
+        mean zero and std one). Also, resets some pointers in the buffer.
+        ")
+                        (reparse-symbol indented_block_body) [3210 4014]))                  
+                :type "class")
+                nil [407 4014])
+            ("ppo" function
+               (:documentation "
+    Proximal Policy Optimization (by clipping), 
+
+    with early stopping based on approximate KL
+
+    Args:
+        env_fn : A function which creates a copy of the environment.
+            The environment must satisfy the OpenAI Gym API.
+
+        actor_critic: The constructor method for a PyTorch Module with a 
+            ``step`` method, an ``act`` method, a ``pi`` module, and a ``v`` 
+            module. The ``step`` method should accept a batch of observations 
+            and return:
+
+            ===========  ================  ======================================
+            Symbol       Shape             Description
+            ===========  ================  ======================================
+            ``a``        (batch, act_dim)  | Numpy array of actions for each 
+                                           | observation.
+            ``v``        (batch,)          | Numpy array of value estimates
+                                           | for the provided observations.
+            ``logp_a``   (batch,)          | Numpy array of log probs for the
+                                           | actions in ``a``.
+            ===========  ================  ======================================
+
+            The ``act`` method behaves the same as ``step`` but only returns ``a``.
+
+            The ``pi`` module's forward call should accept a batch of 
+            observations and optionally a batch of actions, and return:
+
+            ===========  ================  ======================================
+            Symbol       Shape             Description
+            ===========  ================  ======================================
+            ``pi``       N/A               | Torch Distribution object, containing
+                                           | a batch of distributions describing
+                                           | the policy for the provided observations.
+            ``logp_a``   (batch,)          | Optional (only returned if batch of
+                                           | actions is given). Tensor containing 
+                                           | the log probability, according to 
+                                           | the policy, of the provided actions.
+                                           | If actions not given, will contain
+                                           | ``None``.
+            ===========  ================  ======================================
+
+            The ``v`` module's forward call should accept a batch of observations
+            and return:
+
+            ===========  ================  ======================================
+            Symbol       Shape             Description
+            ===========  ================  ======================================
+            ``v``        (batch,)          | Tensor containing the value estimates
+                                           | for the provided observations. (Critical: 
+                                           | make sure to flatten this!)
+            ===========  ================  ======================================
+
+
+        ac_kwargs (dict): Any kwargs appropriate for the ActorCritic object 
+            you provided to PPO.
+
+        seed (int): Seed for random number generators.
+
+        steps_per_epoch (int): Number of steps of interaction (state-action pairs) 
+            for the agent and the environment in each epoch.
+
+        epochs (int): Number of epochs of interaction (equivalent to
+            number of policy updates) to perform.
+
+        gamma (float): Discount factor. (Always between 0 and 1.)
+
+        clip_ratio (float): Hyperparameter for clipping in the policy objective.
+            Roughly: how far can the new policy go from the old policy while 
+            still profiting (improving the objective function)? The new policy 
+            can still go farther than the clip_ratio says, but it doesn't help
+            on the objective anymore. (Usually small, 0.1 to 0.3.) Typically
+            denoted by :math:`\\epsilon`. 
+
+        pi_lr (float): Learning rate for policy optimizer.
+
+        vf_lr (float): Learning rate for value function optimizer.
+
+        train_pi_iters (int): Maximum number of gradient descent steps to take 
+            on policy loss per epoch. (Early stopping may cause optimizer
+            to take fewer than this.)
+
+        train_v_iters (int): Number of gradient descent steps to take on 
+            value function per epoch.
+
+        lam (float): Lambda for GAE-Lambda. (Always between 0 and 1,
+            close to 1.)
+
+        max_ep_len (int): Maximum length of trajectory / episode / rollout.
+
+        target_kl (float): Roughly what KL divergence we think is appropriate
+            between new and old policies after an update. This will get used 
+            for early stopping. (Usually small, 0.01 or 0.05.)
+
+        logger_kwargs (dict): Keyword args for EpochLogger.
+
+        save_freq (int): How often (in terms of gap between epochs) to save
+            the current policy and value function.
+
+    "
+                :arguments 
+                  ( ("env_fn" variable nil (reparse-symbol function_parameters) [4025 4031])
+                    ("actor_critic" variable nil (reparse-symbol function_parameters) [4033 4045])
+                    ("ac_kwargs" variable nil (reparse-symbol function_parameters) [4067 4076])
+                    ("seed" variable nil (reparse-symbol function_parameters) [4085 4089])
+                    ("steps_per_epoch" variable nil (reparse-symbol function_parameters) [4102 4117])
+                    ("epochs" variable nil (reparse-symbol function_parameters) [4124 4130])
+                    ("gamma" variable nil (reparse-symbol function_parameters) [4135 4140])
+                    ("clip_ratio" variable nil (reparse-symbol function_parameters) [4147 4157])
+                    ("pi_lr" variable nil (reparse-symbol function_parameters) [4163 4168])
+                    ("vf_lr" variable nil (reparse-symbol function_parameters) [4183 4188])
+                    ("train_pi_iters" variable nil (reparse-symbol function_parameters) [4195 4209])
+                    ("train_v_iters" variable nil (reparse-symbol function_parameters) [4214 4227])
+                    ("lam" variable nil (reparse-symbol function_parameters) [4232 4235])
+                    ("max_ep_len" variable nil (reparse-symbol function_parameters) [4242 4252])
+                    ("target_kl" variable nil (reparse-symbol function_parameters) [4267 4276])
+                    ("logger_kwargs" variable nil (reparse-symbol function_parameters) [4283 4296])
+                    ("save_freq" variable nil (reparse-symbol function_parameters) [4305 4314])
+                    ("minibatch_size" variable nil (reparse-symbol function_parameters) [4319 4333])
+                    ("log_gradients" variable nil (reparse-symbol function_parameters) [4338 4351]))                  )
+                nil [4017 18759])
+            ("if" code nil nil [18760 19844]))          
+      :file "ppo.py"
+      :pointmax 19844
+      :fsize 19843
+      :lastmodtime '(24586 16146 782288 832000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy.signal" include nil nil [20 39])
+            ("gym.spaces" include nil nil [40 76])
+            ("torch" include nil nil [78 90])
+            ("torch.nn" include nil nil [91 112])
+            ("torch.distributions.normal" include nil nil [113 158])
+            ("torch.distributions.categorical" include nil nil [159 214])
+            ("combined_shape" function (:arguments 
+              ( ("length" variable nil (reparse-symbol function_parameters) [236 242])
+                ("shape" variable nil (reparse-symbol function_parameters) [244 249]))              ) nil [217 375])
+            ("mlp" function (:arguments 
+              ( ("sizes" variable nil (reparse-symbol function_parameters) [385 390])
+                ("activation" variable nil (reparse-symbol function_parameters) [392 402])
+                ("output_activation" variable nil (reparse-symbol function_parameters) [404 421]))              ) nil [377 647])
+            ("count_vars" function (:arguments 
+              ( ("module" variable nil (reparse-symbol function_parameters) [664 670]))              ) nil [649 737])
+            ("discount_cumsum" function
+               (:documentation "
+    magic from rllab for computing discounted cumulative sums of vectors.
+
+    input: 
+        vector x, 
+        [x0, 
+         x1, 
+         x2]
+
+    output:
+        [x0 + discount * x1 + discount^2 * x2,  
+         x1 + discount * x2,
+         x2]
+    "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [759 760])
+                    ("discount" variable nil (reparse-symbol function_parameters) [762 770]))                  )
+                nil [739 1123])
+            ("Actor" type
+               (:superclasses ("nn.Module")
+                :members 
+                  ( ("_distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1172 1176])
+                            ("obs" variable nil (reparse-symbol function_parameters) [1178 1181]))                          )
+                        (reparse-symbol indented_block_body) [1154 1218])
+                    ("_log_prob_from_distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1255 1259])
+                            ("pi" variable nil (reparse-symbol function_parameters) [1261 1263])
+                            ("act" variable nil (reparse-symbol function_parameters) [1265 1268]))                          )
+                        (reparse-symbol indented_block_body) [1223 1305])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1322 1326])
+                            ("obs" variable nil (reparse-symbol function_parameters) [1328 1331])
+                            ("act" variable nil (reparse-symbol function_parameters) [1333 1336]))                          )
+                        (reparse-symbol indented_block_body) [1310 1690]))                  
+                :type "class")
+                nil [1125 1690])
+            ("MLPCategoricalActor" type
+               (:superclasses ("Actor")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1807 1825])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1834 1938]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1748 1752])
+                            ("obs_dim" variable nil (reparse-symbol function_parameters) [1754 1761])
+                            ("act_dim" variable nil (reparse-symbol function_parameters) [1763 1770])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [1772 1784])
+                            ("activation" variable nil (reparse-symbol function_parameters) [1786 1796]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1735 1939])
+                    ("_distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1962 1966])
+                            ("obs" variable nil (reparse-symbol function_parameters) [1968 1971]))                          )
+                        (reparse-symbol indented_block_body) [1944 2054])
+                    ("_log_prob_from_distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2091 2095])
+                            ("pi" variable nil (reparse-symbol function_parameters) [2097 2099])
+                            ("act" variable nil (reparse-symbol function_parameters) [2101 2104]))                          )
+                        (reparse-symbol indented_block_body) [2059 2139]))                  
+                :type "class")
+                nil [1692 2139])
+            ("MLPGaussianActor" type
+               (:superclasses ("Actor")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [2249 2267])
+                            ("log_std" code nil (reparse-symbol indented_block_body) [2276 2327])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2336 2395])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2404 2477]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2190 2194])
+                            ("obs_dim" variable nil (reparse-symbol function_parameters) [2196 2203])
+                            ("act_dim" variable nil (reparse-symbol function_parameters) [2205 2212])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [2214 2226])
+                            ("activation" variable nil (reparse-symbol function_parameters) [2228 2238]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2177 2478])
+                    ("_distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2509 2513])
+                            ("obs" variable nil (reparse-symbol function_parameters) [2515 2518]))                          )
+                        (reparse-symbol indented_block_body) [2491 2620])
+                    ("_log_prob_from_distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2657 2661])
+                            ("pi" variable nil (reparse-symbol function_parameters) [2663 2665])
+                            ("act" variable nil (reparse-symbol function_parameters) [2667 2670]))                          )
+                        (reparse-symbol indented_block_body) [2625 2774]))                  
+                :type "class")
+                nil [2141 2774])
+            ("MLPCritic" type
+               (:superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [2845 2863])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2872 2938]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2822 2826])
+                            ("obs_dim" variable nil (reparse-symbol function_parameters) [2828 2835])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [2837 2849])
+                            ("activation" variable nil (reparse-symbol function_parameters) [2851 2861]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2809 2966])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2983 2987])
+                            ("obs" variable nil (reparse-symbol function_parameters) [2989 2992]))                          )
+                        (reparse-symbol indented_block_body) [2971 3085]))                  
+                :type "class")
+                nil [2776 3085])
+            ("MLPActorCritic" type
+               (:superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [3221 3239])
+                            ("obs_dim" variable nil (reparse-symbol indented_block_body) [3248 3284])
+                            ("if" code nil (reparse-symbol indented_block_body) [3343 3616])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3656 3710]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3140 3144])
+                            ("observation_space" variable nil (reparse-symbol function_parameters) [3146 3163])
+                            ("action_space" variable nil (reparse-symbol function_parameters) [3165 3177])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [3197 3209])
+                            ("activation" variable nil (reparse-symbol function_parameters) [3219 3229]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3127 3738])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3752 3756])
+                            ("obs" variable nil (reparse-symbol function_parameters) [3758 3761]))                          )
+                        (reparse-symbol indented_block_body) [3743 4010])
+                    ("act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4023 4027])
+                            ("obs" variable nil (reparse-symbol function_parameters) [4029 4032]))                          )
+                        (reparse-symbol indented_block_body) [4015 4067]))                  
+                :type "class")
+                nil [3088 4067]))          
+      :file "core.py"
+      :pointmax 4067
+      :fsize 4066
+      :lastmodtime '(24585 60200 475237 519000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!lof_robot_learning!libs!spinningup!spinup!algos!pytorch!ppo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

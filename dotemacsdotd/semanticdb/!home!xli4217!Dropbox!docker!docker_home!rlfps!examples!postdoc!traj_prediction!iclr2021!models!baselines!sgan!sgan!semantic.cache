@@ -1,0 +1,444 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("time" include nil nil [11 22])
+            ("torch" include nil nil [23 35])
+            ("numpy" include nil nil [36 54])
+            ("inspect" include nil nil [55 69])
+            ("contextlib" include nil nil [70 107])
+            ("subprocess" include nil nil [108 125])
+            ("int_tuple" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [142 143]))              ) nil [128 193])
+            ("find_nan" function (:arguments 
+              ( ("variable" variable nil (reparse-symbol function_parameters) [208 216])
+                ("var_name" variable nil (reparse-symbol function_parameters) [218 226]))              ) nil [195 347])
+            ("bool_flag" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [363 364]))              ) nil [349 538])
+            ("lineno" function nil nil [540 609])
+            ("get_total_norm" function (:arguments 
+              ( ("parameters" variable nil (reparse-symbol function_parameters) [630 640])
+                ("norm_type" variable nil (reparse-symbol function_parameters) [642 651]))              ) nil [611 1073])
+            ("timeit" function
+               (:decorators 
+                  ( ("contextmanager" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("msg" variable nil (reparse-symbol function_parameters) [1102 1105])
+                    ("should_time" variable nil (reparse-symbol function_parameters) [1107 1118]))                  )
+                nil [1075 1377])
+            ("get_gpu_memory" function nil nil [1379 1836])
+            ("get_dset_path" function (:arguments 
+              ( ("dset_name" variable nil (reparse-symbol function_parameters) [1856 1865])
+                ("dset_type" variable nil (reparse-symbol function_parameters) [1867 1876]))              ) nil [1838 2038])
+            ("relative_to_abs" function
+               (:documentation "
+    Inputs:
+    - rel_traj: pytorch tensor of shape (seq_len, batch, 2)
+    - start_pos: pytorch tensor of shape (batch, 2)
+    Outputs:
+    - abs_traj: pytorch tensor of shape (seq_len, batch, 2)
+    "
+                :arguments 
+                  ( ("rel_traj" variable nil (reparse-symbol function_parameters) [2060 2068])
+                    ("start_pos" variable nil (reparse-symbol function_parameters) [2070 2079]))                  )
+                nil [2040 2536]))          
+      :file "utils.py"
+      :pointmax 2536
+      :fsize 2535
+      :lastmodtime '(24388 23704 384197 59000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("torch.nn" include nil nil [14 35])
+            ("make_mlp" function (:arguments 
+              ( ("dim_list" variable nil (reparse-symbol function_parameters) [51 59])
+                ("activation" variable nil (reparse-symbol function_parameters) [61 71])
+                ("batch_norm" variable nil (reparse-symbol function_parameters) [80 90])
+                ("dropout" variable nil (reparse-symbol function_parameters) [97 104]))              ) nil [38 569])
+            ("get_noise" function (:arguments 
+              ( ("shape" variable nil (reparse-symbol function_parameters) [585 590])
+                ("noise_type" variable nil (reparse-symbol function_parameters) [592 602]))              ) nil [571 841])
+            ("Encoder" type
+               (:documentation "Encoder is part of both TrajectoryGenerator and
+    TrajectoryDiscriminator"
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1078 1109])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1119 1138])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1147 1165])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1174 1208])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1217 1245])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1255 1350])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1360 1412]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [981 985])
+                            ("embedding_dim" variable nil (reparse-symbol function_parameters) [987 1000])
+                            ("h_dim" variable nil (reparse-symbol function_parameters) [1005 1010])
+                            ("mlp_dim" variable nil (reparse-symbol function_parameters) [1015 1022])
+                            ("num_layers" variable nil (reparse-symbol function_parameters) [1029 1039])
+                            ("dropout" variable nil (reparse-symbol function_parameters) [1051 1058]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [959 1413])
+                    ("init_hidden" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1434 1438])
+                            ("batch" variable nil (reparse-symbol function_parameters) [1440 1445]))                          )
+                        (reparse-symbol indented_block_body) [1418 1610])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1627 1631])
+                            ("obs_traj" variable nil (reparse-symbol function_parameters) [1633 1641]))                          
+                        :documentation "
+        Inputs:
+        - obs_traj: Tensor of shape (obs_len, batch, 2)
+        Output:
+        - final_h: Tensor of shape (self.num_layers, batch, self.h_dim)
+        ")
+                        (reparse-symbol indented_block_body) [1615 2244]))                  
+                :type "class")
+                nil [843 2244])
+            ("Decoder" type
+               (:documentation "Decoder is part of TrajectoryGenerator"
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [2614 2645])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2655 2677])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2686 2708])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2717 2735])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2744 2778])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2787 2833])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2843 2938])
+                            ("if" code nil (reparse-symbol indented_block_body) [2948 3995])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4004 4056])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4065 4102]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2347 2351])
+                            ("seq_len" variable nil (reparse-symbol function_parameters) [2353 2360])
+                            ("embedding_dim" variable nil (reparse-symbol function_parameters) [2362 2375])
+                            ("h_dim" variable nil (reparse-symbol function_parameters) [2380 2385])
+                            ("mlp_dim" variable nil (reparse-symbol function_parameters) [2391 2398])
+                            ("num_layers" variable nil (reparse-symbol function_parameters) [2405 2415])
+                            ("pool_every_timestep" variable nil (reparse-symbol function_parameters) [2427 2446])
+                            ("dropout" variable nil (reparse-symbol function_parameters) [2453 2460])
+                            ("bottleneck_dim" variable nil (reparse-symbol function_parameters) [2466 2480])
+                            ("activation" variable nil (reparse-symbol function_parameters) [2495 2505])
+                            ("batch_norm" variable nil (reparse-symbol function_parameters) [2514 2524])
+                            ("pooling_type" variable nil (reparse-symbol function_parameters) [2531 2543])
+                            ("neighborhood_size" variable nil (reparse-symbol function_parameters) [2564 2581])
+                            ("grid_size" variable nil (reparse-symbol function_parameters) [2587 2596]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2325 4103])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4120 4124])
+                            ("last_pos" variable nil (reparse-symbol function_parameters) [4126 4134])
+                            ("last_pos_rel" variable nil (reparse-symbol function_parameters) [4136 4148])
+                            ("state_tuple" variable nil (reparse-symbol function_parameters) [4150 4161])
+                            ("seq_start_end" variable nil (reparse-symbol function_parameters) [4163 4176]))                          
+                        :documentation "
+        Inputs:
+        - last_pos: Tensor of shape (batch, 2)
+        - last_pos_rel: Tensor of shape (batch, 2)
+        - state_tuple: (hh, ch) each tensor of shape (num_layers, batch, h_dim)
+        - seq_start_end: A list of tuples which delimit sequences within batch
+        Output:
+        - pred_traj: tensor of shape (self.seq_len, batch, 2)
+        ")
+                        (reparse-symbol indented_block_body) [4108 5807]))                  
+                :type "class")
+                nil [2246 5807])
+            ("PoolHiddenNet" type
+               (:documentation "Pooling module as proposed in our paper"
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [6057 6094])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6104 6123])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6132 6150])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6159 6195])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6204 6238])
+                            ("mlp_pre_dim" code nil (reparse-symbol indented_block_body) [6248 6283])
+                            ("mlp_pre_pool_dims" variable nil (reparse-symbol indented_block_body) [6292 6346])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6356 6408])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6417 6576]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5917 5921])
+                            ("embedding_dim" variable nil (reparse-symbol function_parameters) [5923 5936])
+                            ("h_dim" variable nil (reparse-symbol function_parameters) [5941 5946])
+                            ("mlp_dim" variable nil (reparse-symbol function_parameters) [5951 5958])
+                            ("bottleneck_dim" variable nil (reparse-symbol function_parameters) [5965 5979])
+                            ("activation" variable nil (reparse-symbol function_parameters) [5994 6004])
+                            ("batch_norm" variable nil (reparse-symbol function_parameters) [6013 6023])
+                            ("dropout" variable nil (reparse-symbol function_parameters) [6030 6037]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [5895 6577])
+                    ("repeat" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6593 6597])
+                            ("tensor" variable nil (reparse-symbol function_parameters) [6599 6605])
+                            ("num_reps" variable nil (reparse-symbol function_parameters) [6607 6615]))                          
+                        :documentation "
+        Inputs:
+        -tensor: 2D tensor of any shape
+        -num_reps: Number of times to repeat each row
+        Outpus:
+        -repeat_tensor: Repeat each row such that: R1, R1, R2, R2
+        ")
+                        (reparse-symbol indented_block_body) [6582 6995])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7012 7016])
+                            ("h_states" variable nil (reparse-symbol function_parameters) [7018 7026])
+                            ("seq_start_end" variable nil (reparse-symbol function_parameters) [7028 7041])
+                            ("end_pos" variable nil (reparse-symbol function_parameters) [7043 7050]))                          
+                        :documentation "
+        Inputs:
+        - h_states: Tensor of shape (num_layers, batch, h_dim)
+        - seq_start_end: A list of tuples which delimit sequences within batch
+        - end_pos: Tensor of shape (batch, 2)
+        Output:
+        - pool_h: Tensor of shape (batch, bottleneck_dim)
+        ")
+                        (reparse-symbol indented_block_body) [7000 8404]))                  
+                :type "class")
+                nil [5809 8404])
+            ("SocialPooling" type
+               (:documentation "Current state of the art pooling mechanism:
+    http://cvgl.stanford.edu/papers/CVPR16_Social_LSTM.pdf"
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [8715 8752])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8761 8779])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8788 8814])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8823 8865])
+                            ("if" code nil (reparse-symbol indented_block_body) [8874 9038])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9047 9207]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8577 8581])
+                            ("h_dim" variable nil (reparse-symbol function_parameters) [8583 8588])
+                            ("activation" variable nil (reparse-symbol function_parameters) [8593 8603])
+                            ("batch_norm" variable nil (reparse-symbol function_parameters) [8612 8622])
+                            ("dropout" variable nil (reparse-symbol function_parameters) [8629 8636])
+                            ("neighborhood_size" variable nil (reparse-symbol function_parameters) [8650 8667])
+                            ("grid_size" variable nil (reparse-symbol function_parameters) [8673 8682])
+                            ("pool_dim" variable nil (reparse-symbol function_parameters) [8686 8694]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8555 9208])
+                    ("get_bounds" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9228 9232])
+                            ("ped_pos" variable nil (reparse-symbol function_parameters) [9234 9241]))                          )
+                        (reparse-symbol indented_block_body) [9213 9686])
+                    ("get_grid_locations" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9714 9718])
+                            ("top_left" variable nil (reparse-symbol function_parameters) [9720 9728])
+                            ("other_pos" variable nil (reparse-symbol function_parameters) [9730 9739]))                          )
+                        (reparse-symbol indented_block_body) [9691 10086])
+                    ("repeat" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10102 10106])
+                            ("tensor" variable nil (reparse-symbol function_parameters) [10108 10114])
+                            ("num_reps" variable nil (reparse-symbol function_parameters) [10116 10124]))                          
+                        :documentation "
+        Inputs:
+        -tensor: 2D tensor of any shape
+        -num_reps: Number of times to repeat each row
+        Outpus:
+        -repeat_tensor: Repeat each row such that: R1, R1, R2, R2
+        ")
+                        (reparse-symbol indented_block_body) [10091 10504])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10521 10525])
+                            ("h_states" variable nil (reparse-symbol function_parameters) [10527 10535])
+                            ("seq_start_end" variable nil (reparse-symbol function_parameters) [10537 10550])
+                            ("end_pos" variable nil (reparse-symbol function_parameters) [10552 10559]))                          
+                        :documentation "
+        Inputs:
+        - h_states: Tesnsor of shape (num_layers, batch, h_dim)
+        - seq_start_end: A list of tuples which delimit sequences within batch.
+        - end_pos: Absolute end position of obs_traj (batch, 2)
+        Output:
+        - pool_h: Tensor of shape (batch, h_dim)
+        ")
+                        (reparse-symbol indented_block_body) [10509 13427]))                  
+                :type "class")
+                nil [8406 13427])
+            ("TrajectoryGenerator" type
+               (:superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [13860 13903])
+                            ("if" code nil (reparse-symbol indented_block_body) [13913 13997])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14006 14028])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14037 14061])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14070 14092])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14101 14135])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14144 14178])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14187 14221])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14230 14256])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14265 14293])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14302 14330])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14339 14375])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14384 14416])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14425 14449])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14458 14504])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14513 14539])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14549 14748])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14758 15266])
+                            ("if" code nil (reparse-symbol indented_block_body) [15276 15940])
+                            ("if" code nil (reparse-symbol indented_block_body) [15949 16072])
+                            ("if" code nil (reparse-symbol indented_block_body) [16106 16230])
+                            ("if" code nil (reparse-symbol indented_block_body) [16239 16613]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13493 13497])
+                            ("obs_len" variable nil (reparse-symbol function_parameters) [13499 13506])
+                            ("pred_len" variable nil (reparse-symbol function_parameters) [13508 13516])
+                            ("embedding_dim" variable nil (reparse-symbol function_parameters) [13518 13531])
+                            ("encoder_h_dim" variable nil (reparse-symbol function_parameters) [13536 13549])
+                            ("decoder_h_dim" variable nil (reparse-symbol function_parameters) [13562 13575])
+                            ("mlp_dim" variable nil (reparse-symbol function_parameters) [13581 13588])
+                            ("num_layers" variable nil (reparse-symbol function_parameters) [13595 13605])
+                            ("noise_dim" variable nil (reparse-symbol function_parameters) [13609 13618])
+                            ("noise_type" variable nil (reparse-symbol function_parameters) [13634 13644])
+                            ("noise_mix_type" variable nil (reparse-symbol function_parameters) [13657 13671])
+                            ("pooling_type" variable nil (reparse-symbol function_parameters) [13679 13691])
+                            ("pool_every_timestep" variable nil (reparse-symbol function_parameters) [13706 13725])
+                            ("dropout" variable nil (reparse-symbol function_parameters) [13732 13739])
+                            ("bottleneck_dim" variable nil (reparse-symbol function_parameters) [13745 13759])
+                            ("activation" variable nil (reparse-symbol function_parameters) [13774 13784])
+                            ("batch_norm" variable nil (reparse-symbol function_parameters) [13793 13803])
+                            ("neighborhood_size" variable nil (reparse-symbol function_parameters) [13810 13827])
+                            ("grid_size" variable nil (reparse-symbol function_parameters) [13833 13842]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13471 16613])
+                    ("add_noise" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16632 16636])
+                            ("_input" variable nil (reparse-symbol function_parameters) [16638 16644])
+                            ("seq_start_end" variable nil (reparse-symbol function_parameters) [16646 16659])
+                            ("user_noise" variable nil (reparse-symbol function_parameters) [16661 16671]))                          
+                        :documentation "
+        Inputs:
+        - _input: Tensor of shape (_, decoder_h_dim - noise_first_dim)
+        - seq_start_end: A list of tuples which delimit sequences within batch.
+        - user_noise: Generally used for inference when you want to see
+        relation between different types of noise and outputs.
+        Outputs:
+        - decoder_h: Tensor of shape (_, decoder_h_dim)
+        ")
+                        (reparse-symbol indented_block_body) [16618 18018])
+                    ("mlp_decoder_needed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18046 18050]))                          )
+                        (reparse-symbol indented_block_body) [18023 18244])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18261 18265])
+                            ("obs_traj" variable nil (reparse-symbol function_parameters) [18267 18275])
+                            ("obs_traj_rel" variable nil (reparse-symbol function_parameters) [18277 18289])
+                            ("seq_start_end" variable nil (reparse-symbol function_parameters) [18291 18304])
+                            ("user_noise" variable nil (reparse-symbol function_parameters) [18306 18316]))                          
+                        :documentation "
+        Inputs:
+        - obs_traj: Tensor of shape (obs_len, batch, 2)
+        - obs_traj_rel: Tensor of shape (obs_len, batch, 2)
+        - seq_start_end: A list of tuples which delimit sequences within batch.
+        - user_noise: Generally used for inference when you want to see
+        relation between different types of noise and outputs.
+        Output:
+        - pred_traj_rel: Tensor of shape (self.pred_len, batch, 2)
+        ")
+                        (reparse-symbol indented_block_body) [18249 20205]))                  
+                :type "class")
+                nil [13429 20205])
+            ("TrajectoryDiscriminator" type
+               (:superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [20451 20498])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20508 20530])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20539 20563])
+                            ("self" code nil (reparse-symbol indented_block_body) [20572 20605])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20614 20636])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20645 20663])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20672 20692])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20702 20893])
+                            ("real_classifier_dims" variable nil (reparse-symbol indented_block_body) [20903 20945])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20954 21128])
+                            ("if" code nil (reparse-symbol indented_block_body) [21137 21513]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20275 20279])
+                            ("obs_len" variable nil (reparse-symbol function_parameters) [20281 20288])
+                            ("pred_len" variable nil (reparse-symbol function_parameters) [20290 20298])
+                            ("embedding_dim" variable nil (reparse-symbol function_parameters) [20300 20313])
+                            ("h_dim" variable nil (reparse-symbol function_parameters) [20318 20323])
+                            ("mlp_dim" variable nil (reparse-symbol function_parameters) [20328 20335])
+                            ("num_layers" variable nil (reparse-symbol function_parameters) [20350 20360])
+                            ("activation" variable nil (reparse-symbol function_parameters) [20364 20374])
+                            ("batch_norm" variable nil (reparse-symbol function_parameters) [20383 20393])
+                            ("dropout" variable nil (reparse-symbol function_parameters) [20400 20407])
+                            ("d_type" variable nil (reparse-symbol function_parameters) [20421 20427]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [20253 21513])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21530 21534])
+                            ("traj" variable nil (reparse-symbol function_parameters) [21536 21540])
+                            ("traj_rel" variable nil (reparse-symbol function_parameters) [21542 21550])
+                            ("seq_start_end" variable nil (reparse-symbol function_parameters) [21552 21565]))                          
+                        :documentation "
+        Inputs:
+        - traj: Tensor of shape (obs_len + pred_len, batch, 2)
+        - traj_rel: Tensor of shape (obs_len + pred_len, batch, 2)
+        - seq_start_end: A list of tuples which delimit sequences within batch
+        Output:
+        - scores: Tensor of shape (batch,) with real/fake scores
+        ")
+                        (reparse-symbol indented_block_body) [21518 22535]))                  
+                :type "class")
+                nil [20207 22535]))          
+      :file "models.py"
+      :pointmax 22535
+      :fsize 22534
+      :lastmodtime '(24388 23704 384197 59000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!rlfps!examples!postdoc!traj_prediction!iclr2021!models!baselines!sgan!sgan!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

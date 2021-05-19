@@ -1,0 +1,77 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("typing" include nil nil [20 44])
+            ("gym.envs.registration" include nil nil [45 87])
+            ("highway_env" include nil nil [89 118])
+            ("highway_env.envs.common.abstract" include nil nil [119 175])
+            ("highway_env.envs.common.action" include nil nil [176 225])
+            ("highway_env.road.road" include nil nil [226 277])
+            ("highway_env.vehicle.controller" include nil nil [278 338])
+            ("HighwayEnv" type
+               (:documentation "
+    A highway driving environment.
+
+    The vehicle is driving on a straight highway with several lanes, and is rewarded for reaching a high speed,
+    staying on the rightmost lanes and avoiding collisions.
+    "
+                :superclasses ("AbstractEnv")
+                :members 
+                  ( ("float" variable nil (reparse-symbol indented_block_body) [620 631])
+                    ("\"\"\"The reward received when driving on the right-most lanes, linearly mapped to zero for other lanes.\"\"\"" code nil (reparse-symbol indented_block_body) [636 740])
+                    ("float" variable nil (reparse-symbol indented_block_body) [765 776])
+                    ("\"\"\"The reward received when driving at full speed, linearly mapped to zero for lower speeds according to config[\"reward_speed_range\"].\"\"\"" code nil (reparse-symbol indented_block_body) [781 918])
+                    ("float" variable nil (reparse-symbol indented_block_body) [944 953])
+                    ("\"\"\"The reward received at each lane change action.\"\"\"" code nil (reparse-symbol indented_block_body) [958 1011]))                  
+                :type "class")
+                nil [341 4596])
+            ("register" code nil nil [4598 4677]))          
+      :file "highway_env.py"
+      :pointmax 4678
+      :fsize 4677
+      :lastmodtime '(24485 42450 449541 816000)
+      :unmatched-syntax '((INDENT_BLOCK 4491 . 4596) (NEWLINE 4490 . 4491) (COLON 4489 . 4490) (MINUS 4481 . 4482) (GT 4482 . 4483) (NAME 4468 . 4474) (COLON 4474 . 4475) (INDENT_BLOCK 4195 . 4447) (NEWLINE 4194 . 4195) (COLON 4193 . 4194) (MINUS 4186 . 4187) (GT 4187 . 4188) (INDENT_BLOCK 3119 . 4158) (NEWLINE 3118 . 3119) (COLON 3117 . 3118) (MINUS 3109 . 3110) (GT 3110 . 3111) (NAME 3093 . 3099) (COLON 3099 . 3100) (INDENT_BLOCK 2157 . 3070) (NEWLINE 2156 . 2157) (COLON 2155 . 2156) (MINUS 2148 . 2149) (GT 2149 . 2150) (INDENT_BLOCK 1855 . 2116) (NEWLINE 1854 . 1855) (COLON 1853 . 1854) (MINUS 1846 . 1847) (GT 1847 . 1848) (INDENT_BLOCK 1758 . 1818) (NEWLINE 1757 . 1758) (COLON 1756 . 1757) (MINUS 1749 . 1750) (GT 1750 . 1751) (INDENT_BLOCK 1051 . 1727) (NEWLINE 1050 . 1051) (COLON 1049 . 1050) (DEF 1017 . 1020) (MINUS 1042 . 1043) (GT 1043 . 1044) (NAME 924 . 942) (COLON 942 . 943) (NAME 746 . 763) (COLON 763 . 764) (NAME 601 . 618) (COLON 618 . 619) ($EOI 4678 . 4678) ($EOI 4678 . 4678)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 31])
+            ("gym.envs.registration" include nil nil [33 75])
+            ("numpy" include nil nil [76 94])
+            ("highway_env" include nil nil [96 125])
+            ("highway_env.envs.common.abstract" include nil nil [126 201])
+            ("highway_env.road.lane" include nil nil [202 286])
+            ("highway_env.road.regulation" include nil nil [287 340])
+            ("highway_env.road.road" include nil nil [341 386])
+            ("highway_env.vehicle.kinematics" include nil nil [387 437])
+            ("IntersectionEnv" type
+               (:superclasses ("AbstractEnv")
+                :members 
+                  ( ("float" code nil (reparse-symbol indented_block_body) [498 508])
+                    ("float" variable nil (reparse-symbol indented_block_body) [532 541])
+                    ("float" variable nil (reparse-symbol indented_block_body) [562 571])
+                    ("Dict" variable nil (reparse-symbol indented_block_body) [586 670])
+                    ("ACTIONS_INDEXES" variable nil (reparse-symbol indented_block_body) [675 727]))                  
+                :type "class")
+                nil [440 11630])
+            ("MultiAgentIntersectionEnv" type
+               (:superclasses ("IntersectionEnv")
+                :type "class")
+                nil [11632 12335])
+            ("TupleMultiAgentIntersectionEnv" variable nil nil [12337 12414])
+            ("register" code nil nil [12417 12506])
+            ("register" code nil nil [12508 12619])
+            ("register" code nil nil [12621 12737]))          
+      :file "intersection_env.py"
+      :pointmax 12738
+      :fsize 12737
+      :lastmodtime '(24590 31724 964806 329000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!highway_env!envs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

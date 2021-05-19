@@ -1,0 +1,194 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("math" include nil nil [83 94])
+            ("random" include nil nil [95 108])
+            ("typing" include nil nil [109 139])
+            ("torch" include nil nil [141 153])
+            ("torch" include nil nil [154 174])
+            ("torch.nn" include nil nil [175 211])
+            ("ASV_DIM" variable nil nil [349 360])
+            ("MTP" type
+               (:documentation "
+    Implementation of Multiple-Trajectory Prediction (MTP) model
+    based on https://arxiv.org/pdf/1809.10732.pdf
+    "
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Inits the MTP network.
+        :param backbone: CNN Backbone to use.
+        :param num_modes: Number of predicted paths to estimate for each agent.
+        :param seconds: Number of seconds into the future to predict.
+            Default for the challenge is 6.
+        :param frequency_in_hz: Frequency between timesteps in the prediction (in Hz).
+            Highest frequency is nuScenes is 2 Hz.
+        :param n_hidden_layers: Size of fully connected layer after the CNN
+            backbone processes the image.
+        :param input_shape: Shape of the input expected by the network.
+            This is needed because the size of the fully connected layer after
+            the backbone depends on the backbone and its version.
+
+        Note:
+            Although seconds and frequency_in_hz are typed as floats, their
+            product should be an int.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [751 1639])
+                            ("super" code nil (reparse-symbol indented_block_body) [1649 1667])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1681 1705])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1714 1740])
+                            ("backbone_feature_dim" variable nil (reparse-symbol indented_block_body) [1749 1825])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1835 1916])
+                            ("predictions_per_mode" code nil (reparse-symbol indented_block_body) [1925 1982])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1992 2080]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [534 538])
+                            ("Module" variable nil (reparse-symbol function_parameters) [553 559])
+                            ("int" variable nil (reparse-symbol function_parameters) [572 575])
+                            ("float" variable nil (reparse-symbol function_parameters) [603 608])
+                            ("float" variable nil (reparse-symbol function_parameters) [631 636])
+                            ("int" variable nil (reparse-symbol function_parameters) [676 679])
+                            ("int" variable nil (reparse-symbol function_parameters) [749 752]))                          
+                        :documentation "
+        Inits the MTP network.
+        :param backbone: CNN Backbone to use.
+        :param num_modes: Number of predicted paths to estimate for each agent.
+        :param seconds: Number of seconds into the future to predict.
+            Default for the challenge is 6.
+        :param frequency_in_hz: Frequency between timesteps in the prediction (in Hz).
+            Highest frequency is nuScenes is 2 Hz.
+        :param n_hidden_layers: Size of fully connected layer after the CNN
+            backbone processes the image.
+        :param input_shape: Shape of the input expected by the network.
+            This is needed because the size of the fully connected layer after
+            the backbone depends on the backbone and its version.
+
+        Note:
+            Although seconds and frequency_in_hz are typed as floats, their
+            product should be an int.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [521 2095]))                  
+                :type "class")
+                nil [363 3470])
+            ("MTPLoss" type
+               (:documentation " Computes the loss for the MTP model. "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Inits MTP loss.
+        :param num_modes: How many modes are being predicted for each agent.
+        :param regression_loss_weight: Coefficient applied to the regression loss to
+            balance classification and regression performance.
+        :param angle_threshold_degrees: Minimum angle needed between a predicted trajectory
+            and the ground to consider it a match.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [3695 4102])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4111 4137])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4146 4189])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4247 4299])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4308 4354]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3554 3558])
+                            ("int" variable nil (reparse-symbol function_parameters) [3588 3591])
+                            ("float" variable nil (reparse-symbol function_parameters) [3634 3639])
+                            ("float" variable nil (reparse-symbol function_parameters) [3688 3693]))                          
+                        :documentation "
+        Inits MTP loss.
+        :param num_modes: How many modes are being predicted for each agent.
+        :param regression_loss_weight: Coefficient applied to the regression loss to
+            balance classification and regression performance.
+        :param angle_threshold_degrees: Minimum angle needed between a predicted trajectory
+            and the ground to consider it a match.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3541 4369]))                  
+                :type "class")
+                nil [3472 12892]))          
+      :file "mtp.py"
+      :pointmax 12892
+      :fsize 12891
+      :lastmodtime '(24409 7389 372186 395000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [60 84])
+            ("torch" include nil nil [86 98])
+            ("torch" include nil nil [99 119])
+            ("" code nil nil [151 249])
+            ("RESNET_VERSION_TO_MODEL" variable nil nil [949 1143])
+            ("ResNetBackbone" type
+               (:documentation "
+    Outputs tensor after last convolution before the fully connected layer.
+
+    Allowed versions: resnet18, resnet34, resnet50, resnet101, resnet152.
+    "
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Inits ResNetBackbone
+        :param version: resnet version to use.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1393 1484])
+                            ("super" code nil (reparse-symbol indented_block_body) [1493 1511])
+                            ("if" code nil (reparse-symbol indented_block_body) [1521 1723])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1732 1809]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1364 1368])
+                            ("str" variable nil (reparse-symbol function_parameters) [1379 1382]))                          
+                        :documentation "
+        Inits ResNetBackbone
+        :param version: resnet version to use.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1351 1810]))                  
+                :type "class")
+                nil [1146 2274])
+            ("MobileNetBackbone" type
+               (:documentation "
+    Outputs tensor after last convolution before the fully connected layer.
+
+    Allowed versions: mobilenet_v2.
+    "
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Inits MobileNetBackbone.
+        :param version: mobilenet version to use.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2488 2586])
+                            ("super" code nil (reparse-symbol indented_block_body) [2595 2613])
+                            ("if" code nil (reparse-symbol indented_block_body) [2623 2755])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2764 2821]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2459 2463])
+                            ("str" variable nil (reparse-symbol function_parameters) [2474 2477]))                          
+                        :documentation "
+        Inits MobileNetBackbone.
+        :param version: mobilenet version to use.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2446 2822]))                  
+                :type "class")
+                nil [2276 3275]))          
+      :file "backbone.py"
+      :pointmax 3275
+      :fsize 3274
+      :lastmodtime '(24373 36840 930631 799000)
+      :unmatched-syntax '((INDENT_BLOCK 2890 . 3275) (NEWLINE 2889 . 2890) (COLON 2888 . 2889) (DEF 2827 . 2830) (MINUS 2873 . 2874) (GT 2874 . 2875) (PERIOD 2864 . 2865) (NAME 2845 . 2857) (COLON 2857 . 2858) (NAME 2465 . 2472) (COLON 2472 . 2473) (INDENT_BLOCK 1878 . 2274) (NEWLINE 1877 . 1878) (COLON 1876 . 1877) (DEF 1815 . 1818) (MINUS 1861 . 1862) (GT 1862 . 1863) (PERIOD 1852 . 1853) (NAME 1833 . 1845) (COLON 1845 . 1846) (NAME 1370 . 1377) (COLON 1377 . 1378) (INDENT_BLOCK 747 . 947) (COLON 745 . 746) (MINUS 739 . 740) (GT 740 . 741) (BRACK_BLOCK 722 . 737) (NAME 704 . 715) (COLON 715 . 716) (INDENT_BLOCK 329 . 657) (COLON 327 . 328) (DEF 252 . 255) (MINUS 315 . 316) (GT 316 . 317) (NAME 298 . 303) (COLON 303 . 304) (PERIOD 289 . 290) (NAME 278 . 285) (COLON 285 . 286))))
+  :file "!home!xli4217!Dropbox!docker!docker_home!rlfps!examples!postdoc!traj_prediction!iclr2021!external_libs!nuscenes!prediction!models!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

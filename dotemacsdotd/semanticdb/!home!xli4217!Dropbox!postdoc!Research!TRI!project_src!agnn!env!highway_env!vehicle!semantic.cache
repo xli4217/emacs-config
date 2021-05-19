@@ -1,0 +1,84 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 50])
+            ("numpy" include nil nil [51 69])
+            ("pandas" include nil nil [70 89])
+            ("collections" include nil nil [90 119])
+            ("highway_env" include nil nil [121 150])
+            ("highway_env.road.lane" include nil nil [151 197])
+            ("highway_env.road.road" include nil nil [198 247])
+            ("highway_env.road.objects" include nil nil [248 303])
+            ("highway_env.types" include nil nil [304 340])
+            ("if" code nil nil [342 412])
+            ("Vehicle" type
+               (:documentation "
+    A moving vehicle on a road, and its kinematics.
+
+    The vehicle is represented by a dynamical system: a modified bicycle model.
+    It's state is propagated depending on its steering and acceleration actions.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("COLLISIONS_ENABLED" variable nil (reparse-symbol indented_block_body) [673 698])
+                    ("\"\"\" Enable collision detection between vehicles \"\"\"" code nil (reparse-symbol indented_block_body) [703 754])
+                    ("LENGTH" variable nil (reparse-symbol indented_block_body) [760 772])
+                    ("\"\"\" Vehicle length [m] \"\"\"" code nil (reparse-symbol indented_block_body) [777 803])
+                    ("WIDTH" variable nil (reparse-symbol indented_block_body) [808 819])
+                    ("\"\"\" Vehicle width [m] \"\"\"" code nil (reparse-symbol indented_block_body) [824 849])
+                    ("DEFAULT_SPEEDS" variable nil (reparse-symbol indented_block_body) [854 879])
+                    ("\"\"\" Range for random initial speeds [m/s] \"\"\"" code nil (reparse-symbol indented_block_body) [884 929])
+                    ("MAX_SPEED" variable nil (reparse-symbol indented_block_body) [934 949])
+                    ("\"\"\" Maximum reachable speed [m/s] \"\"\"" code nil (reparse-symbol indented_block_body) [954 991])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1161 1177])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1186 1236])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1245 1267])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1276 1294])
+                            ("np" code nil (reparse-symbol indented_block_body) [1395 1401])
+                            ("None" code nil (reparse-symbol indented_block_body) [1484 1488])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1497 1545])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1554 1574])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1583 1596])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1605 1636]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1010 1014])
+                            ("Road" variable nil (reparse-symbol function_parameters) [1039 1043])
+                            ("Vector" variable nil (reparse-symbol function_parameters) [1072 1078])
+                            ("float" variable nil (reparse-symbol function_parameters) [1106 1111])
+                            ("float" variable nil (reparse-symbol function_parameters) [1141 1146]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [997 1637])
+                    ("_is_colliding" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7914 7918])
+                            ("other" variable nil (reparse-symbol function_parameters) [7920 7925]))                          )
+                        (reparse-symbol indented_block_body) [7896 8330])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10214 10218]))                          )
+                        (reparse-symbol indented_block_body) [10202 10313])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10331 10335]))                          )
+                        (reparse-symbol indented_block_body) [10318 10368]))                  
+                :type "class")
+                nil [414 10368]))          
+      :file "kinematics.py"
+      :pointmax 10368
+      :fsize 10367
+      :lastmodtime '(24612 60259 691809 996000)
+      :unmatched-syntax '((INDENT_BLOCK 9524 . 10197) (NEWLINE 9523 . 9524) (COLON 9522 . 9523) (MINUS 9515 . 9516) (GT 9516 . 9517) (NAME 9482 . 9500) (COLON 9500 . 9501) (ASSIGN 9474 . 9475) (STRING_LITERAL 9464 . 9473) (NAME 9448 . 9462) (COLON 9462 . 9463) (INDENT_BLOCK 9359 . 9425) (NEWLINE 9358 . 9359) (COLON 9357 . 9358) (MINUS 9349 . 9350) (GT 9350 . 9351) (STRING_LITERAL 9338 . 9347) (NAME 9331 . 9336) (COLON 9336 . 9337) (INDENT_BLOCK 9184 . 9298) (NEWLINE 9183 . 9184) (COLON 9182 . 9183) (MINUS 9175 . 9176) (GT 9176 . 9177) (INDENT_BLOCK 8931 . 9138) (NEWLINE 8930 . 8931) (COLON 8929 . 8930) (MINUS 8916 . 8917) (GT 8917 . 8918) (INDENT_BLOCK 8651 . 8865) (NEWLINE 8650 . 8651) (COLON 8649 . 8650) (MINUS 8636 . 8637) (GT 8637 . 8638) (INDENT_BLOCK 8507 . 8595) (NEWLINE 8506 . 8507) (COLON 8505 . 8506) (MINUS 8492 . 8493) (GT 8493 . 8494) (INDENT_BLOCK 8384 . 8454) (NEWLINE 8383 . 8384) (COLON 8382 . 8383) (AT 8335 . 8336) (MINUS 8369 . 8370) (GT 8370 . 8371) (INDENT_BLOCK 7012 . 7891) (NEWLINE 7011 . 7012) (COLON 7010 . 7011) (MINUS 7003 . 7004) (GT 7004 . 7005) (BRACK_BLOCK 6976 . 7001) (NAME 6964 . 6969) (COLON 6969 . 6970) (INDENT_BLOCK 6512 . 6933) (NEWLINE 6511 . 6512) (COLON 6510 . 6511) (MINUS 6502 . 6503) (GT 6503 . 6504) (COLON 6479 . 6480) (COMMA 6473 . 6474) (STRING_LITERAL 6464 . 6473) (NAME 6455 . 6462) (COLON 6462 . 6463) (INDENT_BLOCK 6142 . 6423) (NEWLINE 6141 . 6142) (COLON 6140 . 6141) (MINUS 6133 . 6134) (GT 6134 . 6135) (INDENT_BLOCK 5534 . 6102) (NEWLINE 5533 . 5534) (COLON 5532 . 5533) (MINUS 5525 . 5526) (GT 5526 . 5527) (INDENT_BLOCK 4649 . 5497) (NEWLINE 4648 . 4649) (COLON 4647 . 4648) (MINUS 4640 . 4641) (GT 4641 . 4642) (NAME 4629 . 4631) (COLON 4631 . 4632) (INDENT_BLOCK 4440 . 4597) (NEWLINE 4439 . 4440) (COLON 4438 . 4439) (MINUS 4431 . 4432) (GT 4432 . 4433) (ASSIGN 4423 . 4424) (BRACK_BLOCK 4411 . 4422) (NAME 4398 . 4404) (COLON 4404 . 4405) (INDENT_BLOCK 4036 . 4379) (NEWLINE 4035 . 4036) (COLON 4034 . 4035) (MINUS 4022 . 4023) (GT 4023 . 4024) (STRING_LITERAL 4011 . 4020) (NAME 4002 . 4009) (COLON 4009 . 4010) (INDENT_BLOCK 2529 . 3959) (NEWLINE 2528 . 2529) (COLON 2527 . 2528) (MINUS 2515 . 2516) (GT 2516 . 2517) (NAME 2481 . 2488) (COLON 2488 . 2489) (ASSIGN 2473 . 2474) (BRACK_BLOCK 2467 . 2472) (NAME 2450 . 2457) (COLON 2457 . 2458) (NAME 2429 . 2434) (COLON 2434 . 2435) (NAME 2417 . 2421) (COLON 2421 . 2422) (INDENT_BLOCK 1769 . 2372) (NEWLINE 1768 . 1769) (COLON 1767 . 1768) (AT 1642 . 1643) (MINUS 1755 . 1756) (GT 1756 . 1757) (NAME 1737 . 1742) (COLON 1742 . 1743) (NAME 1716 . 1728) (COLON 1728 . 1729) (NAME 1693 . 1703) (COLON 1703 . 1704) (NAME 1681 . 1685) (COLON 1685 . 1686) (NAME 1410 . 1414) (IF 1466 . 1468) (ELSE 1479 . 1483) (NAME 1303 . 1307) (IF 1377 . 1379) (ELSE 1390 . 1394) (NAME 1134 . 1139) (COLON 1139 . 1140) (NAME 1097 . 1104) (COLON 1104 . 1105) (NAME 1062 . 1070) (COLON 1070 . 1071) (NAME 1033 . 1037) (COLON 1037 . 1038))))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!agnn!env!highway_env!vehicle!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

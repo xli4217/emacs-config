@@ -1,0 +1,206 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("gym" include nil nil [1 11])
+            ("gym" include nil nil [12 35])
+            ("gym" include nil nil [36 74])
+            ("numpy" include nil nil [75 103])
+            ("json" include nil nil [75 103])
+            ("os" include nil nil [75 103])
+            ("gym.wrappers.monitoring" include nil nil [104 170])
+            ("gym.utils" include nil nil [171 213])
+            ("gym.utils.json_utils" include nil nil [214 261])
+            ("FILE_PREFIX" variable nil nil [263 288])
+            ("MANIFEST_PREFIX" code nil nil [289 332])
+            ("Monitor" type
+               (:superclasses ("Wrapper")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [516 550])
+                            ("self" variable nil (reparse-symbol indented_block_body) [560 576])
+                            ("self" variable nil (reparse-symbol indented_block_body) [586 612])
+                            ("self" variable nil (reparse-symbol indented_block_body) [621 647])
+                            ("self" variable nil (reparse-symbol indented_block_body) [656 676])
+                            ("self" variable nil (reparse-symbol indented_block_body) [685 704])
+                            ("self" variable nil (reparse-symbol indented_block_body) [713 736])
+                            ("self" variable nil (reparse-symbol indented_block_body) [745 815])
+                            ("self" code nil (reparse-symbol indented_block_body) [825 935]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [375 379])
+                            ("env" variable nil (reparse-symbol function_parameters) [381 384])
+                            ("directory" variable nil (reparse-symbol function_parameters) [386 395])
+                            ("video_callable" variable nil (reparse-symbol function_parameters) [397 411])
+                            ("force" variable nil (reparse-symbol function_parameters) [418 423])
+                            ("resume" variable nil (reparse-symbol function_parameters) [431 437])
+                            ("write_upon_reset" variable nil (reparse-symbol function_parameters) [462 478])
+                            ("uid" variable nil (reparse-symbol function_parameters) [486 489])
+                            ("mode" variable nil (reparse-symbol function_parameters) [496 500]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [362 936])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [950 954])
+                            ("action" variable nil (reparse-symbol function_parameters) [956 962])
+                            ("custom" variable nil (reparse-symbol function_parameters) [964 970]))                          )
+                        (reparse-symbol indented_block_body) [941 1205])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1220 1224])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1226 1234]))                          )
+                        (reparse-symbol indented_block_body) [1210 1380])
+                    ("set_monitor_mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1406 1410])
+                            ("mode" variable nil (reparse-symbol function_parameters) [1412 1416]))                          )
+                        (reparse-symbol indented_block_body) [1385 1535])
+                    ("_start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1552 1556])
+                            ("directory" variable nil (reparse-symbol function_parameters) [1558 1567])
+                            ("video_callable" variable nil (reparse-symbol function_parameters) [1569 1583])
+                            ("force" variable nil (reparse-symbol function_parameters) [1590 1595])
+                            ("resume" variable nil (reparse-symbol function_parameters) [1603 1609])
+                            ("write_upon_reset" variable nil (reparse-symbol function_parameters) [1631 1647])
+                            ("uid" variable nil (reparse-symbol function_parameters) [1655 1658])
+                            ("mode" variable nil (reparse-symbol function_parameters) [1665 1669]))                          
+                        :documentation "Start monitoring.
+
+        Args:
+            directory (str): A per-training run directory where to record stats.
+            video_callable (Optional[function, False]): function that takes in the index of the episode and outputs a boolean, indicating whether we should record a video on this episode. The default (for video_callable is None) is to take perfect cubes, capped at 1000. False disables video recording.
+            force (bool): Clear out existing training data from this directory (by deleting every file prefixed with \"openaigym.\").
+            resume (bool): Retain the training data already in this directory, which will be merged with our new data
+            write_upon_reset (bool): Write the manifest file on each reset. (This is currently a JSON file, so writing it is somewhat expensive.)
+            uid (Optional[str]): A unique id used as part of the suffix for the file. By default, uses os.getpid().
+            mode (['evaluation', 'training']): Whether this is an evaluation or training episode.
+        ")
+                        (reparse-symbol indented_block_body) [1541 4870])
+                    ("_flush" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4886 4890])
+                            ("force" variable nil (reparse-symbol function_parameters) [4892 4897]))                          
+                        :documentation "Flush all relevant monitor information to disk.")
+                        (reparse-symbol indented_block_body) [4875 5975])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5990 5994]))                          
+                        :documentation "Flush all monitor data to disk and close any open rending windows.")
+                        (reparse-symbol indented_block_body) [5980 6569])
+                    ("_set_mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6588 6592])
+                            ("mode" variable nil (reparse-symbol function_parameters) [6594 6598]))                          )
+                        (reparse-symbol indented_block_body) [6574 6858])
+                    ("_before_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6880 6884])
+                            ("action" variable nil (reparse-symbol function_parameters) [6886 6892]))                          )
+                        (reparse-symbol indented_block_body) [6863 6979])
+                    ("_after_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7000 7004])
+                            ("observation" variable nil (reparse-symbol function_parameters) [7006 7017])
+                            ("reward" variable nil (reparse-symbol function_parameters) [7019 7025])
+                            ("done" variable nil (reparse-symbol function_parameters) [7027 7031])
+                            ("info" variable nil (reparse-symbol function_parameters) [7033 7037]))                          )
+                        (reparse-symbol indented_block_body) [6984 7532])
+                    ("_before_reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7555 7559]))                          )
+                        (reparse-symbol indented_block_body) [7537 7641])
+                    ("_after_reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7663 7667])
+                            ("observation" variable nil (reparse-symbol function_parameters) [7669 7680]))                          )
+                        (reparse-symbol indented_block_body) [7646 7949])
+                    ("reset_video_recorder" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7979 7983]))                          )
+                        (reparse-symbol indented_block_body) [7954 8595])
+                    ("_close_video_recorder" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8626 8630]))                          )
+                        (reparse-symbol indented_block_body) [8600 8806])
+                    ("_video_enabled" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8830 8834]))                          )
+                        (reparse-symbol indented_block_body) [8811 8889])
+                    ("_env_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8908 8912]))                          )
+                        (reparse-symbol indented_block_body) [8894 9090])
+                    ("__del__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9107 9111]))                          )
+                        (reparse-symbol indented_block_body) [9095 9200])
+                    ("get_total_steps" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9225 9229]))                          )
+                        (reparse-symbol indented_block_body) [9205 9287])
+                    ("get_episode_rewards" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9316 9320]))                          )
+                        (reparse-symbol indented_block_body) [9292 9374])
+                    ("get_episode_lengths" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9403 9407]))                          )
+                        (reparse-symbol indented_block_body) [9379 9461]))                  
+                :type "class")
+                nil [334 9461])
+            ("detect_training_manifests" function (:arguments 
+              ( ("training_dir" variable nil (reparse-symbol function_parameters) [9492 9504])
+                ("files" variable nil (reparse-symbol function_parameters) [9506 9511]))              ) nil [9462 9679])
+            ("detect_monitor_files" function (:arguments 
+              ( ("training_dir" variable nil (reparse-symbol function_parameters) [9705 9717]))              ) nil [9680 9832])
+            ("clear_monitor_files" function (:arguments 
+              ( ("training_dir" variable nil (reparse-symbol function_parameters) [9857 9869]))              ) nil [9833 10115])
+            ("capped_cubic_video_schedule" function (:arguments 
+              ( ("episode_id" variable nil (reparse-symbol function_parameters) [10148 10158]))              ) nil [10116 10304])
+            ("disable_videos" function (:arguments 
+              ( ("episode_id" variable nil (reparse-symbol function_parameters) [10324 10334]))              ) nil [10305 10354])
+            ("monitor_closer" variable nil nil [10355 10387])
+            ("_open_monitors" function nil nil [10511 10585])
+            ("load_env_info_from_manifests" function (:arguments 
+              ( ("manifests" variable nil (reparse-symbol function_parameters) [10619 10628])
+                ("training_dir" variable nil (reparse-symbol function_parameters) [10630 10642]))              ) nil [10586 10896])
+            ("load_results" function (:arguments 
+              ( ("training_dir" variable nil (reparse-symbol function_parameters) [10914 10926]))              ) nil [10897 12467])
+            ("merge_stats_files" function (:arguments 
+              ( ("stats_files" variable nil (reparse-symbol function_parameters) [12490 12501]))              ) nil [12468 14035])
+            ("collapse_env_infos" function (:arguments 
+              ( ("env_infos" variable nil (reparse-symbol function_parameters) [14139 14148])
+                ("training_dir" variable nil (reparse-symbol function_parameters) [14150 14162]))              ) nil [14116 14762]))          
+      :file "monitor.py"
+      :pointmax 14762
+      :fsize 14761
+      :lastmodtime '(24590 32304 401238 327000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!external_libs!gym!wrappers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

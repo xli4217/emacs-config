@@ -1,0 +1,243 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("abc" include nil nil [1 31])
+            ("copy" include nil nil [32 57])
+            ("torch.nn" include nil nil [59 80])
+            ("typing" include nil nil [81 103])
+            ("pytorch_lightning" include nil nil [105 160])
+            ("pytorch_lightning.utilities" include nil nil [161 236])
+            ("VerificationBase" type
+               (:documentation "
+    Base class for model verification.
+    All verifications should run with any :class:`torch.nn.Module` unless otherwise stated.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Arguments:
+            model: The model to run verification for.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [461 549])
+                            ("super" code nil (reparse-symbol indented_block_body) [558 576])
+                            ("self" variable nil (reparse-symbol indented_block_body) [585 603]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [428 432])
+                            ("Module" variable nil (reparse-symbol function_parameters) [444 450]))                          
+                        :documentation "
+        Arguments:
+            model: The model to run verification for.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [415 604]))                  
+                :type "class")
+                nil [239 2864])
+            ("VerificationCallbackBase" type
+               (:documentation "
+    Base class for model verification in form of a callback.
+    This type of verification is expected to only work with
+    :class:`~pytorch_lightning.core.lightning.LightningModule` and will take the input array
+    from :attr:`~pytorch_lightning.core.lightning.LightningModule.example_input_array` if needed.
+    "
+                :superclasses ("Callback")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Arguments:
+            warn: If `True`, prints a warning message when verification fails. Default: `True`.
+            error: If `True`, prints a error message when verification fails. Default: `False`.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [3309 3535])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3544 3570])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3579 3604]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3254 3258])
+                            ("bool" variable nil (reparse-symbol function_parameters) [3266 3270])
+                            ("bool" variable nil (reparse-symbol function_parameters) [3286 3290]))                          
+                        :documentation "
+        Arguments:
+            warn: If `True`, prints a warning message when verification fails. Default: `True`.
+            error: If `True`, prints a error message when verification fails. Default: `False`.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3241 3605])
+                    ("_raise" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4614 4618])
+                            ("args" variable nil (reparse-symbol function_parameters) [4620 4625])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [4627 4635]))                          )
+                        (reparse-symbol indented_block_body) [4603 4834]))                  
+                :type "class")
+                nil [2866 4834]))          
+      :file "base.py"
+      :pointmax 4834
+      :fsize 4833
+      :lastmodtime '(24574 36840 660222 188000)
+      :unmatched-syntax '((INDENT_BLOCK 4464 . 4598) (NEWLINE 4463 . 4464) (COLON 4462 . 4463) (MINUS 4456 . 4457) (GT 4457 . 4458) (INDENT_BLOCK 4274 . 4410) (NEWLINE 4273 . 4274) (COLON 4272 . 4273) (MINUS 4266 . 4267) (GT 4267 . 4268) (INDENT_BLOCK 3653 . 4218) (NEWLINE 3652 . 3653) (COLON 3651 . 3652) (DEF 3610 . 3613) (MINUS 3645 . 3646) (GT 3646 . 3647) (NAME 3279 . 3284) (COLON 3284 . 3285) (NAME 3260 . 3264) (COLON 3264 . 3265) (INDENT_BLOCK 2105 . 2864) (NEWLINE 2104 . 2105) (COLON 2103 . 2104) (MINUS 2097 . 2098) (GT 2098 . 2099) (NAME 2079 . 2090) (COLON 2090 . 2091) (INDENT_BLOCK 1281 . 2049) (NEWLINE 1280 . 1281) (COLON 1279 . 1280) (MINUS 1273 . 1274) (GT 1274 . 1275) (INDENT_BLOCK 671 . 1218) (NEWLINE 670 . 671) (COLON 669 . 670) (AT 609 . 610) (MINUS 662 . 663) (GT 663 . 664) (PERIOD 443 . 444) (NAME 434 . 439) (COLON 439 . 440) (INDENT_BLOCK 4274 . 4410) (NEWLINE 4273 . 4274) (COLON 4272 . 4273) (MINUS 4266 . 4267) (GT 4267 . 4268) (INDENT_BLOCK 3653 . 4218) (NEWLINE 3652 . 3653) (COLON 3651 . 3652) (DEF 3610 . 3613) (MINUS 3645 . 3646) (GT 3646 . 3647) (NAME 3279 . 3284) (COLON 3284 . 3285) (NAME 3260 . 3264) (COLON 3264 . 3265) (INDENT_BLOCK 2105 . 2864) (NEWLINE 2104 . 2105) (COLON 2103 . 2104) (MINUS 2097 . 2098) (GT 2098 . 2099) (NAME 2079 . 2090) (COLON 2090 . 2091) (INDENT_BLOCK 1281 . 2049) (NEWLINE 1280 . 1281) (COLON 1279 . 1280) (MINUS 1273 . 1274) (GT 1274 . 1275) (INDENT_BLOCK 671 . 1218) (NEWLINE 670 . 671) (COLON 669 . 670) (AT 609 . 610) (MINUS 662 . 663) (GT 663 . 664) (PERIOD 443 . 444) (NAME 434 . 439) (COLON 439 . 440)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 39])
+            ("torch" include nil nil [41 53])
+            ("pytorch_lightning.utilities.apply_func" include nil nil [55 125])
+            ("pytorch_lightning.utilities.exceptions" include nil nil [126 202])
+            ("verification.base" include nil nil [203 275])
+            ("BatchGradientVerification" type
+               (:documentation "
+    Checks if a model mixes data across the batch dimension.
+    This can happen if reshape- and/or permutation operations are carried out in the wrong order or
+    on the wrong tensor dimensions.
+    "
+                :superclasses ("VerificationBase")
+                :type "class")
+                nil [278 3587])
+            ("BatchGradientVerificationCallback" type
+               (:documentation "
+    The callback version of the :class:`BatchGradientVerification` test.
+    Verification is performed right before training begins.
+    "
+                :superclasses ("VerificationCallbackBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Arguments:
+            input_mapping: An optional input mapping that returns all batched tensors in a input collection.
+                See :meth:`BatchGradientVerification.check` for more information.
+            output_mapping: An optional output mapping that combines all batched tensors in the output
+                collection into one big batch. See :meth:`BatchGradientVerification.check` for more information.
+            sample_idx: The index of the batch sample to run the test for.
+                See :meth:`BatchGradientVerification.check` for more information.
+            **kwargs: Additional arguments for the base class :class:`VerificationCallbackBase`
+        \"\"\"" code nil (reparse-symbol indented_block_body) [3973 4667])
+                            ("super" code nil (reparse-symbol indented_block_body) [4676 4702])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4711 4746])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4755 4792])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4801 4830]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3832 3836])
+                            ("Callable" variable nil (reparse-symbol function_parameters) [3861 3869])
+                            ("Callable" variable nil (reparse-symbol function_parameters) [3902 3910])
+                            ("sample_idx" variable nil (reparse-symbol function_parameters) [3927 3937])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [3949 3957]))                          
+                        :documentation "
+        Arguments:
+            input_mapping: An optional input mapping that returns all batched tensors in a input collection.
+                See :meth:`BatchGradientVerification.check` for more information.
+            output_mapping: An optional output mapping that combines all batched tensors in the output
+                collection into one big batch. See :meth:`BatchGradientVerification.check` for more information.
+            sample_idx: The index of the batch sample to run the test for.
+                See :meth:`BatchGradientVerification.check` for more information.
+            **kwargs: Additional arguments for the base class :class:`VerificationCallbackBase`
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3810 4831])
+                    ("message" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4848 4852]))                          )
+                        (reparse-symbol indented_block_body) [4836 5143])
+                    ("on_train_start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5167 5171])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [5173 5180])
+                            ("pl_module" variable nil (reparse-symbol function_parameters) [5182 5191]))                          )
+                        (reparse-symbol indented_block_body) [5148 5542]))                  
+                :type "class")
+                nil [3589 5542]))          
+      :file "batch_gradient.py"
+      :pointmax 7957
+      :fsize 7956
+      :lastmodtime '(24574 36840 660222 188000)
+      :unmatched-syntax '((INDENT_BLOCK 7681 . 7957) (COLON 7679 . 7680) (MINUS 7658 . 7659) (GT 7659 . 7660) (NAME 7647 . 7651) (COLON 7651 . 7652) (INDENT_BLOCK 6472 . 7625) (COLON 6470 . 6471) (MINUS 6455 . 6456) (GT 6456 . 6457) (NAME 6444 . 6448) (COLON 6448 . 6449) (INDENT_BLOCK 5604 . 6415) (COLON 5602 . 5603) (DEF 5544 . 5547) (MINUS 5581 . 5582) (GT 5582 . 5583) (NAME 5570 . 5574) (COLON 5574 . 5575) (NAME 3886 . 3900) (COLON 3900 . 3901) (NAME 3846 . 3859) (COLON 3859 . 3860) (INDENT_BLOCK 716 . 3587) (NEWLINE 715 . 716) (COLON 714 . 715) (DEF 547 . 550) (MINUS 707 . 708) (GT 708 . 709) (NAME 646 . 660) (COLON 660 . 661) (NAME 606 . 619) (COLON 619 . 620)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("torch" include nil nil [14 40])
+            ("typing" include nil nil [41 81])
+            ("verification.base" include nil nil [83 155])
+            ("BatchNormVerification" type
+               (:superclasses ("VerificationBase")
+                :members 
+                  ( ("normalization_layer" variable nil (reparse-symbol indented_block_body) [210 462])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [514 537])
+                            ("self" variable nil (reparse-symbol indented_block_body) [546 569])
+                            ("self" variable nil (reparse-symbol indented_block_body) [578 604])
+                            ("self" variable nil (reparse-symbol indented_block_body) [613 638]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [481 485])
+                            ("Module" variable nil (reparse-symbol function_parameters) [497 503]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [468 639])
+                    ("collect_detections" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1106 1110]))                          )
+                        (reparse-symbol indented_block_body) [1083 1728])
+                    ("register_hooks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1752 1756]))                          )
+                        (reparse-symbol indented_block_body) [1733 1998])
+                    ("destroy_hooks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2198 2202]))                          )
+                        (reparse-symbol indented_block_body) [2180 2303]))                  
+                :type "class")
+                nil [158 2303])
+            ("BatchNormVerificationCallback" type
+               (:superclasses ("VerificationCallbackBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [2410 2436])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2445 2470]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2385 2389])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [2391 2399]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2372 2471])
+                    ("on_train_start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2945 2949])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [2951 2958])
+                            ("pl_module" variable nil (reparse-symbol function_parameters) [2960 2969]))                          )
+                        (reparse-symbol indented_block_body) [2926 3078])
+                    ("on_train_batch_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3115 3119])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [3121 3128])
+                            ("pl_module" variable nil (reparse-symbol function_parameters) [3130 3139])
+                            ("outputs" variable nil (reparse-symbol function_parameters) [3141 3148])
+                            ("batch" variable nil (reparse-symbol function_parameters) [3150 3155])
+                            ("batch_idx" variable nil (reparse-symbol function_parameters) [3157 3166])
+                            ("dataloader_idx" variable nil (reparse-symbol function_parameters) [3168 3182]))                          )
+                        (reparse-symbol indented_block_body) [3083 3421]))                  
+                :type "class")
+                nil [2305 3421]))          
+      :file "batch_norm.py"
+      :pointmax 3421
+      :fsize 3420
+      :lastmodtime '(24574 36840 660222 188000)
+      :unmatched-syntax '((INDENT_BLOCK 2527 . 2921) (NEWLINE 2526 . 2527) (COLON 2525 . 2526) (DEF 2476 . 2479) (MINUS 2519 . 2520) (GT 2520 . 2521) (BRACK_BLOCK 2510 . 2517) (NAME 2494 . 2504) (COLON 2504 . 2505) (INDENT_BLOCK 2052 . 2175) (NEWLINE 2051 . 2052) (COLON 2050 . 2051) (DEF 2003 . 2006) (MINUS 2039 . 2040) (GT 2040 . 2041) (INDENT_BLOCK 783 . 1078) (NEWLINE 782 . 783) (COLON 781 . 782) (MINUS 774 . 775) (GT 775 . 776) (INDENT_BLOCK 699 . 735) (NEWLINE 698 . 699) (COLON 697 . 698) (AT 644 . 645) (MINUS 683 . 684) (GT 684 . 685) (PERIOD 496 . 497) (NAME 487 . 492) (COLON 492 . 493))))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!utils!pl_snippets!verification!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

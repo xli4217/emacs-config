@@ -1,0 +1,292 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("copy" include nil nil [1 12])
+            ("os" include nil nil [13 22])
+            ("typing" include nil nil [23 73])
+            ("gym" include nil nil [74 84])
+            ("gym" include nil nil [85 108])
+            ("gym.utils" include nil nil [109 138])
+            ("numpy" include nil nil [139 157])
+            ("highway_env" include nil nil [159 188])
+            ("highway_env.envs.common.action" include nil nil [189 286])
+            ("highway_env.envs.common.observation" include nil nil [287 371])
+            ("highway_env.envs.common.finite_mdp" include nil nil [372 429])
+            ("highway_env.envs.common.graphics" include nil nil [430 484])
+            ("highway_env.vehicle.behavior" include nil nil [485 551])
+            ("highway_env.vehicle.controller" include nil nil [552 605])
+            ("highway_env.vehicle.kinematics" include nil nil [606 656])
+            ("Observation" variable nil nil [658 682])
+            ("AbstractEnv" type
+               (:documentation "
+    A generic environment for various tasks involving a vehicle driving on a road.
+
+    The environment contains a road populated with vehicles, and a controlled ego-vehicle that can change lane and
+    speed. The action space is fixed, but the observation space and reward function must be defined in the
+    environment implementations.
+    "
+                :superclasses ("gym.Env")
+                :members 
+                  ( ("ObservationType" code nil (reparse-symbol indented_block_body) [1091 1106])
+                    ("ActionType" code nil (reparse-symbol indented_block_body) [1124 1134])
+                    ("Optional" code nil (reparse-symbol indented_block_body) [1169 1187])
+                    ("metadata" variable nil (reparse-symbol indented_block_body) [1192 1243])
+                    ("PERCEPTION_DISTANCE" code nil (reparse-symbol indented_block_body) [1249 1297])
+                    ("\"\"\"The maximum distance of any vehicle present in the observation [m]\"\"\"" code nil (reparse-symbol indented_block_body) [1302 1374])
+                    ("to_finite_mdp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14296 14300]))                          )
+                        (reparse-symbol indented_block_body) [14278 14388])
+                    ("__deepcopy__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14410 14414])
+                            ("memo" variable nil (reparse-symbol function_parameters) [14416 14420]))                          
+                        :documentation "Perform a deep copy but without copying the environment viewer.")
+                        (reparse-symbol indented_block_body) [14393 14847]))                  
+                :type "class")
+                nil [685 14847])
+            ("MultiAgentWrapper" type
+               (:superclasses ("Wrapper")
+                :members 
+                  ( ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14896 14900])
+                            ("action" variable nil (reparse-symbol function_parameters) [14902 14908]))                          )
+                        (reparse-symbol indented_block_body) [14887 15081]))                  
+                :type "class")
+                nil [14849 15081]))          
+      :file "abstract.py"
+      :pointmax 15081
+      :fsize 15080
+      :lastmodtime '(24591 29521 144120 323000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 67])
+            ("gym" include nil nil [68 90])
+            ("numpy" include nil nil [91 109])
+            ("highway_env" include nil nil [111 140])
+            ("highway_env.vehicle.dynamics" include nil nil [141 196])
+            ("highway_env.vehicle.kinematics" include nil nil [197 247])
+            ("highway_env.vehicle.controller" include nil nil [248 301])
+            ("if" code nil nil [303 382])
+            ("Action" variable nil nil [383 414])
+            ("ActionType" type
+               (:documentation "A type of action specifies its definition space, and how actions are executed in the environment"
+                :superclasses ("object")
+                :members 
+                  ( ("controlled_vehicle" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1591 1595]))                          
+                        :documentation "The vehicle acted upon.
+
+        If not set, the first controlled vehicle is used by default.")
+                        (reparse-symbol indented_block_body) [1554 1767])
+                    ("controlled_vehicle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1826 1830])
+                            ("vehicle" variable nil (reparse-symbol function_parameters) [1832 1839]))                          
+                        :decorators 
+                          ( ("controlled_vehicle.setter" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1772 1886]))                  
+                :type "class")
+                nil [417 1886])
+            ("ContinuousAction" type
+               (:documentation "
+    An continuous action space for throttle and/or steering angle.
+
+    If both throttle and steering are enabled, they are set in this order: [throttle, steering]
+
+    The space intervals are always [-1, 1], but are mapped to throttle/steering intervals through configurations.
+    "
+                :superclasses ("ActionType")
+                :members 
+                  ( ("ACCELERATION_RANGE" variable nil (reparse-symbol indented_block_body) [2225 2255])
+                    ("\"\"\"Acceleration range: [-x, x], in m/s².\"\"\"" code nil (reparse-symbol indented_block_body) [2260 2303])
+                    ("STEERING_RANGE" variable nil (reparse-symbol indented_block_body) [2309 2349])
+                    ("\"\"\"Steering angle range: [-x, x], in rad.\"\"\"" code nil (reparse-symbol indented_block_body) [2354 2398]))                  
+                :type "class")
+                nil [1888 4969])
+            ("DiscreteMetaAction" type
+               (:documentation "
+    An discrete action space of meta-actions: lane changes, and cruise control set-point.
+    "
+                :superclasses ("ActionType")
+                :members 
+                  ( ("ACTIONS_ALL" variable nil (reparse-symbol indented_block_body) [5121 5251])
+                    ("\"\"\"A mapping of action indexes to labels.\"\"\"" code nil (reparse-symbol indented_block_body) [5256 5300])
+                    ("ACTIONS_LONGI" variable nil (reparse-symbol indented_block_body) [5306 5389])
+                    ("\"\"\"A mapping of longitudinal action indexes to labels.\"\"\"" code nil (reparse-symbol indented_block_body) [5394 5451])
+                    ("ACTIONS_LAT" variable nil (reparse-symbol indented_block_body) [5457 5545])
+                    ("\"\"\"A mapping of lateral action indexes to labels.\"\"\"" code nil (reparse-symbol indented_block_body) [5550 5602]))                  
+                :type "class")
+                nil [4971 7020])
+            ("MultiAgentAction" type
+               (:superclasses ("ActionType")
+                :type "class")
+                nil [7021 8006]))          
+      :file "action.py"
+      :pointmax 8418
+      :fsize 8419
+      :lastmodtime '(24590 33622 875368 910000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 62])
+            ("gym" include nil nil [63 85])
+            ("numpy" include nil nil [86 104])
+            ("pandas" include nil nil [105 124])
+            ("highway_env" include nil nil [126 155])
+            ("highway_env.envs.common.finite_mdp" include nil nil [156 219])
+            ("highway_env.road.lane" include nil nil [220 266])
+            ("highway_env.vehicle.controller" include nil nil [267 320])
+            ("if" code nil nil [322 401])
+            ("ObservationType" type
+               (:superclasses ("object")
+                :members 
+                  ( ("observe" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [690 694]))                          
+                        :documentation "Get an observation of the environment state.")
+                        (reparse-symbol indented_block_body) [678 792])
+                    ("observer_vehicle" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [832 836]))                          
+                        :documentation "
+        The vehicle observing the scene.
+
+        If not set, the first controlled vehicle is used by default.
+        ")
+                        (reparse-symbol indented_block_body) [797 1033])
+                    ("observer_vehicle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1088 1092])
+                            ("vehicle" variable nil (reparse-symbol function_parameters) [1094 1101]))                          
+                        :decorators 
+                          ( ("observer_vehicle.setter" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1038 1146]))                  
+                :type "class")
+                nil [403 1146])
+            ("GrayscaleObservation" type
+               (:documentation "
+    An observation class that collects directly what the simulator renders
+
+    Also stacks the collected frames as in the nature DQN.
+    Specific keys are expected in the configuration dictionary passed.
+
+    Example of observation dictionary in the environment config:
+        observation\": {
+            \"type\": \"GrayscaleObservation\",
+            \"weights\": [0.2989, 0.5870, 0.1140],  #weights for RGB conversion,
+            \"stack_size\": 4,
+            \"observation_shape\": (84, 84)
+        }
+
+    Also, the screen_height and screen_width of the environment should match the
+    expected observation_shape.
+    "
+                :superclasses ("ObservationType")
+                :type "class")
+                nil [1148 2864])
+            ("TimeToCollisionObservation" type
+               (:superclasses ("ObservationType")
+                :type "class")
+                nil [2866 4415])
+            ("KinematicObservation" type
+               (:documentation "Observe the kinematics of nearby vehicles."
+                :superclasses ("ObservationType")
+                :members 
+                  ( ("List" variable nil (reparse-symbol indented_block_body) [4531 4577]))                  
+                :type "class")
+                nil [4417 8825])
+            ("OccupancyGridObservation" type
+               (:documentation "Observe an occupancy grid of nearby vehicles."
+                :superclasses ("ObservationType")
+                :members 
+                  ( ("List" variable nil (reparse-symbol indented_block_body) [8948 8984])
+                    ("List" variable nil (reparse-symbol indented_block_body) [9000 9054])
+                    ("List" variable nil (reparse-symbol indented_block_body) [9070 9088]))                  
+                :type "class")
+                nil [8827 12483])
+            ("KinematicsGoalObservation" type
+               (:superclasses ("KinematicObservation")
+                :type "class")
+                nil [12485 13916])
+            ("AttributesObservation" type
+               (:superclasses ("ObservationType")
+                :type "class")
+                nil [13918 14623])
+            ("MultiAgentObservation" type
+               (:superclasses ("ObservationType")
+                :type "class")
+                nil [14625 15426]))          
+      :file "observation.py"
+      :pointmax 16270
+      :fsize 16269
+      :lastmodtime '(24591 40580 775976 934000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("importlib" include nil nil [1 17])
+            ("functools" include nil nil [18 47])
+            ("typing" include nil nil [48 90])
+            ("numpy" include nil nil [92 110])
+            ("highway_env" include nil nil [112 141])
+            ("highway_env.vehicle.kinematics" include nil nil [142 192])
+            ("if" code nil nil [194 257]))          
+      :file "finite_mdp.py"
+      :pointmax 7513
+      :fsize 7512
+      :lastmodtime '(24484 61841 463893 619000)
+      :unmatched-syntax '((INDENT_BLOCK 7066 . 7513) (COLON 7064 . 7065) (MINUS 7051 . 7052) (GT 7052 . 7053) (PERIOD 7041 . 7042) (NAME 7033 . 7037) (COLON 7037 . 7038) (NAME 7025 . 7026) (COLON 7026 . 7027) (NAME 7017 . 7018) (COLON 7018 . 7019) (NAME 7009 . 7010) (COLON 7010 . 7011) (INDENT_BLOCK 6165 . 6989) (COLON 6163 . 6164) (MINUS 6150 . 6151) (GT 6151 . 6152) (PERIOD 6140 . 6141) (NAME 6132 . 6136) (COLON 6136 . 6137) (NAME 6124 . 6125) (COLON 6125 . 6126) (NAME 6116 . 6117) (COLON 6117 . 6118) (NAME 6108 . 6109) (COLON 6109 . 6110) (NAME 6100 . 6101) (COLON 6101 . 6102) (INDENT_BLOCK 3597 . 6077) (COLON 3595 . 3596) (MINUS 3582 . 3583) (GT 3583 . 3584) (ASSIGN 3574 . 3575) (BRACK_BLOCK 3564 . 3573) (NAME 3547 . 3554) (COLON 3554 . 3555) (NAME 3510 . 3517) (COLON 3517 . 3518) (COLON 3480 . 3481) (COMMA 3440 . 3441) (STRING_LITERAL 3427 . 3440) (NAME 3422 . 3425) (COLON 3425 . 3426) (INDENT_BLOCK 388 . 3399) (COLON 386 . 387) (DEF 259 . 262) (MINUS 377 . 378) (GT 378 . 379) (NAME 355 . 362) (COLON 362 . 363) (COLON 326 . 327) (COMMA 292 . 293) (STRING_LITERAL 279 . 292) (NAME 274 . 277) (COLON 277 . 278)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("typing" include nil nil [11 59])
+            ("numpy" include nil nil [60 78])
+            ("pygame" include nil nil [79 92])
+            ("gym.spaces" include nil nil [93 124])
+            ("highway_env.envs.common.action" include nil nil [126 217])
+            ("highway_env.road.graphics" include nil nil [218 282])
+            ("highway_env.vehicle.graphics" include nil nil [283 339])
+            ("if" code nil nil [341 460])
+            ("EnvViewer" type
+               (:documentation "A viewer to render a highway driving environment."
+                :superclasses ("object")
+                :members 
+                  ( ("SAVE_IMAGES" variable nil (reparse-symbol indented_block_body) [553 572]))                  
+                :type "class")
+                nil [462 6841])
+            ("EventHandler" type
+               (:superclasses ("object")
+                :type "class")
+                nil [6843 9360]))          
+      :file "graphics.py"
+      :pointmax 9360
+      :fsize 9359
+      :lastmodtime '(24581 14627 540389 349000)
+      :unmatched-syntax '((INDENT_BLOCK 8284 . 9360) (NEWLINE 8283 . 8284) (COLON 8282 . 8283) (MINUS 8275 . 8276) (GT 8276 . 8277) (PERIOD 8263 . 8264) (PERIOD 8257 . 8258) (NAME 8244 . 8249) (COLON 8249 . 8250) (NAME 8213 . 8224) (COLON 8224 . 8225) (INDENT_BLOCK 7566 . 8151) (NEWLINE 7565 . 7566) (COLON 7564 . 7565) (MINUS 7557 . 7558) (GT 7558 . 7559) (PERIOD 7545 . 7546) (PERIOD 7539 . 7540) (NAME 7526 . 7531) (COLON 7531 . 7532) (NAME 7493 . 7504) (COLON 7504 . 7505) (INDENT_BLOCK 6979 . 7433) (NEWLINE 6978 . 6979) (COLON 6977 . 6978) (AT 6875 . 6876) (MINUS 6970 . 6971) (GT 6971 . 6972) (PERIOD 6958 . 6959) (PERIOD 6952 . 6953) (NAME 6939 . 6944) (COLON 6944 . 6945) (NAME 6914 . 6925) (COLON 6925 . 6926) (INDENT_BLOCK 6780 . 6841) (NEWLINE 6779 . 6780) (COLON 6778 . 6779) (MINUS 6771 . 6772) (GT 6772 . 6773) (INDENT_BLOCK 6554 . 6750) (NEWLINE 6553 . 6554) (COLON 6552 . 6553) (MINUS 6539 . 6540) (GT 6540 . 6541) (INDENT_BLOCK 6059 . 6508) (NEWLINE 6058 . 6059) (COLON 6057 . 6058) (MINUS 6044 . 6045) (GT 6045 . 6046) (INDENT_BLOCK 4271 . 6019) (NEWLINE 4270 . 4271) (COLON 4269 . 4270) (MINUS 4262 . 4263) (GT 4263 . 4264) (INDENT_BLOCK 3872 . 4239) (NEWLINE 3871 . 3872) (COLON 3870 . 3871) (MINUS 3863 . 3864) (GT 3864 . 3865) (INDENT_BLOCK 3046 . 3834) (NEWLINE 3045 . 3046) (COLON 3044 . 3045) (MINUS 3037 . 3038) (GT 3038 . 3039) (BRACK_BLOCK 3025 . 3035) (NAME 3012 . 3019) (COLON 3019 . 3020) (INDENT_BLOCK 1954 . 2954) (NEWLINE 1953 . 1954) (COLON 1952 . 1953) (MINUS 1945 . 1946) (GT 1946 . 1947) (NAME 1920 . 1933) (COLON 1933 . 1934) (INDENT_BLOCK 626 . 1887) (NEWLINE 625 . 626) (COLON 624 . 625) (DEF 578 . 581) (MINUS 617 . 618) (GT 618 . 619) (STRING_LITERAL 602 . 615) (NAME 597 . 600) (COLON 600 . 601))))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!highway_env!envs!common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

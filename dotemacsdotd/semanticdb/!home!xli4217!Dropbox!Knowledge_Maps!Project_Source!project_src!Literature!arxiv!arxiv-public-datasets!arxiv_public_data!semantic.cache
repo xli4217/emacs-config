@@ -1,0 +1,108 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"
+Copyright 2017 Cornell University
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the \"Software\"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+\"\"\"" code nil nil [47 1112])
+            ("\"\"\"Parse Authors lines to extract author and affiliation data.\"\"\"" code nil nil [1114 1179])
+            ("re" include nil nil [1180 1189])
+            ("os" include nil nil [1190 1199])
+            ("gzip" include nil nil [1200 1211])
+            ("json" include nil nil [1212 1223])
+            ("itertools" include nil nil [1224 1255])
+            ("typing" include nil nil [1256 1302])
+            ("multiprocessing" include nil nil [1303 1346])
+            ("arxiv_public_data.tex2utf" include nil nil [1348 1393])
+            ("arxiv_public_data.config" include nil nil [1394 1449])
+            ("logger" variable nil nil [1451 1490])
+            ("PREFIX_MATCH" variable nil nil [1492 1561])
+            ("\"\"\"
+Takes data from an Author: line in the current arXiv abstract
+file and returns a structured set of data:
+
+ author_list_ptr = [
+  [ author1_keyname, author1_firstnames, author1_suffix, affil1, affil2 ] ,
+  [ author2_keyname, author2_firstnames, author1_suffix, affil1 ] ,
+  [ author3_keyname, author3_firstnames, author1_suffix ]
+         ]
+
+Abstracted from Dienst software for OAI1 and other uses. This
+routine should just go away when a better metadata structure is
+adopted that deals with names and affiliations properly.
+
+Must remember that there is at least one person one the archive
+who has only one name, this should clearly be considered the key name.
+
+Code originally written by Christina Scovel, Simeon Warner Dec99/Jan00
+ 2000-10-16 - separated.
+ 2000-12-07 - added support for suffix
+ 2003-02-14 - get surname prefixes from arXiv::Filters::Index [Simeon]
+ 2007-10-01 - created test script, some tidying [Simeon]
+ 2018-05-25 - Translated from Perl to Python [Brian C.]
+\"\"\"" code nil nil [1563 2550])
+            ("_parse_article_authors" function (:arguments 
+              ( ("article_author" variable nil (reparse-symbol function_parameters) [15459 15473]))              ) nil [15432 15760])
+            ("parse_authorline_parallel" function
+               (:documentation "
+    Parallelize `parse_authorline`
+    Parameters
+    ----------
+        article_authors : list
+            list of tuples (arXiv id, author strings from metadata)
+        (optional)
+        n_processes : int
+            number of processes
+    Returns
+    -------
+        authorsplit : list
+            list of author strings in standardized format
+            [
+             [ author1_keyname, author1_firstnames, author1_suffix, affil1, 
+                affil2 ] ,
+             [ author2_keyname, author2_firstnames, author1_suffix, affil1 ] ,
+             [ author3_keyname, author3_firstnames, author1_suffix ]
+            ]
+    "
+                :arguments 
+                  ( ("article_authors" variable nil (reparse-symbol function_parameters) [15791 15806])
+                    ("n_processes" variable nil (reparse-symbol function_parameters) [15808 15819]))                  )
+                nil [15761 16934]))          
+      :file "authors.py"
+      :pointmax 16934
+      :fsize 16934
+      :lastmodtime '(24575 63743 563092 6000)
+      :unmatched-syntax '((INDENT_BLOCK 15590 . 15760) (NEWLINE 15589 . 15590) (COLON 15588 . 15589) (TRY 15480 . 15483) (AS 15584 . 15586) (INDENT_BLOCK 14323 . 15431) (COLON 14321 . 14322) (MINUS 14315 . 14316) (GT 14316 . 14317) (NAME 14301 . 14308) (COLON 14308 . 14309) (INDENT_BLOCK 11790 . 14279) (COLON 11788 . 11789) (MINUS 11781 . 11782) (GT 11782 . 11783) (NAME 11767 . 11774) (COLON 11774 . 11775) (INDENT_BLOCK 10729 . 11747) (COLON 10727 . 10728) (MINUS 10709 . 10710) (GT 10710 . 10711) (COLON 10702 . 10703) (COMMA 10652 . 10653) (BRACK_BLOCK 10641 . 10652) (NAME 10624 . 10635) (COLON 10635 . 10636) (INDENT_BLOCK 9754 . 10583) (COLON 9752 . 9753) (MINUS 9745 . 9746) (GT 9746 . 9747) (COLON 9738 . 9739) (COMMA 9711 . 9712) (BRACK_BLOCK 9706 . 9711) (NAME 9688 . 9700) (COLON 9700 . 9701) (NAME 9649 . 9659) (COLON 9659 . 9660) (NAME 9610 . 9621) (COLON 9621 . 9622) (INDENT_BLOCK 8914 . 9587) (COLON 8912 . 8913) (MINUS 8906 . 8907) (GT 8907 . 8908) (NAME 8889 . 8900) (COLON 8900 . 8901) (INDENT_BLOCK 8178 . 8856) (COLON 8176 . 8177) (MINUS 8135 . 8136) (GT 8136 . 8137) (BRACK_BLOCK 8118 . 8123) (NAME 8107 . 8112) (COLON 8112 . 8113) (INDENT_BLOCK 7903 . 8077) (COLON 7901 . 7902) (MINUS 7895 . 7896) (GT 7896 . 7897) (NAME 7884 . 7888) (COLON 7888 . 7889) (INDENT_BLOCK 7665 . 7867) (COLON 7662 . 7663) (MINUS 7650 . 7651) (GT 7651 . 7652) (BRACK_BLOCK 7643 . 7648) (NAME 7632 . 7637) (COLON 7637 . 7638) (INDENT_BLOCK 7309 . 7604) (COLON 7307 . 7308) (MINUS 7300 . 7301) (GT 7301 . 7302) (NAME 7286 . 7293) (COLON 7293 . 7294) (INDENT_BLOCK 3958 . 7257) (COLON 3956 . 3957) (MINUS 3949 . 3950) (GT 3950 . 3951) (NAME 3931 . 3942) (COLON 3942 . 3943) (INDENT_BLOCK 2610 . 3899) (COLON 2608 . 2609) (DEF 2553 . 2556) (MINUS 2590 . 2591) (GT 2591 . 2592) (NAME 2576 . 2583) (COLON 2583 . 2584)))
+    (semanticdb-table "semanticdb-table"
+      :file "tex2utf.py"
+      :fsize 8430
+      :lastmodtime '(24575 63743 567092 22000))
+    (semanticdb-table "semanticdb-table"
+      :file "config.py"
+      :fsize 1547
+      :lastmodtime '(24575 63743 563092 6000)))
+  :file "!home!xli4217!Dropbox!Knowledge_Maps!Project_Source!project_src!Literature!arxiv!arxiv-public-datasets!arxiv_public_data!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

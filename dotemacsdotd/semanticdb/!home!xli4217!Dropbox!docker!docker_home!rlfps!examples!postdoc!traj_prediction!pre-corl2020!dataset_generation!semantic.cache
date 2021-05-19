@@ -1,0 +1,214 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("pathlib" include nil nil [1 25])
+            ("utils.utils" include nil nil [26 75])
+            ("numpy" include nil nil [76 94])
+            ("tqdm" include nil nil [95 106])
+            ("os" include nil nil [107 116])
+            ("cloudpickle" include nil nil [117 135])
+            ("glob" include nil nil [136 147])
+            ("h5py" include nil nil [149 160])
+            ("torch" include nil nil [161 173])
+            ("torch.utils.data" include nil nil [174 227])
+            ("future.utils" include nil nil [228 262])
+            ("external_libs.nuscenes.prediction.helper" include nil nil [264 330])
+            ("external_libs.nuscenes" include nil nil [331 374])
+            ("external_libs.nuscenes.eval.prediction.splits" include nil nil [375 463])
+            ("hdf5_dataset_default_config" variable nil nil [518 669])
+            ("NuScenesDatasetHdf5" type
+               (:superclasses ("Dataset")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''
+        - https://stackoverflow.com/questions/54571377/how-to-create-a-custom-pytorch-dataset-when-the-order-and-the-total-number-of-tr/54572327#54572327
+        - https://towardsdatascience.com/hdf5-datasets-for-pytorch-631ff1d750f5
+        - https://www.pythonforthelab.com/blog/how-to-use-hdf5-files-in-python/
+
+        Input params:
+        file_path: Path to the folder containing the dataset (one or multiple HDF5 files).
+        recursive: If True, searches for h5 files in subdirectories.
+        load_data: If True, loads all the data immediately into RAM. Use this if
+            the dataset is fits into memory. Otherwise, leave this at false and 
+            the data will load lazily.
+        data_cache_size: Number of HDF5 files that can be cached in the cache (default=3).
+        transform: PyTorch transform to apply to every data instance (default=None).
+        '''" code nil (reparse-symbol indented_block_body) [777 1666])
+                            ("super" code nil (reparse-symbol indented_block_body) [1676 1694])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1703 1744])
+                            ("self" code nil (reparse-symbol indented_block_body) [1753 1779])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1788 1807])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1816 1836])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1845 1864])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1873 1893])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1902 1955])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1964 2005])
+                            ("p" variable nil (reparse-symbol indented_block_body) [2057 2090])
+                            ("assert" code nil (reparse-symbol indented_block_body) [2099 2117])
+                            ("if" code nil (reparse-symbol indented_block_body) [2126 2258])
+                            ("if" code nil (reparse-symbol indented_block_body) [2266 2342])
+                            ("for" code nil (reparse-symbol indented_block_body) [2351 2477])
+                            ("target_info" variable nil (reparse-symbol indented_block_body) [2486 2529])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2538 2599]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [726 730])
+                            ("config" variable nil (reparse-symbol function_parameters) [732 738]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [713 2600])
+                    ("_add_data_infos" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2644 2648])
+                            ("file_path" variable nil (reparse-symbol function_parameters) [2650 2659])
+                            ("load_data" variable nil (reparse-symbol function_parameters) [2661 2670]))                          )
+                        (reparse-symbol indented_block_body) [2624 3610])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3664 3668])
+                            ("index" variable nil (reparse-symbol function_parameters) [3670 3675]))                          )
+                        (reparse-symbol indented_block_body) [3648 5095])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5779 5783]))                          )
+                        (reparse-symbol indented_block_body) [5767 5918])
+                    ("_add_to_cache" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5949 5953])
+                            ("data" variable nil (reparse-symbol function_parameters) [5955 5959])
+                            ("file_path" variable nil (reparse-symbol function_parameters) [5961 5970]))                          
+                        :documentation "Adds data to the cache and returns its index. There is one cache
+        list for every file_path, containing all datasets in that file.
+        ")
+                        (reparse-symbol indented_block_body) [5931 6343])
+                    ("get_data_infos" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6367 6371])
+                            ("type" variable nil (reparse-symbol function_parameters) [6373 6377]))                          
+                        :documentation "Get data infos belonging to a certain type of data.
+        ")
+                        (reparse-symbol indented_block_body) [6348 6562])
+                    ("_load_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6583 6587])
+                            ("file_path" variable nil (reparse-symbol function_parameters) [6589 6598]))                          
+                        :documentation "Load data to the cache given the file
+        path and update the cache index in the
+        data_info structure.
+        ")
+                        (reparse-symbol indented_block_body) [6568 7956])
+                    ("get_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7983 7987])
+                            ("type" variable nil (reparse-symbol function_parameters) [7989 7993])
+                            ("i" variable nil (reparse-symbol function_parameters) [7995 7996]))                          
+                        :documentation "Call this function anytime you want to access a chunk of data from the
+            dataset. This will make sure that the data is loaded in case it is
+            not part of the data cache.
+        ")
+                        (reparse-symbol indented_block_body) [7970 8510]))                  
+                :type "class")
+                nil [672 8510])
+            ("dataset_default_config" variable nil nil [8576 8651])
+            ("NuScenesDatasetPkl" type
+               (:superclasses ("Dataset")
+                :members 
+                  ( ("'''
+    https://medium.com/speechmatics/how-to-build-a-streaming-dataloader-with-pytorch-a66dd891d9dd
+    https://medium.com/swlh/how-to-use-pytorch-dataloaders-to-work-with-enormously-large-text-files-bbd672e955a0
+    '''" code nil (reparse-symbol indented_block_body) [8693 8915])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [8979 9015])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9024 9053])
+                            ("if" code nil (reparse-symbol indented_block_body) [9116 9646])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9662 9709])
+                            ("print" code nil (reparse-symbol indented_block_body) [9718 9793]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8933 8937])
+                            ("config" variable nil (reparse-symbol function_parameters) [8939 8945]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8920 9794])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9986 9990]))                          )
+                        (reparse-symbol indented_block_body) [9974 10034])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10055 10059])
+                            ("index" variable nil (reparse-symbol function_parameters) [10061 10066]))                          )
+                        (reparse-symbol indented_block_body) [10039 10119]))                  
+                :type "class")
+                nil [8654 10119])
+            ("dataset_token_default_config" variable nil nil [10174 10426])
+            ("NuScenesDatasetToken" type
+               (:superclasses ("Dataset")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [10542 10562])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10571 10605])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10615 10684])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10694 10732])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10742 10849])
+                            ("data_from_token_config" variable nil (reparse-symbol indented_block_body) [10865 10928])
+                            ("data_from_token_config" variable nil (reparse-symbol indented_block_body) [10937 11017])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11027 11130]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10490 10494])
+                            ("config" variable nil (reparse-symbol function_parameters) [10496 10502]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10477 11131])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11148 11152]))                          )
+                        (reparse-symbol indented_block_body) [11136 11187])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11208 11212])
+                            ("index" variable nil (reparse-symbol function_parameters) [11214 11219]))                          )
+                        (reparse-symbol indented_block_body) [11192 11425]))                  
+                :type "class")
+                nil [10435 11425])
+            ("dataloader_default_config" variable nil nil [11531 11581])
+            ("NuScenesDataLoader" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [11686 11690]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11635 11639])
+                            ("config" variable nil (reparse-symbol function_parameters) [11641 11647]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [11622 11691]))                  
+                :type "class")
+                nil [11584 11691])
+            ("if" code nil nil [11692 13071]))          
+      :file "nuscenes_dataset_generation.py"
+      :pointmax 13328
+      :fsize 13327
+      :lastmodtime '(24364 29331 700190 978000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!rlfps!examples!postdoc!traj_prediction!pre-corl2020!dataset_generation!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,243 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("external_libs.stlcg.src.stlcg" include nil nil [1 66])
+            ("expection" function (:arguments 
+              ( ("mean" variable nil (reparse-symbol function_parameters) [82 86])
+                ("cov" variable nil (reparse-symbol function_parameters) [88 91]))              ) nil [68 110])
+            ("worst_case" function nil nil [111 138])
+            ("VaR" function nil nil [139 159])
+            ("GreaterThan" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("'''
+    x >= c where x is the signal, and c is the constant.
+    '''" code nil (reparse-symbol indented_block_body) [197 265])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [250 285])
+                            ("assert" code nil (reparse-symbol indented_block_body) [303 386])
+                            ("self" variable nil (reparse-symbol indented_block_body) [395 417])
+                            ("self" variable nil (reparse-symbol indented_block_body) [426 440])
+                            ("self" variable nil (reparse-symbol indented_block_body) [449 471]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [283 287])
+                            ("name" variable nil (reparse-symbol function_parameters) [289 293])
+                            ("val" variable nil (reparse-symbol function_parameters) [299 302]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [270 539])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [565 569])
+                            ("trace" variable nil (reparse-symbol function_parameters) [571 576])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [578 584])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [588 596]))                          )
+                        (reparse-symbol indented_block_body) [544 700])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [724 728]))                          )
+                        (reparse-symbol indented_block_body) [705 848])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [865 869]))                          )
+                        (reparse-symbol indented_block_body) [853 938]))                  
+                :type "class")
+                nil [161 938])
+            ("LessThan" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("'''
+    x <= c where x is the signal, and c is the constant.
+    '''" code nil (reparse-symbol indented_block_body) [973 1041])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1053 1085])
+                            ("assert" code nil (reparse-symbol indented_block_body) [1094 1177])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1186 1208])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1217 1231])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1241 1263]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1059 1063])
+                            ("name" variable nil (reparse-symbol function_parameters) [1065 1069])
+                            ("val" variable nil (reparse-symbol function_parameters) [1075 1078])
+                            ("threshold_net_config" variable nil (reparse-symbol function_parameters) [1084 1104]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1046 1331])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1369 1373])
+                            ("trace" variable nil (reparse-symbol function_parameters) [1375 1380])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [1382 1388])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1392 1400]))                          )
+                        (reparse-symbol indented_block_body) [1348 1504])
+                    ("get_predicate_threshold_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1552 1556]))                          )
+                        (reparse-symbol indented_block_body) [1517 1608])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1644 1648]))                          )
+                        (reparse-symbol indented_block_body) [1625 1768])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1785 1789]))                          )
+                        (reparse-symbol indented_block_body) [1773 2097]))                  
+                :type "class")
+                nil [940 2097]))          
+      :file "utils.py"
+      :pointmax 2097
+      :fsize 2169
+      :lastmodtime '(24706 25719 646525 634000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("utils.utils" include nil nil [30 115])
+            ("torch" include nil nil [116 128])
+            ("StlRiskNet" type
+               (:superclasses ("torch.nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [210 333])
+                            ("self" code nil (reparse-symbol indented_block_body) [342 368])
+                            ("torch" code nil (reparse-symbol indented_block_body) [378 408])
+                            ("self" variable nil (reparse-symbol indented_block_body) [463 563]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [183 187])
+                            ("config" variable nil (reparse-symbol function_parameters) [189 195]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [170 564])
+                    ("update_all_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [597 601]))                          )
+                        (reparse-symbol indented_block_body) [577 617])
+                    ("update_stl_costmap" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [646 650])
+                            ("Xcm" variable nil (reparse-symbol function_parameters) [652 655])
+                            ("Ycm" variable nil (reparse-symbol function_parameters) [657 660])
+                            ("Zcm" variable nil (reparse-symbol function_parameters) [662 665])
+                            ("agent_risk_i" variable nil (reparse-symbol function_parameters) [667 679])
+                            ("agent_curr_pos" variable nil (reparse-symbol function_parameters) [681 695]))                          )
+                        (reparse-symbol indented_block_body) [623 1214])
+                    ("get_stl_costmap" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1248 1252])
+                            ("sensing_patch" variable nil (reparse-symbol function_parameters) [1278 1291])
+                            ("risk_model_input" variable nil (reparse-symbol function_parameters) [1317 1333])
+                            ("origin_global_pos" variable nil (reparse-symbol function_parameters) [1359 1376])
+                            ("origin_global_quat" variable nil (reparse-symbol function_parameters) [1402 1420]))                          )
+                        (reparse-symbol indented_block_body) [1228 2975])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3005 3009])
+                            ("dict" variable nil (reparse-symbol function_parameters) [3023 3027]))                          )
+                        (reparse-symbol indented_block_body) [2993 3577]))                  
+                :type "class")
+                nil [130 3577]))          
+      :file "stl_risk_net.py"
+      :pointmax 3577
+      :fsize 3576
+      :lastmodtime '(24732 52169 372517 361000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("utils.utils" include nil nil [30 69])
+            ("torch" include nil nil [70 82])
+            ("utils.utils" include nil nil [83 119])
+            ("StlRiskNet" type
+               (:superclasses ("torch.nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [201 324])
+                            ("self" code nil (reparse-symbol indented_block_body) [333 359])
+                            ("torch" code nil (reparse-symbol indented_block_body) [369 399])
+                            ("self" variable nil (reparse-symbol indented_block_body) [454 554]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [174 178])
+                            ("config" variable nil (reparse-symbol function_parameters) [180 186]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [161 555])
+                    ("update_all_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [588 592]))                          )
+                        (reparse-symbol indented_block_body) [568 608])
+                    ("update_agent_costmap" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [638 642])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [680 687])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [725 732])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [770 777])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [824 831])
+                            ("dict" variable nil (reparse-symbol function_parameters) [874 878])
+                            ("dict" variable nil (reparse-symbol function_parameters) [919 923]))                          )
+                        (reparse-symbol indented_block_body) [613 1155])
+                    ("get_costmap" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1185 1189])
+                            ("sensing_patch" variable nil (reparse-symbol function_parameters) [1211 1224])
+                            ("ego_info" variable nil (reparse-symbol function_parameters) [1246 1254])
+                            ("map_info" variable nil (reparse-symbol function_parameters) [1276 1284])
+                            ("agent_info" variable nil (reparse-symbol function_parameters) [1306 1316]))                          )
+                        (reparse-symbol indented_block_body) [1169 1981])
+                    ("get_agent_stl_risk" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2018 2022])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [2031 2038])
+                            ("dict" variable nil (reparse-symbol function_parameters) [2052 2056])
+                            ("dict" variable nil (reparse-symbol function_parameters) [2067 2071]))                          )
+                        (reparse-symbol indented_block_body) [1995 2334])
+                    ("get_map_risk" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2368 2372])
+                            ("dict" variable nil (reparse-symbol function_parameters) [2383 2387])
+                            ("dict" variable nil (reparse-symbol function_parameters) [2398 2402]))                          )
+                        (reparse-symbol indented_block_body) [2351 2418])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2435 2439])
+                            ("dict" variable nil (reparse-symbol function_parameters) [2453 2457]))                          )
+                        (reparse-symbol indented_block_body) [2423 2964]))                  
+                :type "class")
+                nil [121 2964]))          
+      :file "stl_risk_net_bak.py"
+      :pointmax 2964
+      :fsize 2963
+      :lastmodtime '(24704 63579 549357 214000)
+      :unmatched-syntax '((NAME 2441 . 2452) (COLON 2452 . 2453) (NAME 2389 . 2397) (COLON 2397 . 2398) (NAME 2374 . 2382) (COLON 2382 . 2383) (NAME 2058 . 2066) (COLON 2066 . 2067) (NAME 2040 . 2050) (COLON 2050 . 2051) (PERIOD 2030 . 2031) (NAME 2024 . 2027) (COLON 2027 . 2028) (NAME 909 . 917) (COLON 917 . 918) (NAME 862 . 872) (COLON 872 . 873) (PERIOD 823 . 824) (NAME 808 . 820) (COLON 820 . 821) (PERIOD 769 . 770) (NAME 763 . 766) (COLON 766 . 767) (PERIOD 724 . 725) (NAME 718 . 721) (COLON 721 . 722) (PERIOD 679 . 680) (NAME 673 . 676) (COLON 676 . 677) (NAME 2441 . 2452) (COLON 2452 . 2453) (NAME 2389 . 2397) (COLON 2397 . 2398) (NAME 2374 . 2382) (COLON 2382 . 2383) (NAME 2058 . 2066) (COLON 2066 . 2067) (NAME 2040 . 2050) (COLON 2050 . 2051) (PERIOD 2030 . 2031) (NAME 2024 . 2027) (COLON 2027 . 2028) (NAME 909 . 917) (COLON 917 . 918) (NAME 862 . 872) (COLON 872 . 873) (PERIOD 823 . 824) (NAME 808 . 820) (COLON 820 . 821) (PERIOD 769 . 770) (NAME 763 . 766) (COLON 766 . 767) (PERIOD 724 . 725) (NAME 718 . 721) (COLON 721 . 722) (PERIOD 679 . 680) (NAME 673 . 676) (COLON 676 . 677))))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!stl_risk_aware_ioc!agent!risk_models!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

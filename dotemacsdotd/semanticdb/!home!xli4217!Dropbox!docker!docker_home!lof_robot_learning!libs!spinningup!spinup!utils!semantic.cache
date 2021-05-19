@@ -1,0 +1,368 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"
+
+Some simple logging functionality, inspired by rllab's logging.
+
+Logs to a tab-separated-values file (path/to/output_directory/progress.txt)
+
+\"\"\"" code nil nil [1 151])
+            ("json" include nil nil [152 163])
+            ("joblib" include nil nil [164 177])
+            ("shutil" include nil nil [178 191])
+            ("numpy" include nil nil [192 210])
+            ("tensorflow" include nil nil [211 234])
+            ("torch" include nil nil [235 247])
+            ("os" include nil nil [248 287])
+            ("atexit" include nil nil [248 287])
+            ("time" include nil nil [248 287])
+            ("os.path" include nil nil [248 287])
+            ("warnings" include nil nil [288 303])
+            ("spinup.utils.mpi_tools" include nil nil [304 369])
+            ("spinup.utils.serialization_utils" include nil nil [370 427])
+            ("color2num" variable nil nil [429 573])
+            ("colorize" function
+               (:documentation "
+    Colorize a string.
+
+    This function was originally written by John Schulman.
+    "
+                :arguments 
+                  ( ("string" variable nil (reparse-symbol function_parameters) [588 594])
+                    ("color" variable nil (reparse-symbol function_parameters) [596 601])
+                    ("bold" variable nil (reparse-symbol function_parameters) [603 607])
+                    ("highlight" variable nil (reparse-symbol function_parameters) [615 624]))                  )
+                nil [575 915])
+            ("restore_tf_graph" function
+               (:documentation "
+    Loads graphs saved by Logger.
+
+    Will output a dictionary whose keys and values are from the 'inputs' 
+    and 'outputs' dict you specified with logger.setup_tf_saver().
+
+    Args:
+        sess: A Tensorflow session.
+        fpath: Filepath to save directory.
+
+    Returns:
+        A dictionary mapping from keys to tensors in the computation graph
+        loaded from ``fpath``. 
+    "
+                :arguments 
+                  ( ("sess" variable nil (reparse-symbol function_parameters) [937 941])
+                    ("fpath" variable nil (reparse-symbol function_parameters) [943 948]))                  )
+                nil [916 1818])
+            ("Logger" type
+               (:documentation "
+    A general-purpose logger.
+
+    Makes it easy to save diagnostics, hyperparameter configurations, the 
+    state of a training run, and the trained model.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Initialize a Logger.
+
+        Args:
+            output_dir (string): A directory for saving results to. If 
+                ``None``, defaults to a temp directory of the form
+                ``/tmp/experiments/somerandomnumber``.
+
+            output_fname (string): Name for the tab-separated-value file 
+                containing metrics logged throughout a training run. 
+                Defaults to ``progress.txt``. 
+
+            exp_name (string): Experiment name. If you run multiple training
+                runs and give them all the same ``exp_name``, the plotter
+                will know to group them. (Use case: if you run the same
+                hyperparameter configuration with multiple random seeds, you
+                should give them all the same ``exp_name``.)
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2101 2908])
+                            ("if" code nil (reparse-symbol indented_block_body) [2917 3539])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3547 3566])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3575 3596])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3605 3630])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3639 3663]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2025 2029])
+                            ("output_dir" variable nil (reparse-symbol function_parameters) [2031 2041])
+                            ("output_fname" variable nil (reparse-symbol function_parameters) [2048 2060])
+                            ("exp_name" variable nil (reparse-symbol function_parameters) [2077 2085]))                          
+                        :documentation "
+        Initialize a Logger.
+
+        Args:
+            output_dir (string): A directory for saving results to. If 
+                ``None``, defaults to a temp directory of the form
+                ``/tmp/experiments/somerandomnumber``.
+
+            output_fname (string): Name for the tab-separated-value file 
+                containing metrics logged throughout a training run. 
+                Defaults to ``progress.txt``. 
+
+            exp_name (string): Experiment name. If you run multiple training
+                runs and give them all the same ``exp_name``, the plotter
+                will know to group them. (Use case: if you run the same
+                hyperparameter configuration with multiple random seeds, you
+                should give them all the same ``exp_name``.)
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2012 3664])
+                    ("log" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3677 3681])
+                            ("msg" variable nil (reparse-symbol function_parameters) [3683 3686])
+                            ("color" variable nil (reparse-symbol function_parameters) [3688 3693]))                          
+                        :documentation "Print a colorized message to stdout.")
+                        (reparse-symbol indented_block_body) [3669 3831])
+                    ("log_tabular" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3852 3856])
+                            ("key" variable nil (reparse-symbol function_parameters) [3858 3861])
+                            ("val" variable nil (reparse-symbol function_parameters) [3863 3866]))                          
+                        :documentation "
+        Log a value of some diagnostic.
+
+        Call this only once for each diagnostic quantity, each iteration.
+        After using ``log_tabular`` to store values for each diagnostic,
+        make sure to call ``dump_tabular`` to write them out to file and
+        stdout (otherwise they will not get saved anywhere).
+        ")
+                        (reparse-symbol indented_block_body) [3836 4596])
+                    ("save_config" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4617 4621])
+                            ("config" variable nil (reparse-symbol function_parameters) [4623 4629]))                          
+                        :documentation "
+        Log an experiment configuration.
+
+        Call this once at the top of your experiment, passing in all important
+        config vars as a dict. This will serialize the config to JSON, while
+        handling anything which can't be serialized in a graceful way (writing
+        as informative a string as possible). 
+
+        Example use:
+
+        .. code-block:: python
+
+            logger = EpochLogger(**logger_kwargs)
+            logger.save_config(locals())
+        ")
+                        (reparse-symbol indented_block_body) [4601 5589])
+                    ("save_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5609 5613])
+                            ("state_dict" variable nil (reparse-symbol function_parameters) [5615 5625])
+                            ("itr" variable nil (reparse-symbol function_parameters) [5627 5630]))                          
+                        :documentation "
+        Saves the state of an experiment.
+
+        To be clear: this is about saving *state*, not logging diagnostics.
+        All diagnostic logging is separate from this function. This function
+        will save whatever is in ``state_dict``---usually just a copy of the
+        environment---and the most recent parameters for the model you 
+        previously set up saving for with ``setup_tf_saver``. 
+
+        Call with any frequency you prefer. If you only want to maintain a
+        single state and overwrite it at each call with the most recent 
+        version, leave ``itr=None``. If you want to keep all of the states you
+        save, provide unique (increasing) values for 'itr'.
+
+        Args:
+            state_dict (dict): Dictionary containing essential elements to
+                describe the current state of training.
+
+            itr: An int, or None. Current iteration of training.
+        ")
+                        (reparse-symbol indented_block_body) [5594 7049])
+                    ("setup_tf_saver" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7073 7077])
+                            ("sess" variable nil (reparse-symbol function_parameters) [7079 7083])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [7085 7091])
+                            ("outputs" variable nil (reparse-symbol function_parameters) [7093 7100]))                          
+                        :documentation "
+        Set up easy model saving for tensorflow.
+
+        Call once, after defining your computation graph but before training.
+
+        Args:
+            sess: The Tensorflow session in which you train your computation
+                graph.
+
+            inputs (dict): A dictionary that maps from keys of your choice
+                to the tensorflow placeholders that serve as inputs to the 
+                computation graph. Make sure that *all* of the placeholders
+                needed for your outputs are included!
+
+            outputs (dict): A dictionary that maps from keys of your choice
+                to the outputs from your computation graph.
+        ")
+                        (reparse-symbol indented_block_body) [7054 8031])
+                    ("_tf_simple_save" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8056 8060])
+                            ("itr" variable nil (reparse-symbol function_parameters) [8062 8065]))                          
+                        :documentation "
+        Uses simple_save to save a trained model, plus info to make it easy
+        to associated tensors to variables after restore. 
+        ")
+                        (reparse-symbol indented_block_body) [8036 8871])
+                    ("setup_pytorch_saver" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8905 8909])
+                            ("what_to_save" variable nil (reparse-symbol function_parameters) [8911 8923]))                          
+                        :documentation "
+        Set up easy model saving for a single PyTorch model.
+
+        Because PyTorch saving and loading is especially painless, this is
+        very minimal; we just need references to whatever we would like to 
+        pickle. This is integrated into the logger because the logger
+        knows where the user would like to save information about this
+        training run.
+
+        Args:
+            what_to_save: Any PyTorch model or serializable object containing
+                PyTorch models.
+        ")
+                        (reparse-symbol indented_block_body) [8881 9502])
+                    ("_pytorch_simple_save" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9532 9536])
+                            ("itr" variable nil (reparse-symbol function_parameters) [9538 9541]))                          
+                        :documentation "
+        Saves the PyTorch model (or models).
+        ")
+                        (reparse-symbol indented_block_body) [9507 10778])
+                    ("dump_tabular" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10801 10805]))                          
+                        :documentation "
+        Write all of the diagnostics from the current iteration.
+
+        Writes both to stdout, and to the output file.
+        ")
+                        (reparse-symbol indented_block_body) [10784 11898]))                  
+                :type "class")
+                nil [1819 11898])
+            ("EpochLogger" type
+               (:documentation "
+    A variant of Logger tailored for tracking average values over epochs.
+
+    Typical use case: there is some quantity which is calculated many times
+    throughout an epoch, and at the end of the epoch, you would like to 
+    report the average / std / min / max value of that quantity.
+
+    With an EpochLogger, each time the quantity is calculated, you would
+    use 
+
+    .. code-block:: python
+
+        epoch_logger.store(NameOfQuantity=quantity_value)
+
+    to load it into the EpochLogger's state. Then at the end of the epoch, you 
+    would use 
+
+    .. code-block:: python
+
+        epoch_logger.log_tabular(NameOfQuantity, **options)
+
+    to record the desired values.
+    "
+                :superclasses ("Logger")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [12671 12704])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12713 12737]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12639 12643])
+                            ("args" variable nil (reparse-symbol function_parameters) [12645 12650])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [12652 12660]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [12626 12738])
+                    ("store" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12753 12757])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [12759 12767]))                          
+                        :documentation "
+        Save something into the epoch_logger's current state.
+
+        Provide an arbitrary number of keyword arguments with numerical 
+        values.
+        ")
+                        (reparse-symbol indented_block_body) [12743 13111])
+                    ("log_tabular" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13132 13136])
+                            ("key" variable nil (reparse-symbol function_parameters) [13138 13141])
+                            ("val" variable nil (reparse-symbol function_parameters) [13143 13146])
+                            ("with_min_and_max" variable nil (reparse-symbol function_parameters) [13153 13169])
+                            ("average_only" variable nil (reparse-symbol function_parameters) [13177 13189]))                          
+                        :documentation "
+        Log a value or possibly the mean/std/min/max values of a diagnostic.
+
+        Args:
+            key (string): The name of the diagnostic. If you are logging a
+                diagnostic whose state has previously been saved with 
+                ``store``, the key here has to match the key you used there.
+
+            val: A value for the diagnostic. If you have previously saved
+                values for this key via ``store``, do *not* provide a ``val``
+                here.
+
+            with_min_and_max (bool): If true, log min and max values of the 
+                diagnostic over the epoch.
+
+            average_only (bool): If true, do not log the standard deviation
+                of the diagnostic over the epoch.
+        ")
+                        (reparse-symbol indented_block_body) [13116 14617])
+                    ("get_stats" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14636 14640])
+                            ("key" variable nil (reparse-symbol function_parameters) [14642 14645]))                          
+                        :documentation "
+        Lets an algorithm ask the logger for mean/std/min/max of a diagnostic.
+        ")
+                        (reparse-symbol indented_block_body) [14622 14920]))                  
+                :type "class")
+                nil [11899 14920]))          
+      :file "logx.py"
+      :pointmax 14920
+      :fsize 14919
+      :lastmodtime '(24585 51127 182205 670000)
+      :unmatched-syntax '((NAME 14792 . 14796) (IF 14817 . 14819) (ELSE 14871 . 14875) (NAME 14092 . 14096) (IF 14117 . 14119) (ELSE 14171 . 14175) (NAME 11386 . 11392) (IF 11407 . 11409) (ELSE 11436 . 11440) (NAME 6607 . 6612) (IF 6626 . 6628) (ELSE 6641 . 6645) ($EOI 14920 . 14920)))
+    (semanticdb-table "semanticdb-table"
+      :file "mpi_tools.py"
+      :fsize 2686
+      :lastmodtime '(24579 51014 221491 583000))
+    (semanticdb-table "semanticdb-table"
+      :file "serialization_utils.py"
+      :fsize 946
+      :lastmodtime '(24579 51014 37490 741000)))
+  :file "!home!xli4217!Dropbox!docker!docker_home!lof_robot_learning!libs!spinningup!spinup!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

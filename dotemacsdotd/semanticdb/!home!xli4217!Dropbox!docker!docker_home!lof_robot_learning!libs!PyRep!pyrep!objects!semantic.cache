@@ -1,0 +1,316 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 31])
+            ("numpy" include nil nil [32 50])
+            ("pyrep.backend" include nil nil [51 80])
+            ("pyrep.objects.object" include nil nil [81 142])
+            ("pyrep.const" include nil nil [143 213])
+            ("pyrep.textures.texture" include nil nil [214 256])
+            ("os" include nil nil [257 266])
+            ("collections" include nil nil [267 285])
+            ("SShapeVizInfo" variable nil nil [288 588])
+            ("Shape" type
+               (:documentation "Shapes are rigid mesh objects that are composed of triangular faces.
+    "
+                :superclasses ("Object")
+                :members 
+                  ( ("get_texture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14811 14815]))                          
+                        :documentation "Retrieves the texture from the shape.
+        :return: The texture associated with this object.
+        ")
+                        (reparse-symbol indented_block_body) [14795 15005])
+                    ("remove_texture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15029 15033]))                          
+                        :documentation "Removes the texture from the shape.
+        ")
+                        (reparse-symbol indented_block_body) [15010 15175])
+                    ("set_texture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15196 15200])
+                            ("Texture" variable nil (reparse-symbol function_parameters) [15211 15218])
+                            ("TextureMappingMode" variable nil (reparse-symbol function_parameters) [15234 15252])
+                            ("interpolate" variable nil (reparse-symbol function_parameters) [15274 15285])
+                            ("decal_mode" variable nil (reparse-symbol function_parameters) [15292 15302])
+                            ("repeat_along_u" variable nil (reparse-symbol function_parameters) [15310 15324])
+                            ("repeat_along_v" variable nil (reparse-symbol function_parameters) [15352 15366])
+                            ("uv_scaling" variable nil (reparse-symbol function_parameters) [15374 15384])
+                            ("None" variable nil (reparse-symbol function_parameters) [15439 15443])
+                            ("None" variable nil (reparse-symbol function_parameters) [15492 15496]))                          
+                        :documentation "Applies a texture to a shape
+
+        :param texture: The texture to add.
+        :param mapping_mode: The texture mapping mode. One of:
+            TextureMappingMode.PLANE
+            TextureMappingMode.CYLINDER
+            TextureMappingMode.SPHERE
+            TextureMappingMode.CUBE
+        :param interpolate: Adjacent texture pixels are not interpolated.
+        :param decal_mode: Texture is applied as a decal (its appearance
+            won't be influenced by light conditions).
+        :param repeat_along_u: Texture will be repeated along the U direction.
+        :param repeat_along_v: Texture will be repeated along the V direction.
+        :param uv_scaling: A list of 2 values containig the texture scaling
+            factors along the U and V directions.
+        :param position: A list of (x,y,z) values that indicate the texture
+            position on the shape. Can be None for default.
+        :param orientation: A list of 3 Euler angles that indicate the texture
+            orientation on the shape. Can be None for default.
+        ")
+                        (reparse-symbol indented_block_body) [15180 16969])
+                    ("get_shape_viz" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19136 19140])
+                            ("index" variable nil (reparse-symbol function_parameters) [19142 19147]))                          
+                        :documentation "Retrieves a shape's visual information.
+
+        :param index: 0-based index of the shape element to retrieve
+            (compound shapes contain more than one shape element)
+
+        :return: SShapeVizInfo.
+        ")
+                        (reparse-symbol indented_block_body) [19118 20365]))                  
+                :type "class")
+                nil [591 20562])
+            ("object_type_to_class" variable nil nil [20564 20610]))          
+      :file "shape.py"
+      :pointmax 20611
+      :fsize 20610
+      :lastmodtime '(24574 23022 298885 175000)
+      :unmatched-syntax '((INDENT_BLOCK 20429 . 20562) (NEWLINE 20428 . 20429) (COLON 20427 . 20428) (DEF 20370 . 20373) (MINUS 20420 . 20421) (GT 20421 . 20422) (INDENT_BLOCK 17503 . 19113) (NEWLINE 17502 . 17503) (COLON 17501 . 17502) (MINUS 17494 . 17495) (GT 17495 . 17496) (NAME 17473 . 17478) (COLON 17478 . 17479) (NAME 17430 . 17435) (COLON 17435 . 17436) (NAME 17407 . 17414) (COLON 17414 . 17415) (NAME 17359 . 17369) (COLON 17369 . 17370) (NAME 17333 . 17344) (COLON 17344 . 17345) (PERIOD 17301 . 17302) (NAME 17290 . 17297) (COLON 17297 . 17298) (PERIOD 17280 . 17281) (NAME 17262 . 17276) (COLON 17276 . 17277) (INDENT_BLOCK 17010 . 17233) (NEWLINE 17009 . 17010) (COLON 17008 . 17009) (DEF 16974 . 16977) (MINUS 16992 . 16993) (GT 16993 . 16994) (ASSIGN 15490 . 15491) (BRACK_BLOCK 15482 . 15489) (NAME 15465 . 15476) (COLON 15476 . 15477) (ASSIGN 15437 . 15438) (BRACK_BLOCK 15429 . 15436) (NAME 15415 . 15423) (COLON 15423 . 15424) (NAME 15220 . 15232) (COLON 15232 . 15233) (NAME 15202 . 15209) (COLON 15209 . 15210) (INDENT_BLOCK 10831 . 14790) (NEWLINE 10830 . 10831) (COLON 10829 . 10830) (MINUS 10819 . 10820) (GT 10820 . 10821) (INDENT_BLOCK 9267 . 9804) (NEWLINE 9266 . 9267) (COLON 9265 . 9266) (MINUS 9221 . 9222) (GT 9222 . 9223) (INDENT_BLOCK 8997 . 9192) (NEWLINE 8996 . 8997) (COLON 8995 . 8996) (MINUS 8988 . 8989) (GT 8989 . 8990) (NAME 8975 . 8979) (COLON 8979 . 8980) (INDENT_BLOCK 8715 . 8951) (NEWLINE 8714 . 8715) (COLON 8713 . 8714) (MINUS 8705 . 8706) (GT 8706 . 8707) (INDENT_BLOCK 8379 . 8681) (NEWLINE 8378 . 8379) (COLON 8377 . 8378) (MINUS 8370 . 8371) (GT 8371 . 8372) (NAME 8356 . 8361) (COLON 8361 . 8362) (INDENT_BLOCK 8100 . 8324) (NEWLINE 8099 . 8100) (COLON 8098 . 8099) (MINUS 8090 . 8091) (GT 8091 . 8092) (INDENT_BLOCK 7841 . 8058) (NEWLINE 7840 . 7841) (COLON 7839 . 7840) (MINUS 7832 . 7833) (GT 7833 . 7834) (BRACK_BLOCK 7823 . 7830) (NAME 7812 . 7817) (COLON 7817 . 7818) (INDENT_BLOCK 7582 . 7787) (NEWLINE 7581 . 7582) (COLON 7580 . 7581) (MINUS 7566 . 7567) (GT 7567 . 7568) (INDENT_BLOCK 7262 . 7541) (NEWLINE 7261 . 7262) (COLON 7260 . 7261) (MINUS 7253 . 7254) (GT 7254 . 7255) (NAME 7240 . 7245) (COLON 7245 . 7246) (INDENT_BLOCK 7003 . 7213) (NEWLINE 7002 . 7003) (COLON 7001 . 7002) (MINUS 6994 . 6995) (GT 6995 . 6996) (INDENT_BLOCK 6680 . 6968) (NEWLINE 6679 . 6680) (COLON 6678 . 6679) (MINUS 6671 . 6672) (GT 6672 . 6673) (NAME 6658 . 6663) (COLON 6663 . 6664) (INDENT_BLOCK 6408 . 6627) (NEWLINE 6407 . 6408) (COLON 6406 . 6407) (MINUS 6399 . 6400) (GT 6400 . 6401) (INDENT_BLOCK 6337 . 6369) (NEWLINE 6336 . 6337) (COLON 6335 . 6336) (MINUS 6322 . 6323) (GT 6323 . 6324) (INDENT_BLOCK 5600 . 6287) (NEWLINE 5599 . 5600) (COLON 5598 . 5599) (MINUS 5588 . 5589) (GT 5589 . 5590) (COMMA 5481 . 5482) (BRACK_BLOCK 5476 . 5481) (COLON 5470 . 5471) (COMMA 5461 . 5462) (BRACK_BLOCK 5454 . 5461) (NAME 5440 . 5448) (COLON 5448 . 5449) (INDENT_BLOCK 4141 . 5401) (NEWLINE 4140 . 4141) (COLON 4139 . 4140) (MINUS 4129 . 4130) (GT 4130 . 4131) (NAME 3999 . 4007) (COLON 4007 . 4008) (INDENT_BLOCK 2855 . 3960) (NEWLINE 2854 . 2855) (COLON 2853 . 2854) (MINUS 2843 . 2844) (GT 2844 . 2845) (NAME 2619 . 2627) (COLON 2627 . 2628) (INDENT_BLOCK 1005 . 2575) (NEWLINE 1004 . 1005) (COLON 1003 . 1004) (AT 701 . 702) (MINUS 993 . 994) (GT 994 . 995) (COMMA 769 . 770) (BRACK_BLOCK 762 . 769) (NAME 752 . 756) (COLON 756 . 757) (NAME 730 . 734) (COLON 734 . 735)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("warnings" include nil nil [1 16])
+            ("pyrep.backend" include nil nil [18 47])
+            ("pyrep.errors" include nil nil [48 74])
+            ("pyrep.const" include nil nil [75 109])
+            ("pyrep.errors" include nil nil [110 155])
+            ("typing" include nil nil [156 204])
+            ("numpy" include nil nil [205 223])
+            ("Dict" variable nil nil [248 274])
+            ("Object" type
+               (:documentation "Base class for V-REP scene objects that are used for building a scene.
+
+    Objects are visible in the scene hierarchy and in the scene view.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [522 680])
+                            ("assert_type" variable nil (reparse-symbol indented_block_body) [688 728])
+                            ("actual" variable nil (reparse-symbol indented_block_body) [737 792])
+                            ("if" code nil (reparse-symbol indented_block_body) [801 999]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [474 478]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [461 999])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1015 1019])
+                            ("object" variable nil (reparse-symbol function_parameters) [1028 1034]))                          )
+                        (reparse-symbol indented_block_body) [1004 1172])
+                    ("set_measurable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14298 14302])
+                            ("bool" variable nil (reparse-symbol function_parameters) [14311 14315]))                          
+                        :documentation "Set whether the object is measurable or not.
+
+        :param value: The new value of the measurable state.
+        ")
+                        (reparse-symbol indented_block_body) [14279 14524])
+                    ("set_detectable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14777 14781])
+                            ("bool" variable nil (reparse-symbol function_parameters) [14790 14794]))                          
+                        :documentation "Set whether the object is detectable or not.
+
+        :param value: The new value of the detectable state.
+        ")
+                        (reparse-symbol indented_block_body) [14758 15007])
+                    ("set_renderable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15256 15260])
+                            ("bool" variable nil (reparse-symbol function_parameters) [15269 15273]))                          
+                        :documentation "Set whether the object is renderable or not.
+
+        :param value: The new value of the renderable state.
+        ")
+                        (reparse-symbol indented_block_body) [15237 15482])
+                    ("set_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15752 15756])
+                            ("bool" variable nil (reparse-symbol function_parameters) [15765 15769]))                          
+                        :documentation "Set whether the object is a model or not.
+
+        :param value: True to set as a model.
+        ")
+                        (reparse-symbol indented_block_body) [15738 16119])
+                    ("set_model_collidable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20399 20403])
+                            ("bool" variable nil (reparse-symbol function_parameters) [20412 20416]))                          
+                        :documentation "Set whether the model is collidable or not.
+
+        :param value: The new value of the collidable state of the model.
+        :raises: ObjectIsNotModel if the object is not a model.
+        ")
+                        (reparse-symbol indented_block_body) [20374 20716])
+                    ("set_model_measurable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21054 21058])
+                            ("bool" variable nil (reparse-symbol function_parameters) [21067 21071]))                          
+                        :documentation "Set whether the model is measurable or not.
+
+        :param value: The new value of the measurable state of the model.
+        :raises: ObjectIsNotModel if the object is not a model.
+        ")
+                        (reparse-symbol indented_block_body) [21029 21371])
+                    ("set_model_detectable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21709 21713])
+                            ("bool" variable nil (reparse-symbol function_parameters) [21722 21726]))                          
+                        :documentation "Set whether the model is detectable or not.
+
+        :param value: The new value of the detectable state of the model.
+        :raises: ObjectIsNotModel if the object is not a model.
+        ")
+                        (reparse-symbol indented_block_body) [21684 22026])
+                    ("set_model_renderable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22364 22368])
+                            ("bool" variable nil (reparse-symbol function_parameters) [22377 22381]))                          
+                        :documentation "Set whether the model is renderable or not.
+
+        :param value: The new value of the renderable state of the model.
+        :raises: ObjectIsNotModel if the object is not a model.
+        ")
+                        (reparse-symbol indented_block_body) [22339 22681])
+                    ("set_model_dynamic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23004 23008])
+                            ("bool" variable nil (reparse-symbol function_parameters) [23017 23021]))                          
+                        :documentation "Set whether the model is dynamic or not.
+
+        :param value: The new value of the dynamic state of the model.
+        :raises: ObjectIsNotModel if the object is not a model.
+        ")
+                        (reparse-symbol indented_block_body) [22982 23312])
+                    ("set_model_respondable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23655 23659])
+                            ("bool" variable nil (reparse-symbol function_parameters) [23668 23672]))                          
+                        :documentation "Set whether the model is respondable or not.
+
+        :param value: The new value of the respondable state of the model.
+        :raises: ObjectIsNotModel if the object is not a model.
+        ")
+                        (reparse-symbol indented_block_body) [23629 23975]))                  
+                :type "class")
+                nil [277 29809]))          
+      :file "object.py"
+      :pointmax 29809
+      :fsize 29808
+      :lastmodtime '(24574 23022 298885 175000)
+      :unmatched-syntax '((INDENT_BLOCK 29598 . 29809) (NEWLINE 29597 . 29598) (COLON 29596 . 29597) (MINUS 29589 . 29590) (GT 29590 . 29591) (NAME 29576 . 29581) (COLON 29581 . 29582) (NAME 29560 . 29569) (COLON 29569 . 29570) (INDENT_BLOCK 29432 . 29531) (NEWLINE 29431 . 29432) (COLON 29430 . 29431) (MINUS 29423 . 29424) (GT 29424 . 29425) (NAME 29407 . 29416) (COLON 29416 . 29417) (INDENT_BLOCK 29169 . 29378) (NEWLINE 29168 . 29169) (COLON 29167 . 29168) (MINUS 29160 . 29161) (GT 29161 . 29162) (NAME 29147 . 29152) (COLON 29152 . 29153) (NAME 29131 . 29140) (COLON 29140 . 29141) (INDENT_BLOCK 28998 . 29096) (NEWLINE 28997 . 28998) (COLON 28996 . 28997) (MINUS 28989 . 28990) (GT 28990 . 28991) (NAME 28973 . 28982) (COLON 28982 . 28983) (INDENT_BLOCK 28784 . 28938) (NEWLINE 28783 . 28784) (COLON 28782 . 28783) (MINUS 28775 . 28776) (GT 28776 . 28777) (INDENT_BLOCK 28532 . 28716) (NEWLINE 28531 . 28532) (COLON 28530 . 28531) (MINUS 28523 . 28524) (GT 28524 . 28525) (NAME 28511 . 28516) (COLON 28516 . 28517) (INDENT_BLOCK 28311 . 28474) (NEWLINE 28310 . 28311) (COLON 28309 . 28310) (MINUS 28303 . 28304) (GT 28304 . 28305) (INDENT_BLOCK 28033 . 28266) (NEWLINE 28032 . 28033) (COLON 28031 . 28032) (MINUS 28024 . 28025) (GT 28025 . 28026) (INDENT_BLOCK 27757 . 27979) (NEWLINE 27756 . 27757) (COLON 27755 . 27756) (MINUS 27747 . 27748) (GT 27748 . 27749) (INDENT_BLOCK 27427 . 27712) (NEWLINE 27426 . 27427) (COLON 27425 . 27426) (MINUS 27417 . 27418) (GT 27418 . 27419) (STRING_LITERAL 27407 . 27415) (NAME 27400 . 27405) (COLON 27405 . 27406) (INDENT_BLOCK 27075 . 27370) (NEWLINE 27074 . 27075) (COLON 27073 . 27074) (MINUS 27062 . 27063) (GT 27063 . 27064) (INDENT_BLOCK 26509 . 27042) (NEWLINE 26508 . 26509) (COLON 26507 . 26508) (MINUS 26490 . 26491) (GT 26491 . 26492) (INDENT_BLOCK 25409 . 26438) (NEWLINE 25408 . 25409) (COLON 25407 . 25408) (MINUS 25390 . 25391) (GT 25391 . 25392) (INDENT_BLOCK 24467 . 25189) (NEWLINE 24466 . 24467) (COLON 24465 . 24466) (MINUS 24451 . 24452) (GT 24452 . 24453) (INDENT_BLOCK 24021 . 24413) (NEWLINE 24020 . 24021) (COLON 24019 . 24020) (DEF 23980 . 23983) (MINUS 24012 . 24013) (GT 24013 . 24014) (NAME 24001 . 24005) (COLON 24005 . 24006) (NAME 23661 . 23666) (COLON 23666 . 23667) (INDENT_BLOCK 23357 . 23624) (NEWLINE 23356 . 23357) (COLON 23355 . 23356) (DEF 23317 . 23320) (MINUS 23348 . 23349) (GT 23349 . 23350) (NAME 23010 . 23015) (COLON 23015 . 23016) (INDENT_BLOCK 22722 . 22977) (NEWLINE 22721 . 22722) (COLON 22720 . 22721) (DEF 22686 . 22689) (MINUS 22713 . 22714) (GT 22714 . 22715) (NAME 22370 . 22375) (COLON 22375 . 22376) (INDENT_BLOCK 22070 . 22334) (NEWLINE 22069 . 22070) (COLON 22068 . 22069) (DEF 22031 . 22034) (MINUS 22061 . 22062) (GT 22062 . 22063) (NAME 21715 . 21720) (COLON 21720 . 21721) (INDENT_BLOCK 21415 . 21679) (NEWLINE 21414 . 21415) (COLON 21413 . 21414) (DEF 21376 . 21379) (MINUS 21406 . 21407) (GT 21407 . 21408) (NAME 21060 . 21065) (COLON 21065 . 21066) (INDENT_BLOCK 20760 . 21024) (NEWLINE 20759 . 20760) (COLON 20758 . 20759) (DEF 20721 . 20724) (MINUS 20751 . 20752) (GT 20752 . 20753) (NAME 20405 . 20410) (COLON 20410 . 20411) (INDENT_BLOCK 20105 . 20369) (NEWLINE 20104 . 20105) (COLON 20103 . 20104) (MINUS 20096 . 20097) (GT 20097 . 20098) (INDENT_BLOCK 19577 . 20023) (NEWLINE 19576 . 19577) (COLON 19575 . 19576) (MINUS 19568 . 19569) (GT 19569 . 19570) (ASSIGN 19560 . 19561) (STRING_LITERAL 19551 . 19559) (NAME 19546 . 19549) (COLON 19549 . 19550) (INDENT_BLOCK 18901 . 19515) (NEWLINE 18900 . 18901) (COLON 18899 . 18900) (MINUS 18892 . 18893) (GT 18893 . 18894) (BRACK_BLOCK 18883 . 18890) (NAME 18869 . 18877) (COLON 18877 . 18878) (INDENT_BLOCK 18352 . 18847) (NEWLINE 18351 . 18352) (COLON 18350 . 18351) (MINUS 18342 . 18343) (GT 18343 . 18344) (INDENT_BLOCK 18112 . 18304) (NEWLINE 18111 . 18112) (COLON 18110 . 18111) (MINUS 18104 . 18105) (GT 18105 . 18106) (INDENT_BLOCK 17453 . 18068) (NEWLINE 17452 . 17453) (COLON 17451 . 17452) (MINUS 17437 . 17438) (GT 17438 . 17439) (INDENT_BLOCK 16645 . 17405) (NEWLINE 16644 . 16645) (COLON 16643 . 16644) (MINUS 16636 . 16637) (GT 16637 . 16638) (INDENT_BLOCK 16150 . 16600) (NEWLINE 16149 . 16150) (COLON 16148 . 16149) (DEF 16124 . 16127) (MINUS 16141 . 16142) (GT 16142 . 16143) (NAME 15758 . 15763) (COLON 15763 . 15764) (INDENT_BLOCK 15515 . 15733) (NEWLINE 15514 . 15515) (COLON 15513 . 15514) (DEF 15487 . 15490) (MINUS 15506 . 15507) (GT 15507 . 15508) (NAME 15262 . 15267) (COLON 15267 . 15268) (INDENT_BLOCK 15045 . 15232) (NEWLINE 15044 . 15045) (COLON 15043 . 15044) (DEF 15012 . 15015) (MINUS 15036 . 15037) (GT 15037 . 15038) (NAME 14783 . 14788) (COLON 14788 . 14789) (INDENT_BLOCK 14562 . 14753) (NEWLINE 14561 . 14562) (COLON 14560 . 14561) (DEF 14529 . 14532) (MINUS 14553 . 14554) (GT 14554 . 14555) (NAME 14304 . 14309) (COLON 14309 . 14310) (INDENT_BLOCK 14087 . 14274) (NEWLINE 14086 . 14087) (COLON 14085 . 14086) (MINUS 14078 . 14079) (GT 14079 . 14080) (INDENT_BLOCK 13843 . 14049) (NEWLINE 13842 . 13843) (COLON 13841 . 13842) (MINUS 13834 . 13835) (GT 13835 . 13836) (NAME 13821 . 13826) (COLON 13826 . 13827) (INDENT_BLOCK 13604 . 13791) (NEWLINE 13603 . 13604) (COLON 13602 . 13603) (MINUS 13595 . 13596) (GT 13596 . 13597) (INDENT_BLOCK 12668 . 13566) (NEWLINE 12667 . 12668) (COLON 12666 . 12667) (MINUS 12659 . 12660) (GT 12660 . 12661) (COMMA 12639 . 12640) (BRACK_BLOCK 12632 . 12639) (NAME 12620 . 12626) (COLON 12626 . 12627) (INDENT_BLOCK 11702 . 12594) (NEWLINE 11701 . 11702) (COLON 11700 . 11701) (MINUS 11686 . 11687) (GT 11687 . 11688) (INDENT_BLOCK 11167 . 11642) (NEWLINE 11166 . 11167) (COLON 11165 . 11166) (MINUS 11158 . 11159) (GT 11159 . 11160) (COMMA 11117 . 11118) (BRACK_BLOCK 11101 . 11117) (NAME 11081 . 11094) (COLON 11094 . 11095) (INDENT_BLOCK 10582 . 11055) (NEWLINE 10581 . 10582) (COLON 10580 . 10581) (MINUS 10556 . 10557) (GT 10557 . 10558) (INDENT_BLOCK 10183 . 10530) (NEWLINE 10182 . 10183) (COLON 10181 . 10182) (MINUS 10149 . 10150) (GT 10150 . 10151) (INDENT_BLOCK 9442 . 10121) (NEWLINE 9441 . 9442) (COLON 9440 . 9441) (MINUS 9433 . 9434) (GT 9434 . 9435) (COMMA 9375 . 9376) (BRACK_BLOCK 9357 . 9375) (NAME 9346 . 9350) (COLON 9350 . 9351) (INDENT_BLOCK 8784 . 9322) (NEWLINE 8783 . 8784) (COLON 8782 . 8783) (MINUS 8769 . 8770) (GT 8770 . 8771) (INDENT_BLOCK 7662 . 8727) (NEWLINE 7661 . 7662) (COLON 7660 . 7661) (MINUS 7653 . 7654) (GT 7654 . 7655) (COMMA 7589 . 7590) (BRACK_BLOCK 7571 . 7589) (NAME 7554 . 7564) (COLON 7564 . 7565) (INDENT_BLOCK 6939 . 7524) (NEWLINE 6938 . 6939) (COLON 6937 . 6938) (MINUS 6924 . 6925) (GT 6925 . 6926) (INDENT_BLOCK 6036 . 6876) (NEWLINE 6035 . 6036) (COLON 6034 . 6035) (MINUS 6027 . 6028) (GT 6028 . 6029) (COMMA 5962 . 5963) (BRACK_BLOCK 5944 . 5962) (NAME 5926 . 5937) (COLON 5937 . 5938) (INDENT_BLOCK 5281 . 5895) (NEWLINE 5280 . 5281) (COLON 5279 . 5280) (MINUS 5266 . 5267) (GT 5267 . 5268) (INDENT_BLOCK 4429 . 5217) (NEWLINE 4428 . 4429) (COLON 4427 . 4428) (MINUS 4420 . 4421) (GT 4421 . 4422) (COMMA 4358 . 4359) (BRACK_BLOCK 4340 . 4358) (NAME 4325 . 4333) (COLON 4333 . 4334) (INDENT_BLOCK 3742 . 4297) (NEWLINE 3741 . 3742) (COLON 3740 . 3741) (MINUS 3727 . 3728) (GT 3728 . 3729) (INDENT_BLOCK 3573 . 3681) (NEWLINE 3572 . 3573) (COLON 3571 . 3572) (MINUS 3564 . 3565) (GT 3565 . 3566) (NAME 3553 . 3557) (COLON 3557 . 3558) (INDENT_BLOCK 3384 . 3529) (NEWLINE 3383 . 3384) (COLON 3382 . 3383) (MINUS 3376 . 3377) (GT 3377 . 3378) (INDENT_BLOCK 3166 . 3352) (NEWLINE 3165 . 3166) (COLON 3164 . 3165) (MINUS 3157 . 3158) (GT 3158 . 3159) (INDENT_BLOCK 2998 . 3129) (NEWLINE 2997 . 2998) (COLON 2996 . 2997) (MINUS 2990 . 2991) (GT 2991 . 2992) (INDENT_BLOCK 2812 . 2964) (NEWLINE 2811 . 2812) (COLON 2810 . 2811) (MINUS 2797 . 2798) (GT 2798 . 2799) (INDENT_BLOCK 2585 . 2773) (NEWLINE 2584 . 2585) (COLON 2583 . 2584) (MINUS 2570 . 2571) (GT 2571 . 2572) (INDENT_BLOCK 2273 . 2535) (NEWLINE 2272 . 2273) (COLON 2271 . 2272) (MINUS 2260 . 2261) (GT 2261 . 2262) (NAME 2239 . 2253) (COLON 2253 . 2254) (INDENT_BLOCK 1961 . 2201) (NEWLINE 1960 . 1961) (COLON 1959 . 1960) (MINUS 1953 . 1954) (GT 1954 . 1955) (BRACK_BLOCK 1941 . 1951) (NAME 1920 . 1934) (COLON 1934 . 1935) (INDENT_BLOCK 1709 . 1877) (NEWLINE 1708 . 1709) (COLON 1707 . 1708) (MINUS 1694 . 1695) (GT 1695 . 1696) (NAME 1683 . 1687) (COLON 1687 . 1688) (INDENT_BLOCK 1226 . 1640) (NEWLINE 1225 . 1226) (COLON 1224 . 1225) (AT 1177 . 1178) (MINUS 1217 . 1218) (GT 1218 . 1219) (NAME 1206 . 1210) (COLON 1210 . 1211) (NAME 1021 . 1026) (COLON 1026 . 1027) (BRACK_BLOCK 501 . 511) (NAME 480 . 494) (COLON 494 . 495) (NAME 226 . 246) (COLON 246 . 247) (NAME 226 . 246) (COLON 246 . 247) (INDENT_BLOCK 28033 . 28266) (NEWLINE 28032 . 28033) (COLON 28031 . 28032) (MINUS 28024 . 28025) (GT 28025 . 28026) (INDENT_BLOCK 27757 . 27979) (NEWLINE 27756 . 27757) (COLON 27755 . 27756) (MINUS 27747 . 27748) (GT 27748 . 27749) (INDENT_BLOCK 27427 . 27712) (NEWLINE 27426 . 27427) (COLON 27425 . 27426) (MINUS 27417 . 27418) (GT 27418 . 27419) (STRING_LITERAL 27407 . 27415) (NAME 27400 . 27405) (COLON 27405 . 27406) (INDENT_BLOCK 27075 . 27370) (NEWLINE 27074 . 27075) (COLON 27073 . 27074) (MINUS 27062 . 27063) (GT 27063 . 27064) (INDENT_BLOCK 26509 . 27042) (NEWLINE 26508 . 26509) (COLON 26507 . 26508) (MINUS 26490 . 26491) (GT 26491 . 26492) (INDENT_BLOCK 25409 . 26438) (NEWLINE 25408 . 25409) (COLON 25407 . 25408) (MINUS 25390 . 25391) (GT 25391 . 25392) (INDENT_BLOCK 24467 . 25189) (NEWLINE 24466 . 24467) (COLON 24465 . 24466) (MINUS 24451 . 24452) (GT 24452 . 24453) (INDENT_BLOCK 24021 . 24413) (NEWLINE 24020 . 24021) (COLON 24019 . 24020) (DEF 23980 . 23983) (MINUS 24012 . 24013) (GT 24013 . 24014) (NAME 24001 . 24005) (COLON 24005 . 24006) (NAME 23661 . 23666) (COLON 23666 . 23667) (INDENT_BLOCK 23357 . 23624) (NEWLINE 23356 . 23357) (COLON 23355 . 23356) (DEF 23317 . 23320) (MINUS 23348 . 23349) (GT 23349 . 23350) (NAME 23010 . 23015) (COLON 23015 . 23016) (INDENT_BLOCK 22722 . 22977) (NEWLINE 22721 . 22722) (COLON 22720 . 22721) (DEF 22686 . 22689) (MINUS 22713 . 22714) (GT 22714 . 22715) (NAME 22370 . 22375) (COLON 22375 . 22376) (INDENT_BLOCK 22070 . 22334) (NEWLINE 22069 . 22070) (COLON 22068 . 22069) (DEF 22031 . 22034) (MINUS 22061 . 22062) (GT 22062 . 22063) (NAME 21715 . 21720) (COLON 21720 . 21721) (INDENT_BLOCK 21415 . 21679) (NEWLINE 21414 . 21415) (COLON 21413 . 21414) (DEF 21376 . 21379) (MINUS 21406 . 21407) (GT 21407 . 21408) (NAME 21060 . 21065) (COLON 21065 . 21066) (INDENT_BLOCK 20760 . 21024) (NEWLINE 20759 . 20760) (COLON 20758 . 20759) (DEF 20721 . 20724) (MINUS 20751 . 20752) (GT 20752 . 20753) (NAME 20405 . 20410) (COLON 20410 . 20411) (INDENT_BLOCK 20105 . 20369) (NEWLINE 20104 . 20105) (COLON 20103 . 20104) (MINUS 20096 . 20097) (GT 20097 . 20098) (INDENT_BLOCK 19577 . 20023) (NEWLINE 19576 . 19577) (COLON 19575 . 19576) (MINUS 19568 . 19569) (GT 19569 . 19570) (ASSIGN 19560 . 19561) (STRING_LITERAL 19551 . 19559) (NAME 19546 . 19549) (COLON 19549 . 19550) (INDENT_BLOCK 18901 . 19515) (NEWLINE 18900 . 18901) (COLON 18899 . 18900) (MINUS 18892 . 18893) (GT 18893 . 18894) (BRACK_BLOCK 18883 . 18890) (NAME 18869 . 18877) (COLON 18877 . 18878) (INDENT_BLOCK 18352 . 18847) (NEWLINE 18351 . 18352) (COLON 18350 . 18351) (MINUS 18342 . 18343) (GT 18343 . 18344) (INDENT_BLOCK 18112 . 18304) (NEWLINE 18111 . 18112) (COLON 18110 . 18111) (MINUS 18104 . 18105) (GT 18105 . 18106) (INDENT_BLOCK 17453 . 18068) (NEWLINE 17452 . 17453) (COLON 17451 . 17452) (MINUS 17437 . 17438) (GT 17438 . 17439) (INDENT_BLOCK 16645 . 17405) (NEWLINE 16644 . 16645) (COLON 16643 . 16644) (MINUS 16636 . 16637) (GT 16637 . 16638) (INDENT_BLOCK 16150 . 16600) (NEWLINE 16149 . 16150) (COLON 16148 . 16149) (DEF 16124 . 16127) (MINUS 16141 . 16142) (GT 16142 . 16143) (NAME 15758 . 15763) (COLON 15763 . 15764) (INDENT_BLOCK 15515 . 15733) (NEWLINE 15514 . 15515) (COLON 15513 . 15514) (DEF 15487 . 15490) (MINUS 15506 . 15507) (GT 15507 . 15508) (NAME 15262 . 15267) (COLON 15267 . 15268) (INDENT_BLOCK 15045 . 15232) (NEWLINE 15044 . 15045) (COLON 15043 . 15044) (DEF 15012 . 15015) (MINUS 15036 . 15037) (GT 15037 . 15038) (NAME 14783 . 14788) (COLON 14788 . 14789) (INDENT_BLOCK 14562 . 14753) (NEWLINE 14561 . 14562) (COLON 14560 . 14561) (DEF 14529 . 14532) (MINUS 14553 . 14554) (GT 14554 . 14555) (NAME 14304 . 14309) (COLON 14309 . 14310) (INDENT_BLOCK 14087 . 14274) (NEWLINE 14086 . 14087) (COLON 14085 . 14086) (MINUS 14078 . 14079) (GT 14079 . 14080) (INDENT_BLOCK 13843 . 14049) (NEWLINE 13842 . 13843) (COLON 13841 . 13842) (MINUS 13834 . 13835) (GT 13835 . 13836) (NAME 13821 . 13826) (COLON 13826 . 13827) (INDENT_BLOCK 13604 . 13791) (NEWLINE 13603 . 13604) (COLON 13602 . 13603) (MINUS 13595 . 13596) (GT 13596 . 13597) (INDENT_BLOCK 12668 . 13566) (NEWLINE 12667 . 12668) (COLON 12666 . 12667) (MINUS 12659 . 12660) (GT 12660 . 12661) (COMMA 12639 . 12640) (BRACK_BLOCK 12632 . 12639) (NAME 12620 . 12626) (COLON 12626 . 12627) (INDENT_BLOCK 11702 . 12594) (NEWLINE 11701 . 11702) (COLON 11700 . 11701) (MINUS 11686 . 11687) (GT 11687 . 11688) (INDENT_BLOCK 11167 . 11642) (NEWLINE 11166 . 11167) (COLON 11165 . 11166) (MINUS 11158 . 11159) (GT 11159 . 11160) (COMMA 11117 . 11118) (BRACK_BLOCK 11101 . 11117) (NAME 11081 . 11094) (COLON 11094 . 11095) (INDENT_BLOCK 10582 . 11055) (NEWLINE 10581 . 10582) (COLON 10580 . 10581) (MINUS 10556 . 10557) (GT 10557 . 10558) (INDENT_BLOCK 10183 . 10530) (NEWLINE 10182 . 10183) (COLON 10181 . 10182) (MINUS 10149 . 10150) (GT 10150 . 10151) (INDENT_BLOCK 9442 . 10121) (NEWLINE 9441 . 9442) (COLON 9440 . 9441) (MINUS 9433 . 9434) (GT 9434 . 9435) (COMMA 9375 . 9376) (BRACK_BLOCK 9357 . 9375) (NAME 9346 . 9350) (COLON 9350 . 9351) (INDENT_BLOCK 8784 . 9322) (NEWLINE 8783 . 8784) (COLON 8782 . 8783) (MINUS 8769 . 8770) (GT 8770 . 8771) (INDENT_BLOCK 7662 . 8727) (NEWLINE 7661 . 7662) (COLON 7660 . 7661) (MINUS 7653 . 7654) (GT 7654 . 7655) (COMMA 7589 . 7590) (BRACK_BLOCK 7571 . 7589) (NAME 7554 . 7564) (COLON 7564 . 7565) (INDENT_BLOCK 6939 . 7524) (NEWLINE 6938 . 6939) (COLON 6937 . 6938) (MINUS 6924 . 6925) (GT 6925 . 6926) (INDENT_BLOCK 6036 . 6876) (NEWLINE 6035 . 6036) (COLON 6034 . 6035) (MINUS 6027 . 6028) (GT 6028 . 6029) (COMMA 5962 . 5963) (BRACK_BLOCK 5944 . 5962) (NAME 5926 . 5937) (COLON 5937 . 5938) (INDENT_BLOCK 5281 . 5895) (NEWLINE 5280 . 5281) (COLON 5279 . 5280) (MINUS 5266 . 5267) (GT 5267 . 5268) (INDENT_BLOCK 4429 . 5217) (NEWLINE 4428 . 4429) (COLON 4427 . 4428) (MINUS 4420 . 4421) (GT 4421 . 4422) (COMMA 4358 . 4359) (BRACK_BLOCK 4340 . 4358) (NAME 4325 . 4333) (COLON 4333 . 4334) (INDENT_BLOCK 3742 . 4297) (NEWLINE 3741 . 3742) (COLON 3740 . 3741) (MINUS 3727 . 3728) (GT 3728 . 3729) (INDENT_BLOCK 3573 . 3681) (NEWLINE 3572 . 3573) (COLON 3571 . 3572) (MINUS 3564 . 3565) (GT 3565 . 3566) (NAME 3553 . 3557) (COLON 3557 . 3558) (INDENT_BLOCK 3384 . 3529) (NEWLINE 3383 . 3384) (COLON 3382 . 3383) (MINUS 3376 . 3377) (GT 3377 . 3378) (INDENT_BLOCK 3166 . 3352) (NEWLINE 3165 . 3166) (COLON 3164 . 3165) (MINUS 3157 . 3158) (GT 3158 . 3159) (INDENT_BLOCK 2998 . 3129) (NEWLINE 2997 . 2998) (COLON 2996 . 2997) (MINUS 2990 . 2991) (GT 2991 . 2992) (INDENT_BLOCK 2812 . 2964) (NEWLINE 2811 . 2812) (COLON 2810 . 2811) (MINUS 2797 . 2798) (GT 2798 . 2799) (INDENT_BLOCK 2585 . 2773) (NEWLINE 2584 . 2585) (COLON 2583 . 2584) (MINUS 2570 . 2571) (GT 2571 . 2572) (INDENT_BLOCK 2273 . 2535) (NEWLINE 2272 . 2273) (COLON 2271 . 2272) (MINUS 2260 . 2261) (GT 2261 . 2262) (NAME 2239 . 2253) (COLON 2253 . 2254) (INDENT_BLOCK 1961 . 2201) (NEWLINE 1960 . 1961) (COLON 1959 . 1960) (MINUS 1953 . 1954) (GT 1954 . 1955) (BRACK_BLOCK 1941 . 1951) (NAME 1920 . 1934) (COLON 1934 . 1935) (INDENT_BLOCK 1709 . 1877) (NEWLINE 1708 . 1709) (COLON 1707 . 1708) (MINUS 1694 . 1695) (GT 1695 . 1696) (NAME 1683 . 1687) (COLON 1687 . 1688) (INDENT_BLOCK 1226 . 1640) (NEWLINE 1225 . 1226) (COLON 1224 . 1225) (AT 1177 . 1178) (MINUS 1217 . 1218) (GT 1218 . 1219) (NAME 1206 . 1210) (COLON 1210 . 1211) (NAME 1021 . 1026) (COLON 1026 . 1027) (BRACK_BLOCK 501 . 511) (NAME 480 . 494) (COLON 494 . 495) (NAME 226 . 246) (COLON 246 . 247)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("math" include nil nil [1 12])
+            ("typing" include nil nil [13 53])
+            ("pyrep.backend" include nil nil [54 83])
+            ("pyrep.objects.object" include nil nil [84 145])
+            ("numpy" include nil nil [146 164])
+            ("pyrep.const" include nil nil [165 228])
+            ("VisionSensor" type
+               (:documentation "A camera-type sensor, reacting to light, colors and images.
+    "
+                :superclasses ("Object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [400 432])
+                            ("self" variable nil (reparse-symbol indented_block_body) [441 505]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [352 356]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [339 506]))                  
+                :type "class")
+                nil [231 11861])
+            ("object_type_to_class" variable nil nil [11863 11924]))          
+      :file "vision_sensor.py"
+      :pointmax 11925
+      :fsize 11924
+      :lastmodtime '(24574 23022 298885 175000)
+      :unmatched-syntax '((INDENT_BLOCK 11523 . 11861) (NEWLINE 11522 . 11523) (COLON 11521 . 11522) (MINUS 11514 . 11515) (GT 11515 . 11516) (INDENT_BLOCK 11119 . 11478) (NEWLINE 11118 . 11119) (COLON 11117 . 11118) (MINUS 11110 . 11111) (GT 11111 . 11112) (NAME 11087 . 11103) (COLON 11103 . 11104) (INDENT_BLOCK 10797 . 11051) (NEWLINE 10796 . 10797) (COLON 10795 . 10796) (MINUS 10788 . 10789) (GT 10789 . 10790) (NAME 10767 . 10779) (COLON 10779 . 10780) (INDENT_BLOCK 10500 . 10729) (NEWLINE 10499 . 10500) (COLON 10498 . 10499) (MINUS 10490 . 10491) (GT 10491 . 10492) (INDENT_BLOCK 10193 . 10452) (NEWLINE 10192 . 10193) (COLON 10191 . 10192) (MINUS 10184 . 10185) (GT 10185 . 10186) (NAME 10162 . 10175) (COLON 10175 . 10176) (INDENT_BLOCK 9892 . 10123) (NEWLINE 9891 . 9892) (COLON 9890 . 9891) (MINUS 9882 . 9883) (GT 9883 . 9884) (INDENT_BLOCK 9602 . 9843) (NEWLINE 9601 . 9602) (COLON 9600 . 9601) (MINUS 9593 . 9594) (GT 9594 . 9595) (NAME 9574 . 9584) (COLON 9584 . 9585) (INDENT_BLOCK 9296 . 9537) (NEWLINE 9295 . 9296) (COLON 9294 . 9295) (MINUS 9286 . 9287) (GT 9287 . 9288) (INDENT_BLOCK 8979 . 9249) (NEWLINE 8978 . 8979) (COLON 8977 . 8978) (MINUS 8970 . 8971) (GT 8971 . 8972) (NAME 8956 . 8961) (COLON 8961 . 8962) (INDENT_BLOCK 8656 . 8919) (NEWLINE 8655 . 8656) (COLON 8654 . 8655) (MINUS 8646 . 8647) (GT 8647 . 8648) (INDENT_BLOCK 8188 . 8609) (NEWLINE 8187 . 8188) (COLON 8186 . 8187) (MINUS 8179 . 8180) (GT 8180 . 8181) (PAREN_BLOCK 8171 . 8177) (ASSIGN 8169 . 8170) (BRACK_BLOCK 8163 . 8168) (NAME 8143 . 8153) (COLON 8153 . 8154) (INDENT_BLOCK 7717 . 8110) (NEWLINE 7716 . 7717) (COLON 7715 . 7716) (MINUS 7699 . 7700) (GT 7700 . 7701) (INDENT_BLOCK 7113 . 7666) (NEWLINE 7112 . 7113) (COLON 7111 . 7112) (MINUS 7104 . 7105) (GT 7105 . 7106) (NAME 7079 . 7090) (COLON 7090 . 7091) (INDENT_BLOCK 6761 . 7048) (NEWLINE 6760 . 6761) (COLON 6759 . 6760) (MINUS 6746 . 6747) (GT 6747 . 6748) (INDENT_BLOCK 6350 . 6715) (NEWLINE 6349 . 6350) (COLON 6348 . 6349) (MINUS 6341 . 6342) (GT 6342 . 6343) (NAME 6306 . 6322) (COLON 6322 . 6323) (INDENT_BLOCK 5969 . 6270) (NEWLINE 5968 . 5969) (COLON 5967 . 5968) (MINUS 5949 . 5950) (GT 5950 . 5951) (INDENT_BLOCK 5519 . 5913) (NEWLINE 5518 . 5519) (COLON 5517 . 5518) (MINUS 5510 . 5511) (GT 5511 . 5512) (BRACK_BLOCK 5503 . 5508) (NAME 5487 . 5497) (COLON 5497 . 5498) (INDENT_BLOCK 5303 . 5457) (NEWLINE 5302 . 5303) (COLON 5301 . 5302) (MINUS 5289 . 5290) (GT 5290 . 5291) (INDENT_BLOCK 4956 . 5259) (NEWLINE 4955 . 4956) (COLON 4954 . 4955) (MINUS 4941 . 4942) (GT 4942 . 4943) (INDENT_BLOCK 4695 . 4895) (NEWLINE 4694 . 4695) (COLON 4693 . 4694) (MINUS 4680 . 4681) (GT 4681 . 4682) (INDENT_BLOCK 4243 . 4653) (NEWLINE 4242 . 4243) (COLON 4241 . 4242) (MINUS 4234 . 4235) (GT 4235 . 4236) (INDENT_BLOCK 4161 . 4201) (NEWLINE 4160 . 4161) (COLON 4159 . 4160) (MINUS 4146 . 4147) (GT 4147 . 4148) (INDENT_BLOCK 1016 . 4111) (NEWLINE 1015 . 1016) (COLON 1014 . 1015) (AT 511 . 512) (MINUS 997 . 998) (GT 998 . 999) (COMMA 561 . 562) (BRACK_BLOCK 556 . 561) (NAME 540 . 550) (COLON 550 . 551) (BRACK_BLOCK 379 . 389) (NAME 358 . 372) (COLON 372 . 373)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("math" include nil nil [1 22])
+            ("pyrep.backend" include nil nil [24 53])
+            ("pyrep.objects.object" include nil nil [54 115])
+            ("pyrep.const" include nil nil [116 150])
+            ("ProximitySensor" type
+               (:documentation "Detects objects within a detection volume.
+
+    V-REP supports pyramid-, cylinder-, disk-, cone- and ray-type proximity
+    sensors.
+    "
+                :superclasses ("Object")
+                :type "class")
+                nil [153 1275])
+            ("object_type_to_class" variable nil nil [1277 1344]))          
+      :file "proximity_sensor.py"
+      :pointmax 1345
+      :fsize 1344
+      :lastmodtime '(24574 23022 298885 175000)
+      :unmatched-syntax '((INDENT_BLOCK 960 . 1275) (NEWLINE 959 . 960) (COLON 958 . 959) (MINUS 951 . 952) (GT 952 . 953) (NAME 938 . 941) (COLON 941 . 942) (INDENT_BLOCK 455 . 911) (NEWLINE 454 . 455) (COLON 453 . 454) (MINUS 445 . 446) (GT 446 . 447) (INDENT_BLOCK 382 . 425) (NEWLINE 381 . 382) (COLON 380 . 381) (DEF 337 . 340) (MINUS 367 . 368) (GT 368 . 369)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("pyrep.objects.object" include nil nil [1 62])
+            ("pyrep.const" include nil nil [63 97])
+            ("pyrep.backend" include nil nil [98 127])
+            ("Dummy" type
+               (:documentation "A point with orientation.
+
+    Dummies are multipurpose objects that can have many different applications.
+    "
+                :superclasses ("Object")
+                :type "class")
+                nil [130 655])
+            ("object_type_to_class" variable nil nil [657 703]))          
+      :file "dummy.py"
+      :pointmax 704
+      :fsize 703
+      :lastmodtime '(24574 23022 298885 175000)
+      :unmatched-syntax '((INDENT_BLOCK 623 . 655) (NEWLINE 622 . 623) (COLON 621 . 622) (MINUS 608 . 609) (GT 609 . 610) (INDENT_BLOCK 330 . 573) (NEWLINE 329 . 330) (COLON 328 . 329) (AT 278 . 279) (MINUS 318 . 319) (GT 319 . 320))))
+  :file "!home!xli4217!Dropbox!docker!docker_home!lof_robot_learning!libs!PyRep!pyrep!objects!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

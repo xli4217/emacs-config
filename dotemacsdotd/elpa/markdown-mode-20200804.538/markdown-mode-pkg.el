@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "markdown-mode" "20200804.538" "Major mode for Markdown-formatted text" '((emacs "25.1")) :commit "3c3b5fbe2ea46e2ecc2793d3823da7370ede696b" :keywords '("markdown" "github flavored markdown" "itex") :authors '(("Jason R. Blevins" . "jblevins@xbeta.org")) :maintainer '("Jason R. Blevins" . "jblevins@xbeta.org") :url "https://jblevins.org/projects/markdown-mode/")

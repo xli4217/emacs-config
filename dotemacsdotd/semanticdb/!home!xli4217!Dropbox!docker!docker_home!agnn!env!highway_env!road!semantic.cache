@@ -1,0 +1,168 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 53])
+            ("numpy" include nil nil [55 73])
+            ("pygame" include nil nil [74 87])
+            ("highway_env.road.lane" include nil nil [89 145])
+            ("highway_env.road.road" include nil nil [146 184])
+            ("highway_env.types" include nil nil [185 221])
+            ("highway_env.vehicle.graphics" include nil nil [222 278])
+            ("highway_env.road.objects" include nil nil [279 334])
+            ("if" code nil nil [336 406])
+            ("PositionType" variable nil nil [407 460])
+            ("WorldSurface" type
+               (:documentation "A pygame Surface implementing a local coordinate system so that we can move and zoom in the displayed area."
+                :superclasses ("pygame.Surface")
+                :members 
+                  ( ("BLACK" variable nil (reparse-symbol indented_block_body) [623 640])
+                    ("GREY" variable nil (reparse-symbol indented_block_body) [645 667])
+                    ("GREEN" variable nil (reparse-symbol indented_block_body) [672 692])
+                    ("YELLOW" variable nil (reparse-symbol indented_block_body) [697 719])
+                    ("WHITE" variable nil (reparse-symbol indented_block_body) [724 747])
+                    ("INITIAL_SCALING" variable nil (reparse-symbol indented_block_body) [752 773])
+                    ("INITIAL_CENTERING" variable nil (reparse-symbol indented_block_body) [778 808])
+                    ("SCALING_FACTOR" variable nil (reparse-symbol indented_block_body) [813 833])
+                    ("MOVING_FACTOR" variable nil (reparse-symbol indented_block_body) [838 857]))                  
+                :type "class")
+                nil [463 3573])
+            ("LaneGraphics" type
+               (:documentation "A visualization of a lane."
+                :superclasses ("object")
+                :members 
+                  ( ("float" variable nil (reparse-symbol indented_block_body) [3662 3671])
+                    ("\"\"\" Offset between stripes [m]\"\"\"" code nil (reparse-symbol indented_block_body) [3676 3709])
+                    ("float" variable nil (reparse-symbol indented_block_body) [3730 3739])
+                    ("\"\"\" Length of a stripe [m]\"\"\"" code nil (reparse-symbol indented_block_body) [3744 3773])
+                    ("float" variable nil (reparse-symbol indented_block_body) [3793 3804])
+                    ("\"\"\" Width of a stripe [m]\"\"\"" code nil (reparse-symbol indented_block_body) [3809 3837]))                  
+                :type "class")
+                nil [3575 9379])
+            ("RoadGraphics" type
+               (:documentation "A visualization of a road lanes and vehicles."
+                :superclasses ("object")
+                :type "class")
+                nil [9381 11140])
+            ("RoadObjectGraphics" type
+               (:documentation "A visualization of objects on the road."
+                :members 
+                  ( ("YELLOW" variable nil (reparse-symbol indented_block_body) [11224 11246])
+                    ("BLUE" variable nil (reparse-symbol indented_block_body) [11251 11273])
+                    ("RED" variable nil (reparse-symbol indented_block_body) [11278 11299])
+                    ("GREEN" variable nil (reparse-symbol indented_block_body) [11304 11324])
+                    ("BLACK" variable nil (reparse-symbol indented_block_body) [11329 11349])
+                    ("DEFAULT_COLOR" variable nil (reparse-symbol indented_block_body) [11354 11376])
+                    ("display" function
+                       (:documentation "
+        Display a road objects on a pygame surface.
+
+        The objects is represented as a colored rotated rectangle
+
+        :param object_: the vehicle to be drawn
+        :param surface: the surface to draw the object on
+        :param transparent: whether the object should be drawn slightly transparent
+        :param offscreen: whether the rendering should be done offscreen or not
+        "
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [11411 11414])
+                            ("WorldSurface" variable nil (reparse-symbol function_parameters) [11448 11460])
+                            ("bool" variable nil (reparse-symbol function_parameters) [11475 11479])
+                            ("bool" variable nil (reparse-symbol function_parameters) [11516 11520]))                          
+                        :decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [11382 12673])
+                    ("get_color" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [14211 14214])
+                            ("bool" variable nil (reparse-symbol function_parameters) [14252 14256]))                          )
+                        (reparse-symbol indented_block_body) [14180 14788]))                  
+                :type "class")
+                nil [11142 14788]))          
+      :file "graphics.py"
+      :pointmax 14788
+      :fsize 14787
+      :lastmodtime '(24612 60259 535812 24000)
+      :unmatched-syntax '((COLON 14250 . 14251) (COMMA 14237 . 14238) (STRING_LITERAL 14225 . 14237) (NAME 14216 . 14223) (COLON 14223 . 14224) (INDENT_BLOCK 12873 . 14175) (NEWLINE 12872 . 12873) (COLON 12871 . 12872) (AT 12678 . 12679) (MINUS 12864 . 12865) (GT 12865 . 12866) (NAME 12839 . 12848) (COLON 12848 . 12849) (NAME 12812 . 12822) (COLON 12822 . 12823) (NAME 12778 . 12783) (COLON 12783 . 12784) (NAME 12765 . 12768) (COLON 12768 . 12769) (PERIOD 12751 . 12752) (NAME 12738 . 12743) (COLON 12743 . 12744) (PERIOD 12724 . 12725) (NAME 12712 . 12716) (COLON 12716 . 12717) (NAME 12459 . 12460) (IF 12473 . 12475) (ELSE 12509 . 12513) (NAME 11505 . 11514) (COLON 11514 . 11515) (NAME 11462 . 11473) (COLON 11473 . 11474) (COLON 11446 . 11447) (COMMA 11437 . 11438) (STRING_LITERAL 11425 . 11437) (NAME 11416 . 11423) (COLON 11423 . 11424) (INDENT_BLOCK 10796 . 11140) (NEWLINE 10795 . 10796) (COLON 10794 . 10795) (MINUS 10787 . 10788) (GT 10788 . 10789) (NAME 10762 . 10771) (COLON 10771 . 10772) (NAME 10739 . 10746) (COLON 10746 . 10747) (NAME 10727 . 10731) (COLON 10731 . 10732) (INDENT_BLOCK 10112 . 10679) (NEWLINE 10111 . 10112) (COLON 10110 . 10111) (MINUS 10103 . 10104) (GT 10104 . 10105) (NAME 10064 . 10073) (COLON 10073 . 10074) (NAME 10032 . 10052) (COLON 10052 . 10053) (NAME 10009 . 10016) (COLON 10016 . 10017) (NAME 9997 . 10001) (COLON 10001 . 10002) (INDENT_BLOCK 9545 . 9954) (NEWLINE 9544 . 9545) (COLON 9543 . 9544) (AT 9471 . 9472) (MINUS 9536 . 9537) (GT 9537 . 9538) (NAME 9513 . 9520) (COLON 9520 . 9521) (NAME 9501 . 9505) (COLON 9505 . 9506) (INDENT_BLOCK 8592 . 9379) (NEWLINE 8591 . 8592) (COLON 8590 . 8591) (MINUS 8583 . 8584) (GT 8584 . 8585) (PERIOD 8566 . 8567) (NAME 8546 . 8558) (COLON 8558 . 8559) (COLON 8517 . 8518) (COMMA 8510 . 8511) (BRACK_BLOCK 8503 . 8510) (NAME 8491 . 8496) (COLON 8496 . 8497) (NAME 8468 . 8475) (COLON 8475 . 8476) (NAME 8448 . 8452) (COLON 8452 . 8453) (INDENT_BLOCK 7523 . 8405) (NEWLINE 7522 . 7523) (COLON 7521 . 7522) (MINUS 7514 . 7515) (GT 7515 . 7516) (BRACK_BLOCK 7505 . 7512) (COLON 7499 . 7500) (COMMA 7493 . 7494) (BRACK_BLOCK 7486 . 7493) (COLON 7480 . 7481) (COMMA 7474 . 7475) (BRACK_BLOCK 7467 . 7474) (NAME 7455 . 7461) (COLON 7461 . 7462) (NAME 7411 . 7418) (COLON 7418 . 7419) (NAME 7391 . 7395) (COLON 7395 . 7396) (INDENT_BLOCK 6662 . 7347) (NEWLINE 6661 . 6662) (COLON 6660 . 6661) (MINUS 6653 . 6654) (GT 6654 . 6655) (NAME 6642 . 6646) (COLON 6646 . 6647) (NAME 6597 . 6609) (COLON 6609 . 6610) (NAME 6577 . 6590) (COLON 6590 . 6591) (NAME 6554 . 6561) (COLON 6561 . 6562) (NAME 6534 . 6538) (COLON 6538 . 6539) (INDENT_BLOCK 5815 . 6487) (NEWLINE 5814 . 5815) (COLON 5813 . 5814) (MINUS 5806 . 5807) (GT 5807 . 5808) (NAME 5795 . 5799) (COLON 5799 . 5800) (NAME 5774 . 5786) (COLON 5786 . 5787) (NAME 5729 . 5742) (COLON 5742 . 5743) (NAME 5706 . 5713) (COLON 5713 . 5714) (NAME 5686 . 5690) (COLON 5690 . 5691) (INDENT_BLOCK 4967 . 5638) (NEWLINE 4966 . 4967) (COLON 4965 . 4966) (MINUS 4958 . 4959) (GT 4959 . 4960) (NAME 4947 . 4951) (COLON 4951 . 4952) (NAME 4905 . 4917) (COLON 4917 . 4918) (NAME 4885 . 4898) (COLON 4898 . 4899) (NAME 4862 . 4869) (COLON 4869 . 4870) (NAME 4842 . 4846) (COLON 4846 . 4847) (INDENT_BLOCK 3929 . 4798) (NEWLINE 3928 . 3929) (COLON 3927 . 3928) (AT 3843 . 3844) (MINUS 3920 . 3921) (GT 3921 . 3922) (NAME 3897 . 3904) (COLON 3904 . 3905) (NAME 3877 . 3881) (COLON 3881 . 3882) (NAME 3779 . 3791) (COLON 3791 . 3792) (NAME 3715 . 3728) (COLON 3728 . 3729) (NAME 3646 . 3660) (COLON 3660 . 3661) (INDENT_BLOCK 2997 . 3573) (NEWLINE 2996 . 2997) (COLON 2995 . 2996) (MINUS 2988 . 2989) (GT 2989 . 2990) (PERIOD 2976 . 2977) (PERIOD 2970 . 2971) (NAME 2957 . 2962) (COLON 2962 . 2963) (INDENT_BLOCK 2581 . 2929) (NEWLINE 2580 . 2581) (COLON 2579 . 2580) (MINUS 2572 . 2573) (GT 2573 . 2574) (NAME 2548 . 2556) (COLON 2556 . 2557) (INDENT_BLOCK 2156 . 2510) (NEWLINE 2155 . 2156) (COLON 2154 . 2155) (MINUS 2147 . 2148) (GT 2148 . 2149) (NAME 2129 . 2135) (COLON 2135 . 2136) (NAME 2110 . 2113) (COLON 2113 . 2114) (INDENT_BLOCK 1835 . 2084) (NEWLINE 1834 . 1835) (COLON 1833 . 1834) (MINUS 1815 . 1816) (GT 1816 . 1817) (NAME 1796 . 1799) (COLON 1799 . 1800) (INDENT_BLOCK 1449 . 1773) (NEWLINE 1448 . 1449) (COLON 1447 . 1448) (MINUS 1429 . 1430) (GT 1430 . 1431) (NAME 1419 . 1420) (COLON 1420 . 1421) (NAME 1409 . 1410) (COLON 1410 . 1411) (INDENT_BLOCK 1181 . 1386) (NEWLINE 1180 . 1181) (COLON 1179 . 1180) (MINUS 1173 . 1174) (GT 1174 . 1175) (NAME 1158 . 1164) (COLON 1164 . 1165) (INDENT_BLOCK 955 . 1139) (NEWLINE 954 . 955) (COLON 953 . 954) (DEF 863 . 866) (MINUS 946 . 947) (GT 947 . 948) (PERIOD 932 . 933) (NAME 920 . 924) (COLON 924 . 925) (COLON 910 . 911) (COMMA 903 . 904) (BRACK_BLOCK 893 . 903) (NAME 882 . 886) (COLON 886 . 887)))
+    (semanticdb-table "semanticdb-table"
+      :file "lane.py"
+      :fsize 9456
+      :lastmodtime '(24612 60259 535812 24000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("pandas" include nil nil [20 39])
+            ("logging" include nil nil [40 54])
+            ("typing" include nil nil [55 116])
+            ("highway_env.road.lane" include nil nil [118 188])
+            ("highway_env.road.objects" include nil nil [189 234])
+            ("if" code nil nil [236 342])
+            ("logger" variable nil nil [343 379])
+            ("LaneIndex" variable nil nil [381 413])
+            ("Route" variable nil nil [414 437])
+            ("RoadNetwork" type
+               (:superclasses ("object")
+                :members 
+                  ( ("Dict" code nil (reparse-symbol indented_block_body) [478 518])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [552 567]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [537 541]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [524 568]))                  
+                :type "class")
+                nil [440 9954])
+            ("Road" type
+               (:documentation "A road is a set of lanes, and a set of vehicles driving on these lanes."
+                :superclasses ("object")
+                :members 
+                  ( ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14154 14158]))                          )
+                        (reparse-symbol indented_block_body) [14141 14201]))                  
+                :type "class")
+                nil [9956 14201]))          
+      :file "road.py"
+      :pointmax 14201
+      :fsize 14200
+      :lastmodtime '(24612 60259 579811 453000)
+      :unmatched-syntax '((INDENT_BLOCK 12635 . 14136) (NEWLINE 12634 . 12635) (COLON 12633 . 12634) (MINUS 12561 . 12562) (GT 12562 . 12563) (COLON 12527 . 12528) (COMMA 12515 . 12516) (STRING_LITERAL 12495 . 12515) (NAME 12486 . 12493) (COLON 12493 . 12494) (INDENT_BLOCK 12063 . 12452) (NEWLINE 12062 . 12063) (COLON 12061 . 12062) (MINUS 12054 . 12055) (GT 12055 . 12056) (NAME 12043 . 12045) (COLON 12045 . 12046) (INDENT_BLOCK 11660 . 12011) (NEWLINE 11659 . 11660) (COLON 11658 . 11659) (MINUS 11651 . 11652) (GT 11652 . 11653) (INDENT_BLOCK 11194 . 11618) (NEWLINE 11192 . 11193) (COLON 11191 . 11192) (MINUS 11182 . 11183) (GT 11183 . 11184) (NAME 11157 . 11167) (COLON 11167 . 11168) (NAME 11138 . 11143) (COLON 11143 . 11144) (COLON 11129 . 11130) (COMMA 11119 . 11120) (STRING_LITERAL 11099 . 11119) (NAME 11090 . 11097) (COLON 11097 . 11098) (INDENT_BLOCK 10371 . 11057) (NEWLINE 10370 . 10371) (COLON 10369 . 10370) (DEF 10064 . 10067) (MINUS 10362 . 10363) (GT 10363 . 10364) (NAME 10332 . 10346) (COLON 10346 . 10347) (PERIOD 10294 . 10295) (PERIOD 10287 . 10288) (NAME 10274 . 10283) (COLON 10283 . 10284) (ASSIGN 10249 . 10250) (BRACK_BLOCK 10226 . 10248) (NAME 10208 . 10220) (COLON 10220 . 10221) (ASSIGN 10183 . 10184) (BRACK_BLOCK 10160 . 10182) (NAME 10146 . 10154) (COLON 10154 . 10155) (NAME 10100 . 10107) (COLON 10107 . 10108) (INDENT_BLOCK 9337 . 9954) (NEWLINE 9336 . 9337) (COLON 9335 . 9336) (MINUS 9308 . 9309) (GT 9309 . 9310) (NAME 9278 . 9285) (COLON 9285 . 9286) (NAME 9257 . 9269) (COLON 9269 . 9270) (NAME 9243 . 9248) (COLON 9248 . 9249) (INDENT_BLOCK 8541 . 9199) (NEWLINE 8540 . 8541) (COLON 8539 . 8540) (MINUS 8523 . 8524) (GT 8524 . 8525) (NAME 8505 . 8510) (COLON 8510 . 8511) (NAME 8482 . 8488) (COLON 8488 . 8489) (NAME 8466 . 8471) (COLON 8471 . 8472) (INDENT_BLOCK 8326 . 8417) (NEWLINE 8325 . 8326) (COLON 8324 . 8325) (MINUS 8303 . 8304) (GT 8304 . 8305) (INDENT_BLOCK 6832 . 8277) (NEWLINE 6831 . 6832) (COLON 6830 . 6831) (MINUS 6823 . 6824) (GT 6824 . 6825) (NAME 6807 . 6812) (COLON 6812 . 6813) (NAME 6782 . 6791) (COLON 6791 . 6792) (NAME 6735 . 6740) (COLON 6740 . 6741) (NAME 6710 . 6722) (COLON 6722 . 6723) (NAME 6685 . 6697) (COLON 6697 . 6698) (INDENT_BLOCK 6498 . 6652) (NEWLINE 6497 . 6498) (COLON 6496 . 6497) (MINUS 6489 . 6490) (GT 6490 . 6491) (NAME 6464 . 6473) (COLON 6473 . 6474) (NAME 6439 . 6451) (COLON 6451 . 6452) (NAME 6414 . 6426) (COLON 6426 . 6427) (INDENT_BLOCK 6206 . 6368) (NEWLINE 6205 . 6206) (COLON 6204 . 6205) (MINUS 6197 . 6198) (GT 6198 . 6199) (NAME 6172 . 6181) (COLON 6181 . 6182) (NAME 6147 . 6159) (COLON 6159 . 6160) (NAME 6122 . 6134) (COLON 6134 . 6135) (INDENT_BLOCK 5662 . 6082) (NEWLINE 5661 . 5662) (COLON 5660 . 5661) (MINUS 5642 . 5643) (GT 5643 . 5644) (NAME 5619 . 5629) (COLON 5629 . 5630) (INDENT_BLOCK 5353 . 5593) (NEWLINE 5352 . 5353) (COLON 5351 . 5352) (MINUS 5333 . 5334) (GT 5334 . 5335) (NAME 5310 . 5320) (COLON 5320 . 5321) (INDENT_BLOCK 5018 . 5280) (NEWLINE 5017 . 5018) (COLON 5016 . 5017) (MINUS 5004 . 5005) (GT 5005 . 5006) (NAME 4993 . 4997) (COLON 4997 . 4998) (NAME 4981 . 4986) (COLON 4986 . 4987) (INDENT_BLOCK 4344 . 4952) (NEWLINE 4343 . 4344) (COLON 4342 . 4343) (MINUS 4324 . 4325) (GT 4325 . 4326) (NAME 4313 . 4317) (COLON 4317 . 4318) (NAME 4301 . 4306) (COLON 4306 . 4307) (INDENT_BLOCK 2321 . 4276) (NEWLINE 2320 . 2321) (COLON 2319 . 2320) (MINUS 2307 . 2308) (GT 2308 . 2309) (PERIOD 2281 . 2282) (PERIOD 2274 . 2275) (NAME 2261 . 2270) (COLON 2270 . 2271) (PERIOD 2226 . 2227) (NAME 2214 . 2222) (COLON 2222 . 2223) (NAME 2193 . 2198) (COLON 2198 . 2199) (NAME 2167 . 2180) (COLON 2180 . 2181) (INDENT_BLOCK 1615 . 2142) (NEWLINE 1614 . 1615) (COLON 1613 . 1614) (MINUS 1601 . 1602) (GT 1602 . 1603) (PERIOD 1591 . 1592) (NAME 1579 . 1587) (COLON 1587 . 1588) (INDENT_BLOCK 1144 . 1541) (NEWLINE 1143 . 1144) (COLON 1142 . 1143) (MINUS 1127 . 1128) (GT 1128 . 1129) (NAME 1109 . 1114) (COLON 1114 . 1115) (INDENT_BLOCK 643 . 1085) (NEWLINE 642 . 643) (COLON 641 . 642) (DEF 573 . 576) (MINUS 634 . 635) (GT 635 . 636) (NAME 614 . 618) (COLON 618 . 619) (NAME 604 . 607) (COLON 607 . 608) (NAME 592 . 597) (COLON 597 . 598) (NAME 471 . 476) (COLON 476 . 477)))
+    (semanticdb-table "semanticdb-table"
+      :file "objects.py"
+      :fsize 2602
+      :lastmodtime '(24612 60259 555811 764000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 31])
+            ("numpy" include nil nil [33 51])
+            ("highway_env" include nil nil [53 82])
+            ("highway_env.road.road" include nil nil [83 134])
+            ("highway_env.vehicle.controller" include nil nil [135 207])
+            ("highway_env.vehicle.kinematics" include nil nil [208 268])
+            ("RegulatedRoad" type
+               (:superclasses ("Road")
+                :members 
+                  ( ("Tuple" variable nil (reparse-symbol indented_block_body) [318 351])
+                    ("int" variable nil (reparse-symbol indented_block_body) [378 385])
+                    ("float" variable nil (reparse-symbol indented_block_body) [406 416]))                  
+                :type "class")
+                nil [271 3721]))          
+      :file "regulation.py"
+      :pointmax 3721
+      :fsize 3720
+      :lastmodtime '(24612 60259 555811 764000)
+      :unmatched-syntax '((INDENT_BLOCK 2991 . 3721) (NEWLINE 2990 . 2991) (COLON 2989 . 2990) (MINUS 2982 . 2983) (GT 2983 . 2984) (NAME 2962 . 2966) (COLON 2966 . 2967) (NAME 2944 . 2951) (COLON 2951 . 2952) (NAME 2921 . 2923) (COLON 2923 . 2924) (NAME 2898 . 2900) (COLON 2900 . 2901) (INDENT_BLOCK 2364 . 2850) (NEWLINE 2363 . 2364) (COLON 2362 . 2363) (MINUS 2352 . 2353) (GT 2353 . 2354) (NAME 2339 . 2341) (COLON 2341 . 2342) (NAME 2326 . 2328) (COLON 2328 . 2329) (INDENT_BLOCK 985 . 2280) (NEWLINE 984 . 985) (COLON 983 . 984) (MINUS 976 . 977) (GT 977 . 978) (INDENT_BLOCK 778 . 942) (NEWLINE 777 . 778) (COLON 776 . 777) (MINUS 769 . 770) (GT 770 . 771) (NAME 758 . 760) (COLON 760 . 761) (INDENT_BLOCK 633 . 738) (NEWLINE 632 . 633) (COLON 631 . 632) (DEF 422 . 425) (MINUS 624 . 625) (GT 625 . 626) (NAME 594 . 608) (COLON 608 . 609) (PERIOD 573 . 574) (PERIOD 566 . 567) (NAME 553 . 562) (COLON 562 . 563) (ASSIGN 528 . 529) (BRACK_BLOCK 517 . 527) (NAME 502 . 511) (COLON 511 . 512) (ASSIGN 494 . 495) (BRACK_BLOCK 484 . 493) (NAME 470 . 478) (COLON 478 . 479) (NAME 441 . 448) (COLON 448 . 449) (NAME 390 . 404) (COLON 404 . 405) (NAME 356 . 376) (COLON 376 . 377) (NAME 302 . 316) (COLON 316 . 317))))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!env!highway_env!road!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

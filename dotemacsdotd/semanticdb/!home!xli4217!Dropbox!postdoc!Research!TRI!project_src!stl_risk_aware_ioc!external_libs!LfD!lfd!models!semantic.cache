@@ -1,0 +1,83 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("torch" include nil nil [36 48])
+            ("typing" include nil nil [49 79])
+            ("lfd.api.parameter" include nil nil [81 138])
+            ("lfd.api.trajectory" include nil nil [139 200])
+            ("ParametricModel" type
+               (:documentation "A parametric model capturing a model with structure.  Essentially, a thin wrapper for an
+    externally-maintained set of parameters, and an arbitrary pytorch module.
+
+    The structure imposes a mapping
+
+        <LfdTrajectory, LfdParameters> --> torch.Tensor (model output)
+
+    where LfdTrajectory is the input trajectory, LfdParameters are the parameters of the model, and Output is the
+    model's output, for instance cost terms in a trajectory planning problem.
+
+    The `grad` and `hessian` methods are required for LO-IOC.  Note that these must be analytical in the input
+    trajectories (i.e. not populated using torch's autograd), since we use them to build a computation graph
+    that can be differentiated with respect to the parameters.
+    "
+                :superclasses ("torch.nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Args:
+            params_init (LfdParameters): A Parameters object, list of floats, or list of torch.Tensors containing
+                any parameters to train.
+            model (torch.nn.Module): A torch.nn.module that overrides the `forward` method with a specific
+                structure, and must have a LfdTrajectory of model inputs and a LfdParameters structure, and
+                returning a set of features as a torch.Tensor.
+            fix_random_seed (bool): (Optional) If True, fixes the random seed for deterministic results.  
+                Default: True.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1255 1855])
+                            ("super" code nil (reparse-symbol indented_block_body) [1864 1903])
+                            ("if" code nil (reparse-symbol indented_block_body) [1913 1996])
+                            ("LfdParameters" code nil (reparse-symbol indented_block_body) [2078 2104])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2113 2131])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2140 2170]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1038 1042])
+                            ("Module" variable nil (reparse-symbol function_parameters) [1162 1168])
+                            ("bool" variable nil (reparse-symbol function_parameters) [1227 1231]))                          
+                        :documentation "
+        Args:
+            params_init (LfdParameters): A Parameters object, list of floats, or list of torch.Tensors containing
+                any parameters to train.
+            model (torch.nn.Module): A torch.nn.module that overrides the `forward` method with a specific
+                structure, and must have a LfdTrajectory of model inputs and a LfdParameters structure, and
+                returning a set of features as a torch.Tensor.
+            fix_random_seed (bool): (Optional) If True, fixes the random seed for deterministic results.  
+                Default: True.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1016 2171])
+                    ("params_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2192 2196]))                          )
+                        (reparse-symbol indented_block_body) [2176 2231]))                  
+                :type "class")
+                nil [203 2955]))          
+      :file "parametric_model.py"
+      :pointmax 2955
+      :fsize 2954
+      :lastmodtime '(24724 16334 428201 297000)
+      :unmatched-syntax '((INDENT_BLOCK 2778 . 2955) (NEWLINE 2777 . 2778) (COLON 2776 . 2777) (MINUS 2761 . 2762) (GT 2762 . 2763) (BRACK_BLOCK 2727 . 2759) (NAME 2714 . 2720) (COLON 2720 . 2721) (INDENT_BLOCK 2519 . 2691) (NEWLINE 2518 . 2519) (COLON 2517 . 2518) (MINUS 2502 . 2503) (GT 2503 . 2504) (BRACK_BLOCK 2468 . 2500) (NAME 2455 . 2461) (COLON 2461 . 2462) (INDENT_BLOCK 2318 . 2435) (NEWLINE 2317 . 2318) (COLON 2316 . 2317) (DEF 2236 . 2239) (MINUS 2301 . 2302) (GT 2302 . 2303) (BRACK_BLOCK 2267 . 2299) (NAME 2254 . 2260) (COLON 2260 . 2261) (NAME 2005 . 2009) (IF 2031 . 2033) (ELSE 2073 . 2077) (COLON 1225 . 1226) (COMMA 1200 . 1201) (BRACK_BLOCK 1195 . 1200) (NAME 1178 . 1189) (COLON 1189 . 1190) (PERIOD 1161 . 1162) (PERIOD 1158 . 1159) (COLON 1151 . 1152) (COMMA 1136 . 1137) (BRACK_BLOCK 1070 . 1136) (NAME 1052 . 1063) (COLON 1063 . 1064)))
+    (semanticdb-table "semanticdb-table"
+      :file "black_box_parametric_model.py"
+      :fsize 1946
+      :lastmodtime '(24724 16334 428201 297000)))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!stl_risk_aware_ioc!external_libs!LfD!lfd!models!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

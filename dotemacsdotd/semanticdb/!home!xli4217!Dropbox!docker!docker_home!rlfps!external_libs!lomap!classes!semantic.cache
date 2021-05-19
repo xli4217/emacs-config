@@ -1,0 +1,742 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("networkx" include nil nil [767 788])
+            ("networkx.drawing.nx_pydot" include nil nil [789 846])
+            ("pydot" include nil nil [880 892])
+            ("os" include nil nil [893 902])
+            ("Model" type
+               (:documentation "
+    Base class for various system models.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Empty LOMAP Model object constructor.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1043 1104])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1113 1131])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1140 1174])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1183 1201])
+                            ("if" code nil (reparse-symbol indented_block_body) [1210 1475])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1483 1507])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1516 1534]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1001 1005])
+                            ("directed" variable nil (reparse-symbol function_parameters) [1007 1015])
+                            ("multi" variable nil (reparse-symbol function_parameters) [1022 1027]))                          
+                        :documentation "
+        Empty LOMAP Model object constructor.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [988 1535])
+                    ("nodes_w_prop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1557 1561])
+                            ("propset" variable nil (reparse-symbol function_parameters) [1563 1570]))                          
+                        :documentation "
+        Returns the set of nodes with given properties.
+        ")
+                        (reparse-symbol indented_block_body) [1540 1849])
+                    ("size" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1863 1867]))                          )
+                        (reparse-symbol indented_block_body) [1854 1938])
+                    ("visualize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1966 1970])
+                            ("edgelabel" variable nil (reparse-symbol function_parameters) [1990 1999])
+                            ("draw" variable nil (reparse-symbol function_parameters) [2024 2028])
+                            ("save_path" variable nil (reparse-symbol function_parameters) [2056 2065])
+                            ("dot_file_name" variable nil (reparse-symbol function_parameters) [2090 2103])
+                            ("svg_file_name" variable nil (reparse-symbol function_parameters) [2127 2140]))                          
+                        :documentation "
+        Visualizes a LOMAP system model
+        ")
+                        (reparse-symbol indented_block_body) [1952 3206]))                  
+                :type "class")
+                nil [904 3206]))          
+      :file "model.py"
+      :pointmax 3206
+      :fsize 3205
+      :lastmodtime '(23570 44276 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("re" include nil nil [767 776])
+            ("subprocess" include nil nil [777 800])
+            ("shlex" include nil nil [801 813])
+            ("operator" include nil nil [814 835])
+            ("logging" include nil nil [836 850])
+            ("Model" include nil nil [864 876])
+            ("functools" include nil nil [877 905])
+            ("logger" variable nil nil [931 967])
+            ("ltl2ba" variable nil nil [1011 1051])
+            ("Buchi" type
+               (:documentation "
+    Base class for non-deterministic Buchi automata.
+    "
+                :superclasses ("Model")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        LOMAP Buchi Automaton object constructor
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1219 1283])
+                            ("Model" code nil (reparse-symbol indented_block_body) [1292 1344])
+                            ("if" code nil (reparse-symbol indented_block_body) [1362 1704])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1889 1940]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1165 1169])
+                            ("props" variable nil (reparse-symbol function_parameters) [1171 1176])
+                            ("directed" variable nil (reparse-symbol function_parameters) [1183 1191])
+                            ("multi" variable nil (reparse-symbol function_parameters) [1198 1203]))                          
+                        :documentation "
+        LOMAP Buchi Automaton object constructor
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1152 1941])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1963 1967]))                          )
+                        (reparse-symbol indented_block_body) [1950 2440])
+                    ("clone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2459 2463]))                          )
+                        (reparse-symbol indented_block_body) [2449 2679])
+                    ("from_formula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2701 2705])
+                            ("formula" variable nil (reparse-symbol function_parameters) [2707 2714]))                          
+                        :documentation "
+        Creates a Buchi automaton in-place from the given LTL formula.
+        ")
+                        (reparse-symbol indented_block_body) [2684 5457])
+                    ("get_guard_bitmap" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5483 5487])
+                            ("guard" variable nil (reparse-symbol function_parameters) [5489 5494]))                          
+                        :documentation "
+        Creates the bitmaps from guard string. The guard is a boolean expression
+        over the atomic propositions.
+        ")
+                        (reparse-symbol indented_block_body) [5462 6326])
+                    ("symbols_w_prop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6350 6354])
+                            ("prop" variable nil (reparse-symbol function_parameters) [6356 6360]))                          
+                        :documentation "
+        Returns symbols from the automaton's alphabet which contain the given
+        atomic proposition.
+        ")
+                        (reparse-symbol indented_block_body) [6331 6596])
+                    ("symbols_wo_prop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6621 6625])
+                            ("prop" variable nil (reparse-symbol function_parameters) [6627 6631]))                          
+                        :documentation "
+        Returns symbols from the automaton's alphabet which does not contain the
+        given atomic proposition.
+        ")
+                        (reparse-symbol indented_block_body) [6601 6840])
+                    ("bitmap_of_props" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6866 6870])
+                            ("props" variable nil (reparse-symbol function_parameters) [6872 6877]))                          
+                        :documentation "
+        Returns bitmap corresponding the set of atomic propositions.
+        ")
+                        (reparse-symbol indented_block_body) [6846 7045])
+                    ("next_states" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7066 7070])
+                            ("q" variable nil (reparse-symbol function_parameters) [7072 7073])
+                            ("props" variable nil (reparse-symbol function_parameters) [7075 7080]))                          
+                        :documentation "
+        Returns the next states of state q given input proposition set props. 
+        ")
+                        (reparse-symbol indented_block_body) [7050 7476])
+                    ("determinize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7497 7501]))                          )
+                        (reparse-symbol indented_block_body) [7481 9576]))                  
+                :type "class")
+                nil [1054 9576]))          
+      :file "buchi.py"
+      :pointmax 9576
+      :fsize 9575
+      :lastmodtime '(23216 29672 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 3035 . 3112) (NEWLINE 3034 . 3035) (COLON 3033 . 3034) (TRY 2820 . 2823) (AS 3028 . 3030) (NAME 1449 . 1453) (IF 1474 . 1476) (ELSE 1495 . 1499) (FROM 852 . 856) (PERIOD 857 . 858)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("re" include nil nil [767 776])
+            ("itertools" include nil nil [777 799])
+            ("networkx" include nil nil [801 822])
+            ("Model" include nil nil [836 848])
+            ("FileError" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [883 887]))                  
+                :type "class")
+                nil [851 888])
+            ("Ts" type
+               (:documentation "
+    Base class for (weighted) transition systems.
+    "
+                :superclasses ("Model")
+                :members 
+                  ( ("read_from_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [997 1001])
+                            ("path" variable nil (reparse-symbol function_parameters) [1003 1007]))                          
+                        :documentation "
+        Reads a LOMAP Ts object from a given file
+        ")
+                        (reparse-symbol indented_block_body) [978 4604])
+                    ("controls_from_run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4635 4639])
+                            ("run" variable nil (reparse-symbol function_parameters) [4641 4644]))                          
+                        :documentation "
+        Returns controls corresponding to a run.
+        If there are multiple controls for an edge, returns the first one.
+        ")
+                        (reparse-symbol indented_block_body) [4613 5065])
+                    ("next_states_of_wts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5097 5101])
+                            ("q" variable nil (reparse-symbol function_parameters) [5103 5104])
+                            ("traveling_states" variable nil (reparse-symbol function_parameters) [5106 5122]))                          
+                        :documentation "
+        Returns a tuple (next_state, remaining_time, control) for each outgoing
+        transition from q in a tuple.
+        
+        Parameters:
+        -----------
+        q : Node label or a tuple
+            A tuple stands for traveling states of the form (q,q',x), i.e.
+            robot left q x time units ago and going towards q'.
+        
+        Notes:
+        ------
+        Only works for a regular weighted deterministic transition system
+        (not a nondet or team ts).
+        ")
+                        (reparse-symbol indented_block_body) [5074 6400])
+                    ("visualize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6419 6423]))                          
+                        :documentation "
+        Visualizes a LOMAP system model
+        ")
+                        (reparse-symbol indented_block_body) [6405 6536]))                  
+                :type "class")
+                nil [890 6536]))          
+      :file "ts.py"
+      :pointmax 6536
+      :fsize 6535
+      :lastmodtime '(23216 29672 0 0)
+      :unmatched-syntax '((FROM 824 . 828) (PERIOD 829 . 830)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("time" include nil nil [767 778])
+            ("logging" include nil nil [779 793])
+            ("__author__" variable nil nil [795 839])
+            ("logger" variable nil nil [864 900])
+            ("Timer" type
+               (:documentation "
+    LOMAP timer class.
+
+    Examples:
+    ---------
+    >>> with lomap.Timer():
+    >>>     time.sleep(0.1)
+    Operation took 100 ms.
+
+    >>> with lomap.Timer('Taking product'):
+    >>>     time.sleep(0.1)
+    Taking product took 100 ms.
+    "
+                :members 
+                  ( ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1232 1236]))                          )
+                        (reparse-symbol indented_block_body) [1218 1321])
+                    ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [1367 1479]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1338 1342])
+                            ("op_name" variable nil (reparse-symbol function_parameters) [1344 1351]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1325 1479])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1496 1500])
+                            ("args" variable nil (reparse-symbol function_parameters) [1502 1507]))                          )
+                        (reparse-symbol indented_block_body) [1483 1636]))                  
+                :type "class")
+                nil [945 1636]))          
+      :file "timer.py"
+      :pointmax 1636
+      :fsize 1635
+      :lastmodtime '(23216 29672 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("networkx" include nil nil [767 788])
+            ("re" include nil nil [789 798])
+            ("itertools" include nil nil [799 815])
+            ("Model" include nil nil [828 840])
+            ("copy" include nil nil [841 852])
+            ("FileError" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [883 887]))                  
+                :type "class")
+                nil [854 888])
+            ("Markov" type
+               (:documentation "
+	Base class for Markov models (MCs, MDPs, etc.)
+	MCs are MDPs with a single default action.
+	"
+                :superclasses ("Model")
+                :members 
+                  ( ("mdp_from_det_ts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1035 1039])
+                            ("ts" variable nil (reparse-symbol function_parameters) [1041 1043]))                          )
+                        (reparse-symbol indented_block_body) [1015 1349])
+                    ("read_from_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1371 1375])
+                            ("path" variable nil (reparse-symbol function_parameters) [1377 1381]))                          
+                        :documentation "
+		Reads a LOMAP Markov object from a given file
+		")
+                        (reparse-symbol indented_block_body) [1352 3986])
+                    ("controls_from_run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4011 4015])
+                            ("run" variable nil (reparse-symbol function_parameters) [4017 4020]))                          
+                        :documentation "
+		Returns controls corresponding to a run.
+		If there are multiple controls for an edge, returns the first one.
+		")
+                        (reparse-symbol indented_block_body) [3989 4369])
+                    ("next_states_of_markov" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4398 4402])
+                            ("q" variable nil (reparse-symbol function_parameters) [4404 4405])
+                            ("traveling_states" variable nil (reparse-symbol function_parameters) [4407 4423]))                          
+                        :documentation "
+		Returns a tuple (next_state, remaining_time, control) for each outgoing transition from q in a tuple.
+		
+		Parameters:
+		-----------
+		q : Node label or a tuple
+		    A tuple stands for traveling states of the form (q,q',x), i.e. robot left q x time units
+		    ago and going towards q'.
+		
+		Notes:
+		------
+		Only works for a regular weighted deterministic transition system (not a nondet or team ts).
+		")
+                        (reparse-symbol indented_block_body) [4372 5592])
+                    ("iter_action_edges" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5616 5620])
+                            ("s" variable nil (reparse-symbol function_parameters) [5622 5623])
+                            ("a" variable nil (reparse-symbol function_parameters) [5625 5626])
+                            ("keys" variable nil (reparse-symbol function_parameters) [5628 5632]))                          )
+                        (reparse-symbol indented_block_body) [5594 5796])
+                    ("available_controls" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5822 5826])
+                            ("s" variable nil (reparse-symbol function_parameters) [5828 5829]))                          )
+                        (reparse-symbol indented_block_body) [5799 5945])
+                    ("mc_from_mdp_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5970 5974])
+                            ("mdp" variable nil (reparse-symbol function_parameters) [5976 5979])
+                            ("policy" variable nil (reparse-symbol function_parameters) [5981 5987]))                          )
+                        (reparse-symbol indented_block_body) [5947 6554])
+                    ("visualize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6570 6574]))                          
+                        :documentation "
+		Visualizes a LOMAP system model
+		")
+                        (reparse-symbol indented_block_body) [6556 6660]))                  
+                :type "class")
+                nil [889 6660]))          
+      :file "markov.py"
+      :pointmax 6660
+      :fsize 6659
+      :lastmodtime '(23216 29672 0 0)
+      :unmatched-syntax '((FROM 816 . 820) (PERIOD 821 . 822)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"LOMAP interval class.\"\"\"" code nil nil [767 794])
+            ("logging" include nil nil [796 810])
+            ("logger" variable nil nil [835 871])
+            ("Interval" type
+               (:documentation "
+	LOMAP interval class.
+	Supports addition, subtraction, negation, scalar multiplication,
+	scalar division, intersection and difference.
+	"
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+		Creates and initializes a new Interval object.
+
+		Examples:
+		---------
+		>>> Interval(2, 3, True, True)
+		[2.000, 3.000], length: 1.000, empty: False
+		>>> Interval(1, 2, False, True)
+		(1.000, 2.000], length: 1.000, empty: False
+		>>> Interval(1, 2, False, False)
+		(1.000, 2.000), length: 1.000, empty: False
+		>>> Interval(3, 4, True, False) 
+		[3.000, 4.000), length: 1.000, empty: False
+		>>> Interval(4, 3, True, True)
+		[4.000, 3.000], length: 0.000, empty: True
+		\"\"\"" code nil (reparse-symbol indented_block_body) [1105 1587])
+                            ("if" code nil (reparse-symbol indented_block_body) [1590 1731])
+                            ("if" code nil (reparse-symbol indented_block_body) [1733 1868])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1870 1888])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1891 1905])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1908 1940])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1943 1971]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1058 1062])
+                            ("start" variable nil (reparse-symbol function_parameters) [1064 1069])
+                            ("end" variable nil (reparse-symbol function_parameters) [1071 1074])
+                            ("closed_start" variable nil (reparse-symbol function_parameters) [1076 1088])
+                            ("closed_end" variable nil (reparse-symbol function_parameters) [1090 1100]))                          
+                        :documentation "
+		Creates and initializes a new Interval object.
+
+		Examples:
+		---------
+		>>> Interval(2, 3, True, True)
+		[2.000, 3.000], length: 1.000, empty: False
+		>>> Interval(1, 2, False, True)
+		(1.000, 2.000], length: 1.000, empty: False
+		>>> Interval(1, 2, False, False)
+		(1.000, 2.000), length: 1.000, empty: False
+		>>> Interval(3, 4, True, False) 
+		[3.000, 4.000), length: 1.000, empty: False
+		>>> Interval(4, 3, True, True)
+		[4.000, 3.000], length: 0.000, empty: True
+		"
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1045 1972])
+                    ("__setattr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1990 1994])
+                            ("name" variable nil (reparse-symbol function_parameters) [1996 2000])
+                            ("value" variable nil (reparse-symbol function_parameters) [2002 2007]))                          
+                        :documentation "
+		Makes Interval objects immutable
+		")
+                        (reparse-symbol indented_block_body) [1974 2231])
+                    ("__delattr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2249 2253])
+                            ("name" variable nil (reparse-symbol function_parameters) [2255 2259]))                          
+                        :documentation "
+		Makes Interval objects immutable
+		")
+                        (reparse-symbol indented_block_body) [2233 2403])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2418 2422]))                          
+                        :documentation "
+		Returns a string representation of an interval object.
+		")
+                        (reparse-symbol indented_block_body) [2405 2746])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2759 2763])
+                            ("other" variable nil (reparse-symbol function_parameters) [2765 2770]))                          
+                        :documentation "
+		Returns True if two interval objects are equal.
+		
+		Examples:
+		---------
+		>>> Interval(1, 2, False, False) == Interval(1, 2, False, False)
+		True
+		")
+                        (reparse-symbol indented_block_body) [2748 3152])
+                    ("__ne__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3165 3169])
+                            ("other" variable nil (reparse-symbol function_parameters) [3171 3176]))                          
+                        :documentation "
+		Returns True if two interval objects are not equal.
+
+		Examples:
+		>>> Interval(0, 0, True, True) != Interval(0, 0, True, False)
+		True
+		")
+                        (reparse-symbol indented_block_body) [3154 3376])
+                    ("__neg__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3390 3394]))                          
+                        :documentation "
+		Unary negation operator.
+
+		Examples:
+		---------
+		>>> -Interval(1, 2, True, False) == Interval(-2, -1, False, True)
+		True
+		>>> Interval(1, 2, True, False).length() == 1
+		True
+		>>> (-Interval(1, 2, True, False)).length() == 1
+		True
+		")
+                        (reparse-symbol indented_block_body) [3378 3727])
+                    ("__add__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3741 3745])
+                            ("other" variable nil (reparse-symbol function_parameters) [3747 3752]))                          
+                        :documentation "
+		Binary addition operator.
+		
+		Examples:
+		---------
+		>>> Interval(1, 2, True, True) + Interval(1, 2, True, True)
+		[2.000, 4.000], length: 2.000, empty: False
+		")
+                        (reparse-symbol indented_block_body) [3729 4228])
+                    ("__sub__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4242 4246])
+                            ("other" variable nil (reparse-symbol function_parameters) [4248 4253]))                          
+                        :documentation "
+		Binary subtraction operator.
+
+		Examples:
+		---------
+		>>> Interval(3, 4, True, True) - Interval(1, 2, False, False)
+		(1.000, 3.000), length: 2.000, empty: False
+		")
+                        (reparse-symbol indented_block_body) [4230 4464])
+                    ("__or__" variable nil (reparse-symbol indented_block_body) [4466 4482])
+                    ("__and__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4497 4501])
+                            ("other" variable nil (reparse-symbol function_parameters) [4503 4508]))                          
+                        :documentation "
+		Returns the intersecting interval of two interval objects.
+		Returns None if they are not intersecting.
+		
+		Examples:
+		---------
+		>>> Interval(1, 2, True, False) & Interval(1.5, 2.5, False, True)
+		(1.500, 2.000), length: 0.500, empty: False
+		>>> Interval(1, 2, True, True) & Interval(3, 4, True, False) is None
+		True
+		")
+                        (reparse-symbol indented_block_body) [4485 6170])
+                    ("intersection" variable nil (reparse-symbol indented_block_body) [6172 6194])
+                    ("difference" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6212 6216])
+                            ("other" variable nil (reparse-symbol function_parameters) [6218 6223]))                          
+                        :documentation "
+		Returns the set difference self \\ other.
+		Return value is a tuple of interval objects or None.
+
+		Examples:
+		---------
+		>>> Interval(1, 2, False, True).difference(Interval(1.5, 5, False, True))
+		((1.000, 1.500], length: 0.500, empty: False,)
+		>>> Interval(0, 10, True, True).difference(Interval(2, 6, False, True))
+		([0.000, 2.000], length: 2.000, empty: False, (6.000, 10.000], length: 4.000, empty: False)
+		>>> Interval(3, 5, True, True).difference(Interval(3, 5, False, True))
+		([3.000, 3.000], length: 0.000, empty: False,)
+		>>> Interval(3, 5, True, False).difference(Interval(9, 10, True, True))
+		([3.000, 5.000), length: 2.000, empty: False,)
+		>>> Interval(1, 3, True, False).difference(Interval(1, 3, True, False)) == ()
+		True
+		")
+                        (reparse-symbol indented_block_body) [6197 7537])
+                    ("__mul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7551 7555])
+                            ("other" variable nil (reparse-symbol function_parameters) [7557 7562]))                          
+                        :documentation "
+		Scalar multiplication.
+
+		Examples:
+		---------
+		>>> 2.1 * Interval(3, 5, True, False)
+		[6.300, 10.500), length: 4.200, empty: False
+		")
+                        (reparse-symbol indented_block_body) [7539 7948])
+                    ("__rmul__" variable nil (reparse-symbol indented_block_body) [7950 7968])
+                    ("__div__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7983 7987])
+                            ("other" variable nil (reparse-symbol function_parameters) [7989 7994]))                          
+                        :documentation "
+		Scalar division.
+
+		Examples:
+		---------
+		>>> Interval(2, 4, True, True) / 2
+		[1.000, 2.000], length: 1.000, empty: False
+		")
+                        (reparse-symbol indented_block_body) [7971 8175])
+                    ("__rdiv__" variable nil (reparse-symbol indented_block_body) [8178 8196])
+                    ("length" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8210 8214]))                          
+                        :documentation "
+		Returns the length of the interval, or 0 if interval is empty.
+
+		Examples:
+		---------
+		>>> Interval(1, 4, True, False).length()
+		3
+		>>> Interval(3, 1, True, True).length()
+		0
+		")
+                        (reparse-symbol indented_block_body) [8199 8451])
+                    ("__cmp__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8465 8469])
+                            ("other" variable nil (reparse-symbol function_parameters) [8471 8476]))                          )
+                        (reparse-symbol indented_block_body) [8453 8744])
+                    ("__bool__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8759 8763]))                          
+                        :documentation "
+		Returns True if the interval is non-empty.
+		Note that an interval can be 0-length but still be non-empty.
+
+		Examples:
+		---------
+		>>> Interval(3, 1, True, True).__nonzero__()
+		False
+		>>> Interval(1, 2, True, True).__nonzero__()
+		True
+		>>> Interval(5, 5, True, True).length()
+		0
+		>>> Interval(5, 5, True, True).__nonzero__()
+		True
+		>>> Interval(5, 5, True, False).__nonzero__()
+		False
+		")
+                        (reparse-symbol indented_block_body) [8746 9407])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9422 9426]))                          
+                        :documentation "
+		Custom hash function for an Interval object.
+		")
+                        (reparse-symbol indented_block_body) [9409 9562])
+                    ("closure" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9576 9580]))                          
+                        :documentation "
+		Returns the closure of an interval which is obtained by including its endpoints.
+
+		Examples:
+		---------
+		>>> Interval(1, 2, False, False).closure()
+		[1.000, 2.000], length: 1.000, empty: False
+		>>> Interval(3, 1, False, False).closure()
+		[3.000, 1.000], length: 0.000, empty: True
+		")
+                        (reparse-symbol indented_block_body) [9564 9936])
+                    ("interior" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9951 9955]))                          
+                        :documentation "
+		Returns the interior of an interval which is obtained by excluding its endpoints.
+
+		Examples:
+		---------
+		>>> Interval(1, 2, True, True).interior()
+		(1.000, 2.000), length: 1.000, empty: False
+		>>> Interval(3, 1, True, True).interior()
+		(3.000, 1.000), length: 0.000, empty: True
+		")
+                        (reparse-symbol indented_block_body) [9938 10312]))                  
+                :type "class")
+                nil [873 10312])
+            ("if" code nil nil [10323 10391]))          
+      :file "interval.py"
+      :pointmax 10391
+      :fsize 10390
+      :lastmodtime '(23216 29672 0 0)
+      :unmatched-syntax '((NAME 5660 . 5674) (IF 5693 . 5695) (ELSE 5716 . 5720) (NAME 5323 . 5339) (IF 5360 . 5362) (ELSE 5387 . 5391) (RETURN 3331 . 3337) (IF 3344 . 3346) (ELSE 3366 . 3370) (RETURN 2946 . 2952) (IF 2958 . 2960) (ELSE 3115 . 3119) (NAME 5660 . 5674) (IF 5693 . 5695) (ELSE 5716 . 5720) (NAME 5323 . 5339) (IF 5360 . 5362) (ELSE 5387 . 5391) (RETURN 3331 . 3337) (IF 3344 . 3346) (ELSE 3366 . 3370) (RETURN 2946 . 2952) (IF 2958 . 2960) (ELSE 3115 . 3119))))
+  :file "!home!xli4217!Dropbox!docker!docker_home!rlfps!external_libs!lomap!classes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

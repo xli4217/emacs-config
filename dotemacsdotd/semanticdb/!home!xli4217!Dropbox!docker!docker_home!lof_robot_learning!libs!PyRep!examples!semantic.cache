@@ -1,0 +1,246 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"
+An example of how one might use PyRep to create their RL environments.
+In this case, the Franka Panda must reach a randomly placed target.
+This script contains examples of:
+    - RL environment example.
+    - Scene manipulation.
+    - Environment resets.
+    - Setting joint properties (control loop disabled, motor locked at 0 vel)
+\"\"\"" code nil nil [1 341])
+            ("os.path" include nil nil [342 384])
+            ("pyrep" include nil nil [385 408])
+            ("pyrep.robots.arms.panda" include nil nil [409 450])
+            ("pyrep.objects.shape" include nil nil [451 488])
+            ("numpy" include nil nil [489 507])
+            ("SCENE_FILE" variable nil nil [509 612])
+            ("POS_MIN, POS_MAX" code nil nil [613 665])
+            ("EPISODES" variable nil nil [666 678])
+            ("EPISODE_LENGTH" variable nil nil [679 699])
+            ("ReacherEnv" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [761 778])
+                            ("self" code nil (reparse-symbol indented_block_body) [787 829])
+                            ("self" code nil (reparse-symbol indented_block_body) [838 853])
+                            ("self" variable nil (reparse-symbol indented_block_body) [862 882])
+                            ("self" code nil (reparse-symbol indented_block_body) [891 933])
+                            ("self" code nil (reparse-symbol indented_block_body) [942 992])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1001 1030])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1039 1079])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1088 1151]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [746 750]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [733 1152])
+                    ("_get_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1172 1176]))                          )
+                        (reparse-symbol indented_block_body) [1157 1450])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1465 1469]))                          )
+                        (reparse-symbol indented_block_body) [1455 1744])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1758 1762])
+                            ("action" variable nil (reparse-symbol function_parameters) [1764 1770]))                          )
+                        (reparse-symbol indented_block_body) [1749 2174])
+                    ("shutdown" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2192 2196]))                          )
+                        (reparse-symbol indented_block_body) [2179 2249]))                  
+                :type "class")
+                nil [702 2249])
+            ("Agent" type
+               (:superclasses ("object")
+                :members 
+                  ( ("act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2285 2289])
+                            ("state" variable nil (reparse-symbol function_parameters) [2291 2296]))                          )
+                        (reparse-symbol indented_block_body) [2277 2378])
+                    ("learn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2393 2397])
+                            ("replay_buffer" variable nil (reparse-symbol function_parameters) [2399 2412]))                          )
+                        (reparse-symbol indented_block_body) [2383 2454]))                  
+                :type "class")
+                nil [2251 2454])
+            ("env" variable nil nil [2456 2474])
+            ("agent" variable nil nil [2475 2490])
+            ("replay_buffer" variable nil nil [2491 2509])
+            ("for" code nil nil [2511 2843])
+            ("print" code nil nil [2844 2858])
+            ("env" code nil nil [2859 2873]))          
+      :file "example_reinforcement_learning_env.py"
+      :pointmax 2874
+      :fsize 2873
+      :lastmodtime '(24574 23022 218885 469000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"
+A Franka Panda reaches for 10 randomly places targets.
+This script contains examples of:
+    - Linear (IK) paths.
+    - Scene manipulation (creating an object and moving it).
+\"\"\"" code nil nil [1 183])
+            ("os.path" include nil nil [184 226])
+            ("pyrep" include nil nil [227 250])
+            ("pyrep.robots.arms.panda" include nil nil [251 292])
+            ("pyrep.objects.shape" include nil nil [293 330])
+            ("pyrep.const" include nil nil [331 369])
+            ("pyrep.errors" include nil nil [370 417])
+            ("numpy" include nil nil [418 436])
+            ("math" include nil nil [437 448])
+            ("LOOPS" variable nil nil [450 460])
+            ("SCENE_FILE" variable nil nil [461 538])
+            ("pr" variable nil nil [539 551])
+            ("pr" code nil nil [552 589])
+            ("pr" code nil nil [590 600])
+            ("agent" variable nil nil [601 616])
+            ("target" variable nil nil [697 892])
+            ("position_min, position_max" code nil nil [894 956])
+            ("starting_joint_positions" variable nil nil [958 1012])
+            ("for" code nil nil [1014 1744])
+            ("pr" code nil nil [1745 1754])
+            ("pr" code nil nil [1755 1768]))          
+      :file "example_panda_reach_target.py"
+      :pointmax 1769
+      :fsize 1768
+      :lastmodtime '(24599 9130 581068 251000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"
+A baxter picks up a cup with its left arm and then passes it to its right arm.
+This script contains examples of:
+    - Path planning (linear and non-linear).
+    - Using multiple arms.
+    - Using a gripper.
+\"\"\"" code nil nil [1 216])
+            ("os.path" include nil nil [217 259])
+            ("pyrep" include nil nil [260 283])
+            ("pyrep.robots.arms.baxter" include nil nil [284 344])
+            ("pyrep.robots.end_effectors.baxter_gripper" include nil nil [345 412])
+            ("pyrep.objects.dummy" include nil nil [413 450])
+            ("pyrep.objects.shape" include nil nil [451 488])
+            ("SCENE_FILE" variable nil nil [490 569])
+            ("pr" variable nil nil [570 582])
+            ("pr" code nil nil [584 621])
+            ("pr" code nil nil [622 632])
+            ("baxter_left" variable nil nil [634 660])
+            ("baxter_right" variable nil nil [661 689])
+            ("baxter_gripper_left" variable nil nil [690 728])
+            ("baxter_gripper_right" variable nil nil [729 768])
+            ("cup" variable nil nil [770 788])
+            ("waypoints" variable nil nil [789 844])
+            ("print" code nil nil [846 892])
+            ("path" variable nil nil [893 1028])
+            ("path" code nil nil [1029 1045])
+            ("print" code nil nil [1084 1111])
+            ("done" variable nil nil [1112 1124])
+            ("while" code nil nil [1125 1178])
+            ("path" code nil nil [1178 1204])
+            ("print" code nil nil [1206 1246])
+            ("path" variable nil nil [1247 1382])
+            ("print" code nil nil [1383 1410])
+            ("done" variable nil nil [1411 1423])
+            ("while" code nil nil [1424 1477])
+            ("print" code nil nil [1478 1511])
+            ("while" code nil nil [1512 1575])
+            ("baxter_gripper_left" code nil nil [1575 1605])
+            ("print" code nil nil [1607 1645])
+            ("path" variable nil nil [1646 1833])
+            ("print" code nil nil [1834 1861])
+            ("done" variable nil nil [1862 1874])
+            ("while" code nil nil [1875 1928])
+            ("print" code nil nil [1929 1976])
+            ("path" variable nil nil [1977 2114])
+            ("print" code nil nil [2115 2142])
+            ("done" variable nil nil [2143 2155])
+            ("while" code nil nil [2156 2209])
+            ("print" code nil nil [2210 2250])
+            ("path" variable nil nil [2251 2388])
+            ("print" code nil nil [2389 2416])
+            ("done" variable nil nil [2417 2429])
+            ("while" code nil nil [2430 2483])
+            ("print" code nil nil [2484 2518])
+            ("while" code nil nil [2519 2583])
+            ("print" code nil nil [2584 2617])
+            ("while" code nil nil [2618 2681])
+            ("baxter_gripper_left" code nil nil [2729 2758])
+            ("baxter_gripper_right" code nil nil [2759 2790])
+            ("pr" code nil nil [2791 2800])
+            ("print" code nil nil [2802 2858])
+            ("path_l" variable nil nil [2859 2998])
+            ("print" code nil nil [3000 3057])
+            ("path_r" variable nil nil [3058 3199])
+            ("print" code nil nil [3201 3241])
+            ("done_l" variable nil nil [3242 3265])
+            ("while" code nil nil [3266 3412])
+            ("print" code nil nil [3413 3430])
+            ("input" code nil nil [3431 3465])
+            ("pr" code nil nil [3466 3475])
+            ("pr" code nil nil [3476 3489]))          
+      :file "example_baxter_pick_and_pass.py"
+      :pointmax 3490
+      :fsize 3489
+      :lastmodtime '(24574 23022 218885 469000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"
+A Franka Panda moves using delta end effector pose control.
+This script contains examples of:
+    - IK calculations.
+    - Joint movement by setting joint target positions.
+\"\"\"" code nil nil [1 181])
+            ("os.path" include nil nil [182 224])
+            ("pyrep" include nil nil [225 248])
+            ("pyrep.robots.arms.panda" include nil nil [249 290])
+            ("SCENE_FILE" variable nil nil [292 369])
+            ("DELTA" variable nil nil [370 382])
+            ("pr" variable nil nil [383 395])
+            ("pr" code nil nil [396 433])
+            ("pr" code nil nil [434 444])
+            ("agent" variable nil nil [445 460])
+            ("starting_joint_positions" variable nil nil [462 516])
+            ("pos, quat" code nil nil [517 593])
+            ("move" function (:arguments 
+              ( ("index" variable nil (reparse-symbol function_parameters) [605 610])
+                ("delta" variable nil (reparse-symbol function_parameters) [612 617]))              ) nil [596 773])
+            ("" code nil nil [775 811])
+            ("" code nil nil [812 848])
+            ("" code nil nil [849 884])
+            ("" code nil nil [885 920])
+            ("pr" code nil nil [922 931])
+            ("pr" code nil nil [932 945]))          
+      :file "example_panda_end_effector_control.py"
+      :pointmax 946
+      :fsize 945
+      :lastmodtime '(24574 23022 218885 469000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!lof_robot_learning!libs!PyRep!examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

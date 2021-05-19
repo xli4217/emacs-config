@@ -1,0 +1,233 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [588 606])
+            ("Wiring" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [662 680])
+                            ("self" variable nil (reparse-symbol indented_block_body) [689 753])
+                            ("self" variable nil (reparse-symbol indented_block_body) [762 783])
+                            ("self" variable nil (reparse-symbol indented_block_body) [792 814]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [640 644])
+                            ("units" variable nil (reparse-symbol function_parameters) [646 651]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [627 815])
+                    ("is_built" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [833 837]))                          )
+                        (reparse-symbol indented_block_body) [820 882])
+                    ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [897 901])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [903 914]))                          )
+                        (reparse-symbol indented_block_body) [887 1347])
+                    ("erev_initializer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1373 1377])
+                            ("shape" variable nil (reparse-symbol function_parameters) [1379 1384])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [1391 1396]))                          )
+                        (reparse-symbol indented_block_body) [1352 1450])
+                    ("sensory_erev_initializer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1484 1488])
+                            ("shape" variable nil (reparse-symbol function_parameters) [1490 1495])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [1502 1507]))                          )
+                        (reparse-symbol indented_block_body) [1455 1569])
+                    ("set_input_dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1592 1596])
+                            ("input_dim" variable nil (reparse-symbol function_parameters) [1598 1607]))                          )
+                        (reparse-symbol indented_block_body) [1574 1757])
+                    ("set_output_dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1781 1785])
+                            ("output_dim" variable nil (reparse-symbol function_parameters) [1787 1797]))                          )
+                        (reparse-symbol indented_block_body) [1762 1837])
+                    ("get_type_of_neuron" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1905 1909])
+                            ("neuron_id" variable nil (reparse-symbol function_parameters) [1911 1920]))                          )
+                        (reparse-symbol indented_block_body) [1882 1990])
+                    ("add_synapse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2011 2015])
+                            ("src" variable nil (reparse-symbol function_parameters) [2017 2020])
+                            ("dest" variable nil (reparse-symbol function_parameters) [2022 2026])
+                            ("polarity" variable nil (reparse-symbol function_parameters) [2028 2036]))                          )
+                        (reparse-symbol indented_block_body) [1995 2757])
+                    ("add_sensory_synapse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2786 2790])
+                            ("src" variable nil (reparse-symbol function_parameters) [2792 2795])
+                            ("dest" variable nil (reparse-symbol function_parameters) [2797 2801])
+                            ("polarity" variable nil (reparse-symbol function_parameters) [2803 2811]))                          )
+                        (reparse-symbol indented_block_body) [2762 3717])
+                    ("get_config" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3737 3741]))                          )
+                        (reparse-symbol indented_block_body) [3722 4014])
+                    ("from_config" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [4052 4055])
+                            ("config" variable nil (reparse-symbol function_parameters) [4057 4063]))                          )
+                        (reparse-symbol indented_block_body) [4019 4425]))                  
+                :type "class")
+                nil [609 4425])
+            ("FullyConnected" type
+               (:superclasses ("Wiring")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [4571 4614])
+                            ("if" code nil (reparse-symbol indented_block_body) [4623 4677])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4685 4725])
+                            ("self" code nil (reparse-symbol indented_block_body) [4734 4765])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4774 4823])
+                            ("for" code nil (reparse-symbol indented_block_body) [4832 5101]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4483 4487])
+                            ("units" variable nil (reparse-symbol function_parameters) [4489 4494])
+                            ("output_dim" variable nil (reparse-symbol function_parameters) [4496 4506])
+                            ("erev_init_seed" variable nil (reparse-symbol function_parameters) [4513 4527])
+                            ("self_connections" variable nil (reparse-symbol function_parameters) [4534 4550]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4461 5101])
+                    ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5116 5120])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [5122 5133]))                          )
+                        (reparse-symbol indented_block_body) [5106 5374]))                  
+                :type "class")
+                nil [4427 5374])
+            ("Random" type
+               (:superclasses ("Wiring")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [5492 5527])
+                            ("if" code nil (reparse-symbol indented_block_body) [5536 5590])
+                            ("self" code nil (reparse-symbol indented_block_body) [5598 5629])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5638 5674])
+                            ("if" code nil (reparse-symbol indented_block_body) [5684 5916])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5924 5970])
+                            ("number_of_synapses" variable nil (reparse-symbol indented_block_body) [5980 6052])
+                            ("all_synapses" variable nil (reparse-symbol indented_block_body) [6061 6078])
+                            ("for" code nil (reparse-symbol indented_block_body) [6087 6209])
+                            ("used_synapses" variable nil (reparse-symbol indented_block_body) [6218 6326])
+                            ("for" code nil (reparse-symbol indented_block_body) [6335 6469]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5415 5419])
+                            ("units" variable nil (reparse-symbol function_parameters) [5421 5426])
+                            ("output_dim" variable nil (reparse-symbol function_parameters) [5428 5438])
+                            ("sparsity_level" variable nil (reparse-symbol function_parameters) [5445 5459])
+                            ("random_seed" variable nil (reparse-symbol function_parameters) [5465 5476]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [5402 6469])
+                    ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6484 6488])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [6490 6501]))                          )
+                        (reparse-symbol indented_block_body) [6474 7255]))                  
+                :type "class")
+                nil [5376 7255])
+            ("NCP" type
+               (:superclasses ("Wiring")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [7518 7592])
+                            ("self" code nil (reparse-symbol indented_block_body) [7601 7635])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7644 7683])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7692 7731])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7740 7783])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7792 7831])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7840 7877])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7886 7919])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7928 7989])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7998 8029])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8094 8155])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8164 8346])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8355 8621])
+                            ("if" code nil (reparse-symbol indented_block_body) [8631 8907])
+                            ("if" code nil (reparse-symbol indented_block_body) [8915 9194])
+                            ("if" code nil (reparse-symbol indented_block_body) [9202 9482]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7302 7306])
+                            ("inter_neurons" variable nil (reparse-symbol function_parameters) [7316 7329])
+                            ("command_neurons" variable nil (reparse-symbol function_parameters) [7339 7354])
+                            ("motor_neurons" variable nil (reparse-symbol function_parameters) [7364 7377])
+                            ("sensory_fanout" variable nil (reparse-symbol function_parameters) [7387 7401])
+                            ("inter_fanout" variable nil (reparse-symbol function_parameters) [7411 7423])
+                            ("recurrent_command_synapses" variable nil (reparse-symbol function_parameters) [7433 7459])
+                            ("motor_fanin" variable nil (reparse-symbol function_parameters) [7469 7480])
+                            ("seed" variable nil (reparse-symbol function_parameters) [7490 7494]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7280 9482])
+                    ("get_type_of_neuron" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9510 9514])
+                            ("neuron_id" variable nil (reparse-symbol function_parameters) [9516 9525]))                          )
+                        (reparse-symbol indented_block_body) [9487 9731])
+                    ("_build_sensory_to_inter_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9770 9774]))                          )
+                        (reparse-symbol indented_block_body) [9736 11077])
+                    ("_build_inter_to_command_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11116 11120]))                          )
+                        (reparse-symbol indented_block_body) [11082 12387])
+                    ("_build_recurrent_command_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12427 12431]))                          )
+                        (reparse-symbol indented_block_body) [12392 12752])
+                    ("_build_command__to_motor_layer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12792 12796]))                          )
+                        (reparse-symbol indented_block_body) [12757 14007])
+                    ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14022 14026])
+                            ("input_shape" variable nil (reparse-symbol function_parameters) [14028 14039]))                          )
+                        (reparse-symbol indented_block_body) [14012 14385]))                  
+                :type "class")
+                nil [7257 14385]))          
+      :file "wirings.py"
+      :pointmax 14385
+      :fsize 14384
+      :lastmodtime '(24677 2588 404086 19000)
+      :unmatched-syntax '((RETURN 1931 . 1937) (IF 1946 . 1948) (ELSE 1977 . 1981) (RETURN 1931 . 1937) (IF 1946 . 1948) (ELSE 1977 . 1981))))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!agn2!external_libs!ncp!kerasncp!wirings!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,89 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("copy" include nil nil [1 12])
+            ("os" include nil nil [13 22])
+            ("typing" include nil nil [23 73])
+            ("gym" include nil nil [74 84])
+            ("gym" include nil nil [85 108])
+            ("gym.utils" include nil nil [109 138])
+            ("numpy" include nil nil [139 157])
+            ("highway_env" include nil nil [159 188])
+            ("highway_env.envs.common.action" include nil nil [189 286])
+            ("highway_env.envs.common.observation" include nil nil [287 371])
+            ("highway_env.envs.common.finite_mdp" include nil nil [372 429])
+            ("highway_env.envs.common.graphics" include nil nil [430 484])
+            ("highway_env.vehicle.behavior" include nil nil [485 551])
+            ("highway_env.vehicle.controller" include nil nil [552 605])
+            ("highway_env.vehicle.kinematics" include nil nil [606 656])
+            ("Observation" variable nil nil [658 682])
+            ("AbstractEnv" type
+               (:documentation "
+    A generic environment for various tasks involving a vehicle driving on a road.
+
+    The environment contains a road populated with vehicles, and a controlled ego-vehicle that can change lane and
+    speed. The action space is fixed, but the observation space and reward function must be defined in the
+    environment implementations.
+    "
+                :superclasses ("gym.Env")
+                :members 
+                  ( ("ObservationType" code nil (reparse-symbol indented_block_body) [1091 1106])
+                    ("ActionType" code nil (reparse-symbol indented_block_body) [1124 1134])
+                    ("Optional" code nil (reparse-symbol indented_block_body) [1169 1187])
+                    ("metadata" variable nil (reparse-symbol indented_block_body) [1192 1243])
+                    ("PERCEPTION_DISTANCE" code nil (reparse-symbol indented_block_body) [1249 1297])
+                    ("\"\"\"The maximum distance of any vehicle present in the observation [m]\"\"\"" code nil (reparse-symbol indented_block_body) [1302 1374])
+                    ("to_finite_mdp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14251 14255]))                          )
+                        (reparse-symbol indented_block_body) [14233 14343])
+                    ("__deepcopy__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14365 14369])
+                            ("memo" variable nil (reparse-symbol function_parameters) [14371 14375]))                          
+                        :documentation "Perform a deep copy but without copying the environment viewer.")
+                        (reparse-symbol indented_block_body) [14348 14802]))                  
+                :type "class")
+                nil [685 14802])
+            ("MultiAgentWrapper" type
+               (:superclasses ("Wrapper")
+                :members 
+                  ( ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14851 14855])
+                            ("action" variable nil (reparse-symbol function_parameters) [14857 14863]))                          )
+                        (reparse-symbol indented_block_body) [14842 15035]))                  
+                :type "class")
+                nil [14804 15035]))          
+      :file "abstract.py"
+      :pointmax 15035
+      :fsize 15034
+      :lastmodtime '(24484 63418 838823 864000)
+      :unmatched-syntax '((INDENT_BLOCK 14043 . 14228) (NEWLINE 14042 . 14043) (COLON 14041 . 14042) (MINUS 14025 . 14026) (GT 14026 . 14027) (INDENT_BLOCK 13725 . 13990) (NEWLINE 13724 . 13725) (COLON 13723 . 13724) (MINUS 13707 . 13708) (GT 13708 . 13709) (BRACK_BLOCK 13685 . 13705) (NAME 13674 . 13678) (COLON 13678 . 13679) (INDENT_BLOCK 13428 . 13639) (NEWLINE 13427 . 13428) (COLON 13426 . 13427) (MINUS 13410 . 13411) (GT 13411 . 13412) (BRACK_BLOCK 13395 . 13408) (NAME 13384 . 13388) (COLON 13388 . 13389) (INDENT_BLOCK 13156 . 13351) (NEWLINE 13155 . 13156) (COLON 13154 . 13155) (MINUS 13138 . 13139) (GT 13139 . 13140) (NAME 13128 . 13131) (COLON 13131 . 13132) (INDENT_BLOCK 12684 . 13087) (NEWLINE 12683 . 12684) (COLON 12682 . 12683) (MINUS 12666 . 12667) (GT 12667 . 12668) (NAME 12638 . 12652) (COLON 12652 . 12653) (INDENT_BLOCK 11962 . 12604) (NEWLINE 11961 . 11962) (COLON 11960 . 11961) (MINUS 11944 . 11945) (GT 11945 . 11946) (NAME 11919 . 11937) (COLON 11937 . 11938) (INDENT_BLOCK 11384 . 11888) (NEWLINE 11383 . 11384) (COLON 11382 . 11383) (MINUS 11366 . 11367) (GT 11367 . 11368) (INDENT_BLOCK 10619 . 11342) (NEWLINE 10618 . 10619) (COLON 10617 . 10618) (MINUS 10610 . 10611) (GT 10611 . 10612) (INDENT_BLOCK 9105 . 10574) (NEWLINE 9104 . 9105) (COLON 9103 . 9104) (MINUS 9091 . 9092) (GT 9092 . 9093) (INDENT_BLOCK 8822 . 9054) (NEWLINE 8821 . 8822) (COLON 8820 . 8821) (MINUS 8813 . 8814) (GT 8814 . 8815) (INDENT_BLOCK 8112 . 8792) (NEWLINE 8111 . 8112) (COLON 8110 . 8111) (MINUS 8087 . 8088) (GT 8088 . 8089) (NAME 8066 . 8070) (COLON 8070 . 8071) (INDENT_BLOCK 7049 . 8044) (NEWLINE 7048 . 7049) (COLON 7047 . 7048) (MINUS 7040 . 7041) (GT 7041 . 7042) (ASSIGN 7032 . 7033) (BRACK_BLOCK 7023 . 7031) (NAME 7007 . 7013) (COLON 7013 . 7014) (INDENT_BLOCK 5922 . 6982) (NEWLINE 5921 . 5922) (COLON 5920 . 5921) (MINUS 5880 . 5881) (GT 5881 . 5882) (NAME 5864 . 5870) (COLON 5870 . 5871) (INDENT_BLOCK 5678 . 5844) (NEWLINE 5677 . 5678) (COLON 5676 . 5677) (MINUS 5669 . 5670) (GT 5670 . 5671) (INDENT_BLOCK 5169 . 5647) (NEWLINE 5168 . 5169) (COLON 5167 . 5168) (MINUS 5153 . 5154) (GT 5154 . 5155) (INDENT_BLOCK 4783 . 5132) (NEWLINE 4782 . 4783) (COLON 4781 . 4782) (MINUS 4773 . 4774) (GT 4774 . 4775) (NAME 4757 . 4763) (COLON 4763 . 4764) (INDENT_BLOCK 4579 . 4736) (NEWLINE 4578 . 4579) (COLON 4577 . 4578) (MINUS 4570 . 4571) (GT 4571 . 4572) (INDENT_BLOCK 4302 . 4542) (NEWLINE 4301 . 4302) (COLON 4300 . 4301) (MINUS 4292 . 4293) (GT 4293 . 4294) (NAME 4276 . 4282) (COLON 4282 . 4283) (INDENT_BLOCK 3884 . 4253) (NEWLINE 3883 . 3884) (COLON 3882 . 3883) (MINUS 3875 . 3876) (GT 3876 . 3877) (INDENT_BLOCK 3788 . 3846) (NEWLINE 3787 . 3788) (COLON 3786 . 3787) (MINUS 3779 . 3780) (GT 3780 . 3781) (NAME 3765 . 3771) (COLON 3771 . 3772) (INDENT_BLOCK 3663 . 3740) (NEWLINE 3662 . 3663) (COLON 3661 . 3662) (MINUS 3649 . 3650) (GT 3650 . 3651) (NAME 3631 . 3635) (COLON 3635 . 3636) (INDENT_BLOCK 2659 . 3611) (NEWLINE 2658 . 2659) (COLON 2657 . 2658) (MINUS 2650 . 2651) (GT 2651 . 2652) (INDENT_BLOCK 2512 . 2604) (NEWLINE 2511 . 2512) (COLON 2510 . 2511) (MINUS 2503 . 2504) (GT 2504 . 2505) (NAME 2485 . 2492) (COLON 2492 . 2493) (INDENT_BLOCK 2311 . 2442) (NEWLINE 2310 . 2311) (COLON 2309 . 2310) (MINUS 2299 . 2300) (GT 2300 . 2301) (INDENT_BLOCK 1453 . 2262) (NEWLINE 1428 . 1429) (COLON 1427 . 1428) (DEF 1380 . 1383) (MINUS 1420 . 1421) (GT 1421 . 1422) (NAME 1399 . 1405) (COLON 1405 . 1406) (NAME 1139 . 1167) (COLON 1167 . 1168) (NAME 1111 . 1122) (COLON 1122 . 1123) (NAME 1073 . 1089) (COLON 1089 . 1090)))
+    (semanticdb-table "semanticdb-table"
+      :file "action.py"
+      :fsize 8164
+      :lastmodtime '(24484 61841 463893 619000))
+    (semanticdb-table "semanticdb-table"
+      :file "observation.py"
+      :fsize 16266
+      :lastmodtime '(24484 61841 463893 619000))
+    (semanticdb-table "semanticdb-table"
+      :file "finite_mdp.py"
+      :fsize 7512
+      :lastmodtime '(24484 61841 463893 619000))
+    (semanticdb-table "semanticdb-table"
+      :file "graphics.py"
+      :fsize 9045
+      :lastmodtime '(24484 61841 463893 619000)))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!external_libs!highway-env!envs!common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

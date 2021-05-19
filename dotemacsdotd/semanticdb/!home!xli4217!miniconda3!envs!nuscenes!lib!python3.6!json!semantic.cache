@@ -1,0 +1,314 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("r\"\"\"JSON (JavaScript Object Notation) <http://json.org> is a subset of
+JavaScript syntax (ECMA-262 3rd edition) used as a lightweight data
+interchange format.
+
+:mod:`json` exposes an API familiar to users of the standard library
+:mod:`marshal` and :mod:`pickle` modules.  It is derived from a
+version of the externally maintained simplejson library.
+
+Encoding basic Python object hierarchies::
+
+    >>> import json
+    >>> json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}])
+    '[\"foo\", {\"bar\": [\"baz\", null, 1.0, 2]}]'
+    >>> print(json.dumps(\"\\\"foo\\bar\"))
+    \"\\\"foo\\bar\"
+    >>> print(json.dumps('\\u1234'))
+    \"\\u1234\"
+    >>> print(json.dumps('\\\\'))
+    \"\\\\\"
+    >>> print(json.dumps({\"c\": 0, \"b\": 0, \"a\": 0}, sort_keys=True))
+    {\"a\": 0, \"b\": 0, \"c\": 0}
+    >>> from io import StringIO
+    >>> io = StringIO()
+    >>> json.dump(['streaming API'], io)
+    >>> io.getvalue()
+    '[\"streaming API\"]'
+
+Compact encoding::
+
+    >>> import json
+    >>> from collections import OrderedDict
+    >>> mydict = OrderedDict([('4', 5), ('6', 7)])
+    >>> json.dumps([1,2,3,mydict], separators=(',', ':'))
+    '[1,2,3,{\"4\":5,\"6\":7}]'
+
+Pretty printing::
+
+    >>> import json
+    >>> print(json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4))
+    {
+        \"4\": 5,
+        \"6\": 7
+    }
+
+Decoding JSON::
+
+    >>> import json
+    >>> obj = ['foo', {'bar': ['baz', None, 1.0, 2]}]
+    >>> json.loads('[\"foo\", {\"bar\":[\"baz\", null, 1.0, 2]}]') == obj
+    True
+    >>> json.loads('\"\\\\\"foo\\\\bar\"') == '\"foo\\x08ar'
+    True
+    >>> from io import StringIO
+    >>> io = StringIO('[\"streaming API\"]')
+    >>> json.load(io)[0] == 'streaming API'
+    True
+
+Specializing JSON object decoding::
+
+    >>> import json
+    >>> def as_complex(dct):
+    ...     if '__complex__' in dct:
+    ...         return complex(dct['real'], dct['imag'])
+    ...     return dct
+    ...
+    >>> json.loads('{\"__complex__\": true, \"real\": 1, \"imag\": 2}',
+    ...     object_hook=as_complex)
+    (1+2j)
+    >>> from decimal import Decimal
+    >>> json.loads('1.1', parse_float=Decimal) == Decimal('1.1')
+    True
+
+Specializing JSON object encoding::
+
+    >>> import json
+    >>> def encode_complex(obj):
+    ...     if isinstance(obj, complex):
+    ...         return [obj.real, obj.imag]
+    ...     raise TypeError(repr(obj) + \" is not JSON serializable\")
+    ...
+    >>> json.dumps(2 + 1j, default=encode_complex)
+    '[2.0, 1.0]'
+    >>> json.JSONEncoder(default=encode_complex).encode(2 + 1j)
+    '[2.0, 1.0]'
+    >>> ''.join(json.JSONEncoder(default=encode_complex).iterencode(2 + 1j))
+    '[2.0, 1.0]'
+
+
+Using json.tool from the shell to validate and pretty-print::
+
+    $ echo '{\"json\":\"obj\"}' | python -m json.tool
+    {
+        \"json\": \"obj\"
+    }
+    $ echo '{ 1.2:3.4}' | python -m json.tool
+    Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+\"\"\"" code nil nil [1 2849])
+            ("__version__" variable nil nil [2850 2871])
+            ("__all__" variable nil nil [2872 2976])
+            ("__author__" variable nil nil [2978 3022])
+            ("JSONDecodeError" include nil nil [3038 3073])
+            ("JSONDecoder" include nil nil [3038 3073])
+            ("JSONEncoder" include nil nil [3088 3106])
+            ("codecs" include nil nil [3107 3120])
+            ("_default_encoder" variable nil nil [3122 3299])
+            ("dump" function
+               (:documentation "Serialize ``obj`` as a JSON formatted stream to ``fp`` (a
+    ``.write()``-supporting file-like object).
+
+    If ``skipkeys`` is true then ``dict`` keys that are not basic types
+    (``str``, ``int``, ``float``, ``bool``, ``None``) will be skipped
+    instead of raising a ``TypeError``.
+
+    If ``ensure_ascii`` is false, then the strings written to ``fp`` can
+    contain non-ASCII characters if they appear in strings contained in
+    ``obj``. Otherwise, all such characters are escaped in JSON strings.
+
+    If ``check_circular`` is false, then the circular reference check
+    for container types will be skipped and a circular reference will
+    result in an ``OverflowError`` (or worse).
+
+    If ``allow_nan`` is false, then it will be a ``ValueError`` to
+    serialize out of range ``float`` values (``nan``, ``inf``, ``-inf``)
+    in strict compliance of the JSON specification, instead of using the
+    JavaScript equivalents (``NaN``, ``Infinity``, ``-Infinity``).
+
+    If ``indent`` is a non-negative integer, then JSON array elements and
+    object members will be pretty-printed with that indent level. An indent
+    level of 0 will only insert newlines. ``None`` is the most compact
+    representation.
+
+    If specified, ``separators`` should be an ``(item_separator, key_separator)``
+    tuple.  The default is ``(', ', ': ')`` if *indent* is ``None`` and
+    ``(',', ': ')`` otherwise.  To get the most compact JSON representation,
+    you should specify ``(',', ':')`` to eliminate whitespace.
+
+    ``default(obj)`` is a function that should return a serializable version
+    of obj or raise TypeError. The default simply raises TypeError.
+
+    If *sort_keys* is true (default: ``False``), then the output of
+    dictionaries will be sorted by key.
+
+    To use a custom ``JSONEncoder`` subclass (e.g. one that overrides the
+    ``.default()`` method to serialize additional types), specify it with
+    the ``cls`` kwarg; otherwise ``JSONEncoder`` is used.
+
+    "
+                :arguments 
+                  ( ("obj" variable nil (reparse-symbol function_parameters) [3310 3313])
+                    ("fp" variable nil (reparse-symbol function_parameters) [3315 3317])
+                    ("skipkeys" variable nil (reparse-symbol function_parameters) [3322 3330])
+                    ("ensure_ascii" variable nil (reparse-symbol function_parameters) [3338 3350])
+                    ("check_circular" variable nil (reparse-symbol function_parameters) [3357 3371])
+                    ("allow_nan" variable nil (reparse-symbol function_parameters) [3386 3395])
+                    ("cls" variable nil (reparse-symbol function_parameters) [3402 3405])
+                    ("indent" variable nil (reparse-symbol function_parameters) [3412 3418])
+                    ("separators" variable nil (reparse-symbol function_parameters) [3425 3435])
+                    ("default" variable nil (reparse-symbol function_parameters) [3450 3457])
+                    ("sort_keys" variable nil (reparse-symbol function_parameters) [3464 3473])
+                    ("kw" variable nil (reparse-symbol function_parameters) [3481 3485]))                  )
+                nil [3301 6223])
+            ("dumps" function
+               (:documentation "Serialize ``obj`` to a JSON formatted ``str``.
+
+    If ``skipkeys`` is true then ``dict`` keys that are not basic types
+    (``str``, ``int``, ``float``, ``bool``, ``None``) will be skipped
+    instead of raising a ``TypeError``.
+
+    If ``ensure_ascii`` is false, then the return value can contain non-ASCII
+    characters if they appear in strings contained in ``obj``. Otherwise, all
+    such characters are escaped in JSON strings.
+
+    If ``check_circular`` is false, then the circular reference check
+    for container types will be skipped and a circular reference will
+    result in an ``OverflowError`` (or worse).
+
+    If ``allow_nan`` is false, then it will be a ``ValueError`` to
+    serialize out of range ``float`` values (``nan``, ``inf``, ``-inf``) in
+    strict compliance of the JSON specification, instead of using the
+    JavaScript equivalents (``NaN``, ``Infinity``, ``-Infinity``).
+
+    If ``indent`` is a non-negative integer, then JSON array elements and
+    object members will be pretty-printed with that indent level. An indent
+    level of 0 will only insert newlines. ``None`` is the most compact
+    representation.
+
+    If specified, ``separators`` should be an ``(item_separator, key_separator)``
+    tuple.  The default is ``(', ', ': ')`` if *indent* is ``None`` and
+    ``(',', ': ')`` otherwise.  To get the most compact JSON representation,
+    you should specify ``(',', ':')`` to eliminate whitespace.
+
+    ``default(obj)`` is a function that should return a serializable version
+    of obj or raise TypeError. The default simply raises TypeError.
+
+    If *sort_keys* is true (default: ``False``), then the output of
+    dictionaries will be sorted by key.
+
+    To use a custom ``JSONEncoder`` subclass (e.g. one that overrides the
+    ``.default()`` method to serialize additional types), specify it with
+    the ``cls`` kwarg; otherwise ``JSONEncoder`` is used.
+
+    "
+                :arguments 
+                  ( ("obj" variable nil (reparse-symbol function_parameters) [6235 6238])
+                    ("skipkeys" variable nil (reparse-symbol function_parameters) [6243 6251])
+                    ("ensure_ascii" variable nil (reparse-symbol function_parameters) [6259 6271])
+                    ("check_circular" variable nil (reparse-symbol function_parameters) [6278 6292])
+                    ("allow_nan" variable nil (reparse-symbol function_parameters) [6307 6316])
+                    ("cls" variable nil (reparse-symbol function_parameters) [6323 6326])
+                    ("indent" variable nil (reparse-symbol function_parameters) [6333 6339])
+                    ("separators" variable nil (reparse-symbol function_parameters) [6346 6356])
+                    ("default" variable nil (reparse-symbol function_parameters) [6371 6378])
+                    ("sort_keys" variable nil (reparse-symbol function_parameters) [6385 6394])
+                    ("kw" variable nil (reparse-symbol function_parameters) [6402 6406]))                  )
+                nil [6225 8884])
+            ("_default_decoder" variable nil nil [8886 8958])
+            ("detect_encoding" function (:arguments 
+              ( ("b" variable nil (reparse-symbol function_parameters) [8981 8982]))              ) nil [8961 9852])
+            ("load" function
+               (:documentation "Deserialize ``fp`` (a ``.read()``-supporting file-like object containing
+    a JSON document) to a Python object.
+
+    ``object_hook`` is an optional function that will be called with the
+    result of any object literal decode (a ``dict``). The return value of
+    ``object_hook`` will be used instead of the ``dict``. This feature
+    can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+
+    ``object_pairs_hook`` is an optional function that will be called with the
+    result of any object literal decoded with an ordered list of pairs.  The
+    return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+    This feature can be used to implement custom decoders that rely on the
+    order that the key and value pairs are decoded (for example,
+    collections.OrderedDict will remember the order of insertion). If
+    ``object_hook`` is also defined, the ``object_pairs_hook`` takes priority.
+
+    To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+    kwarg; otherwise ``JSONDecoder`` is used.
+
+    "
+                :arguments 
+                  ( ("fp" variable nil (reparse-symbol function_parameters) [9863 9865])
+                    ("cls" variable nil (reparse-symbol function_parameters) [9870 9873])
+                    ("object_hook" variable nil (reparse-symbol function_parameters) [9880 9891])
+                    ("parse_float" variable nil (reparse-symbol function_parameters) [9898 9909])
+                    ("parse_int" variable nil (reparse-symbol function_parameters) [9924 9933])
+                    ("parse_constant" variable nil (reparse-symbol function_parameters) [9940 9954])
+                    ("object_pairs_hook" variable nil (reparse-symbol function_parameters) [9961 9978])
+                    ("kw" variable nil (reparse-symbol function_parameters) [9985 9989]))                  )
+                nil [9854 11270])
+            ("loads" function
+               (:documentation "Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance
+    containing a JSON document) to a Python object.
+
+    ``object_hook`` is an optional function that will be called with the
+    result of any object literal decode (a ``dict``). The return value of
+    ``object_hook`` will be used instead of the ``dict``. This feature
+    can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+
+    ``object_pairs_hook`` is an optional function that will be called with the
+    result of any object literal decoded with an ordered list of pairs.  The
+    return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+    This feature can be used to implement custom decoders that rely on the
+    order that the key and value pairs are decoded (for example,
+    collections.OrderedDict will remember the order of insertion). If
+    ``object_hook`` is also defined, the ``object_pairs_hook`` takes priority.
+
+    ``parse_float``, if specified, will be called with the string
+    of every JSON float to be decoded. By default this is equivalent to
+    float(num_str). This can be used to use another datatype or parser
+    for JSON floats (e.g. decimal.Decimal).
+
+    ``parse_int``, if specified, will be called with the string
+    of every JSON int to be decoded. By default this is equivalent to
+    int(num_str). This can be used to use another datatype or parser
+    for JSON integers (e.g. float).
+
+    ``parse_constant``, if specified, will be called with one of the
+    following strings: -Infinity, Infinity, NaN.
+    This can be used to raise an exception if invalid JSON numbers
+    are encountered.
+
+    To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+    kwarg; otherwise ``JSONDecoder`` is used.
+
+    The ``encoding`` argument is ignored and deprecated.
+
+    "
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [11282 11283])
+                    ("encoding" variable nil (reparse-symbol function_parameters) [11288 11296])
+                    ("cls" variable nil (reparse-symbol function_parameters) [11303 11306])
+                    ("object_hook" variable nil (reparse-symbol function_parameters) [11313 11324])
+                    ("parse_float" variable nil (reparse-symbol function_parameters) [11331 11342])
+                    ("parse_int" variable nil (reparse-symbol function_parameters) [11357 11366])
+                    ("parse_constant" variable nil (reparse-symbol function_parameters) [11373 11387])
+                    ("object_pairs_hook" variable nil (reparse-symbol function_parameters) [11394 11411])
+                    ("kw" variable nil (reparse-symbol function_parameters) [11418 11422]))                  )
+                nil [11272 14397]))          
+      :file "__init__.py"
+      :pointmax 14397
+      :fsize 14396
+      :lastmodtime '(24185 17319 0 0)
+      :unmatched-syntax '((MULT 11285 . 11286) (COMMA 11286 . 11287) (MULT 9867 . 9868) (COMMA 9868 . 9869) (RETURN 9577 . 9583) (IF 9596 . 9598) (ELSE 9612 . 9616) (RETURN 9386 . 9392) (IF 9405 . 9407) (ELSE 9413 . 9417) (MULT 6240 . 6241) (COMMA 6241 . 6242) (MULT 3319 . 3320) (COMMA 3320 . 3321) (FROM 3074 . 3078) (PERIOD 3079 . 3080) (FROM 3024 . 3028) (PERIOD 3029 . 3030))))
+  :file "!home!xli4217!miniconda3!envs!nuscenes!lib!python3.6!json!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

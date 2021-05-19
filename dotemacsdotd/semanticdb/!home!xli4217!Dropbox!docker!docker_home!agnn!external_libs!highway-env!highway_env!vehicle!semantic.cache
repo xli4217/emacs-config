@@ -1,0 +1,204 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(24484 61841 463893 619000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 32])
+            ("numpy" include nil nil [34 52])
+            ("highway_env.road.road" include nil nil [54 110])
+            ("highway_env.types" include nil nil [111 147])
+            ("highway_env.vehicle.controller" include nil nil [148 208])
+            ("highway_env" include nil nil [209 238])
+            ("highway_env.vehicle.kinematics" include nil nil [239 289])
+            ("highway_env.road.objects" include nil nil [290 337])
+            ("IDMVehicle" type
+               (:documentation "
+    A vehicle using both a longitudinal and a lateral decision policies.
+
+    - Longitudinal: the IDM model computes an acceleration given the preceding vehicle's distance and speed.
+    - Lateral: the MOBIL model decides when to change lane by maximizing the acceleration of nearby vehicles.
+    "
+                :superclasses ("ControlledVehicle")
+                :members 
+                  ( ("ACC_MAX" variable nil (reparse-symbol indented_block_body) [728 741])
+                    ("\"\"\"Maximum acceleration.\"\"\"" code nil (reparse-symbol indented_block_body) [756 783])
+                    ("COMFORT_ACC_MAX" variable nil (reparse-symbol indented_block_body) [789 810])
+                    ("\"\"\"Desired maximum acceleration.\"\"\"" code nil (reparse-symbol indented_block_body) [825 860])
+                    ("COMFORT_ACC_MIN" code nil (reparse-symbol indented_block_body) [866 888])
+                    ("\"\"\"Desired maximum deceleration.\"\"\"" code nil (reparse-symbol indented_block_body) [903 938])
+                    ("DISTANCE_WANTED" code nil (reparse-symbol indented_block_body) [944 992])
+                    ("\"\"\"Desired jam distance to the front vehicle.\"\"\"" code nil (reparse-symbol indented_block_body) [1004 1052])
+                    ("TIME_WANTED" variable nil (reparse-symbol indented_block_body) [1058 1075])
+                    ("\"\"\"Desired time gap to the front vehicle.\"\"\"" code nil (reparse-symbol indented_block_body) [1087 1131])
+                    ("DELTA" variable nil (reparse-symbol indented_block_body) [1137 1148])
+                    ("\"\"\"Exponent of the velocity term.\"\"\"" code nil (reparse-symbol indented_block_body) [1159 1195])
+                    ("POLITENESS" variable nil (reparse-symbol indented_block_body) [1233 1248])
+                    ("LANE_CHANGE_MIN_ACC_GAIN" variable nil (reparse-symbol indented_block_body) [1266 1296])
+                    ("LANE_CHANGE_MAX_BRAKING_IMPOSED" variable nil (reparse-symbol indented_block_body) [1311 1348])
+                    ("LANE_CHANGE_DELAY" variable nil (reparse-symbol indented_block_body) [1363 1386])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1782 1870])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1879 1923])
+                            ("self" code nil (reparse-symbol indented_block_body) [1932 2008]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1412 1416])
+                            ("Road" variable nil (reparse-symbol function_parameters) [1441 1445])
+                            ("Vector" variable nil (reparse-symbol function_parameters) [1474 1480])
+                            ("float" variable nil (reparse-symbol function_parameters) [1508 1513])
+                            ("float" variable nil (reparse-symbol function_parameters) [1543 1548])
+                            ("int" variable nil (reparse-symbol function_parameters) [1590 1593])
+                            ("float" variable nil (reparse-symbol function_parameters) [1633 1638])
+                            ("Route" variable nil (reparse-symbol function_parameters) [1671 1676])
+                            ("bool" variable nil (reparse-symbol function_parameters) [1722 1726])
+                            ("float" variable nil (reparse-symbol function_parameters) [1759 1764]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1399 2009])
+                    ("randomize_behavior" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2037 2041]))                          )
+                        (reparse-symbol indented_block_body) [2014 2057])
+                    ("act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2702 2706])
+                            ("None" variable nil (reparse-symbol function_parameters) [2735 2739]))                          
+                        :documentation "
+        Execute an action.
+
+        For now, no action is supported because the vehicle takes all decisions
+        of acceleration and lane changes on its own, based on the IDM and MOBIL models.
+
+        :param action: the action
+        ")
+                        (reparse-symbol indented_block_body) [2694 3976])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3990 3994])
+                            ("float" variable nil (reparse-symbol function_parameters) [4000 4005]))                          
+                        :documentation "
+        Step the simulation.
+
+        Increases a timer used for decision policies, and step the vehicle dynamics.
+
+        :param dt: timestep
+        ")
+                        (reparse-symbol indented_block_body) [3981 4226]))                  
+                :type "class")
+                nil [340 12576])
+            ("LinearVehicle" type
+               (:documentation "A Vehicle whose longitudinal and lateral controllers are linear with respect to parameters."
+                :superclasses ("IDMVehicle")
+                :members 
+                  ( ("ACCELERATION_PARAMETERS" variable nil (reparse-symbol indented_block_body) [12719 12760])
+                    ("STEERING_PARAMETERS" variable nil (reparse-symbol indented_block_body) [12765 12878])
+                    ("ACCELERATION_RANGE" variable nil (reparse-symbol indented_block_body) [12884 12993])
+                    ("STEERING_RANGE" variable nil (reparse-symbol indented_block_body) [12998 13166])
+                    ("TIME_WANTED" variable nil (reparse-symbol indented_block_body) [13172 13189])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [13614 13754])
+                            ("" code nil (reparse-symbol indented_block_body) [13805 13807])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13816 13843]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13208 13212])
+                            ("Road" variable nil (reparse-symbol function_parameters) [13237 13241])
+                            ("Vector" variable nil (reparse-symbol function_parameters) [13270 13276])
+                            ("float" variable nil (reparse-symbol function_parameters) [13304 13309])
+                            ("float" variable nil (reparse-symbol function_parameters) [13339 13344])
+                            ("int" variable nil (reparse-symbol function_parameters) [13386 13389])
+                            ("float" variable nil (reparse-symbol function_parameters) [13429 13434])
+                            ("Route" variable nil (reparse-symbol function_parameters) [13467 13472])
+                            ("bool" variable nil (reparse-symbol function_parameters) [13518 13522])
+                            ("float" variable nil (reparse-symbol function_parameters) [13555 13560])
+                            ("dict" variable nil (reparse-symbol function_parameters) [13592 13596]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13195 13844])
+                    ("act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13857 13861])
+                            ("None" variable nil (reparse-symbol function_parameters) [13890 13894]))                          )
+                        (reparse-symbol indented_block_body) [13849 13990])
+                    ("randomize_behavior" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14018 14022]))                          )
+                        (reparse-symbol indented_block_body) [13995 14507])
+                    ("longitudinal_structure" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17675 17679]))                          )
+                        (reparse-symbol indented_block_body) [17648 18903])
+                    ("lateral_structure" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18930 18934]))                          )
+                        (reparse-symbol indented_block_body) [18908 19223])
+                    ("collect_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19245 19249]))                          
+                        :documentation "Store features and outputs for parameter regression.")
+                        (reparse-symbol indented_block_body) [19228 19380])
+                    ("add_features" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19402 19406])
+                            ("data" variable nil (reparse-symbol function_parameters) [19408 19412])
+                            ("lane_index" variable nil (reparse-symbol function_parameters) [19414 19424])
+                            ("output_lane" variable nil (reparse-symbol function_parameters) [19426 19437]))                          )
+                        (reparse-symbol indented_block_body) [19385 20329]))                  
+                :type "class")
+                nil [12578 20329])
+            ("AggressiveVehicle" type
+               (:superclasses ("LinearVehicle")
+                :members 
+                  ( ("LANE_CHANGE_MIN_ACC_GAIN" variable nil (reparse-symbol indented_block_body) [20375 20405])
+                    ("MERGE_ACC_GAIN" variable nil (reparse-symbol indented_block_body) [20420 20440])
+                    ("MERGE_VEL_RATIO" variable nil (reparse-symbol indented_block_body) [20445 20467])
+                    ("MERGE_TARGET_VEL" variable nil (reparse-symbol indented_block_body) [20472 20493])
+                    ("ACCELERATION_PARAMETERS" variable nil (reparse-symbol indented_block_body) [20498 20707]))                  
+                :type "class")
+                nil [20331 20708])
+            ("DefensiveVehicle" type
+               (:superclasses ("LinearVehicle")
+                :members 
+                  ( ("LANE_CHANGE_MIN_ACC_GAIN" variable nil (reparse-symbol indented_block_body) [20753 20783])
+                    ("MERGE_ACC_GAIN" variable nil (reparse-symbol indented_block_body) [20798 20818])
+                    ("MERGE_VEL_RATIO" variable nil (reparse-symbol indented_block_body) [20823 20845])
+                    ("MERGE_TARGET_VEL" variable nil (reparse-symbol indented_block_body) [20850 20871])
+                    ("ACCELERATION_PARAMETERS" variable nil (reparse-symbol indented_block_body) [20876 21085]))                  
+                :type "class")
+                nil [20710 21086]))          
+      :file "behavior.py"
+      :pointmax 21086
+      :fsize 21085
+      :lastmodtime '(24484 61841 463893 619000)
+      :unmatched-syntax '((INDENT_BLOCK 16929 . 17643) (NEWLINE 16928 . 16929) (COLON 16927 . 16928) (MINUS 16914 . 16915) (GT 16915 . 16916) (NAME 16884 . 16901) (COLON 16901 . 16902) (INDENT_BLOCK 16466 . 16851) (NEWLINE 16465 . 16466) (COLON 16464 . 16465) (MINUS 16456 . 16457) (GT 16457 . 16458) (NAME 16426 . 16443) (COLON 16443 . 16444) (INDENT_BLOCK 15942 . 16394) (NEWLINE 15941 . 15942) (COLON 15940 . 15941) (MINUS 15927 . 15928) (GT 15928 . 15929) (NAME 15897 . 15909) (COLON 15909 . 15910) (NAME 15836 . 15849) (COLON 15849 . 15850) (NAME 15774 . 15785) (COLON 15785 . 15786) (INDENT_BLOCK 14701 . 15737) (NEWLINE 14700 . 14701) (COLON 14699 . 14700) (DEF 14512 . 14515) (MINUS 14691 . 14692) (GT 14692 . 14693) (NAME 14661 . 14673) (COLON 14673 . 14674) (NAME 14609 . 14622) (COLON 14622 . 14623) (NAME 14556 . 14567) (COLON 14567 . 14568) (ASSIGN 13888 . 13889) (BRACK_BLOCK 13876 . 13887) (NAME 13863 . 13869) (COLON 13869 . 13870) (NAME 13763 . 13767) (IF 13780 . 13782) (ELSE 13800 . 13804) (NAME 13586 . 13590) (COLON 13590 . 13591) (NAME 13548 . 13553) (COLON 13553 . 13554) (NAME 13498 . 13516) (COLON 13516 . 13517) (NAME 13460 . 13465) (COLON 13465 . 13466) (NAME 13415 . 13427) (COLON 13427 . 13428) (NAME 13367 . 13384) (COLON 13384 . 13385) (NAME 13332 . 13337) (COLON 13337 . 13338) (NAME 13295 . 13302) (COLON 13302 . 13303) (NAME 13260 . 13268) (COLON 13268 . 13269) (NAME 13231 . 13235) (COLON 13235 . 13236) (INDENT_BLOCK 11675 . 12576) (NEWLINE 11674 . 11675) (COLON 11673 . 11674) (MINUS 11665 . 11666) (GT 11666 . 11667) (NAME 11644 . 11656) (COLON 11656 . 11657) (INDENT_BLOCK 9377 . 11611) (NEWLINE 9376 . 9377) (COLON 9375 . 9376) (MINUS 9368 . 9369) (GT 9369 . 9370) (NAME 9345 . 9355) (COLON 9355 . 9356) (INDENT_BLOCK 7720 . 9324) (NEWLINE 7719 . 7720) (COLON 7718 . 7719) (MINUS 7711 . 7712) (GT 7712 . 7713) (INDENT_BLOCK 6516 . 7677) (NEWLINE 6515 . 6516) (COLON 6514 . 6515) (MINUS 6492 . 6493) (GT 6493 . 6494) (NAME 6461 . 6474) (COLON 6474 . 6475) (INDENT_BLOCK 5873 . 6432) (NEWLINE 5872 . 5873) (COLON 5871 . 5872) (MINUS 5863 . 5864) (GT 5864 . 5865) (NAME 5832 . 5845) (COLON 5845 . 5846) (NAME 5810 . 5821) (COLON 5821 . 5822) (INDENT_BLOCK 4420 . 5783) (NEWLINE 4419 . 4420) (COLON 4418 . 4419) (DEF 4231 . 4234) (MINUS 4410 . 4411) (GT 4411 . 4412) (NAME 4380 . 4392) (COLON 4392 . 4393) (NAME 4328 . 4341) (COLON 4341 . 4342) (NAME 4275 . 4286) (COLON 4286 . 4287) (NAME 3996 . 3998) (COLON 3998 . 3999) (ASSIGN 2733 . 2734) (BRACK_BLOCK 2721 . 2732) (NAME 2708 . 2714) (COLON 2714 . 2715) (INDENT_BLOCK 2145 . 2689) (NEWLINE 2144 . 2145) (COLON 2143 . 2144) (AT 2062 . 2063) (MINUS 2128 . 2129) (GT 2129 . 2130) (NAME 2100 . 2107) (COLON 2107 . 2108) (NAME 1752 . 1757) (COLON 1757 . 1758) (NAME 1702 . 1720) (COLON 1720 . 1721) (NAME 1664 . 1669) (COLON 1669 . 1670) (NAME 1619 . 1631) (COLON 1631 . 1632) (NAME 1571 . 1588) (COLON 1588 . 1589) (NAME 1536 . 1541) (COLON 1541 . 1542) (NAME 1499 . 1506) (COLON 1506 . 1507) (NAME 1464 . 1472) (COLON 1472 . 1473) (NAME 1435 . 1439) (COLON 1439 . 1440)))
+    (semanticdb-table "semanticdb-table"
+      :file "controller.py"
+      :fsize 12421
+      :lastmodtime '(24484 61841 463893 619000))
+    (semanticdb-table "semanticdb-table"
+      :file "kinematics.py"
+      :fsize 10355
+      :lastmodtime '(24484 61841 463893 619000)))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!external_libs!highway-env!highway_env!vehicle!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

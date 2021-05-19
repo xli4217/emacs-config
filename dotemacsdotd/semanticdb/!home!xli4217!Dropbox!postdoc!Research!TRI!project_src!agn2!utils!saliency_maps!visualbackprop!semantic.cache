@@ -1,0 +1,183 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("tensorflow" include nil nil [1 24])
+            ("os" include nil nil [25 34])
+            ("numpy" include nil nil [35 53])
+            ("cv2" include nil nil [54 64])
+            ("ConvolutionHead" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [158 188])
+                            ("self" variable nil (reparse-symbol indented_block_body) [198 244])
+                            ("self" variable nil (reparse-symbol indented_block_body) [253 278]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [107 111])
+                            ("num_filters" variable nil (reparse-symbol function_parameters) [112 123])
+                            ("features_per_filter" variable nil (reparse-symbol function_parameters) [126 145]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [94 279])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [297 301])
+                            ("x" variable nil (reparse-symbol function_parameters) [302 303]))                          )
+                        (reparse-symbol indented_block_body) [284 2791])
+                    ("visual_backprop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2912 2916])
+                            ("tf_session" variable nil (reparse-symbol function_parameters) [2917 2927])
+                            ("x_value" variable nil (reparse-symbol function_parameters) [2928 2935]))                          )
+                        (reparse-symbol indented_block_body) [2892 4915]))                  
+                :type "class")
+                nil [66 4915]))          
+      :file "visualbackprop_tf.py"
+      :pointmax 4915
+      :fsize 4914
+      :lastmodtime '(24700 56751 401896 888000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("math" include nil nil [1 12])
+            ("cv2" include nil nil [13 23])
+            ("numpy" include nil nil [24 42])
+            ("matplotlib.pyplot" include nil nil [43 74])
+            ("PIL" include nil nil [75 96])
+            ("torch.nn" include nil nil [97 118])
+            ("torch" include nil nil [119 131])
+            ("FEAT_KEEP" variable nil nil [133 146])
+            ("FEAT_SIZE" variable nil nil [171 186])
+            ("FEAT_MAPS_DIR" variable nil nil [219 246])
+            ("VBP_DIR" variable nil nil [273 296])
+            ("OVERLAY_DIR" variable nil nil [325 348])
+            ("layers" variable nil nil [382 393])
+            ("maps" variable nil nil [394 403])
+            ("hooks" variable nil nil [404 414])
+            ("add_hook" function (:arguments 
+              ( ("model" variable nil (reparse-symbol function_parameters) [429 434])
+                ("layer_name" variable nil (reparse-symbol function_parameters) [436 446])
+                ("func" variable nil (reparse-symbol function_parameters) [448 452])
+                ("hooks" variable nil (reparse-symbol function_parameters) [454 459])
+                ("layers" variable nil (reparse-symbol function_parameters) [461 467])
+                ("maps" variable nil (reparse-symbol function_parameters) [469 473]))              ) nil [416 1768])
+            ("save_feature_maps" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [1795 1799])
+                    ("inputs" variable nil (reparse-symbol function_parameters) [1801 1807])
+                    ("outputs" variable nil (reparse-symbol function_parameters) [1809 1816]))                  )
+                nil [1773 2025])
+            ("normalize_gamma" function (:arguments 
+              ( ("image" variable nil (reparse-symbol function_parameters) [2050 2055])
+                ("gamma" variable nil (reparse-symbol function_parameters) [2057 2062]))              ) nil [2030 2259])
+            ("visual_feature" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [2279 2283])
+                    ("input" variable nil (reparse-symbol function_parameters) [2285 2290])
+                    ("output" variable nil (reparse-symbol function_parameters) [2292 2298]))                  )
+                nil [2260 2413])
+            ("visualbackprop" function (:arguments 
+              ( ("layers" variable nil (reparse-symbol function_parameters) [2438 2444])
+                ("maps" variable nil (reparse-symbol function_parameters) [2445 2449]))              ) nil [2419 4038])
+            ("plotFeatMaps" function (:arguments 
+              ( ("layers" variable nil (reparse-symbol function_parameters) [4056 4062])
+                ("maps" variable nil (reparse-symbol function_parameters) [4063 4067]))              ) nil [4039 6208])
+            ("show_VBP" function
+               (:documentation "Take an array of shape (n, height, width) or (n, height, width, 3)
+       and visualize each (height, width) thing in a grid of size approx. sqrt(n) by sqrt(n)"
+                :arguments 
+                  ( ("plot" variable nil (reparse-symbol function_parameters) [6240 6244])
+                    ("image" variable nil (reparse-symbol function_parameters) [6246 6251]))                  )
+                nil [6227 6732])
+            ("save_VBP" function (:arguments 
+              ( ("label" variable nil (reparse-symbol function_parameters) [6765 6770])
+                ("image" variable nil (reparse-symbol function_parameters) [6772 6777]))              ) nil [6752 7065])
+            ("overlay" function (:arguments 
+              ( ("image" variable nil (reparse-symbol function_parameters) [7079 7084])
+                ("mask" variable nil (reparse-symbol function_parameters) [7086 7090]))              ) nil [7067 7628]))          
+      :file "visualbackprop.py"
+      :pointmax 7628
+      :fsize 7627
+      :lastmodtime '(24717 55522 752013 405000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [10 19])
+            ("torch" include nil nil [31 43])
+            ("torch.nn" include nil nil [44 65])
+            ("torch.nn.functional" include nil nil [66 97])
+            ("torch.autograd" include nil nil [98 133])
+            ("torchvision.transforms" include nil nil [135 178])
+            ("cv2" include nil nil [201 211])
+            ("numpy" include nil nil [212 230])
+            ("matplotlib.pyplot" include nil nil [231 262])
+            ("PIL" include nil nil [263 284])
+            ("math" include nil nil [286 297])
+            ("maps" variable nil nil [299 308])
+            ("layers" variable nil nil [309 318])
+            ("hooks" variable nil nil [319 327])
+            ("FEAT_KEEP" variable nil nil [330 344])
+            ("FEAT_SIZE" variable nil nil [369 384])
+            ("FEAT_MAPS_DIR" variable nil nil [417 444])
+            ("VBP_DIR" variable nil nil [471 494])
+            ("OVERLAY_DIR" variable nil nil [523 546])
+            ("normalize_gamma" function (:arguments 
+              ( ("image" variable nil (reparse-symbol function_parameters) [601 606])
+                ("gamma" variable nil (reparse-symbol function_parameters) [608 613]))              ) nil [581 801])
+            ("visual_feature" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [822 826])
+                    ("input" variable nil (reparse-symbol function_parameters) [828 833])
+                    ("output" variable nil (reparse-symbol function_parameters) [835 841]))                  )
+                nil [803 951])
+            ("save_feature_maps" function
+               (:parent "dummy"
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [974 978])
+                    ("input" variable nil (reparse-symbol function_parameters) [979 984])
+                    ("output" variable nil (reparse-symbol function_parameters) [985 991]))                  )
+                nil [952 1107])
+            ("add_hook" function (:arguments 
+              ( ("net" variable nil (reparse-symbol function_parameters) [1122 1125])
+                ("layer_name" variable nil (reparse-symbol function_parameters) [1126 1136])
+                ("func" variable nil (reparse-symbol function_parameters) [1137 1141]))              ) nil [1109 2395])
+            ("visualbackprop" function (:arguments 
+              ( ("layers" variable nil (reparse-symbol function_parameters) [2416 2422])
+                ("maps" variable nil (reparse-symbol function_parameters) [2423 2427]))              ) nil [2397 3486])
+            ("plotFeatMaps" function (:arguments 
+              ( ("layers" variable nil (reparse-symbol function_parameters) [3509 3515])
+                ("maps" variable nil (reparse-symbol function_parameters) [3516 3520]))              ) nil [3492 5133])
+            ("show_VBP" function
+               (:documentation "Take an array of shape (n, height, width) or (n, height, width, 3)
+	   and visualize each (height, width) thing in a grid of size approx. sqrt(n) by sqrt(n)"
+                :arguments 
+                  ( ("label" variable nil (reparse-symbol function_parameters) [5166 5171])
+                    ("image" variable nil (reparse-symbol function_parameters) [5173 5178]))                  )
+                nil [5153 5605])
+            ("save_VBP" function (:arguments 
+              ( ("label" variable nil (reparse-symbol function_parameters) [5638 5643])
+                ("image" variable nil (reparse-symbol function_parameters) [5645 5650]))              ) nil [5625 5914])
+            ("overlay" function (:arguments 
+              ( ("image" variable nil (reparse-symbol function_parameters) [5928 5933])
+                ("mask" variable nil (reparse-symbol function_parameters) [5935 5939]))              ) nil [5916 6371])
+            ("if" code nil nil [6372 8757]))          
+      :file "visualbackprop_bak.py"
+      :pointmax 8757
+      :fsize 8756
+      :lastmodtime '(24717 58099 912960 874000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!agn2!utils!saliency_maps!visualbackprop!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,151 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("pprint" include nil nil [20 45])
+            ("numpy.linalg" include nil nil [46 75])
+            ("lfd.api.trajectory" include nil nil [76 137])
+            ("get_demo_terms" function (:arguments 
+              ( ("x_ego" variable nil (reparse-symbol function_parameters) [158 163])
+                ("y_ego" variable nil (reparse-symbol function_parameters) [165 170])
+                ("speed_ego" variable nil (reparse-symbol function_parameters) [172 181])
+                ("x_ado" variable nil (reparse-symbol function_parameters) [183 188])
+                ("y_ado" variable nil (reparse-symbol function_parameters) [190 195])
+                ("x_lane" variable nil (reparse-symbol function_parameters) [197 203])
+                ("y_lane" variable nil (reparse-symbol function_parameters) [205 211])
+                ("train_or_deploy" variable nil (reparse-symbol function_parameters) [213 228]))              ) nil [139 869])
+            ("create_trajectory_list_from_nuscenes_df" function (:arguments 
+              ( ("df" variable nil (reparse-symbol function_parameters) [914 916])
+                ("train_or_deploy" variable nil (reparse-symbol function_parameters) [918 933]))              ) nil [870 2406])
+            ("if" code nil nil [2412 2679]))          
+      :file "create_traj_list.py"
+      :pointmax 2679
+      :fsize 2678
+      :lastmodtime '(24731 32936 809080 725000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("numpy" include nil nil [14 32])
+            ("CostModel" type
+               (:documentation "A toy pytorch cost model."
+                :superclasses ("torch.nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [162 195])
+                            ("self" variable nil (reparse-symbol indented_block_body) [204 242]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [122 126])
+                            ("train_or_deploy" variable nil (reparse-symbol function_parameters) [128 143]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [109 243])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [269 273])
+                            ("trajectories" variable nil (reparse-symbol function_parameters) [275 287])
+                            ("params" variable nil (reparse-symbol function_parameters) [289 295]))                          
+                        :documentation "Returns the square of the input, multiplied by a weight.")
+                        (reparse-symbol indented_block_body) [257 4605]))                  
+                :type "class")
+                nil [34 4605]))          
+      :file "cost_model.py"
+      :pointmax 4605
+      :fsize 4604
+      :lastmodtime '(24733 44705 28242 160000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("lfd.api.feature" include nil nil [1 52])
+            ("torch" include nil nil [53 65])
+            ("QuadraticFeature" type
+               (:documentation "Constructs the square error of a trajectory, returns an array of dimension num_features x num_timesteps.
+    "
+                :superclasses ("LfdFeature")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [266 299])
+                            ("self" variable nil (reparse-symbol indented_block_body) [308 326]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [240 244])
+                            ("index" variable nil (reparse-symbol function_parameters) [246 251])
+                            ("args" variable nil (reparse-symbol function_parameters) [253 258])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [260 268]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [227 340])
+                    ("evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [358 362])
+                            ("traj_tensor" variable nil (reparse-symbol function_parameters) [364 375])
+                            ("batch_index" variable nil (reparse-symbol function_parameters) [377 388]))                          )
+                        (reparse-symbol indented_block_body) [345 448]))                  
+                :type "class")
+                nil [67 448])
+            ("PassThruFeature" type
+               (:documentation "Simply passes the desired index, returns an array of dimension num_features x num_timesteps.
+    "
+                :superclasses ("LfdFeature")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [639 672])
+                            ("self" variable nil (reparse-symbol indented_block_body) [681 699]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [613 617])
+                            ("index" variable nil (reparse-symbol function_parameters) [619 624])
+                            ("args" variable nil (reparse-symbol function_parameters) [626 631])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [633 641]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [600 713])
+                    ("evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [731 735])
+                            ("traj_tensor" variable nil (reparse-symbol function_parameters) [737 748])
+                            ("batch_index" variable nil (reparse-symbol function_parameters) [750 761]))                          )
+                        (reparse-symbol indented_block_body) [718 804]))                  
+                :type "class")
+                nil [453 804]))          
+      :file "features.py"
+      :pointmax 804
+      :fsize 803
+      :lastmodtime '(24729 56034 748012 840000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("lfd.algorithms.inverse_control" include nil nil [1 60])
+            ("lfd.api.parameter" include nil nil [61 118])
+            ("lfd.api.solver" include nil nil [119 155])
+            ("lfd.api.trajectory" include nil nil [156 217])
+            ("lfd.models.parametric_model" include nil nil [218 273])
+            ("lfd.api.feature" include nil nil [274 325])
+            ("agent.ioc.cost_model" include nil nil [327 369])
+            ("agent.ioc.features" include nil nil [370 434])
+            ("agent.ioc.create_traj_list" include nil nil [435 513])
+            ("train" function (:arguments 
+              ( ("df" variable nil (reparse-symbol function_parameters) [525 527])
+                ("num_iters" variable nil (reparse-symbol function_parameters) [529 538]))              ) nil [515 1919])
+            ("if" code nil nil [1920 2213]))          
+      :file "train.py"
+      :pointmax 2213
+      :fsize 2212
+      :lastmodtime '(24731 26525 861454 389000)
+      :unmatched-syntax nil)
+)
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!stl_risk_aware_ioc!agent!ioc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

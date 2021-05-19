@@ -1,0 +1,327 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("copy" include nil nil [1 32])
+            ("logging" include nil nil [33 47])
+            ("torch" include nil nil [48 60])
+            ("tqdm" include nil nil [61 84])
+            ("typing" include nil nil [85 123])
+            ("lfd.api.feature" include nil nil [125 163])
+            ("lfd.api.parameter" include nil nil [164 221])
+            ("lfd.api.solver" include nil nil [222 258])
+            ("lfd.api.trajectory" include nil nil [259 305])
+            ("lfd.models.constraint" include nil nil [306 350])
+            ("lfd.models.parametric_model" include nil nil [351 406])
+            ("LocallyOptimalMaxEnt" type
+               (:documentation "Set up and solve maximum entropy inverse optimal control: given expert trajectory examples,
+    find parameterization of a model M that yields a cost function P, that when solved, closely resembles
+    expert trajectories.
+
+    This implementation solves IOC assuming the deonstrations are locally-optimal.  The reward function is
+    approximated via second-order Taylor expansion; however the Hessian is subsequently dropped, to keep
+    the computation tractible.
+
+    Ref: S. Levine, V. Koltun, Continuous Inverse Optimal Control with Locally Optimal Examples. 
+    http://graphics.stanford.edu/projects/cioc/cioc.pdf
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\" 
+        Args:
+            model (object): A torch.nn.Module or subclass of ParametricModel containing the model to train.
+                The structure of the model is a mapping from a set of input features to a set of cost
+                terms.  This model must subsume a torch module that overrides the `grad` and `hessian` methods.
+            inputs_vect (list): batch-first input data, dimensions: num_batches x num_timesteps x input_size.
+                Can hold non-float values if the model is BlackBoxParametricModel, of dimension
+                num_batches x num_timesteps.
+            expert_trajectories (LfdTrajectories): batch-first output data in the form of a LfdTrajectories object.
+            num_iters (int): Number of training iterations.
+            learning_rate (float): The learning rate, which should be a positive value.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1308 2175])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2184 2202])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2211 2245])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2254 2280])
+                            ("print" code nil (reparse-symbol indented_block_body) [2290 2314])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2324 2353])
+                            ("if" code nil (reparse-symbol indented_block_body) [2362 2490])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2498 2544])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2554 2636])
+                            ("logging" code nil (reparse-symbol indented_block_body) [2701 2743]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1101 1105])
+                            ("ParametricModel" variable nil (reparse-symbol function_parameters) [1122 1137])
+                            ("LfdTrajectories" variable nil (reparse-symbol function_parameters) [1216 1231])
+                            ("int" variable nil (reparse-symbol function_parameters) [1252 1255])
+                            ("float" variable nil (reparse-symbol function_parameters) [1280 1285]))                          
+                        :documentation " 
+        Args:
+            model (object): A torch.nn.Module or subclass of ParametricModel containing the model to train.
+                The structure of the model is a mapping from a set of input features to a set of cost
+                terms.  This model must subsume a torch module that overrides the `grad` and `hessian` methods.
+            inputs_vect (list): batch-first input data, dimensions: num_batches x num_timesteps x input_size.
+                Can hold non-float values if the model is BlackBoxParametricModel, of dimension
+                num_batches x num_timesteps.
+            expert_trajectories (LfdTrajectories): batch-first output data in the form of a LfdTrajectories object.
+            num_iters (int): Number of training iterations.
+            learning_rate (float): The learning rate, which should be a positive value.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1079 2744])
+                    ("fit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2757 2761])
+                            ("Any" variable nil (reparse-symbol function_parameters) [2773 2776]))                          
+                        :documentation "Runs the main training loop.
+
+        Args:
+            kwargs (Any): Any static metadata to use for evaluating the model.
+        ")
+                        (reparse-symbol indented_block_body) [2749 4305]))                  
+                :type "class")
+                nil [409 4305])
+            ("MonteCarloMaxEnt" type
+               (:documentation "Set up and solve maximum entropy inverse optimal control: given expert trajectory examples,
+    find parameterization of a model M that yields a cost function P, that when solved, closely resembles
+    expert trajectories.
+
+    This implementation solves the IOC problem to global optimality, using Monte Carlo approximations
+    for the expectation operations.
+
+    Ref: M. Kuderer, S. Gulati, W. Burgard. Learning Driving Styles for Autonomous Vehicles from Demonstration. 
+    http://ais.informatik.uni-freiburg.de/publications/papers/kuderer15icra.pdf
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\" 
+        Args:
+            model (object): A torch.nn.Module or subclass of ParametricModel containing the model to train.
+                The structure of the model is a mapping from a set of input features to a set of cost
+                terms.
+            features (LfdFeatures): features considered for training. 
+            inputs_vect (list): batch-first input data, dimensions: num_batches x num_timesteps x input_size. 
+                Can hold non-float values if the model is BlackBoxParametricModel, of dimension
+                num_batches x num_timesteps.
+            expert_trajectories (LfdTrajectories): batch-first output data in the form of a LfdTrajectories object.
+            num_iters (int): Number of training iterations for the IOC outer loop.
+            inner_loop_num_iters (int): Number of training iterations for the inner loop.
+            learning_rate (float): The learning rate for the IOC outer loop, which should be a positive value.
+                Default: 0.1.
+            inner_loop_learning_rate (float): The learning rate for the inner loop, which should be a positive
+                value.  Default: 0.1.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [5254 6419])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6428 6446])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6455 6479])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6488 6511])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6520 6565])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6574 6600])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6609 6657])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6667 6696])
+                            ("if" code nil (reparse-symbol indented_block_body) [6705 6833])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6841 6880])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6889 6936])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6945 7001])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7010 7057])
+                            ("theta_params" variable nil (reparse-symbol indented_block_body) [7068 7163])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7229 7269])
+                            ("print" code nil (reparse-symbol indented_block_body) [7314 7331])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7473 7566])
+                            ("logging" code nil (reparse-symbol indented_block_body) [8087 8129]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4929 4933])
+                            ("ParametricModel" variable nil (reparse-symbol function_parameters) [4950 4965])
+                            ("LfdTrajectories" variable nil (reparse-symbol function_parameters) [5080 5095])
+                            ("int" variable nil (reparse-symbol function_parameters) [5116 5119])
+                            ("int" variable nil (reparse-symbol function_parameters) [5151 5154])
+                            ("float" variable nil (reparse-symbol function_parameters) [5179 5184])
+                            ("float" variable nil (reparse-symbol function_parameters) [5226 5231]))                          
+                        :documentation " 
+        Args:
+            model (object): A torch.nn.Module or subclass of ParametricModel containing the model to train.
+                The structure of the model is a mapping from a set of input features to a set of cost
+                terms.
+            features (LfdFeatures): features considered for training. 
+            inputs_vect (list): batch-first input data, dimensions: num_batches x num_timesteps x input_size. 
+                Can hold non-float values if the model is BlackBoxParametricModel, of dimension
+                num_batches x num_timesteps.
+            expert_trajectories (LfdTrajectories): batch-first output data in the form of a LfdTrajectories object.
+            num_iters (int): Number of training iterations for the IOC outer loop.
+            inner_loop_num_iters (int): Number of training iterations for the inner loop.
+            learning_rate (float): The learning rate for the IOC outer loop, which should be a positive value.
+                Default: 0.1.
+            inner_loop_learning_rate (float): The learning rate for the inner loop, which should be a positive
+                value.  Default: 0.1.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4907 8130])
+                    ("_fit_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8200 8204]))                          )
+                        (reparse-symbol indented_block_body) [8185 10760])
+                    ("fit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11041 11045])
+                            ("Any" variable nil (reparse-symbol function_parameters) [11057 11060]))                          
+                        :documentation "Runs the main training loop.
+
+        Args:
+            kwargs (Any): Any static metadata to use for evaluating the model.
+        ")
+                        (reparse-symbol indented_block_body) [11033 13564]))                  
+                :type "class")
+                nil [4307 13564])
+            ("MaxEntBehaviorCloning" type
+               (:documentation "Combines parameter regression (behavior cloning) with a MaxEnt outer loop.  Useful for situations
+    for training a parametric model in an IOC setting, where a parametric model is learned in the context
+    of a driver's attention.  Assumes the behavior cloning inner loop is a parametric dynamic model.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Args:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [14162 14191])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14200 14234])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14243 14291])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14300 14348])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14357 14385])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14394 14444])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14453 14491])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14500 14546])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14555 14587])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14597 14647])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14656 14701])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14711 14815]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13942 13946])
+                            ("Any" variable nil (reparse-symbol function_parameters) [13968 13971])
+                            ("int" variable nil (reparse-symbol function_parameters) [14079 14082])
+                            ("int" variable nil (reparse-symbol function_parameters) [14114 14117])
+                            ("float" variable nil (reparse-symbol function_parameters) [14142 14147])
+                            ("bool" variable nil (reparse-symbol function_parameters) [14177 14181]))                          
+                        :documentation "
+        Args:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13920 14860])
+                    ("fit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14922 14926]))                          )
+                        (reparse-symbol indented_block_body) [14914 17443]))                  
+                :type "class")
+                nil [13566 17443]))          
+      :file "inverse_control.py"
+      :pointmax 17587
+      :fsize 14966
+      :lastmodtime '(24731 26233 876211 254000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("lfd.api.output" include nil nil [15 48]))          
+      :file "solver.py"
+      :pointmax 49
+      :fsize 48
+      :lastmodtime '(24724 16334 412200 158000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("abc" include nil nil [1 36])
+            ("logging" include nil nil [37 51])
+            ("torch" include nil nil [52 64])
+            ("tqdm" include nil nil [65 88])
+            ("typing" include nil nil [89 127])
+            ("lfd.api.feature" include nil nil [129 167])
+            ("lfd.api.parameter" include nil nil [168 225])
+            ("lfd.api.trajectory" include nil nil [226 272])
+            ("lfd.models.parametric_model" include nil nil [273 328])
+            ("Policy" type
+               (:documentation "An abstract base class for a policy."
+                :superclasses ("ABC")
+                :members 
+                  ( ("evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [435 439])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [454 460])
+                            ("LfdTrajectories" variable nil (reparse-symbol function_parameters) [476 491]))                          
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [402 528]))                  
+                :type "class")
+                nil [331 528])
+            ("GradDescentPolicy" type
+               (:superclasses ("Policy")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\" 
+        Args:
+            model (object): A torch.nn.Module or subclass of ParametricModel containing the model to train.
+                The structure of the model is a mapping from a set of input features to a set of cost
+                terms.
+            features (LfdFeatures): features considered for training. 
+            num_iters (int): Number of training iterations for the inner loop.
+            learning_rate (float): The learning rate for the inner loop, which should be a positive
+                value.  Default: 0.1.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [706 1257])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1266 1284])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1293 1317])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1326 1349])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1358 1384])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1458 1529]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [589 593])
+                            ("ParametricModel" variable nil (reparse-symbol function_parameters) [602 617])
+                            ("int" variable nil (reparse-symbol function_parameters) [658 661])
+                            ("float" variable nil (reparse-symbol function_parameters) [678 683]))                          
+                        :documentation " 
+        Args:
+            model (object): A torch.nn.Module or subclass of ParametricModel containing the model to train.
+                The structure of the model is a mapping from a set of input features to a set of cost
+                terms.
+            features (LfdFeatures): features considered for training. 
+            num_iters (int): Number of training iterations for the inner loop.
+            learning_rate (float): The learning rate for the inner loop, which should be a positive
+                value.  Default: 0.1.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [567 1530])
+                    ("evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1548 1552])
+                            ("LfdParameters" variable nil (reparse-symbol function_parameters) [1562 1575])
+                            ("LfdTrajectories" variable nil (reparse-symbol function_parameters) [1591 1606]))                          
+                        :documentation " 
+        Args:
+            thetas (LfdParameters): A tensor of theta values, of dimension num_features.
+            trajectories (LfdTrajectories): batch-first output data in the form of a LfdTrajectories object.
+        ")
+                        (reparse-symbol indented_block_body) [1535 4150]))                  
+                :type "class")
+                nil [530 4150]))          
+      :file "policy.py"
+      :pointmax 4150
+      :fsize 4149
+      :lastmodtime '(24732 31540 647059 997000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!stl_risk_aware_ioc!external_libs!LfD!lfd!algorithms!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

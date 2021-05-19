@@ -1,0 +1,182 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"
+
+Extended kalman filter (EKF) localization sample
+
+author: Atsushi Sakai (@Atsushi_twi)
+
+\"\"\"" code nil nil [1 97])
+            ("math" include nil nil [99 110])
+            ("matplotlib.pyplot" include nil nil [112 143])
+            ("numpy" include nil nil [144 162])
+            ("scipy.spatial.transform" include nil nil [163 214])
+            ("Q" variable nil nil [248 433])
+            ("R" variable nil nil [462 490])
+            ("INPUT_NOISE" variable nil nil [555 606])
+            ("GPS_NOISE" variable nil nil [607 643])
+            ("DT" variable nil nil [645 653])
+            ("SIM_TIME" variable nil nil [671 686])
+            ("show_animation" variable nil nil [711 732])
+            ("calc_input" function nil nil [735 851])
+            ("observation" function (:arguments 
+              ( ("xTrue" variable nil (reparse-symbol function_parameters) [869 874])
+                ("xd" variable nil (reparse-symbol function_parameters) [876 878])
+                ("u" variable nil (reparse-symbol function_parameters) [880 881]))              ) nil [853 1151])
+            ("motion_model" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1170 1171])
+                ("u" variable nil (reparse-symbol function_parameters) [1173 1174]))              ) nil [1153 1504])
+            ("observation_model" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1528 1529]))              ) nil [1506 1630])
+            ("jacob_f" function
+               (:documentation "
+    Jacobian of Motion Model
+
+    motion model
+    x_{t+1} = x_t+v*dt*cos(yaw)
+    y_{t+1} = y_t+v*dt*sin(yaw)
+    yaw_{t+1} = yaw_t+omega*dt
+    v_{t+1} = v{t}
+    so
+    dx/dyaw = -v*dt*sin(yaw)
+    dx/dv = dt*cos(yaw)
+    dy/dyaw = v*dt*cos(yaw)
+    dy/dv = dt*sin(yaw)
+    "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [1644 1645])
+                    ("u" variable nil (reparse-symbol function_parameters) [1647 1648]))                  )
+                nil [1632 2199])
+            ("jacob_h" function nil nil [2201 2337])
+            ("ekf_estimation" function (:arguments 
+              ( ("xEst" variable nil (reparse-symbol function_parameters) [2358 2362])
+                ("PEst" variable nil (reparse-symbol function_parameters) [2364 2368])
+                ("z" variable nil (reparse-symbol function_parameters) [2370 2371])
+                ("u" variable nil (reparse-symbol function_parameters) [2373 2374]))              ) nil [2339 2739])
+            ("plot_covariance_ellipse" function (:arguments 
+              ( ("xEst" variable nil (reparse-symbol function_parameters) [2769 2773])
+                ("PEst" variable nil (reparse-symbol function_parameters) [2775 2779]))              ) nil [2741 3467])
+            ("main" function nil nil [3469 4862])
+            ("if" code nil nil [4864 4901]))          
+      :file "extended_kalman_filter.py"
+      :pointmax 4901
+      :fsize 4900
+      :lastmodtime '(24704 46040 956107 503000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("utils.utils" include nil nil [30 84])
+            ("StlRiskAgent" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [158 409])
+                            ("self" code nil (reparse-symbol indented_block_body) [418 444])
+                            ("self" variable nil (reparse-symbol indented_block_body) [490 566])
+                            ("self" variable nil (reparse-symbol indented_block_body) [616 696]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [132 136])
+                            ("config" variable nil (reparse-symbol function_parameters) [138 144]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [119 697])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [720 724]))                          )
+                        (reparse-symbol indented_block_body) [710 1011])
+                    ("get_render_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1045 1049])
+                            ("observation" variable nil (reparse-symbol function_parameters) [1051 1062]))                          )
+                        (reparse-symbol indented_block_body) [1025 1736])
+                    ("update_traj_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1770 1774])
+                            ("observation" variable nil (reparse-symbol function_parameters) [1776 1787]))                          )
+                        (reparse-symbol indented_block_body) [1749 3853])
+                    ("update_risk_model_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3921 3925])
+                            ("obs" variable nil (reparse-symbol function_parameters) [3927 3930]))                          )
+                        (reparse-symbol indented_block_body) [3893 4750])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4771 4775])
+                            ("observation" variable nil (reparse-symbol function_parameters) [4777 4788]))                          )
+                        (reparse-symbol indented_block_body) [4756 5433]))                  
+                :type "class")
+                nil [86 5433]))          
+      :file "stl_risk_agent.py"
+      :pointmax 5433
+      :fsize 5432
+      :lastmodtime '(24732 52494 633754 88000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("matplotlib.pyplot" include nil nil [1 32])
+            ("numpy" include nil nil [33 51])
+            ("tqdm" include nil nil [52 63])
+            ("torch" include nil nil [64 76])
+            ("utils.utils" include nil nil [78 164])
+            ("lfd.algorithms.policy" include nil nil [166 217])
+            ("lfd.api.feature" include nil nil [218 269])
+            ("agent.ioc.features" include nil nil [270 334])
+            ("lfd.api.trajectory" include nil nil [335 396])
+            ("lfd.api.parameter" include nil nil [397 454])
+            ("lfd.models.parametric_model" include nil nil [455 510])
+            ("agent.ioc.cost_model" include nil nil [511 553])
+            ("agent.stl_risk_agent" include nil nil [554 599])
+            ("agent.risk_models.stl_risk_net" include nil nil [600 653])
+            ("get_trajectories_from_env" function (:arguments 
+              ( ("obs" variable nil (reparse-symbol function_parameters) [685 688])
+                ("agent_risk_list" variable nil (reparse-symbol function_parameters) [690 705]))              ) nil [655 1918])
+            ("Policy" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1913 1964])
+                            ("self" code nil (reparse-symbol indented_block_body) [1973 1999]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1959 1963])
+                            ("config" variable nil (reparse-symbol function_parameters) [1965 1971]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1946 2072])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2096 2100])
+                            ("obs" variable nil (reparse-symbol function_parameters) [2102 2105])
+                            ("agent_risk_list" variable nil (reparse-symbol function_parameters) [2107 2122]))                          )
+                        (reparse-symbol indented_block_body) [2081 5484]))                  
+                :type "class")
+                nil [1919 5484])
+            ("rollout" function (:arguments 
+              ( ("scene_name" variable nil (reparse-symbol function_parameters) [5502 5512])
+                ("env" variable nil (reparse-symbol function_parameters) [5513 5516])
+                ("theta" variable nil (reparse-symbol function_parameters) [5517 5522]))              ) nil [5490 6994]))          
+      :file "rollout.py"
+      :pointmax 6994
+      :fsize 6993
+      :lastmodtime '(24732 52749 563545 34000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!stl_risk_aware_ioc!agent!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

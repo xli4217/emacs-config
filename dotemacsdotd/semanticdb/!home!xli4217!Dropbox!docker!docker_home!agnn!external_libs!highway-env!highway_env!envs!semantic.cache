@@ -1,0 +1,167 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("typing" include nil nil [20 44])
+            ("gym.envs.registration" include nil nil [45 87])
+            ("highway_env" include nil nil [89 118])
+            ("highway_env.envs.common.abstract" include nil nil [119 175])
+            ("highway_env.envs.common.action" include nil nil [176 225])
+            ("highway_env.road.road" include nil nil [226 277])
+            ("highway_env.vehicle.controller" include nil nil [278 338])
+            ("HighwayEnv" type
+               (:documentation "
+    A highway driving environment.
+
+    The vehicle is driving on a straight highway with several lanes, and is rewarded for reaching a high speed,
+    staying on the rightmost lanes and avoiding collisions.
+    "
+                :superclasses ("AbstractEnv")
+                :members 
+                  ( ("float" variable nil (reparse-symbol indented_block_body) [620 631])
+                    ("\"\"\"The reward received when driving on the right-most lanes, linearly mapped to zero for other lanes.\"\"\"" code nil (reparse-symbol indented_block_body) [636 740])
+                    ("float" variable nil (reparse-symbol indented_block_body) [765 776])
+                    ("\"\"\"The reward received when driving at full speed, linearly mapped to zero for lower speeds according to config[\"reward_speed_range\"].\"\"\"" code nil (reparse-symbol indented_block_body) [781 918])
+                    ("float" variable nil (reparse-symbol indented_block_body) [944 953])
+                    ("\"\"\"The reward received at each lane change action.\"\"\"" code nil (reparse-symbol indented_block_body) [958 1011]))                  
+                :type "class")
+                nil [341 4596])
+            ("register" code nil nil [4598 4677]))          
+      :file "highway_env.py"
+      :pointmax 4678
+      :fsize 4677
+      :lastmodtime '(24484 61841 463893 619000)
+      :unmatched-syntax '((INDENT_BLOCK 4491 . 4596) (NEWLINE 4490 . 4491) (COLON 4489 . 4490) (MINUS 4481 . 4482) (GT 4482 . 4483) (NAME 4468 . 4474) (COLON 4474 . 4475) (INDENT_BLOCK 4195 . 4447) (NEWLINE 4194 . 4195) (COLON 4193 . 4194) (MINUS 4186 . 4187) (GT 4187 . 4188) (INDENT_BLOCK 3119 . 4158) (NEWLINE 3118 . 3119) (COLON 3117 . 3118) (MINUS 3109 . 3110) (GT 3110 . 3111) (NAME 3093 . 3099) (COLON 3099 . 3100) (INDENT_BLOCK 2157 . 3070) (NEWLINE 2156 . 2157) (COLON 2155 . 2156) (MINUS 2148 . 2149) (GT 2149 . 2150) (INDENT_BLOCK 1855 . 2116) (NEWLINE 1854 . 1855) (COLON 1853 . 1854) (MINUS 1846 . 1847) (GT 1847 . 1848) (INDENT_BLOCK 1758 . 1818) (NEWLINE 1757 . 1758) (COLON 1756 . 1757) (MINUS 1749 . 1750) (GT 1750 . 1751) (INDENT_BLOCK 1051 . 1727) (NEWLINE 1050 . 1051) (COLON 1049 . 1050) (DEF 1017 . 1020) (MINUS 1042 . 1043) (GT 1043 . 1044) (NAME 924 . 942) (COLON 942 . 943) (NAME 746 . 763) (COLON 763 . 764) (NAME 601 . 618) (COLON 618 . 619)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 31])
+            ("gym.envs.registration" include nil nil [33 75])
+            ("numpy" include nil nil [76 94])
+            ("highway_env" include nil nil [96 125])
+            ("highway_env.envs.common.abstract" include nil nil [126 201])
+            ("highway_env.road.lane" include nil nil [202 286])
+            ("highway_env.road.regulation" include nil nil [287 340])
+            ("highway_env.road.road" include nil nil [341 386])
+            ("highway_env.vehicle.kinematics" include nil nil [387 437])
+            ("IntersectionEnv" type
+               (:superclasses ("AbstractEnv")
+                :members 
+                  ( ("float" code nil (reparse-symbol indented_block_body) [498 508])
+                    ("float" variable nil (reparse-symbol indented_block_body) [532 541])
+                    ("float" variable nil (reparse-symbol indented_block_body) [562 571])
+                    ("Dict" variable nil (reparse-symbol indented_block_body) [586 670])
+                    ("ACTIONS_INDEXES" variable nil (reparse-symbol indented_block_body) [675 727]))                  
+                :type "class")
+                nil [440 11602])
+            ("MultiAgentIntersectionEnv" type
+               (:superclasses ("IntersectionEnv")
+                :type "class")
+                nil [11604 12307])
+            ("TupleMultiAgentIntersectionEnv" variable nil nil [12309 12386])
+            ("register" code nil nil [12389 12478])
+            ("register" code nil nil [12480 12591])
+            ("register" code nil nil [12593 12709]))          
+      :file "intersection_env.py"
+      :pointmax 12710
+      :fsize 12709
+      :lastmodtime '(24484 61886 219860 908000)
+      :unmatched-syntax '((INDENT_BLOCK 11708 . 12307) (NEWLINE 11707 . 11708) (COLON 11706 . 11707) (AT 11658 . 11659) (MINUS 11699 . 11700) (GT 11700 . 11701) (INDENT_BLOCK 11490 . 11602) (NEWLINE 11489 . 11490) (COLON 11488 . 11489) (MINUS 11480 . 11481) (GT 11481 . 11482) (NAME 11467 . 11473) (COLON 11473 . 11474) (INDENT_BLOCK 11261 . 11446) (NEWLINE 11260 . 11261) (COLON 11259 . 11260) (MINUS 11252 . 11253) (GT 11253 . 11254) (NAME 11225 . 11238) (COLON 11238 . 11239) (NAME 11207 . 11214) (COLON 11214 . 11215) (INDENT_BLOCK 10706 . 11180) (NEWLINE 10705 . 10706) (COLON 10704 . 10705) (MINUS 10697 . 10698) (GT 10698 . 10699) (INDENT_BLOCK 9772 . 10666) (NEWLINE 9771 . 9772) (COLON 9770 . 9771) (MINUS 9763 . 9764) (GT 9764 . 9765) (NAME 9736 . 9747) (COLON 9747 . 9748) (NAME 9681 . 9698) (COLON 9698 . 9699) (NAME 9629 . 9644) (COLON 9644 . 9645) (NAME 9574 . 9592) (COLON 9592 . 9593) (NAME 9526 . 9538) (COLON 9538 . 9539) (INDENT_BLOCK 7278 . 9473) (NEWLINE 7277 . 7278) (COLON 7276 . 7277) (MINUS 7269 . 7270) (GT 7270 . 7271) (NAME 7247 . 7257) (COLON 7257 . 7258) (INDENT_BLOCK 3988 . 7217) (NEWLINE 3987 . 3988) (COLON 3986 . 3987) (MINUS 3979 . 3980) (GT 3980 . 3981) (INDENT_BLOCK 3521 . 3953) (NEWLINE 3520 . 3521) (COLON 3519 . 3520) (MINUS 3480 . 3481) (GT 3481 . 3482) (NAME 3467 . 3473) (COLON 3473 . 3474) (INDENT_BLOCK 3355 . 3447) (NEWLINE 3354 . 3355) (COLON 3353 . 3354) (MINUS 3346 . 3347) (GT 3347 . 3348) (INDENT_BLOCK 3062 . 3324) (NEWLINE 3061 . 3062) (COLON 3060 . 3061) (MINUS 3053 . 3054) (GT 3054 . 3055) (NAME 3035 . 3042) (COLON 3042 . 3043) (INDENT_BLOCK 2742 . 3001) (NEWLINE 2741 . 2742) (COLON 2740 . 2741) (MINUS 2733 . 2734) (GT 2734 . 2735) (INDENT_BLOCK 2295 . 2705) (NEWLINE 2294 . 2295) (COLON 2293 . 2294) (MINUS 2285 . 2286) (GT 2286 . 2287) (NAME 2267 . 2274) (COLON 2274 . 2275) (NAME 2254 . 2260) (COLON 2260 . 2261) (INDENT_BLOCK 2080 . 2225) (NEWLINE 2038 . 2039) (COLON 2037 . 2038) (MINUS 2029 . 2030) (GT 2030 . 2031) (NAME 2016 . 2022) (COLON 2022 . 2023) (INDENT_BLOCK 783 . 1993) (NEWLINE 782 . 783) (COLON 781 . 782) (AT 733 . 734) (MINUS 774 . 775) (GT 775 . 776) (NAME 577 . 584) (COLON 584 . 585) (NAME 546 . 560) (COLON 560 . 561) (NAME 513 . 530) (COLON 530 . 531) (NAME 480 . 496) (COLON 496 . 497)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("gym.envs.registration" include nil nil [1 43])
+            ("numpy" include nil nil [44 62])
+            ("highway_env" include nil nil [64 93])
+            ("highway_env.envs" include nil nil [94 133])
+            ("highway_env.road.lane" include nil nil [134 190])
+            ("highway_env.road.road" include nil nil [191 242])
+            ("highway_env.vehicle.kinematics" include nil nil [243 293])
+            ("highway_env.road.objects" include nil nil [294 339])
+            ("SummonEnv" type
+               (:documentation "
+    A continuous control environment.
+
+    It implements a reach-type task, where the agent observes their position and speed and must
+    control their acceleration and steering so as to reach a given goal.
+
+    Credits to Vinny Ruia for the idea and initial implementation.
+    "
+                :superclasses ("ParkingEnv")
+                :members 
+                  ( ("COLLISION_REWARD" code nil (reparse-symbol indented_block_body) [669 690]))                  
+                :type "class")
+                nil [342 5021])
+            ("SummonEnvActionRepeat" type
+               (:superclasses ("SummonEnv")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [5095 5113])
+                            ("self" code nil (reparse-symbol indented_block_body) [5122 5161]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5080 5084]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [5067 5162]))                  
+                :type "class")
+                nil [5023 5162])
+            ("register" code nil nil [5164 5267])
+            ("register" code nil nil [5269 5396]))          
+      :file "summon_env.py"
+      :pointmax 5397
+      :fsize 5396
+      :lastmodtime '(24484 61841 463893 619000)
+      :unmatched-syntax '((INDENT_BLOCK 4475 . 5021) (NEWLINE 4474 . 4475) (COLON 4473 . 4474) (MINUS 4465 . 4466) (GT 4466 . 4467) (NAME 4449 . 4450) (COLON 4450 . 4451) (NAME 4437 . 4441) (COLON 4441 . 4442) (PERIOD 4427 . 4428) (NAME 4411 . 4423) (COLON 4423 . 4424) (PERIOD 4401 . 4402) (NAME 4384 . 4397) (COLON 4397 . 4398) (INDENT_BLOCK 2676 . 4354) (NEWLINE 2675 . 2676) (COLON 2674 . 2675) (MINUS 2667 . 2668) (GT 2668 . 2669) (NAME 2633 . 2651) (COLON 2651 . 2652) (INDENT_BLOCK 1011 . 2601) (NEWLINE 1010 . 1011) (COLON 1009 . 1010) (MINUS 1002 . 1003) (GT 1003 . 1004) (NAME 985 . 990) (COLON 990 . 991) (INDENT_BLOCK 746 . 957) (NEWLINE 745 . 746) (COLON 744 . 745) (AT 696 . 697) (MINUS 737 . 738) (GT 738 . 739) (INDENT_BLOCK 1011 . 2601) (NEWLINE 1010 . 1011) (COLON 1009 . 1010) (MINUS 1002 . 1003) (GT 1003 . 1004) (NAME 985 . 990) (COLON 990 . 991) (INDENT_BLOCK 746 . 957) (NEWLINE 745 . 746) (COLON 744 . 745) (AT 696 . 697) (MINUS 737 . 738) (GT 738 . 739) (INDENT_BLOCK 4475 . 5021) (NEWLINE 4474 . 4475) (COLON 4473 . 4474) (MINUS 4465 . 4466) (GT 4466 . 4467) (NAME 4449 . 4450) (COLON 4450 . 4451) (NAME 4437 . 4441) (COLON 4441 . 4442) (PERIOD 4427 . 4428) (NAME 4411 . 4423) (COLON 4423 . 4424) (PERIOD 4401 . 4402) (NAME 4384 . 4397) (COLON 4397 . 4398) (INDENT_BLOCK 2676 . 4354) (NEWLINE 2675 . 2676) (COLON 2674 . 2675) (MINUS 2667 . 2668) (GT 2668 . 2669) (NAME 2633 . 2651) (COLON 2651 . 2652) (INDENT_BLOCK 1011 . 2601) (NEWLINE 1010 . 1011) (COLON 1009 . 1010) (MINUS 1002 . 1003) (GT 1003 . 1004) (NAME 985 . 990) (COLON 990 . 991) (INDENT_BLOCK 746 . 957) (NEWLINE 745 . 746) (COLON 744 . 745) (AT 696 . 697) (MINUS 737 . 738) (GT 738 . 739)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("gym.envs.registration" include nil nil [20 62])
+            ("highway_env" include nil nil [64 93])
+            ("highway_env.envs.common.abstract" include nil nil [94 150])
+            ("highway_env.road.lane" include nil nil [151 207])
+            ("highway_env.road.road" include nil nil [208 259])
+            ("highway_env.vehicle.controller" include nil nil [260 313])
+            ("TwoWayEnv" type
+               (:documentation "
+    A risk management task: the agent is driving on a two-way lane with icoming traffic.
+
+    It must balance making progress by overtaking and ensuring safety.
+
+    These conflicting objectives are implemented by a reward signal and a constraint signal,
+    in the CMDP/BMDP framework.
+    "
+                :superclasses ("AbstractEnv")
+                :members 
+                  ( ("float" variable nil (reparse-symbol indented_block_body) [673 682])
+                    ("float" variable nil (reparse-symbol indented_block_body) [709 718])
+                    ("float" variable nil (reparse-symbol indented_block_body) [741 752])
+                    ("float" variable nil (reparse-symbol indented_block_body) [776 787])
+                    ("_make_road" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2217 2221])
+                            ("length" variable nil (reparse-symbol function_parameters) [2223 2229]))                          
+                        :documentation "
+        Make a road composed of a two-way road.
+
+        :return: the road
+        ")
+                        (reparse-symbol indented_block_body) [2202 3048]))                  
+                :type "class")
+                nil [316 4641])
+            ("register" code nil nil [4643 4746]))          
+      :file "two_way_env.py"
+      :pointmax 4747
+      :fsize 4746
+      :lastmodtime '(24484 61841 463893 619000)
+      :unmatched-syntax '((INDENT_BLOCK 3087 . 4641) (NEWLINE 3086 . 3087) (COLON 3085 . 3086) (DEF 3053 . 3056) (MINUS 3078 . 3079) (GT 3079 . 3080) (INDENT_BLOCK 2141 . 2197) (NEWLINE 2140 . 2141) (COLON 2139 . 2140) (MINUS 2126 . 2127) (GT 2127 . 2128) (INDENT_BLOCK 1903 . 2104) (NEWLINE 1902 . 1903) (COLON 1901 . 1902) (MINUS 1893 . 1894) (GT 1894 . 1895) (NAME 1880 . 1886) (COLON 1886 . 1887) (INDENT_BLOCK 1742 . 1859) (NEWLINE 1741 . 1742) (COLON 1740 . 1741) (MINUS 1733 . 1734) (GT 1734 . 1735) (INDENT_BLOCK 1189 . 1705) (NEWLINE 1188 . 1189) (COLON 1187 . 1188) (MINUS 1179 . 1180) (GT 1180 . 1181) (NAME 1166 . 1172) (COLON 1172 . 1173) (INDENT_BLOCK 843 . 1143) (NEWLINE 842 . 843) (COLON 841 . 842) (AT 793 . 794) (MINUS 834 . 835) (GT 835 . 836) (NAME 757 . 774) (COLON 774 . 775) (NAME 723 . 739) (COLON 739 . 740) (NAME 687 . 707) (COLON 707 . 708) (NAME 655 . 671) (COLON 671 . 672))))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!external_libs!highway-env!highway_env!envs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

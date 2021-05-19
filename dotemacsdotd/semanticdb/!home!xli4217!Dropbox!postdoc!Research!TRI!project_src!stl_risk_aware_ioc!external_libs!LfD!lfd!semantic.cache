@@ -1,0 +1,87 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("logging" include nil nil [1 15])
+            ("matplotlib.pyplot" include nil nil [16 47])
+            ("numpy" include nil nil [48 66])
+            ("torch" include nil nil [67 79])
+            ("tqdm" include nil nil [80 103])
+            ("typing" include nil nil [104 142])
+            ("lfd.models.black_box_parametric_model" include nil nil [144 217])
+            ("lfd.models.parametric_model" include nil nil [218 273])
+            ("Trainer" type
+               (:documentation "Implements a basic training loop for fitting parameters of a parametric model, 
+    with or without additional constraints.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\" 
+        Args:
+            model (object): A torch.nn.Module or subclass of ParametricModel containing the model to train.
+            inputs_vect (list): batch-first input data,
+                dimensions: num_batches x num_timesteps x input_size.  Can hold non-float
+                values if the model is BlackBoxParametricModel, of dimension num_batches x num_timesteps.
+            outputs_vect (list): batch-first output data, dimensions: num_batches x num_timesteps.
+            reconstruction_loss (object): A loss function torch.nn object.
+            num_iters (int): Number of training iterations.
+            learning_rate (float): The learning rate, which should be a positive value.
+            constraint_models (object): (Optional) A constraint model of type Constraint to enforce during
+                training.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [781 1626])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1635 1653])
+                            ("self" code nil (reparse-symbol indented_block_body) [1742 1765])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1844 1886])
+                            ("if" code nil (reparse-symbol indented_block_body) [1980 2428])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2436 2548])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2558 2592])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2602 2648])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2658 2727])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2736 2762])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2772 2792])
+                            ("logging" code nil (reparse-symbol indented_block_body) [2802 2844]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [457 461])
+                            ("ParametricModel" variable nil (reparse-symbol function_parameters) [478 493])
+                            ("Loss" variable nil (reparse-symbol function_parameters) [622 626])
+                            ("int" variable nil (reparse-symbol function_parameters) [647 650])
+                            ("float" variable nil (reparse-symbol function_parameters) [675 680])
+                            ("None" variable nil (reparse-symbol function_parameters) [760 764]))                          
+                        :documentation " 
+        Args:
+            model (object): A torch.nn.Module or subclass of ParametricModel containing the model to train.
+            inputs_vect (list): batch-first input data,
+                dimensions: num_batches x num_timesteps x input_size.  Can hold non-float
+                values if the model is BlackBoxParametricModel, of dimension num_batches x num_timesteps.
+            outputs_vect (list): batch-first output data, dimensions: num_batches x num_timesteps.
+            reconstruction_loss (object): A loss function torch.nn object.
+            num_iters (int): Number of training iterations.
+            learning_rate (float): The learning rate, which should be a positive value.
+            constraint_models (object): (Optional) A constraint model of type Constraint to enforce during
+                training.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [435 2845])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2860 2864])
+                            ("Any" variable nil (reparse-symbol function_parameters) [2876 2879]))                          
+                        :documentation "Runs the main training loop.")
+                        (reparse-symbol indented_block_body) [2850 4433]))                  
+                :type "class")
+                nil [276 4433]))          
+      :file "trainer.py"
+      :pointmax 4433
+      :fsize 4432
+      :lastmodtime '(24724 16334 428201 297000)
+      :unmatched-syntax '((NAME 3568 . 3580) (IF 3601 . 3603) (ELSE 3644 . 3648) (EXPONENT 2866 . 2868) (COLON 2874 . 2875) (NAME 1662 . 1666) (IF 1694 . 1696) (ELSE 1737 . 1741) (ASSIGN 758 . 759) (BRACK_BLOCK 723 . 757) (NAME 696 . 713) (COLON 713 . 714) (NAME 660 . 673) (COLON 673 . 674) (NAME 636 . 645) (COLON 645 . 646) (PERIOD 621 . 622) (PERIOD 618 . 619) (COLON 611 . 612) (COMMA 582 . 583) (BRACK_BLOCK 569 . 582) (COLON 563 . 564) (COMMA 541 . 542) (BRACK_BLOCK 524 . 541) (NAME 503 . 514) (COLON 514 . 515) (NAME 471 . 476) (COLON 476 . 477))))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!stl_risk_aware_ioc!external_libs!LfD!lfd!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

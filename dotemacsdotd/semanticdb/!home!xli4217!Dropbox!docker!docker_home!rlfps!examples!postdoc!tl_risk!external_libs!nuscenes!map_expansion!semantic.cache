@@ -1,0 +1,158 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("json" include nil nil [178 189])
+            ("os" include nil nil [190 199])
+            ("random" include nil nil [200 213])
+            ("typing" include nil nil [214 267])
+            ("cv2" include nil nil [269 279])
+            ("descartes" include nil nil [280 296])
+            ("matplotlib.gridspec" include nil nil [297 335])
+            ("matplotlib.pyplot" include nil nil [336 367])
+            ("numpy" include nil nil [368 386])
+            ("PIL" include nil nil [387 408])
+            ("matplotlib.axes" include nil nil [409 441])
+            ("matplotlib.figure" include nil nil [442 478])
+            ("matplotlib.patches" include nil nil [479 526])
+            ("mpl_toolkits.axes_grid1.inset_locator" include nil nil [527 587])
+            ("pyquaternion" include nil nil [588 623])
+            ("shapely" include nil nil [624 652])
+            ("shapely.geometry" include nil nil [653 727])
+            ("tqdm" include nil nil [728 749])
+            ("nuscenes.nuscenes" include nil nil [751 789])
+            ("nuscenes.utils.geometry_utils" include nil nil [790 843])
+            ("nuscenes.map_expansion.arcline_path_utils" include nil nil [844 926])
+            ("plt" code nil nil [985 1019])
+            ("Geometry" variable nil nil [1074 1111])
+            ("NuScenesMap" type
+               (:documentation "
+    NuScenesMap database class for querying and retrieving information from the semantic maps.
+    Before using this class please use the provided tutorial `map_expansion_tutorial.ipynb`.
+
+    Below you can find the map origins (south eastern corner, in [lat, lon]) for each of the 4 maps in nuScenes:
+    boston-seaport: [42.336849169438615, -71.05785369873047]
+    singapore-onenorth: [1.2882100868743724, 103.78475189208984]
+    singapore-hollandvillage: [1.2993652317780957, 103.78217697143555]
+    singapore-queenstown: [1.2782562240223188, 103.76741409301758]
+
+    The dimensions of the maps are as follows ([width, height] in meters):
+    singapore-onenorth: [1585.6, 2025.0]
+    singapore-hollandvillage: [2808.3, 2922.9]
+    singapore-queenstown: [3228.6, 3687.1]
+    boston-seaport: [2979.5, 2118.1]
+    The rasterized semantic maps (e.g. singapore-onenorth.png) published with nuScenes v1.0 have a scale of 10px/m,
+    hence the above numbers are the image dimensions divided by 10.
+
+    We use the same WGS 84 Web Mercator (EPSG:3857) projection as Google Maps/Earth.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Loads the layers, create reverse indices and shortcuts, initializes the explorer class.
+        :param dataroot: Path to the layers in the form of a .json file.
+        :param map_name: Which map out of `singapore-onenorth`, `singepore-hollandvillage`, `singapore-queenstown`,
+        `boston-seaport` that we want to load.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2372 2719])
+                            ("assert" code nil (reparse-symbol indented_block_body) [2728 2839])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2849 2873])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2882 2906])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2916 3002])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3012 3063])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3168 3360])
+                            ("self" code nil (reparse-symbol indented_block_body) [3451 3534])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3643 3725])
+                            ("self" code nil (reparse-symbol indented_block_body) [3734 3828])
+                            ("self" code nil (reparse-symbol indented_block_body) [3837 3939])
+                            ("with" code nil (reparse-symbol indented_block_body) [3949 4030])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4039 4086])
+                            ("self" code nil (reparse-symbol indented_block_body) [4095 4114])
+                            ("self" code nil (reparse-symbol indented_block_body) [4123 4145])
+                            ("self" code nil (reparse-symbol indented_block_body) [4154 4176])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4186 4227])
+                            ("if" code nil (reparse-symbol indented_block_body) [4310 4440])
+                            ("if" code nil (reparse-symbol indented_block_body) [4448 4656]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2246 2250])
+                            ("str" variable nil (reparse-symbol function_parameters) [2279 2282])
+                            ("str" variable nil (reparse-symbol function_parameters) [2335 2338]))                          
+                        :documentation "
+        Loads the layers, create reverse indices and shortcuts, initializes the explorer class.
+        :param dataroot: Path to the layers in the form of a .json file.
+        :param map_name: Which map out of `singapore-onenorth`, `singepore-hollandvillage`, `singapore-queenstown`,
+        `boston-seaport` that we want to load.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2233 4656]))                  
+                :type "class")
+                nil [1114 35908])
+            ("NuScenesMapExplorer" type
+               (:documentation " Helper class to explore the nuScenes map data. "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param map_api: NuScenesMap database class.
+        :param representative_layers: These are the layers that we feel are representative of the whole mapping data.
+        :param color_map: Color map.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [36192 36414])
+                            ("if" code nil (reparse-symbol indented_block_body) [36459 37313])
+                            ("self" variable nil (reparse-symbol indented_block_body) [37322 37344])
+                            ("self" variable nil (reparse-symbol indented_block_body) [37353 37403])
+                            ("self" variable nil (reparse-symbol indented_block_body) [37412 37438])
+                            ("self" variable nil (reparse-symbol indented_block_body) [37448 37495])
+                            ("self" variable nil (reparse-symbol indented_block_body) [37504 37525])
+                            ("self" variable nil (reparse-symbol indented_block_body) [37534 37581])
+                            ("self" variable nil (reparse-symbol indented_block_body) [37590 37611])
+                            ("self" code nil (reparse-symbol indented_block_body) [37620 37728]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36013 36017])
+                            ("NuScenesMap" variable nil (reparse-symbol function_parameters) [36045 36056])
+                            ("dict" variable nil (reparse-symbol function_parameters) [36177 36181]))                          
+                        :documentation "
+        :param map_api: NuScenesMap database class.
+        :param representative_layers: These are the layers that we feel are representative of the whole mapping data.
+        :param color_map: Color map.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [36000 37736])
+                    ("_clip_points_behind_camera" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("points" variable nil (reparse-symbol function_parameters) [66656 66662])
+                            ("float" variable nil (reparse-symbol function_parameters) [66676 66681]))                          
+                        :documentation "
+        Perform clipping on polygons that are partially behind the camera.
+        This method is necessary as the projection does not work for points behind the camera.
+        Hence we compute the line between the point and the camera and follow that line until we hit the near plane of
+        the camera. Then we use that point.
+        :param points: <np.float32: 3, n> Matrix of points, where each point (x, y, z) is along each column.
+        :param near_plane: If we set the near_plane distance of the camera to 0 then some points will project to
+            infinity. Therefore we need to clip these points at the near plane.
+        :return: The clipped version of the polygon. This may have fewer points than the original polygon if some lines
+            were entirely behind the polygon.
+        ")
+                        (reparse-symbol indented_block_body) [66607 69812]))                  
+                :type "class")
+                nil [35910 101661]))          
+      :file "map_api.py"
+      :pointmax 101661
+      :fsize 101660
+      :lastmodtime '(24384 17416 507609 303000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "arcline_path_utils.py"
+      :fsize 9197
+      :lastmodtime '(24384 16333 195051 6000)))
+  :file "!home!xli4217!Dropbox!docker!docker_home!rlfps!examples!postdoc!tl_risk!external_libs!nuscenes!map_expansion!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

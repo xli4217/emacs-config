@@ -1,0 +1,762 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [25 37])
+            ("numpy" include nil nil [38 56])
+            ("os" include nil nil [57 66])
+            ("sys" include nil nil [67 77])
+            ("'''
+Important information:
+- Assume inputs are already reversed, but user does not need to worry about the indexing.
+- \"pscale\" stands for \"predicate scale\" (not the scale used in maxish and minish)
+- \"scale\" is the scale used in maxish and minish which Always, Eventually, Until, and Then uses.
+- \"time\" variable when computing robustness: time=0 means the current time, t=1 means next time step. The reversal of the trace is accounted for inside the function, the user does not need to worry about this
+- must specify subformula (no default string value)
+'''" code nil nil [155 715])
+            ("LARGE_NUMBER" variable nil nil [956 974])
+            ("tensor_to_str" function (:arguments 
+              ( ("tensor" variable nil (reparse-symbol function_parameters) [994 1000]))              ) nil [976 1294])
+            ("convert_to_input_values" function (:arguments 
+              ( ("inputs" variable nil (reparse-symbol function_parameters) [1323 1329]))              ) nil [1295 2105])
+            ("Maxish" type
+               (:superclasses ("torch.nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [2194 2224])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2233 2255]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2159 2163])
+                            ("name" variable nil (reparse-symbol function_parameters) [2165 2169]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2146 2257])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2274 2278])
+                            ("x" variable nil (reparse-symbol function_parameters) [2280 2281])
+                            ("scale" variable nil (reparse-symbol function_parameters) [2283 2288])
+                            ("dim" variable nil (reparse-symbol function_parameters) [2290 2293])
+                            ("keepdim" variable nil (reparse-symbol function_parameters) [2297 2304]))                          )
+                        (reparse-symbol indented_block_body) [2262 2844])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2868 2872]))                          )
+                        (reparse-symbol indented_block_body) [2849 2987]))                  
+                :type "class")
+                nil [2111 2987])
+            ("Minish" type
+               (:superclasses ("torch.nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [3071 3101])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3110 3132]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3036 3040])
+                            ("name" variable nil (reparse-symbol function_parameters) [3042 3046]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3023 3134])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3151 3155])
+                            ("x" variable nil (reparse-symbol function_parameters) [3157 3158])
+                            ("scale" variable nil (reparse-symbol function_parameters) [3160 3165])
+                            ("dim" variable nil (reparse-symbol function_parameters) [3167 3170])
+                            ("keepdim" variable nil (reparse-symbol function_parameters) [3174 3181]))                          )
+                        (reparse-symbol indented_block_body) [3139 3723])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3747 3751]))                          )
+                        (reparse-symbol indented_block_body) [3728 3866]))                  
+                :type "class")
+                nil [2988 3866])
+            ("STL_Formula" type
+               (:superclasses ("torch.nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [3936 3971]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3921 3925]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3908 3972])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3998 4002])
+                            ("trace" variable nil (reparse-symbol function_parameters) [4004 4009])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [4011 4017])
+                            ("scale" variable nil (reparse-symbol function_parameters) [4021 4026])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [4031 4039]))                          )
+                        (reparse-symbol indented_block_body) [3977 4322])
+                    ("robustness" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4342 4346])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [4348 4354])
+                            ("time" variable nil (reparse-symbol function_parameters) [4356 4360])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [4364 4370])
+                            ("scale" variable nil (reparse-symbol function_parameters) [4374 4379])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [4384 4392]))                          )
+                        (reparse-symbol indented_block_body) [4327 4695])
+                    ("eval_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4715 4719])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [4721 4727])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [4729 4735])
+                            ("scale" variable nil (reparse-symbol function_parameters) [4739 4744])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [4749 4757]))                          )
+                        (reparse-symbol indented_block_body) [4700 5061])
+                    ("eval" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5075 5079])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [5081 5087])
+                            ("time" variable nil (reparse-symbol function_parameters) [5089 5093])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [5097 5103])
+                            ("scale" variable nil (reparse-symbol function_parameters) [5107 5112])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [5117 5125]))                          )
+                        (reparse-symbol indented_block_body) [5066 5441])
+                    ("forward" function (:arguments 
+                      ( ("formula" variable nil (reparse-symbol function_parameters) [5458 5465])
+                        ("inputs" variable nil (reparse-symbol function_parameters) [5467 5473])
+                        ("pscale" variable nil (reparse-symbol function_parameters) [5475 5481])
+                        ("scale" variable nil (reparse-symbol function_parameters) [5485 5490])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [5495 5503]))                      ) (reparse-symbol indented_block_body) [5446 6240])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6257 6261]))                          )
+                        (reparse-symbol indented_block_body) [6245 6329])
+                    ("__and__" function (:arguments 
+                      ( ("phi" variable nil (reparse-symbol function_parameters) [6346 6349])
+                        ("psi" variable nil (reparse-symbol function_parameters) [6351 6354]))                      ) (reparse-symbol indented_block_body) [6334 6386])
+                    ("__or__" function (:arguments 
+                      ( ("phi" variable nil (reparse-symbol function_parameters) [6402 6405])
+                        ("psi" variable nil (reparse-symbol function_parameters) [6407 6410]))                      ) (reparse-symbol indented_block_body) [6391 6441])
+                    ("__invert__" function (:arguments 
+                      ( ("phi" variable nil (reparse-symbol function_parameters) [6461 6464]))                      ) (reparse-symbol indented_block_body) [6446 6496]))                  
+                :type "class")
+                nil [3867 6496])
+            ("Identity" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [6568 6600]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6544 6548])
+                            ("name" variable nil (reparse-symbol function_parameters) [6550 6554]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6531 6602])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6628 6632])
+                            ("trace" variable nil (reparse-symbol function_parameters) [6634 6639])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [6641 6647])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [6651 6659]))                          )
+                        (reparse-symbol indented_block_body) [6607 6693])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6717 6721]))                          )
+                        (reparse-symbol indented_block_body) [6698 6742])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6759 6763]))                          )
+                        (reparse-symbol indented_block_body) [6747 6797]))                  
+                :type "class")
+                nil [6497 6797])
+            ("Temporal_Operator" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [6897 6938])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6947 6975])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6984 7008])
+                            ("self" code nil (reparse-symbol indented_block_body) [7076 7089])
+                            ("self" code nil (reparse-symbol indented_block_body) [7141 7158])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7397 7418]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6856 6860])
+                            ("subformula" variable nil (reparse-symbol function_parameters) [6862 6872])
+                            ("interval" variable nil (reparse-symbol function_parameters) [6874 6882]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6843 7420])
+                    ("_initialize_rnn_cell" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7451 7455])
+                            ("x" variable nil (reparse-symbol function_parameters) [7457 7458]))                          )
+                        (reparse-symbol indented_block_body) [7426 7659])
+                    ("_rnn_cell" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7678 7682])
+                            ("x" variable nil (reparse-symbol function_parameters) [7684 7685])
+                            ("h0" variable nil (reparse-symbol function_parameters) [7687 7689])
+                            ("scale" variable nil (reparse-symbol function_parameters) [7691 7696])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [7701 7709]))                          )
+                        (reparse-symbol indented_block_body) [7664 8597])
+                    ("_run_rnn_cell" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8620 8624])
+                            ("x" variable nil (reparse-symbol function_parameters) [8626 8627])
+                            ("scale" variable nil (reparse-symbol function_parameters) [8629 8634]))                          )
+                        (reparse-symbol indented_block_body) [8602 9073])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9099 9103])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [9105 9111])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [9113 9119])
+                            ("scale" variable nil (reparse-symbol function_parameters) [9123 9128])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [9133 9141]))                          )
+                        (reparse-symbol indented_block_body) [9078 9387])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9411 9415]))                          )
+                        (reparse-symbol indented_block_body) [9392 9525]))                  
+                :type "class")
+                nil [6801 9525])
+            ("Always" type
+               (:superclasses ("Temporal_Operator")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [9618 9688])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9697 9722])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9731 9748]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9577 9581])
+                            ("subformula" variable nil (reparse-symbol function_parameters) [9583 9593])
+                            ("interval" variable nil (reparse-symbol function_parameters) [9595 9603]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9564 9750])
+                    ("_initialize_rnn_cell" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9780 9784])
+                            ("x" variable nil (reparse-symbol function_parameters) [9786 9787]))                          )
+                        (reparse-symbol indented_block_body) [9755 10051])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10068 10072]))                          )
+                        (reparse-symbol indented_block_body) [10056 10154]))                  
+                :type "class")
+                nil [9527 10154])
+            ("Eventually" type
+               (:superclasses ("Temporal_Operator")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [10269 10343])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10352 10377])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10386 10403]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10209 10213])
+                            ("subformula" variable nil (reparse-symbol function_parameters) [10215 10225])
+                            ("interval" variable nil (reparse-symbol function_parameters) [10246 10254]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10196 10405])
+                    ("_initialize_rnn_cell" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10435 10439])
+                            ("x" variable nil (reparse-symbol function_parameters) [10441 10442]))                          )
+                        (reparse-symbol indented_block_body) [10410 10707])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10724 10728]))                          )
+                        (reparse-symbol indented_block_body) [10712 10810]))                  
+                :type "class")
+                nil [10155 10810])
+            ("LessThan" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("'''
+    x <= c where x is the signal, and c is the constant.
+    '''" code nil (reparse-symbol indented_block_body) [10844 10912])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [10991 11023])
+                            ("assert" code nil (reparse-symbol indented_block_body) [11032 11115])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11124 11146])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11155 11169])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11179 11201])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11211 11259])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11268 11293]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10930 10934])
+                            ("name" variable nil (reparse-symbol function_parameters) [10936 10940])
+                            ("val" variable nil (reparse-symbol function_parameters) [10946 10949])
+                            ("threshold_net_config" variable nil (reparse-symbol function_parameters) [10955 10975]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10917 11294])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11459 11463])
+                            ("trace" variable nil (reparse-symbol function_parameters) [11465 11470])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [11472 11478])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [11482 11490]))                          )
+                        (reparse-symbol indented_block_body) [11438 12518])
+                    ("get_predicate_threshold_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12558 12562]))                          )
+                        (reparse-symbol indented_block_body) [12523 12614])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12650 12654]))                          )
+                        (reparse-symbol indented_block_body) [12631 12774])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12791 12795]))                          )
+                        (reparse-symbol indented_block_body) [12779 13103]))                  
+                :type "class")
+                nil [10811 13103])
+            ("GreaterThan" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("'''
+    x >= c where x is the signal, and c is the constant.
+    '''" code nil (reparse-symbol indented_block_body) [13140 13208])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [13255 13290])
+                            ("assert" code nil (reparse-symbol indented_block_body) [13308 13391])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13400 13422])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13431 13445])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13454 13476]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13226 13230])
+                            ("name" variable nil (reparse-symbol function_parameters) [13232 13236])
+                            ("val" variable nil (reparse-symbol function_parameters) [13242 13245]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13213 13482])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13508 13512])
+                            ("trace" variable nil (reparse-symbol function_parameters) [13514 13519])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [13521 13527])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [13531 13539]))                          )
+                        (reparse-symbol indented_block_body) [13487 13643])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13667 13671]))                          )
+                        (reparse-symbol indented_block_body) [13648 13791])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13808 13812]))                          )
+                        (reparse-symbol indented_block_body) [13796 13881]))                  
+                :type "class")
+                nil [13104 13881])
+            ("Equal" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("'''
+    s = c where s is the signal, and c is the constant.
+    '''" code nil (reparse-symbol indented_block_body) [13912 13979])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [14026 14055])
+                            ("assert" code nil (reparse-symbol indented_block_body) [14064 14147])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14156 14178])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14187 14201])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14210 14232]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13997 14001])
+                            ("name" variable nil (reparse-symbol function_parameters) [14003 14007])
+                            ("val" variable nil (reparse-symbol function_parameters) [14013 14016]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13984 14238])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14264 14268])
+                            ("trace" variable nil (reparse-symbol function_parameters) [14270 14275])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [14277 14283])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [14287 14295]))                          )
+                        (reparse-symbol indented_block_body) [14243 14420])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14444 14448]))                          )
+                        (reparse-symbol indented_block_body) [14425 14568])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14585 14589]))                          )
+                        (reparse-symbol indented_block_body) [14573 14657]))                  
+                :type "class")
+                nil [13882 14657])
+            ("Negation" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("'''
+    not Subformula
+    '''" code nil (reparse-symbol indented_block_body) [14691 14721])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [14761 14793])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14802 14830]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14739 14743])
+                            ("subformula" variable nil (reparse-symbol function_parameters) [14745 14755]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [14726 14836])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14862 14866])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [14868 14874])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [14876 14882])
+                            ("scale" variable nil (reparse-symbol function_parameters) [14886 14891])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [14896 14904]))                          )
+                        (reparse-symbol indented_block_body) [14841 14992])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15016 15020]))                          )
+                        (reparse-symbol indented_block_body) [14997 15130])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15147 15151]))                          )
+                        (reparse-symbol indented_block_body) [15135 15203]))                  
+                :type "class")
+                nil [14658 15203])
+            ("Implies" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("'''
+    Implies
+    '''" code nil (reparse-symbol indented_block_body) [15236 15259])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [15313 15344])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15353 15383])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15392 15422])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15431 15456]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15277 15281])
+                            ("subformula1" variable nil (reparse-symbol function_parameters) [15283 15294])
+                            ("subformula2" variable nil (reparse-symbol function_parameters) [15296 15307]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [15264 15462])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15489 15493])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [15495 15501])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [15503 15509])
+                            ("scale" variable nil (reparse-symbol function_parameters) [15513 15518])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [15523 15531]))                          )
+                        (reparse-symbol indented_block_body) [15468 15893])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15917 15921]))                          )
+                        (reparse-symbol indented_block_body) [15898 16050])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16067 16071]))                          )
+                        (reparse-symbol indented_block_body) [16055 16158]))                  
+                :type "class")
+                nil [15204 16158])
+            ("And" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("'''
+    inputs: tuple (x,y) where x and y are the inputs to each subformula respectively. x or y can also be a tuple if the subformula requires multiple inputs (e.g, ϕ₁(x) ∧ (ϕ₂(y) ∧ ϕ₃(z) would have inputs=(x, (y,z)))    )
+    trace1 and trace2 are size [batch_size, time_dim, x_dim]
+    '''" code nil (reparse-symbol indented_block_body) [16187 16479])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [16533 16560])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16569 16599])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16608 16638])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16647 16672]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16497 16501])
+                            ("subformula1" variable nil (reparse-symbol function_parameters) [16503 16514])
+                            ("subformula2" variable nil (reparse-symbol function_parameters) [16516 16527]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [16484 16678])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16704 16708])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [16710 16716])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [16718 16724])
+                            ("scale" variable nil (reparse-symbol function_parameters) [16728 16733])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [16738 16746]))                          )
+                        (reparse-symbol indented_block_body) [16683 17144])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17168 17172]))                          )
+                        (reparse-symbol indented_block_body) [17149 17301])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17318 17322]))                          )
+                        (reparse-symbol indented_block_body) [17306 17408]))                  
+                :type "class")
+                nil [16159 17408])
+            ("Or" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("'''
+    inputs: tuple (x,y) where x and y are the inputs to each subformula respectively. x or y can also be a tuple if the subformula requires multiple inputs (e.g, ϕ₁(x) ∧ (ϕ₂(y) ∧ ϕ₃(z) would have inputs=(x, (y,z)))    )
+    trace1 and trace2 are size [batch_size, time_dim, x_dim]
+    '''" code nil (reparse-symbol indented_block_body) [17436 17728])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [17782 17808])
+                            ("self" variable nil (reparse-symbol indented_block_body) [17817 17847])
+                            ("self" variable nil (reparse-symbol indented_block_body) [17856 17886])
+                            ("self" variable nil (reparse-symbol indented_block_body) [17895 17920]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17746 17750])
+                            ("subformula1" variable nil (reparse-symbol function_parameters) [17752 17763])
+                            ("subformula2" variable nil (reparse-symbol function_parameters) [17765 17776]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [17733 17926])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17952 17956])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [17958 17964])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [17966 17972])
+                            ("scale" variable nil (reparse-symbol function_parameters) [17976 17981])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [17986 17994]))                          )
+                        (reparse-symbol indented_block_body) [17931 18392])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18416 18420]))                          )
+                        (reparse-symbol indented_block_body) [18397 18549])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18566 18570]))                          )
+                        (reparse-symbol indented_block_body) [18554 18656]))                  
+                :type "class")
+                nil [17409 18656])
+            ("Until" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''
+        subformula1 U subformula2
+        '''" code nil (reparse-symbol indented_block_body) [18777 18826])
+                            ("super" code nil (reparse-symbol indented_block_body) [18835 18864])
+                            ("self" variable nil (reparse-symbol indented_block_body) [18873 18903])
+                            ("self" variable nil (reparse-symbol indented_block_body) [18912 18942]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18701 18705])
+                            ("subformula1" variable nil (reparse-symbol function_parameters) [18707 18718])
+                            ("subformula2" variable nil (reparse-symbol function_parameters) [18740 18751]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [18688 18948])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18974 18978])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [18980 18986])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [18988 18994])
+                            ("scale" variable nil (reparse-symbol function_parameters) [18998 19003])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [19008 19016]))                          )
+                        (reparse-symbol indented_block_body) [18953 20266])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20290 20294]))                          )
+                        (reparse-symbol indented_block_body) [20271 20423])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20440 20444]))                          )
+                        (reparse-symbol indented_block_body) [20428 20541]))                  
+                :type "class")
+                nil [18658 20541])
+            ("Then" type
+               (:superclasses ("STL_Formula")
+                :members 
+                  ( ("'''
+    subformula1 T subformula2
+    '''" code nil (reparse-symbol indented_block_body) [20571 20612])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [20666 20694])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20703 20733])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20742 20772]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20630 20634])
+                            ("subformula1" variable nil (reparse-symbol function_parameters) [20636 20647])
+                            ("subformula2" variable nil (reparse-symbol function_parameters) [20649 20660]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [20617 20778])
+                    ("robustness_trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20804 20808])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [20810 20816])
+                            ("pscale" variable nil (reparse-symbol function_parameters) [20818 20824])
+                            ("scale" variable nil (reparse-symbol function_parameters) [20828 20833])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [20838 20846]))                          )
+                        (reparse-symbol indented_block_body) [20783 22082])
+                    ("_next_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22106 22110]))                          )
+                        (reparse-symbol indented_block_body) [22087 22239])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22256 22260]))                          )
+                        (reparse-symbol indented_block_body) [22244 22357]))                  
+                :type "class")
+                nil [20542 22357])
+            ("Expression" type
+               (:superclasses ("torch.nn.Module")
+                :members 
+                  ( ("'''
+    Wraps a pytorch arithmetic operation, so that we can intercept and overload comparison operators.
+    '''" code nil (reparse-symbol indented_block_body) [22398 22511])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [22560 22594])
+                            ("self" variable nil (reparse-symbol indented_block_body) [22603 22621])
+                            ("self" variable nil (reparse-symbol indented_block_body) [22630 22651]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22529 22533])
+                            ("value" variable nil (reparse-symbol function_parameters) [22535 22540])
+                            ("num_val" variable nil (reparse-symbol function_parameters) [22542 22549]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [22516 22657])
+                    ("__neg__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22673 22677]))                          )
+                        (reparse-symbol indented_block_body) [22661 22719])
+                    ("__add__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22740 22744])
+                            ("other" variable nil (reparse-symbol function_parameters) [22746 22751]))                          )
+                        (reparse-symbol indented_block_body) [22728 22916])
+                    ("__radd__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22934 22938])
+                            ("other" variable nil (reparse-symbol function_parameters) [22940 22945]))                          )
+                        (reparse-symbol indented_block_body) [22921 22983])
+                    ("__sub__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23124 23128])
+                            ("other" variable nil (reparse-symbol function_parameters) [23130 23135]))                          )
+                        (reparse-symbol indented_block_body) [23112 23300])
+                    ("__rsub__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23318 23322])
+                            ("other" variable nil (reparse-symbol function_parameters) [23324 23329]))                          )
+                        (reparse-symbol indented_block_body) [23305 23378])
+                    ("__mul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23518 23522])
+                            ("other" variable nil (reparse-symbol function_parameters) [23524 23529]))                          )
+                        (reparse-symbol indented_block_body) [23506 23694])
+                    ("__rmul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23712 23716])
+                            ("other" variable nil (reparse-symbol function_parameters) [23718 23723]))                          )
+                        (reparse-symbol indented_block_body) [23699 23761])
+                    ("__truediv__" function (:arguments 
+                      ( ("a" variable nil (reparse-symbol function_parameters) [23782 23783])
+                        ("b" variable nil (reparse-symbol function_parameters) [23785 23786]))                      ) (reparse-symbol indented_block_body) [23766 24115])
+                    ("__lt__" function (:arguments 
+                      ( ("lhs" variable nil (reparse-symbol function_parameters) [24157 24160])
+                        ("rhs" variable nil (reparse-symbol function_parameters) [24162 24165]))                      ) (reparse-symbol indented_block_body) [24146 24708])
+                    ("__le__" function (:arguments 
+                      ( ("lhs" variable nil (reparse-symbol function_parameters) [24724 24727])
+                        ("rhs" variable nil (reparse-symbol function_parameters) [24729 24732]))                      ) (reparse-symbol indented_block_body) [24713 25275])
+                    ("__gt__" function (:arguments 
+                      ( ("lhs" variable nil (reparse-symbol function_parameters) [25291 25294])
+                        ("rhs" variable nil (reparse-symbol function_parameters) [25296 25299]))                      ) (reparse-symbol indented_block_body) [25280 25851])
+                    ("__ge__" function (:arguments 
+                      ( ("lhs" variable nil (reparse-symbol function_parameters) [25867 25870])
+                        ("rhs" variable nil (reparse-symbol function_parameters) [25872 25875]))                      ) (reparse-symbol indented_block_body) [25856 26427])
+                    ("__eq__" function (:arguments 
+                      ( ("lhs" variable nil (reparse-symbol function_parameters) [26443 26446])
+                        ("rhs" variable nil (reparse-symbol function_parameters) [26448 26451]))                      ) (reparse-symbol indented_block_body) [26432 26985])
+                    ("__ne__" function (:arguments 
+                      ( ("lhs" variable nil (reparse-symbol function_parameters) [27001 27004])
+                        ("rhs" variable nil (reparse-symbol function_parameters) [27006 27009]))                      ) (reparse-symbol indented_block_body) [26990 27067])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27084 27088]))                          )
+                        (reparse-symbol indented_block_body) [27072 27122])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27140 27144]))                          )
+                        (reparse-symbol indented_block_body) [27127 27179]))                  
+                :type "class")
+                nil [22359 27179]))          
+      :file "stlcg.py"
+      :pointmax 27179
+      :fsize 27237
+      :lastmodtime '(24706 20018 731914 664000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!postdoc!Research!TRI!project_src!stl_risk_aware_ioc!external_libs!stlcg!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

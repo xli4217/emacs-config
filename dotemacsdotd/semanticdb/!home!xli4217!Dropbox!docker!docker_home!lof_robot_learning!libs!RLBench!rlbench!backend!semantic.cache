@@ -1,0 +1,201 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(24583 60751 62504 484000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("re" include nil nil [11 20])
+            ("os.path" include nil nil [21 63])
+            ("typing" include nil nil [64 111])
+            ("numpy" include nil nil [113 131])
+            ("pyrep" include nil nil [132 155])
+            ("pyrep.const" include nil nil [156 190])
+            ("pyrep.errors" include nil nil [191 238])
+            ("pyrep.objects.cartesian_path" include nil nil [239 293])
+            ("pyrep.objects.dummy" include nil nil [294 331])
+            ("pyrep.objects.force_sensor" include nil nil [332 382])
+            ("pyrep.objects.joint" include nil nil [383 420])
+            ("pyrep.objects.object" include nil nil [421 460])
+            ("rlbench.backend.conditions" include nil nil [462 510])
+            ("rlbench.backend.exceptions" include nil nil [511 563])
+            ("rlbench.backend.observation" include nil nil [564 615])
+            ("rlbench.backend.robot" include nil nil [616 655])
+            ("rlbench.backend.waypoints" include nil nil [656 725])
+            ("TASKS_PATH" variable nil nil [727 784])
+            ("Task" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Constructor.
+
+        :param pyrep: Instance of PyRep.
+        :param robot: Instance of Robot.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [868 978])
+                            ("self" variable nil (reparse-symbol indented_block_body) [987 1005])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1014 1041])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1050 1068])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1077 1099])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1108 1137])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1146 1174])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1183 1207])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1216 1252])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1261 1296])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1305 1338])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1347 1392])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1401 1435]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [825 829])
+                            ("PyRep" variable nil (reparse-symbol function_parameters) [838 843])
+                            ("Robot" variable nil (reparse-symbol function_parameters) [852 857]))                          
+                        :documentation "Constructor.
+
+        :param pyrep: Instance of PyRep.
+        :param robot: Instance of Robot.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [812 1436])
+                    ("set_initial_objects_in_scene" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5994 5998]))                          )
+                        (reparse-symbol indented_block_body) [5961 6221])
+                    ("register_success_conditions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6350 6354]))                          
+                        :documentation "What conditions need to be met for the task to be a success.
+
+        Note: this replaces any previously registered conditions!
+
+        :param condition: A list of success conditions.
+        ")
+                        (reparse-symbol indented_block_body) [6318 6638])
+                    ("register_graspable_objects" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6674 6678]))                          
+                        :documentation "Register what objects can be grasped with a 'stable' grasp.
+
+        In order for objects to be grasped in a stable way, PyRep attaches an
+        objects that need to be grasped as a child of the gripper. This function
+        allows one to register a list of objects that can be grasped in
+        this 'stable' manner.
+
+        Note: this replaces any previously registered objects!
+
+        :param objects: The list of Objects that can be grasped.
+        ")
+                        (reparse-symbol indented_block_body) [6643 7221])
+                    ("register_waypoint_ability_start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7262 7266])
+                            ("int" variable nil (reparse-symbol function_parameters) [7284 7287]))                          
+                        :documentation "Register a function to be called before moving to waypoint.
+
+        The registered function should take in a Waypoint object and is called
+        when the robot is about to move to the assigned waypoint.
+
+
+        :param waypoint_index: The waypoint index.
+        :param func: A function that takes a Waypoint object.
+        ")
+                        (reparse-symbol indented_block_body) [7226 7770])
+                    ("register_waypoint_ability_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7809 7813])
+                            ("int" variable nil (reparse-symbol function_parameters) [7831 7834]))                          
+                        :documentation "Register a function to be called after moving to waypoint.
+
+        The registered function should take in a Waypoint object and is called
+        when the robot has finished moving to the assigned waypoint.
+
+
+        :param waypoint_index: The waypoint index.
+        :param func: A function that takes a Waypoint object.
+        ")
+                        (reparse-symbol indented_block_body) [7775 8317])
+                    ("register_waypoints_should_repeat" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8359 8363]))                          
+                        :documentation "Register a function that is called when reached the end of a demo.
+
+        The registered function should return a bool if the demo should repeat.
+        Can be used in conjunction with `register_waypoint_ability_start` and
+        `register_waypoint_ability_end`. Useful for a task such as emptying a
+        container, where we want to keep dynamically moving waypoints until
+        the container is empty.
+
+        :param func: A function that return a bool if the demo should repeat.
+        ")
+                        (reparse-symbol indented_block_body) [8322 8951])
+                    ("validate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9292 9296]))                          
+                        :documentation "If the task placement is valid. ")
+                        (reparse-symbol indented_block_body) [9279 9394])
+                    ("get_waypoints" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9417 9421]))                          )
+                        (reparse-symbol indented_block_body) [9399 9543])
+                    ("should_repeat_waypoints" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9576 9580]))                          )
+                        (reparse-symbol indented_block_body) [9548 9630])
+                    ("get_graspable_objects" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9661 9665]))                          )
+                        (reparse-symbol indented_block_body) [9635 9707]))                  
+                :type "class")
+                nil [787 14826]))          
+      :file "task.py"
+      :pointmax 14826
+      :fsize 14825
+      :lastmodtime '(24583 60751 62504 484000)
+      :unmatched-syntax '((INDENT_BLOCK 13002 . 14826) (NEWLINE 13001 . 13002) (COLON 13000 . 13001) (MINUS 12983 . 12984) (GT 12984 . 12985) (INDENT_BLOCK 12363 . 12935) (NEWLINE 12362 . 12363) (COLON 12361 . 12362) (MINUS 12342 . 12343) (GT 12343 . 12344) (BRACK_BLOCK 12333 . 12340) (NAME 12318 . 12327) (COLON 12327 . 12328) (INDENT_BLOCK 11910 . 12214) (NEWLINE 11909 . 11910) (COLON 11908 . 11909) (MINUS 11901 . 11902) (GT 11902 . 11903) (BRACK_BLOCK 11887 . 11899) (NAME 11875 . 11880) (COLON 11880 . 11881) (INDENT_BLOCK 11708 . 11846) (NEWLINE 11707 . 11708) (COLON 11706 . 11707) (MINUS 11686 . 11687) (GT 11687 . 11688) (INDENT_BLOCK 11577 . 11661) (NEWLINE 11576 . 11577) (COLON 11575 . 11576) (MINUS 11567 . 11568) (GT 11568 . 11569) (INDENT_BLOCK 11304 . 11543) (NEWLINE 11303 . 11304) (COLON 11302 . 11303) (MINUS 11295 . 11296) (GT 11296 . 11297) (INDENT_BLOCK 11136 . 11261) (NEWLINE 11135 . 11136) (COLON 11134 . 11135) (MINUS 11127 . 11128) (GT 11128 . 11129) (INDENT_BLOCK 11005 . 11103) (NEWLINE 11004 . 11005) (COLON 11003 . 11004) (MINUS 10996 . 10997) (GT 10997 . 10998) (INDENT_BLOCK 10502 . 10974) (NEWLINE 10501 . 10502) (COLON 10500 . 10501) (MINUS 10491 . 10492) (GT 10492 . 10493) (INDENT_BLOCK 9752 . 10471) (NEWLINE 9751 . 9752) (COLON 9750 . 9751) (DEF 9712 . 9715) (MINUS 9730 . 9731) (GT 9731 . 9732) (INDENT_BLOCK 9077 . 9274) (NEWLINE 9076 . 9077) (COLON 9075 . 9076) (DEF 9050 . 9053) (MINUS 9069 . 9070) (GT 9070 . 9071) (BRACK_BLOCK 8379 . 8389) (NAME 8365 . 8369) (COLON 8369 . 8370) (BRACK_BLOCK 7890 . 7908) (NAME 7876 . 7880) (COLON 7880 . 7881) (NAME 7815 . 7829) (COLON 7829 . 7830) (BRACK_BLOCK 7343 . 7361) (NAME 7329 . 7333) (COLON 7333 . 7334) (NAME 7268 . 7282) (COLON 7282 . 7283) (BRACK_BLOCK 6693 . 6701) (NAME 6680 . 6687) (COLON 6687 . 6688) (BRACK_BLOCK 6371 . 6382) (NAME 6356 . 6365) (COLON 6365 . 6366) (INDENT_BLOCK 5782 . 5956) (NEWLINE 5781 . 5782) (COLON 5780 . 5781) (MINUS 5773 . 5774) (GT 5774 . 5775) (INDENT_BLOCK 5463 . 5738) (NEWLINE 5462 . 5463) (COLON 5461 . 5462) (MINUS 5447 . 5448) (GT 5448 . 5449) (NAME 5421 . 5432) (COLON 5432 . 5433) (INDENT_BLOCK 4912 . 5385) (NEWLINE 4911 . 4912) (COLON 4910 . 4911) (MINUS 4901 . 4902) (GT 4902 . 4903) (INDENT_BLOCK 4551 . 4872) (NEWLINE 4550 . 4551) (COLON 4549 . 4550) (MINUS 4441 . 4442) (GT 4442 . 4443) (INDENT_BLOCK 4250 . 4405) (NEWLINE 4249 . 4250) (COLON 4248 . 4249) (MINUS 4241 . 4242) (GT 4242 . 4243) (INDENT_BLOCK 4122 . 4218) (NEWLINE 4121 . 4122) (COLON 4120 . 4121) (MINUS 4099 . 4100) (GT 4100 . 4101) (INDENT_BLOCK 3985 . 4077) (NEWLINE 3984 . 3985) (COLON 3983 . 3984) (MINUS 3976 . 3977) (GT 3977 . 3978) (INDENT_BLOCK 2813 . 3956) (NEWLINE 2812 . 2813) (COLON 2811 . 2812) (MINUS 2798 . 2799) (GT 2799 . 2800) (INDENT_BLOCK 2519 . 2765) (NEWLINE 2518 . 2519) (COLON 2517 . 2518) (MINUS 2511 . 2512) (GT 2512 . 2513) (INDENT_BLOCK 2035 . 2480) (NEWLINE 2034 . 2035) (COLON 2033 . 2034) (MINUS 2021 . 2022) (GT 2022 . 2023) (NAME 2009 . 2014) (COLON 2014 . 2015) (INDENT_BLOCK 1558 . 1981) (NEWLINE 1557 . 1558) (COLON 1556 . 1557) (DEF 1529 . 1532) (MINUS 1549 . 1550) (GT 1550 . 1551) (NAME 845 . 850) (COLON 850 . 851) (NAME 831 . 836) (COLON 836 . 837) (INDENT_BLOCK 9077 . 9274) (NEWLINE 9076 . 9077) (COLON 9075 . 9076) (DEF 9050 . 9053) (MINUS 9069 . 9070) (GT 9070 . 9071) (BRACK_BLOCK 8379 . 8389) (NAME 8365 . 8369) (COLON 8369 . 8370) (BRACK_BLOCK 7890 . 7908) (NAME 7876 . 7880) (COLON 7880 . 7881) (NAME 7815 . 7829) (COLON 7829 . 7830) (BRACK_BLOCK 7343 . 7361) (NAME 7329 . 7333) (COLON 7333 . 7334) (NAME 7268 . 7282) (COLON 7282 . 7283) (BRACK_BLOCK 6693 . 6701) (NAME 6680 . 6687) (COLON 6687 . 6688) (BRACK_BLOCK 6371 . 6382) (NAME 6356 . 6365) (COLON 6365 . 6366) (INDENT_BLOCK 5782 . 5956) (NEWLINE 5781 . 5782) (COLON 5780 . 5781) (MINUS 5773 . 5774) (GT 5774 . 5775) (INDENT_BLOCK 5463 . 5738) (NEWLINE 5462 . 5463) (COLON 5461 . 5462) (MINUS 5447 . 5448) (GT 5448 . 5449) (NAME 5421 . 5432) (COLON 5432 . 5433) (INDENT_BLOCK 4912 . 5385) (NEWLINE 4911 . 4912) (COLON 4910 . 4911) (MINUS 4901 . 4902) (GT 4902 . 4903) (INDENT_BLOCK 4551 . 4872) (NEWLINE 4550 . 4551) (COLON 4549 . 4550) (MINUS 4441 . 4442) (GT 4442 . 4443) (INDENT_BLOCK 4250 . 4405) (NEWLINE 4249 . 4250) (COLON 4248 . 4249) (MINUS 4241 . 4242) (GT 4242 . 4243) (INDENT_BLOCK 4122 . 4218) (NEWLINE 4121 . 4122) (COLON 4120 . 4121) (MINUS 4099 . 4100) (GT 4100 . 4101) (INDENT_BLOCK 3985 . 4077) (NEWLINE 3984 . 3985) (COLON 3983 . 3984) (MINUS 3976 . 3977) (GT 3977 . 3978) (INDENT_BLOCK 2813 . 3956) (NEWLINE 2812 . 2813) (COLON 2811 . 2812) (MINUS 2798 . 2799) (GT 2799 . 2800) (INDENT_BLOCK 2519 . 2765) (NEWLINE 2518 . 2519) (COLON 2517 . 2518) (MINUS 2511 . 2512) (GT 2512 . 2513) (INDENT_BLOCK 2035 . 2480) (NEWLINE 2034 . 2035) (COLON 2033 . 2034) (MINUS 2021 . 2022) (GT 2022 . 2023) (NAME 2009 . 2014) (COLON 2014 . 2015) (INDENT_BLOCK 1558 . 1981) (NEWLINE 1557 . 1558) (COLON 1556 . 1557) (DEF 1529 . 1532) (MINUS 1549 . 1550) (GT 1550 . 1551) (NAME 845 . 850) (COLON 850 . 851) (NAME 831 . 836) (COLON 836 . 837)))
+    (semanticdb-table "semanticdb-table"
+      :file "const.py"
+      :fsize 761
+      :lastmodtime '(24583 60751 62504 484000))
+    (semanticdb-table "semanticdb-table"
+      :file "conditions.py"
+      :fsize 5804
+      :lastmodtime '(24583 60751 62504 484000))
+    (semanticdb-table "semanticdb-table"
+      :file "exceptions.py"
+      :fsize 721
+      :lastmodtime '(24583 60751 62504 484000))
+    (semanticdb-table "semanticdb-table"
+      :file "observation.py"
+      :fsize 2854
+      :lastmodtime '(24583 60751 62504 484000))
+    (semanticdb-table "semanticdb-table"
+      :file "robot.py"
+      :fsize 281
+      :lastmodtime '(24583 60751 62504 484000))
+    (semanticdb-table "semanticdb-table"
+      :file "waypoints.py"
+      :fsize 2358
+      :lastmodtime '(24583 60751 62504 484000)))
+  :file "!home!xli4217!Dropbox!docker!docker_home!lof_robot_learning!libs!RLBench!rlbench!backend!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

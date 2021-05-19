@@ -1,0 +1,144 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("torch" include nil nil [20 32])
+            ("time" include nil nil [33 44])
+            ("assert_type" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [62 63])
+                ("name" variable nil (reparse-symbol function_parameters) [65 69])
+                ("expected_type" variable nil (reparse-symbol function_parameters) [71 84]))              ) nil [46 168])
+            ("assert_shape" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [194 195])
+                ("name" variable nil (reparse-symbol function_parameters) [197 201])
+                ("expected_shape" variable nil (reparse-symbol function_parameters) [203 217]))              ) nil [177 633])
+            ("assert_type_and_shape" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1150 1151])
+                ("name" variable nil (reparse-symbol function_parameters) [1153 1157])
+                ("expected_type" variable nil (reparse-symbol function_parameters) [1159 1172])
+                ("expected_shape" variable nil (reparse-symbol function_parameters) [1174 1188]))              ) nil [1124 1284])
+            ("split_list_for_multi_worker" function (:arguments 
+              ( ("list" variable nil (reparse-symbol function_parameters) [1329 1333])
+                ("int" variable nil (reparse-symbol function_parameters) [1346 1349]))              ) nil [1286 1799])
+            ("timing_val" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [1815 1819]))              ) nil [1800 2062])
+            ("get_distance" function (:arguments 
+              ( ("ndarray" variable nil (reparse-symbol function_parameters) [2099 2106])
+                ("ndarray" variable nil (reparse-symbol function_parameters) [2124 2131]))              ) nil [2067 3253])
+            ("get_batch_stats" function (:arguments 
+              ( ("token_str" variable nil (reparse-symbol function_parameters) [3275 3284])
+                ("ndarray" variable nil (reparse-symbol function_parameters) [3302 3309])
+                ("ndarray" variable nil (reparse-symbol function_parameters) [3328 3335])
+                ("ndarray" variable nil (reparse-symbol function_parameters) [3354 3361]))              ) nil [3255 5673])
+            ("if" code nil nil [5683 5763]))          
+      :file "utils.py"
+      :pointmax 5763
+      :fsize 5762
+      :lastmodtime '(24402 40881 613887 934000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("json" include nil nil [1 12])
+            ("future.utils" include nil nil [13 47])
+            ("matplotlib" include nil nil [48 65])
+            ("matplotlib.gridspec" include nil nil [66 104])
+            ("matplotlib.pyplot" include nil nil [105 136])
+            ("matplotlib.offsetbox" include nil nil [137 197])
+            ("PIL" include nil nil [198 219])
+            ("cv2" include nil nil [220 230])
+            ("io" include nil nil [231 240])
+            ("sklearn" include nil nil [241 255])
+            ("torch" include nil nil [256 268])
+            ("torch.utils.tensorboard" include nil nil [269 318])
+            ("typing" include nil nil [319 360])
+            ("numpy" include nil nil [361 379])
+            ("logging" include nil nil [380 394])
+            ("os" include nil nil [395 404])
+            ("tqdm" include nil nil [405 416])
+            ("scipy.ndimage" include nil nil [417 449])
+            ("shapely" include nil nil [450 478])
+            ("shapely.geometry" include nil nil [479 553])
+            ("shapely" include nil nil [554 568])
+            ("external_libs.nuscenes.prediction.helper" include nil nil [570 640])
+            ("external_libs.nuscenes.eval.common.utils" include nil nil [641 708])
+            ("pyquaternion" include nil nil [709 744])
+            ("external_libs.nuscenes" include nil nil [746 789])
+            ("external_libs.nuscenes.map_expansion.map_api" include nil nil [790 858])
+            ("external_libs.nuscenes.map_expansion" include nil nil [859 926])
+            ("external_libs.nuscenes.prediction" include nil nil [927 1050])
+            ("descartes" include nil nil [1051 1067])
+            ("agents.nuscenes_agent" include nil nil [1069 1116])
+            ("default_config" variable nil nil [1118 1189])
+            ("NuScenesVirtualSensing" type
+               (:superclasses ("NuScenesAgent")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1324 1352])
+                            ("self" code nil (reparse-symbol indented_block_body) [1361 1387])
+                            ("super" code nil (reparse-symbol indented_block_body) [1397 1518])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1528 1564]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1253 1257])
+                            ("config" variable nil (reparse-symbol function_parameters) [1259 1265])
+                            ("helper" variable nil (reparse-symbol function_parameters) [1270 1276])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [1283 1292])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [1299 1308]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1240 1565])
+                    ("update_all_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1604 1608]))                          )
+                        (reparse-symbol indented_block_body) [1584 1624])
+                    ("get_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1654 1658])
+                            ("str" variable nil (reparse-symbol function_parameters) [1675 1678])
+                            ("str" variable nil (reparse-symbol function_parameters) [1694 1697]))                          )
+                        (reparse-symbol indented_block_body) [1641 2406])
+                    ("get_agent_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2438 2442])
+                            ("str" variable nil (reparse-symbol function_parameters) [2460 2463])
+                            ("str" variable nil (reparse-symbol function_parameters) [2479 2482]))                          )
+                        (reparse-symbol indented_block_body) [2419 4444])
+                    ("get_map_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4474 4478])
+                            ("list" variable nil (reparse-symbol function_parameters) [4491 4495])
+                            ("list" variable nil (reparse-symbol function_parameters) [4516 4520])
+                            ("NuScenesMap" variable nil (reparse-symbol function_parameters) [4532 4543]))                          )
+                        (reparse-symbol indented_block_body) [4457 7906])
+                    ("get_patch_coord" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7932 7936])
+                            ("float" variable nil (reparse-symbol function_parameters) [8080 8085]))                          
+                        :documentation "
+        Convert patch_box to shapely Polygon coordinates.
+        :param patch_box: Patch box defined as [x_center, y_center, height, width].
+        :param patch_angle: Patch orientation in degrees.
+        :return: Box Polygon for patch_box.
+        ")
+                        (reparse-symbol indented_block_body) [7912 8765]))                  
+                :type "class")
+                nil [1191 8765]))          
+      :file "nuscenes_virtual_sensing.py"
+      :pointmax 8765
+      :fsize 8764
+      :lastmodtime '(24384 24362 630660 738000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!rlfps!examples!postdoc!traj_prediction!iclr2021!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

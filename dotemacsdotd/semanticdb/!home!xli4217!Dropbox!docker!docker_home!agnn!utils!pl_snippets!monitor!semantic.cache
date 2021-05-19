@@ -1,0 +1,312 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 41])
+            ("torch.nn" include nil nil [43 64])
+            ("torch.utils.hooks" include nil nil [65 110])
+            ("pytorch_lightning" include nil nil [159 213])
+            ("pytorch_lightning.utilities" include nil nil [214 268])
+            ("ModuleDataMonitor" type
+               (:superclasses ("DataMonitorBase")
+                :members 
+                  ( ("GROUP_NAME_INPUT" variable nil (reparse-symbol indented_block_body) [318 344])
+                    ("GROUP_NAME_OUTPUT" variable nil (reparse-symbol indented_block_body) [349 377])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Args:
+            submodules: If `True`, logs the in- and output histograms of every submodule in the
+                LightningModule, including the root module itself.
+                This parameter can also take a list of names of specifc submodules (see example below).
+                Default: `None`, logs only the in- and output of the root module.
+            log_every_n_steps: The interval at which histograms should be logged. This defaults to the
+                interval defined in the Trainer. Use this to override the Trainer default.
+
+        Note:
+            A too low value for `row_log_interval` may have a significant performance impact
+            especially when many submodules are involved, since the logging occurs during the forward pass.
+            It should only be used for debugging purposes.
+
+        Example:
+
+            .. code-block:: python
+
+                # log the in- and output histograms of the `forward` in LightningModule
+                trainer = Trainer(callbacks=[ModuleDataMonitor()])
+
+                # all submodules in LightningModule
+                trainer = Trainer(callbacks=[ModuleDataMonitor(submodules=True)])
+
+                # specific submodules
+                trainer = Trainer(callbacks=[ModuleDataMonitor(submodules=[\"generator\", \"generator.conv1\"])])
+
+        \"\"\"" code nil (reparse-symbol indented_block_body) [533 1875])
+                            ("super" code nil (reparse-symbol indented_block_body) [1884 1937])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1946 1980])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1989 2012]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [405 409])
+                            ("None" variable nil (reparse-symbol function_parameters) [466 470])
+                            ("int" variable nil (reparse-symbol function_parameters) [499 502]))                          
+                        :documentation "
+        Args:
+            submodules: If `True`, logs the in- and output histograms of every submodule in the
+                LightningModule, including the root module itself.
+                This parameter can also take a list of names of specifc submodules (see example below).
+                Default: `None`, logs only the in- and output of the root module.
+            log_every_n_steps: The interval at which histograms should be logged. This defaults to the
+                interval defined in the Trainer. Use this to override the Trainer default.
+
+        Note:
+            A too low value for `row_log_interval` may have a significant performance impact
+            especially when many submodules are involved, since the logging occurs during the forward pass.
+            It should only be used for debugging purposes.
+
+        Example:
+
+            .. code-block:: python
+
+                # log the in- and output histograms of the `forward` in LightningModule
+                trainer = Trainer(callbacks=[ModuleDataMonitor()])
+
+                # all submodules in LightningModule
+                trainer = Trainer(callbacks=[ModuleDataMonitor(submodules=True)])
+
+                # specific submodules
+                trainer = Trainer(callbacks=[ModuleDataMonitor(submodules=[\"generator\", \"generator.conv1\"])])
+
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [383 2006])
+                    ("on_train_start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2030 2034])
+                            ("Trainer" variable nil (reparse-symbol function_parameters) [2045 2052])
+                            ("LightningModule" variable nil (reparse-symbol function_parameters) [2065 2080]))                          )
+                        (reparse-symbol indented_block_body) [2011 2663])
+                    ("on_train_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2685 2689])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [2691 2698])
+                            ("pl_module" variable nil (reparse-symbol function_parameters) [2700 2709]))                          )
+                        (reparse-symbol indented_block_body) [2668 2782]))                  
+                :type "class")
+                nil [271 3836]))          
+      :file "module_data_monitor.py"
+      :pointmax 3836
+      :fsize 3835
+      :lastmodtime '(24574 40451 977908 885000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [1 39])
+            ("numpy" include nil nil [41 59])
+            ("torch" include nil nil [60 72])
+            ("torch" include nil nil [87 111])
+            ("pytorch_lightning" include nil nil [113 151])
+            ("pytorch_lightning.loggers" include nil nil [152 220])
+            ("pytorch_lightning.utilities" include nil nil [221 275])
+            ("pytorch_lightning.utilities.apply_func" include nil nil [276 346])
+            ("DataMonitorBase" type
+               (:superclasses ("Callback")
+                :members 
+                  ( ("supported_loggers" variable nil (reparse-symbol indented_block_body) [387 462])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Base class for monitoring data histograms in a LightningModule.
+        This requires a logger configured in the Trainer, otherwise no data is logged.
+        The specific class that inherits from this base defines what data gets collected.
+
+        Args:
+            log_every_n_steps: The interval at which histograms should be logged. This defaults to the
+                interval defined in the Trainer. Use this to override the Trainer default.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [526 999])
+                            ("super" code nil (reparse-symbol indented_block_body) [1008 1026])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1035 1078])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1087 1104])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1113 1133])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1142 1170]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [481 485])
+                            ("int" variable nil (reparse-symbol function_parameters) [506 509]))                          
+                        :documentation "
+        Base class for monitoring data histograms in a LightningModule.
+        This requires a logger configured in the Trainer, otherwise no data is logged.
+        The specific class that inherits from this base defines what data gets collected.
+
+        Args:
+            log_every_n_steps: The interval at which histograms should be logged. This defaults to the
+                interval defined in the Trainer. Use this to override the Trainer default.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [468 1172])
+                    ("on_train_start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1196 1200])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [1202 1209])
+                            ("pl_module" variable nil (reparse-symbol function_parameters) [1211 1220]))                          )
+                        (reparse-symbol indented_block_body) [1177 1404])
+                    ("on_train_batch_start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1443 1447])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [1449 1456])
+                            ("pl_module" variable nil (reparse-symbol function_parameters) [1458 1467])
+                            ("batch" variable nil (reparse-symbol function_parameters) [1469 1474])
+                            ("batch_idx" variable nil (reparse-symbol function_parameters) [1476 1485])
+                            ("dataloader_idx" variable nil (reparse-symbol function_parameters) [1487 1501]))                          )
+                        (reparse-symbol indented_block_body) [1409 1551]))                  
+                :type "class")
+                nil [349 4020]))          
+      :file "data_monitor_base.py"
+      :pointmax 5727
+      :fsize 5727
+      :lastmodtime '(24574 40470 697417 910000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("DataMonitorBase" include nil nil [25 47])
+            ("TrainingDataMonitor" type
+               (:superclasses ("DataMonitorBase")
+                :members 
+                  ( ("GROUP_NAME" variable nil (reparse-symbol indented_block_body) [99 127])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Callback that logs the histogram of values in the batched data passed to `training_step`.
+
+        Args:
+            log_every_n_steps: The interval at which histograms should be logged. This defaults to the
+                interval defined in the Trainer. Use this to override the Trainer default.
+
+        Example:
+
+            .. code-block:: python
+
+                # log histogram of training data passed to `LightningModule.training_step`
+                trainer = Trainer(callbacks=[TrainingDataMonitor()])
+        \"\"\"" code nil (reparse-symbol indented_block_body) [192 729])
+                            ("super" code nil (reparse-symbol indented_block_body) [738 791]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [146 150])
+                            ("int" variable nil (reparse-symbol function_parameters) [171 174]))                          
+                        :documentation "
+        Callback that logs the histogram of values in the batched data passed to `training_step`.
+
+        Args:
+            log_every_n_steps: The interval at which histograms should be logged. This defaults to the
+                interval defined in the Trainer. Use this to override the Trainer default.
+
+        Example:
+
+            .. code-block:: python
+
+                # log histogram of training data passed to `LightningModule.training_step`
+                trainer = Trainer(callbacks=[TrainingDataMonitor()])
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [133 792])
+                    ("on_train_batch_start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [822 826])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [828 835])
+                            ("pl_module" variable nil (reparse-symbol function_parameters) [837 846])
+                            ("batch" variable nil (reparse-symbol function_parameters) [848 853])
+                            ("args" variable nil (reparse-symbol function_parameters) [855 860])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [862 870]))                          )
+                        (reparse-symbol indented_block_body) [797 1012]))                  
+                :type "class")
+                nil [50 1012]))          
+      :file "training_data_monitor.py"
+      :pointmax 1012
+      :fsize 1011
+      :lastmodtime '(24574 40455 969802 723000)
+      :unmatched-syntax '((NAME 152 . 169) (COLON 169 . 170) (PERIOD 6 . 7) (IMPORT 25 . 31) ($EOI 1012 . 1012) (PERIOD 6 . 7) (NAME 159 . 176) (COLON 176 . 177)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 123
+      :fsize 122
+      :lastmodtime '(24574 40428 498549 810000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("DataMonitorBase" include nil nil [25 47])
+            ("GradientMonitor" type
+               (:superclasses ("DataMonitorBase")
+                :members 
+                  ( ("GROUP_NAME" variable nil (reparse-symbol indented_block_body) [95 118])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Callback that logs the histogram of gradients passed to `gradient`.
+
+        Args:
+            log_every_n_steps: The interval at which histograms should be logged. This defaults to the
+                interval defined in the Trainer. Use this to override the Trainer default.
+
+        Example:
+
+            .. code-block:: python
+
+                # log histogram of training data passed to `LightningModule.gradient`
+                trainer = Trainer(callbacks=[GradientMonitor()])
+        \"\"\"" code nil (reparse-symbol indented_block_body) [183 689])
+                            ("super" code nil (reparse-symbol indented_block_body) [698 751]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [137 141])
+                            ("int" variable nil (reparse-symbol function_parameters) [162 165]))                          
+                        :documentation "
+        Callback that logs the histogram of gradients passed to `gradient`.
+
+        Args:
+            log_every_n_steps: The interval at which histograms should be logged. This defaults to the
+                interval defined in the Trainer. Use this to override the Trainer default.
+
+        Example:
+
+            .. code-block:: python
+
+                # log histogram of training data passed to `LightningModule.gradient`
+                trainer = Trainer(callbacks=[GradientMonitor()])
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [124 752])
+                    ("on_fit_start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [774 778])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [780 787])
+                            ("pl_module" variable nil (reparse-symbol function_parameters) [789 798])
+                            ("batch" variable nil (reparse-symbol function_parameters) [800 805])
+                            ("args" variable nil (reparse-symbol function_parameters) [807 812])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [814 822]))                          )
+                        (reparse-symbol indented_block_body) [757 1073]))                  
+                :type "class")
+                nil [50 1073]))          
+      :file "gradient_monitor.py"
+      :pointmax 1073
+      :fsize 1072
+      :lastmodtime '(24594 22172 573857 475000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!utils!pl_snippets!monitor!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

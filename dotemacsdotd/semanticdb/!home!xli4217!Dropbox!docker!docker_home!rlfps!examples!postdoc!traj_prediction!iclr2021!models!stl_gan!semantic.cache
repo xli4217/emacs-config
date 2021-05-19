@@ -1,0 +1,263 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("torch" include nil nil [14 34])
+            ("torch.nn" include nil nil [35 71])
+            ("torch.optim.lr_scheduler" include nil nil [72 153])
+            ("numpy" include nil nil [155 173])
+            ("time" include nil nil [174 185])
+            ("future.utils" include nil nil [186 220])
+            ("logging" include nil nil [221 235])
+            ("external_libs.nuscenes.prediction.helper" include nil nil [237 320])
+            ("pytorch_lightning" include nil nil [322 352])
+            ("pytorch_lightning" include nil nil [353 391])
+            ("models.stl_gan.loss" include nil nil [393 426])
+            ("agents.nuscenes_agent" include nil nil [427 474])
+            ("models.model_base" include nil nil [475 514])
+            ("utils.utils" include nil nil [516 583])
+            ("models.stl_gan.loss" include nil nil [584 617])
+            ("MetricsCallback" type
+               (:superclasses ("Callback")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [725 743])
+                            ("self" variable nil (reparse-symbol indented_block_body) [752 769]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [710 714]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [697 770])
+                    ("on_validation_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [797 801])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [803 810])
+                            ("pl_module" variable nil (reparse-symbol function_parameters) [812 821]))                          )
+                        (reparse-symbol indented_block_body) [775 878]))                  
+                :type "class")
+                nil [659 878])
+            ("default_config" variable nil nil [880 1377])
+            ("StlGan" type
+               (:superclasses ("ModelBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1544 1572])
+                            ("self" code nil (reparse-symbol indented_block_body) [1581 1607])
+                            ("if" code nil (reparse-symbol indented_block_body) [1617 1693])
+                            ("super" code nil (reparse-symbol indented_block_body) [1701 1781])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1790 1810])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1819 1854])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2007 2028])
+                            ("if" code nil (reparse-symbol indented_block_body) [2037 2310])
+                            ("if" code nil (reparse-symbol indented_block_body) [2319 2458])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2467 2661])
+                            ("if" code nil (reparse-symbol indented_block_body) [2671 2834])
+                            ("if" code nil (reparse-symbol indented_block_body) [2843 3171])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3192 3398])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3408 3435])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3444 3471]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1422 1426])
+                            ("config" variable nil (reparse-symbol function_parameters) [1428 1434])
+                            ("helper" variable nil (reparse-symbol function_parameters) [1439 1445])
+                            ("py_logger" variable nil (reparse-symbol function_parameters) [1452 1461])
+                            ("tb_logger" variable nil (reparse-symbol function_parameters) [1468 1477])
+                            ("hparams" variable nil (reparse-symbol function_parameters) [1484 1491]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1409 3472])
+                    ("update_all_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3511 3515]))                          )
+                        (reparse-symbol indented_block_body) [3491 3531])
+                    ("get_MoN" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3548 3552])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [3565 3571])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [3588 3594]))                          )
+                        (reparse-symbol indented_block_body) [3536 4226])
+                    ("get_MoN_traj_from_generator" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4263 4267])
+                            ("generator_model_input" variable nil (reparse-symbol function_parameters) [4269 4290])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [4306 4312]))                          )
+                        (reparse-symbol indented_block_body) [4231 4662])
+                    ("get_robustness_feature_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4700 4704])
+                            ("Tensor" variable nil (reparse-symbol function_parameters) [4723 4729])
+                            ("dict" variable nil (reparse-symbol function_parameters) [4737 4741]))                          )
+                        (reparse-symbol indented_block_body) [4667 5018])
+                    ("get_sample_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5052 5056]))                          )
+                        (reparse-symbol indented_block_body) [5031 5108])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5250 5254])
+                            ("model_input" variable nil (reparse-symbol function_parameters) [5256 5267]))                          )
+                        (reparse-symbol indented_block_body) [5238 5525])
+                    ("training_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5556 5560])
+                            ("batch" variable nil (reparse-symbol function_parameters) [5562 5567])
+                            ("batch_idx" variable nil (reparse-symbol function_parameters) [5569 5578])
+                            ("optimizer_idx" variable nil (reparse-symbol function_parameters) [5580 5593]))                          )
+                        (reparse-symbol indented_block_body) [5538 9828])
+                    ("validation_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9866 9870])
+                            ("batch" variable nil (reparse-symbol function_parameters) [9872 9877])
+                            ("batch_idx" variable nil (reparse-symbol function_parameters) [9879 9888]))                          )
+                        (reparse-symbol indented_block_body) [9846 12509])
+                    ("validation_epoch_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12547 12551])
+                            ("outputs" variable nil (reparse-symbol function_parameters) [12553 12560]))                          )
+                        (reparse-symbol indented_block_body) [12522 12613])
+                    ("configure_optimizers" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12660 12664]))                          )
+                        (reparse-symbol indented_block_body) [12635 13126])
+                    ("optimizer_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13216 13220])
+                            ("current_epoch" variable nil (reparse-symbol function_parameters) [13222 13235])
+                            ("batch_nb" variable nil (reparse-symbol function_parameters) [13237 13245])
+                            ("optimizer" variable nil (reparse-symbol function_parameters) [13247 13256])
+                            ("optimizer_i" variable nil (reparse-symbol function_parameters) [13258 13269])
+                            ("second_order_closure" variable nil (reparse-symbol function_parameters) [13271 13291])
+                            ("args" variable nil (reparse-symbol function_parameters) [13293 13298])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [13300 13308]))                          )
+                        (reparse-symbol indented_block_body) [13197 13677]))                  
+                :type "class")
+                nil [1379 13677]))          
+      :file "stl_gan.py"
+      :pointmax 13677
+      :fsize 13676
+      :lastmodtime '(24411 1084 213241 597000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("random" include nil nil [14 27])
+            ("bce_loss" function
+               (:documentation "
+    Numerically stable version of the binary cross-entropy loss function.
+    As per https://github.com/pytorch/pytorch/issues/751
+    See the TensorFlow docs for a derivation of this formula:
+    https://www.tensorflow.org/api_docs/python/tf/nn/sigmoid_cross_entropy_with_logits
+    Input:
+    - input: PyTorch Tensor of shape (N, ) giving scores.
+    - target: PyTorch Tensor of shape (N,) containing 0 and 1 giving targets.
+    Output:
+    - A PyTorch Tensor containing the mean BCE loss over the minibatch of
+      input data.
+    "
+                :arguments 
+                  ( ("inputs" variable nil (reparse-symbol function_parameters) [43 49])
+                    ("target" variable nil (reparse-symbol function_parameters) [51 57]))                  )
+                nil [30 735])
+            ("gan_g_loss" function
+               (:documentation "
+    Input:
+    - scores_fake: Tensor of shape (N,) containing scores for fake samples
+    Output:
+    - loss: Tensor of shape (,) giving GAN generator loss
+    "
+                :arguments 
+                  ( ("scores_fake" variable nil (reparse-symbol function_parameters) [752 763])
+                    ("version" variable nil (reparse-symbol function_parameters) [765 772]))                  )
+                nil [737 1124])
+            ("gan_d_loss" function
+               (:documentation "
+    Input:
+    - scores_real: Tensor of shape (N,) giving scores for real samples
+    - scores_fake: Tensor of shape (N,) giving scores for fake samples
+    Output:
+    - loss: Tensor of shape (,) giving GAN discriminator loss
+    "
+                :arguments 
+                  ( ("scores_real" variable nil (reparse-symbol function_parameters) [1149 1160])
+                    ("scores_fake" variable nil (reparse-symbol function_parameters) [1162 1173])
+                    ("version" variable nil (reparse-symbol function_parameters) [1175 1182]))                  )
+                nil [1134 1769])
+            ("l2_loss" function
+               (:documentation "
+    Input:
+    - pred_traj: Tensor of shape (batch, seqlen, 2). Predicted trajectory.
+    - pred_traj_gt: Tensor of shape (batch, seqlen, 2). Groud truth
+    predictions.
+    - loss_mask: Tensor of shape (batch, seq_len)
+    - mode: Can be one of sum, average, raw
+    Output:
+    - loss: l2 loss depending on mode
+    "
+                :arguments 
+                  ( ("pred_traj" variable nil (reparse-symbol function_parameters) [1791 1800])
+                    ("pred_traj_gt" variable nil (reparse-symbol function_parameters) [1802 1814])
+                    ("loss_mask" variable nil (reparse-symbol function_parameters) [1816 1825])
+                    ("random" variable nil (reparse-symbol function_parameters) [1832 1838])
+                    ("mode" variable nil (reparse-symbol function_parameters) [1842 1846]))                  )
+                nil [1779 2802])
+            ("displacement_error" function
+               (:documentation "
+    Input:
+    - pred_traj: Tensor of shape (batch, seq_len,  2). Predicted trajectory.
+    - pred_traj_gt: Tensor of shape (batch, seq_len, 2). Ground truth
+    predictions.
+    - consider_ped: Tensor of shape (batch)
+    - mode: Can be one of sum, raw
+    Output:
+    - loss: gives the eculidian displacement error
+    "
+                :arguments 
+                  ( ("pred_traj" variable nil (reparse-symbol function_parameters) [2839 2848])
+                    ("pred_traj_gt" variable nil (reparse-symbol function_parameters) [2850 2862])
+                    ("consider_ped" variable nil (reparse-symbol function_parameters) [2864 2876])
+                    ("mode" variable nil (reparse-symbol function_parameters) [2883 2887]))                  )
+                nil [2816 3584])
+            ("final_displacement_error" function
+               (:documentation "
+    Input:
+    - pred_pos: Tensor of shape (batch, 2). Predicted last pos.
+    - pred_pos_gt: Tensor of shape (seq_len, batch, 2). Groud truth
+    last pos
+    - consider_ped: Tensor of shape (batch)
+    Output:
+    - loss: gives the eculidian displacement error
+    "
+                :arguments 
+                  ( ("pred_pos" variable nil (reparse-symbol function_parameters) [3620 3628])
+                    ("pred_pos_gt" variable nil (reparse-symbol function_parameters) [3630 3641])
+                    ("consider_ped" variable nil (reparse-symbol function_parameters) [3643 3655])
+                    ("mode" variable nil (reparse-symbol function_parameters) [3662 3666]))                  )
+                nil [3586 4234]))          
+      :file "loss.py"
+      :pointmax 4234
+      :fsize 4233
+      :lastmodtime '(24399 14852 33925 726000)
+      :unmatched-syntax nil))
+  :file "!home!xli4217!Dropbox!docker!docker_home!rlfps!examples!postdoc!traj_prediction!iclr2021!models!stl_gan!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

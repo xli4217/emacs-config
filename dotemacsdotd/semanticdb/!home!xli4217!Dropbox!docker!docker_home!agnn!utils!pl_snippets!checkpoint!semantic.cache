@@ -1,0 +1,107 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("code" include nil nil [1 12])
+            ("argparse" include nil nil [13 59])
+            ("collections.abc" include nil nil [60 105])
+            ("pathlib" include nil nil [106 130])
+            ("torch" include nil nil [132 144])
+            ("COLORS" type
+               (:members 
+                  ( ("BLUE" variable nil (reparse-symbol indented_block_body) [165 182])
+                    ("CYAN" variable nil (reparse-symbol indented_block_body) [187 204])
+                    ("GREEN" variable nil (reparse-symbol indented_block_body) [209 227])
+                    ("END" variable nil (reparse-symbol indented_block_body) [232 247]))                  
+                :type "class")
+                nil [147 248])
+            ("PRIMITIVE_TYPES" variable nil nil [250 297])
+            ("pretty_print" function
+               (:documentation " Prints a nice summary of the top-level contents in a checkpoint dictionary. "
+                :arguments 
+                  ( ("dict" variable nil (reparse-symbol function_parameters) [327 331]))                  )
+                nil [300 1346])
+            ("peek" function (:arguments 
+              ( ("filepath" variable nil (reparse-symbol function_parameters) [1562 1570])
+                ("Namespace" variable nil (reparse-symbol function_parameters) [1583 1592])
+                ("interactive" variable nil (reparse-symbol function_parameters) [1599 1610]))              ) nil [1553 2470])
+            ("main" function nil nil [2480 3111])
+            ("if" code nil nil [3113 3151]))          
+      :file "peek.py"
+      :pointmax 3151
+      :fsize 3150
+      :lastmodtime '(24574 39262 961636 629000)
+      :unmatched-syntax '((NAME 1577 . 1581) (COLON 1581 . 1582) (INDENT_BLOCK 1401 . 1551) (COLON 1399 . 1400) (DEF 1348 . 1351) (MINUS 1390 . 1391) (GT 1391 . 1392) (NAME 1379 . 1383) (COLON 1383 . 1384) (NAME 1366 . 1369) (COLON 1369 . 1370) (NAME 317 . 325) (COLON 325 . 326)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("zipfile" include nil nil [1 15])
+            ("pathlib" include nil nil [16 40])
+            ("typing" include nil nil [41 81])
+            ("pytorch_lightning" include nil nil [83 121])
+            ("pytorch_lightning.utilities" include nil nil [122 208])
+            ("CodeSnapshot" type
+               (:superclasses ("Callback")
+                :members 
+                  ( ("DEFAULT_FILENAME" variable nil (reparse-symbol indented_block_body) [246 275])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Callback that takes a snapshot of all source files and saves them to a ZIP file.
+        By default, the file is saved to the folder where checkpoints are saved, i.e., the dirpath
+        of ModelCheckpoint.
+
+        Arguments:
+            root: the root folder containing the files for collection
+            output_file: path to zip file, e.g., \"path/to/code.zip\"
+            filetype: list of file types, e.g., \".py\", \".txt\", etc.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [496 953])
+                            ("self" variable nil (reparse-symbol indented_block_body) [962 979])
+                            ("self" variable nil (reparse-symbol indented_block_body) [988 1019])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1028 1053]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [303 307]))                          
+                        :documentation "
+        Callback that takes a snapshot of all source files and saves them to a ZIP file.
+        By default, the file is saved to the folder where checkpoints are saved, i.e., the dirpath
+        of ModelCheckpoint.
+
+        Arguments:
+            root: the root folder containing the files for collection
+            output_file: path to zip file, e.g., \"path/to/code.zip\"
+            filetype: list of file types, e.g., \".py\", \".txt\", etc.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [281 1054])
+                    ("on_train_start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1098 1102])
+                            ("trainer" variable nil (reparse-symbol function_parameters) [1104 1111])
+                            ("pl_module" variable nil (reparse-symbol function_parameters) [1113 1122]))                          
+                        :decorators 
+                          ( ("rank_zero_only" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1059 1852]))                  
+                :type "class")
+                nil [211 1852])
+            ("snapshot_files" function (:documentation "
+    Collects all source files in a folder and saves them to a ZIP file.
+
+    Arguments:
+        root: the root folder containing the files for collection
+        output_file: path to zip file, e.g., \"path/to/code.zip\"
+        filetype: list of file types, e.g., \".py\", \".txt\", etc.
+    ") nil [1854 2715]))          
+      :file "code_snapshot.py"
+      :pointmax 2715
+      :fsize 2714
+      :lastmodtime '(24574 36840 660222 188000)
+      :unmatched-syntax '((NAME 2444 . 2452) (IF 2466 . 2468) (ELSE 2495 . 2499) (COMMA 1999 . 2000) (STRING_LITERAL 1994 . 1999) (ASSIGN 1992 . 1993) (BRACK_BLOCK 1975 . 1991) (COLON 1968 . 1969) (COMMA 1954 . 1955) (STRING_LITERAL 1944 . 1954) (ASSIGN 1942 . 1943) (BRACK_BLOCK 1930 . 1941) (COLON 1923 . 1924) (COMMA 1906 . 1907) (STRING_LITERAL 1903 . 1906) (ASSIGN 1901 . 1902) (BRACK_BLOCK 1889 . 1900) (NAME 1878 . 1882) (COLON 1882 . 1883) (COMMA 479 . 480) (STRING_LITERAL 474 . 479) (ASSIGN 472 . 473) (BRACK_BLOCK 455 . 471) (COLON 448 . 449) (COMMA 430 . 431) (STRING_LITERAL 407 . 430) (ASSIGN 405 . 406) (BRACK_BLOCK 386 . 404) (COLON 376 . 377) (COMMA 355 . 356) (STRING_LITERAL 352 . 355) (ASSIGN 350 . 351) (BRACK_BLOCK 331 . 349) (NAME 317 . 321) (COLON 321 . 322))))
+  :file "!home!xli4217!Dropbox!docker!docker_home!agnn!utils!pl_snippets!checkpoint!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
