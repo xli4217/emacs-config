@@ -252,7 +252,7 @@ It should only modify the values of Spacemacs settings."
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 10.0
+                               :size 8.0
                                :weight normal
                                :width normal)
 
@@ -576,7 +576,18 @@ before packages are loaded."
   (key-chord-define-global "fd" 'helm-semantic-or-imenu)
   (key-chord-define-global "ff" 'find-file-in-project)
 
-  "Navigate among panes"
+  "#### Insert Breakpoint ####"
+  ;; Keybinding to add breakpoint:
+
+  (defun python-add-breakpoint ()
+
+  (interactive)
+  (newline-and-indent)
+  (insert "import ipdb; ipdb.set_trace()")
+  (highlight-lines-matching-regexp "^[ ]*import ipdb; ipdb.set_trace()"))
+  (key-chord-define-global "st" 'python-add-breakpoint)
+
+  "#### Navigate among panes ####"
   (key-chord-define-global "aa" 'windmove-left)
   (key-chord-define-global "dd" 'windmove-right)
   (key-chord-define-global "ww" 'windmove-up)
