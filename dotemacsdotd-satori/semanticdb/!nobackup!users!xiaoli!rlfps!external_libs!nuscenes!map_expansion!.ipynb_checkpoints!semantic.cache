@@ -1,0 +1,154 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("json" include nil nil [178 189])
+            ("os" include nil nil [190 199])
+            ("random" include nil nil [200 213])
+            ("typing" include nil nil [214 267])
+            ("cv2" include nil nil [269 279])
+            ("descartes" include nil nil [280 296])
+            ("matplotlib.gridspec" include nil nil [297 335])
+            ("matplotlib.pyplot" include nil nil [336 367])
+            ("numpy" include nil nil [368 386])
+            ("PIL" include nil nil [387 408])
+            ("matplotlib.axes" include nil nil [409 441])
+            ("matplotlib.figure" include nil nil [442 478])
+            ("matplotlib.patches" include nil nil [479 526])
+            ("mpl_toolkits.axes_grid1.inset_locator" include nil nil [527 587])
+            ("pyquaternion" include nil nil [588 623])
+            ("shapely" include nil nil [624 652])
+            ("shapely.geometry" include nil nil [653 727])
+            ("tqdm" include nil nil [728 749])
+            ("nuscenes.nuscenes" include nil nil [751 789])
+            ("nuscenes.utils.geometry_utils" include nil nil [790 843])
+            ("nuscenes.map_expansion.arcline_path_utils" include nil nil [844 926])
+            ("plt" code nil nil [985 1019])
+            ("Geometry" variable nil nil [1074 1111])
+            ("NuScenesMap" type
+               (:documentation "
+    NuScenesMap database class for querying and retrieving information from the semantic maps.
+    Before using this class please use the provided tutorial `map_expansion_tutorial.ipynb`.
+
+    Below you can find the map origins (south eastern corner, in [lat, lon]) for each of the 4 maps in nuScenes:
+    boston-seaport: [42.336849169438615, -71.05785369873047]
+    singapore-onenorth: [1.2882100868743724, 103.78475189208984]
+    singapore-hollandvillage: [1.2993652317780957, 103.78217697143555]
+    singapore-queenstown: [1.2782562240223188, 103.76741409301758]
+
+    The dimensions of the maps are as follows ([width, height] in meters):
+    singapore-onenorth: [1585.6, 2025.0]
+    singapore-hollandvillage: [2808.3, 2922.9]
+    singapore-queenstown: [3228.6, 3687.1]
+    boston-seaport: [2979.5, 2118.1]
+    The rasterized semantic maps (e.g. singapore-onenorth.png) published with nuScenes v1.0 have a scale of 10px/m,
+    hence the above numbers are the image dimensions divided by 10.
+
+    We use the same WGS 84 Web Mercator (EPSG:3857) projection as Google Maps/Earth.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Loads the layers, create reverse indices and shortcuts, initializes the explorer class.
+        :param dataroot: Path to the layers in the form of a .json file.
+        :param map_name: Which map out of `singapore-onenorth`, `singepore-hollandvillage`, `singapore-queenstown`,
+        `boston-seaport` that we want to load.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [2372 2719])
+                            ("assert" code nil (reparse-symbol indented_block_body) [2728 2839])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2849 2873])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2882 2906])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2916 3002])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3012 3063])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3168 3360])
+                            ("self" code nil (reparse-symbol indented_block_body) [3451 3534])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3643 3725])
+                            ("self" code nil (reparse-symbol indented_block_body) [3734 3828])
+                            ("self" code nil (reparse-symbol indented_block_body) [3837 3939])
+                            ("with" code nil (reparse-symbol indented_block_body) [3949 4030])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4039 4086])
+                            ("self" code nil (reparse-symbol indented_block_body) [4095 4114])
+                            ("self" code nil (reparse-symbol indented_block_body) [4123 4145])
+                            ("self" code nil (reparse-symbol indented_block_body) [4154 4176])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4186 4227])
+                            ("if" code nil (reparse-symbol indented_block_body) [4310 4440])
+                            ("if" code nil (reparse-symbol indented_block_body) [4448 4656]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2246 2250])
+                            ("str" variable nil (reparse-symbol function_parameters) [2279 2282])
+                            ("str" variable nil (reparse-symbol function_parameters) [2335 2338]))                          
+                        :documentation "
+        Loads the layers, create reverse indices and shortcuts, initializes the explorer class.
+        :param dataroot: Path to the layers in the form of a .json file.
+        :param map_name: Which map out of `singapore-onenorth`, `singepore-hollandvillage`, `singapore-queenstown`,
+        `boston-seaport` that we want to load.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2233 4656]))                  
+                :type "class")
+                nil [1114 31708])
+            ("NuScenesMapExplorer" type
+               (:documentation " Helper class to explore the nuScenes map data. "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param map_api: NuScenesMap database class.
+        :param representative_layers: These are the layers that we feel are representative of the whole mapping data.
+        :param color_map: Color map.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [31999 32221])
+                            ("if" code nil (reparse-symbol indented_block_body) [32266 32855])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32864 32886])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32895 32945])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32954 32980])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32990 33037])
+                            ("self" variable nil (reparse-symbol indented_block_body) [33046 33067])
+                            ("self" variable nil (reparse-symbol indented_block_body) [33076 33123])
+                            ("self" variable nil (reparse-symbol indented_block_body) [33132 33153])
+                            ("self" code nil (reparse-symbol indented_block_body) [33162 33270]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31813 31817])
+                            ("NuScenesMap" variable nil (reparse-symbol function_parameters) [31845 31856])
+                            ("dict" variable nil (reparse-symbol function_parameters) [31977 31981]))                          
+                        :documentation "
+        :param map_api: NuScenesMap database class.
+        :param representative_layers: These are the layers that we feel are representative of the whole mapping data.
+        :param color_map: Color map.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [31800 33271])
+                    ("_clip_points_behind_camera" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("points" variable nil (reparse-symbol function_parameters) [61148 61154])
+                            ("float" variable nil (reparse-symbol function_parameters) [61168 61173]))                          
+                        :documentation "
+        Perform clipping on polygons that are partially behind the camera.
+        This method is necessary as the projection does not work for points behind the camera.
+        Hence we compute the line between the point and the camera and follow that line until we hit the near plane of
+        the camera. Then we use that point.
+        :param points: <np.float32: 3, n> Matrix of points, where each point (x, y, z) is along each column.
+        :param near_plane: If we set the near_plane distance of the camera to 0 then some points will project to
+            infinity. Therefore we need to clip these points at the near plane.
+        :return: The clipped version of the polygon. This may have fewer points than the original polygon if some lines
+            were entirely behind the polygon.
+        ")
+                        (reparse-symbol indented_block_body) [61099 64304]))                  
+                :type "class")
+                nil [31710 94876]))          
+      :file "map_api-checkpoint.py"
+      :pointmax 94876
+      :fsize 94875
+      :lastmodtime '(24254 64184 98912 470000)
+      :unmatched-syntax '((INDENT_BLOCK 94223 . 94876) (NEWLINE 94222 . 94223) (COLON 94221 . 94222) (MINUS 94211 . 94212) (GT 94212 . 94213) (COLON 94196 . 94197) (COMMA 94159 . 94160) (BRACK_BLOCK 94131 . 94159) (NAME 94115 . 94124) (COLON 94124 . 94125) (INDENT_BLOCK 92670 . 94072) (NEWLINE 92669 . 92670) (COLON 92668 . 92669) (MINUS 92639 . 92640) (GT 92640 . 92641) (NAME 92622 . 92632) (COLON 92632 . 92633) (COLON 92589 . 92590) (COMMA 92552 . 92553) (BRACK_BLOCK 92524 . 92552) (NAME 92508 . 92517) (COLON 92517 . 92518) (INDENT_BLOCK 89969 . 92453) (NEWLINE 89968 . 89969) (COLON 89967 . 89968) (MINUS 89951 . 89952) (GT 89952 . 89953) (NAME 89934 . 89944) (COLON 89944 . 89945) (COLON 89898 . 89899) (COMMA 89858 . 89859) (BRACK_BLOCK 89830 . 89858) (NAME 89814 . 89823) (COLON 89823 . 89824) (INDENT_BLOCK 88162 . 89753) (NEWLINE 88161 . 88162) (COLON 88160 . 88161) (MINUS 88137 . 88138) (GT 88138 . 88139) (BRACK_BLOCK 88125 . 88135) (NAME 88107 . 88118) (COLON 88118 . 88119) (COLON 88073 . 88074) (COMMA 88034 . 88035) (BRACK_BLOCK 88006 . 88034) (COLON 87999 . 88000) (COMMA 87961 . 87962) (BRACK_BLOCK 87949 . 87961) (NAME 87933 . 87943) (COLON 87943 . 87944) (INDENT_BLOCK 86175 . 87872) (NEWLINE 86174 . 86175) (COLON 86173 . 86174) (MINUS 86160 . 86161) (GT 86161 . 86162) (BRACK_BLOCK 86148 . 86158) (NAME 86130 . 86141) (COLON 86141 . 86142) (COLON 86093 . 86094) (COMMA 86051 . 86052) (BRACK_BLOCK 86023 . 86051) (COLON 86016 . 86017) (COMMA 85975 . 85976) (BRACK_BLOCK 85966 . 85975) (NAME 85950 . 85960) (COLON 85960 . 85961) (INDENT_BLOCK 85157 . 85883) (NEWLINE 85156 . 85157) (COLON 85155 . 85156) (MINUS 85142 . 85143) (GT 85143 . 85144) (PERIOD 85132 . 85133) (NAME 85124 . 85128) (COLON 85128 . 85129) (NAME 85105 . 85110) (COLON 85110 . 85111) (INDENT_BLOCK 84329 . 85063) (NEWLINE 84328 . 84329) (COLON 84327 . 84328) (MINUS 84314 . 84315) (GT 84315 . 84316) (PERIOD 84304 . 84305) (NAME 84296 . 84300) (COLON 84300 . 84301) (NAME 84272 . 84280) (COLON 84280 . 84281) (INDENT_BLOCK 83351 . 84227) (NEWLINE 83350 . 83351) (COLON 83349 . 83350) (MINUS 83336 . 83337) (GT 83337 . 83338) (BRACK_BLOCK 83324 . 83334) (COLON 83317 . 83318) (COMMA 83276 . 83277) (BRACK_BLOCK 83248 . 83276) (COLON 83241 . 83242) (COMMA 83202 . 83203) (BRACK_BLOCK 83192 . 83202) (NAME 83176 . 83186) (COLON 83186 . 83187) (NAME 83131 . 83141) (COLON 83141 . 83142) (INDENT_BLOCK 82315 . 83068) (NEWLINE 82314 . 82315) (COLON 82313 . 82314) (MINUS 82296 . 82297) (GT 82297 . 82298) (NAME 82279 . 82289) (COLON 82289 . 82290) (COLON 82246 . 82247) (COMMA 82209 . 82210) (BRACK_BLOCK 82181 . 82209) (NAME 82165 . 82174) (COLON 82174 . 82175) (INDENT_BLOCK 80560 . 82110) (NEWLINE 80559 . 80560) (COLON 80558 . 80559) (MINUS 80551 . 80552) (GT 80552 . 80553) (ASSIGN 80543 . 80544) (BRACK_BLOCK 80537 . 80542) (NAME 80525 . 80531) (COLON 80531 . 80532) (NAME 80511 . 80516) (COLON 80516 . 80517) (NAME 80494 . 80504) (COLON 80504 . 80505) (NAME 80484 . 80486) (COLON 80486 . 80487) (INDENT_BLOCK 78658 . 80450) (NEWLINE 78657 . 78658) (COLON 78656 . 78657) (MINUS 78649 . 78650) (GT 78650 . 78651) (ASSIGN 78641 . 78642) (BRACK_BLOCK 78635 . 78640) (NAME 78623 . 78629) (COLON 78629 . 78630) (NAME 78609 . 78614) (COLON 78614 . 78615) (NAME 78592 . 78602) (COLON 78602 . 78603) (NAME 78582 . 78584) (COLON 78584 . 78585) (INDENT_BLOCK 77791 . 78545) (NEWLINE 77790 . 77791) (COLON 77789 . 77790) (MINUS 77782 . 77783) (GT 77783 . 77784) (ASSIGN 77774 . 77775) (BRACK_BLOCK 77768 . 77773) (NAME 77756 . 77762) (COLON 77762 . 77763) (NAME 77742 . 77747) (COLON 77747 . 77748) (NAME 77725 . 77735) (COLON 77735 . 77736) (NAME 77715 . 77717) (COLON 77717 . 77718) (INDENT_BLOCK 76030 . 77686) (NEWLINE 76029 . 76030) (COLON 76028 . 76029) (MINUS 76021 . 76022) (GT 76022 . 76023) (COLON 76000 . 76001) (COMMA 75961 . 75962) (BRACK_BLOCK 75933 . 75961) (NAME 75916 . 75926) (COLON 75926 . 75927) (NAME 75866 . 75876) (COLON 75876 . 75877) (NAME 75821 . 75826) (COLON 75826 . 75827) (INDENT_BLOCK 74360 . 75748) (NEWLINE 74359 . 74360) (COLON 74358 . 74359) (MINUS 74351 . 74352) (GT 74352 . 74353) (COLON 74330 . 74331) (COMMA 74288 . 74289) (BRACK_BLOCK 74260 . 74288) (NAME 74243 . 74253) (COLON 74253 . 74254) (NAME 74190 . 74200) (COLON 74200 . 74201) (NAME 74142 . 74147) (COLON 74147 . 74148) (INDENT_BLOCK 73163 . 74063) (NEWLINE 73162 . 73163) (COLON 73161 . 73162) (MINUS 73125 . 73126) (GT 73126 . 73127) (NAME 73113 . 73118) (COLON 73118 . 73119) (NAME 73096 . 73106) (COLON 73106 . 73107) (INDENT_BLOCK 71540 . 73064) (NEWLINE 71539 . 71540) (COLON 71538 . 71539) (MINUS 71502 . 71503) (GT 71503 . 71504) (NAME 71490 . 71495) (COLON 71495 . 71496) (NAME 71473 . 71483) (COLON 71483 . 71484) (INDENT_BLOCK 70789 . 71438) (NEWLINE 70788 . 70789) (COLON 70787 . 70788) (MINUS 70751 . 70752) (GT 70752 . 70753) (NAME 70739 . 70744) (COLON 70744 . 70745) (NAME 70722 . 70732) (COLON 70732 . 70733) (INDENT_BLOCK 70230 . 70696) (NEWLINE 70229 . 70230) (COLON 70228 . 70229) (MINUS 70215 . 70216) (GT 70216 . 70217) (NAME 70198 . 70208) (COLON 70208 . 70209) (INDENT_BLOCK 69283 . 70170) (NEWLINE 69282 . 69283) (COLON 69281 . 69282) (MINUS 69271 . 69272) (GT 69272 . 69273) (NAME 69251 . 69264) (COLON 69264 . 69265) (INDENT_BLOCK 67878 . 69220) (NEWLINE 67877 . 67878) (COLON 67876 . 67877) (MINUS 67870 . 67871) (GT 67871 . 67872) (INDENT_BLOCK 67315 . 67821) (NEWLINE 67314 . 67315) (COLON 67313 . 67314) (MINUS 67296 . 67297) (GT 67297 . 67298) (NAME 67286 . 67287) (COLON 67287 . 67288) (NAME 67276 . 67277) (COLON 67277 . 67278) (INDENT_BLOCK 66094 . 67245) (NEWLINE 66093 . 66094) (COLON 66092 . 66093) (MINUS 66085 . 66086) (GT 66086 . 66087) (COLON 66064 . 66065) (COMMA 66031 . 66032) (BRACK_BLOCK 66003 . 66031) (NAME 65986 . 65996) (COLON 65996 . 65997) (NAME 65947 . 65952) (COLON 65952 . 65953) (NAME 65903 . 65913) (COLON 65913 . 65914) (INDENT_BLOCK 64555 . 65842) (NEWLINE 64554 . 64555) (COLON 64553 . 64554) (DEF 64309 . 64312) (MINUS 64530 . 64531) (GT 64531 . 64532) (NAME 64505 . 64509) (COLON 64509 . 64510) (ASSIGN 64468 . 64469) (BRACK_BLOCK 64462 . 64467) (COLON 64456 . 64457) (COMMA 64414 . 64415) (BRACK_BLOCK 64386 . 64414) (NAME 64369 . 64379) (COLON 64379 . 64380) (NAME 61156 . 61166) (COLON 61166 . 61167) (INDENT_BLOCK 60258 . 61094) (NEWLINE 60257 . 60258) (COLON 60256 . 60257) (MINUS 60249 . 60250) (GT 60250 . 60251) (PAREN_BLOCK 60239 . 60247) (ASSIGN 60237 . 60238) (BRACK_BLOCK 60226 . 60236) (NAME 60212 . 60219) (COLON 60219 . 60220) (NAME 60166 . 60171) (COLON 60171 . 60172) (NAME 60130 . 60131) (COLON 60131 . 60132) (NAME 60094 . 60095) (COLON 60095 . 60096) (INDENT_BLOCK 55145 . 60035) (NEWLINE 55144 . 55145) (COLON 55143 . 55144) (MINUS 55130 . 55131) (GT 55131 . 55132) (NAME 55102 . 55115) (COLON 55115 . 55116) (NAME 55029 . 55050) (COLON 55050 . 55051) (NAME 54962 . 54977) (COLON 54977 . 54978) (NAME 54903 . 54911) (COLON 54911 . 54912) (NAME 54844 . 54851) (COLON 54851 . 54852) (NAME 54780 . 54792) (COLON 54792 . 54793) (NAME 54727 . 54731) (COLON 54731 . 54732) (INDENT_BLOCK 47429 . 54646) (NEWLINE 47428 . 47429) (COLON 47427 . 47428) (MINUS 47420 . 47421) (GT 47421 . 47422) (NAME 47398 . 47406) (COLON 47406 . 47407) (NAME 47348 . 47355) (COLON 47355 . 47356) (ASSIGN 47312 . 47313) (BRACK_BLOCK 47306 . 47311) (NAME 47289 . 47300) (COLON 47300 . 47301) (NAME 47229 . 47246) (COLON 47246 . 47247) (NAME 47169 . 47186) (COLON 47186 . 47187) (NAME 47109 . 47125) (COLON 47125 . 47126) (NAME 47052 . 47064) (COLON 47064 . 47065) (NAME 47004 . 47009) (COLON 47009 . 47010) (NAME 46941 . 46955) (COLON 46955 . 46956) (NAME 46894 . 46906) (COLON 46906 . 46907) (NAME 46850 . 46854) (COLON 46854 . 46855) (INDENT_BLOCK 44821 . 46787) (NEWLINE 44820 . 44821) (COLON 44819 . 44820) (MINUS 44797 . 44798) (GT 44798 . 44799) (NAME 44769 . 44782) (COLON 44782 . 44783) (COLON 44729 . 44730) (COMMA 44681 . 44682) (PAREN_BLOCK 44673 . 44681) (ASSIGN 44671 . 44672) (BRACK_BLOCK 44660 . 44670) (NAME 44646 . 44653) (COLON 44653 . 44654) (NAME 44601 . 44606) (COLON 44606 . 44607) (ASSIGN 44568 . 44569) (BRACK_BLOCK 44562 . 44567) (COLON 44556 . 44557) (COMMA 44518 . 44519) (BRACK_BLOCK 44490 . 44518) (NAME 44473 . 44483) (COLON 44483 . 44484) (INDENT_BLOCK 43624 . 44416) (NEWLINE 43623 . 43624) (COLON 43622 . 43623) (MINUS 43600 . 43601) (GT 43601 . 43602) (ASSIGN 43592 . 43593) (BRACK_BLOCK 43586 . 43591) (COLON 43580 . 43581) (COMMA 43550 . 43551) (BRACK_BLOCK 43540 . 43550) (NAME 43526 . 43533) (COLON 43533 . 43534) (COLON 43495 . 43496) (COMMA 43466 . 43467) (BRACK_BLOCK 43461 . 43466) (NAME 43444 . 43455) (COLON 43455 . 43456) (INDENT_BLOCK 40354 . 43393) (NEWLINE 40353 . 40354) (COLON 40352 . 40353) (MINUS 40317 . 40318) (GT 40318 . 40319) (ASSIGN 40309 . 40310) (BRACK_BLOCK 40303 . 40308) (COLON 40297 . 40298) (COMMA 40261 . 40262) (PAREN_BLOCK 40253 . 40261) (ASSIGN 40251 . 40252) (BRACK_BLOCK 40240 . 40250) (NAME 40226 . 40233) (COLON 40233 . 40234) (NAME 40184 . 40189) (COLON 40189 . 40190) (NAME 40150 . 40155) (COLON 40155 . 40156) (NAME 40111 . 40121) (COLON 40121 . 40122) (INDENT_BLOCK 37763 . 40060) (NEWLINE 37762 . 37763) (COLON 37761 . 37762) (MINUS 37748 . 37749) (GT 37749 . 37750) (PAREN_BLOCK 37736 . 37746) (ASSIGN 37734 . 37735) (BRACK_BLOCK 37723 . 37733) (NAME 37705 . 37716) (COLON 37716 . 37717) (ASSIGN 37676 . 37677) (BRACK_BLOCK 37670 . 37675) (NAME 37653 . 37664) (COLON 37664 . 37665) (COLON 37623 . 37624) (COMMA 37589 . 37590) (BRACK_BLOCK 37554 . 37589) (NAME 37535 . 37544) (COLON 37544 . 37545) (INDENT_BLOCK 36645 . 37486) (NEWLINE 36644 . 36645) (COLON 36643 . 36644) (MINUS 36630 . 36631) (GT 36631 . 36632) (BRACK_BLOCK 36618 . 36628) (COLON 36611 . 36612) (COMMA 36573 . 36574) (BRACK_BLOCK 36545 . 36573) (COLON 36538 . 36539) (COMMA 36502 . 36503) (BRACK_BLOCK 36474 . 36502) (NAME 36460 . 36468) (COLON 36468 . 36469) (INDENT_BLOCK 35381 . 36403) (NEWLINE 35380 . 35381) (COLON 35379 . 35380) (MINUS 35344 . 35345) (GT 35345 . 35346) (BRACK_BLOCK 35337 . 35342) (NAME 35320 . 35331) (COLON 35331 . 35332) (COLON 35290 . 35291) (COMMA 35256 . 35257) (BRACK_BLOCK 35228 . 35256) (NAME 35212 . 35221) (COLON 35221 . 35222) (INDENT_BLOCK 33638 . 35163) (NEWLINE 33637 . 33638) (COLON 33636 . 33637) (DEF 33276 . 33279) (MINUS 33608 . 33609) (GT 33609 . 33610) (COLON 33597 . 33598) (COMMA 33566 . 33567) (BRACK_BLOCK 33556 . 33566) (COLON 33549 . 33550) (COMMA 33516 . 33517) (BRACK_BLOCK 33506 . 33516) (COLON 33499 . 33500) (COMMA 33462 . 33463) (BRACK_BLOCK 33457 . 33462) (NAME 33440 . 33451) (COLON 33451 . 33452) (COLON 33407 . 33408) (COMMA 33370 . 33371) (BRACK_BLOCK 33342 . 33370) (NAME 33326 . 33335) (COLON 33335 . 33336) (COLON 31975 . 31976) (COMMA 31947 . 31948) (PAREN_BLOCK 31911 . 31947) (ASSIGN 31909 . 31910) (BRACK_BLOCK 31903 . 31908) (NAME 31875 . 31896) (COLON 31896 . 31897) (NAME 31836 . 31843) (COLON 31843 . 31844) (INDENT_BLOCK 29010 . 31708) (NEWLINE 29009 . 29010) (COLON 29008 . 29009) (MINUS 28985 . 28986) (GT 28986 . 28987) (NAME 28975 . 28976) (COLON 28976 . 28977) (NAME 28965 . 28966) (COLON 28966 . 28967) (INDENT_BLOCK 28551 . 28935) (NEWLINE 28550 . 28551) (COLON 28549 . 28550) (MINUS 28542 . 28543) (GT 28543 . 28544) (PAREN_BLOCK 28532 . 28540) (ASSIGN 28530 . 28531) (BRACK_BLOCK 28519 . 28529) (NAME 28505 . 28512) (COLON 28512 . 28513) (NAME 28459 . 28464) (COLON 28464 . 28465) (NAME 28423 . 28424) (COLON 28424 . 28425) (NAME 28387 . 28388) (COLON 28388 . 28389) (INDENT_BLOCK 27368 . 28328) (NEWLINE 27367 . 27368) (COLON 27366 . 27367) (MINUS 27360 . 27361) (GT 27361 . 27362) (NAME 27341 . 27347) (COLON 27347 . 27348) (NAME 27331 . 27332) (COLON 27332 . 27333) (NAME 27321 . 27322) (COLON 27322 . 27323) (INDENT_BLOCK 26930 . 27289) (NEWLINE 26929 . 26930) (COLON 26928 . 26929) (MINUS 26908 . 26909) (GT 26909 . 26910) (NAME 26891 . 26901) (COLON 26901 . 26902) (INDENT_BLOCK 26625 . 26867) (NEWLINE 26624 . 26625) (COLON 26623 . 26624) (MINUS 26611 . 26612) (GT 26612 . 26613) (NAME 26594 . 26604) (COLON 26604 . 26605) (INDENT_BLOCK 26314 . 26557) (NEWLINE 26313 . 26314) (COLON 26312 . 26313) (MINUS 26300 . 26301) (GT 26301 . 26302) (NAME 26283 . 26293) (COLON 26293 . 26294) (INDENT_BLOCK 25791 . 26246) (NEWLINE 25790 . 25791) (COLON 25789 . 25790) (MINUS 25777 . 25778) (GT 25778 . 25779) (NAME 25753 . 25770) (COLON 25770 . 25771) (NAME 25736 . 25746) (COLON 25746 . 25747) (INDENT_BLOCK 25192 . 25700) (NEWLINE 25191 . 25192) (COLON 25190 . 25191) (MINUS 25144 . 25145) (GT 25145 . 25146) (COLON 25135 . 25136) (COMMA 25091 . 25092) (BRACK_BLOCK 25086 . 25091) (NAME 25074 . 25080) (COLON 25080 . 25081) (INDENT_BLOCK 24202 . 25042) (NEWLINE 24201 . 24202) (COLON 24200 . 24201) (MINUS 24177 . 24178) (GT 24178 . 24179) (COLON 24156 . 24157) (COMMA 24150 . 24151) (BRACK_BLOCK 24145 . 24150) (NAME 24128 . 24139) (COLON 24139 . 24140) (NAME 24083 . 24089) (COLON 24089 . 24090) (NAME 24073 . 24074) (COLON 24074 . 24075) (NAME 24063 . 24064) (COLON 24064 . 24065) (INDENT_BLOCK 23662 . 24026) (NEWLINE 23661 . 23662) (COLON 23660 . 23661) (MINUS 23624 . 23625) (GT 23625 . 23626) (NAME 23612 . 23617) (COLON 23617 . 23618) (NAME 23595 . 23605) (COLON 23605 . 23606) (INDENT_BLOCK 23309 . 23569) (NEWLINE 23308 . 23309) (COLON 23307 . 23308) (MINUS 23294 . 23295) (GT 23295 . 23296) (NAME 23277 . 23287) (COLON 23287 . 23288) (INDENT_BLOCK 22969 . 23249) (NEWLINE 22968 . 22969) (COLON 22967 . 22968) (MINUS 22957 . 22958) (GT 22958 . 22959) (NAME 22937 . 22950) (COLON 22950 . 22951) (INDENT_BLOCK 22478 . 22906) (NEWLINE 22477 . 22478) (COLON 22476 . 22477) (MINUS 22470 . 22471) (GT 22471 . 22472) (NAME 22453 . 22463) (COLON 22463 . 22464) (NAME 22443 . 22444) (COLON 22444 . 22445) (NAME 22433 . 22434) (COLON 22434 . 22435) (INDENT_BLOCK 22035 . 22402) (NEWLINE 22034 . 22035) (COLON 22033 . 22034) (MINUS 22016 . 22017) (GT 22017 . 22018) (NAME 22006 . 22007) (COLON 22007 . 22008) (NAME 21996 . 21997) (COLON 21997 . 21998) (INDENT_BLOCK 21300 . 21965) (NEWLINE 21299 . 21300) (COLON 21298 . 21299) (MINUS 21291 . 21292) (GT 21292 . 21293) (COLON 21270 . 21271) (COMMA 21237 . 21238) (BRACK_BLOCK 21209 . 21237) (NAME 21192 . 21202) (COLON 21202 . 21203) (NAME 21153 . 21158) (COLON 21158 . 21159) (NAME 21109 . 21119) (COLON 21119 . 21120) (INDENT_BLOCK 20355 . 21048) (NEWLINE 20354 . 20355) (COLON 20353 . 20354) (MINUS 20330 . 20331) (GT 20331 . 20332) (NAME 20305 . 20309) (COLON 20309 . 20310) (ASSIGN 20268 . 20269) (BRACK_BLOCK 20262 . 20267) (COLON 20256 . 20257) (COMMA 20214 . 20215) (BRACK_BLOCK 20186 . 20214) (NAME 20169 . 20179) (COLON 20179 . 20180) (INDENT_BLOCK 19495 . 20104) (NEWLINE 19494 . 19495) (COLON 19493 . 19494) (MINUS 19458 . 19459) (GT 19459 . 19460) (BRACK_BLOCK 19451 . 19456) (NAME 19434 . 19445) (COLON 19445 . 19446) (COLON 19404 . 19405) (COMMA 19370 . 19371) (BRACK_BLOCK 19342 . 19370) (NAME 19326 . 19335) (COLON 19335 . 19336) (INDENT_BLOCK 18560 . 19277) (NEWLINE 18559 . 18560) (COLON 18558 . 18559) (MINUS 18545 . 18546) (GT 18546 . 18547) (PAREN_BLOCK 18533 . 18543) (ASSIGN 18531 . 18532) (BRACK_BLOCK 18513 . 18530) (NAME 18492 . 18503) (COLON 18503 . 18504) (ASSIGN 18463 . 18464) (BRACK_BLOCK 18457 . 18462) (NAME 18440 . 18451) (COLON 18451 . 18452) (COLON 18410 . 18411) (COMMA 18376 . 18377) (BRACK_BLOCK 18341 . 18376) (NAME 18322 . 18331) (COLON 18331 . 18332) (INDENT_BLOCK 17559 . 18273) (NEWLINE 17558 . 17559) (COLON 17557 . 17558) (MINUS 17529 . 17530) (GT 17530 . 17531) (COLON 17518 . 17519) (COMMA 17487 . 17488) (PAREN_BLOCK 17479 . 17487) (ASSIGN 17477 . 17478) (BRACK_BLOCK 17466 . 17476) (COLON 17459 . 17460) (COMMA 17426 . 17427) (PAREN_BLOCK 17416 . 17426) (ASSIGN 17414 . 17415) (BRACK_BLOCK 17403 . 17413) (NAME 17385 . 17396) (COLON 17396 . 17397) (ASSIGN 17353 . 17354) (BRACK_BLOCK 17347 . 17352) (NAME 17330 . 17341) (COLON 17341 . 17342) (COLON 17297 . 17298) (COMMA 17260 . 17261) (BRACK_BLOCK 17232 . 17260) (NAME 17216 . 17225) (COLON 17225 . 17226) (INDENT_BLOCK 15819 . 17161) (NEWLINE 15818 . 15819) (COLON 15817 . 15818) (MINUS 15804 . 15805) (GT 15805 . 15806) (NAME 15776 . 15789) (COLON 15789 . 15790) (NAME 15703 . 15724) (COLON 15724 . 15725) (NAME 15636 . 15651) (COLON 15651 . 15652) (NAME 15577 . 15585) (COLON 15585 . 15586) (NAME 15518 . 15525) (COLON 15525 . 15526) (NAME 15454 . 15466) (COLON 15466 . 15467) (NAME 15401 . 15405) (COLON 15405 . 15406) (INDENT_BLOCK 13742 . 15320) (NEWLINE 13741 . 13742) (COLON 13740 . 13741) (MINUS 13733 . 13734) (GT 13734 . 13735) (NAME 13711 . 13719) (COLON 13719 . 13720) (NAME 13661 . 13668) (COLON 13668 . 13669) (ASSIGN 13625 . 13626) (BRACK_BLOCK 13619 . 13624) (NAME 13602 . 13613) (COLON 13613 . 13614) (NAME 13542 . 13559) (COLON 13559 . 13560) (NAME 13482 . 13499) (COLON 13499 . 13500) (NAME 13422 . 13438) (COLON 13438 . 13439) (NAME 13365 . 13377) (COLON 13377 . 13378) (NAME 13317 . 13322) (COLON 13322 . 13323) (NAME 13254 . 13268) (COLON 13268 . 13269) (NAME 13207 . 13219) (COLON 13219 . 13220) (NAME 13163 . 13167) (COLON 13167 . 13168) (INDENT_BLOCK 12304 . 13100) (NEWLINE 12303 . 12304) (COLON 12302 . 12303) (MINUS 12280 . 12281) (GT 12281 . 12282) (NAME 12252 . 12265) (COLON 12265 . 12266) (COLON 12212 . 12213) (COMMA 12164 . 12165) (PAREN_BLOCK 12156 . 12164) (ASSIGN 12154 . 12155) (BRACK_BLOCK 12143 . 12153) (NAME 12129 . 12136) (COLON 12136 . 12137) (NAME 12084 . 12089) (COLON 12089 . 12090) (ASSIGN 12051 . 12052) (BRACK_BLOCK 12045 . 12050) (COLON 12039 . 12040) (COMMA 12001 . 12002) (BRACK_BLOCK 11973 . 12001) (NAME 11956 . 11966) (COLON 11966 . 11967) (INDENT_BLOCK 11422 . 11899) (NEWLINE 11421 . 11422) (COLON 11420 . 11421) (MINUS 11398 . 11399) (GT 11399 . 11400) (ASSIGN 11390 . 11391) (BRACK_BLOCK 11384 . 11389) (COLON 11378 . 11379) (COMMA 11348 . 11349) (PAREN_BLOCK 11340 . 11348) (ASSIGN 11338 . 11339) (BRACK_BLOCK 11327 . 11337) (NAME 11313 . 11320) (COLON 11320 . 11321) (COLON 11276 . 11277) (COMMA 11247 . 11248) (BRACK_BLOCK 11242 . 11247) (NAME 11225 . 11236) (COLON 11236 . 11237) (INDENT_BLOCK 10451 . 11174) (NEWLINE 10450 . 10451) (COLON 10449 . 10450) (MINUS 10414 . 10415) (GT 10415 . 10416) (ASSIGN 10406 . 10407) (BRACK_BLOCK 10400 . 10405) (COLON 10394 . 10395) (COMMA 10358 . 10359) (PAREN_BLOCK 10350 . 10358) (ASSIGN 10348 . 10349) (BRACK_BLOCK 10337 . 10347) (NAME 10323 . 10330) (COLON 10330 . 10331) (NAME 10281 . 10286) (COLON 10286 . 10287) (NAME 10247 . 10252) (COLON 10252 . 10253) (NAME 10208 . 10218) (COLON 10218 . 10219) (INDENT_BLOCK 9822 . 10157) (NEWLINE 9821 . 9822) (COLON 9820 . 9821) (MINUS 9814 . 9815) (GT 9815 . 9816) (NAME 9802 . 9807) (COLON 9807 . 9808) (NAME 9785 . 9795) (COLON 9795 . 9796) (INDENT_BLOCK 9362 . 9763) (NEWLINE 9361 . 9362) (COLON 9360 . 9361) (MINUS 9353 . 9354) (GT 9354 . 9355) (NAME 9341 . 9346) (COLON 9346 . 9347) (NAME 9324 . 9334) (COLON 9334 . 9335) (INDENT_BLOCK 8651 . 9305) (NEWLINE 8650 . 8651) (COLON 8649 . 8650) (MINUS 8636 . 8637) (GT 8637 . 8638) (NAME 8612 . 8628) (COLON 8628 . 8629) (INDENT_BLOCK 6940 . 8578) (NEWLINE 6939 . 6940) (COLON 6938 . 6939) (MINUS 6931 . 6932) (GT 6932 . 6933) (INDENT_BLOCK 6561 . 6900) (NEWLINE 6560 . 6561) (COLON 6559 . 6560) (MINUS 6552 . 6553) (GT 6553 . 6554) (INDENT_BLOCK 5415 . 6521) (NEWLINE 5414 . 5415) (COLON 5413 . 5414) (MINUS 5406 . 5407) (GT 5407 . 5408) (INDENT_BLOCK 5333 . 5378) (NEWLINE 5332 . 5333) (COLON 5331 . 5332) (MINUS 5297 . 5298) (GT 5298 . 5299) (INDENT_BLOCK 5042 . 5258) (NEWLINE 5041 . 5042) (COLON 5040 . 5041) (MINUS 5009 . 5010) (GT 5010 . 5011) (INDENT_BLOCK 4715 . 4974) (NEWLINE 4714 . 4715) (COLON 4713 . 4714) (DEF 4661 . 4664) (MINUS 4700 . 4701) (GT 4701 . 4702) (NAME 4683 . 4693) (COLON 4693 . 4694) (NAME 2325 . 2333) (COLON 2333 . 2334) (NAME 2269 . 2277) (COLON 2277 . 2278))))
+  :file "!nobackup!users!xiaoli!rlfps!external_libs!nuscenes!map_expansion!.ipynb_checkpoints!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

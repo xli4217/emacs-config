@@ -1,0 +1,131 @@
+;; Object traj_opt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "traj_opt/"
+  :tables
+  (list
+    (semanticdb-table "traj_opt_pi2.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines code for PI2-based trajectory optimization.
+
+Optimization of trajectories with PI2 and a REPS-like KL-divergence constraint. 
+References:
+[1] E. Theodorou, J. Buchli, and S. Schaal. A generalized path integral control 
+    approach to reinforcement learning. JMLR, 11, 2010.
+[2] F. Stulp and O. Sigaud. Path integral policy improvement with covariance 
+    matrix adaptation. In ICML, 2012.
+[3] J. Peters, K. Mulling, and Y. Altun. Relative entropy policy search. 
+    In AAAI, 2010.
+ \"\"\"" code nil nil [1 511])
+            ("copy" include nil nil [512 523])
+            ("numpy" include nil nil [524 542])
+            ("scipy" include nil nil [543 561])
+            ("numpy.linalg" include nil nil [563 599])
+            ("scipy.optimize" include nil nil [600 635])
+            ("gps.algorithm.traj_opt.config" include nil nil [637 691])
+            ("gps.algorithm.traj_opt.traj_opt" include nil nil [692 743])
+            ("TrajOptPi2" type
+               (:documentation " PI2 trajectory optimization.
+    Hyperparameters:
+        kl_threshold: KL-divergence threshold between old and new policies.
+        covariance_damping: If greater than zero, covariance is computed as a
+            multiple of the old covariance. Multiplier is taken to the power
+            (1 / covariance_damping). If greater than one, slows down 
+            convergence and keeps exploration noise high for more iterations.
+        min_temperature: Minimum bound of the temperature optimiztion for the 
+            soft-max probabilities of the policy samples.
+    "
+                :superclasses ("TrajOpt")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("config" variable nil (reparse-symbol indented_block_body) [1401 1437])
+                            ("config" code nil (reparse-symbol indented_block_body) [1446 1472])
+                            ("TrajOpt" code nil (reparse-symbol indented_block_body) [1481 1511])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1520 1574])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1583 1649])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1658 1718]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1373 1377])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [1379 1390]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1360 1719])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1739 1743])
+                            ("m" variable nil (reparse-symbol function_parameters) [1745 1746])
+                            ("algorithm" variable nil (reparse-symbol function_parameters) [1748 1757]))                          
+                        :documentation "
+        Perform optimization of the feedforward controls of time-varying
+        linear-Gaussian controllers with PI2. 
+        Args:
+            m: Current condition number.
+            algorithm: Currently used algorithm.
+        Returns:
+            traj_distr: Updated linear-Gaussian controller.
+        ")
+                        (reparse-symbol indented_block_body) [1728 3333])
+                    ("update_pi2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3353 3357])
+                            ("samples" variable nil (reparse-symbol function_parameters) [3359 3366])
+                            ("costs" variable nil (reparse-symbol function_parameters) [3368 3373])
+                            ("mean_old" variable nil (reparse-symbol function_parameters) [3375 3383])
+                            ("cov_old" variable nil (reparse-symbol function_parameters) [3385 3392]))                          
+                        :documentation "
+        Perform optimization with PI2. Computes new mean and covariance matrices
+        of the policy parameters given policy samples and their costs.
+        Args:
+            samples: Matrix of policy samples with dimensions: 
+                     [num_samples x num_timesteps x num_controls].
+            costs: Matrix of roll-out costs with dimensions:
+                   [num_samples x num_timesteps]
+            mean_old: Old policy mean.
+            cov_old: Old policy covariance.            
+        Returns:
+            mean_new: New policy mean.
+            cov_new: New policy covariance.
+            inv_cov_new: Inverse of the new policy covariance.
+            chol_cov_new: Cholesky decomposition of the new policy covariance.
+        ")
+                        (reparse-symbol indented_block_body) [3338 6552])
+                    ("kl_dual" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6569 6573])
+                            ("eta" variable nil (reparse-symbol function_parameters) [6575 6578])
+                            ("kl_threshold" variable nil (reparse-symbol function_parameters) [6580 6592])
+                            ("costs" variable nil (reparse-symbol function_parameters) [6594 6599]))                          
+                        :documentation "
+        Dual function for optimizing the temperature eta according to the given
+        KL-divergence constraint.
+        
+        Args:
+            eta: Temperature that has to be optimized.
+            kl_threshold: Max. KL-divergence constraint.
+            costs: Roll-out costs.            
+        Returns:
+            Value of the dual function.
+        ")
+                        (reparse-symbol indented_block_body) [6557 7090]))                  
+                :type "class")
+                nil [746 7090]))          
+      :file "traj_opt_pi2.py"
+      :pointmax 7090
+      :fsize 7089
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "config.py"
+      :file "config.py"
+      :fsize 368
+      :lastmodtime '(22653 24657 0 0))
+    (semanticdb-table "traj_opt.py"
+      :file "traj_opt.py"
+      :fsize 466
+      :lastmodtime '(22653 24657 0 0)))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!RLFPS!external_libs!gps!python!gps!algorithm!traj_opt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

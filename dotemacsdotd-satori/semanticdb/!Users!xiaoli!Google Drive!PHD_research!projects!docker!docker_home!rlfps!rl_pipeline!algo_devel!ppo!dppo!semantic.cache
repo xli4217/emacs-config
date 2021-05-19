@@ -1,0 +1,110 @@
+;; Object dppo/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dppo/"
+  :tables
+  (list
+    (semanticdb-table "ppo_runner.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("ppo_config_test" include nil nil [1 50])
+            ("rl_pipeline.train.rl.rl_runner_base" include nil nil [51 111])
+            ("tensorflow" include nil nil [112 135])
+            ("numpy" include nil nil [137 155])
+            ("pandas" include nil nil [156 175])
+            ("os" include nil nil [176 185])
+            ("PPORunner" type
+               (:superclasses ("RLRunnerBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [274 313])
+                            ("self" variable nil (reparse-symbol indented_block_body) [322 357])
+                            ("self" variable nil (reparse-symbol indented_block_body) [367 387])
+                            ("if" code nil (reparse-symbol indented_block_body) [405 832]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [236 240])
+                            ("config" variable nil (reparse-symbol function_parameters) [242 248])
+                            ("remote" variable nil (reparse-symbol function_parameters) [250 256]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [223 832])
+                    ("update_config" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [881 885])
+                            ("hyperparam_dict" variable nil (reparse-symbol function_parameters) [887 902]))                          )
+                        (reparse-symbol indented_block_body) [863 1900])
+                    ("create_agent" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1949 1953]))                          )
+                        (reparse-symbol indented_block_body) [1932 5098])
+                    ("get_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5117 5121])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [5123 5136]))                          )
+                        (reparse-symbol indented_block_body) [5103 5204])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5227 5231]))                          )
+                        (reparse-symbol indented_block_body) [5217 6592]))                  
+                :type "class")
+                nil [187 6592])
+            ("if" code nil nil [6594 7007]))          
+      :file "ppo_runner.py"
+      :pointmax 7030
+      :fsize 7029
+      :lastmodtime '(23180 41901 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ppo_config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("rl_pipeline.configuration.configuration" include nil nil [11 76])
+            ("numpy" include nil nil [77 95])
+            ("file_path" variable nil nil [98 136])
+            ("file_dir" variable nil nil [137 159])
+            ("experiment_dir" variable nil nil [160 214])
+            ("current_exp_dir" variable nil nil [215 269])
+            ("configuration" variable nil nil [307 369])
+            ("steps_per_episode" variable nil nil [423 446])
+            ("episodes_per_iteration" variable nil nil [512 539])
+            ("CONFIG" variable nil nil [542 3402]))          
+      :file "ppo_config.py"
+      :pointmax 3404
+      :fsize 3403
+      :lastmodtime '(23180 31733 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ppo_config_test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("rl_pipeline.configuration.configuration" include nil nil [11 76])
+            ("numpy" include nil nil [77 95])
+            ("rl_pipeline.env.pendulum_env" include nil nil [97 157])
+            ("rl_pipeline.env.lunarlander_env" include nil nil [158 216])
+            ("rl_pipeline.logging.tensorboard_logger" include nil nil [217 285])
+            ("rl_pipeline.hyperparameter_tuner.random_search" include nil nil [286 357])
+            ("rl_pipeline.preprocessor.running_average" include nil nil [358 425])
+            ("rl_pipeline.preprocessor.standardize" include nil nil [426 486])
+            ("rl_pipeline.sampler.batch_sampler" include nil nil [487 545])
+            ("policies.mlp_policy" include nil nil [547 588])
+            ("value_functions.mlp_value" include nil nil [589 635])
+            ("agent.PPOAgent" include nil nil [636 671])
+            ("file_path" variable nil nil [674 712])
+            ("file_dir" variable nil nil [713 735])
+            ("experiment_dir" variable nil nil [736 790])
+            ("current_exp_dir" variable nil nil [791 845])
+            ("configuration" variable nil nil [883 945])
+            ("steps_per_episode" variable nil nil [999 1022])
+            ("episodes_per_iteration" variable nil nil [1088 1115]))          
+      :file "ppo_config_test.py"
+      :pointmax 4087
+      :fsize 4086
+      :lastmodtime '(23180 36547 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!algo_devel!ppo!dppo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

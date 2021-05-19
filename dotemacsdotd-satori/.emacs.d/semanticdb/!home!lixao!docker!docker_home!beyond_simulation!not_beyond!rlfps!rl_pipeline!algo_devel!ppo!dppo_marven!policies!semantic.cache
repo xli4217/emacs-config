@@ -1,0 +1,79 @@
+;; Object policies/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "policies/"
+  :tables
+  (list
+    (semanticdb-table "mlp_policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("tensorflow" include nil nil [20 43])
+            ("tensorflow.contrib.distributions" include nil nil [44 95])
+            ("os" include nil nil [96 105])
+            ("MlpPolicy" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [324 344])
+                            ("self" variable nil (reparse-symbol indented_block_body) [353 369])
+                            ("self" variable nil (reparse-symbol indented_block_body) [378 394])
+                            ("self" variable nil (reparse-symbol indented_block_body) [403 435])
+                            ("self" variable nil (reparse-symbol indented_block_body) [444 485])
+                            ("self" variable nil (reparse-symbol indented_block_body) [494 529])
+                            ("self" variable nil (reparse-symbol indented_block_body) [538 573])
+                            ("self" variable nil (reparse-symbol indented_block_body) [583 609])
+                            ("self" code nil (reparse-symbol indented_block_body) [627 646])
+                            ("self" variable nil (reparse-symbol indented_block_body) [656 676]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [143 147])
+                            ("config" variable nil (reparse-symbol function_parameters) [166 172])
+                            ("sess" variable nil (reparse-symbol function_parameters) [191 195])
+                            ("seed" variable nil (reparse-symbol function_parameters) [214 218])
+                            ("trainable" variable nil (reparse-symbol function_parameters) [237 246])
+                            ("logger" variable nil (reparse-symbol function_parameters) [270 276])
+                            ("deploy" variable nil (reparse-symbol function_parameters) [300 306]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [130 677])
+                    ("save" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [707 711])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [713 722])
+                            ("model_name" variable nil (reparse-symbol function_parameters) [724 734]))                          )
+                        (reparse-symbol indented_block_body) [698 817])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [834 838])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [840 849]))                          )
+                        (reparse-symbol indented_block_body) [822 929])
+                    ("_build_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [966 970]))                          )
+                        (reparse-symbol indented_block_body) [949 3710])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3742 3746])
+                            ("obs" variable nil (reparse-symbol function_parameters) [3748 3751])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [3753 3766]))                          
+                        :documentation "get action from distribution")
+                        (reparse-symbol indented_block_body) [3727 4128])
+                    ("close_sess" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4168 4172]))                          
+                        :documentation " Close TensorFlow session ")
+                        (reparse-symbol indented_block_body) [4153 4241]))                  
+                :type "class")
+                nil [107 4241]))          
+      :file "mlp_policy.py"
+      :pointmax 4241
+      :fsize 4240
+      :lastmodtime '(23209 21444 731345 15000)
+      :unmatched-syntax nil))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!not_beyond!rlfps!rl_pipeline!algo_devel!ppo!dppo_marven!policies!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

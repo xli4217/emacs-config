@@ -1,0 +1,60 @@
+;; Object example/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "example/"
+  :tables
+  (list
+    (semanticdb-table "main.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("'''
+Main module to launch an example hyperopt search on EC2.
+
+Launch this from outside the rllab main dir. Otherwise, rllab will try to ship the logfiles being written by this process,
+which will fail because tar doesn't want to tar files that are being written to. Alternatively, disable the packaging of
+log files by rllab, but I couldn't quickly find how to do this.
+
+You can use Jupyter notebook visualize_hyperopt_results.ipynb to inspect results.
+'''" code nil nil [1 457])
+            ("hyperopt" include nil nil [458 481])
+            ("contrib.rllab_hyperopt.core" include nil nil [483 545])
+            ("contrib.rllab_hyperopt.example.score" include nil nil [876 939])
+            ("contrib.rllab_hyperopt.example.task" include nil nil [940 996])
+            ("param_space" variable nil nil [1098 1214])
+            ("run_experiment_kwargs" variable nil nil [1289 1408]))          
+      :file "main.py"
+      :pointmax 2178
+      :fsize 2177
+      :lastmodtime '(22778 11703 0 0)
+      :unmatched-syntax '((NAME 1410 . 1432) ($EOI 2178 . 2178)))
+    (semanticdb-table "score.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("pandas" include nil nil [11 30])
+            ("rllab" include nil nil [32 56])
+            ("process_result" function (:arguments 
+              ( ("exp_prefix" variable nil (reparse-symbol function_parameters) [77 87])
+                ("exp_name" variable nil (reparse-symbol function_parameters) [89 97]))              ) nil [58 912]))          
+      :file "score.py"
+      :pointmax 912
+      :fsize 911
+      :lastmodtime '(22778 11703 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "task.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.trpo" include nil nil [1 34])
+            ("rllab.baselines.linear_feature_baseline" include nil nil [35 108])
+            ("rllab.envs.box2d.cartpole_env" include nil nil [109 162])
+            ("rllab.envs.normalized_env" include nil nil [163 210])
+            ("rllab.policies.gaussian_mlp_policy" include nil nil [211 275])
+            ("run_task" function (:arguments 
+              ( ("v" variable nil (reparse-symbol function_parameters) [290 291]))              ) nil [277 919]))          
+      :file "task.py"
+      :pointmax 919
+      :fsize 918
+      :lastmodtime '(22778 11703 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!contrib!rllab_hyperopt!example!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

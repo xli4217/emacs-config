@@ -1,0 +1,226 @@
+;; Object envs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "envs/"
+  :tables
+  (list
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("gym.envs.registration" include nil nil [1 65])
+            ("register" code nil nil [125 269])
+            ("register" code nil nil [271 402])
+            ("register" code nil nil [404 547])
+            ("register" code nil nil [549 729])
+            ("register" code nil nil [731 912])
+            ("register" code nil nil [914 1066])
+            ("register" code nil nil [1068 1205])
+            ("register" code nil nil [1261 1405])
+            ("register" code nil nil [1407 1551])
+            ("register" code nil nil [1553 1704])
+            ("register" code nil nil [1706 1876])
+            ("register" code nil nil [1878 1994])
+            ("register" code nil nil [1996 2110])
+            ("register" code nil nil [2164 2300])
+            ("register" code nil nil [2302 2458])
+            ("register" code nil nil [2460 2600])
+            ("register" code nil nil [2602 2758])
+            ("register" code nil nil [2760 2892])
+            ("register" code nil nil [2949 3033])
+            ("register" code nil nil [3035 3156])
+            ("register" code nil nil [3157 3271])
+            ("register" code nil nil [3273 3464])
+            ("register" code nil nil [3466 3656])
+            ("register" code nil nil [3658 3764])
+            ("register" code nil nil [3766 3875])
+            ("register" code nil nil [3877 4024])
+            ("register" code nil nil [4026 4154])
+            ("register" code nil nil [4156 4284])
+            ("register" code nil nil [4345 4477])
+            ("register" code nil nil [4479 4608])
+            ("register" code nil nil [4610 4741])
+            ("register" code nil nil [4743 4874])
+            ("register" code nil nil [4876 5028])
+            ("register" code nil nil [5030 5195])
+            ("register" code nil nil [5197 5340])
+            ("register" code nil nil [5342 5475])
+            ("register" code nil nil [5477 5611])
+            ("register" code nil nil [5613 5721])
+            ("register" code nil nil [5723 5850])
+            ("register" code nil nil [5852 5960])
+            ("register" code nil nil [5962 6084])
+            ("for" code nil nil [6229 9906])
+            ("register" code nil nil [9965 10532])
+            ("register" code nil nil [10534 10832])
+            ("register" code nil nil [10834 11095])
+            ("register" code nil nil [11153 11294])
+            ("register" code nil nil [11296 11437])
+            ("register" code nil nil [11439 11586])
+            ("register" code nil nil [11588 11736])
+            ("register" code nil nil [11800 11907])
+            ("register" code nil nil [11909 12022])
+            ("register" code nil nil [12101 12236])
+            ("register" code nil nil [12238 12365])
+            ("register" code nil nil [12418 12553])
+            ("register" code nil nil [12604 12741])
+            ("register" code nil nil [12829 12964])
+            ("register" code nil nil [12984 13109])
+            ("register" code nil nil [13111 13244]))          
+      :file "__init__.py"
+      :pointmax 13245
+      :fsize 13244
+      :lastmodtime '(22791 30630 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "registration.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logging" include nil nil [1 15])
+            ("pkg_resources" include nil nil [16 36])
+            ("re" include nil nil [37 46])
+            ("gym" include nil nil [47 68])
+            ("warnings" include nil nil [69 84])
+            ("logger" variable nil nil [86 122])
+            ("env_id_re" variable nil nil [371 431])
+            ("load" function (:arguments 
+              ( ("name" variable nil (reparse-symbol function_parameters) [442 446]))              ) nil [433 574])
+            ("EnvSpec" type
+               (:documentation "A specification for a particular instance of the environment. Used
+    to register the parameters for official evaluations.
+
+    Args:
+        id (str): The official environment ID
+        entry_point (Optional[str]): The Python entrypoint of the environment class (e.g. module.name:Class)
+        trials (int): The number of trials to average reward over
+        reward_threshold (Optional[int]): The reward threshold before the task is considered solved
+        local_only: True iff the environment is to be used only on the local machine (e.g. debugging envs)
+        kwargs (dict): The kwargs to pass to the environment class
+        nondeterministic (bool): Whether this environment is non-deterministic even after seeding
+        tags (dict[str:any]): A set of arbitrary key-value tags on this environment, including simple property=True tags
+
+    Attributes:
+        id (str): The official environment ID
+        trials (int): The number of trials run in official evaluation
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1822 1834])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1875 1895])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1904 1944])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1986 2026])
+                            ("if" code nil (reparse-symbol indented_block_body) [2036 2075])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2083 2099])
+                            ("if" code nil (reparse-symbol indented_block_body) [2146 2292])
+                            ("tags" variable nil (reparse-symbol indented_block_body) [2767 2837])
+                            ("if" code nil (reparse-symbol indented_block_body) [2899 2977])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3233 3275])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3284 3330])
+                            ("match" variable nil (reparse-symbol indented_block_body) [3429 3457])
+                            ("if" code nil (reparse-symbol indented_block_body) [3466 3639])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3647 3678])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3687 3718])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3727 3756])
+                            ("kwargs" code nil (reparse-symbol indented_block_body) [3806 3812]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1613 1617])
+                            ("id" variable nil (reparse-symbol function_parameters) [1619 1621])
+                            ("entry_point" variable nil (reparse-symbol function_parameters) [1623 1634])
+                            ("trials" variable nil (reparse-symbol function_parameters) [1641 1647])
+                            ("reward_threshold" variable nil (reparse-symbol function_parameters) [1653 1669])
+                            ("local_only" variable nil (reparse-symbol function_parameters) [1676 1686])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1694 1700])
+                            ("nondeterministic" variable nil (reparse-symbol function_parameters) [1707 1723])
+                            ("tags" variable nil (reparse-symbol function_parameters) [1731 1735])
+                            ("max_episode_steps" variable nil (reparse-symbol function_parameters) [1742 1759])
+                            ("max_episode_seconds" variable nil (reparse-symbol function_parameters) [1766 1785])
+                            ("timestep_limit" variable nil (reparse-symbol function_parameters) [1792 1806]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1600 3813])
+                    ("make" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3827 3831]))                          
+                        :documentation "Instantiates an instance of the environment with appropriate kwargs")
+                        (reparse-symbol indented_block_body) [3818 4290])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4308 4312]))                          )
+                        (reparse-symbol indented_block_body) [4295 4360])
+                    ("timestep_limit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4398 4402]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4365 4443])
+                    ("timestep_limit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4494 4498])
+                            ("value" variable nil (reparse-symbol function_parameters) [4500 4505]))                          
+                        :decorators 
+                          ( ("timestep_limit.setter" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4448 4547]))                  
+                :type "class")
+                nil [575 4547])
+            ("EnvRegistry" type
+               (:documentation "Register an env by ID. IDs remain stable over time and are
+    guaranteed to resolve to the same environment dynamics (or be
+    desupported). The goal is that results on a particular environment
+    should always be comparable, and not depend on the version of the
+    code that was running.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [4917 4936]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4902 4906]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4889 4937])
+                    ("make" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4951 4955])
+                            ("id" variable nil (reparse-symbol function_parameters) [4957 4959]))                          )
+                        (reparse-symbol indented_block_body) [4942 5404])
+                    ("all" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5418 5422]))                          )
+                        (reparse-symbol indented_block_body) [5410 5464])
+                    ("spec" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5478 5482])
+                            ("id" variable nil (reparse-symbol function_parameters) [5484 5486]))                          )
+                        (reparse-symbol indented_block_body) [5469 6419])
+                    ("register" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6437 6441])
+                            ("id" variable nil (reparse-symbol function_parameters) [6443 6445])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [6447 6455]))                          )
+                        (reparse-symbol indented_block_body) [6424 6612]))                  
+                :type "class")
+                nil [4549 6612])
+            ("registry" variable nil nil [6638 6662])
+            ("register" function (:arguments 
+              ( ("id" variable nil (reparse-symbol function_parameters) [6677 6679])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [6681 6689]))              ) nil [6664 6735])
+            ("make" function (:arguments 
+              ( ("id" variable nil (reparse-symbol function_parameters) [6745 6747]))              ) nil [6736 6779])
+            ("spec" function (:arguments 
+              ( ("id" variable nil (reparse-symbol function_parameters) [6789 6791]))              ) nil [6780 6823]))          
+      :file "registration.py"
+      :pointmax 6823
+      :fsize 6822
+      :lastmodtime '(22791 23400 0 0)
+      :unmatched-syntax '((NAME 3765 . 3769) (IF 3783 . 3785) (ELSE 3801 . 3805))))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gym!gym!envs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

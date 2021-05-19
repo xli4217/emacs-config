@@ -1,0 +1,104 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("json" include nil nil [1 12])
+            ("os" include nil nil [13 22])
+            ("tqdm" include nil nil [23 34])
+            ("fire" include nil nil [35 46])
+            ("multiprocessing" include nil nil [47 79])
+            ("multiprocessing" include nil nil [80 102])
+            ("glob" include nil nil [103 114])
+            ("external_libs.nuscenes" include nil nil [116 159])
+            ("external_libs.nuscenes.eval.prediction.config" include nil nil [160 240])
+            ("external_libs.nuscenes.eval.prediction.splits" include nil nil [241 329])
+            ("external_libs.nuscenes.prediction" include nil nil [330 389])
+            ("external_libs.nuscenes.prediction.models.physics" include nil nil [390 489])
+            ("external_libs.nuscenes.eval.prediction.data_classes" include nil nil [490 564])
+            ("external_libs.nuscenes.eval.prediction.metrics" include nil nil [565 681])
+            ("collections" include nil nil [683 718])
+            ("typing" include nil nil [719 753])
+            ("numpy" include nil nil [755 773])
+            ("nuscenes.eval.prediction.config" include nil nil [775 835])
+            ("default_config" variable nil nil [838 1831])
+            ("SubmitNuScenes" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1919 1939])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1949 2036])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2045 2083])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2092 2199])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2209 2297])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2307 2324])
+                            ("if" code nil (reparse-symbol indented_block_body) [2333 2577])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2598 2613]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1881 1885])
+                            ("config" variable nil (reparse-symbol function_parameters) [1887 1893]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1868 2614])
+                    ("compute_metrics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2647 2651])
+                            ("PredictHelper" variable nil (reparse-symbol function_parameters) [2720 2733])
+                            ("PredictionConfig" variable nil (reparse-symbol function_parameters) [2743 2759]))                          
+                        :documentation "
+        Computes metrics from a set of predictions.
+        :param predictions: List of prediction JSON objects.
+        :param helper: Instance of PredictHelper that wraps the nuScenes val set.
+        :param config: Config file.
+        :return: Metrics. Nested dictionary where keys are metric names and value is a dictionary
+        mapping the Aggregator name to the results.
+        ")
+                        (reparse-symbol indented_block_body) [2627 4264])
+                    ("create_submission" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4292 4296])
+                            ("worker_num" variable nil (reparse-symbol function_parameters) [4298 4308]))                          
+                        :documentation "
+        Performs inference for all of the baseline models defined in the physics model module.
+        :param version: nuScenes data set version.
+        :param data_root: Directory where the NuScenes data is stored.
+        :param split_name: nuScenes data split name, e.g. train, val, mini_train, etc.
+        :param output_dir: Directory where predictions should be stored.
+        :param config_name: Name of config file.
+        ")
+                        (reparse-symbol indented_block_body) [4270 5665])
+                    ("evaluate_submission" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5695 5699]))                          
+                        :documentation "
+        Computes metrics for a submission stored in submission_path with a given submission_name with the metrics
+        specified by the config_name.
+        :param version: nuScenes data set version.
+        :param data_root: Directory storing NuScenes data.
+        :param submission_path: Directory storing submission.
+        :param config_name: Name of config file.
+        ")
+                        (reparse-symbol indented_block_body) [5671 6937])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6954 6958]))                          )
+                        (reparse-symbol indented_block_body) [6946 7491]))                  
+                :type "class")
+                nil [1833 7491])
+            ("if" code nil nil [7514 9882]))          
+      :file "submit_nuscenes.py"
+      :pointmax 9882
+      :fsize 9884
+      :lastmodtime '(24326 21698 48020 784000)
+      :unmatched-syntax nil))
+  :file "!nobackup!users!xiaoli!rlfps!examples!postdoc!traj_prediction!nuscenes_submit!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

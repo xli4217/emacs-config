@@ -1,0 +1,164 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("unittest" include nil nil [1 16])
+            ("torch" include nil nil [18 30])
+            ("nuscenes.prediction.models" include nil nil [32 79])
+            ("nuscenes.prediction.models" include nil nil [80 122])
+            ("TestMTP" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("setUp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [174 178]))                          )
+                        (reparse-symbol indented_block_body) [164 391])
+                    ("_run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [405 409])
+                            ("model" variable nil (reparse-symbol function_parameters) [411 416]))                          )
+                        (reparse-symbol indented_block_body) [396 829])
+                    ("test_works_with_resnet_18" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [864 868]))                          )
+                        (reparse-symbol indented_block_body) [834 1016])
+                    ("test_works_with_resnet_34" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1051 1055]))                          )
+                        (reparse-symbol indented_block_body) [1021 1203])
+                    ("test_works_with_resnet_50" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1238 1242]))                          )
+                        (reparse-symbol indented_block_body) [1208 1390])
+                    ("test_works_with_resnet_101" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1426 1430]))                          )
+                        (reparse-symbol indented_block_body) [1395 1581])
+                    ("test_works_with_resnet_152" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1617 1621]))                          )
+                        (reparse-symbol indented_block_body) [1586 1772])
+                    ("test_works_with_mobilenet_v2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1810 1814]))                          )
+                        (reparse-symbol indented_block_body) [1777 1977]))                  
+                :type "class")
+                nil [125 1977]))          
+      :file "test_mtp.py"
+      :pointmax 1980
+      :fsize 1979
+      :lastmodtime '(24254 64185 66661 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("math" include nil nil [2 13])
+            ("unittest" include nil nil [14 29])
+            ("torch" include nil nil [31 43])
+            ("nuscenes.prediction.models" include nil nil [45 87])
+            ("TestMTPLoss" type
+               (:documentation "
+    Test each component of MTPLoss as well as the
+    __call__ method.
+    "
+                :superclasses ("unittest.TestCase")
+                :members 
+                  ( ("test_get_trajectories_and_modes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [256 260]))                          )
+                        (reparse-symbol indented_block_body) [220 2028])
+                    ("test_angle_between_trajectories" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2069 2073]))                          )
+                        (reparse-symbol indented_block_body) [2033 4007])
+                    ("test_compute_best_mode_nothing_below_threshold" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4063 4067]))                          )
+                        (reparse-symbol indented_block_body) [4012 4400])
+                    ("test_compute_best_mode_only_one_below_threshold" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4457 4461]))                          )
+                        (reparse-symbol indented_block_body) [4405 4710])
+                    ("test_compute_best_mode_multiple_below_threshold" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4767 4771]))                          )
+                        (reparse-symbol indented_block_body) [4715 5044])
+                    ("test_compute_best_mode_only_one_mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5090 5094]))                          )
+                        (reparse-symbol indented_block_body) [5049 5433])
+                    ("test_loss_single_mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5464 5468]))                          )
+                        (reparse-symbol indented_block_body) [5438 6552])
+                    ("test_loss_many_modes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6582 6586]))                          )
+                        (reparse-symbol indented_block_body) [6557 7802]))                  
+                :type "class")
+                nil [90 7802]))          
+      :file "test_mtp_loss.py"
+      :pointmax 7802
+      :fsize 7801
+      :lastmodtime '(24254 64185 66854 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("copy" include nil nil [62 73])
+            ("unittest" include nil nil [74 89])
+            ("typing" include nil nil [90 131])
+            ("numpy" include nil nil [133 151])
+            ("nuscenes.nuscenes" include nil nil [153 191])
+            ("nuscenes.prediction" include nil nil [192 269])
+            ("MockNuScenes" type
+               (:documentation " Mocks the NuScenes API needed to test PredictHelper. "
+                :superclasses ("NuScenes")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [508 577])
+                            ("self" variable nil (reparse-symbol indented_block_body) [586 633]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [385 389]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [372 634]))                  
+                :type "class")
+                nil [272 942])
+            ("TestConvertGlobalCoordsToLocal" type
+               (:superclasses ("unittest.TestCase")
+                :type "class")
+                nil [944 6709])
+            ("TestPredictHelper" type
+               (:superclasses ("unittest.TestCase")
+                :type "class")
+                nil [6711 24524]))          
+      :file "test_predict_helper.py"
+      :pointmax 24524
+      :fsize 24523
+      :lastmodtime '(24254 64185 67934 125000)
+      :unmatched-syntax '((INDENT_BLOCK 23826 . 24524) (NEWLINE 23824 . 23825) (COLON 23823 . 23824) (MINUS 23816 . 23817) (GT 23817 . 23818) (INDENT_BLOCK 23179 . 23769) (NEWLINE 23178 . 23179) (COLON 23177 . 23178) (MINUS 23170 . 23171) (GT 23171 . 23172) (INDENT_BLOCK 22573 . 23115) (NEWLINE 22572 . 22573) (COLON 22571 . 22572) (MINUS 22564 . 22565) (GT 22565 . 22566) (INDENT_BLOCK 22162 . 22517) (NEWLINE 22161 . 22162) (COLON 22160 . 22161) (MINUS 22153 . 22154) (GT 22154 . 22155) (INDENT_BLOCK 21606 . 22100) (NEWLINE 21605 . 21606) (COLON 21604 . 21605) (MINUS 21597 . 21598) (GT 21598 . 21599) (INDENT_BLOCK 21207 . 21556) (NEWLINE 21206 . 21207) (COLON 21205 . 21206) (MINUS 21198 . 21199) (GT 21199 . 21200) (INDENT_BLOCK 20615 . 21160) (NEWLINE 20614 . 20615) (COLON 20613 . 20614) (MINUS 20606 . 20607) (GT 20607 . 20608) (INDENT_BLOCK 20280 . 20558) (NEWLINE 20279 . 20280) (COLON 20278 . 20279) (MINUS 20271 . 20272) (GT 20272 . 20273) (INDENT_BLOCK 19938 . 20231) (NEWLINE 19937 . 19938) (COLON 19936 . 19937) (MINUS 19929 . 19930) (GT 19930 . 19931) (INDENT_BLOCK 19646 . 19880) (NEWLINE 19644 . 19645) (COLON 19643 . 19644) (MINUS 19636 . 19637) (GT 19637 . 19638) (INDENT_BLOCK 19290 . 19588) (NEWLINE 19288 . 19289) (COLON 19287 . 19288) (MINUS 19280 . 19281) (GT 19281 . 19282) (INDENT_BLOCK 18557 . 19250) (NEWLINE 18555 . 18556) (COLON 18554 . 18555) (MINUS 18547 . 18548) (GT 18548 . 18549) (INDENT_BLOCK 17487 . 18507) (NEWLINE 17485 . 17486) (COLON 17484 . 17485) (MINUS 17477 . 17478) (GT 17478 . 17479) (INDENT_BLOCK 17098 . 17435) (NEWLINE 17097 . 17098) (COLON 17096 . 17097) (MINUS 17089 . 17090) (GT 17090 . 17091) (INDENT_BLOCK 16616 . 17035) (NEWLINE 16615 . 16616) (COLON 16614 . 16615) (MINUS 16607 . 16608) (GT 16608 . 16609) (INDENT_BLOCK 16007 . 16553) (NEWLINE 16005 . 16006) (COLON 16004 . 16005) (MINUS 15997 . 15998) (GT 15998 . 15999) (INDENT_BLOCK 15354 . 15944) (NEWLINE 15352 . 15353) (COLON 15351 . 15352) (MINUS 15344 . 15345) (GT 15345 . 15346) (INDENT_BLOCK 14680 . 15293) (NEWLINE 14678 . 14679) (COLON 14677 . 14678) (MINUS 14670 . 14671) (GT 14671 . 14672) (INDENT_BLOCK 14020 . 14622) (NEWLINE 14018 . 14019) (COLON 14017 . 14018) (MINUS 14010 . 14011) (GT 14011 . 14012) (INDENT_BLOCK 13615 . 13958) (NEWLINE 13614 . 13615) (COLON 13613 . 13614) (MINUS 13606 . 13607) (GT 13607 . 13608) (INDENT_BLOCK 13126 . 13550) (NEWLINE 13125 . 13126) (COLON 13124 . 13125) (MINUS 13117 . 13118) (GT 13118 . 13119) (INDENT_BLOCK 12444 . 13061) (NEWLINE 12442 . 12443) (COLON 12441 . 12442) (MINUS 12434 . 12435) (GT 12435 . 12436) (INDENT_BLOCK 11785 . 12379) (NEWLINE 11783 . 11784) (COLON 11782 . 11783) (MINUS 11775 . 11776) (GT 11776 . 11777) (INDENT_BLOCK 11185 . 11722) (NEWLINE 11184 . 11185) (COLON 11183 . 11184) (MINUS 11176 . 11177) (GT 11177 . 11178) (INDENT_BLOCK 10514 . 11120) (NEWLINE 10512 . 10513) (COLON 10511 . 10512) (MINUS 10504 . 10505) (GT 10505 . 10506) (INDENT_BLOCK 10086 . 10450) (NEWLINE 10084 . 10085) (COLON 10083 . 10084) (MINUS 10076 . 10077) (GT 10077 . 10078) (INDENT_BLOCK 6786 . 10034) (NEWLINE 6784 . 6785) (COLON 6783 . 6784) (DEF 6760 . 6763) (MINUS 6776 . 6777) (GT 6777 . 6778) (INDENT_BLOCK 6192 . 6709) (NEWLINE 6191 . 6192) (COLON 6190 . 6191) (MINUS 6183 . 6184) (GT 6184 . 6185) (INDENT_BLOCK 5774 . 6141) (NEWLINE 5773 . 5774) (COLON 5772 . 5773) (MINUS 5765 . 5766) (GT 5766 . 5767) (INDENT_BLOCK 5211 . 5734) (NEWLINE 5210 . 5211) (COLON 5209 . 5210) (MINUS 5202 . 5203) (GT 5203 . 5204) (INDENT_BLOCK 4796 . 5163) (NEWLINE 4795 . 4796) (COLON 4794 . 4795) (MINUS 4787 . 4788) (GT 4788 . 4789) (INDENT_BLOCK 4254 . 4749) (NEWLINE 4253 . 4254) (COLON 4252 . 4253) (MINUS 4245 . 4246) (GT 4246 . 4247) (INDENT_BLOCK 3872 . 4207) (NEWLINE 3871 . 3872) (COLON 3870 . 3871) (MINUS 3863 . 3864) (GT 3864 . 3865) (INDENT_BLOCK 2263 . 3833) (NEWLINE 2261 . 2262) (COLON 2260 . 2261) (MINUS 2253 . 2254) (GT 2254 . 2255) (PERIOD 2228 . 2229) (NAME 2206 . 2224) (COLON 2224 . 2225) (PERIOD 2183 . 2184) (NAME 2161 . 2179) (COLON 2179 . 2180) (PERIOD 2138 . 2139) (NAME 2116 . 2134) (COLON 2134 . 2135) (PERIOD 2093 . 2094) (COLON 2089 . 2090) (COMMA 2056 . 2057) (BRACK_BLOCK 2035 . 2056) (COLON 2028 . 2029) (COMMA 2007 . 2008) (BRACK_BLOCK 1986 . 2007) (COLON 1979 . 1980) (COMMA 1958 . 1959) (BRACK_BLOCK 1930 . 1958) (NAME 1915 . 1923) (COLON 1923 . 1924) (INDENT_BLOCK 1245 . 1882) (NEWLINE 1030 . 1031) (COLON 1029 . 1030) (DEF 1006 . 1009) (MINUS 1022 . 1023) (GT 1023 . 1024) (INDENT_BLOCK 827 . 942) (NEWLINE 826 . 827) (COLON 825 . 826) (MINUS 808 . 809) (GT 809 . 810) (NAME 796 . 801) (COLON 801 . 802) (NAME 779 . 789) (COLON 789 . 790) (INDENT_BLOCK 706 . 760) (NEWLINE 705 . 706) (COLON 704 . 705) (AT 639 . 640) (MINUS 681 . 682) (GT 682 . 683) (BRACK_BLOCK 480 . 496) (COLON 474 . 475) (COMMA 448 . 449) (BRACK_BLOCK 432 . 448) (NAME 408 . 426) (COLON 426 . 427))))
+  :file "!nobackup!users!xiaoli!rlfps!external_libs!nuscenes!prediction!tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

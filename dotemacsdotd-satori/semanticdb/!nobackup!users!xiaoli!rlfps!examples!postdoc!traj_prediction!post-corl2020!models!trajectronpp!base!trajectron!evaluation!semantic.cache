@@ -1,0 +1,57 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy.interpolate" include nil nil [20 69])
+            ("scipy.ndimage" include nil nil [70 111])
+            ("scipy.stats" include nil nil [112 148])
+            ("trajectron.utils" include nil nil [149 212])
+            ("trajectron.visualization" include nil nil [213 262])
+            ("matplotlib" include nil nil [263 299])
+            ("compute_ade" function (:arguments 
+              ( ("predicted_trajs" variable nil (reparse-symbol function_parameters) [318 333])
+                ("gt_traj" variable nil (reparse-symbol function_parameters) [335 342]))              ) nil [302 467])
+            ("compute_fde" function (:arguments 
+              ( ("predicted_trajs" variable nil (reparse-symbol function_parameters) [485 500])
+                ("gt_traj" variable nil (reparse-symbol function_parameters) [502 509]))              ) nil [469 628])
+            ("compute_kde_nll" function (:arguments 
+              ( ("predicted_trajs" variable nil (reparse-symbol function_parameters) [650 665])
+                ("gt_traj" variable nil (reparse-symbol function_parameters) [667 674]))              ) nil [630 1247])
+            ("compute_obs_violations" function (:arguments 
+              ( ("predicted_trajs" variable nil (reparse-symbol function_parameters) [1276 1291])
+                ("map" variable nil (reparse-symbol function_parameters) [1293 1296]))              ) nil [1249 1974])
+            ("compute_batch_statistics" function (:arguments 
+              ( ("prediction_output_dict" variable nil (reparse-symbol function_parameters) [2005 2027])
+                ("dt" variable nil (reparse-symbol function_parameters) [2058 2060])
+                ("max_hl" variable nil (reparse-symbol function_parameters) [2091 2097])
+                ("ph" variable nil (reparse-symbol function_parameters) [2128 2130])
+                ("node_type_enum" variable nil (reparse-symbol function_parameters) [2161 2175])
+                ("kde" variable nil (reparse-symbol function_parameters) [2206 2209])
+                ("obs" variable nil (reparse-symbol function_parameters) [2245 2248])
+                ("map" variable nil (reparse-symbol function_parameters) [2285 2288])
+                ("prune_ph_to_future" variable nil (reparse-symbol function_parameters) [2324 2342])
+                ("best_of" variable nil (reparse-symbol function_parameters) [2379 2386]))              ) nil [1976 4016])
+            ("log_batch_errors" function (:arguments 
+              ( ("batch_errors_list" variable nil (reparse-symbol function_parameters) [4039 4056])
+                ("log_writer" variable nil (reparse-symbol function_parameters) [4058 4068])
+                ("namespace" variable nil (reparse-symbol function_parameters) [4070 4079])
+                ("curr_iter" variable nil (reparse-symbol function_parameters) [4081 4090])
+                ("bar_plot" variable nil (reparse-symbol function_parameters) [4092 4100])
+                ("box_plot" variable nil (reparse-symbol function_parameters) [4105 4113]))              ) nil [4018 5728])
+            ("print_batch_errors" function (:arguments 
+              ( ("batch_errors_list" variable nil (reparse-symbol function_parameters) [5753 5770])
+                ("namespace" variable nil (reparse-symbol function_parameters) [5772 5781])
+                ("curr_iter" variable nil (reparse-symbol function_parameters) [5783 5792]))              ) nil [5730 6340]))          
+      :file "evaluation.py"
+      :pointmax 6340
+      :fsize 6339
+      :lastmodtime '(24355 23160 500505 0)
+      :unmatched-syntax nil))
+  :file "!nobackup!users!xiaoli!rlfps!examples!postdoc!traj_prediction!post-corl2020!models!trajectronpp!base!trajectron!evaluation!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

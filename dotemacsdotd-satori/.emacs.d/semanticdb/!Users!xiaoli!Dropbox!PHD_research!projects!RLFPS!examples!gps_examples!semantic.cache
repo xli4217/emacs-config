@@ -1,0 +1,185 @@
+;; Object gps_examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gps_examples/"
+  :tables
+  (list
+    (semanticdb-table "gps_main.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the main object that runs experiments. \"\"\"" code nil nil [1 65])
+            ("matplotlib" include nil nil [67 91])
+            ("mpl" code nil nil [92 109])
+            ("logging" include nil nil [111 125])
+            ("imp" include nil nil [126 136])
+            ("os" include nil nil [137 146])
+            ("os.path" include nil nil [147 161])
+            ("sys" include nil nil [162 172])
+            ("copy" include nil nil [173 184])
+            ("argparse" include nil nil [185 200])
+            ("threading" include nil nil [201 217])
+            ("time" include nil nil [218 229])
+            ("sys" code nil nil [278 334])
+            ("gps.gui.gps_training_gui" include nil nil [335 386])
+            ("gps.utility.data_logger" include nil nil [387 433])
+            ("gps.sample.sample_list" include nil nil [434 479])
+            ("GPSMain" type
+               (:documentation " Main class to run algorithms and experiments. "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Initialize GPSMain
+        Args:
+            config: Hyperparameters for experiment
+            quit_on_end: When true, quit automatically on completion
+        \"\"\"" code nil (reparse-symbol indented_block_body) [622 798])
+                            ("self" variable nil (reparse-symbol indented_block_body) [807 838])
+                            ("self" variable nil (reparse-symbol indented_block_body) [847 873])
+                            ("self" variable nil (reparse-symbol indented_block_body) [882 931])
+                            ("if" code nil (reparse-symbol indented_block_body) [940 1347])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1356 1413])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1431 1484])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1493 1524])
+                            ("None" code nil (reparse-symbol indented_block_body) [1602 1606])
+                            ("config" variable nil (reparse-symbol indented_block_body) [1616 1657])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1666 1731]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [580 584])
+                            ("config" variable nil (reparse-symbol function_parameters) [586 592])
+                            ("quit_on_end" variable nil (reparse-symbol function_parameters) [594 605]))                          
+                        :documentation "
+        Initialize GPSMain
+        Args:
+            config: Hyperparameters for experiment
+            quit_on_end: When true, quit automatically on completion
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [567 1732])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1745 1749])
+                            ("itr_load" variable nil (reparse-symbol function_parameters) [1751 1759]))                          
+                        :documentation "
+        Run training by iteratively sampling and taking an iteration.
+        Args:
+            itr_load: If specified, loads algorithm state from that
+                iteration, and resumes training at the next iteration.
+        Returns: None
+        ")
+                        (reparse-symbol indented_block_body) [1737 2768])
+                    ("test_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2789 2793])
+                            ("itr" variable nil (reparse-symbol function_parameters) [2795 2798])
+                            ("N" variable nil (reparse-symbol function_parameters) [2800 2801]))                          
+                        :documentation "
+        Take N policy samples of the algorithm state at iteration itr,
+        for testing the policy to see how it is behaving.
+        (Called directly from the command line --policy flag).
+        Args:
+            itr: the iteration from which to take policy samples
+            N: the number of policy samples to take
+        Returns: None
+        ")
+                        (reparse-symbol indented_block_body) [2773 4164])
+                    ("_initialize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4185 4189])
+                            ("itr_load" variable nil (reparse-symbol function_parameters) [4191 4199]))                          
+                        :documentation "
+        Initialize from the specified iteration.
+        Args:
+            itr_load: If specified, loads algorithm state from that
+                iteration, and resumes training at the next iteration.
+        Returns:
+            itr_start: Iteration to start from.
+        ")
+                        (reparse-symbol indented_block_body) [4169 5656])
+                    ("_take_sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5678 5682])
+                            ("itr" variable nil (reparse-symbol function_parameters) [5684 5687])
+                            ("cond" variable nil (reparse-symbol function_parameters) [5689 5693])
+                            ("i" variable nil (reparse-symbol function_parameters) [5695 5696]))                          
+                        :documentation "
+        Collect a sample from the agent.
+        Args:
+            itr: Iteration number.
+            cond: Condition number.
+            i: Sample number.
+        Returns: None
+        ")
+                        (reparse-symbol indented_block_body) [5661 7722])
+                    ("_take_iteration" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7747 7751])
+                            ("itr" variable nil (reparse-symbol function_parameters) [7753 7756])
+                            ("sample_lists" variable nil (reparse-symbol function_parameters) [7758 7770]))                          
+                        :documentation "
+        Take an iteration of the algorithm.
+        Args:
+            itr: Iteration number.
+        Returns: None
+        ")
+                        (reparse-symbol indented_block_body) [7727 8151])
+                    ("_take_policy_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8181 8185])
+                            ("N" variable nil (reparse-symbol function_parameters) [8187 8188]))                          
+                        :documentation "
+        Take samples from the policy to see how it's doing.
+        Args:
+            N  : number of policy samples to take per condition
+        Returns: None
+        ")
+                        (reparse-symbol indented_block_body) [8156 9157])
+                    ("_log_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9176 9180])
+                            ("itr" variable nil (reparse-symbol function_parameters) [9182 9185])
+                            ("traj_sample_lists" variable nil (reparse-symbol function_parameters) [9187 9204])
+                            ("pol_sample_lists" variable nil (reparse-symbol function_parameters) [9206 9222]))                          
+                        :documentation "
+        Log data and algorithm, and update the GUI.
+        Args:
+            itr: Iteration number.
+            traj_sample_lists: trajectory samples as SampleList object
+            pol_sample_lists: policy samples as SampleList object
+        Returns: None
+        ")
+                        (reparse-symbol indented_block_body) [9162 10483])
+                    ("_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10497 10501]))                          
+                        :documentation " Finish running and exit. ")
+                        (reparse-symbol indented_block_body) [10488 10787]))                  
+                :type "class")
+                nil [482 10787])
+            ("main" function (:documentation " Main function to be run. ") nil [10788 15952])
+            ("if" code nil nil [15954 15992]))          
+      :file "gps_main.py"
+      :pointmax 15992
+      :fsize 15991
+      :lastmodtime '(22612 41156 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22593 45829 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!examples!gps_examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

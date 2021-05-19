@@ -1,0 +1,243 @@
+;; Object 5.2_Prioritized_Replay_DQN/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "5.2_Prioritized_Replay_DQN/"
+  :tables
+  (list
+    (semanticdb-table "RL_brain.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+The DQN improvement: Prioritized Experience Replay (based on https://arxiv.org/abs/1511.05952)
+
+View more on my tutorial page: https://morvanzhou.github.io/tutorials/
+
+Using:
+Tensorflow: 1.0
+gym: 0.8.0
+\"\"\"" code nil nil [1 210])
+            ("numpy" include nil nil [212 230])
+            ("tensorflow" include nil nil [231 254])
+            ("np" code nil nil [256 273])
+            ("tf" code nil nil [274 295])
+            ("SumTree" type
+               (:documentation "
+    This SumTree code is modified version and the original code is from: 
+    https://github.com/jaara/AI-blog/blob/master/SumTree.py
+
+    Story the data with it priority in tree and data frameworks.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("data_pointer" variable nil (reparse-symbol indented_block_body) [541 557])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [601 625])
+                            ("self" variable nil (reparse-symbol indented_block_body) [661 699])
+                            ("self" variable nil (reparse-symbol indented_block_body) [879 923]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [576 580])
+                            ("capacity" variable nil (reparse-symbol function_parameters) [582 590]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [563 947])
+                    ("add" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1047 1051])
+                            ("p" variable nil (reparse-symbol function_parameters) [1053 1054])
+                            ("data" variable nil (reparse-symbol function_parameters) [1056 1060]))                          )
+                        (reparse-symbol indented_block_body) [1039 1388])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1404 1408])
+                            ("tree_idx" variable nil (reparse-symbol function_parameters) [1410 1418])
+                            ("p" variable nil (reparse-symbol function_parameters) [1420 1421]))                          )
+                        (reparse-symbol indented_block_body) [1393 1733])
+                    ("get_leaf" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1751 1755])
+                            ("v" variable nil (reparse-symbol function_parameters) [1757 1758]))                          
+                        :documentation "
+        Tree structure and array storage:
+
+        Tree index:
+             0         -> storing priority sum
+            / \\
+          1     2
+         / \\   / \\
+        3   4 5   6    -> storing priority for transitions
+
+        Array type for storing:
+        [0,1,2,3,4,5,6]
+        ")
+                        (reparse-symbol indented_block_body) [1738 2812])
+                    ("total_p" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2843 2847]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2817 2890]))                  
+                :type "class")
+                nil [298 2890])
+            ("Memory" type
+               (:documentation "
+    This SumTree code is modified version and the original code is from:
+    https://github.com/jaara/AI-blog/blob/master/Seaquest-DDQN-PER.py
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("epsilon" variable nil (reparse-symbol indented_block_body) [3117 3131])
+                    ("alpha" variable nil (reparse-symbol indented_block_body) [3175 3186])
+                    ("beta" variable nil (reparse-symbol indented_block_body) [3247 3257])
+                    ("beta_increment_per_sampling" variable nil (reparse-symbol indented_block_body) [3321 3356])
+                    ("abs_err_upper" variable nil (reparse-symbol indented_block_body) [3361 3379])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3444 3473]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3419 3423])
+                            ("capacity" variable nil (reparse-symbol function_parameters) [3425 3433]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3406 3474])
+                    ("store" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3489 3493])
+                            ("transition" variable nil (reparse-symbol function_parameters) [3495 3505]))                          )
+                        (reparse-symbol indented_block_body) [3479 3700])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3716 3720])
+                            ("n" variable nil (reparse-symbol function_parameters) [3722 3723]))                          )
+                        (reparse-symbol indented_block_body) [3705 4490])
+                    ("batch_update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4512 4516])
+                            ("tree_idx" variable nil (reparse-symbol function_parameters) [4518 4526])
+                            ("abs_errors" variable nil (reparse-symbol function_parameters) [4528 4538]))                          )
+                        (reparse-symbol indented_block_body) [4495 4800]))                  
+                :type "class")
+                nil [2892 4800])
+            ("DQNPrioritizedReplay" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [5234 5260])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5269 5297])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5306 5329])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5338 5363])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5372 5399])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5408 5454])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5463 5493])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5502 5530])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5539 5582])
+                            ("self" code nil (reparse-symbol indented_block_body) [5647 5663])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5673 5703])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5748 5775])
+                            ("self" code nil (reparse-symbol indented_block_body) [5785 5802])
+                            ("t_params" variable nil (reparse-symbol indented_block_body) [5811 5860])
+                            ("e_params" variable nil (reparse-symbol indented_block_body) [5869 5916])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5925 6003])
+                            ("if" code nil (reparse-symbol indented_block_body) [6013 6174])
+                            ("if" code nil (reparse-symbol indented_block_body) [6183 6341])
+                            ("if" code nil (reparse-symbol indented_block_body) [6350 6427])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6436 6454]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4860 4864])
+                            ("n_actions" variable nil (reparse-symbol function_parameters) [4878 4887])
+                            ("n_features" variable nil (reparse-symbol function_parameters) [4901 4911])
+                            ("learning_rate" variable nil (reparse-symbol function_parameters) [4925 4938])
+                            ("reward_decay" variable nil (reparse-symbol function_parameters) [4958 4970])
+                            ("e_greedy" variable nil (reparse-symbol function_parameters) [4988 4996])
+                            ("replace_target_iter" variable nil (reparse-symbol function_parameters) [5014 5033])
+                            ("memory_size" variable nil (reparse-symbol function_parameters) [5051 5062])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [5082 5092])
+                            ("e_greedy_increment" variable nil (reparse-symbol function_parameters) [5109 5127])
+                            ("output_graph" variable nil (reparse-symbol function_parameters) [5146 5158])
+                            ("prioritized" variable nil (reparse-symbol function_parameters) [5178 5189])
+                            ("sess" variable nil (reparse-symbol function_parameters) [5208 5212]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4834 6455])
+                    ("_build_net" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6475 6479]))                          )
+                        (reparse-symbol indented_block_body) [6460 8995])
+                    ("store_transition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9021 9025])
+                            ("s" variable nil (reparse-symbol function_parameters) [9027 9028])
+                            ("a" variable nil (reparse-symbol function_parameters) [9030 9031])
+                            ("r" variable nil (reparse-symbol function_parameters) [9033 9034])
+                            ("s_" variable nil (reparse-symbol function_parameters) [9036 9038]))                          )
+                        (reparse-symbol indented_block_body) [9000 9564])
+                    ("choose_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9587 9591])
+                            ("observation" variable nil (reparse-symbol function_parameters) [9593 9604]))                          )
+                        (reparse-symbol indented_block_body) [9569 9931])
+                    ("learn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9946 9950]))                          )
+                        (reparse-symbol indented_block_body) [9936 11848]))                  
+                :type "class")
+                nil [4802 11848]))          
+      :file "RL_brain.py"
+      :pointmax 11848
+      :fsize 11847
+      :lastmodtime '(23180 20973 0 0)
+      :unmatched-syntax '((NAME 11701 . 11705) (IF 11754 . 11756) (ELSE 11789 . 11793) (NAME 5591 . 5595) (IF 5608 . 5610) (ELSE 5642 . 5646)))
+    (semanticdb-table "run_MountainCar.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+The DQN improvement: Prioritized Experience Replay (based on https://arxiv.org/abs/1511.05952)
+
+View more on my tutorial page: https://morvanzhou.github.io/tutorials/
+
+Using:
+Tensorflow: 1.0
+gym: 0.8.0
+\"\"\"" code nil nil [1 210])
+            ("gym" include nil nil [213 223])
+            ("RL_brain" include nil nil [224 265])
+            ("matplotlib.pyplot" include nil nil [266 297])
+            ("tensorflow" include nil nil [298 321])
+            ("numpy" include nil nil [322 340])
+            ("env" variable nil nil [342 374])
+            ("env" variable nil nil [375 394])
+            ("env" code nil nil [395 407])
+            ("MEMORY_SIZE" variable nil nil [408 427])
+            ("sess" variable nil nil [429 448])
+            ("with" code nil nil [449 659])
+            ("with" code nil nil [660 901])
+            ("sess" code nil nil [901 944])
+            ("train" function (:arguments 
+              ( ("RL" variable nil (reparse-symbol function_parameters) [957 959]))              ) nil [947 1721])
+            ("his_natural" variable nil nil [1722 1753])
+            ("his_prio" variable nil nil [1754 1779])
+            ("plt" code nil nil [1814 1908])
+            ("plt" code nil nil [1909 2010])
+            ("plt" code nil nil [2011 2033])
+            ("plt" code nil nil [2034 2067])
+            ("plt" code nil nil [2068 2089])
+            ("plt" code nil nil [2090 2100])
+            ("plt" code nil nil [2101 2111]))          
+      :file "run_MountainCar.py"
+      :pointmax 2114
+      :fsize 2113
+      :lastmodtime '(23180 20973 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!sandbox!algo_implementations!Reinforcement-learning-with-tensorflow!contents!5.2_Prioritized_Replay_DQN!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

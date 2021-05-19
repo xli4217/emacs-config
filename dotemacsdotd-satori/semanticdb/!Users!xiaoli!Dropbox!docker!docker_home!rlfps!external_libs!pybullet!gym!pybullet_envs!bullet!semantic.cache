@@ -1,0 +1,357 @@
+;; Object bullet/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bullet/"
+  :tables
+  (list
+    (semanticdb-table "minitaur_gym_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"This file implements the gym environment of minitaur.
+
+\"\"\"" code nil nil [1 62])
+            ("inspect" include nil nil [64 82])
+            ("os" include nil nil [64 82])
+            ("currentdir" variable nil nil [83 169])
+            ("parentdir" variable nil nil [170 226])
+            ("os" code nil nil [227 258])
+            ("math" include nil nil [261 272])
+            ("time" include nil nil [273 284])
+            ("gym" include nil nil [285 295])
+            ("gym" include nil nil [296 318])
+            ("gym.utils" include nil nil [319 348])
+            ("numpy" include nil nil [349 367])
+            ("pybullet" include nil nil [368 383])
+            ("bullet_client" include nil nil [391 411])
+            ("minitaur" include nil nil [419 434])
+            ("os" include nil nil [435 444])
+            ("pybullet_data" include nil nil [445 465])
+            ("minitaur_env_randomizer" include nil nil [473 503])
+            ("pkg_resources" include nil nil [504 543])
+            ("NUM_SUBSTEPS" variable nil nil [545 561])
+            ("NUM_MOTORS" variable nil nil [562 576])
+            ("MOTOR_ANGLE_OBSERVATION_INDEX" variable nil nil [577 610])
+            ("MOTOR_VELOCITY_OBSERVATION_INDEX" code nil nil [611 688])
+            ("MOTOR_TORQUE_OBSERVATION_INDEX" code nil nil [689 767])
+            ("BASE_ORIENTATION_OBSERVATION_INDEX" code nil nil [768 848])
+            ("ACTION_EPS" variable nil nil [849 866])
+            ("OBSERVATION_EPS" variable nil nil [867 889])
+            ("RENDER_HEIGHT" variable nil nil [890 909])
+            ("RENDER_WIDTH" variable nil nil [910 928])
+            ("MinitaurBulletEnv" type
+               (:documentation "The gym environment for the minitaur.
+
+  It simulates the locomotion of a minitaur, a quadruped robot. The state space
+  include the angles, velocities and torques for all the motors and the action
+  space is the desired motor angle for each motor. The reward function is based
+  on how far the minitaur walks in 1000 steps and penalizes the energy
+  expenditure.
+
+  "
+                :superclasses ("gym.Env")
+                :members 
+                  ( ("metadata" variable nil (reparse-symbol indented_block_body) [1342 1440])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Initialize the minitaur gym environment.
+
+    Args:
+      urdf_root: The path to the urdf data folder.
+      action_repeat: The number of simulation steps before actions are applied.
+      distance_weight: The weight of the distance term in the reward.
+      energy_weight: The weight of the energy term in the reward.
+      shake_weight: The weight of the vertical shakiness term in the reward.
+      drift_weight: The weight of the sideways drift term in the reward.
+      distance_limit: The maximum distance to terminate the episode.
+      observation_noise_stdev: The standard deviation of observation noise.
+      self_collision_enabled: Whether to enable self collision in the sim.
+      motor_velocity_limit: The velocity limit of each motor.
+      pd_control_enabled: Whether to use PD controller for each motor.
+      leg_model_enabled: Whether to use a leg motor to reparameterize the action
+        space.
+      accurate_motor_model_enabled: Whether to use the accurate DC motor model.
+      motor_kp: proportional gain for the accurate motor model.
+      motor_kd: derivative gain for the accurate motor model.
+      torque_control_enabled: Whether to use the torque control, if set to
+        False, pose control will be used.
+      motor_overheat_protection: Whether to shutdown the motor that has exerted
+        large torque (OVERHEAT_SHUTDOWN_TORQUE) for an extended amount of time
+        (OVERHEAT_SHUTDOWN_TIME). See ApplyAction() in minitaur.py for more
+        details.
+      hard_reset: Whether to wipe the simulation and load everything when reset
+        is called. If set to false, reset just place the minitaur back to start
+        position and set its pose to initial configuration.
+      on_rack: Whether to place the minitaur on rack. This is only used to debug
+        the walking gait. In this mode, the minitaur's base is hanged midair so
+        that its walking gait is clearer to visualize.
+      render: Whether to render the simulation.
+      kd_for_pd_controllers: kd value for the pd controllers of the motors
+      env_randomizer: An EnvRandomizer to randomize the physical properties
+        during reset().
+    \"\"\"" code nil (reparse-symbol indented_block_body) [2441 4603])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4608 4630])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4635 4670])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4675 4715])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4720 4747])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4752 4805])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4810 4859])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4864 4886])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4891 4917])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4922 4946])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4951 4987])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4992 5031])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5036 5071])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5076 5109])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5114 5147])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5152 5189])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5194 5249])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5254 5276])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5281 5326])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5331 5374])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5379 5444])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5449 5474])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5479 5504])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5509 5562])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5567 5626])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5631 5654])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5659 5679])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5684 5701])
+                            ("self" code nil (reparse-symbol indented_block_body) [5706 5727])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5732 5755])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5760 5811])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5816 5843])
+                            ("print" code nil (reparse-symbol indented_block_body) [5848 5885])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5890 5927])
+                            ("if" code nil (reparse-symbol indented_block_body) [5988 6180])
+                            ("if" code nil (reparse-symbol indented_block_body) [6185 6372])
+                            ("self" code nil (reparse-symbol indented_block_body) [6377 6389])
+                            ("self" code nil (reparse-symbol indented_block_body) [6394 6406])
+                            ("observation_high" variable nil (reparse-symbol indented_block_body) [6411 6499])
+                            ("observation_low" variable nil (reparse-symbol indented_block_body) [6504 6591])
+                            ("action_dim" variable nil (reparse-symbol indented_block_body) [6596 6610])
+                            ("action_high" variable nil (reparse-symbol indented_block_body) [6615 6672])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6677 6734])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6739 6809])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6814 6832])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6837 6866]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1457 1461])
+                            ("urdf_root" variable nil (reparse-symbol function_parameters) [1478 1487])
+                            ("action_repeat" variable nil (reparse-symbol function_parameters) [1532 1545])
+                            ("distance_weight" variable nil (reparse-symbol function_parameters) [1564 1579])
+                            ("energy_weight" variable nil (reparse-symbol function_parameters) [1600 1613])
+                            ("shake_weight" variable nil (reparse-symbol function_parameters) [1636 1648])
+                            ("drift_weight" variable nil (reparse-symbol function_parameters) [1669 1681])
+                            ("distance_limit" variable nil (reparse-symbol function_parameters) [1702 1716])
+                            ("observation_noise_stdev" variable nil (reparse-symbol function_parameters) [1746 1769])
+                            ("self_collision_enabled" variable nil (reparse-symbol function_parameters) [1790 1812])
+                            ("motor_velocity_limit" variable nil (reparse-symbol function_parameters) [1834 1854])
+                            ("pd_control_enabled" variable nil (reparse-symbol function_parameters) [1878 1896])
+                            ("leg_model_enabled" variable nil (reparse-symbol function_parameters) [2000 2017])
+                            ("accurate_motor_model_enabled" variable nil (reparse-symbol function_parameters) [2039 2067])
+                            ("motor_kp" variable nil (reparse-symbol function_parameters) [2089 2097])
+                            ("motor_kd" variable nil (reparse-symbol function_parameters) [2118 2126])
+                            ("torque_control_enabled" variable nil (reparse-symbol function_parameters) [2148 2170])
+                            ("motor_overheat_protection" variable nil (reparse-symbol function_parameters) [2193 2218])
+                            ("hard_reset" variable nil (reparse-symbol function_parameters) [2240 2250])
+                            ("on_rack" variable nil (reparse-symbol function_parameters) [2272 2279])
+                            ("render" variable nil (reparse-symbol function_parameters) [2302 2308])
+                            ("kd_for_pd_controllers" variable nil (reparse-symbol function_parameters) [2330 2351])
+                            ("env_randomizer" variable nil (reparse-symbol function_parameters) [2372 2386]))                          
+                        :documentation "Initialize the minitaur gym environment.
+
+    Args:
+      urdf_root: The path to the urdf data folder.
+      action_repeat: The number of simulation steps before actions are applied.
+      distance_weight: The weight of the distance term in the reward.
+      energy_weight: The weight of the energy term in the reward.
+      shake_weight: The weight of the vertical shakiness term in the reward.
+      drift_weight: The weight of the sideways drift term in the reward.
+      distance_limit: The maximum distance to terminate the episode.
+      observation_noise_stdev: The standard deviation of observation noise.
+      self_collision_enabled: Whether to enable self collision in the sim.
+      motor_velocity_limit: The velocity limit of each motor.
+      pd_control_enabled: Whether to use PD controller for each motor.
+      leg_model_enabled: Whether to use a leg motor to reparameterize the action
+        space.
+      accurate_motor_model_enabled: Whether to use the accurate DC motor model.
+      motor_kp: proportional gain for the accurate motor model.
+      motor_kd: derivative gain for the accurate motor model.
+      torque_control_enabled: Whether to use the torque control, if set to
+        False, pose control will be used.
+      motor_overheat_protection: Whether to shutdown the motor that has exerted
+        large torque (OVERHEAT_SHUTDOWN_TORQUE) for an extended amount of time
+        (OVERHEAT_SHUTDOWN_TIME). See ApplyAction() in minitaur.py for more
+        details.
+      hard_reset: Whether to wipe the simulation and load everything when reset
+        is called. If set to false, reset just place the minitaur back to start
+        position and set its pose to initial configuration.
+      on_rack: Whether to place the minitaur on rack. This is only used to debug
+        the walking gait. In this mode, the minitaur's base is hanged midair so
+        that its walking gait is clearer to visualize.
+      render: Whether to render the simulation.
+      kd_for_pd_controllers: kd value for the pd controllers of the motors
+      env_randomizer: An EnvRandomizer to randomize the physical properties
+        during reset().
+    "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1444 6911])
+                    ("set_env_randomizer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6937 6941])
+                            ("env_randomizer" variable nil (reparse-symbol function_parameters) [6943 6957]))                          )
+                        (reparse-symbol indented_block_body) [6914 7002])
+                    ("configure" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7019 7023])
+                            ("args" variable nil (reparse-symbol function_parameters) [7025 7029]))                          )
+                        (reparse-symbol indented_block_body) [7005 7054])
+                    ("_reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7068 7072]))                          )
+                        (reparse-symbol indented_block_body) [7057 8875])
+                    ("_seed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8888 8892])
+                            ("seed" variable nil (reparse-symbol function_parameters) [8894 8898]))                          )
+                        (reparse-symbol indented_block_body) [8878 8975])
+                    ("_transform_action_to_motor_command" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9017 9021])
+                            ("action" variable nil (reparse-symbol function_parameters) [9023 9029]))                          )
+                        (reparse-symbol indented_block_body) [8978 9416])
+                    ("_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9429 9433])
+                            ("action" variable nil (reparse-symbol function_parameters) [9435 9441]))                          
+                        :documentation "Step forward the simulation, given the action.
+
+    Args:
+      action: A list of desired motor angles for eight motors.
+
+    Returns:
+      observations: The angles, velocities and torques of all motors.
+      reward: The reward for the current state-action pair.
+      done: Whether the episode has ended.
+      info: A dictionary that stores diagnostic information.
+
+    Raises:
+      ValueError: The action dimension is not the same as the number of motors.
+      ValueError: The magnitude of actions is out of bounds.
+    ")
+                        (reparse-symbol indented_block_body) [9419 10897])
+                    ("_render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10912 10916])
+                            ("mode" variable nil (reparse-symbol function_parameters) [10918 10922])
+                            ("close" variable nil (reparse-symbol function_parameters) [10936 10941]))                          )
+                        (reparse-symbol indented_block_body) [10900 11760])
+                    ("get_minitaur_motor_angles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11793 11797]))                          
+                        :documentation "Get the minitaur's motor angles.
+
+    Returns:
+      A numpy array of motor angles.
+    ")
+                        (reparse-symbol indented_block_body) [11763 12048])
+                    ("get_minitaur_motor_velocities" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12085 12089]))                          
+                        :documentation "Get the minitaur's motor velocities.
+
+    Returns:
+      A numpy array of motor velocities.
+    ")
+                        (reparse-symbol indented_block_body) [12051 12354])
+                    ("get_minitaur_motor_torques" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12388 12392]))                          
+                        :documentation "Get the minitaur's motor torques.
+
+    Returns:
+      A numpy array of motor torques.
+    ")
+                        (reparse-symbol indented_block_body) [12357 12647])
+                    ("get_minitaur_base_orientation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12684 12688]))                          
+                        :documentation "Get the minitaur's base orientation, represented by a quaternion.
+
+    Returns:
+      A numpy array of minitaur's orientation.
+    ")
+                        (reparse-symbol indented_block_body) [12650 12909])
+                    ("is_fallen" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12926 12930]))                          
+                        :documentation "Decide whether the minitaur has fallen.
+
+    If the up directions between the base and the world is larger (the dot
+    product is smaller than 0.85) or the base is very low on the ground
+    (the height is smaller than 0.13 meter), the minitaur is considered fallen.
+
+    Returns:
+      Boolean value that indicates whether the minitaur has fallen.
+    ")
+                        (reparse-symbol indented_block_body) [12912 13594])
+                    ("_termination" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13614 13618]))                          )
+                        (reparse-symbol indented_block_body) [13597 13789])
+                    ("_reward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13804 13808]))                          )
+                        (reparse-symbol indented_block_body) [13792 14611])
+                    ("get_objectives" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14633 14637]))                          )
+                        (reparse-symbol indented_block_body) [14614 14668])
+                    ("_get_observation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14692 14696]))                          )
+                        (reparse-symbol indented_block_body) [14671 14783])
+                    ("_noisy_observation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14809 14813]))                          )
+                        (reparse-symbol indented_block_body) [14786 15132])
+                    ("if" code nil (reparse-symbol indented_block_body) [15135 15268]))                  
+                :type "class")
+                nil [930 15268]))          
+      :file "minitaur_gym_env.py"
+      :pointmax 15268
+      :fsize 15267
+      :lastmodtime '(23219 61865 0 0)
+      :unmatched-syntax '((FROM 466 . 470) (PERIOD 471 . 472) (FROM 412 . 416) (PERIOD 417 . 418) (FROM 384 . 388) (PERIOD 389 . 390) ($EOI 15268 . 15268)))
+    (semanticdb-table "bullet_client.py"
+      :file "bullet_client.py"
+      :fsize 903
+      :lastmodtime '(23219 52314 0 0))
+    (semanticdb-table "minitaur.py"
+      :file "minitaur.py"
+      :fsize 20644
+      :lastmodtime '(23219 52314 0 0))
+    (semanticdb-table "minitaur_env_randomizer.py"
+      :file "minitaur_env_randomizer.py"
+      :fsize 3016
+      :lastmodtime '(23219 52314 0 0)))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!external_libs!pybullet!gym!pybullet_envs!bullet!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

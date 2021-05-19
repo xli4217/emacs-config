@@ -1,0 +1,706 @@
+;; Object vrep/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "vrep/"
+  :tables
+  (list
+    (semanticdb-table "run_sim.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 38])
+            ("sys" include nil nil [39 49])
+            ("time" include nil nil [50 61])
+            ("os" include nil nil [62 71])
+            ("sys" code nil nil [73 145])
+            ("robolearn.create_network" include nil nil [147 197])
+            ("robolearn.primitive_learners" include nil nil [198 243])
+            ("simulation_run" include nil nil [244 284])
+            ("robolearn.config" include nil nil [285 335])
+            ("try" code nil nil [337 811])
+            ("time" include nil nil [812 823])
+            ("print" code nil nil [825 850])
+            ("vrep" code nil nil [851 870])
+            ("clientID" variable nil nil [916 975])
+            ("if" code nil nil [996 4569])
+            ("print" code nil nil [4569 4592]))          
+      :file "run_sim.py"
+      :pointmax 4593
+      :fsize 4592
+      :lastmodtime '(22352 17659 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "simulation_run.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 38])
+            ("robolearn.config" include nil nil [39 77])
+            ("SimulationRun" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [185 207])
+                            ("self" variable nil (reparse-symbol indented_block_body) [216 232])
+                            ("self" variable nil (reparse-symbol indented_block_body) [241 273])
+                            ("self" variable nil (reparse-symbol indented_block_body) [282 350])
+                            ("self" variable nil (reparse-symbol indented_block_body) [359 420])
+                            ("self" code nil (reparse-symbol indented_block_body) [429 474])
+                            ("self" variable nil (reparse-symbol indented_block_body) [483 499])
+                            ("self" variable nil (reparse-symbol indented_block_body) [508 537])
+                            ("self" variable nil (reparse-symbol indented_block_body) [546 570])
+                            ("self" variable nil (reparse-symbol indented_block_body) [579 603])
+                            ("if" code nil (reparse-symbol indented_block_body) [664 774])
+                            ("if" code nil (reparse-symbol indented_block_body) [782 845])
+                            ("if" code nil (reparse-symbol indented_block_body) [854 1007]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [125 129])
+                            ("learner" variable nil (reparse-symbol function_parameters) [130 137])
+                            ("mode" variable nil (reparse-symbol function_parameters) [138 142])
+                            ("state_dim" variable nil (reparse-symbol function_parameters) [143 152])
+                            ("action_dim" variable nil (reparse-symbol function_parameters) [153 163])
+                            ("load" variable nil (reparse-symbol function_parameters) [164 168]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [112 1007])
+                    ("get_next_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1081 1085])
+                            ("current_state" variable nil (reparse-symbol function_parameters) [1086 1099])
+                            ("curr_time" variable nil (reparse-symbol function_parameters) [1100 1109]))                          )
+                        (reparse-symbol indented_block_body) [1061 3437]))                  
+                :type "class")
+                nil [79 3437]))          
+      :file "simulation_run.py"
+      :pointmax 3437
+      :fsize 3436
+      :lastmodtime '(22349 62061 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "vrep.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("platform" include nil nil [1216 1231])
+            ("struct" include nil nil [1232 1245])
+            ("sys" include nil nil [1246 1256])
+            ("ctypes" include nil nil [1257 1276])
+            ("vrepConst" include nil nil [1277 1300])
+            ("libsimx" variable nil nil [1316 1330])
+            ("try" code nil nil [1331 1984])
+            ("c_GetJointPosition" variable nil nil [2013 2161])
+            ("c_SetJointPosition" variable nil nil [2162 2298])
+            ("c_GetJointMatrix" variable nil nil [2299 2445])
+            ("c_SetSphericalJointMatrix" variable nil nil [2446 2601])
+            ("c_SetJointTargetVelocity" variable nil nil [2602 2744])
+            ("c_SetJointTargetPosition" variable nil nil [2745 2887])
+            ("c_GetJointForce" variable nil nil [2888 3033])
+            ("c_SetJointForce" variable nil nil [3034 3167])
+            ("c_ReadForceSensor" variable nil nil [3168 3363])
+            ("c_BreakForceSensor" variable nil nil [3364 3488])
+            ("c_ReadVisionSensor" variable nil nil [3489 3709])
+            ("c_GetObjectHandle" variable nil nil [3710 3868])
+            ("c_GetVisionSensorImage" variable nil nil [3869 4068])
+            ("c_SetVisionSensorImage" variable nil nil [4069 4244])
+            ("c_GetVisionSensorDepthBuffer" variable nil nil [4245 4439])
+            ("c_GetObjectChild" variable nil nil [4440 4598])
+            ("c_GetObjectParent" variable nil nil [4599 4746])
+            ("c_ReadProximitySensor" variable nil nil [4747 4970])
+            ("c_LoadModel" variable nil nil [4971 5135])
+            ("c_LoadUI" variable nil nil [5136 5333])
+            ("c_LoadScene" variable nil nil [5334 5475])
+            ("c_StartSimulation" variable nil nil [5476 5587])
+            ("c_PauseSimulation" variable nil nil [5588 5699])
+            ("c_StopSimulation" variable nil nil [5700 5810])
+            ("c_GetUIHandle" variable nil nil [5811 5965])
+            ("c_GetUISlider" variable nil nil [5966 6121])
+            ("c_SetUISlider" variable nil nil [6122 6265])
+            ("c_GetUIEventButton" variable nil nil [6266 6438])
+            ("c_GetUIButtonProperty" variable nil nil [6439 6602])
+            ("c_SetUIButtonProperty" variable nil nil [6603 6754])
+            ("c_AddStatusbarMessage" variable nil nil [6755 6893])
+            ("c_AuxiliaryConsoleOpen" variable nil nil [6894 7177])
+            ("c_AuxiliaryConsoleClose" variable nil nil [7178 7307])
+            ("c_AuxiliaryConsolePrint" variable nil nil [7308 7460])
+            ("c_AuxiliaryConsoleShow" variable nil nil [7461 7601])
+            ("c_GetObjectOrientation" variable nil nil [7602 7766])
+            ("c_GetObjectPosition" variable nil nil [7767 7928])
+            ("c_SetObjectOrientation" variable nil nil [7929 8093])
+            ("c_SetObjectPosition" variable nil nil [8094 8255])
+            ("c_SetObjectParent" variable nil nil [8256 8403])
+            ("c_SetUIButtonLabel" variable nil nil [8404 8586])
+            ("c_GetLastErrors" variable nil nil [8587 8755])
+            ("c_GetArrayParameter" variable nil nil [8756 8905])
+            ("c_SetArrayParameter" variable nil nil [8906 9055])
+            ("c_GetBooleanParameter" variable nil nil [9056 9207])
+            ("c_SetBooleanParameter" variable nil nil [9208 9347])
+            ("c_GetIntegerParameter" variable nil nil [9348 9499])
+            ("c_SetIntegerParameter" variable nil nil [9500 9639])
+            ("c_GetFloatingParameter" variable nil nil [9640 9792])
+            ("c_SetFloatingParameter" variable nil nil [9793 9933])
+            ("c_GetStringParameter" variable nil nil [9934 10095])
+            ("c_GetCollisionHandle" variable nil nil [10096 10257])
+            ("c_GetDistanceHandle" variable nil nil [10258 10418])
+            ("c_GetCollectionHandle" variable nil nil [10419 10581])
+            ("c_ReadCollision" variable nil nil [10582 10727])
+            ("c_ReadDistance" variable nil nil [10728 10872])
+            ("c_RemoveObject" variable nil nil [10873 10993])
+            ("c_RemoveModel" variable nil nil [10994 11113])
+            ("c_RemoveUI" variable nil nil [11114 11230])
+            ("c_CloseScene" variable nil nil [11231 11337])
+            ("c_GetObjects" variable nil nil [11338 11516])
+            ("c_DisplayDialog" variable nil nil [11517 11803])
+            ("c_EndDialog" variable nil nil [11804 11921])
+            ("c_GetDialogInput" variable nil nil [11922 12079])
+            ("c_GetDialogResult" variable nil nil [12080 12227])
+            ("c_CopyPasteObjects" variable nil nil [12228 12436])
+            ("c_GetObjectSelection" variable nil nil [12437 12611])
+            ("c_SetObjectSelection" variable nil nil [12612 12762])
+            ("c_ClearFloatSignal" variable nil nil [12763 12898])
+            ("c_ClearIntegerSignal" variable nil nil [12899 13036])
+            ("c_ClearStringSignal" variable nil nil [13037 13173])
+            ("c_GetFloatSignal" variable nil nil [13174 13331])
+            ("c_GetIntegerSignal" variable nil nil [13332 13491])
+            ("c_GetStringSignal" variable nil nil [13492 13686])
+            ("c_SetFloatSignal" variable nil nil [13687 13832])
+            ("c_SetIntegerSignal" variable nil nil [13833 13980])
+            ("c_SetStringSignal" variable nil nil [13981 14151])
+            ("c_AppendStringSignal" variable nil nil [14152 14325])
+            ("c_WriteStringStream" variable nil nil [14326 14498])
+            ("c_GetObjectFloatParameter" variable nil nil [14499 14666])
+            ("c_SetObjectFloatParameter" variable nil nil [14667 14822])
+            ("c_GetObjectIntParameter" variable nil nil [14823 14988])
+            ("c_SetObjectIntParameter" variable nil nil [14989 15142])
+            ("c_GetModelProperty" variable nil nil [15143 15291])
+            ("c_SetModelProperty" variable nil nil [15292 15428])
+            ("c_Start" variable nil nil [15429 15589])
+            ("c_Finish" variable nil nil [15590 15675])
+            ("c_GetPingTime" variable nil nil [15676 15795])
+            ("c_GetLastCmdTime" variable nil nil [15796 15894])
+            ("c_SynchronousTrigger" variable nil nil [15895 15997])
+            ("c_Synchronous" variable nil nil [15998 16105])
+            ("c_PauseCommunication" variable nil nil [16106 16220])
+            ("c_GetInMessageInfo" variable nil nil [16221 16357])
+            ("c_GetOutMessageInfo" variable nil nil [16358 16495])
+            ("c_GetConnectionId" variable nil nil [16496 16595])
+            ("c_CreateBuffer" variable nil nil [16596 16705])
+            ("c_ReleaseBuffer" variable nil nil [16706 16799])
+            ("c_TransferFile" variable nil nil [16800 16966])
+            ("c_EraseFile" variable nil nil [16967 17095])
+            ("c_GetAndClearStringSignal" variable nil nil [17096 17298])
+            ("c_ReadStringStream" variable nil nil [17299 17494])
+            ("c_CreateDummy" variable nil nil [17495 17662])
+            ("c_Query" variable nil nil [17663 17906])
+            ("c_GetObjectGroupData" variable nil nil [17907 18284])
+            ("c_GetObjectVelocity" variable nil nil [18285 18458])
+            ("c_CallScriptFunction" variable nil nil [18459 18997])
+            ("simxGetJointPosition" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [19039 19047])
+                ("jointHandle" variable nil (reparse-symbol function_parameters) [19049 19060])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [19062 19075]))              ) nil [19014 19316])
+            ("simxSetJointPosition" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [19342 19350])
+                ("jointHandle" variable nil (reparse-symbol function_parameters) [19352 19363])
+                ("position" variable nil (reparse-symbol function_parameters) [19365 19373])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [19375 19388]))              ) nil [19317 19576])
+            ("simxGetJointMatrix" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [19600 19608])
+                ("jointHandle" variable nil (reparse-symbol function_parameters) [19610 19621])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [19623 19636]))              ) nil [19577 19936])
+            ("simxSetSphericalJointMatrix" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [19969 19977])
+                ("jointHandle" variable nil (reparse-symbol function_parameters) [19979 19990])
+                ("matrix" variable nil (reparse-symbol function_parameters) [19992 19998])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [20000 20013]))              ) nil [19937 20243])
+            ("simxSetJointTargetVelocity" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [20275 20283])
+                ("jointHandle" variable nil (reparse-symbol function_parameters) [20285 20296])
+                ("targetVelocity" variable nil (reparse-symbol function_parameters) [20298 20312])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [20314 20327]))              ) nil [20244 20527])
+            ("simxSetJointTargetPosition" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [20559 20567])
+                ("jointHandle" variable nil (reparse-symbol function_parameters) [20569 20580])
+                ("targetPosition" variable nil (reparse-symbol function_parameters) [20582 20596])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [20598 20611]))              ) nil [20528 20811])
+            ("simxJointGetForce" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [20834 20842])
+                ("jointHandle" variable nil (reparse-symbol function_parameters) [20844 20855])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [20857 20870]))              ) nil [20812 21099])
+            ("simxGetJointForce" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [21122 21130])
+                ("jointHandle" variable nil (reparse-symbol function_parameters) [21132 21143])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [21145 21158]))              ) nil [21100 21387])
+            ("simxSetJointForce" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [21410 21418])
+                ("jointHandle" variable nil (reparse-symbol function_parameters) [21420 21431])
+                ("force" variable nil (reparse-symbol function_parameters) [21433 21438])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [21440 21453]))              ) nil [21388 21634])
+            ("simxReadForceSensor" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [21659 21667])
+                ("forceSensorHandle" variable nil (reparse-symbol function_parameters) [21669 21686])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [21688 21701]))              ) nil [21635 22305])
+            ("simxBreakForceSensor" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [22331 22339])
+                ("forceSensorHandle" variable nil (reparse-symbol function_parameters) [22341 22358])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [22360 22373]))              ) nil [22306 22556])
+            ("simxReadVisionSensor" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [22582 22590])
+                ("sensorHandle" variable nil (reparse-symbol function_parameters) [22592 22604])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [22606 22619]))              ) nil [22557 23356])
+            ("simxGetObjectHandle" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [23381 23389])
+                ("objectName" variable nil (reparse-symbol function_parameters) [23391 23401])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [23403 23416]))              ) nil [23357 23758])
+            ("simxGetVisionSensorImage" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [23788 23796])
+                ("sensorHandle" variable nil (reparse-symbol function_parameters) [23798 23810])
+                ("options" variable nil (reparse-symbol function_parameters) [23812 23819])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [23821 23834]))              ) nil [23759 24517])
+            ("simxSetVisionSensorImage" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [24547 24555])
+                ("sensorHandle" variable nil (reparse-symbol function_parameters) [24557 24569])
+                ("image" variable nil (reparse-symbol function_parameters) [24571 24576])
+                ("options" variable nil (reparse-symbol function_parameters) [24578 24585])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [24587 24600]))              ) nil [24518 24876])
+            ("simxGetVisionSensorDepthBuffer" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [24912 24920])
+                ("sensorHandle" variable nil (reparse-symbol function_parameters) [24922 24934])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [24936 24949]))              ) nil [24877 25528])
+            ("simxGetObjectChild" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [25552 25560])
+                ("parentObjectHandle" variable nil (reparse-symbol function_parameters) [25562 25580])
+                ("childIndex" variable nil (reparse-symbol function_parameters) [25582 25592])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [25594 25607]))              ) nil [25529 25890])
+            ("simxGetObjectParent" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [25915 25923])
+                ("childObjectHandle" variable nil (reparse-symbol function_parameters) [25925 25942])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [25944 25957]))              ) nil [25891 26232])
+            ("simxReadProximitySensor" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [26261 26269])
+                ("sensorHandle" variable nil (reparse-symbol function_parameters) [26271 26283])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [26285 26298]))              ) nil [26233 26992])
+            ("simxLoadModel" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [27011 27019])
+                ("modelPathAndName" variable nil (reparse-symbol function_parameters) [27021 27037])
+                ("options" variable nil (reparse-symbol function_parameters) [27039 27046])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [27048 27061]))              ) nil [26993 27442])
+            ("simxLoadUI" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [27458 27466])
+                ("uiPathAndName" variable nil (reparse-symbol function_parameters) [27468 27481])
+                ("options" variable nil (reparse-symbol function_parameters) [27483 27490])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [27492 27505]))              ) nil [27443 28104])
+            ("simxLoadScene" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [28123 28131])
+                ("scenePathAndName" variable nil (reparse-symbol function_parameters) [28133 28149])
+                ("options" variable nil (reparse-symbol function_parameters) [28151 28158])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [28160 28173]))              ) nil [28105 28487])
+            ("simxStartSimulation" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [28512 28520])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [28522 28535]))              ) nil [28488 28699])
+            ("simxPauseSimulation" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [28724 28732])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [28734 28747]))              ) nil [28700 28911])
+            ("simxStopSimulation" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [28935 28943])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [28945 28958]))              ) nil [28912 29121])
+            ("simxGetUIHandle" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [29142 29150])
+                ("uiName" variable nil (reparse-symbol function_parameters) [29152 29158])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [29160 29173]))              ) nil [29122 29496])
+            ("simxGetUISlider" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [29517 29525])
+                ("uiHandle" variable nil (reparse-symbol function_parameters) [29527 29535])
+                ("uiButtonID" variable nil (reparse-symbol function_parameters) [29537 29547])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [29549 29562]))              ) nil [29497 29806])
+            ("simxSetUISlider" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [29827 29835])
+                ("uiHandle" variable nil (reparse-symbol function_parameters) [29837 29845])
+                ("uiButtonID" variable nil (reparse-symbol function_parameters) [29847 29857])
+                ("position" variable nil (reparse-symbol function_parameters) [29859 29867])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [29869 29882]))              ) nil [29807 30074])
+            ("simxGetUIEventButton" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [30100 30108])
+                ("uiHandle" variable nil (reparse-symbol function_parameters) [30110 30118])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [30120 30133]))              ) nil [30075 30521])
+            ("simxGetUIButtonProperty" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [30550 30558])
+                ("uiHandle" variable nil (reparse-symbol function_parameters) [30560 30568])
+                ("uiButtonID" variable nil (reparse-symbol function_parameters) [30570 30580])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [30582 30595]))              ) nil [30522 30835])
+            ("simxSetUIButtonProperty" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [30864 30872])
+                ("uiHandle" variable nil (reparse-symbol function_parameters) [30874 30882])
+                ("uiButtonID" variable nil (reparse-symbol function_parameters) [30884 30894])
+                ("prop" variable nil (reparse-symbol function_parameters) [30896 30900])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [30902 30915]))              ) nil [30836 31115])
+            ("simxAddStatusbarMessage" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [31144 31152])
+                ("message" variable nil (reparse-symbol function_parameters) [31154 31161])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [31163 31176]))              ) nil [31116 31455])
+            ("simxAuxiliaryConsoleOpen" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [31485 31493])
+                ("title" variable nil (reparse-symbol function_parameters) [31495 31500])
+                ("maxLines" variable nil (reparse-symbol function_parameters) [31502 31510])
+                ("mode" variable nil (reparse-symbol function_parameters) [31512 31516])
+                ("position" variable nil (reparse-symbol function_parameters) [31518 31526])
+                ("size" variable nil (reparse-symbol function_parameters) [31528 31532])
+                ("textColor" variable nil (reparse-symbol function_parameters) [31534 31543])
+                ("backgroundColor" variable nil (reparse-symbol function_parameters) [31545 31560])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [31562 31575]))              ) nil [31456 32436])
+            ("simxAuxiliaryConsoleClose" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [32467 32475])
+                ("consoleHandle" variable nil (reparse-symbol function_parameters) [32477 32490])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [32492 32505]))              ) nil [32437 32690])
+            ("simxAuxiliaryConsolePrint" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [32721 32729])
+                ("consoleHandle" variable nil (reparse-symbol function_parameters) [32731 32744])
+                ("txt" variable nil (reparse-symbol function_parameters) [32746 32749])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [32751 32764]))              ) nil [32691 33044])
+            ("simxAuxiliaryConsoleShow" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [33074 33082])
+                ("consoleHandle" variable nil (reparse-symbol function_parameters) [33084 33097])
+                ("showState" variable nil (reparse-symbol function_parameters) [33099 33108])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [33110 33123]))              ) nil [33045 33318])
+            ("simxGetObjectOrientation" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [33348 33356])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [33358 33370])
+                ("relativeToObjectHandle" variable nil (reparse-symbol function_parameters) [33372 33394])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [33396 33409]))              ) nil [33319 33753])
+            ("simxGetObjectPosition" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [33780 33788])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [33790 33802])
+                ("relativeToObjectHandle" variable nil (reparse-symbol function_parameters) [33804 33826])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [33828 33841]))              ) nil [33754 34173])
+            ("simxSetObjectOrientation" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [34203 34211])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [34213 34225])
+                ("relativeToObjectHandle" variable nil (reparse-symbol function_parameters) [34227 34249])
+                ("eulerAngles" variable nil (reparse-symbol function_parameters) [34251 34262])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [34264 34277]))              ) nil [34174 34534])
+            ("simxSetObjectPosition" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [34561 34569])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [34571 34583])
+                ("relativeToObjectHandle" variable nil (reparse-symbol function_parameters) [34585 34607])
+                ("position" variable nil (reparse-symbol function_parameters) [34609 34617])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [34619 34632]))              ) nil [34535 34891])
+            ("simxSetObjectParent" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [34916 34924])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [34926 34938])
+                ("parentObject" variable nil (reparse-symbol function_parameters) [34940 34952])
+                ("keepInPlace" variable nil (reparse-symbol function_parameters) [34954 34965])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [34967 34980]))              ) nil [34892 35185])
+            ("simxSetUIButtonLabel" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [35211 35219])
+                ("uiHandle" variable nil (reparse-symbol function_parameters) [35221 35229])
+                ("uiButtonID" variable nil (reparse-symbol function_parameters) [35231 35241])
+                ("upStateLabel" variable nil (reparse-symbol function_parameters) [35243 35255])
+                ("downStateLabel" variable nil (reparse-symbol function_parameters) [35257 35271])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [35273 35286]))              ) nil [35186 35726])
+            ("simxGetLastErrors" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [35749 35757])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [35759 35772]))              ) nil [35727 36604])
+            ("simxGetArrayParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [36631 36639])
+                ("paramIdentifier" variable nil (reparse-symbol function_parameters) [36641 36656])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [36658 36671]))              ) nil [36605 36991])
+            ("simxSetArrayParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [37018 37026])
+                ("paramIdentifier" variable nil (reparse-symbol function_parameters) [37028 37043])
+                ("paramValues" variable nil (reparse-symbol function_parameters) [37045 37056])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [37058 37071]))              ) nil [36992 37318])
+            ("simxGetBooleanParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [37347 37355])
+                ("paramIdentifier" variable nil (reparse-symbol function_parameters) [37357 37372])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [37374 37387]))              ) nil [37319 37651])
+            ("simxSetBooleanParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [37680 37688])
+                ("paramIdentifier" variable nil (reparse-symbol function_parameters) [37690 37705])
+                ("paramValue" variable nil (reparse-symbol function_parameters) [37707 37717])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [37719 37732]))              ) nil [37652 37929])
+            ("simxGetIntegerParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [37958 37966])
+                ("paramIdentifier" variable nil (reparse-symbol function_parameters) [37968 37983])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [37985 37998]))              ) nil [37930 38251])
+            ("simxSetIntegerParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [38280 38288])
+                ("paramIdentifier" variable nil (reparse-symbol function_parameters) [38290 38305])
+                ("paramValue" variable nil (reparse-symbol function_parameters) [38307 38317])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [38319 38332]))              ) nil [38252 38529])
+            ("simxGetFloatingParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [38559 38567])
+                ("paramIdentifier" variable nil (reparse-symbol function_parameters) [38569 38584])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [38586 38599]))              ) nil [38530 38855])
+            ("simxSetFloatingParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [38885 38893])
+                ("paramIdentifier" variable nil (reparse-symbol function_parameters) [38895 38910])
+                ("paramValue" variable nil (reparse-symbol function_parameters) [38912 38922])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [38924 38937]))              ) nil [38856 39135])
+            ("simxGetStringParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [39163 39171])
+                ("paramIdentifier" variable nil (reparse-symbol function_parameters) [39173 39188])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [39190 39203]))              ) nil [39136 39824])
+            ("simxGetCollisionHandle" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [39852 39860])
+                ("collisionObjectName" variable nil (reparse-symbol function_parameters) [39862 39881])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [39883 39896]))              ) nil [39825 40278])
+            ("simxGetCollectionHandle" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [40307 40315])
+                ("collectionName" variable nil (reparse-symbol function_parameters) [40317 40331])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [40333 40346]))              ) nil [40279 40709])
+            ("simxGetDistanceHandle" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [40736 40744])
+                ("distanceObjectName" variable nil (reparse-symbol function_parameters) [40746 40764])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [40766 40779]))              ) nil [40710 41156])
+            ("simxReadCollision" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [41179 41187])
+                ("collisionObjectHandle" variable nil (reparse-symbol function_parameters) [41189 41210])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [41212 41225]))              ) nil [41157 41500])
+            ("simxReadDistance" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [41522 41530])
+                ("distanceObjectHandle" variable nil (reparse-symbol function_parameters) [41532 41552])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [41554 41567]))              ) nil [41501 41835])
+            ("simxRemoveObject" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [41857 41865])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [41867 41879])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [41881 41894]))              ) nil [41836 42069])
+            ("simxRemoveModel" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [42090 42098])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [42100 42112])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [42114 42127]))              ) nil [42070 42301])
+            ("simxRemoveUI" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [42319 42327])
+                ("uiHandle" variable nil (reparse-symbol function_parameters) [42329 42337])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [42339 42352]))              ) nil [42302 42519])
+            ("simxCloseScene" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [42539 42547])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [42549 42562]))              ) nil [42520 42721])
+            ("simxGetObjects" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [42741 42749])
+                ("objectType" variable nil (reparse-symbol function_parameters) [42751 42761])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [42763 42776]))              ) nil [42722 43214])
+            ("simxDisplayDialog" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [43238 43246])
+                ("titleText" variable nil (reparse-symbol function_parameters) [43248 43257])
+                ("mainText" variable nil (reparse-symbol function_parameters) [43259 43267])
+                ("dialogType" variable nil (reparse-symbol function_parameters) [43269 43279])
+                ("initialText" variable nil (reparse-symbol function_parameters) [43281 43292])
+                ("titleColors" variable nil (reparse-symbol function_parameters) [43294 43305])
+                ("dialogColors" variable nil (reparse-symbol function_parameters) [43307 43319])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [43321 43334]))              ) nil [43216 44254])
+            ("simxEndDialog" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [44273 44281])
+                ("dialogHandle" variable nil (reparse-symbol function_parameters) [44283 44295])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [44297 44310]))              ) nil [44255 44482])
+            ("simxGetDialogInput" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [44506 44514])
+                ("dialogHandle" variable nil (reparse-symbol function_parameters) [44516 44528])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [44530 44543]))              ) nil [44483 45155])
+            ("simxGetDialogResult" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [45181 45189])
+                ("dialogHandle" variable nil (reparse-symbol function_parameters) [45191 45203])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [45205 45218]))              ) nil [45157 45451])
+            ("simxCopyPasteObjects" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [45477 45485])
+                ("objectHandles" variable nil (reparse-symbol function_parameters) [45487 45500])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [45502 45515]))              ) nil [45452 46161])
+            ("simxGetObjectSelection" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [46190 46198])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [46200 46213]))              ) nil [46163 46645])
+            ("simxSetObjectSelection" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [46675 46683])
+                ("objectHandles" variable nil (reparse-symbol function_parameters) [46685 46698])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [46700 46713]))              ) nil [46648 46986])
+            ("simxClearFloatSignal" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [47012 47020])
+                ("signalName" variable nil (reparse-symbol function_parameters) [47022 47032])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [47034 47047]))              ) nil [46987 47335])
+            ("simxClearIntegerSignal" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [47363 47371])
+                ("signalName" variable nil (reparse-symbol function_parameters) [47373 47383])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [47385 47398]))              ) nil [47336 47688])
+            ("simxClearStringSignal" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [47715 47723])
+                ("signalName" variable nil (reparse-symbol function_parameters) [47725 47735])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [47737 47750]))              ) nil [47689 48039])
+            ("simxGetFloatSignal" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [48063 48071])
+                ("signalName" variable nil (reparse-symbol function_parameters) [48073 48083])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [48085 48098]))              ) nil [48040 48457])
+            ("simxGetIntegerSignal" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [48483 48491])
+                ("signalName" variable nil (reparse-symbol function_parameters) [48493 48503])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [48505 48518]))              ) nil [48458 48877])
+            ("simxGetStringSignal" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [48902 48910])
+                ("signalName" variable nil (reparse-symbol function_parameters) [48912 48922])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [48924 48937]))              ) nil [48878 49532])
+            ("simxGetAndClearStringSignal" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [49565 49573])
+                ("signalName" variable nil (reparse-symbol function_parameters) [49575 49585])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [49587 49600]))              ) nil [49533 50203])
+            ("simxReadStringStream" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [50229 50237])
+                ("signalName" variable nil (reparse-symbol function_parameters) [50239 50249])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [50251 50264]))              ) nil [50204 50860])
+            ("simxSetFloatSignal" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [50884 50892])
+                ("signalName" variable nil (reparse-symbol function_parameters) [50894 50904])
+                ("signalValue" variable nil (reparse-symbol function_parameters) [50906 50917])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [50919 50932]))              ) nil [50861 51231])
+            ("simxSetIntegerSignal" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [51257 51265])
+                ("signalName" variable nil (reparse-symbol function_parameters) [51267 51277])
+                ("signalValue" variable nil (reparse-symbol function_parameters) [51279 51290])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [51292 51305]))              ) nil [51232 51606])
+            ("simxSetStringSignal" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [51631 51639])
+                ("signalName" variable nil (reparse-symbol function_parameters) [51641 51651])
+                ("signalValue" variable nil (reparse-symbol function_parameters) [51653 51664])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [51666 51679]))              ) nil [51607 52612])
+            ("simxAppendStringSignal" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [52640 52648])
+                ("signalName" variable nil (reparse-symbol function_parameters) [52650 52660])
+                ("signalValue" variable nil (reparse-symbol function_parameters) [52662 52673])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [52675 52688]))              ) nil [52613 53624])
+            ("simxWriteStringStream" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [53651 53659])
+                ("signalName" variable nil (reparse-symbol function_parameters) [53661 53671])
+                ("signalValue" variable nil (reparse-symbol function_parameters) [53673 53684])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [53686 53699]))              ) nil [53625 54634])
+            ("simxGetObjectFloatParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [54667 54675])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [54677 54689])
+                ("parameterID" variable nil (reparse-symbol function_parameters) [54691 54702])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [54704 54717]))              ) nil [54635 55003])
+            ("simxSetObjectFloatParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [55036 55044])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [55046 55058])
+                ("parameterID" variable nil (reparse-symbol function_parameters) [55060 55071])
+                ("parameterValue" variable nil (reparse-symbol function_parameters) [55073 55087])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [55089 55102]))              ) nil [55004 55317])
+            ("simxGetObjectIntParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [55348 55356])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [55358 55370])
+                ("parameterID" variable nil (reparse-symbol function_parameters) [55372 55383])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [55385 55398]))              ) nil [55318 55676])
+            ("simxSetObjectIntParameter" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [55707 55715])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [55717 55729])
+                ("parameterID" variable nil (reparse-symbol function_parameters) [55731 55742])
+                ("parameterValue" variable nil (reparse-symbol function_parameters) [55744 55758])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [55760 55773]))              ) nil [55677 55986])
+            ("simxGetModelProperty" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [56012 56020])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [56022 56034])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [56036 56049]))              ) nil [55987 56277])
+            ("simxSetModelProperty" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [56303 56311])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [56313 56325])
+                ("prop" variable nil (reparse-symbol function_parameters) [56327 56331])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [56333 56346]))              ) nil [56278 56531])
+            ("simxStart" function (:arguments 
+              ( ("connectionAddress" variable nil (reparse-symbol function_parameters) [56546 56563])
+                ("connectionPort" variable nil (reparse-symbol function_parameters) [56565 56579])
+                ("waitUntilConnected" variable nil (reparse-symbol function_parameters) [56581 56599])
+                ("doNotReconnectOnceDisconnected" variable nil (reparse-symbol function_parameters) [56601 56631])
+                ("timeOutInMs" variable nil (reparse-symbol function_parameters) [56633 56644])
+                ("commThreadCycleInMs" variable nil (reparse-symbol function_parameters) [56646 56665]))              ) nil [56532 57047])
+            ("simxFinish" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [57063 57071]))              ) nil [57048 57211])
+            ("simxGetPingTime" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [57232 57240]))              ) nil [57212 57446])
+            ("simxGetLastCmdTime" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [57470 57478]))              ) nil [57447 57626])
+            ("simxSynchronousTrigger" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [57654 57662]))              ) nil [57627 57814])
+            ("simxSynchronous" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [57835 57843])
+                ("enable" variable nil (reparse-symbol function_parameters) [57845 57851]))              ) nil [57815 58004])
+            ("simxPauseCommunication" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [58032 58040])
+                ("enable" variable nil (reparse-symbol function_parameters) [58042 58048]))              ) nil [58005 58208])
+            ("simxGetInMessageInfo" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [58234 58242])
+                ("infoType" variable nil (reparse-symbol function_parameters) [58244 58252]))              ) nil [58209 58461])
+            ("simxGetOutMessageInfo" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [58488 58496])
+                ("infoType" variable nil (reparse-symbol function_parameters) [58498 58506]))              ) nil [58462 58716])
+            ("simxGetConnectionId" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [58741 58749]))              ) nil [58717 58898])
+            ("simxCreateBuffer" function (:arguments 
+              ( ("bufferSize" variable nil (reparse-symbol function_parameters) [58920 58930]))              ) nil [58899 59078])
+            ("simxReleaseBuffer" function (:arguments 
+              ( ("buffer" variable nil (reparse-symbol function_parameters) [59101 59107]))              ) nil [59079 59252])
+            ("simxTransferFile" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [59274 59282])
+                ("filePathAndName" variable nil (reparse-symbol function_parameters) [59284 59299])
+                ("fileName_serverSide" variable nil (reparse-symbol function_parameters) [59301 59320])
+                ("timeOut" variable nil (reparse-symbol function_parameters) [59322 59329])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [59331 59344]))              ) nil [59253 59678])
+            ("simxEraseFile" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [59697 59705])
+                ("fileName_serverSide" variable nil (reparse-symbol function_parameters) [59707 59726])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [59728 59741]))              ) nil [59679 60058])
+            ("simxCreateDummy" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [60079 60087])
+                ("size" variable nil (reparse-symbol function_parameters) [60089 60093])
+                ("color" variable nil (reparse-symbol function_parameters) [60095 60100])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [60102 60115]))              ) nil [60059 60443])
+            ("simxQuery" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [60458 60466])
+                ("signalName" variable nil (reparse-symbol function_parameters) [60468 60478])
+                ("signalValue" variable nil (reparse-symbol function_parameters) [60480 60491])
+                ("retSignalName" variable nil (reparse-symbol function_parameters) [60493 60506])
+                ("timeOutInMs" variable nil (reparse-symbol function_parameters) [60508 60519]))              ) nil [60444 61878])
+            ("simxGetObjectGroupData" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [61906 61914])
+                ("objectType" variable nil (reparse-symbol function_parameters) [61916 61926])
+                ("dataType" variable nil (reparse-symbol function_parameters) [61928 61936])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [61938 61951]))              ) nil [61879 63483])
+            ("simxCallScriptFunction" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [63511 63519])
+                ("scriptDescription" variable nil (reparse-symbol function_parameters) [63521 63538])
+                ("options" variable nil (reparse-symbol function_parameters) [63540 63547])
+                ("functionName" variable nil (reparse-symbol function_parameters) [63549 63561])
+                ("inputInts" variable nil (reparse-symbol function_parameters) [63563 63572])
+                ("inputFloats" variable nil (reparse-symbol function_parameters) [63574 63585])
+                ("inputStrings" variable nil (reparse-symbol function_parameters) [63587 63599])
+                ("inputBuffer" variable nil (reparse-symbol function_parameters) [63601 63612])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [63614 63627]))              ) nil [63484 66825])
+            ("simxGetObjectVelocity" function (:arguments 
+              ( ("clientID" variable nil (reparse-symbol function_parameters) [66852 66860])
+                ("objectHandle" variable nil (reparse-symbol function_parameters) [66862 66874])
+                ("operationMode" variable nil (reparse-symbol function_parameters) [66876 66889]))              ) nil [66826 67329])
+            ("simxPackInts" function (:arguments 
+              ( ("intList" variable nil (reparse-symbol function_parameters) [67347 67354]))              ) nil [67330 67743])
+            ("simxUnpackInts" function (:arguments 
+              ( ("intsPackedInString" variable nil (reparse-symbol function_parameters) [67763 67781]))              ) nil [67744 68037])
+            ("simxPackFloats" function (:arguments 
+              ( ("floatList" variable nil (reparse-symbol function_parameters) [68057 68066]))              ) nil [68038 68459])
+            ("simxUnpackFloats" function (:arguments 
+              ( ("floatsPackedInString" variable nil (reparse-symbol function_parameters) [68481 68501]))              ) nil [68460 68761]))          
+      :file "vrep.py"
+      :pointmax 68761
+      :fsize 70241
+      :lastmodtime '(22340 58117 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 66226 . 66428) (NEWLINE 66225 . 66226) (WHILE 66195 . 66200) (STRING_LITERAL 66220 . 66224) (COLON 66224 . 66225) (INDENT_BLOCK 63043 . 63245) (NEWLINE 63042 . 63043) (WHILE 63012 . 63017) (STRING_LITERAL 63037 . 63041) (COLON 63041 . 63042) (INDENT_BLOCK 44872 . 45051) (NEWLINE 44871 . 44872) (WHILE 44843 . 44848) (STRING_LITERAL 44866 . 44870) (COLON 44870 . 44871) (INDENT_BLOCK 39542 . 39721) (NEWLINE 39541 . 39542) (WHILE 39512 . 39517) (STRING_LITERAL 39536 . 39540) (COLON 39540 . 39541) (INDENT_BLOCK 36203 . 36407) (NEWLINE 36202 . 36203) (WHILE 36171 . 36176) (STRING_LITERAL 36197 . 36201) (COLON 36201 . 36202)))
+    (semanticdb-table "post_learning.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [24 42])
+            ("sys" include nil nil [43 53])
+            ("time" include nil nil [54 65])
+            ("os" include nil nil [66 75])
+            ("sys" code nil nil [77 149])
+            ("robolearn.preprocess" include nil nil [151 198])
+            ("robolearn.config" include nil nil [199 260])
+            ("robolearn.visualization" include nil nil [261 310])
+            ("robolearn.primitive_learners" include nil nil [311 356])
+            ("mode" variable nil nil [359 377])
+            ("if" code nil nil [423 842])
+            ("if" code nil nil [888 1463])
+            ("if" code nil nil [1518 1637]))          
+      :file "post_learning.py"
+      :pointmax 1638
+      :fsize 1637
+      :lastmodtime '(22343 28683 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!Robolearn!vrep!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

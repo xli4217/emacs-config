@@ -1,0 +1,123 @@
+;; Object schedule/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "schedule/"
+  :tables
+  (list
+    (semanticdb-table "schedule.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+<This is adopted from OpenAI-Baseline>
+
+This file is used for specifying various schedules that evolve over
+time throughout the execution of the algorithm, such as:
+ - learning rate for the optimizer
+ - exploration epsilon for the epsilon greedy exploration strategy
+ - beta parameter for beta parameter in prioritized replay
+Each schedule has a function `value(t)` which returns the current value
+of the parameter given the timestep t of the optimization procedure.
+\"\"\"" code nil nil [1 475])
+            ("Schedule" type
+               (:superclasses ("object")
+                :members 
+                  ( ("value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [515 519])
+                            ("t" variable nil (reparse-symbol function_parameters) [521 522]))                          
+                        :documentation "Value of the schedule at time t")
+                        (reparse-symbol indented_block_body) [505 607]))                  
+                :type "class")
+                nil [477 607])
+            ("ConstantSchedule" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Value remains constant over time.
+        Parameters
+        ----------
+        value: float
+        Constant value of the schedule
+        \"\"\"" code nil (reparse-symbol indented_block_body) [680 826])
+                            ("self" variable nil (reparse-symbol indented_block_body) [835 850]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [658 662])
+                            ("value" variable nil (reparse-symbol function_parameters) [664 669]))                          
+                        :documentation "Value remains constant over time.
+        Parameters
+        ----------
+        value: float
+        Constant value of the schedule
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [645 851])
+                    ("value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [874 878])
+                            ("t" variable nil (reparse-symbol function_parameters) [880 881]))                          
+                        :documentation "See Schedule.value")
+                        (reparse-symbol indented_block_body) [864 940]))                  
+                :type "class")
+                nil [609 940])
+            ("LinearSchedule" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Linear interpolation between initial_p and final_p over
+        schedule_timesteps. After this many timesteps pass final_p is
+        returned.
+        Parameters
+        ----------
+        schedule_timesteps: int
+        Number of timesteps for which to linearly anneal initial_p
+        to final_p
+        initial_p: float
+        initial output value
+        final_p: float
+        final output value
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1048 1466])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1475 1519])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1528 1550])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1559 1585]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [989 993])
+                            ("schedule_timesteps" variable nil (reparse-symbol function_parameters) [995 1013])
+                            ("final_p" variable nil (reparse-symbol function_parameters) [1015 1022])
+                            ("initial_p" variable nil (reparse-symbol function_parameters) [1024 1033]))                          
+                        :documentation "Linear interpolation between initial_p and final_p over
+        schedule_timesteps. After this many timesteps pass final_p is
+        returned.
+        Parameters
+        ----------
+        schedule_timesteps: int
+        Number of timesteps for which to linearly anneal initial_p
+        to final_p
+        initial_p: float
+        initial output value
+        final_p: float
+        final output value
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [976 1586])
+                    ("value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1609 1613])
+                            ("t" variable nil (reparse-symbol function_parameters) [1615 1616]))                          
+                        :documentation "See Schedule.value")
+                        (reparse-symbol indented_block_body) [1599 1791]))                  
+                :type "class")
+                nil [942 1791]))          
+      :file "schedule.py"
+      :pointmax 1819
+      :fsize 1818
+      :lastmodtime '(23242 50285 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!rl_pipeline!schedule!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

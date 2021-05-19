@@ -1,0 +1,232 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("torch.distributions" include nil nil [14 46])
+            ("numpy" include nil nil [47 65])
+            ("DiscreteLatent" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [190 220])
+                            ("self" code nil (reparse-symbol indented_block_body) [229 277])
+                            ("self" variable nil (reparse-symbol indented_block_body) [286 311])
+                            ("self" variable nil (reparse-symbol indented_block_body) [320 345])
+                            ("self" variable nil (reparse-symbol indented_block_body) [354 389])
+                            ("self" variable nil (reparse-symbol indented_block_body) [398 418])
+                            ("self" variable nil (reparse-symbol indented_block_body) [427 443])
+                            ("self" variable nil (reparse-symbol indented_block_body) [514 538])
+                            ("self" variable nil (reparse-symbol indented_block_body) [609 627])
+                            ("self" variable nil (reparse-symbol indented_block_body) [685 703]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [224 228])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [230 241])
+                            ("device" variable nil (reparse-symbol function_parameters) [243 249]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [211 823])
+                    ("dist_from_h" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [844 848])
+                            ("h" variable nil (reparse-symbol function_parameters) [850 851])
+                            ("mode" variable nil (reparse-symbol function_parameters) [853 857]))                          )
+                        (reparse-symbol indented_block_body) [828 1326])
+                    ("sample_q" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1344 1348])
+                            ("num_samples" variable nil (reparse-symbol function_parameters) [1350 1361])
+                            ("mode" variable nil (reparse-symbol function_parameters) [1363 1367]))                          )
+                        (reparse-symbol indented_block_body) [1331 1662])
+                    ("sample_p" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1680 1684])
+                            ("num_samples" variable nil (reparse-symbol function_parameters) [1686 1697])
+                            ("mode" variable nil (reparse-symbol function_parameters) [1699 1703])
+                            ("most_likely_z" variable nil (reparse-symbol function_parameters) [1705 1718])
+                            ("full_dist" variable nil (reparse-symbol function_parameters) [1726 1735])
+                            ("all_z_sep" variable nil (reparse-symbol function_parameters) [1742 1751]))                          )
+                        (reparse-symbol indented_block_body) [1667 2986])
+                    ("kl_q_p" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3002 3006])
+                            ("log_writer" variable nil (reparse-symbol function_parameters) [3008 3018])
+                            ("prefix" variable nil (reparse-symbol function_parameters) [3025 3031])
+                            ("curr_iter" variable nil (reparse-symbol function_parameters) [3038 3047]))                          )
+                        (reparse-symbol indented_block_body) [2991 3645])
+                    ("q_log_prob" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3665 3669])
+                            ("z" variable nil (reparse-symbol function_parameters) [3671 3672]))                          )
+                        (reparse-symbol indented_block_body) [3650 3816])
+                    ("p_log_prob" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3836 3840])
+                            ("z" variable nil (reparse-symbol function_parameters) [3842 3843]))                          )
+                        (reparse-symbol indented_block_body) [3821 3987])
+                    ("get_p_dist_probs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4013 4017]))                          )
+                        (reparse-symbol indented_block_body) [3992 4053])
+                    ("all_one_hot_combinations" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("N" variable nil (reparse-symbol function_parameters) [4105 4106])
+                            ("K" variable nil (reparse-symbol function_parameters) [4108 4109]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4058 4228])
+                    ("summarize_for_tensorboard" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4263 4267])
+                            ("log_writer" variable nil (reparse-symbol function_parameters) [4269 4279])
+                            ("prefix" variable nil (reparse-symbol function_parameters) [4281 4287])
+                            ("curr_iter" variable nil (reparse-symbol function_parameters) [4289 4298]))                          )
+                        (reparse-symbol indented_block_body) [4233 5006]))                  
+                :type "class")
+                nil [177 5006]))          
+      :file "discrete_latent.py"
+      :pointmax 5006
+      :fsize 5005
+      :lastmodtime '(24325 563 882451 595000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("torch.distributions" include nil nil [14 46])
+            ("numpy" include nil nil [47 65])
+            ("GMM2D" type
+               (:superclasses ("td.Distribution")
+                :members 
+                  ( ("r\"\"\"
+    Gaussian Mixture Model using 2D Multivariate Gaussians each of as N components:
+    Cholesky decompesition and affine transformation for sampling:
+
+    .. math:: Z \\sim N(0, I)
+
+    .. math:: S = \\mu + LZ
+
+    .. math:: S \\sim N(\\mu, \\Sigma) \\rightarrow N(\\mu, LL^T)
+
+    where :math:`L = chol(\\Sigma)` and
+
+    .. math:: \\Sigma = \\left[ {\\begin{array}{cc} \\sigma^2_x & \\rho \\sigma_x \\sigma_y \\\\ \\rho \\sigma_x \\sigma_y & \\sigma^2_y \\\\ \\end{array} } \\right]
+
+    such that
+
+    .. math:: L = chol(\\Sigma) = \\left[ {\\begin{array}{cc} \\sigma_x & 0 \\\\ \\rho \\sigma_y & \\sigma_y \\sqrt{1-\\rho^2} \\\\ \\end{array} } \\right]
+
+    :param log_pis: Log Mixing Proportions :math:`log(\\pi)`. [..., N]
+    :param mus: Mixture Components mean :math:`\\mu`. [..., N * 2]
+    :param log_sigmas: Log Standard Deviations :math:`log(\\sigma_d)`. [..., N * 2]
+    :param corrs: Cholesky factor of correlation :math:`\\rho`. [..., N]
+    :param clip_lo: Clips the lower end of the standard deviation.
+    :param clip_hi: Clips the upper end of the standard deviation.
+    \"\"\"" code nil (reparse-symbol indented_block_body) [213 1269])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1265 1353])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1362 1397])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1406 1425])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1434 1462])
+                            ("log_pis" variable nil (reparse-symbol indented_block_body) [1472 1512])
+                            ("self" code nil (reparse-symbol indented_block_body) [1521 1592])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1613 1655])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1686 1742])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1766 1806])
+                            ("self" code nil (reparse-symbol indented_block_body) [1851 1885])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1928 1999])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2036 2054])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2076 2438])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2448 2498]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1287 1291])
+                            ("log_pis" variable nil (reparse-symbol function_parameters) [1293 1300])
+                            ("mus" variable nil (reparse-symbol function_parameters) [1302 1305])
+                            ("log_sigmas" variable nil (reparse-symbol function_parameters) [1307 1317])
+                            ("corrs" variable nil (reparse-symbol function_parameters) [1319 1324]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1274 2569])
+                    ("from_log_pis_mus_cov_mats" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [2621 2624])
+                            ("log_pis" variable nil (reparse-symbol function_parameters) [2626 2633])
+                            ("mus" variable nil (reparse-symbol function_parameters) [2635 2638])
+                            ("cov_mats" variable nil (reparse-symbol function_parameters) [2640 2648]))                          )
+                        (reparse-symbol indented_block_body) [2574 3050])
+                    ("rsample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3067 3071])
+                            ("sample_shape" variable nil (reparse-symbol function_parameters) [3073 3085]))                          
+                        :documentation "
+        Generates a sample_shape shaped reparameterized sample or sample_shape
+        shaped batch of reparameterized samples if the distribution parameters
+        are batched.
+
+        :param sample_shape: Shape of the samples
+        :return: Samples from the GMM.
+        ")
+                        (reparse-symbol indented_block_body) [3055 4036])
+                    ("log_prob" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4054 4058])
+                            ("value" variable nil (reparse-symbol function_parameters) [4060 4065]))                          )
+                        (reparse-symbol indented_block_body) [4041 5374])
+                    ("get_for_node_at_time" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5404 5408])
+                            ("n" variable nil (reparse-symbol function_parameters) [5410 5411])
+                            ("t" variable nil (reparse-symbol function_parameters) [5413 5414]))                          )
+                        (reparse-symbol indented_block_body) [5379 5598])
+                    ("mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5612 5616]))                          
+                        :documentation "
+        Calculates the mode of the GMM by calculating probabilities of a 2D mesh grid
+
+        :param required_accuracy: Accuracy of the meshgrid
+        :return: Mode of the GMM
+        ")
+                        (reparse-symbol indented_block_body) [5603 7082])
+                    ("reshape_to_components" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7113 7117])
+                            ("tensor" variable nil (reparse-symbol function_parameters) [7119 7125]))                          )
+                        (reparse-symbol indented_block_body) [7087 7288])
+                    ("get_covariance_matrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7319 7323]))                          )
+                        (reparse-symbol indented_block_body) [7293 7589]))                  
+                :type "class")
+                nil [179 7589]))          
+      :file "gmm2d.py"
+      :pointmax 7589
+      :fsize 7588
+      :lastmodtime '(24325 577 532861 463000)
+      :unmatched-syntax nil))
+  :file "!nobackup!users!xiaoli!rlfps!examples!postdoc!traj_prediction!models!trajectronpp!base!trajectron!model!components!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

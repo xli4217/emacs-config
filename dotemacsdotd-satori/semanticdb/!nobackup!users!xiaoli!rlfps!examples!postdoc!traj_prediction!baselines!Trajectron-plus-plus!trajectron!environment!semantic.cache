@@ -1,0 +1,388 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("random" include nil nil [1 14])
+            ("numpy" include nil nil [15 33])
+            ("pandas" include nil nil [34 53])
+            ("environment" include nil nil [54 100])
+            ("ncls" include nil nil [101 122])
+            ("Node" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [351 372])
+                            ("self" variable nil (reparse-symbol indented_block_body) [381 398])
+                            ("self" variable nil (reparse-symbol indented_block_body) [407 427])
+                            ("self" variable nil (reparse-symbol indented_block_body) [436 454])
+                            ("self" variable nil (reparse-symbol indented_block_body) [463 483])
+                            ("self" variable nil (reparse-symbol indented_block_body) [492 528])
+                            ("self" variable nil (reparse-symbol indented_block_body) [537 569])
+                            ("if" code nil (reparse-symbol indented_block_body) [579 866])
+                            ("self" variable nil (reparse-symbol indented_block_body) [875 899])
+                            ("self" variable nil (reparse-symbol indented_block_body) [908 934])
+                            ("self" variable nil (reparse-symbol indented_block_body) [943 973])
+                            ("self" variable nil (reparse-symbol indented_block_body) [982 1030])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1040 1085]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [162 166])
+                            ("node_type" variable nil (reparse-symbol function_parameters) [168 177])
+                            ("node_id" variable nil (reparse-symbol function_parameters) [179 186])
+                            ("data" variable nil (reparse-symbol function_parameters) [188 192])
+                            ("length" variable nil (reparse-symbol function_parameters) [194 200])
+                            ("width" variable nil (reparse-symbol function_parameters) [207 212])
+                            ("height" variable nil (reparse-symbol function_parameters) [219 225])
+                            ("first_timestep" variable nil (reparse-symbol function_parameters) [232 246])
+                            ("is_robot" variable nil (reparse-symbol function_parameters) [267 275])
+                            ("description" variable nil (reparse-symbol function_parameters) [283 294])
+                            ("frequency_multiplier" variable nil (reparse-symbol function_parameters) [299 319])
+                            ("non_aug_node" variable nil (reparse-symbol function_parameters) [323 335]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [149 1086])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1102 1106])
+                            ("other" variable nil (reparse-symbol function_parameters) [1108 1113]))                          )
+                        (reparse-symbol indented_block_body) [1091 1307])
+                    ("__ne__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1323 1327])
+                            ("other" variable nil (reparse-symbol function_parameters) [1329 1334]))                          )
+                        (reparse-symbol indented_block_body) [1312 1375])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1393 1397]))                          )
+                        (reparse-symbol indented_block_body) [1380 1442])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1460 1464]))                          )
+                        (reparse-symbol indented_block_body) [1447 1518])
+                    ("overwrite_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1542 1546])
+                            ("data" variable nil (reparse-symbol function_parameters) [1548 1552])
+                            ("forward_in_time_on_next_overwrite" variable nil (reparse-symbol function_parameters) [1554 1587]))                          
+                        :documentation "
+        This function hard overwrites the data matrix. When using it you have to make sure that the columns
+        in the new data matrix correspond to the old structure. As well as setting first_timestep.
+
+        :param data: New data matrix
+        :param forward_in_time_on_next_overwrite: On the !!NEXT!! call of overwrite_data first_timestep will be increased.
+        :return:  None
+        ")
+                        (reparse-symbol indented_block_body) [1523 2245]))                  
+                :type "class")
+                nil [125 4750])
+            ("MultiNode" type
+               (:superclasses ("Node")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [4855 4936])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4945 4973])
+                            ("for" code nil (reparse-symbol indented_block_body) [4982 5048])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5057 5131])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5140 5213])
+                            ("starts" variable nil (reparse-symbol indented_block_body) [5223 5307])
+                            ("ends" variable nil (reparse-symbol indented_block_body) [5316 5397])
+                            ("ids" variable nil (reparse-symbol indented_block_body) [5406 5459])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5468 5512]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4792 4796])
+                            ("node_type" variable nil (reparse-symbol function_parameters) [4798 4807])
+                            ("node_id" variable nil (reparse-symbol function_parameters) [4809 4816])
+                            ("nodes_list" variable nil (reparse-symbol function_parameters) [4818 4828])
+                            ("is_robot" variable nil (reparse-symbol function_parameters) [4830 4838]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4779 5513]))                  
+                :type "class")
+                nil [4752 9809]))          
+      :file "node.py"
+      :pointmax 9809
+      :fsize 9808
+      :lastmodtime '(24273 35722 746053 0)
+      :unmatched-syntax '((INDENT_BLOCK 9627 . 9809) (NEWLINE 9626 . 9627) (COLON 9625 . 9626) (MINUS 9619 . 9620) (GT 9620 . 9621) (INDENT_BLOCK 9203 . 9580) (NEWLINE 9202 . 9203) (COLON 9201 . 9202) (MINUS 9195 . 9196) (GT 9196 . 9197) (INDENT_BLOCK 8671 . 9158) (NEWLINE 8512 . 8513) (COLON 8511 . 8512) (MINUS 8498 . 8499) (GT 8499 . 8500) (INDENT_BLOCK 7792 . 8442) (NEWLINE 7791 . 7792) (COLON 7790 . 7791) (MINUS 7777 . 7778) (GT 7778 . 7779) (INDENT_BLOCK 6743 . 7725) (NEWLINE 6742 . 6743) (COLON 6741 . 6742) (MINUS 6710 . 6711) (GT 6711 . 6712) (INDENT_BLOCK 6232 . 6665) (NEWLINE 6231 . 6232) (COLON 6230 . 6231) (MINUS 6223 . 6224) (GT 6224 . 6225) (INDENT_BLOCK 5605 . 6176) (NEWLINE 5604 . 5605) (COLON 5603 . 5604) (AT 5518 . 5519) (MINUS 5596 . 5597) (GT 5597 . 5598) (INDENT_BLOCK 4495 . 4750) (NEWLINE 4494 . 4495) (COLON 4493 . 4494) (MINUS 4487 . 4488) (GT 4488 . 4489) (INDENT_BLOCK 4289 . 4444) (NEWLINE 4288 . 4289) (COLON 4287 . 4288) (MINUS 4281 . 4282) (GT 4282 . 4283) (INDENT_BLOCK 3390 . 4242) (NEWLINE 3389 . 3390) (COLON 3388 . 3389) (MINUS 3375 . 3376) (GT 3376 . 3377) (INDENT_BLOCK 3059 . 3323) (NEWLINE 3058 . 3059) (COLON 3057 . 3058) (MINUS 3051 . 3052) (GT 3052 . 3053) (INDENT_BLOCK 2317 . 3014) (NEWLINE 2316 . 2317) (COLON 2315 . 2316) (DEF 2250 . 2253) (MINUS 2290 . 2291) (GT 2291 . 2292)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("json" include nil nil [16 37])
+            ("numpy" include nil nil [38 56])
+            ("itertools" include nil nil [57 86])
+            ("NodeTypeEnum" include nil nil [103 122])
+            ("Environment" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [270 290])
+                            ("self" variable nil (reparse-symbol indented_block_body) [299 335])
+                            ("self" variable nil (reparse-symbol indented_block_body) [344 384])
+                            ("self" variable nil (reparse-symbol indented_block_body) [393 437])
+                            ("self" variable nil (reparse-symbol indented_block_body) [446 474])
+                            ("self" variable nil (reparse-symbol indented_block_body) [484 522])
+                            ("self" variable nil (reparse-symbol indented_block_body) [531 567])
+                            ("self" variable nil (reparse-symbol indented_block_body) [577 610]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [169 173])
+                            ("node_type_list" variable nil (reparse-symbol function_parameters) [175 189])
+                            ("standardization" variable nil (reparse-symbol function_parameters) [191 206])
+                            ("scenes" variable nil (reparse-symbol function_parameters) [208 214])
+                            ("attention_radius" variable nil (reparse-symbol function_parameters) [221 237])
+                            ("robot_type" variable nil (reparse-symbol function_parameters) [244 254]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [156 611])
+                    ("get_edge_types" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [635 639]))                          )
+                        (reparse-symbol indented_block_body) [616 696])
+                    ("get_standardize_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [728 732])
+                            ("state" variable nil (reparse-symbol function_parameters) [734 739])
+                            ("node_type" variable nil (reparse-symbol function_parameters) [741 750]))                          )
+                        (reparse-symbol indented_block_body) [701 1510])
+                    ("standardize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1531 1535])
+                            ("array" variable nil (reparse-symbol function_parameters) [1537 1542])
+                            ("state" variable nil (reparse-symbol function_parameters) [1544 1549])
+                            ("node_type" variable nil (reparse-symbol function_parameters) [1551 1560])
+                            ("mean" variable nil (reparse-symbol function_parameters) [1562 1566])
+                            ("std" variable nil (reparse-symbol function_parameters) [1573 1576]))                          )
+                        (reparse-symbol indented_block_body) [1515 2005])
+                    ("unstandardize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2028 2032])
+                            ("array" variable nil (reparse-symbol function_parameters) [2034 2039])
+                            ("state" variable nil (reparse-symbol function_parameters) [2041 2046])
+                            ("node_type" variable nil (reparse-symbol function_parameters) [2048 2057])
+                            ("mean" variable nil (reparse-symbol function_parameters) [2059 2063])
+                            ("std" variable nil (reparse-symbol function_parameters) [2070 2073]))                          )
+                        (reparse-symbol indented_block_body) [2010 2455])
+                    ("scenes_resample_prop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2499 2503]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2460 2798]))                  
+                :type "class")
+                nil [125 2798]))          
+      :file "environment.py"
+      :pointmax 2799
+      :fsize 2798
+      :lastmodtime '(24273 37069 526918 810000)
+      :unmatched-syntax '((FROM 87 . 91) (PERIOD 92 . 93) (FROM 87 . 91) (PERIOD 92 . 93)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("numpy" include nil nil [14 32])
+            ("model.dataset.homography_warper" include nil nil [33 116])
+            ("Map" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [206 222])
+                            ("self" variable nil (reparse-symbol indented_block_body) [231 259])
+                            ("self" variable nil (reparse-symbol indented_block_body) [268 298]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [155 159])
+                            ("data" variable nil (reparse-symbol function_parameters) [161 165])
+                            ("homography" variable nil (reparse-symbol function_parameters) [167 177])
+                            ("description" variable nil (reparse-symbol function_parameters) [179 190]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [142 299])
+                    ("as_image" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [317 321]))                          )
+                        (reparse-symbol indented_block_body) [304 358])
+                    ("get_cropped_maps" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [384 388])
+                            ("world_pts" variable nil (reparse-symbol function_parameters) [390 399])
+                            ("patch_size" variable nil (reparse-symbol function_parameters) [401 411])
+                            ("rotation" variable nil (reparse-symbol function_parameters) [413 421])
+                            ("device" variable nil (reparse-symbol function_parameters) [428 434]))                          )
+                        (reparse-symbol indented_block_body) [363 477])
+                    ("to_map_points" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [500 504])
+                            ("scene_pts" variable nil (reparse-symbol function_parameters) [506 515]))                          )
+                        (reparse-symbol indented_block_body) [482 552]))                  
+                :type "class")
+                nil [119 552])
+            ("GeometricMap" type
+               (:documentation "
+    A Geometric Map is a int tensor of shape [layers, x, y]. The homography must transform a point in scene
+    coordinates to the respective point in map coordinates.
+
+    :param data: Numpy array of shape [layers, x, y]
+    :param homography: Numpy array of shape [3, 3]
+    "
+                :superclasses ("Map")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1028 1105])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1115 1140])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1149 1177])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1186 1208]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [885 889])
+                            ("data" variable nil (reparse-symbol function_parameters) [891 895])
+                            ("homography" variable nil (reparse-symbol function_parameters) [897 907])
+                            ("description" variable nil (reparse-symbol function_parameters) [909 920]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [872 1209])
+                    ("torch_map" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1228 1232])
+                            ("device" variable nil (reparse-symbol function_parameters) [1234 1240]))                          )
+                        (reparse-symbol indented_block_body) [1214 1433])
+                    ("as_image" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1451 1455]))                          )
+                        (reparse-symbol indented_block_body) [1438 1683])
+                    ("get_padded_map" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1707 1711])
+                            ("padding_x" variable nil (reparse-symbol function_parameters) [1713 1722])
+                            ("padding_y" variable nil (reparse-symbol function_parameters) [1724 1733])
+                            ("device" variable nil (reparse-symbol function_parameters) [1735 1741]))                          )
+                        (reparse-symbol indented_block_body) [1688 2371])
+                    ("batch_rotate" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("map_batched" variable nil (reparse-symbol function_parameters) [2411 2422])
+                            ("centers" variable nil (reparse-symbol function_parameters) [2424 2431])
+                            ("angles" variable nil (reparse-symbol function_parameters) [2433 2439])
+                            ("out_height" variable nil (reparse-symbol function_parameters) [2441 2451])
+                            ("out_width" variable nil (reparse-symbol function_parameters) [2453 2462]))                          
+                        :documentation "
+        As the input is a map and the warp_affine works on an image coordinate system we would have to
+        flip the y axis updown, negate the angles, and flip it back after transformation.
+        This, however, is the same as not flipping at and not negating the radian.
+
+        :param map_batched:
+        :param centers:
+        :param angles:
+        :param out_height:
+        :param out_width:
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [2376 3195])
+                    ("get_cropped_maps_from_scene_map_batch" function
+                       (:documentation "
+        Returns rotated patches of each map around the transformed scene points.
+        ___________________
+        |       |          |
+        |       |ps[3]     |
+        |       |          |
+        |       |          |
+        |      o|__________|
+        |       |    ps[2] |
+        |       |          |
+        |_______|__________|
+        ps = patch_size
+
+        :param maps: List of GeometricMap objects [bs]
+        :param scene_pts: Scene points: [bs, 2]
+        :param patch_size: Extracted Patch size after rotation: [-x, -y, +x, +y]
+        :param rotation: Rotations in degrees: [bs]
+        :param device: Device on which the rotated tensors should be returned.
+        :return: Rotated and cropped tensor patches.
+        "
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [3259 3262])
+                            ("maps" variable nil (reparse-symbol function_parameters) [3264 3268])
+                            ("scene_pts" variable nil (reparse-symbol function_parameters) [3270 3279])
+                            ("patch_size" variable nil (reparse-symbol function_parameters) [3281 3291])
+                            ("rotation" variable nil (reparse-symbol function_parameters) [3293 3301])
+                            ("device" variable nil (reparse-symbol function_parameters) [3308 3314]))                          
+                        :decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3200 6281])
+                    ("get_cropped_maps" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6307 6311])
+                            ("scene_pts" variable nil (reparse-symbol function_parameters) [6313 6322])
+                            ("patch_size" variable nil (reparse-symbol function_parameters) [6324 6334])
+                            ("rotation" variable nil (reparse-symbol function_parameters) [6336 6344])
+                            ("device" variable nil (reparse-symbol function_parameters) [6351 6357]))                          
+                        :documentation "
+        Returns rotated patches of the map around the transformed scene points.
+        ___________________
+        |       |          |
+        |       |ps[3]     |
+        |       |          |
+        |       |          |
+        |      o|__________|
+        |       |    ps[2] |
+        |       |          |
+        |_______|__________|
+        ps = patch_size
+
+        :param scene_pts: Scene points: [bs, 2]
+        :param patch_size: Extracted Patch size after rotation: [-lat, -long, +lat, +long]
+        :param rotation: Rotations in degrees: [bs]
+        :param device: Device on which the rotated tensors should be returned.
+        :return: Rotated and cropped tensor patches.
+        ")
+                        (reparse-symbol indented_block_body) [6286 7278])
+                    ("to_map_points" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7301 7305])
+                            ("scene_pts" variable nil (reparse-symbol function_parameters) [7307 7316]))                          )
+                        (reparse-symbol indented_block_body) [7283 7786]))                  
+                :type "class")
+                nil [554 7786])
+            ("ImageMap" type
+               (:superclasses ("Map")
+                :members 
+                  ( ("__init__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7894 7898]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7881 7934]))                  
+                :type "class")
+                nil [7788 7934]))          
+      :file "map.py"
+      :pointmax 7934
+      :fsize 7933
+      :lastmodtime '(24273 35722 745852 0)
+      :unmatched-syntax nil))
+  :file "!nobackup!users!xiaoli!rlfps!examples!postdoc!traj_prediction!baselines!Trajectron-plus-plus!trajectron!environment!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

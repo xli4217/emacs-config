@@ -1,0 +1,526 @@
+;; Object policies/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "policies/"
+  :tables
+  (list
+    (semanticdb-table "categorical_mlp_policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sandbox.rocky.tf.core.layers_powered" include nil nil [1 63])
+            ("sandbox.rocky.tf.core.layers" include nil nil [64 104])
+            ("sandbox.rocky.tf.core.network" include nil nil [105 150])
+            ("rllab.core.serializable" include nil nil [151 199])
+            ("sandbox.rocky.tf.distributions.categorical" include nil nil [200 266])
+            ("sandbox.rocky.tf.policies.base" include nil nil [267 326])
+            ("rllab.misc" include nil nil [327 353])
+            ("sandbox.rocky.tf.misc" include nil nil [354 400])
+            ("rllab.misc.overrides" include nil nil [401 443])
+            ("sandbox.rocky.tf.spaces.discrete" include nil nil [444 497])
+            ("tensorflow" include nil nil [498 521])
+            ("CategoricalMLPPolicy" type
+               (:superclasses ("StochasticPolicy" "LayersPowered" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param env_spec: A spec for the mdp.
+        :param hidden_sizes: list of sizes for the fully connected hidden layers
+        :param hidden_nonlinearity: nonlinearity used for each hidden layer
+        :param prob_network: manually specified network for this policy, other network params
+        are ignored
+        :return:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [800 1148])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [1157 1196])
+                            ("assert" code nil (reparse-symbol indented_block_body) [1206 1256])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1266 1282])
+                            ("with" code nil (reparse-symbol indented_block_body) [1291 2237]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [629 633])
+                            ("name" variable nil (reparse-symbol function_parameters) [647 651])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [665 673])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [687 699])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [722 741])
+                            ("prob_network" variable nil (reparse-symbol function_parameters) [766 778]))                          
+                        :documentation "
+        :param env_spec: A spec for the mdp.
+        :param hidden_sizes: list of sizes for the fully connected hidden layers
+        :param hidden_nonlinearity: nonlinearity used for each hidden layer
+        :param prob_network: manually specified network for this policy, other network params
+        are ignored
+        :return:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [603 2237])
+                    ("vectorized" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2271 2275]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2242 2298])
+                    ("dist_info_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2336 2340])
+                            ("obs_var" variable nil (reparse-symbol function_parameters) [2342 2349])
+                            ("state_info_vars" variable nil (reparse-symbol function_parameters) [2351 2366]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2303 2472])
+                    ("dist_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2506 2510])
+                            ("obs" variable nil (reparse-symbol function_parameters) [2512 2515])
+                            ("state_infos" variable nil (reparse-symbol function_parameters) [2517 2528]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2477 2580])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2879 2883])
+                            ("observation" variable nil (reparse-symbol function_parameters) [2885 2896]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2849 3101])
+                    ("get_actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3122 3126])
+                            ("observations" variable nil (reparse-symbol function_parameters) [3128 3140]))                          )
+                        (reparse-symbol indented_block_body) [3106 3359])
+                    ("distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3395 3399]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3364 3428]))                  
+                :type "class")
+                nil [524 3428]))          
+      :file "categorical_mlp_policy.py"
+      :pointmax 3428
+      :fsize 3427
+      :lastmodtime '(22806 3505 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sandbox.rocky.tf.core.parameterized" include nil nil [4 65])
+            ("Policy" type
+               (:superclasses ("Parameterized")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Parameterized" code nil (reparse-symbol indented_block_body) [139 167])
+                            ("self" variable nil (reparse-symbol indented_block_body) [176 201]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [114 118])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [120 128]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [101 202])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [267 271])
+                            ("observation" variable nil (reparse-symbol function_parameters) [273 284]))                          )
+                        (reparse-symbol indented_block_body) [252 321])
+                    ("get_actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [342 346])
+                            ("observations" variable nil (reparse-symbol function_parameters) [348 360]))                          )
+                        (reparse-symbol indented_block_body) [326 397])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [412 416])
+                            ("dones" variable nil (reparse-symbol function_parameters) [418 423]))                          )
+                        (reparse-symbol indented_block_body) [402 444])
+                    ("vectorized" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [478 482]))                          
+                        :documentation "
+        Indicates whether the policy is vectorized. If True, it should implement get_actions(), and support resetting
+        with multiple simultaneous states.
+        ")
+                        (reparse-symbol indented_block_body) [449 691])
+                    ("observation_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [732 736]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [696 787])
+                    ("action_space" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [823 827]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [792 873])
+                    ("env_spec" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [905 909]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [878 942])
+                    ("recurrent" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [975 979]))                          
+                        :documentation "
+        Indicates whether the policy is recurrent.
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [947 1095])
+                    ("log_diagnostics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1120 1124])
+                            ("paths" variable nil (reparse-symbol function_parameters) [1126 1131]))                          
+                        :documentation "
+        Log extra information per iteration based on the collected paths
+        ")
+                        (reparse-symbol indented_block_body) [1100 1244])
+                    ("state_info_keys" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1283 1287]))                          
+                        :documentation "
+        Return keys for the information related to the policy's state when taking an action.
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [1249 1477])
+                    ("state_info_specs" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1517 1521]))                          
+                        :documentation "
+        Return keys and shapes for the information related to the policy's state when taking an action.
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [1482 1691])
+                    ("terminate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1710 1714]))                          
+                        :documentation "
+        Clean up operation
+        ")
+                        (reparse-symbol indented_block_body) [1696 1781]))                  
+                :type "class")
+                nil [68 1781])
+            ("StochasticPolicy" type
+               (:superclasses ("Policy")
+                :members 
+                  ( ("distribution" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1850 1854]))                          
+                        :documentation "
+        :rtype Distribution
+        ")
+                        (reparse-symbol indented_block_body) [1819 1943])
+                    ("dist_info_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1966 1970])
+                            ("obs_var" variable nil (reparse-symbol function_parameters) [1972 1979])
+                            ("state_info_vars" variable nil (reparse-symbol function_parameters) [1981 1996]))                          
+                        :documentation "
+        Return the symbolic distribution information about the actions.
+        :param obs_var: symbolic variable for observations
+        :param state_info_vars: a dictionary whose values should contain information about the state of the policy at
+        the time it received the observation
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [1948 2368])
+                    ("dist_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2387 2391])
+                            ("obs" variable nil (reparse-symbol function_parameters) [2393 2396])
+                            ("state_infos" variable nil (reparse-symbol function_parameters) [2398 2409]))                          
+                        :documentation "
+        Return the distribution information about the actions.
+        :param obs_var: observation values
+        :param state_info_vars: a dictionary whose values should contain information about the state of the policy at
+        the time it received the observation
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [2373 2756]))                  
+                :type "class")
+                nil [1783 2756]))          
+      :file "base.py"
+      :pointmax 2756
+      :fsize 2755
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "categorical_gru_policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("sandbox.rocky.tf.core.layers" include nil nil [20 60])
+            ("tensorflow" include nil nil [61 84])
+            ("sandbox.rocky.tf.core.layers_powered" include nil nil [85 147])
+            ("sandbox.rocky.tf.core.network" include nil nil [148 205])
+            ("sandbox.rocky.tf.distributions.recurrent_categorical" include nil nil [206 291])
+            ("sandbox.rocky.tf.misc" include nil nil [292 338])
+            ("sandbox.rocky.tf.spaces.discrete" include nil nil [339 392])
+            ("sandbox.rocky.tf.policies.base" include nil nil [393 452])
+            ("rllab.core.serializable" include nil nil [454 502])
+            ("rllab.misc" include nil nil [503 533])
+            ("rllab.misc.overrides" include nil nil [534 576])
+            ("CategoricalGRUPolicy" type
+               (:superclasses ("StochasticPolicy" "LayersPowered" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param env_spec: A spec for the env.
+        :param hidden_dim: dimension of hidden layer
+        :param hidden_nonlinearity: nonlinearity used for each hidden layer
+        :return:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [924 1130])
+                            ("with" code nil (reparse-symbol indented_block_body) [1139 4352]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [684 688])
+                            ("name" variable nil (reparse-symbol function_parameters) [702 706])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [720 728])
+                            ("hidden_dim" variable nil (reparse-symbol function_parameters) [742 752])
+                            ("feature_network" variable nil (reparse-symbol function_parameters) [769 784])
+                            ("state_include_action" variable nil (reparse-symbol function_parameters) [803 823])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [842 861])
+                            ("gru_layer_cls" variable nil (reparse-symbol function_parameters) [883 896]))                          
+                        :documentation "
+        :param env_spec: A spec for the env.
+        :param hidden_dim: dimension of hidden layer
+        :param hidden_nonlinearity: nonlinearity used for each hidden layer
+        :return:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [658 4352])
+                    ("dist_info_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4390 4394])
+                            ("obs_var" variable nil (reparse-symbol function_parameters) [4396 4403])
+                            ("state_info_vars" variable nil (reparse-symbol function_parameters) [4405 4420]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4357 5445])
+                    ("vectorized" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5479 5483]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [5450 5506])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5521 5525])
+                            ("dones" variable nil (reparse-symbol function_parameters) [5527 5532]))                          )
+                        (reparse-symbol indented_block_body) [5511 5989])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6288 6292])
+                            ("observation" variable nil (reparse-symbol function_parameters) [6294 6305]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [6258 6440])
+                    ("get_actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6476 6480])
+                            ("observations" variable nil (reparse-symbol function_parameters) [6482 6494]))                          
+                        :decorators 
+                          ( ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [6445 7298])
+                    ("recurrent" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7346 7350]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil)
+                            ("overrides" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7303 7373])
+                    ("distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7409 7413]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7378 7441])
+                    ("state_info_specs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7481 7485]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7446 7650]))                  
+                :type "class")
+                nil [579 7650]))          
+      :file "categorical_gru_policy.py"
+      :pointmax 7650
+      :fsize 7649
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "gaussian_mlp_policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("sandbox.rocky.tf.core.layers_powered" include nil nil [21 83])
+            ("sandbox.rocky.tf.core.layers" include nil nil [84 124])
+            ("sandbox.rocky.tf.core.network" include nil nil [125 170])
+            ("sandbox.rocky.tf.spaces.box" include nil nil [171 214])
+            ("rllab.core.serializable" include nil nil [216 264])
+            ("sandbox.rocky.tf.policies.base" include nil nil [265 324])
+            ("sandbox.rocky.tf.distributions.diagonal_gaussian" include nil nil [325 402])
+            ("rllab.misc.overrides" include nil nil [403 445])
+            ("rllab.misc" include nil nil [446 475])
+            ("sandbox.rocky.tf.misc" include nil nil [476 522])
+            ("tensorflow" include nil nil [523 546])
+            ("GaussianMLPPolicy" type
+               (:superclasses ("StochasticPolicy" "LayersPowered" "Serializable")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param env_spec:
+        :param hidden_sizes: list of sizes for the fully-connected hidden layers
+        :param learn_std: Is std trainable
+        :param init_std: Initial std
+        :param adaptive_std:
+        :param std_share_network:
+        :param std_hidden_sizes: list of sizes for the fully-connected layers for std
+        :param min_std: whether to make sure that the std is at least some threshold value, to avoid numerical issues
+        :param std_hidden_nonlinearity:
+        :param hidden_nonlinearity: nonlinearity used for each hidden layer
+        :param output_nonlinearity: nonlinearity for the output layer
+        :param mean_network: custom network for the output mean
+        :param std_network: custom network for the output log std
+        :param std_parametrization: how the std should be parametrized. There are a few options:
+            - exp: the logarithm of the std will be stored, and applied a exponential transformation
+            - softplus: the std will be computed as log(1+exp(x))
+        :return:
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1164 2229])
+                            ("Serializable" code nil (reparse-symbol indented_block_body) [2238 2277])
+                            ("assert" code nil (reparse-symbol indented_block_body) [2286 2331])
+                            ("with" code nil (reparse-symbol indented_block_body) [2341 5643]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [651 655])
+                            ("name" variable nil (reparse-symbol function_parameters) [669 673])
+                            ("env_spec" variable nil (reparse-symbol function_parameters) [687 695])
+                            ("hidden_sizes" variable nil (reparse-symbol function_parameters) [709 721])
+                            ("learn_std" variable nil (reparse-symbol function_parameters) [744 753])
+                            ("init_std" variable nil (reparse-symbol function_parameters) [772 780])
+                            ("adaptive_std" variable nil (reparse-symbol function_parameters) [798 810])
+                            ("std_share_network" variable nil (reparse-symbol function_parameters) [830 847])
+                            ("std_hidden_sizes" variable nil (reparse-symbol function_parameters) [867 883])
+                            ("min_std" variable nil (reparse-symbol function_parameters) [906 913])
+                            ("std_hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [932 955])
+                            ("hidden_nonlinearity" variable nil (reparse-symbol function_parameters) [980 999])
+                            ("output_nonlinearity" variable nil (reparse-symbol function_parameters) [1024 1043])
+                            ("mean_network" variable nil (reparse-symbol function_parameters) [1062 1074])
+                            ("std_network" variable nil (reparse-symbol function_parameters) [1093 1104])
+                            ("std_parametrization" variable nil (reparse-symbol function_parameters) [1123 1142]))                          
+                        :documentation "
+        :param env_spec:
+        :param hidden_sizes: list of sizes for the fully-connected hidden layers
+        :param learn_std: Is std trainable
+        :param init_std: Initial std
+        :param adaptive_std:
+        :param std_share_network:
+        :param std_hidden_sizes: list of sizes for the fully-connected layers for std
+        :param min_std: whether to make sure that the std is at least some threshold value, to avoid numerical issues
+        :param std_hidden_nonlinearity:
+        :param hidden_nonlinearity: nonlinearity used for each hidden layer
+        :param output_nonlinearity: nonlinearity for the output layer
+        :param mean_network: custom network for the output mean
+        :param std_network: custom network for the output log std
+        :param std_parametrization: how the std should be parametrized. There are a few options:
+            - exp: the logarithm of the std will be stored, and applied a exponential transformation
+            - softplus: the std will be computed as log(1+exp(x))
+        :return:
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [625 5643])
+                    ("vectorized" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5677 5681]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [5648 5704])
+                    ("dist_info_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5727 5731])
+                            ("obs_var" variable nil (reparse-symbol function_parameters) [5733 5740])
+                            ("state_info_vars" variable nil (reparse-symbol function_parameters) [5742 5757]))                          )
+                        (reparse-symbol indented_block_body) [5709 6289])
+                    ("get_actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6643 6647])
+                            ("observations" variable nil (reparse-symbol function_parameters) [6649 6661]))                          )
+                        (reparse-symbol indented_block_body) [6627 6936])
+                    ("get_reparam_action_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6968 6972])
+                            ("obs_var" variable nil (reparse-symbol function_parameters) [6974 6981])
+                            ("action_var" variable nil (reparse-symbol function_parameters) [6983 6993])
+                            ("old_dist_info_vars" variable nil (reparse-symbol function_parameters) [6995 7013]))                          
+                        :documentation "
+        Given observations, old actions, and distribution of old actions, return a symbolically reparameterized
+        representation of the actions in terms of the policy parameters
+        :param obs_var:
+        :param action_var:
+        :param old_dist_info_vars:
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [6941 7785])
+                    ("log_diagnostics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7810 7814])
+                            ("paths" variable nil (reparse-symbol function_parameters) [7816 7821]))                          )
+                        (reparse-symbol indented_block_body) [7790 7982])
+                    ("distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8018 8022]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7987 8051]))                  
+                :type "class")
+                nil [549 8051]))          
+      :file "gaussian_mlp_policy.py"
+      :pointmax 8051
+      :fsize 8050
+      :lastmodtime '(22792 55553 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!sandbox!rocky!tf!policies!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

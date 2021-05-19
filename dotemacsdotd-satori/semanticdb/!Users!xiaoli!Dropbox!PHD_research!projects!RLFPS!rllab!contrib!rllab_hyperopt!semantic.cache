@@ -1,0 +1,157 @@
+;; Object rllab_hyperopt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "rllab_hyperopt/"
+  :tables
+  (list
+    (semanticdb-table "core.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("sys" include nil nil [11 21])
+            ("sys" code nil nil [22 42])
+            ("threading" include nil nil [43 59])
+            ("time" include nil nil [60 71])
+            ("warnings" include nil nil [72 87])
+            ("multiprocessing" include nil nil [88 110])
+            ("importlib" include nil nil [111 127])
+            ("rllab" include nil nil [129 153])
+            ("rllab.misc.instrument" include nil nil [154 207])
+            ("polling" include nil nil [209 223])
+            ("hyperopt" include nil nil [224 278])
+            ("hyperopt.mongoexp" include nil nil [279 320])
+            ("S3SyncThread" type
+               (:superclasses ("threading.Thread")
+                :members 
+                  ( ("'''
+    Thread to periodically sync results from S3 in the background.
+    
+    Uses same dirs as ./scripts/sync_s3.py.
+    '''" code nil (reparse-symbol indented_block_body) [364 491])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [542 578])
+                            ("self" variable nil (reparse-symbol indented_block_body) [587 621])
+                            ("self" variable nil (reparse-symbol indented_block_body) [630 666]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [509 513])
+                            ("sync_interval" variable nil (reparse-symbol function_parameters) [515 528]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [496 667])
+                    ("stop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [681 685]))                          )
+                        (reparse-symbol indented_block_body) [672 719])
+                    ("stopped" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [736 740]))                          )
+                        (reparse-symbol indented_block_body) [724 783])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [800 804]))                          )
+                        (reparse-symbol indented_block_body) [792 1432]))                  
+                :type "class")
+                nil [322 1432])
+            ("_launch_workers" function (:arguments 
+              ( ("exp_key" variable nil (reparse-symbol function_parameters) [1453 1460])
+                ("n_workers" variable nil (reparse-symbol function_parameters) [1462 1471])
+                ("host" variable nil (reparse-symbol function_parameters) [1473 1477])
+                ("port" variable nil (reparse-symbol function_parameters) [1479 1483])
+                ("result_db_name" variable nil (reparse-symbol function_parameters) [1485 1499]))              ) nil [1433 1730])
+            ("_launch_worker" function (:arguments 
+              ( ("exp_key" variable nil (reparse-symbol function_parameters) [1760 1767])
+                ("worker_id" variable nil (reparse-symbol function_parameters) [1769 1778])
+                ("host" variable nil (reparse-symbol function_parameters) [1780 1784])
+                ("port" variable nil (reparse-symbol function_parameters) [1786 1790])
+                ("result_db_name" variable nil (reparse-symbol function_parameters) [1792 1806]))              ) nil [1741 2138])
+            ("_wait_result" function
+               (:documentation "
+    Poll for the sync of params.pkl (currently hardcoded) from S3, indicating that the task is done.
+    
+    :param exp_prefix: str, experiment name prefix (dir where results are expected to be stored)
+    :param exp_name: str, experiment name. Name of dir below exp_prefix where result files of individual run are
+        expected to be stored
+    :param timeout: int, polling timeout in seconds
+    :return bool. False if the polling times out. True if successful.
+    "
+                :arguments 
+                  ( ("exp_prefix" variable nil (reparse-symbol function_parameters) [2160 2170])
+                    ("exp_name" variable nil (reparse-symbol function_parameters) [2172 2180])
+                    ("timeout" variable nil (reparse-symbol function_parameters) [2182 2189]))                  )
+                nil [2143 3092])
+            ("_launch_ec2" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [3109 3113])
+                ("exp_prefix" variable nil (reparse-symbol function_parameters) [3115 3125])
+                ("exp_name" variable nil (reparse-symbol function_parameters) [3127 3135])
+                ("params" variable nil (reparse-symbol function_parameters) [3137 3143])
+                ("run_experiment_kwargs" variable nil (reparse-symbol function_parameters) [3145 3166]))              ) nil [3093 3567])
+            ("_get_stubs" function (:arguments 
+              ( ("params" variable nil (reparse-symbol function_parameters) [3583 3589]))              ) nil [3568 4008])
+            ("task_id" variable nil nil [4013 4024])
+            ("objective_fun" function (:arguments 
+              ( ("params" variable nil (reparse-symbol function_parameters) [4043 4049]))              ) nil [4025 5123])
+            ("launch_hyperopt_search" function
+               (:documentation "
+    Launch a hyperopt search using EC2.
+    
+    This uses the hyperopt parallel processing functionality based on MongoDB. The MongoDB server at the specified host
+    and port is assumed to be already running. Downloading and running MongoDB is pretty straightforward, see
+    https://github.com/hyperopt/hyperopt/wiki/Parallelizing-Evaluations-During-Search-via-MongoDB for instructions.
+    
+    The parameter space to be searched over is specified in param_space. See https://github.com/hyperopt/hyperopt/wiki/FMin,
+    section \"Defining a search space\" for further info. Also see the (very basic) example in contrib.rllab_hyperopt.example.main.py.
+    
+    NOTE: While the argument n_hyperopt_workers specifies the number of (local) parallel hyperopt workers to start, an equal
+    number of EC2 instances will be started in parallel!
+    NOTE2: Rllab currently terminates / starts a new EC2 instance for every task. This means what you'll pay amounts to
+    hyperopt_max_evals * instance_hourly_rate. So you might want to be conservative with hyperopt_max_evals.
+        
+    :param task_method: the stubbed method call that runs the actual task. Should take a single dict as argument, with
+        the params to evaluate. See e.g. contrib.rllab_hyperopt.example.task.py
+    :param eval_method: the stubbed method call that reads in results returned from S3 and produces a score. Should take
+        the exp_prefix and exp_name as arguments (this is where S3 results will be synced to). See e.g.
+        contrib.rllab_hyperopt.example.score.py
+    :param param_space: dict specifying the param space to search. See https://github.com/hyperopt/hyperopt/wiki/FMin,
+        section \"Defining a search space\" for further info
+    :param hyperopt_experiment_key: str, the key hyperopt will use to store results in the DB
+    :param hyperopt_db_host: str, optional (default \"localhost\"). The host where mongodb runs
+    :param hyperopt_db_port: int, optional (default 1234), the port where mongodb is listening for connections
+    :param hyperopt_db_name: str, optional (default \"rllab\"), the DB name where hyperopt will store results
+    :param n_hyperopt_workers: int, optional (default 1). The nr of parallel workers to start. NOTE: an equal number of
+        EC2 instances will be started in parallel.
+    :param hyperopt_max_evals: int, optional (defailt 100). Number of parameterset evaluations hyperopt should try.
+        NOTE: Rllab currently terminates / starts a new EC2 instance for every task. This means what you'll pay amounts to
+        hyperopt_max_evals * instance_hourly_rate. So you might want to be conservative with hyperopt_max_evals.
+    :param result_timeout: int, optional (default 1200). Nr of seconds to wait for results from S3 for a given task. If
+        results are not in within this time frame, <max_retries> new attempts will be made. A new attempt entails launching
+        the task again on a new EC2 instance.
+    :param max_retries: int, optional (default 0). Number of times to retry launching a task when results don't come in from S3
+    :param run_experiment_kwargs: dict, optional (default None). Further kwargs to pass to run_experiment_lite. Note that
+        specified values for exp_prefix, exp_name, variant, and confirm_remote will be ignored.
+    :return the best result as found by hyperopt.fmin
+    "
+                :arguments 
+                  ( ("task_method" variable nil (reparse-symbol function_parameters) [5161 5172])
+                    ("eval_method" variable nil (reparse-symbol function_parameters) [5182 5193])
+                    ("param_space" variable nil (reparse-symbol function_parameters) [5203 5214])
+                    ("hyperopt_experiment_key" variable nil (reparse-symbol function_parameters) [5224 5247])
+                    ("hyperopt_db_host" variable nil (reparse-symbol function_parameters) [5257 5273])
+                    ("hyperopt_db_port" variable nil (reparse-symbol function_parameters) [5295 5311])
+                    ("hyperopt_db_name" variable nil (reparse-symbol function_parameters) [5326 5342])
+                    ("n_hyperopt_workers" variable nil (reparse-symbol function_parameters) [5360 5378])
+                    ("hyperopt_max_evals" variable nil (reparse-symbol function_parameters) [5390 5408])
+                    ("result_timeout" variable nil (reparse-symbol function_parameters) [5422 5436])
+                    ("max_retries" variable nil (reparse-symbol function_parameters) [5451 5462])
+                    ("run_experiment_kwargs" variable nil (reparse-symbol function_parameters) [5474 5495]))                  )
+                nil [5125 10044]))          
+      :file "core.py"
+      :pointmax 10044
+      :fsize 10043
+      :lastmodtime '(22778 11703 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!contrib!rllab_hyperopt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

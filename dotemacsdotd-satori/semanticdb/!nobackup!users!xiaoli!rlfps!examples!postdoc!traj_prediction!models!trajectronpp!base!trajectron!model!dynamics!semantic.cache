@@ -1,0 +1,222 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.model.dynamics" include nil nil [14 118])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.model.components" include nil nil [218 322])
+            ("SingleIntegrator" type
+               (:superclasses ("Dynamic")
+                :members 
+                  ( ("init_constants" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [381 385]))                          )
+                        (reparse-symbol indented_block_body) [362 593])
+                    ("integrate_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [620 624])
+                            ("v" variable nil (reparse-symbol function_parameters) [626 627])
+                            ("x" variable nil (reparse-symbol function_parameters) [629 630]))                          
+                        :documentation "
+        Integrates deterministic samples of velocity.
+
+        :param v: Velocity samples
+        :param x: Not used for SI.
+        :return: Position samples
+        ")
+                        (reparse-symbol indented_block_body) [598 933])
+                    ("integrate_distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [965 969])
+                            ("v_dist" variable nil (reparse-symbol function_parameters) [971 977])
+                            ("x" variable nil (reparse-symbol function_parameters) [979 980]))                          )
+                        (reparse-symbol indented_block_body) [938 2974]))                  
+                :type "class")
+                nil [325 2974]))          
+      :file "single_integrator.py"
+      :pointmax 2974
+      :fsize 2973
+      :lastmodtime '(24325 625 87833 951000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("torch.nn" include nil nil [14 35])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.model.dynamics" include nil nil [36 140])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.utils" include nil nil [141 239])
+            ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.model.components" include nil nil [240 344])
+            ("Unicycle" type
+               (:superclasses ("Dynamic")
+                :members 
+                  ( ("init_constants" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [395 399]))                          )
+                        (reparse-symbol indented_block_body) [376 615])
+                    ("create_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [637 641])
+                            ("xz_size" variable nil (reparse-symbol function_parameters) [643 650]))                          )
+                        (reparse-symbol indented_block_body) [620 819])
+                    ("dynamic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [836 840])
+                            ("x" variable nil (reparse-symbol function_parameters) [842 843])
+                            ("u" variable nil (reparse-symbol function_parameters) [845 846]))                          )
+                        (reparse-symbol indented_block_body) [824 2222])
+                    ("integrate_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2249 2253])
+                            ("control_samples" variable nil (reparse-symbol function_parameters) [2255 2270])
+                            ("x" variable nil (reparse-symbol function_parameters) [2272 2273]))                          )
+                        (reparse-symbol indented_block_body) [2227 3106])
+                    ("compute_control_jacobian" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3140 3144])
+                            ("sample_batch_dim" variable nil (reparse-symbol function_parameters) [3146 3162])
+                            ("components" variable nil (reparse-symbol function_parameters) [3164 3174])
+                            ("x" variable nil (reparse-symbol function_parameters) [3176 3177])
+                            ("u" variable nil (reparse-symbol function_parameters) [3179 3180]))                          )
+                        (reparse-symbol indented_block_body) [3111 5155])
+                    ("compute_jacobian" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5181 5185])
+                            ("sample_batch_dim" variable nil (reparse-symbol function_parameters) [5187 5203])
+                            ("components" variable nil (reparse-symbol function_parameters) [5205 5215])
+                            ("x" variable nil (reparse-symbol function_parameters) [5217 5218])
+                            ("u" variable nil (reparse-symbol function_parameters) [5220 5221]))                          )
+                        (reparse-symbol indented_block_body) [5160 6939])
+                    ("integrate_distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6971 6975])
+                            ("control_dist_dphi_a" variable nil (reparse-symbol function_parameters) [6977 6996])
+                            ("x" variable nil (reparse-symbol function_parameters) [6998 6999]))                          )
+                        (reparse-symbol indented_block_body) [6944 8932]))                  
+                :type "class")
+                nil [347 8932]))          
+      :file "unicycle.py"
+      :pointmax 8932
+      :fsize 8931
+      :lastmodtime '(24325 644 731548 232000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("Dynamic" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [119 131])
+                            ("self" variable nil (reparse-symbol indented_block_body) [140 160])
+                            ("self" variable nil (reparse-symbol indented_block_body) [169 197])
+                            ("self" variable nil (reparse-symbol indented_block_body) [206 236])
+                            ("self" variable nil (reparse-symbol indented_block_body) [245 283])
+                            ("self" variable nil (reparse-symbol indented_block_body) [292 318])
+                            ("self" code nil (reparse-symbol indented_block_body) [327 348])
+                            ("self" code nil (reparse-symbol indented_block_body) [357 383]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [43 47])
+                            ("dt" variable nil (reparse-symbol function_parameters) [49 51])
+                            ("dyn_limits" variable nil (reparse-symbol function_parameters) [53 63])
+                            ("device" variable nil (reparse-symbol function_parameters) [65 71])
+                            ("model_registrar" variable nil (reparse-symbol function_parameters) [73 88])
+                            ("xz_size" variable nil (reparse-symbol function_parameters) [90 97])
+                            ("node_type" variable nil (reparse-symbol function_parameters) [99 108]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [30 384])
+                    ("set_initial_condition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [415 419])
+                            ("init_con" variable nil (reparse-symbol function_parameters) [421 429]))                          )
+                        (reparse-symbol indented_block_body) [389 475])
+                    ("init_constants" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [499 503]))                          )
+                        (reparse-symbol indented_block_body) [480 519])
+                    ("create_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [541 545])
+                            ("xz_size" variable nil (reparse-symbol function_parameters) [547 554]))                          )
+                        (reparse-symbol indented_block_body) [524 570])
+                    ("integrate_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [597 601])
+                            ("s" variable nil (reparse-symbol function_parameters) [603 604])
+                            ("x" variable nil (reparse-symbol function_parameters) [606 607]))                          )
+                        (reparse-symbol indented_block_body) [575 644])
+                    ("integrate_distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [676 680])
+                            ("dist" variable nil (reparse-symbol function_parameters) [682 686])
+                            ("x" variable nil (reparse-symbol function_parameters) [688 689]))                          )
+                        (reparse-symbol indented_block_body) [649 726])
+                    ("create_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [748 752])
+                            ("xz_size" variable nil (reparse-symbol function_parameters) [754 761]))                          )
+                        (reparse-symbol indented_block_body) [731 777]))                  
+                :type "class")
+                nil [3 777]))          
+      :file "dynamic.py"
+      :pointmax 777
+      :fsize 776
+      :lastmodtime '(24317 20859 198007 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("examples.postdoc.traj_prediction.models.trajectronpp.base.trajectron.model.dynamics" include nil nil [1 105])
+            ("Linear" type
+               (:superclasses ("Dynamic")
+                :members 
+                  ( ("init_constants" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [154 158]))                          )
+                        (reparse-symbol indented_block_body) [135 174])
+                    ("integrate_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [201 205])
+                            ("v" variable nil (reparse-symbol function_parameters) [207 208])
+                            ("x" variable nil (reparse-symbol function_parameters) [210 211]))                          )
+                        (reparse-symbol indented_block_body) [179 231])
+                    ("integrate_distribution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [263 267])
+                            ("v_dist" variable nil (reparse-symbol function_parameters) [269 275])
+                            ("x" variable nil (reparse-symbol function_parameters) [277 278]))                          )
+                        (reparse-symbol indented_block_body) [236 303]))                  
+                :type "class")
+                nil [108 303]))          
+      :file "linear.py"
+      :pointmax 303
+      :fsize 302
+      :lastmodtime '(24325 658 301476 0)
+      :unmatched-syntax nil))
+  :file "!nobackup!users!xiaoli!rlfps!examples!postdoc!traj_prediction!models!trajectronpp!base!trajectron!model!dynamics!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

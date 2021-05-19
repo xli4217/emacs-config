@@ -1,0 +1,944 @@
+;; Object logging/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "logging/"
+  :tables
+  (list
+    (semanticdb-table "logger_base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rl_pipeline.logging.logger" include nil nil [1 44])
+            ("os" include nil nil [45 54])
+            ("cloudpickle" include nil nil [55 73])
+            ("LoggerBase" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [350 382])
+                            ("self" variable nil (reparse-symbol indented_block_body) [391 413])
+                            ("self" variable nil (reparse-symbol indented_block_body) [422 448])
+                            ("self" variable nil (reparse-symbol indented_block_body) [457 495])
+                            ("self" variable nil (reparse-symbol indented_block_body) [504 532])
+                            ("self" variable nil (reparse-symbol indented_block_body) [541 565])
+                            ("self" variable nil (reparse-symbol indented_block_body) [583 619])
+                            ("self" variable nil (reparse-symbol indented_block_body) [629 649])
+                            ("self" code nil (reparse-symbol indented_block_body) [658 728]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [118 122])
+                            ("csv_data_dir" variable nil (reparse-symbol function_parameters) [141 153])
+                            ("log_dir" variable nil (reparse-symbol function_parameters) [172 179])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [198 207])
+                            ("transitions_dir" variable nil (reparse-symbol function_parameters) [226 241])
+                            ("config_dir" variable nil (reparse-symbol function_parameters) [260 270])
+                            ("info_dir" variable nil (reparse-symbol function_parameters) [289 297])
+                            ("logging_params" variable nil (reparse-symbol function_parameters) [316 330]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [105 729])
+                    ("csv_record_tabular" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [757 761])
+                            ("name" variable nil (reparse-symbol function_parameters) [763 767])
+                            ("value" variable nil (reparse-symbol function_parameters) [769 774]))                          )
+                        (reparse-symbol indented_block_body) [734 825])
+                    ("csv_dump_tabular" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [851 855]))                          )
+                        (reparse-symbol indented_block_body) [830 910])
+                    ("save_content" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [932 936])
+                            ("content" variable nil (reparse-symbol function_parameters) [938 945])
+                            ("path" variable nil (reparse-symbol function_parameters) [947 951])
+                            ("itr" variable nil (reparse-symbol function_parameters) [953 956])
+                            ("interval" variable nil (reparse-symbol function_parameters) [963 971])
+                            ("file_type" variable nil (reparse-symbol function_parameters) [978 987]))                          )
+                        (reparse-symbol indented_block_body) [915 1788])
+                    ("save_config" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3639 3643])
+                            ("config" variable nil (reparse-symbol function_parameters) [3645 3651]))                          )
+                        (reparse-symbol indented_block_body) [3623 3893]))                  
+                :type "class")
+                nil [75 3893]))          
+      :file "logger_base.py"
+      :pointmax 3897
+      :fsize 3896
+      :lastmodtime '(23174 5335 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "logger.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("enum" include nil nil [1 22])
+            ("rl_pipeline.logging.tabulate" include nil nil [24 73])
+            ("rl_pipeline.logging.console" include nil nil [74 131])
+            ("contextlib" include nil nil [192 229])
+            ("numpy" include nil nil [230 248])
+            ("os" include nil nil [249 258])
+            ("os.path" include nil nil [259 280])
+            ("sys" include nil nil [281 291])
+            ("datetime" include nil nil [292 307])
+            ("dateutil.tz" include nil nil [308 326])
+            ("csv" include nil nil [327 337])
+            ("joblib" include nil nil [338 351])
+            ("json" include nil nil [352 363])
+            ("pickle" include nil nil [364 377])
+            ("base64" include nil nil [378 391])
+            ("_prefixes" variable nil nil [393 407])
+            ("_prefix_str" variable nil nil [408 424])
+            ("_tabular_prefixes" variable nil nil [426 448])
+            ("_tabular_prefix_str" variable nil nil [449 473])
+            ("_tabular" variable nil nil [475 488])
+            ("_text_outputs" variable nil nil [490 508])
+            ("_tabular_outputs" variable nil nil [509 530])
+            ("_text_fds" variable nil nil [532 546])
+            ("_tabular_fds" variable nil nil [547 564])
+            ("_tabular_header_written" variable nil nil [565 596])
+            ("_snapshot_dir" variable nil nil [598 618])
+            ("_snapshot_mode" variable nil nil [619 641])
+            ("_snapshot_gap" variable nil nil [642 659])
+            ("_log_tabular_only" variable nil nil [661 686])
+            ("_header_printed" variable nil nil [687 710])
+            ("_add_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [729 738])
+                ("arr" variable nil (reparse-symbol function_parameters) [740 743])
+                ("fds" variable nil (reparse-symbol function_parameters) [745 748])
+                ("mode" variable nil (reparse-symbol function_parameters) [750 754]))              ) nil [713 911])
+            ("_remove_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [932 941])
+                ("arr" variable nil (reparse-symbol function_parameters) [943 946])
+                ("fds" variable nil (reparse-symbol function_parameters) [948 951]))              ) nil [913 1067])
+            ("push_prefix" function (:arguments 
+              ( ("prefix" variable nil (reparse-symbol function_parameters) [1085 1091]))              ) nil [1069 1183])
+            ("add_text_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1205 1214]))              ) nil [1185 1280])
+            ("remove_text_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1305 1314]))              ) nil [1282 1373])
+            ("add_tabular_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1398 1407]))              ) nil [1375 1479])
+            ("remove_tabular_output" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1507 1516]))              ) nil [1481 1704])
+            ("set_snapshot_dir" function (:arguments 
+              ( ("dir_name" variable nil (reparse-symbol function_parameters) [1727 1735]))              ) nil [1706 1792])
+            ("get_snapshot_dir" function nil nil [1794 1843])
+            ("get_snapshot_mode" function nil nil [1845 1896])
+            ("set_snapshot_mode" function (:arguments 
+              ( ("mode" variable nil (reparse-symbol function_parameters) [1920 1924]))              ) nil [1898 1979])
+            ("get_snapshot_gap" function nil nil [1980 2029])
+            ("set_snapshot_gap" function (:arguments 
+              ( ("gap" variable nil (reparse-symbol function_parameters) [2051 2054]))              ) nil [2030 2106])
+            ("set_log_tabular_only" function (:arguments 
+              ( ("log_tabular_only" variable nil (reparse-symbol function_parameters) [2132 2148]))              ) nil [2107 2221])
+            ("get_log_tabular_only" function nil nil [2223 2280])
+            ("log" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2290 2291])
+                ("with_prefix" variable nil (reparse-symbol function_parameters) [2293 2304])
+                ("with_timestamp" variable nil (reparse-symbol function_parameters) [2311 2325])
+                ("color" variable nil (reparse-symbol function_parameters) [2332 2337]))              ) nil [2282 2860])
+            ("record_tabular" function (:arguments 
+              ( ("key" variable nil (reparse-symbol function_parameters) [2881 2884])
+                ("val" variable nil (reparse-symbol function_parameters) [2886 2889]))              ) nil [2862 2956])
+            ("push_tabular_prefix" function (:arguments 
+              ( ("key" variable nil (reparse-symbol function_parameters) [2982 2985]))              ) nil [2958 3106])
+            ("pop_tabular_prefix" function nil nil [3108 3248])
+            ("prefix" function
+               (:decorators 
+                  ( ("contextmanager" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("key" variable nil (reparse-symbol function_parameters) [3277 3280]))                  )
+                nil [3250 3361])
+            ("tabular_prefix" function
+               (:decorators 
+                  ( ("contextmanager" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("key" variable nil (reparse-symbol function_parameters) [3398 3401]))                  )
+                nil [3363 3468])
+            ("TerminalTablePrinter" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3511 3530])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3539 3557]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3523 3527]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3510 3585])
+                    ("print_tabular" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3608 3612])
+                            ("new_tabular" variable nil (reparse-symbol function_parameters) [3614 3625]))                          )
+                        (reparse-symbol indented_block_body) [3590 3868])
+                    ("refresh" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3885 3889]))                          )
+                        (reparse-symbol indented_block_body) [3873 4160]))                  
+                :type "class")
+                nil [3470 4160])
+            ("table_printer" variable nil nil [4162 4200])
+            ("dump_tabular" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [4220 4225])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [4227 4235]))              ) nil [4203 5056])
+            ("pop_prefix" function nil nil [5058 5158])
+            ("save_itr_params" function (:arguments 
+              ( ("itr" variable nil (reparse-symbol function_parameters) [5180 5183])
+                ("params" variable nil (reparse-symbol function_parameters) [5185 5191]))              ) nil [5160 5888])
+            ("log_parameters" function (:arguments 
+              ( ("log_file" variable nil (reparse-symbol function_parameters) [5909 5917])
+                ("args" variable nil (reparse-symbol function_parameters) [5919 5923])
+                ("classes" variable nil (reparse-symbol function_parameters) [5925 5932]))              ) nil [5890 6661])
+            ("stub_to_json" function (:arguments 
+              ( ("stub_sth" variable nil (reparse-symbol function_parameters) [6680 6688]))              ) nil [6663 8214])
+            ("MyEncoder" type
+               (:superclasses ("json.JSONEncoder")
+                :members 
+                  ( ("default" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8267 8271])
+                            ("o" variable nil (reparse-symbol function_parameters) [8273 8274]))                          )
+                        (reparse-symbol indented_block_body) [8255 8542]))                  
+                :type "class")
+                nil [8216 8542])
+            ("log_parameters_lite" function (:arguments 
+              ( ("log_file" variable nil (reparse-symbol function_parameters) [8568 8576])
+                ("args" variable nil (reparse-symbol function_parameters) [8578 8582]))              ) nil [8544 9407])
+            ("log_variant" function (:arguments 
+              ( ("log_file" variable nil (reparse-symbol function_parameters) [9425 9433])
+                ("variant_data" variable nil (reparse-symbol function_parameters) [9435 9447]))              ) nil [9409 9727])
+            ("record_tabular_misc_stat" function (:arguments 
+              ( ("key" variable nil (reparse-symbol function_parameters) [9758 9761])
+                ("values" variable nil (reparse-symbol function_parameters) [9763 9769])
+                ("placement" variable nil (reparse-symbol function_parameters) [9771 9780]))              ) nil [9729 10566]))          
+      :file "logger.py"
+      :pointmax 10566
+      :fsize 10565
+      :lastmodtime '(23170 9992 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "tabulate.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"Pretty-print tabular data.\"\"\"" code nil nil [51 83])
+            ("collections" include nil nil [87 121])
+            ("platform" include nil nil [122 163])
+            ("re" include nil nil [164 173])
+            ("if" code nil nil [176 621])
+            ("__all__" variable nil nil [623 692])
+            ("__version__" variable nil nil [693 714])
+            ("Line" variable nil nil [717 776])
+            ("DataRow" variable nil nil [779 835])
+            ("TableFormat" variable nil nil [1735 2018])
+            ("_pipe_segment_with_colons" function
+               (:documentation "Return a segment of a horizontal line with optional colons which
+    indicate column's alignment (as in `pipe` output format)."
+                :arguments 
+                  ( ("align" variable nil (reparse-symbol function_parameters) [2051 2056])
+                    ("colwidth" variable nil (reparse-symbol function_parameters) [2058 2066]))                  )
+                nil [2021 2465])
+            ("_pipe_line_with_colons" function
+               (:documentation "Return a horizontal line with optional colons to indicate column's
+    alignment (as in `pipe` output format)."
+                :arguments 
+                  ( ("colwidths" variable nil (reparse-symbol function_parameters) [2494 2503])
+                    ("colaligns" variable nil (reparse-symbol function_parameters) [2505 2514]))                  )
+                nil [2467 2767])
+            ("_mediawiki_row_with_attrs" function (:arguments 
+              ( ("separator" variable nil (reparse-symbol function_parameters) [2799 2808])
+                ("cell_values" variable nil (reparse-symbol function_parameters) [2810 2821])
+                ("colwidths" variable nil (reparse-symbol function_parameters) [2823 2832])
+                ("colaligns" variable nil (reparse-symbol function_parameters) [2834 2843]))              ) nil [2769 3377])
+            ("_latex_line_begin_tabular" function (:arguments 
+              ( ("colwidths" variable nil (reparse-symbol function_parameters) [3409 3418])
+                ("colaligns" variable nil (reparse-symbol function_parameters) [3420 3429]))              ) nil [3379 3654])
+            ("_table_formats" variable nil nil [3656 7905])
+            ("tabulate_formats" variable nil nil [7908 7962])
+            ("_invisible_codes" variable nil nil [7965 8008])
+            ("_invisible_codes_bytes" variable nil nil [8029 8079])
+            ("simple_separated_format" function
+               (:documentation "Construct a simple TableFormat with columns separated by a separator.
+
+    >>> tsv = simple_separated_format(\"\\\\t\") ; \\
+        tabulate([[\"foo\", 1], [\"spam\", 23]], tablefmt=tsv) == 'foo \\\\t 1\\\\nspam\\\\t23'
+    True
+
+    "
+                :arguments 
+                  ( ("separator" variable nil (reparse-symbol function_parameters) [8130 8139]))                  )
+                nil [8102 8597])
+            ("_isconvertible" function (:arguments 
+              ( ("conv" variable nil (reparse-symbol function_parameters) [8618 8622])
+                ("string" variable nil (reparse-symbol function_parameters) [8624 8630]))              ) nil [8599 8731])
+            ("_isnumber" function
+               (:documentation "
+    >>> _isnumber(\"123.45\")
+    True
+    >>> _isnumber(\"123\")
+    True
+    >>> _isnumber(\"spam\")
+    False
+    "
+                :arguments 
+                  ( ("string" variable nil (reparse-symbol function_parameters) [8747 8753]))                  )
+                nil [8733 8920])
+            ("_isint" function
+               (:documentation "
+    >>> _isint(\"123\")
+    True
+    >>> _isint(\"123.45\")
+    False
+    "
+                :arguments 
+                  ( ("string" variable nil (reparse-symbol function_parameters) [8933 8939]))                  )
+                nil [8922 9185])
+            ("_type" function
+               (:documentation "The least generic type (type(None), int, float, str, unicode).
+
+    >>> _type(None) is type(None)
+    True
+    >>> _type(\"foo\") is type(\"\")
+    True
+    >>> _type(\"1\") is type(1)
+    True
+    >>> _type('\\x1b[31m42\\x1b[0m') is type(42)
+    True
+    >>> _type('\\x1b[31m42\\x1b[0m') is type(42)
+    True
+
+    "
+                :arguments 
+                  ( ("string" variable nil (reparse-symbol function_parameters) [9197 9203])
+                    ("has_invisible" variable nil (reparse-symbol function_parameters) [9205 9218]))                  )
+                nil [9187 10041])
+            ("_afterpoint" function
+               (:documentation "Symbols after a decimal point, -1 if the string lacks the decimal point.
+
+    >>> _afterpoint(\"123.45\")
+    2
+    >>> _afterpoint(\"1001\")
+    -1
+    >>> _afterpoint(\"eggs\")
+    -1
+    >>> _afterpoint(\"123e45\")
+    2
+
+    "
+                :arguments 
+                  ( ("string" variable nil (reparse-symbol function_parameters) [10059 10065]))                  )
+                nil [10043 10659])
+            ("_padleft" function
+               (:documentation "Flush right.
+
+    >>> _padleft(6, '\\u044f\\u0439\\u0446\\u0430') == '  \\u044f\\u0439\\u0446\\u0430'
+    True
+
+    "
+                :arguments 
+                  ( ("width" variable nil (reparse-symbol function_parameters) [10674 10679])
+                    ("s" variable nil (reparse-symbol function_parameters) [10681 10682])
+                    ("has_invisible" variable nil (reparse-symbol function_parameters) [10684 10697]))                  )
+                nil [10661 10962])
+            ("_padright" function
+               (:documentation "Flush left.
+
+    >>> _padright(6, '\\u044f\\u0439\\u0446\\u0430') == '\\u044f\\u0439\\u0446\\u0430  '
+    True
+
+    "
+                :arguments 
+                  ( ("width" variable nil (reparse-symbol function_parameters) [10978 10983])
+                    ("s" variable nil (reparse-symbol function_parameters) [10985 10986])
+                    ("has_invisible" variable nil (reparse-symbol function_parameters) [10988 11001]))                  )
+                nil [10964 11266])
+            ("_padboth" function
+               (:documentation "Center string.
+
+    >>> _padboth(6, '\\u044f\\u0439\\u0446\\u0430') == ' \\u044f\\u0439\\u0446\\u0430 '
+    True
+
+    "
+                :arguments 
+                  ( ("width" variable nil (reparse-symbol function_parameters) [11281 11286])
+                    ("s" variable nil (reparse-symbol function_parameters) [11288 11289])
+                    ("has_invisible" variable nil (reparse-symbol function_parameters) [11291 11304]))                  )
+                nil [11268 11571])
+            ("_strip_invisible" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [11594 11595]))              ) nil [11573 11799])
+            ("_visible_width" function
+               (:documentation "Visible width of a printed string. ANSI color codes are removed.
+
+    >>> _visible_width('\\x1b[31mhello\\x1b[0m'), _visible_width(\"world\")
+    (5, 5)
+
+    "
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [11820 11821]))                  )
+                nil [11801 12138])
+            ("_align_column" function
+               (:documentation "[string] -> [padded_string]
+
+    >>> list(map(str,_align_column([\"12.345\", \"-1234.5\", \"1.23\", \"1234.5\", \"1e+234\", \"1.0e234\"], \"decimal\")))
+    ['   12.345  ', '-1234.5    ', '    1.23   ', ' 1234.5    ', '    1e+234 ', '    1.0e234']
+
+    >>> list(map(str,_align_column(['123.4', '56.7890'], None)))
+    ['123.4', '56.7890']
+
+    "
+                :arguments 
+                  ( ("strings" variable nil (reparse-symbol function_parameters) [12158 12165])
+                    ("alignment" variable nil (reparse-symbol function_parameters) [12167 12176])
+                    ("minwidth" variable nil (reparse-symbol function_parameters) [12178 12186])
+                    ("has_invisible" variable nil (reparse-symbol function_parameters) [12190 12203]))                  )
+                nil [12140 13397])
+            ("_more_generic" function (:arguments 
+              ( ("type1" variable nil (reparse-symbol function_parameters) [13417 13422])
+                ("type2" variable nil (reparse-symbol function_parameters) [13424 13429]))              ) nil [13399 13692])
+            ("_column_type" function
+               (:documentation "The least generic type all column values are convertible to.
+
+    >>> _column_type([\"1\", \"2\"]) is _int_type
+    True
+    >>> _column_type([\"1\", \"2.3\"]) is _float_type
+    True
+    >>> _column_type([\"1\", \"2.3\", \"four\"]) is _text_type
+    True
+    >>> _column_type([\"four\", '\\u043f\\u044f\\u0442\\u044c']) is _text_type
+    True
+    >>> _column_type([None, \"brux\"]) is _text_type
+    True
+    >>> _column_type([1, 2, None]) is _int_type
+    True
+    >>> import datetime as dt
+    >>> _column_type([dt.datetime(1991,2,19), dt.time(17,35)]) is _text_type
+    True
+
+    "
+                :arguments 
+                  ( ("strings" variable nil (reparse-symbol function_parameters) [13711 13718])
+                    ("has_invisible" variable nil (reparse-symbol function_parameters) [13720 13733]))                  )
+                nil [13694 14415])
+            ("_format" function
+               (:documentation "Format a value accoding to its type.
+
+    Unicode is supported:
+
+    >>> hrow = ['\\u0431\\u0443\\u043a\\u0432\\u0430', '\\u0446\\u0438\\u0444\\u0440\\u0430'] ; \\
+        tbl = [['\\u0430\\u0437', 2], ['\\u0431\\u0443\\u043a\\u0438', 4]] ; \\
+        good_result = '\\\\u0431\\\\u0443\\\\u043a\\\\u0432\\\\u0430      \\\\u0446\\\\u0438\\\\u0444\\\\u0440\\\\u0430\\\\n-------  -------\\\\n\\\\u0430\\\\u0437             2\\\\n\\\\u0431\\\\u0443\\\\u043a\\\\u0438           4' ; \\
+        tabulate(tbl, headers=hrow) == good_result
+    True
+
+    "
+                :arguments 
+                  ( ("val" variable nil (reparse-symbol function_parameters) [14429 14432])
+                    ("valtype" variable nil (reparse-symbol function_parameters) [14434 14441])
+                    ("floatfmt" variable nil (reparse-symbol function_parameters) [14443 14451])
+                    ("missingval" variable nil (reparse-symbol function_parameters) [14453 14463]))                  )
+                nil [14417 15274])
+            ("_align_header" function (:arguments 
+              ( ("header" variable nil (reparse-symbol function_parameters) [15294 15300])
+                ("alignment" variable nil (reparse-symbol function_parameters) [15302 15311])
+                ("width" variable nil (reparse-symbol function_parameters) [15313 15318]))              ) nil [15276 15569])
+            ("_normalize_tabular_data" function
+               (:documentation "Transform a supported data type to a list of lists, and a list of headers.
+
+    Supported tabular data types:
+
+    * list-of-lists or another iterable of iterables
+
+    * list of named tuples (usually used with headers=\"keys\")
+
+    * 2D NumPy arrays
+
+    * NumPy record arrays (usually used with headers=\"keys\")
+
+    * dict of iterables (usually used with headers=\"keys\")
+
+    * pandas.DataFrame (usually used with headers=\"keys\")
+
+    The first row can be used as headers if headers=\"firstrow\",
+    column indices can be used as headers if headers=\"keys\".
+
+    "
+                :arguments 
+                  ( ("tabular_data" variable nil (reparse-symbol function_parameters) [15599 15611])
+                    ("headers" variable nil (reparse-symbol function_parameters) [15613 15620]))                  )
+                nil [15571 18348])
+            ("tabulate" function
+               (:documentation "Format a fixed width table for pretty printing.
+
+    >>> print(tabulate([[1, 2.34], [-56, \"8.999\"], [\"2\", \"10001\"]]))
+    ---  ---------
+      1      2.34
+    -56      8.999
+      2  10001
+    ---  ---------
+
+    The first required argument (`tabular_data`) can be a
+    list-of-lists (or another iterable of iterables), a list of named
+    tuples, a dictionary of iterables, a two-dimensional NumPy array,
+    NumPy record array, or a Pandas' dataframe.
+
+
+    Table headers
+    -------------
+
+    To print nice column headers, supply the second argument (`headers`):
+
+      - `headers` can be an explicit list of column headers
+      - if `headers=\"firstrow\"`, then the first row of data is used
+      - if `headers=\"keys\"`, then dictionary keys or column indices are used
+
+    Otherwise a headerless table is produced.
+
+    If the number of headers is less than the number of columns, they
+    are supposed to be names of the last columns. This is consistent
+    with the plain-text format of R and Pandas' dataframes.
+
+    >>> print(tabulate([[\"sex\",\"age\"],[\"Alice\",\"F\",24],[\"Bob\",\"M\",19]],
+    ...       headers=\"firstrow\"))
+           sex      age
+    -----  -----  -----
+    Alice  F         24
+    Bob    M         19
+
+
+    Column alignment
+    ----------------
+
+    `tabulate` tries to detect column types automatically, and aligns
+    the values properly. By default it aligns decimal points of the
+    numbers (or flushes integer numbers to the right), and flushes
+    everything else to the left. Possible column alignments
+    (`numalign`, `stralign`) are: \"right\", \"center\", \"left\", \"decimal\"
+    (only for `numalign`), and None (to disable alignment).
+
+
+    Table formats
+    -------------
+
+    `floatfmt` is a format specification used for columns which
+    contain numeric data with a decimal point.
+
+    `None` values are replaced with a `missingval` string:
+
+    >>> print(tabulate([[\"spam\", 1, None],
+    ...                 [\"eggs\", 42, 3.14],
+    ...                 [\"other\", None, 2.7]], missingval=\"?\"))
+    -----  --  ----
+    spam    1  ?
+    eggs   42  3.14
+    other   ?  2.7
+    -----  --  ----
+
+    Various plain-text table formats (`tablefmt`) are supported:
+    'plain', 'simple', 'grid', 'pipe', 'orgtbl', 'rst', 'mediawiki',
+    and 'latex'. Variable `tabulate_formats` contains the list of
+    currently supported formats.
+
+    \"plain\" format doesn't use any pseudographics to draw tables,
+    it separates columns with a double space:
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]],
+    ...                 [\"strings\", \"numbers\"], \"plain\"))
+    strings      numbers
+    spam         41.9999
+    eggs        451
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]], tablefmt=\"plain\"))
+    spam   41.9999
+    eggs  451
+
+    \"simple\" format is like Pandoc simple_tables:
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]],
+    ...                 [\"strings\", \"numbers\"], \"simple\"))
+    strings      numbers
+    ---------  ---------
+    spam         41.9999
+    eggs        451
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]], tablefmt=\"simple\"))
+    ----  --------
+    spam   41.9999
+    eggs  451
+    ----  --------
+
+    \"grid\" is similar to tables produced by Emacs table.el package or
+    Pandoc grid_tables:
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]],
+    ...                [\"strings\", \"numbers\"], \"grid\"))
+    +-----------+-----------+
+    | strings   |   numbers |
+    +===========+===========+
+    | spam      |   41.9999 |
+    +-----------+-----------+
+    | eggs      |  451      |
+    +-----------+-----------+
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]], tablefmt=\"grid\"))
+    +------+----------+
+    | spam |  41.9999 |
+    +------+----------+
+    | eggs | 451      |
+    +------+----------+
+
+    \"pipe\" is like tables in PHP Markdown Extra extension or Pandoc
+    pipe_tables:
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]],
+    ...                [\"strings\", \"numbers\"], \"pipe\"))
+    | strings   |   numbers |
+    |:----------|----------:|
+    | spam      |   41.9999 |
+    | eggs      |  451      |
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]], tablefmt=\"pipe\"))
+    |:-----|---------:|
+    | spam |  41.9999 |
+    | eggs | 451      |
+
+    \"orgtbl\" is like tables in Emacs org-mode and orgtbl-mode. They
+    are slightly different from \"pipe\" format by not using colons to
+    define column alignment, and using a \"+\" sign to indicate line
+    intersections:
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]],
+    ...                [\"strings\", \"numbers\"], \"orgtbl\"))
+    | strings   |   numbers |
+    |-----------+-----------|
+    | spam      |   41.9999 |
+    | eggs      |  451      |
+
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]], tablefmt=\"orgtbl\"))
+    | spam |  41.9999 |
+    | eggs | 451      |
+
+    \"rst\" is like a simple table format from reStructuredText; please
+    note that reStructuredText accepts also \"grid\" tables:
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]],
+    ...                [\"strings\", \"numbers\"], \"rst\"))
+    =========  =========
+    strings      numbers
+    =========  =========
+    spam         41.9999
+    eggs        451
+    =========  =========
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]], tablefmt=\"rst\"))
+    ====  ========
+    spam   41.9999
+    eggs  451
+    ====  ========
+
+    \"mediawiki\" produces a table markup used in Wikipedia and on other
+    MediaWiki-based sites:
+
+    >>> print(tabulate([[\"strings\", \"numbers\"], [\"spam\", 41.9999], [\"eggs\", \"451.0\"]],
+    ...                headers=\"firstrow\", tablefmt=\"mediawiki\"))
+    {| class=\"wikitable\" style=\"text-align: left;\"
+    |+ <!-- caption -->
+    |-
+    ! strings   !! align=\"right\"|   numbers
+    |-
+    | spam      || align=\"right\"|   41.9999
+    |-
+    | eggs      || align=\"right\"|  451
+    |}
+
+    \"latex\" produces a tabular environment of LaTeX document markup:
+
+    >>> print(tabulate([[\"spam\", 41.9999], [\"eggs\", \"451.0\"]], tablefmt=\"latex\"))
+    \\\\begin{tabular}{lr}
+    \\\\hline
+     spam &  41.9999 \\\\\\\\
+     eggs & 451      \\\\\\\\
+    \\\\hline
+    \\\\end{tabular}
+
+    "
+                :arguments 
+                  ( ("tabular_data" variable nil (reparse-symbol function_parameters) [18363 18375])
+                    ("headers" variable nil (reparse-symbol function_parameters) [18377 18384])
+                    ("tablefmt" variable nil (reparse-symbol function_parameters) [18389 18397])
+                    ("floatfmt" variable nil (reparse-symbol function_parameters) [18421 18429])
+                    ("numalign" variable nil (reparse-symbol function_parameters) [18435 18443])
+                    ("stralign" variable nil (reparse-symbol function_parameters) [18455 18463])
+                    ("missingval" variable nil (reparse-symbol function_parameters) [18485 18495]))                  )
+                nil [18350 26352])
+            ("_build_simple_row" function (:arguments 
+              ( ("padded_cells" variable nil (reparse-symbol function_parameters) [26376 26388])
+                ("rowfmt" variable nil (reparse-symbol function_parameters) [26390 26396]))              ) nil [26354 26549])
+            ("_build_row" function (:arguments 
+              ( ("padded_cells" variable nil (reparse-symbol function_parameters) [26566 26578])
+                ("colwidths" variable nil (reparse-symbol function_parameters) [26580 26589])
+                ("colaligns" variable nil (reparse-symbol function_parameters) [26591 26600])
+                ("rowfmt" variable nil (reparse-symbol function_parameters) [26602 26608]))              ) nil [26551 26869])
+            ("_build_line" function (:arguments 
+              ( ("colwidths" variable nil (reparse-symbol function_parameters) [26887 26896])
+                ("colaligns" variable nil (reparse-symbol function_parameters) [26898 26907])
+                ("linefmt" variable nil (reparse-symbol function_parameters) [26909 26916]))              ) nil [26871 27253])
+            ("_pad_row" function (:arguments 
+              ( ("cells" variable nil (reparse-symbol function_parameters) [27268 27273])
+                ("padding" variable nil (reparse-symbol function_parameters) [27275 27282]))              ) nil [27255 27444])
+            ("_format_table" function
+               (:documentation "Produce a plain-text representation of the table."
+                :arguments 
+                  ( ("fmt" variable nil (reparse-symbol function_parameters) [27464 27467])
+                    ("headers" variable nil (reparse-symbol function_parameters) [27469 27476])
+                    ("rows" variable nil (reparse-symbol function_parameters) [27478 27482])
+                    ("colwidths" variable nil (reparse-symbol function_parameters) [27484 27493])
+                    ("colaligns" variable nil (reparse-symbol function_parameters) [27495 27504]))                  )
+                nil [27446 28996]))          
+      :file "tabulate.py"
+      :pointmax 28996
+      :fsize 28995
+      :lastmodtime '(23155 27538 0 0)
+      :unmatched-syntax '((NAME 27586 . 27592) (IF 27616 . 27618) (ELSE 27654 . 27658) (NAME 25592 . 25601) (IF 25637 . 25639) (ELSE 25648 . 25652) (NAME 11437 . 11443) (IF 11488 . 11490) (ELSE 11505 . 11509) (NAME 11132 . 11138) (IF 11183 . 11185) (ELSE 11200 . 11204) (NAME 10828 . 10834) (IF 10879 . 10881) (ELSE 10896 . 10900) (NAME 10437 . 10440) (IF 10469 . 10471) (ELSE 10480 . 10484)))
+    (semanticdb-table "console.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [1 11])
+            ("time" include nil nil [12 23])
+            ("os" include nil nil [24 33])
+            ("errno" include nil nil [34 46])
+            ("shlex" include nil nil [47 59])
+            ("pydoc" include nil nil [60 72])
+            ("inspect" include nil nil [73 87])
+            ("collections" include nil nil [88 106])
+            ("color2num" variable nil nil [108 252])
+            ("colorize" function (:arguments 
+              ( ("string" variable nil (reparse-symbol function_parameters) [268 274])
+                ("color" variable nil (reparse-symbol function_parameters) [276 281])
+                ("bold" variable nil (reparse-symbol function_parameters) [283 287])
+                ("highlight" variable nil (reparse-symbol function_parameters) [295 304]))              ) nil [255 512])
+            ("mkdir_p" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [526 530]))              ) nil [514 721])
+            ("log" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [731 732]))              ) nil [723 798])
+            ("SimpleMessage" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [879 893])
+                            ("self" variable nil (reparse-symbol indented_block_body) [902 922]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [847 851])
+                            ("msg" variable nil (reparse-symbol function_parameters) [853 856])
+                            ("logger" variable nil (reparse-symbol function_parameters) [858 864]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [834 923])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [942 946]))                          )
+                        (reparse-symbol indented_block_body) [928 1007])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1025 1029])
+                            ("etype" variable nil (reparse-symbol function_parameters) [1031 1036])
+                            ("args" variable nil (reparse-symbol function_parameters) [1038 1043]))                          )
+                        (reparse-symbol indented_block_body) [1012 1218]))                  
+                :type "class")
+                nil [800 1218])
+            ("MESSAGE_DEPTH" variable nil nil [1220 1237])
+            ("Message" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1301 1315]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1281 1285])
+                            ("msg" variable nil (reparse-symbol function_parameters) [1287 1290]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1268 1316])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1335 1339]))                          )
+                        (reparse-symbol indented_block_body) [1321 1533])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1551 1555])
+                            ("etype" variable nil (reparse-symbol function_parameters) [1557 1562])
+                            ("args" variable nil (reparse-symbol function_parameters) [1564 1569]))                          )
+                        (reparse-symbol indented_block_body) [1538 1843]))                  
+                :type "class")
+                nil [1240 1843])
+            ("prefix_log" function (:arguments 
+              ( ("prefix" variable nil (reparse-symbol function_parameters) [1860 1866])
+                ("logger" variable nil (reparse-symbol function_parameters) [1868 1874]))              ) nil [1845 1921])
+            ("tee_log" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [1935 1944]))              ) nil [1923 2089])
+            ("collect_args" function nil nil [2091 2269])
+            ("type_hint" function (:arguments 
+              ( ("arg_name" variable nil (reparse-symbol function_parameters) [2285 2293])
+                ("arg_type" variable nil (reparse-symbol function_parameters) [2295 2303]))              ) nil [2271 2526])
+            ("tweak" function (:arguments 
+              ( ("fun_or_val" variable nil (reparse-symbol function_parameters) [2538 2548])
+                ("identifier" variable nil (reparse-symbol function_parameters) [2550 2560]))              ) nil [2528 2713])
+            ("tweakval" function (:arguments 
+              ( ("val" variable nil (reparse-symbol function_parameters) [2728 2731])
+                ("identifier" variable nil (reparse-symbol function_parameters) [2733 2743]))              ) nil [2715 3099])
+            ("tweakfun" function
+               (:documentation "Make the arguments (or the function itself) tweakable from command line.
+    See tests/test_misc_console.py for examples.
+
+    NOTE: this only works for the initial launched process, since other processes
+    will get different argv. What this means is that tweak() calls wrapped in a function
+    to be invoked in a child process might not behave properly.
+    "
+                :arguments 
+                  ( ("fun" variable nil (reparse-symbol function_parameters) [3114 3117])
+                    ("alt" variable nil (reparse-symbol function_parameters) [3119 3122]))                  )
+                nil [3101 5576])
+            ("query_yes_no" function
+               (:documentation "Ask a yes/no question via raw_input() and return their answer.
+
+    \"question\" is a string that is presented to the user.
+    \"default\" is the presumed answer if the user just hits <Enter>.
+        It must be \"yes\" (the default), \"no\" or None (meaning
+        an answer is required of the user).
+
+    The \"answer\" return value is True for \"yes\" or False for \"no\".
+    "
+                :arguments 
+                  ( ("question" variable nil (reparse-symbol function_parameters) [5595 5603])
+                    ("default" variable nil (reparse-symbol function_parameters) [5605 5612]))                  )
+                nil [5578 6693]))          
+      :file "console.py"
+      :pointmax 6693
+      :fsize 6692
+      :lastmodtime '(23155 27538 0 0)
+      :unmatched-syntax '((NAME 1661 . 1670) (IF 1676 . 1678) (ELSE 1693 . 1697) (NAME 1054 . 1063) (IF 1069 . 1071) (ELSE 1086 . 1090) (INDENT_BLOCK 610 . 721) (NEWLINE 609 . 610) (COLON 593 . 594) (TRY 537 . 540) (AS 587 . 589)))
+    (semanticdb-table "autoargs.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rl_pipeline.logging.console" include nil nil [1 49])
+            ("inspect" include nil nil [50 64])
+            ("arg" function (:arguments 
+              ( ("name" variable nil (reparse-symbol function_parameters) [146 150])
+                ("type" variable nil (reparse-symbol function_parameters) [152 156])
+                ("help" variable nil (reparse-symbol function_parameters) [163 167])
+                ("nargs" variable nil (reparse-symbol function_parameters) [174 179])
+                ("mapper" variable nil (reparse-symbol function_parameters) [186 192])
+                ("choices" variable nil (reparse-symbol function_parameters) [199 206])
+                ("prefix" variable nil (reparse-symbol function_parameters) [221 227]))              ) nil [138 590])
+            ("prefix" function (:arguments 
+              ( ("prefix_" variable nil (reparse-symbol function_parameters) [603 610]))              ) nil [592 744])
+            ("_get_prefix" function (:arguments 
+              ( ("cls" variable nil (reparse-symbol function_parameters) [762 765]))              ) nil [746 1294])
+            ("_get_info" function (:arguments 
+              ( ("cls_or_fn" variable nil (reparse-symbol function_parameters) [1310 1319]))              ) nil [1296 1608])
+            ("_t_or_f" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [1622 1623]))              ) nil [1610 1829])
+            ("add_args" function (:arguments 
+              ( ("_" variable nil (reparse-symbol function_parameters) [1844 1845]))              ) nil [1831 2402])
+            ("new_from_args" function (:arguments 
+              ( ("_" variable nil (reparse-symbol function_parameters) [2422 2423]))              ) nil [2404 3329])
+            ("inherit" function (:arguments 
+              ( ("base_func" variable nil (reparse-symbol function_parameters) [3343 3352]))              ) nil [3331 3609])
+            ("get_all_parameters" function (:arguments 
+              ( ("cls" variable nil (reparse-symbol function_parameters) [3634 3637])
+                ("parsed_args" variable nil (reparse-symbol function_parameters) [3639 3650]))              ) nil [3611 4550]))          
+      :file "autoargs.py"
+      :pointmax 4550
+      :fsize 4549
+      :lastmodtime '(23170 10005 0 0)
+      :unmatched-syntax '(($EOI 4550 . 4550)))
+    (semanticdb-table "path_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("shutil" include nil nil [11 24])
+            ("numpy" include nil nil [25 43])
+            ("RLFPS_PATH" variable nil nil [45 111])
+            ("remove_test_dirs" function (:arguments 
+              ( ("example_path" variable nil (reparse-symbol function_parameters) [134 146]))              ) nil [113 1140])
+            ("make_hyperparam_str" function (:arguments 
+              ( ("hyperparam_names" variable nil (reparse-symbol function_parameters) [1166 1182])
+                ("hyperparam_values" variable nil (reparse-symbol function_parameters) [1184 1201]))              ) nil [1142 1694]))          
+      :file "path_utils.py"
+      :pointmax 1696
+      :fsize 1695
+      :lastmodtime '(23155 27538 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "tensorboard_logger.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rl_pipeline.logging.logger_base" include nil nil [1 55])
+            ("tensorflow" include nil nil [56 79])
+            ("TensorboardLogger" type
+               (:superclasses ("LoggerBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [390 806])
+                            ("self" variable nil (reparse-symbol indented_block_body) [815 837])
+                            ("self" variable nil (reparse-symbol indented_block_body) [846 905])
+                            ("self" variable nil (reparse-symbol indented_block_body) [914 946]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [136 140])
+                            ("csv_data_dir" variable nil (reparse-symbol function_parameters) [159 171])
+                            ("log_dir" variable nil (reparse-symbol function_parameters) [190 197])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [216 225])
+                            ("transitions_dir" variable nil (reparse-symbol function_parameters) [244 259])
+                            ("config_dir" variable nil (reparse-symbol function_parameters) [278 288])
+                            ("info_dir" variable nil (reparse-symbol function_parameters) [307 315])
+                            ("logging_params" variable nil (reparse-symbol function_parameters) [334 348])
+                            ("sess" variable nil (reparse-symbol function_parameters) [367 371]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [123 947])
+                    ("tf_writer_add_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [984 988])
+                            ("graph" variable nil (reparse-symbol function_parameters) [990 995]))                          )
+                        (reparse-symbol indented_block_body) [960 1038])
+                    ("tf_writer_add_summary" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1069 1073])
+                            ("summary_type" variable nil (reparse-symbol function_parameters) [1075 1087])
+                            ("name" variable nil (reparse-symbol function_parameters) [1089 1093])
+                            ("summary" variable nil (reparse-symbol function_parameters) [1095 1102]))                          )
+                        (reparse-symbol indented_block_body) [1043 1597])
+                    ("tf_writer_summary_merge" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1630 1634]))                          )
+                        (reparse-symbol indented_block_body) [1602 1675])
+                    ("tf_writer_update_summary" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1709 1713])
+                            ("merged_summary" variable nil (reparse-symbol function_parameters) [1714 1728])
+                            ("feed_dict" variable nil (reparse-symbol function_parameters) [1730 1739])
+                            ("step" variable nil (reparse-symbol function_parameters) [1741 1745]))                          )
+                        (reparse-symbol indented_block_body) [1680 1943]))                  
+                :type "class")
+                nil [81 1943]))          
+      :file "tensorboard_logger.py"
+      :pointmax 1952
+      :fsize 1951
+      :lastmodtime '(23182 19617 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!logging!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

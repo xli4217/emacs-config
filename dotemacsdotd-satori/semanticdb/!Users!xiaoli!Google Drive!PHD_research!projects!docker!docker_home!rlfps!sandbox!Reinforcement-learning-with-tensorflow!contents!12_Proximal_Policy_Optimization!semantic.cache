@@ -1,0 +1,231 @@
+;; Object 12_Proximal_Policy_Optimization/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "12_Proximal_Policy_Optimization/"
+  :tables
+  (list
+    (semanticdb-table "DPPO.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+A simple version of OpenAI's Proximal Policy Optimization (PPO). [https://arxiv.org/abs/1707.06347]
+
+Distributing workers in parallel to collect data, then stop worker's roll-out and train PPO on collected data.
+Restart workers once PPO is updated.
+
+The global PPO updating rule is adopted from DeepMind's paper (DPPO):
+Emergence of Locomotion Behaviours in Rich Environments (Google Deepmind): [https://arxiv.org/abs/1707.02286]
+
+View more on my tutorial website: https://morvanzhou.github.io/tutorials
+
+Dependencies:
+tensorflow r1.3
+gym 0.9.2
+\"\"\"" code nil nil [1 553])
+            ("tensorflow" include nil nil [555 578])
+            ("numpy" include nil nil [579 597])
+            ("matplotlib.pyplot" include nil nil [598 629])
+            ("queue" include nil nil [630 658])
+            ("threading" include nil nil [630 658])
+            ("gym" include nil nil [630 658])
+            ("EP_MAX" variable nil nil [660 672])
+            ("EP_LEN" variable nil nil [673 685])
+            ("N_WORKER" variable nil nil [686 698])
+            ("GAMMA" variable nil nil [733 744])
+            ("A_LR" variable nil nil [786 799])
+            ("C_LR" variable nil nil [840 853])
+            ("MIN_BATCH_SIZE" variable nil nil [895 914])
+            ("UPDATE_STEP" variable nil nil [961 977])
+            ("EPSILON" variable nil nil [1021 1034])
+            ("GAME" variable nil nil [1084 1104])
+            ("S_DIM, A_DIM" code nil nil [1105 1124])
+            ("PPO" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1215 1239])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1248 1309])
+                            ("l1" variable nil (reparse-symbol indented_block_body) [1336 1383])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1392 1423])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1432 1499])
+                            ("self" code nil (reparse-symbol indented_block_body) [1508 1545])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1554 1608])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1617 1683])
+                            ("self, self, pi, pi_params" code nil (reparse-symbol indented_block_body) [1709 1784])
+                            ("_, _, oldpi, oldpi_params" code nil (reparse-symbol indented_block_body) [1793 1862])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1871 1920])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1961 2044])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2054 2116])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2125 2188])
+                            ("ratio" code nil (reparse-symbol indented_block_body) [2272 2329])
+                            ("surr" code nil (reparse-symbol indented_block_body) [2338 2363])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2411 2429])
+                            ("self" code nil (reparse-symbol indented_block_body) [2446 2620])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2630 2696])
+                            ("self" code nil (reparse-symbol indented_block_body) [2705 2753]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1200 1204]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1187 2754])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2770 2774]))                          )
+                        (reparse-symbol indented_block_body) [2759 4173])
+                    ("_build_anet" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4194 4198])
+                            ("name" variable nil (reparse-symbol function_parameters) [4200 4204])
+                            ("trainable" variable nil (reparse-symbol function_parameters) [4206 4215]))                          )
+                        (reparse-symbol indented_block_body) [4178 4693])
+                    ("choose_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4716 4720])
+                            ("s" variable nil (reparse-symbol function_parameters) [4722 4723]))                          )
+                        (reparse-symbol indented_block_body) [4698 4848])
+                    ("get_v" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4863 4867])
+                            ("s" variable nil (reparse-symbol function_parameters) [4869 4870]))                          )
+                        (reparse-symbol indented_block_body) [4853 4975]))                  
+                :type "class")
+                nil [1164 4975])
+            ("Worker" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [4633 4647])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4656 4691])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4700 4721]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5016 5020])
+                            ("wid" variable nil (reparse-symbol function_parameters) [5022 5025]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [5003 5125])
+                    ("work" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5139 5143]))                          )
+                        (reparse-symbol indented_block_body) [5130 7486]))                  
+                :type "class")
+                nil [4977 7486])
+            ("if" code nil nil [7488 8663]))          
+      :file "DPPO.py"
+      :pointmax 8663
+      :fsize 8662
+      :lastmodtime '(23183 37723 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "simply_PPO.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+A simple version of Proximal Policy Optimization (PPO) using single thread.
+
+Based on:
+1. Emergence of Locomotion Behaviours in Rich Environments (Google Deepmind): [https://arxiv.org/abs/1707.02286]
+2. Proximal Policy Optimization Algorithms (OpenAI): [https://arxiv.org/abs/1707.06347]
+
+View more on my tutorial website: https://morvanzhou.github.io/tutorials
+
+Dependencies:
+tensorflow r1.2
+gym 0.9.2
+\"\"\"" code nil nil [1 411])
+            ("tensorflow" include nil nil [413 436])
+            ("numpy" include nil nil [437 455])
+            ("matplotlib.pyplot" include nil nil [456 487])
+            ("gym" include nil nil [488 498])
+            ("print" code nil nil [500 521])
+            ("EP_MAX" variable nil nil [523 535])
+            ("EP_LEN" variable nil nil [536 548])
+            ("GAMMA" variable nil nil [549 560])
+            ("A_LR" variable nil nil [561 574])
+            ("C_LR" variable nil nil [575 588])
+            ("BATCH" variable nil nil [589 600])
+            ("A_UPDATE_STEPS" variable nil nil [601 620])
+            ("C_UPDATE_STEPS" variable nil nil [621 640])
+            ("S_DIM, A_DIM" code nil nil [641 660])
+            ("METHOD" variable nil nil [661 844])
+            ("PPO" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [943 967])
+                            ("self" variable nil (reparse-symbol indented_block_body) [976 1037])
+                            ("with" code nil (reparse-symbol indented_block_body) [1064 1501])
+                            ("self, self, pi, pi_params" code nil (reparse-symbol indented_block_body) [1526 1601])
+                            ("_, _, oldpi, oldpi_params" code nil (reparse-symbol indented_block_body) [1610 1680])
+                            ("with" code nil (reparse-symbol indented_block_body) [1689 1816])
+                            ("with" code nil (reparse-symbol indented_block_body) [1824 1960])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1968 2016])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2038 2100])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2109 2172])
+                            ("with" code nil (reparse-symbol indented_block_body) [2181 3213])
+                            ("with" code nil (reparse-symbol indented_block_body) [3238 3351])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3360 3424])
+                            ("tf" code nil (reparse-symbol indented_block_body) [3433 3476])
+                            ("tf" code nil (reparse-symbol indented_block_body) [3485 3529])
+                            ("for" code nil (reparse-symbol indented_block_body) [3538 3617])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3625 3663])
+                            ("self" code nil (reparse-symbol indented_block_body) [3685 3733]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [928 932]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [915 3734])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3750 3754])
+                            ("s" variable nil (reparse-symbol function_parameters) [3756 3757])
+                            ("a" variable nil (reparse-symbol function_parameters) [3759 3760])
+                            ("r" variable nil (reparse-symbol function_parameters) [3762 3763])
+                            ("step" variable nil (reparse-symbol function_parameters) [3765 3769]))                          )
+                        (reparse-symbol indented_block_body) [3739 5471])
+                    ("_build_anet" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5501 5505])
+                            ("name" variable nil (reparse-symbol function_parameters) [5507 5511])
+                            ("trainable" variable nil (reparse-symbol function_parameters) [5513 5522]))                          )
+                        (reparse-symbol indented_block_body) [5485 6000])
+                    ("choose_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6023 6027])
+                            ("s" variable nil (reparse-symbol function_parameters) [6029 6030]))                          )
+                        (reparse-symbol indented_block_body) [6005 6155])
+                    ("get_v" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6170 6174])
+                            ("s" variable nil (reparse-symbol function_parameters) [6176 6177]))                          )
+                        (reparse-symbol indented_block_body) [6160 6282])
+                    ("print_stats" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6303 6307])
+                            ("x" variable nil (reparse-symbol function_parameters) [6309 6310]))                          )
+                        (reparse-symbol indented_block_body) [6287 6751]))                  
+                :type "class")
+                nil [891 6751])
+            ("env" variable nil nil [6850 6879])
+            ("ppo" variable nil nil [6880 6891])
+            ("all_ep_r" variable nil nil [6892 6905])
+            ("for" code nil nil [6907 8036])
+            ("plt" code nil nil [8037 8081]))          
+      :file "simply_PPO.py"
+      :pointmax 8159
+      :fsize 8158
+      :lastmodtime '(23185 35085 0 0)
+      :unmatched-syntax '((NAME 8082 . 8085) ($EOI 8159 . 8159))))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!sandbox!Reinforcement-learning-with-tensorflow!contents!12_Proximal_Policy_Optimization!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

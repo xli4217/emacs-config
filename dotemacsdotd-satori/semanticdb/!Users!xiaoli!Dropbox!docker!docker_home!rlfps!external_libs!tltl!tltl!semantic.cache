@@ -1,0 +1,213 @@
+;; Object tltl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tltl/"
+  :tables
+  (list
+    (semanticdb-table "tltl.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("'''
+ Copyright (C) 2015-2016 Cristian Ioan Vasile <cvasile@bu.edu>
+ Hybrid and Networked Systems (HyNeSs) Group, BU Robotics Lab, Boston University
+ See license.txt file for license information.
+'''" code nil nil [1 199])
+            ("numpy" include nil nil [227 245])
+            ("antlr4" include nil nil [246 295])
+            ("tltlLexer" include nil nil [297 328])
+            ("tltlParser" include nil nil [329 362])
+            ("tltlVisitor" include nil nil [363 398])
+            ("Operation" type
+               (:superclasses ("object")
+                :members 
+                  ( ("NOP, NOT, OR, AND, IMPLIES, UNTIL, THEN, EVENT, ALWAYS, NEXT, PRED, BOOL, AP" code nil (reparse-symbol indented_block_body) [430 518])
+                    ("opnames" variable nil (reparse-symbol indented_block_body) [523 614])
+                    ("opcodes" variable nil (reparse-symbol indented_block_body) [619 750])
+                    ("negop" variable nil (reparse-symbol indented_block_body) [755 834])
+                    ("getCode" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [869 872])
+                            ("text" variable nil (reparse-symbol function_parameters) [874 878]))                          )
+                        (reparse-symbol indented_block_body) [840 1120])
+                    ("getString" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [1156 1159])
+                            ("op" variable nil (reparse-symbol function_parameters) [1161 1163]))                          )
+                        (reparse-symbol indented_block_body) [1125 1383]))                  
+                :type "class")
+                nil [401 1383])
+            ("RelOperation" type
+               (:superclasses ("object")
+                :members 
+                  ( ("NOP, LT, LE, GT, GE, EQ, NQ" code nil (reparse-symbol indented_block_body) [1417 1455])
+                    ("opnames" variable nil (reparse-symbol indented_block_body) [1460 1509])
+                    ("opcodes" variable nil (reparse-symbol indented_block_body) [1514 1582])
+                    ("negop" variable nil (reparse-symbol indented_block_body) [1587 1624])
+                    ("getCode" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [1659 1662])
+                            ("text" variable nil (reparse-symbol function_parameters) [1664 1668]))                          )
+                        (reparse-symbol indented_block_body) [1630 1717])
+                    ("getString" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [1753 1756])
+                            ("rop" variable nil (reparse-symbol function_parameters) [1758 1761]))                          )
+                        (reparse-symbol indented_block_body) [1722 1796]))                  
+                :type "class")
+                nil [1385 1796])
+            ("TLTLFormula" type
+               (:superclasses ("object")
+                :members 
+                  ( ("''' TODO:
+    '''" code nil (reparse-symbol indented_block_body) [1829 1846])
+                    ("maximumRobustness" variable nil (reparse-symbol indented_block_body) [1851 1883])
+                    ("__init__" function
+                       (:suite 
+                          ( ("'''TODO:
+        '''" code nil (reparse-symbol indented_block_body) [1938 1958])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1967 1986])
+                            ("if" code nil (reparse-symbol indented_block_body) [1996 2815]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1902 1906])
+                            ("operation" variable nil (reparse-symbol function_parameters) [1908 1917])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1919 1927]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1889 2815])
+                    ("robustness" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2835 2839])
+                            ("s" variable nil (reparse-symbol function_parameters) [2841 2842])
+                            ("t1" variable nil (reparse-symbol function_parameters) [2844 2846])
+                            ("t2" variable nil (reparse-symbol function_parameters) [2848 2850]))                          )
+                        (reparse-symbol indented_block_body) [2820 5737])
+                    ("to_ltl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5753 5757]))                          )
+                        (reparse-symbol indented_block_body) [5742 6861])
+                    ("variables" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8265 8269]))                          )
+                        (reparse-symbol indented_block_body) [8251 8767])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8783 8787])
+                            ("other" variable nil (reparse-symbol function_parameters) [8789 8794]))                          )
+                        (reparse-symbol indented_block_body) [8772 8833])
+                    ("__ne__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8849 8853])
+                            ("other" variable nil (reparse-symbol function_parameters) [8855 8860]))                          )
+                        (reparse-symbol indented_block_body) [8838 8901])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8918 8922]))                          )
+                        (reparse-symbol indented_block_body) [8906 9791]))                  
+                :type "class")
+                nil [1798 9791])
+            ("TLTLAbstractSyntaxTreeExtractor" type
+               (:superclasses ("tltlVisitor")
+                :members 
+                  ( ("visitFormula" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9867 9871])
+                            ("ctx" variable nil (reparse-symbol function_parameters) [9873 9876]))                          )
+                        (reparse-symbol indented_block_body) [9850 10430])
+                    ("visitBooleanPred" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10456 10460])
+                            ("ctx" variable nil (reparse-symbol function_parameters) [10462 10465]))                          )
+                        (reparse-symbol indented_block_body) [10435 10543])
+                    ("visitBooleanExpr" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10569 10573])
+                            ("ctx" variable nil (reparse-symbol function_parameters) [10575 10578]))                          )
+                        (reparse-symbol indented_block_body) [10548 11122])
+                    ("visitParprop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11144 11148])
+                            ("ctx" variable nil (reparse-symbol function_parameters) [11150 11153]))                          )
+                        (reparse-symbol indented_block_body) [11127 11194]))                  
+                :type "class")
+                nil [9793 11194])
+            ("Trace" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''TODO:
+    '''" code nil (reparse-symbol indented_block_body) [11221 11237])
+                    ("__init__" function
+                       (:suite 
+                          ( ("'''TODO:
+        '''" code nil (reparse-symbol indented_block_body) [11288 11308])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11317 11343])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11352 11378]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11256 11260])
+                            ("variables" variable nil (reparse-symbol function_parameters) [11262 11271])
+                            ("data" variable nil (reparse-symbol function_parameters) [11273 11277]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [11243 11379])
+                    ("value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11394 11398])
+                            ("variable" variable nil (reparse-symbol function_parameters) [11400 11408])
+                            ("t" variable nil (reparse-symbol function_parameters) [11410 11411]))                          )
+                        (reparse-symbol indented_block_body) [11384 11529])
+                    ("values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11545 11549])
+                            ("variable" variable nil (reparse-symbol function_parameters) [11551 11559]))                          )
+                        (reparse-symbol indented_block_body) [11534 11674])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11691 11695]))                          )
+                        (reparse-symbol indented_block_body) [11679 11726])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11743 11747]))                          )
+                        (reparse-symbol indented_block_body) [11731 12245]))                  
+                :type "class")
+                nil [11196 12245])
+            ("if" code nil nil [12246 12802]))          
+      :file "tltl.py"
+      :pointmax 12802
+      :fsize 12801
+      :lastmodtime '(23266 19613 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "tltlLexer.py"
+      :file "tltlLexer.py"
+      :fsize 9184
+      :lastmodtime '(23226 46185 0 0))
+    (semanticdb-table "tltlParser.py"
+      :file "tltlParser.py"
+      :fsize 27378
+      :lastmodtime '(23226 46185 0 0))
+    (semanticdb-table "tltlVisitor.py"
+      :file "tltlVisitor.py"
+      :fsize 1118
+      :lastmodtime '(23226 46185 0 0)))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!external_libs!tltl!tltl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

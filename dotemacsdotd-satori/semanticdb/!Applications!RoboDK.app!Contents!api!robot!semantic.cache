@@ -1,0 +1,117 @@
+;; Object robot/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "robot/"
+  :tables
+  (list
+    (semanticdb-table "apiur.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [2207 2217])
+            ("time" include nil nil [2218 2229])
+            ("socket" include nil nil [2230 2243])
+            ("threading" include nil nil [2244 2260])
+            ("queue" include nil nil [2261 2273])
+            ("URRobot" type
+               (:documentation "Robot class for programming Mecademic robots"
+                :members 
+                  ( ("LAST_MSG" variable nil (reparse-symbol indented_block_body) [2499 2512])
+                    ("CONNECTED" variable nil (reparse-symbol indented_block_body) [2566 2583])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2715 2737])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2754 2771])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2880 2896])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2905 2925]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2700 2704]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2687 2933])
+                    ("disconnect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2989 2993]))                          )
+                        (reparse-symbol indented_block_body) [2974 3210])
+                    ("connect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3254 3258])
+                            ("ip" variable nil (reparse-symbol function_parameters) [3260 3262])
+                            ("port" variable nil (reparse-symbol function_parameters) [3264 3268]))                          )
+                        (reparse-symbol indented_block_body) [3242 4786])
+                    ("send_str" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4875 4879])
+                            ("msg" variable nil (reparse-symbol function_parameters) [4881 4884]))                          )
+                        (reparse-symbol indented_block_body) [4862 5168])
+                    ("recv_str" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5266 5270]))                          )
+                        (reparse-symbol indented_block_body) [5253 5668])
+                    ("Run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5749 5753])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [5755 5758])
+                            ("values" variable nil (reparse-symbol function_parameters) [5760 5766])
+                            ("send_ready" variable nil (reparse-symbol function_parameters) [5773 5783]))                          )
+                        (reparse-symbol indented_block_body) [5741 7951]))                  
+                :type "class")
+                nil [2425 7951])
+            ("read_line" function (:arguments 
+              ( ("socket" variable nil (reparse-symbol function_parameters) [8041 8047]))              ) nil [8027 8279])
+            ("robot_monitor" function (:arguments 
+              ( ("q" variable nil (reparse-symbol function_parameters) [8619 8620])
+                ("socket" variable nil (reparse-symbol function_parameters) [8622 8628]))              ) nil [8601 9786])
+            ("UR_Monitor" function (:arguments 
+              ( ("q" variable nil (reparse-symbol function_parameters) [9858 9859])
+                ("socket" variable nil (reparse-symbol function_parameters) [9861 9867]))              ) nil [9843 10739])
+            ("global" code nil nil [10970 10982])
+            ("global" code nil nil [10983 10998])
+            ("global" code nil nil [10999 11016])
+            ("global" code nil nil [11017 11036])
+            ("ROBOT" variable nil nil [11038 11055])
+            ("ROBOT_IP" variable nil nil [11056 11082])
+            ("ROBOT_PORT" variable nil nil [11106 11124])
+            ("ROBOT_MOVING" variable nil nil [11168 11188])
+            ("RobotConnect" function nil nil [11278 11386])
+            ("RobotDisconnect" function nil nil [11419 11482])
+            ("print_message" function
+               (:documentation "print_message will display a message in the log window (and the connexion status bar)"
+                :arguments 
+                  ( ("message" variable nil (reparse-symbol function_parameters) [11822 11829]))                  )
+                nil [11804 12030])
+            ("show_message" function
+               (:documentation "show_message will display a message in the status bar of the main window"
+                :arguments 
+                  ( ("message" variable nil (reparse-symbol function_parameters) [12048 12055]))                  )
+                nil [12031 12244])
+            ("print_joints" function (:arguments 
+              ( ("joints" variable nil (reparse-symbol function_parameters) [12262 12268])
+                ("ismoving" variable nil (reparse-symbol function_parameters) [12270 12278]))              ) nil [12245 12771])
+            ("ROBOTCOM_UNKNOWN" code nil nil [12913 12952])
+            ("ROBOTCOM_CONNECTION_PROBLEMS" code nil nil [12953 12989])
+            ("ROBOTCOM_DISCONNECTED" code nil nil [12990 13026])
+            ("ROBOTCOM_NOT_CONNECTED" code nil nil [13027 13063])
+            ("ROBOTCOM_READY" variable nil nil [13064 13100])
+            ("ROBOTCOM_WORKING" variable nil nil [13101 13137])
+            ("ROBOTCOM_WAITING" variable nil nil [13138 13174])
+            ("global" code nil nil [13205 13218])
+            ("STATUS" variable nil nil [13219 13249])
+            ("UpdateStatus" function (:arguments 
+              ( ("set_status" variable nil (reparse-symbol function_parameters) [13499 13509]))              ) nil [13482 14120])
+            ("TestDriver" function nil nil [14205 14296])
+            ("RunDriver" function nil nil [14953 15022])
+            ("RunCommand" function (:arguments 
+              ( ("linecmd" variable nil (reparse-symbol function_parameters) [15133 15140]))              ) nil [15118 20226])
+            ("if" code nil nil [20227 20389]))          
+      :file "apiur.py"
+      :pointmax 20465
+      :fsize 21008
+      :lastmodtime '(23155 59853 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 9692 . 9786) (NEWLINE 9691 . 9692) (COLON 9690 . 9691) (TRY 8635 . 8638) (AS 9686 . 9688) (INDENT_BLOCK 8142 . 8205) (NEWLINE 8141 . 8142) (WHILE 8102 . 8107) (STRING_LITERAL 8118 . 8122) (COLON 8122 . 8123) (INDENT_BLOCK 5521 . 5545) (NEWLINE 5520 . 5521) (STRING_LITERAL 5517 . 5519) (COLON 5519 . 5520) (INDENT_BLOCK 5403 . 5483) (NEWLINE 5402 . 5403) (COLON 5401 . 5402) (TRY 5301 . 5304) (AS 5397 . 5399) (INDENT_BLOCK 5082 . 5168) (NEWLINE 5081 . 5082) (COLON 5080 . 5081) (TRY 4895 . 4898) (AS 5076 . 5078))))
+  :file "!Applications!RoboDK.app!Contents!api!robot!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,588 @@
+;; Object traci/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "traci/"
+  :tables
+  (list
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [619 656])
+            ("__future__" include nil nil [657 695])
+            ("socket" include nil nil [696 709])
+            ("time" include nil nil [710 721])
+            ("subprocess" include nil nil [722 739])
+            ("warnings" include nil nil [740 755])
+            ("abc" include nil nil [756 766])
+            ("sumolib" include nil nil [768 782])
+            ("sumolib.miscutils" include nil nil [791 838])
+            ("_defaultDomains" include nil nil [853 875])
+            ("_embedded" include nil nil [893 921])
+            ("Connection" include nil nil [893 921])
+            ("TraCIException" include nil nil [939 977])
+            ("FatalTraCIError" include nil nil [939 977])
+            ("_trafficlight" include nil nil [985 1049])
+            ("_multientryexit" include nil nil [985 1049])
+            ("_lanearea" include nil nil [985 1049])
+            ("_inductionloop" include nil nil [985 1049])
+            ("_route" include nil nil [1057 1110])
+            ("_person" include nil nil [1057 1110])
+            ("_vehicletype" include nil nil [1057 1110])
+            ("_vehicle" include nil nil [1057 1110])
+            ("_lane" include nil nil [1057 1110])
+            ("_gui" include nil nil [1118 1176])
+            ("_simulation" include nil nil [1118 1176])
+            ("_edge" include nil nil [1118 1176])
+            ("_junction" include nil nil [1118 1176])
+            ("_polygon" include nil nil [1118 1176])
+            ("_poi" include nil nil [1118 1176])
+            ("_connections" variable nil nil [1178 1195])
+            ("_stepListeners" variable nil nil [1196 1215])
+            ("_STEPS2TIME" function
+               (:documentation "Conversion from time steps in milliseconds to seconds as float"
+                :arguments 
+                  ( ("step" variable nil (reparse-symbol function_parameters) [1234 1238]))                  )
+                nil [1218 1338])
+            ("connect" function
+               (:documentation "
+    Establish a connection to a TraCI-Server and return the
+    connection object. The connection is not saved in the pool and not
+    accessible via traci.switch. It should be safe to use different
+    connections established by this method in different threads.
+    "
+                :arguments 
+                  ( ("port" variable nil (reparse-symbol function_parameters) [1352 1356])
+                    ("numRetries" variable nil (reparse-symbol function_parameters) [1363 1373])
+                    ("host" variable nil (reparse-symbol function_parameters) [1378 1382])
+                    ("proc" variable nil (reparse-symbol function_parameters) [1396 1400]))                  )
+                nil [1340 2130])
+            ("init" function
+               (:documentation "
+    Establish a connection to a TraCI-Server and store it under the given
+    label. This method is not thread-safe. It accesses the connection
+    pool concurrently.
+    "
+                :arguments 
+                  ( ("port" variable nil (reparse-symbol function_parameters) [2141 2145])
+                    ("numRetries" variable nil (reparse-symbol function_parameters) [2152 2162])
+                    ("host" variable nil (reparse-symbol function_parameters) [2167 2171])
+                    ("label" variable nil (reparse-symbol function_parameters) [2185 2190]))                  )
+                nil [2132 2486])
+            ("start" function
+               (:documentation "
+    Start a sumo server using cmd, establish a connection to it and
+    store it under the given label. This method is not thread-safe.
+    "
+                :arguments 
+                  ( ("cmd" variable nil (reparse-symbol function_parameters) [2498 2501])
+                    ("port" variable nil (reparse-symbol function_parameters) [2503 2507])
+                    ("numRetries" variable nil (reparse-symbol function_parameters) [2514 2524])
+                    ("label" variable nil (reparse-symbol function_parameters) [2529 2534]))                  )
+                nil [2488 2964])
+            ("isEmbedded" function nil nil [2966 3005])
+            ("load" function
+               (:documentation "load([optionOrParam, ...])
+    Let sumo load a simulation using the given command line like options 
+    Example:
+      load(['-c', 'run.sumocfg'])
+      load(['-n', 'net.net.xml', '-r', 'routes.rou.xml'])
+    "
+                :arguments 
+                  ( ("args" variable nil (reparse-symbol function_parameters) [3016 3020]))                  )
+                nil [3007 3283])
+            ("simulationStep" function
+               (:documentation "
+    Make a simulation step and simulate up to the given millisecond in sim time.
+    If the given value is 0 or absent, exactly one step is performed.
+    Values smaller than or equal to the current sim time result in no action.
+    "
+                :arguments 
+                  ( ("step" variable nil (reparse-symbol function_parameters) [3304 3308]))                  )
+                nil [3285 3723])
+            ("StepListener" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [3757 3784])
+                    ("step" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3823 3827])
+                            ("s" variable nil (reparse-symbol function_parameters) [3829 3830]))                          
+                        :documentation "step(int) -> None
+
+        After adding a StepListener 'listener' with traci.addStepListener(listener),
+        TraCI will call listener.step(s) after each call to traci.simulationStep(s)
+        ")
+                        (reparse-symbol indented_block_body) [3790 4059]))                  
+                :type "class")
+                nil [3725 4059])
+            ("addStepListener" function
+               (:documentation "addStepListener(traci.StepListener) -> bool
+
+    Append the step listener (its step function is called at the end of every call to traci.simulationStep())
+    Returns True if the listener was added successfully, False otherwise.
+    "
+                :arguments 
+                  ( ("listener" variable nil (reparse-symbol function_parameters) [4081 4089]))                  )
+                nil [4061 4603])
+            ("removeStepListener" function
+               (:documentation "removeStepListener(traci.StepListener) -> bool
+
+    Remove the step listener from traci's step listener container.
+    Returns True if the listener was removed successfully, False if it wasn't registered.
+    "
+                :arguments 
+                  ( ("listener" variable nil (reparse-symbol function_parameters) [4628 4636]))                  )
+                nil [4605 5091])
+            ("getVersion" function nil nil [5093 5152])
+            ("setOrder" function (:arguments 
+              ( ("order" variable nil (reparse-symbol function_parameters) [5167 5172]))              ) nil [5154 5219])
+            ("close" function (:arguments 
+              ( ("wait" variable nil (reparse-symbol function_parameters) [5231 5235]))              ) nil [5221 5276])
+            ("switch" function (:arguments 
+              ( ("label" variable nil (reparse-symbol function_parameters) [5289 5294]))              ) nil [5278 5423])
+            ("getConnection" function (:arguments 
+              ( ("label" variable nil (reparse-symbol function_parameters) [5442 5447]))              ) nil [5424 5598])
+            ("if" code nil nil [5599 5666]))          
+      :file "__init__.py"
+      :pointmax 5666
+      :fsize 5665
+      :lastmodtime '(23228 566 950230 526000)
+      :unmatched-syntax '((INDENT_BLOCK 1825 . 2052) (NEWLINE 1824 . 1825) (COLON 1823 . 1824) (TRY 1738 . 1741) (AS 1819 . 1821) (FROM 1111 . 1115) (PERIOD 1116 . 1117) (FROM 1050 . 1054) (PERIOD 1055 . 1056) (FROM 978 . 982) (PERIOD 983 . 984) (FROM 922 . 926) (PERIOD 927 . 928) (FROM 876 . 880) (PERIOD 881 . 882) (FROM 840 . 844) (PERIOD 845 . 846)))
+    (semanticdb-table "_trafficlight.py"
+      :file "_trafficlight.py"
+      :fsize 10751
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_multientryexit.py"
+      :file "_multientryexit.py"
+      :fsize 2624
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_lanearea.py"
+      :file "_lanearea.py"
+      :fsize 4287
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_inductionloop.py"
+      :file "_inductionloop.py"
+      :fsize 4644
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_route.py"
+      :file "_route.py"
+      :fsize 1750
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_person.py"
+      :file "_person.py"
+      :fsize 17660
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_vehicletype.py"
+      :file "_vehicletype.py"
+      :fsize 14436
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_vehicle.py"
+      :file "_vehicle.py"
+      :fsize 55564
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_lane.py"
+      :file "_lane.py"
+      :fsize 12733
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_gui.py"
+      :file "_gui.py"
+      :fsize 5011
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_simulation.py"
+      :file "_simulation.py"
+      :fsize 18859
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_edge.py"
+      :file "_edge.py"
+      :fsize 11605
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_junction.py"
+      :file "_junction.py"
+      :fsize 1702
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_polygon.py"
+      :file "_polygon.py"
+      :fsize 5410
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "_poi.py"
+      :file "_poi.py"
+      :fsize 4358
+      :lastmodtime '(23228 566 950230 526000))
+    (semanticdb-table "constants.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+This script contains TraCI constant definitions from <SUMO_HOME>/src/traci-server/TraCIConstants.h.
+\"\"\"" code nil nil [526 633])
+            ("TRACI_VERSION" variable nil nil [735 753])
+            ("CMD_GETVERSION" variable nil nil [879 900])
+            ("CMD_LOAD" variable nil nil [919 934])
+            ("CMD_SIMSTEP" variable nil nil [964 982])
+            ("CMD_SETORDER" variable nil nil [1038 1057])
+            ("CMD_STOP" variable nil nil [1081 1096])
+            ("CMD_RESUME" variable nil nil [1130 1147])
+            ("CMD_CHANGELANE" variable nil nil [1170 1191])
+            ("CMD_SLOWDOWN" variable nil nil [1215 1234])
+            ("CMD_CHANGESUBLANE" variable nil nil [1270 1294])
+            ("CMD_CHANGETARGET" variable nil nil [1322 1345])
+            ("CMD_CLOSE" variable nil nil [1370 1386])
+            ("CMD_SUBSCRIBE_INDUCTIONLOOP_CONTEXT" variable nil nil [1439 1481])
+            ("RESPONSE_SUBSCRIBE_INDUCTIONLOOP_CONTEXT" variable nil nil [1533 1580])
+            ("CMD_GET_INDUCTIONLOOP_VARIABLE" variable nil nil [1626 1663])
+            ("RESPONSE_GET_INDUCTIONLOOP_VARIABLE" variable nil nil [1710 1752])
+            ("CMD_SUBSCRIBE_INDUCTIONLOOP_VARIABLE" variable nil nil [1804 1847])
+            ("RESPONSE_SUBSCRIBE_INDUCTIONLOOP_VARIABLE" variable nil nil [1900 1948])
+            ("CMD_SUBSCRIBE_MULTIENTRYEXIT_CONTEXT" variable nil nil [2017 2060])
+            ("RESPONSE_SUBSCRIBE_MULTIENTRYEXIT_CONTEXT" variable nil nil [2129 2177])
+            ("CMD_GET_MULTIENTRYEXIT_VARIABLE" variable nil nil [2240 2278])
+            ("RESPONSE_GET_MULTIENTRYEXIT_VARIABLE" variable nil nil [2342 2385])
+            ("CMD_SUBSCRIBE_MULTIENTRYEXIT_VARIABLE" variable nil nil [2454 2498])
+            ("RESPONSE_SUBSCRIBE_MULTIENTRYEXIT_VARIABLE" variable nil nil [2568 2617])
+            ("CMD_SUBSCRIBE_TL_CONTEXT" variable nil nil [2664 2695])
+            ("RESPONSE_SUBSCRIBE_TL_CONTEXT" variable nil nil [2742 2778])
+            ("CMD_GET_TL_VARIABLE" variable nil nil [2819 2845])
+            ("RESPONSE_GET_TL_VARIABLE" variable nil nil [2887 2918])
+            ("CMD_SET_TL_VARIABLE" variable nil nil [2959 2985])
+            ("CMD_SUBSCRIBE_TL_VARIABLE" variable nil nil [3032 3064])
+            ("RESPONSE_SUBSCRIBE_TL_VARIABLE" variable nil nil [3112 3149])
+            ("CMD_SUBSCRIBE_LANE_CONTEXT" variable nil nil [3186 3219])
+            ("RESPONSE_SUBSCRIBE_LANE_CONTEXT" variable nil nil [3256 3294])
+            ("CMD_GET_LANE_VARIABLE" variable nil nil [3325 3353])
+            ("RESPONSE_GET_LANE_VARIABLE" variable nil nil [3385 3418])
+            ("CMD_SET_LANE_VARIABLE" variable nil nil [3449 3477])
+            ("CMD_SUBSCRIBE_LANE_VARIABLE" variable nil nil [3514 3548])
+            ("RESPONSE_SUBSCRIBE_LANE_VARIABLE" variable nil nil [3586 3625])
+            ("CMD_SUBSCRIBE_VEHICLE_CONTEXT" variable nil nil [3665 3701])
+            ("RESPONSE_SUBSCRIBE_VEHICLE_CONTEXT" variable nil nil [3741 3782])
+            ("CMD_GET_VEHICLE_VARIABLE" variable nil nil [3816 3847])
+            ("RESPONSE_GET_VEHICLE_VARIABLE" variable nil nil [3882 3918])
+            ("CMD_SET_VEHICLE_VARIABLE" variable nil nil [3952 3983])
+            ("CMD_SUBSCRIBE_VEHICLE_VARIABLE" variable nil nil [4023 4060])
+            ("RESPONSE_SUBSCRIBE_VEHICLE_VARIABLE" variable nil nil [4101 4143])
+            ("CMD_SUBSCRIBE_VEHICLETYPE_CONTEXT" variable nil nil [4188 4228])
+            ("RESPONSE_SUBSCRIBE_VEHICLETYPE_CONTEXT" variable nil nil [4273 4318])
+            ("CMD_GET_VEHICLETYPE_VARIABLE" variable nil nil [4357 4392])
+            ("RESPONSE_GET_VEHICLETYPE_VARIABLE" variable nil nil [4432 4472])
+            ("CMD_SET_VEHICLETYPE_VARIABLE" variable nil nil [4511 4546])
+            ("CMD_SUBSCRIBE_VEHICLETYPE_VARIABLE" variable nil nil [4591 4632])
+            ("RESPONSE_SUBSCRIBE_VEHICLETYPE_VARIABLE" variable nil nil [4678 4724])
+            ("CMD_SUBSCRIBE_ROUTE_CONTEXT" variable nil nil [4762 4796])
+            ("RESPONSE_SUBSCRIBE_ROUTE_CONTEXT" variable nil nil [4834 4873])
+            ("CMD_GET_ROUTE_VARIABLE" variable nil nil [4905 4934])
+            ("RESPONSE_GET_ROUTE_VARIABLE" variable nil nil [4967 5001])
+            ("CMD_SET_ROUTE_VARIABLE" variable nil nil [5033 5062])
+            ("CMD_SUBSCRIBE_ROUTE_VARIABLE" variable nil nil [5100 5135])
+            ("RESPONSE_SUBSCRIBE_ROUTE_VARIABLE" variable nil nil [5174 5214])
+            ("CMD_SUBSCRIBE_POI_CONTEXT" variable nil nil [5250 5282])
+            ("RESPONSE_SUBSCRIBE_POI_CONTEXT" variable nil nil [5318 5355])
+            ("CMD_GET_POI_VARIABLE" variable nil nil [5385 5412])
+            ("RESPONSE_GET_POI_VARIABLE" variable nil nil [5443 5475])
+            ("CMD_SET_POI_VARIABLE" variable nil nil [5505 5532])
+            ("CMD_SUBSCRIBE_POI_VARIABLE" variable nil nil [5568 5601])
+            ("RESPONSE_SUBSCRIBE_POI_VARIABLE" variable nil nil [5638 5676])
+            ("CMD_SUBSCRIBE_POLYGON_CONTEXT" variable nil nil [5716 5752])
+            ("RESPONSE_SUBSCRIBE_POLYGON_CONTEXT" variable nil nil [5792 5833])
+            ("CMD_GET_POLYGON_VARIABLE" variable nil nil [5867 5898])
+            ("RESPONSE_GET_POLYGON_VARIABLE" variable nil nil [5933 5969])
+            ("CMD_SET_POLYGON_VARIABLE" variable nil nil [6003 6034])
+            ("CMD_SUBSCRIBE_POLYGON_VARIABLE" variable nil nil [6074 6111])
+            ("RESPONSE_SUBSCRIBE_POLYGON_VARIABLE" variable nil nil [6152 6194])
+            ("CMD_SUBSCRIBE_JUNCTION_CONTEXT" variable nil nil [6235 6272])
+            ("RESPONSE_SUBSCRIBE_JUNCTION_CONTEXT" variable nil nil [6313 6355])
+            ("CMD_GET_JUNCTION_VARIABLE" variable nil nil [6390 6422])
+            ("RESPONSE_GET_JUNCTION_VARIABLE" variable nil nil [6458 6495])
+            ("CMD_SET_JUNCTION_VARIABLE" variable nil nil [6530 6562])
+            ("CMD_SUBSCRIBE_JUNCTION_VARIABLE" variable nil nil [6603 6641])
+            ("RESPONSE_SUBSCRIBE_JUNCTION_VARIABLE" variable nil nil [6683 6726])
+            ("CMD_SUBSCRIBE_EDGE_CONTEXT" variable nil nil [6763 6796])
+            ("RESPONSE_SUBSCRIBE_EDGE_CONTEXT" variable nil nil [6833 6871])
+            ("CMD_GET_EDGE_VARIABLE" variable nil nil [6902 6930])
+            ("RESPONSE_GET_EDGE_VARIABLE" variable nil nil [6962 6995])
+            ("CMD_SET_EDGE_VARIABLE" variable nil nil [7026 7054])
+            ("CMD_SUBSCRIBE_EDGE_VARIABLE" variable nil nil [7091 7125])
+            ("RESPONSE_SUBSCRIBE_EDGE_VARIABLE" variable nil nil [7163 7202])
+            ("CMD_SUBSCRIBE_SIM_CONTEXT" variable nil nil [7245 7277])
+            ("RESPONSE_SUBSCRIBE_SIM_CONTEXT" variable nil nil [7320 7357])
+            ("CMD_GET_SIM_VARIABLE" variable nil nil [7394 7421])
+            ("RESPONSE_GET_SIM_VARIABLE" variable nil nil [7459 7491])
+            ("CMD_SET_SIM_VARIABLE" variable nil nil [7528 7555])
+            ("CMD_SUBSCRIBE_SIM_VARIABLE" variable nil nil [7598 7631])
+            ("RESPONSE_SUBSCRIBE_SIM_VARIABLE" variable nil nil [7675 7713])
+            ("CMD_SUBSCRIBE_GUI_CONTEXT" variable nil nil [7749 7781])
+            ("RESPONSE_SUBSCRIBE_GUI_CONTEXT" variable nil nil [7817 7854])
+            ("CMD_GET_GUI_VARIABLE" variable nil nil [7884 7911])
+            ("RESPONSE_GET_GUI_VARIABLE" variable nil nil [7942 7974])
+            ("CMD_SET_GUI_VARIABLE" variable nil nil [8004 8031])
+            ("CMD_SUBSCRIBE_GUI_VARIABLE" variable nil nil [8067 8100])
+            ("RESPONSE_SUBSCRIBE_GUI_VARIABLE" variable nil nil [8137 8175])
+            ("CMD_SUBSCRIBE_LANEAREA_CONTEXT" variable nil nil [8227 8264])
+            ("RESPONSE_SUBSCRIBE_LANEAREA_CONTEXT" variable nil nil [8316 8358])
+            ("CMD_GET_LANEAREA_VARIABLE" variable nil nil [8404 8436])
+            ("RESPONSE_GET_LANEAREA_VARIABLE" variable nil nil [8483 8520])
+            ("CMD_SUBSCRIBE_LANEAREA_VARIABLE" variable nil nil [8572 8610])
+            ("RESPONSE_SUBSCRIBE_LANEAREA_VARIABLE" variable nil nil [8663 8706])
+            ("CMD_SUBSCRIBE_PERSON_CONTEXT" variable nil nil [8745 8780])
+            ("RESPONSE_SUBSCRIBE_PERSON_CONTEXT" variable nil nil [8819 8859])
+            ("CMD_GET_PERSON_VARIABLE" variable nil nil [8892 8922])
+            ("RESPONSE_GET_PERSON_VARIABLE" variable nil nil [8956 8991])
+            ("CMD_SET_PERSON_VARIABLE" variable nil nil [9024 9054])
+            ("CMD_SUBSCRIBE_PERSON_VARIABLE" variable nil nil [9093 9129])
+            ("RESPONSE_SUBSCRIBE_PERSON_VARIABLE" variable nil nil [9169 9210])
+            ("POSITION_LON_LAT" variable nil nil [9360 9383])
+            ("POSITION_2D" variable nil nil [9412 9430])
+            ("POSITION_LON_LAT_ALT" variable nil nil [9476 9503])
+            ("POSITION_3D" variable nil nil [9532 9550])
+            ("POSITION_ROADMAP" variable nil nil [9575 9598])
+            ("TYPE_BOUNDINGBOX" variable nil nil [9731 9754])
+            ("TYPE_POLYGON" variable nil nil [9780 9799])
+            ("TYPE_UBYTE" variable nil nil [9817 9834])
+            ("TYPE_BYTE" variable nil nil [9850 9866])
+            ("TYPE_INTEGER" variable nil nil [9892 9911])
+            ("TYPE_FLOAT" variable nil nil [9921 9938])
+            ("TYPE_DOUBLE" variable nil nil [9949 9967])
+            ("TYPE_STRING" variable nil nil [9990 10008])
+            ("TYPE_TLPHASELIST" variable nil nil [10041 10064])
+            ("TYPE_STRINGLIST" variable nil nil [10084 10106])
+            ("TYPE_COMPOUND" variable nil nil [10126 10146])
+            ("TYPE_COLOR" variable nil nil [10170 10187])
+            ("RTYPE_OK" variable nil nil [10313 10328])
+            ("RTYPE_NOTIMPLEMENTED" variable nil nil [10361 10388])
+            ("RTYPE_ERR" variable nil nil [10411 10427])
+            ("INVALID_DOUBLE_VALUE" code nil nil [10505 10534])
+            ("INVALID_INT_VALUE" code nil nil [10611 10633])
+            ("MAX_ORDER" variable nil nil [10684 10706])
+            ("TLPHASE_RED" variable nil nil [10833 10851])
+            ("TLPHASE_YELLOW" variable nil nil [10868 10889])
+            ("TLPHASE_GREEN" variable nil nil [10905 10925])
+            ("TLPHASE_BLINKING" variable nil nil [10944 10967])
+            ("TLPHASE_NOSIGNAL" variable nil nil [10998 11021])
+            ("REQUEST_AIRDIST" variable nil nil [11159 11181])
+            ("REQUEST_DRIVINGDIST" variable nil nil [11202 11228])
+            ("REMOVE_TELEPORT" variable nil nil [11374 11396])
+            ("REMOVE_PARKING" variable nil nil [11430 11451])
+            ("REMOVE_ARRIVED" variable nil nil [11471 11492])
+            ("REMOVE_VAPORIZED" variable nil nil [11518 11541])
+            ("REMOVE_TELEPORT_ARRIVED" variable nil nil [11584 11614])
+            ("STAGE_WAITING_FOR_DEPART" variable nil nil [11762 11793])
+            ("STAGE_WAITING" variable nil nil [11825 11845])
+            ("STAGE_WALKING" variable nil nil [11888 11908])
+            ("STAGE_DRIVING" variable nil nil [11956 11976])
+            ("STOP_DEFAULT" variable nil nil [12080 12099])
+            ("STOP_PARKING" variable nil nil [12100 12119])
+            ("STOP_TRIGGERED" variable nil nil [12120 12141])
+            ("STOP_CONTAINER_TRIGGERED" variable nil nil [12142 12173])
+            ("STOP_BUS_STOP" variable nil nil [12174 12194])
+            ("STOP_CONTAINER_STOP" variable nil nil [12195 12221])
+            ("STOP_CHARGING_STATION" variable nil nil [12222 12250])
+            ("STOP_PARKING_AREA" variable nil nil [12251 12275])
+            ("DEPARTFLAG_TRIGGERED" code nil nil [12384 12412])
+            ("DEPARTFLAG_CONTAINER_TRIGGERED" code nil nil [12413 12451])
+            ("DEPARTFLAG_NOW" code nil nil [12452 12474])
+            ("DEPARTFLAG_SPEED_RANDOM" code nil nil [12476 12507])
+            ("DEPARTFLAG_SPEED_MAX" code nil nil [12508 12536])
+            ("DEPARTFLAG_LANE_RANDOM" code nil nil [12538 12568])
+            ("DEPARTFLAG_LANE_FREE" code nil nil [12569 12597])
+            ("DEPARTFLAG_LANE_ALLOWED_FREE" code nil nil [12598 12634])
+            ("DEPARTFLAG_LANE_BEST_FREE" code nil nil [12635 12668])
+            ("DEPARTFLAG_LANE_FIRST_ALLOWED" code nil nil [12669 12706])
+            ("DEPARTFLAG_POS_RANDOM" code nil nil [12708 12737])
+            ("DEPARTFLAG_POS_FREE" code nil nil [12738 12765])
+            ("DEPARTFLAG_POS_BASE" code nil nil [12766 12793])
+            ("DEPARTFLAG_POS_LAST" code nil nil [12794 12821])
+            ("DEPARTFLAG_POS_RANDOM_FREE" code nil nil [12822 12856])
+            ("ARRIVALFLAG_LANE_CURRENT" code nil nil [12858 12890])
+            ("ARRIVALFLAG_SPEED_CURRENT" code nil nil [12891 12924])
+            ("ARRIVALFLAG_POS_RANDOM" code nil nil [12926 12956])
+            ("ARRIVALFLAG_POS_MAX" code nil nil [12957 12984])
+            ("ROUTING_MODE_DEFAULT" variable nil nil [13183 13210])
+            ("ROUTING_MODE_AGGREGATED" variable nil nil [13264 13294])
+            ("ID_LIST" variable nil nil [13464 13478])
+            ("ID_COUNT" variable nil nil [13513 13528])
+            ("AUTOMATIC_VARIABLES_SUBSCRIPTION" variable nil nil [13571 13610])
+            ("AUTOMATIC_CONTEXT_SUBSCRIPTION" variable nil nil [13654 13691])
+            ("GENERIC_ATTRIBUTE" variable nil nil [13730 13754])
+            ("LAST_STEP_VEHICLE_NUMBER" variable nil nil [13854 13885])
+            ("LAST_STEP_MEAN_SPEED" variable nil nil [13985 14012])
+            ("LAST_STEP_VEHICLE_ID_LIST" variable nil nil [14110 14142])
+            ("LAST_STEP_OCCUPANCY" variable nil nil [14204 14230])
+            ("LAST_STEP_VEHICLE_HALTING_NUMBER" variable nil nil [14321 14360])
+            ("LAST_STEP_LENGTH" variable nil nil [14432 14455])
+            ("LAST_STEP_TIME_SINCE_DETECTION" variable nil nil [14519 14556])
+            ("LAST_STEP_VEHICLE_DATA" variable nil nil [14573 14602])
+            ("JAM_LENGTH_VEHICLE" variable nil nil [14640 14665])
+            ("JAM_LENGTH_METERS" variable nil nil [14701 14725])
+            ("LAST_STEP_PERSON_ID_LIST" variable nil nil [14765 14796])
+            ("TL_RED_YELLOW_GREEN_STATE" variable nil nil [14872 14904])
+            ("TL_PHASE_INDEX" variable nil nil [14950 14971])
+            ("TL_PROGRAM" variable nil nil [15020 15037])
+            ("TL_PHASE_DURATION" variable nil nil [15079 15103])
+            ("TL_CONTROLLED_LANES" variable nil nil [15147 15173])
+            ("TL_CONTROLLED_LINKS" variable nil nil [15217 15243])
+            ("TL_CURRENT_PHASE" variable nil nil [15297 15320])
+            ("TL_CURRENT_PROGRAM" variable nil nil [15375 15400])
+            ("TL_CONTROLLED_JUNCTIONS" variable nil nil [15448 15478])
+            ("TL_COMPLETE_DEFINITION_RYG" variable nil nil [15525 15558])
+            ("TL_COMPLETE_PROGRAM_RYG" variable nil nil [15602 15632])
+            ("TL_NEXT_SWITCH" variable nil nil [15687 15708])
+            ("TL_EXTERNAL_STATE" variable nil nil [15778 15802])
+            ("LANE_LINK_NUMBER" variable nil nil [15841 15864])
+            ("LANE_EDGE_ID" variable nil nil [15900 15919])
+            ("LANE_LINKS" variable nil nil [15963 15980])
+            ("LANE_ALLOWED" variable nil nil [16034 16053])
+            ("LANE_DISALLOWED" variable nil nil [16111 16133])
+            ("VAR_FOES" variable nil nil [16169 16184])
+            ("VAR_SLOPE" variable nil nil [16230 16246])
+            ("VAR_SPEED" variable nil nil [16272 16288])
+            ("VAR_MAXSPEED" variable nil nil [16371 16390])
+            ("VAR_POSITION" variable nil nil [16468 16487])
+            ("VAR_POSITION3D" variable nil nil [16536 16557])
+            ("VAR_ANGLE" variable nil nil [16583 16599])
+            ("VAR_LENGTH" variable nil nil [16665 16682])
+            ("VAR_COLOR" variable nil nil [16740 16756])
+            ("VAR_ACCEL" variable nil nil [16810 16826])
+            ("VAR_DECEL" variable nil nil [16892 16908])
+            ("VAR_EMERGENCY_DECEL" variable nil nil [16984 17010])
+            ("VAR_APPARENT_DECEL" variable nil nil [17068 17093])
+            ("VAR_ACTIONSTEPLENGTH" variable nil nil [17148 17175])
+            ("VAR_LASTACTIONTIME" variable nil nil [17213 17238])
+            ("VAR_TAU" variable nil nil [17289 17303])
+            ("VAR_VEHICLECLASS" variable nil nil [17343 17366])
+            ("VAR_EMISSIONCLASS" variable nil nil [17407 17431])
+            ("VAR_SHAPECLASS" variable nil nil [17469 17490])
+            ("VAR_MINGAP" variable nil nil [17528 17545])
+            ("VAR_WIDTH" variable nil nil [17584 17600])
+            ("VAR_SHAPE" variable nil nil [17627 17643])
+            ("VAR_TYPE" variable nil nil [17688 17703])
+            ("VAR_ROAD_ID" variable nil nil [17732 17750])
+            ("VAR_LANE_ID" variable nil nil [17809 17827])
+            ("VAR_LANE_INDEX" variable nil nil [17864 17885])
+            ("VAR_ROUTE_ID" variable nil nil [17921 17940])
+            ("VAR_EDGES" variable nil nil [17975 17991])
+            ("VAR_FILL" variable nil nil [18020 18035])
+            ("VAR_LANEPOSITION" variable nil nil [18080 18103])
+            ("VAR_ROUTE" variable nil nil [18130 18146])
+            ("VAR_EDGE_TRAVELTIME" variable nil nil [18194 18220])
+            ("VAR_EDGE_EFFORT" variable nil nil [18263 18285])
+            ("VAR_CURRENT_TRAVELTIME" variable nil nil [18330 18359])
+            ("VAR_SIGNALS" variable nil nil [18397 18415])
+            ("VAR_MOVE_TO" variable nil nil [18459 18477])
+            ("VAR_IMPERFECTION" variable nil nil [18517 18540])
+            ("VAR_SPEED_FACTOR" variable nil nil [18573 18596])
+            ("VAR_SPEED_DEVIATION" variable nil nil [18632 18658])
+            ("VAR_ROUTING_MODE" variable nil nil [18695 18718])
+            ("VAR_SPEED_WITHOUT_TRACI" variable nil nil [18768 18798])
+            ("VAR_BEST_LANES" variable nil nil [18829 18850])
+            ("VAR_SPEEDSETMODE" variable nil nil [18887 18910])
+            ("MOVE_TO_XY" variable nil nil [18984 19001])
+            ("VAR_STOPSTATE" variable nil nil [19114 19134])
+            ("VAR_LANECHANGE_MODE" variable nil nil [19189 19215])
+            ("VAR_ALLOWED_SPEED" variable nil nil [19306 19330])
+            ("VAR_LANEPOSITION_LAT" variable nil nil [19420 19447])
+            ("VAR_LATALIGNMENT" variable nil nil [19513 19536])
+            ("VAR_MAXSPEED_LAT" variable nil nil [19589 19612])
+            ("VAR_MINGAP_LAT" variable nil nil [19663 19684])
+            ("VAR_HEIGHT" variable nil nil [19730 19747])
+            ("VAR_LINE" variable nil nil [19773 19788])
+            ("VAR_VIA" variable nil nil [19813 19827])
+            ("VAR_CO2EMISSION" variable nil nil [19890 19912])
+            ("VAR_COEMISSION" variable nil nil [19974 19995])
+            ("VAR_HCEMISSION" variable nil nil [20057 20078])
+            ("VAR_PMXEMISSION" variable nil nil [20141 20163])
+            ("VAR_NOXEMISSION" variable nil nil [20226 20248])
+            ("VAR_FUELCONSUMPTION" variable nil nil [20315 20341])
+            ("VAR_NOISEEMISSION" variable nil nil [20406 20430])
+            ("VAR_PERSON_NUMBER" variable nil nil [20472 20496])
+            ("VAR_BUS_STOP_WAITING" variable nil nil [20567 20594])
+            ("VAR_LEADER" variable nil nil [20647 20664])
+            ("VAR_ROUTE_INDEX" variable nil nil [20712 20734])
+            ("VAR_WAITING_TIME" variable nil nil [20781 20804])
+            ("VAR_ACCUMULATED_WAITING_TIME" variable nil nil [20845 20880])
+            ("VAR_NEXT_TLS" variable nil nil [20924 20943])
+            ("VAR_TIME_STEP" variable nil nil [20984 21004])
+            ("VAR_ELECTRICITYCONSUMPTION" variable nil nil [21078 21111])
+            ("VAR_LOADED_VEHICLES_NUMBER" variable nil nil [21160 21193])
+            ("VAR_LOADED_VEHICLES_IDS" variable nil nil [21235 21265])
+            ("VAR_DEPARTED_VEHICLES_NUMBER" variable nil nil [21315 21350])
+            ("VAR_DEPARTED_VEHICLES_IDS" variable nil nil [21394 21426])
+            ("VAR_TELEPORT_STARTING_VEHICLES_NUMBER" variable nil nil [21489 21533])
+            ("VAR_TELEPORT_STARTING_VEHICLES_IDS" variable nil nil [21593 21634])
+            ("VAR_TELEPORT_ENDING_VEHICLES_NUMBER" variable nil nil [21695 21737])
+            ("VAR_TELEPORT_ENDING_VEHICLES_IDS" variable nil nil [21795 21834])
+            ("VAR_ARRIVED_VEHICLES_NUMBER" variable nil nil [21884 21918])
+            ("VAR_ARRIVED_VEHICLES_IDS" variable nil nil [21965 21996])
+            ("VAR_DELTA_T" variable nil nil [22027 22045])
+            ("VAR_NET_BOUNDING_BOX" variable nil nil [22081 22108])
+            ("VAR_MIN_EXPECTED_VEHICLES" variable nil nil [22167 22199])
+            ("VAR_STOP_STARTING_VEHICLES_NUMBER" variable nil nil [22258 22298])
+            ("VAR_STOP_STARTING_VEHICLES_IDS" variable nil nil [22354 22391])
+            ("VAR_STOP_ENDING_VEHICLES_NUMBER" variable nil nil [22448 22486])
+            ("VAR_STOP_ENDING_VEHICLES_IDS" variable nil nil [22540 22575])
+            ("VAR_PARKING_STARTING_VEHICLES_NUMBER" variable nil nil [22634 22677])
+            ("VAR_PARKING_STARTING_VEHICLES_IDS" variable nil nil [22733 22773])
+            ("VAR_PARKING_ENDING_VEHICLES_NUMBER" variable nil nil [22830 22871])
+            ("VAR_PARKING_ENDING_VEHICLES_IDS" variable nil nil [22925 22963])
+            ("VAR_COLLIDING_VEHICLES_NUMBER" variable nil nil [23029 23065])
+            ("VAR_COLLIDING_VEHICLES_IDS" variable nil nil [23128 23161])
+            ("CMD_CLEAR_PENDING_VEHICLES" variable nil nil [23235 23268])
+            ("CMD_SAVE_SIMSTATE" variable nil nil [23324 23348])
+            ("VAR_PARAMETER" variable nil nil [23387 23407])
+            ("ADD" variable nil nil [23468 23478])
+            ("REMOVE" variable nil nil [23534 23547])
+            ("COPY" variable nil nil [23596 23607])
+            ("POSITION_CONVERSION" variable nil nil [23632 23658])
+            ("DISTANCE_REQUEST" variable nil nil [23699 23722])
+            ("VAR_DISTANCE" variable nil nil [23756 23775])
+            ("ADD_FULL" variable nil nil [23821 23836])
+            ("FIND_ROUTE" variable nil nil [23864 23881])
+            ("FIND_INTERMODAL_ROUTE" variable nil nil [23911 23939])
+            ("CMD_REROUTE_TRAVELTIME" variable nil nil [23992 24021])
+            ("CMD_REROUTE_EFFORT" variable nil nil [24069 24094])
+            ("VAR_ROUTE_VALID" variable nil nil [24134 24156])
+            ("VAR_STAGE" variable nil nil [24227 24243])
+            ("VAR_NEXT_EDGE" variable nil nil [24349 24369])
+            ("VAR_STAGES_REMAINING" variable nil nil [24436 24463])
+            ("VAR_VEHICLE" variable nil nil [24542 24560])
+            ("APPEND_STAGE" variable nil nil [24596 24615])
+            ("REMOVE_STAGE" variable nil nil [24651 24670])
+            ("VAR_VIEW_ZOOM" variable nil nil [24680 24700])
+            ("VAR_VIEW_OFFSET" variable nil nil [24719 24741])
+            ("VAR_VIEW_SCHEMA" variable nil nil [24758 24780])
+            ("VAR_VIEW_BOUNDARY" variable nil nil [24802 24826])
+            ("VAR_SCREENSHOT" variable nil nil [24842 24863])
+            ("VAR_TRACK_VEHICLE" variable nil nil [24882 24906])
+            ("LCA_NONE" variable nil nil [24985 24997])
+            ("LCA_STAY" code nil nil [25041 25058])
+            ("LCA_LEFT" code nil nil [25089 25106])
+            ("LCA_RIGHT" code nil nil [25138 25156])
+            ("LCA_STRATEGIC" code nil nil [25225 25247])
+            ("LCA_COOPERATIVE" code nil nil [25297 25321])
+            ("LCA_SPEEDGAIN" code nil nil [25388 25410])
+            ("LCA_KEEPRIGHT" code nil nil [25488 25510])
+            ("LCA_TRACI" code nil nil [25557 25575])
+            ("LCA_URGENT" code nil nil [25634 25653])
+            ("LCA_UNKNOWN" code nil nil [25698 25719])
+            ("LCA_BLOCKED_BY_LEFT_LEADER" code nil nil [25801 25836])
+            ("LCA_BLOCKED_BY_LEFT_FOLLOWER" code nil nil [25886 25924])
+            ("LCA_BLOCKED_BY_RIGHT_LEADER" code nil nil [25973 26010])
+            ("LCA_BLOCKED_BY_RIGHT_FOLLOWER" code nil nil [26061 26100])
+            ("LCA_OVERLAPPING" code nil nil [26151 26176])
+            ("LCA_INSUFFICIENT_SPACE" code nil nil [26299 26331])
+            ("LCA_SUBLANE" code nil nil [26367 26388])
+            ("LCA_WANTS_LANECHANGE" code nil nil [26414 26457])
+            ("LCA_WANTS_LANECHANGE_OR_STAY" code nil nil [26491 26553])
+            ("LCA_BLOCKED_LEFT" code nil nil [26576 26652])
+            ("LCA_BLOCKED_RIGHT" code nil nil [26676 26755])
+            ("LCA_BLOCKED_BY_LEADER" code nil nil [26783 26863])
+            ("LCA_BLOCKED_BY_FOLLOWER" code nil nil [26893 26979])
+            ("LCA_BLOCKED" code nil nil [27015 27090])
+            ("LCA_CHANGE_REASONS" variable nil nil [27123 27235]))          
+      :file "constants.py"
+      :pointmax 27329
+      :fsize 27328
+      :lastmodtime '(23246 30528 882134 299000)
+      :unmatched-syntax nil))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!not_beyond!sumo!src!sumo!tools!traci!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

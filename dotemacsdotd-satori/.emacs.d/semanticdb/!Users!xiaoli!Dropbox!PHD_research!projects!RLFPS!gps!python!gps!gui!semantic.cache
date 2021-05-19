@@ -1,0 +1,619 @@
+;; Object gui/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gui/"
+  :tables
+  (list
+    (semanticdb-table "mean_plotter.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Mean Plotter
+
+The Mean Plotter plots data along with its mean. The data is plotted as dots
+whereas the mean is a connected line.
+
+This is used to plot the mean cost after each iteration, along with the initial
+costs for each sample and condition.
+\"\"\"" code nil nil [1 255])
+            ("numpy" include nil nil [256 274])
+            ("matplotlib.pylab" include nil nil [275 305])
+            ("matplotlib.gridspec" include nil nil [306 344])
+            ("gps.gui.util" include nil nil [346 391])
+            ("MeanPlotter" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [507 522])
+                            ("self" variable nil (reparse-symbol indented_block_body) [531 597])
+                            ("self" variable nil (reparse-symbol indented_block_body) [606 641])
+                            ("self" variable nil (reparse-symbol indented_block_body) [651 670])
+                            ("self" variable nil (reparse-symbol indented_block_body) [679 698])
+                            ("self" variable nil (reparse-symbol indented_block_body) [707 726])
+                            ("self" variable nil (reparse-symbol indented_block_body) [735 758])
+                            ("self" variable nil (reparse-symbol indented_block_body) [768 795])
+                            ("self" variable nil (reparse-symbol indented_block_body) [804 838])
+                            ("self" variable nil (reparse-symbol indented_block_body) [847 982])
+                            ("self" code nil (reparse-symbol indented_block_body) [992 1035])
+                            ("self" code nil (reparse-symbol indented_block_body) [1044 1067])
+                            ("self" code nil (reparse-symbol indented_block_body) [1076 1100])
+                            ("self" code nil (reparse-symbol indented_block_body) [1109 1166])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1176 1194])
+                            ("self" code nil (reparse-symbol indented_block_body) [1204 1227])
+                            ("self" code nil (reparse-symbol indented_block_body) [1236 1267]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [431 435])
+                            ("fig" variable nil (reparse-symbol function_parameters) [437 440])
+                            ("gs" variable nil (reparse-symbol function_parameters) [442 444])
+                            ("label" variable nil (reparse-symbol function_parameters) [446 451])
+                            ("color" variable nil (reparse-symbol function_parameters) [460 465])
+                            ("alpha" variable nil (reparse-symbol function_parameters) [475 480])
+                            ("min_itr" variable nil (reparse-symbol function_parameters) [486 493]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [418 1302])
+                    ("init" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1316 1320])
+                            ("data_len" variable nil (reparse-symbol function_parameters) [1322 1330]))                          
+                        :documentation "
+        Initialize plots based off the length of the data array.
+        ")
+                        (reparse-symbol indented_block_body) [1307 1688])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1704 1708])
+                            ("x" variable nil (reparse-symbol function_parameters) [1710 1711])
+                            ("t" variable nil (reparse-symbol function_parameters) [1713 1714]))                          
+                        :documentation "
+        Update the plots with new data x. Assumes x is a one-dimensional array.
+        ")
+                        (reparse-symbol indented_block_body) [1693 2748])
+                    ("draw" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2762 2766]))                          )
+                        (reparse-symbol indented_block_body) [2753 3041])
+                    ("draw_ticklabels" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3066 3070]))                          
+                        :documentation "
+        Redraws the ticklabels. Used to redraw the ticklabels (since they are
+        outside the axis) when something else is drawn over them.
+        ")
+                        (reparse-symbol indented_block_body) [3046 3465]))                  
+                :type "class")
+                nil [394 3465]))          
+      :file "mean_plotter.py"
+      :pointmax 3465
+      :fsize 3464
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "util.py"
+      :file "util.py"
+      :fsize 4436
+      :lastmodtime '(22653 24657 0 0))
+    (semanticdb-table "realtime_plotter.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Realtime Plotter
+
+The Realtime Plotter expects to be constantly given values to plot in realtime.
+It assumes the values are an array and plots different indices at different
+colors according to the spectral colormap.
+\"\"\"" code nil nil [1 225])
+            ("numpy" include nil nil [226 244])
+            ("matplotlib.pylab" include nil nil [245 275])
+            ("matplotlib.gridspec" include nil nil [276 314])
+            ("gps.gui.util" include nil nil [316 361])
+            ("RealtimePlotter" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [480 495])
+                            ("self" variable nil (reparse-symbol indented_block_body) [504 570])
+                            ("self" variable nil (reparse-symbol indented_block_body) [579 614])
+                            ("self" variable nil (reparse-symbol indented_block_body) [624 655])
+                            ("self" variable nil (reparse-symbol indented_block_body) [664 685])
+                            ("self" variable nil (reparse-symbol indented_block_body) [694 715])
+                            ("self" variable nil (reparse-symbol indented_block_body) [724 742])
+                            ("if" code nil (reparse-symbol indented_block_body) [752 810])
+                            ("self" code nil (reparse-symbol indented_block_body) [819 842])
+                            ("self" code nil (reparse-symbol indented_block_body) [851 882]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [413 417])
+                            ("fig" variable nil (reparse-symbol function_parameters) [419 422])
+                            ("gs" variable nil (reparse-symbol function_parameters) [424 426])
+                            ("time_window" variable nil (reparse-symbol function_parameters) [428 439])
+                            ("labels" variable nil (reparse-symbol function_parameters) [445 451])
+                            ("alphas" variable nil (reparse-symbol function_parameters) [458 464]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [400 917])
+                    ("init" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [931 935])
+                            ("data_len" variable nil (reparse-symbol function_parameters) [937 945]))                          
+                        :documentation "
+        Initialize plots based off the length of the data array.
+        ")
+                        (reparse-symbol indented_block_body) [922 1727])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1743 1747])
+                            ("x" variable nil (reparse-symbol function_parameters) [1749 1750]))                          
+                        :documentation "
+        Update the plots with new data x. Assumes x is a one-dimensional array.
+        ")
+                        (reparse-symbol indented_block_body) [1732 2598])
+                    ("draw" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2612 2616]))                          )
+                        (reparse-symbol indented_block_body) [2603 2844]))                  
+                :type "class")
+                nil [364 2844]))          
+      :file "realtime_plotter.py"
+      :pointmax 2844
+      :fsize 2843
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax '((NAME 2330 . 2337) (IF 2348 . 2350) (ELSE 2358 . 2362) (NAME 2161 . 2163) (IF 2177 . 2179) (ELSE 2187 . 2191) (NAME 1362 . 1367) (IF 1386 . 1388) (ELSE 1414 . 1418) (NAME 1289 . 1294) (IF 1313 . 1315) (ELSE 1341 . 1345)))
+    (semanticdb-table "gps_training_gui.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+GPS Training GUI
+
+The GPS Training GUI is used to interact with the GPS algorithm during training.
+It contains the below seven functionalities:
+
+Action Panel                contains buttons for stop, reset, go, fail
+Action Status Textbox       displays action status
+Algorithm Status Textbox    displays algorithm status
+Cost Plot                   displays costs after each iteration
+Algorithm Output Textbox    displays algorithm output after each iteration
+3D Trajectory Visualizer    displays 3D trajectories after each iteration
+Image Visualizer            displays images received from a rostopic
+
+For more detailed documentation, visit: rll.berkeley.edu/gps/gui
+\"\"\"" code nil nil [1 677])
+            ("time" include nil nil [678 689])
+            ("threading" include nil nil [690 706])
+            ("numpy" include nil nil [708 726])
+            ("matplotlib.pyplot" include nil nil [727 758])
+            ("matplotlib.gridspec" include nil nil [759 797])
+            ("gps.gui.config" include nil nil [799 832])
+            ("gps.gui.action_panel" include nil nil [833 885])
+            ("gps.gui.textbox" include nil nil [886 921])
+            ("gps.gui.mean_plotter" include nil nil [922 966])
+            ("gps.gui.plotter_3d" include nil nil [967 1007])
+            ("gps.gui.image_visualizer" include nil nil [1008 1060])
+            ("gps.gui.util" include nil nil [1061 1126])
+            ("gps.proto.gps_pb2" include nil nil [1128 1177])
+            ("gps.algorithm.algorithm_badmm" include nil nil [1203 1259])
+            ("gps.algorithm.algorithm_mdgps" include nil nil [1260 1316])
+            ("GPSTrainingGUI" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1394 1425])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1434 1488])
+                            ("if" code nil (reparse-symbol indented_block_body) [1497 1668])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1708 1742])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1795 1814])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1880 1899])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1908 2134])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2143 2168])
+                            ("actions_arr" variable nil (reparse-symbol indented_block_body) [2197 2502])
+                            ("plt" code nil (reparse-symbol indented_block_body) [2536 2545])
+                            ("plt" variable nil (reparse-symbol indented_block_body) [2554 2586])
+                            ("for" code nil (reparse-symbol indented_block_body) [2595 2701])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2710 2759])
+                            ("self" code nil (reparse-symbol indented_block_body) [2768 2875])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2927 2962])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2971 3024])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3033 3086])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3095 3148])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3157 3210])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3219 3272])
+                            ("if" code nil (reparse-symbol indented_block_body) [3281 3504])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3546 3631])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3640 3720])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3729 3810])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3819 4107])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4116 4231])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4240 4369])
+                            ("if" code nil (reparse-symbol indented_block_body) [4378 4622])
+                            ("self" code nil (reparse-symbol indented_block_body) [4663 4697])
+                            ("self" code nil (reparse-symbol indented_block_body) [4706 4753])
+                            ("if" code nil (reparse-symbol indented_block_body) [4762 4869])
+                            ("for" code nil (reparse-symbol indented_block_body) [4943 5061])
+                            ("self" code nil (reparse-symbol indented_block_body) [5069 5190])
+                            ("self" code nil (reparse-symbol indented_block_body) [5199 5315])
+                            ("self" code nil (reparse-symbol indented_block_body) [5324 5450])
+                            ("self" code nil (reparse-symbol indented_block_body) [5459 5587])
+                            ("self" code nil (reparse-symbol indented_block_body) [5597 5620])
+                            ("display_calculating" function (:arguments 
+                              ( ("delay" variable nil (reparse-symbol function_parameters) [5691 5696])
+                                ("run_event" variable nil (reparse-symbol function_parameters) [5698 5707]))                              ) (reparse-symbol indented_block_body) [5667 6219])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6228 6269])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6278 6398])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6407 6445])
+                            ("self" code nil (reparse-symbol indented_block_body) [6454 6486]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1366 1370])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [1372 1383]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1353 6487])
+                    ("request_stop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6538 6542])
+                            ("event" variable nil (reparse-symbol function_parameters) [6544 6549]))                          )
+                        (reparse-symbol indented_block_body) [6521 6591])
+                    ("request_reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6614 6618])
+                            ("event" variable nil (reparse-symbol function_parameters) [6620 6625]))                          )
+                        (reparse-symbol indented_block_body) [6596 6668])
+                    ("request_go" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6688 6692])
+                            ("event" variable nil (reparse-symbol function_parameters) [6694 6699]))                          )
+                        (reparse-symbol indented_block_body) [6673 6739])
+                    ("request_fail" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6761 6765])
+                            ("event" variable nil (reparse-symbol function_parameters) [6767 6772]))                          )
+                        (reparse-symbol indented_block_body) [6744 6814])
+                    ("request_mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6836 6840])
+                            ("request" variable nil (reparse-symbol function_parameters) [6842 6849]))                          
+                        :documentation "
+        Sets the request mode (stop, reset, go, fail). The request is read by
+        gps_main before sampling, and the appropriate action is taken.
+        ")
+                        (reparse-symbol indented_block_body) [6819 7215])
+                    ("process_mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7237 7241]))                          
+                        :documentation "
+        Completes the current request, after it is first read by gps_main.
+        Displays visual confirmation that the request was processed,
+        displays any error messages, and then switches into mode 'run' or 'wait'.
+        ")
+                        (reparse-symbol indented_block_body) [7220 8078])
+                    ("wait_mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8097 8101]))                          )
+                        (reparse-symbol indented_block_body) [8083 8239])
+                    ("run_mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8257 8261]))                          )
+                        (reparse-symbol indented_block_body) [8244 8398])
+                    ("end_mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8416 8420]))                          )
+                        (reparse-symbol indented_block_body) [8403 8555])
+                    ("estop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8570 8574])
+                            ("event" variable nil (reparse-symbol function_parameters) [8576 8581]))                          )
+                        (reparse-symbol indented_block_body) [8560 8644])
+                    ("set_action_text" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8689 8693])
+                            ("text" variable nil (reparse-symbol function_parameters) [8695 8699]))                          )
+                        (reparse-symbol indented_block_body) [8669 8822])
+                    ("set_action_bgcolor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8850 8854])
+                            ("color" variable nil (reparse-symbol function_parameters) [8856 8861])
+                            ("alpha" variable nil (reparse-symbol function_parameters) [8863 8868]))                          )
+                        (reparse-symbol indented_block_body) [8827 9006])
+                    ("set_status_text" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9031 9035])
+                            ("text" variable nil (reparse-symbol function_parameters) [9037 9041]))                          )
+                        (reparse-symbol indented_block_body) [9011 9164])
+                    ("set_output_text" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9189 9193])
+                            ("text" variable nil (reparse-symbol function_parameters) [9195 9199]))                          )
+                        (reparse-symbol indented_block_body) [9169 9322])
+                    ("append_output_text" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9350 9354])
+                            ("text" variable nil (reparse-symbol function_parameters) [9356 9360]))                          )
+                        (reparse-symbol indented_block_body) [9327 9486])
+                    ("start_display_calculating" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9521 9525]))                          )
+                        (reparse-symbol indented_block_body) [9491 9564])
+                    ("stop_display_calculating" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9598 9602]))                          )
+                        (reparse-symbol indented_block_body) [9569 9643])
+                    ("set_image_overlays" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9671 9675])
+                            ("condition" variable nil (reparse-symbol function_parameters) [9677 9686]))                          
+                        :documentation "
+        Sets up the image visualizer with what images to overlay if
+        \"overlay_initial_image\" or \"overlay_target_image\" is pressed.
+        ")
+                        (reparse-symbol indented_block_body) [9648 10526])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10575 10579])
+                            ("itr" variable nil (reparse-symbol function_parameters) [10581 10584])
+                            ("algorithm" variable nil (reparse-symbol function_parameters) [10586 10595])
+                            ("agent" variable nil (reparse-symbol function_parameters) [10597 10602])
+                            ("traj_sample_lists" variable nil (reparse-symbol function_parameters) [10604 10621])
+                            ("pol_sample_lists" variable nil (reparse-symbol function_parameters) [10623 10639]))                          
+                        :documentation "
+        After each iteration, update the iteration data output, the cost plot,
+        and the 3D trajectory visualizations (if end effector points exist).
+        ")
+                        (reparse-symbol indented_block_body) [10564 11443])
+                    ("_output_column_titles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11474 11478])
+                            ("algorithm" variable nil (reparse-symbol function_parameters) [11480 11489])
+                            ("policy_titles" variable nil (reparse-symbol function_parameters) [11491 11504]))                          
+                        :documentation "
+        Setup iteration data column titles: iteration, average cost, and for
+        each condition the mean cost over samples, step size, linear Guassian
+        controller entropies, and initial/final KL divergences for BADMM.
+        ")
+                        (reparse-symbol indented_block_body) [11448 12877])
+                    ("_update_iteration_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12909 12913])
+                            ("itr" variable nil (reparse-symbol function_parameters) [12915 12918])
+                            ("algorithm" variable nil (reparse-symbol function_parameters) [12920 12929])
+                            ("costs" variable nil (reparse-symbol function_parameters) [12931 12936])
+                            ("pol_sample_lists" variable nil (reparse-symbol function_parameters) [12938 12954]))                          
+                        :documentation "
+        Update iteration data information: iteration, average cost, and for
+        each condition the mean cost over samples, step size, linear Guassian
+        controller entropies, and initial/final KL divergences for BADMM.
+        ")
+                        (reparse-symbol indented_block_body) [12882 14709])
+                    ("_update_trajectory_visualizations" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14752 14756])
+                            ("algorithm" variable nil (reparse-symbol function_parameters) [14758 14767])
+                            ("agent" variable nil (reparse-symbol function_parameters) [14769 14774])
+                            ("traj_sample_lists" variable nil (reparse-symbol function_parameters) [14792 14809])
+                            ("pol_sample_lists" variable nil (reparse-symbol function_parameters) [14811 14827]))                          
+                        :documentation "
+        Update 3D trajectory visualizations information: the trajectory samples,
+        policy samples, and linear Gaussian controller means and covariances.
+        ")
+                        (reparse-symbol indented_block_body) [14714 15728])
+                    ("_calculate_3d_axis_limits" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15763 15767])
+                            ("traj_sample_lists" variable nil (reparse-symbol function_parameters) [15769 15786])
+                            ("pol_sample_lists" variable nil (reparse-symbol function_parameters) [15788 15804]))                          
+                        :documentation "
+        Calculate the 3D axis limits shared between trajectory plots,
+        based on the minimum and maximum xyz values across all samples.
+        ")
+                        (reparse-symbol indented_block_body) [15733 16793])
+                    ("_update_linear_gaussian_controller_plots" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16843 16847])
+                            ("algorithm" variable nil (reparse-symbol function_parameters) [16849 16858])
+                            ("agent" variable nil (reparse-symbol function_parameters) [16860 16865])
+                            ("m" variable nil (reparse-symbol function_parameters) [16867 16868]))                          
+                        :documentation "
+        Update the linear Guassian controller plots with iteration data,
+        for the mean and covariances of the end effector points.
+        ")
+                        (reparse-symbol indented_block_body) [16798 18172])
+                    ("_update_samples_plots" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18203 18207])
+                            ("sample_lists" variable nil (reparse-symbol function_parameters) [18209 18221])
+                            ("m" variable nil (reparse-symbol function_parameters) [18223 18224])
+                            ("color" variable nil (reparse-symbol function_parameters) [18226 18231])
+                            ("label" variable nil (reparse-symbol function_parameters) [18233 18238]))                          
+                        :documentation "
+        Update the samples plots with iteration data, for the trajectory samples
+        and the policy samples.
+        ")
+                        (reparse-symbol indented_block_body) [18177 18694])
+                    ("save_figure" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18715 18719])
+                            ("filename" variable nil (reparse-symbol function_parameters) [18721 18729]))                          )
+                        (reparse-symbol indented_block_body) [18699 18768]))                  
+                :type "class")
+                nil [1318 18768]))          
+      :file "gps_training_gui.py"
+      :pointmax 18768
+      :fsize 18767
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "config.py"
+      :file "config.py"
+      :fsize 5434
+      :lastmodtime '(22653 24657 0 0))
+    (semanticdb-table "action_panel.py"
+      :file "action_panel.py"
+      :fsize 4321
+      :lastmodtime '(22653 24657 0 0))
+    (semanticdb-table "textbox.py"
+      :file "textbox.py"
+      :fsize 2868
+      :lastmodtime '(22653 24657 0 0))
+    (semanticdb-table "plotter_3d.py"
+      :file "plotter_3d.py"
+      :fsize 5375
+      :lastmodtime '(22653 24657 0 0))
+    (semanticdb-table "image_visualizer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Image Visualizer
+
+The Image Visualizer class expects to be given images in real time (via the
+update function), and displays those images onto the screen. Optionally,
+images can be supplied via a rostopic.
+
+The Image Visualizer can also overlay an initial image or target image on top 
+of the realtime images. This is used for resetting the task space after each
+sample if the robot disturbed it during sampling.
+\"\"\"" code nil nil [1 421])
+            ("numpy" include nil nil [422 440])
+            ("matplotlib.pyplot" include nil nil [441 472])
+            ("matplotlib.gridspec" include nil nil [473 511])
+            ("gps.gui.action_panel" include nil nil [513 565])
+            ("logging" include nil nil [567 581])
+            ("LOGGER" variable nil nil [582 618])
+            ("ROS_ENABLED" variable nil nil [619 638])
+            ("ImageVisualizer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        If rostopic is given to this constructor, then the image visualizer will 
+        automatically update with rostopic image. Else, the update method must 
+        be manually called to supply images.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1092 1314])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1349 1360])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1369 1395])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1404 1430])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1464 1502])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1511 1548])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1557 1583])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1592 1618])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1627 1652])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1661 1686])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1695 1736])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1745 1770])
+                            ("actions_arr" variable nil (reparse-symbol indented_block_body) [1798 2021])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2056 2071])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2080 2146])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2155 2195])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2204 2243])
+                            ("if" code nil (reparse-symbol indented_block_body) [2253 2376])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2385 2434])
+                            ("self" code nil (reparse-symbol indented_block_body) [2443 2472])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2481 2536])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2545 2643])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2652 2750])
+                            ("self" code nil (reparse-symbol indented_block_body) [2760 2783])
+                            ("self" code nil (reparse-symbol indented_block_body) [2792 2823])
+                            ("if" code nil (reparse-symbol indented_block_body) [2911 3063]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1010 1014])
+                            ("fig" variable nil (reparse-symbol function_parameters) [1016 1019])
+                            ("gs" variable nil (reparse-symbol function_parameters) [1021 1023])
+                            ("cropsize" variable nil (reparse-symbol function_parameters) [1025 1033])
+                            ("rostopic" variable nil (reparse-symbol function_parameters) [1040 1048])
+                            ("show_overlay_buttons" variable nil (reparse-symbol function_parameters) [1055 1075]))                          
+                        :documentation "
+        If rostopic is given to this constructor, then the image visualizer will 
+        automatically update with rostopic image. Else, the update method must 
+        be manually called to supply images.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [997 3063])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3079 3083])
+                            ("image" variable nil (reparse-symbol function_parameters) [3085 3090]))                          
+                        :documentation " Update images. ")
+                        (reparse-symbol indented_block_body) [3068 3526])
+                    ("update_ros" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3546 3550])
+                            ("image_msg" variable nil (reparse-symbol function_parameters) [3552 3561]))                          )
+                        (reparse-symbol indented_block_body) [3531 3877])
+                    ("get_current_image" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3904 3908]))                          )
+                        (reparse-symbol indented_block_body) [3882 3946])
+                    ("set_initial_image" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3973 3977])
+                            ("image" variable nil (reparse-symbol function_parameters) [3979 3984])
+                            ("alpha" variable nil (reparse-symbol function_parameters) [3986 3991]))                          )
+                        (reparse-symbol indented_block_body) [3951 4138])
+                    ("set_target_image" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4164 4168])
+                            ("image" variable nil (reparse-symbol function_parameters) [4170 4175])
+                            ("alpha" variable nil (reparse-symbol function_parameters) [4177 4182]))                          )
+                        (reparse-symbol indented_block_body) [4143 4327])
+                    ("toggle_initial_image_overlay" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4365 4369])
+                            ("event" variable nil (reparse-symbol function_parameters) [4371 4376]))                          )
+                        (reparse-symbol indented_block_body) [4332 4930])
+                    ("toggle_target_image_overlay" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4967 4971])
+                            ("event" variable nil (reparse-symbol function_parameters) [4973 4978]))                          )
+                        (reparse-symbol indented_block_body) [4935 5522])
+                    ("draw" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5536 5540]))                          )
+                        (reparse-symbol indented_block_body) [5527 5880]))                  
+                :type "class")
+                nil [961 5880]))          
+      :file "image_visualizer.py"
+      :pointmax 5880
+      :fsize 5879
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 915 . 959) (COLON 913 . 914) (AS 909 . 911) (EXCEPT 871 . 877) (INDENT_BLOCK 826 . 871) (COLON 824 . 825) (TRY 639 . 642) (AS 820 . 822))))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!gui!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

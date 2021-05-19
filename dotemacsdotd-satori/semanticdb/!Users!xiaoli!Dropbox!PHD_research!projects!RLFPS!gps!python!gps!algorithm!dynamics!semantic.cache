@@ -1,0 +1,315 @@
+;; Object dynamics/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dynamics/"
+  :tables
+  (list
+    (semanticdb-table "dynamics_lr_prior.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines linear regression with an arbitrary prior. \"\"\"" code nil nil [1 69])
+            ("numpy" include nil nil [70 88])
+            ("gps.algorithm.dynamics.dynamics" include nil nil [90 142])
+            ("gps.algorithm.algorithm_utils" include nil nil [143 206])
+            ("DynamicsLRPrior" type
+               (:documentation " Dynamics with linear regression, with arbitrary prior. "
+                :superclasses ("Dynamics")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Dynamics" code nil (reparse-symbol indented_block_body) [354 390])
+                            ("self" variable nil (reparse-symbol indented_block_body) [399 413])
+                            ("self" variable nil (reparse-symbol indented_block_body) [422 436])
+                            ("self" variable nil (reparse-symbol indented_block_body) [445 466])
+                            ("self" variable nil (reparse-symbol indented_block_body) [475 568]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [326 330])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [332 343]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [313 569])
+                    ("update_prior" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [591 595])
+                            ("samples" variable nil (reparse-symbol function_parameters) [597 604]))                          
+                        :documentation " Update dynamics prior. ")
+                        (reparse-symbol indented_block_body) [574 734])
+                    ("get_prior" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [753 757]))                          
+                        :documentation " Return the dynamics prior. ")
+                        (reparse-symbol indented_block_body) [739 829])
+                    ("fit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [911 915])
+                            ("X" variable nil (reparse-symbol function_parameters) [917 918])
+                            ("U" variable nil (reparse-symbol function_parameters) [920 921]))                          
+                        :documentation " Fit dynamics. ")
+                        (reparse-symbol indented_block_body) [903 1979]))                  
+                :type "class")
+                nil [209 1979]))          
+      :file "dynamics_lr_prior.py"
+      :pointmax 1979
+      :fsize 1978
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "dynamics.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the base class for dynamics estimation. \"\"\"" code nil nil [1 66])
+            ("abc" include nil nil [67 77])
+            ("numpy" include nil nil [79 97])
+            ("Dynamics" type
+               (:documentation " Dynamics superclass. "
+                :superclasses ("object")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [161 188])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [235 266])
+                            ("self" variable nil (reparse-symbol indented_block_body) [492 518])
+                            ("self" variable nil (reparse-symbol indented_block_body) [527 553])
+                            ("self" variable nil (reparse-symbol indented_block_body) [562 595]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [207 211])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [213 224]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [194 611])
+                    ("update_prior" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [657 661])
+                            ("sample" variable nil (reparse-symbol function_parameters) [663 669]))                          
+                        :documentation " Update dynamics prior. ")
+                        (reparse-symbol indented_block_body) [616 781])
+                    ("get_prior" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [824 828]))                          
+                        :documentation " Returns prior object. ")
+                        (reparse-symbol indented_block_body) [786 939])
+                    ("fit" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [976 980])
+                            ("sample_list" variable nil (reparse-symbol function_parameters) [982 993]))                          
+                        :documentation " Fit dynamics. ")
+                        (reparse-symbol indented_block_body) [944 1096])
+                    ("copy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1110 1114]))                          
+                        :documentation " Return a copy of the dynamics estimate. ")
+                        (reparse-symbol indented_block_body) [1101 1352]))                  
+                :type "class")
+                nil [100 1352]))          
+      :file "dynamics.py"
+      :pointmax 1352
+      :fsize 1351
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "dynamics_lr.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines linear regression for dynamics estimation. \"\"\"" code nil nil [1 69])
+            ("numpy" include nil nil [70 88])
+            ("gps.algorithm.dynamics.dynamics" include nil nil [90 142])
+            ("DynamicsLR" type
+               (:documentation " Dynamics with linear regression, with constant prior. "
+                :superclasses ("Dynamics")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Dynamics" code nil (reparse-symbol indented_block_body) [284 320])
+                            ("self" variable nil (reparse-symbol indented_block_body) [329 343])
+                            ("self" variable nil (reparse-symbol indented_block_body) [352 366])
+                            ("self" variable nil (reparse-symbol indented_block_body) [375 396]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [256 260])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [262 273]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [243 397])
+                    ("update_prior" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [419 423])
+                            ("sample" variable nil (reparse-symbol function_parameters) [425 431]))                          
+                        :documentation " Update dynamics prior. ")
+                        (reparse-symbol indented_block_body) [402 528])
+                    ("get_prior" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [547 551]))                          
+                        :documentation " Return the dynamics prior, or None if constant prior. ")
+                        (reparse-symbol indented_block_body) [533 644])
+                    ("fit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [657 661])
+                            ("X" variable nil (reparse-symbol function_parameters) [663 664])
+                            ("U" variable nil (reparse-symbol function_parameters) [666 667]))                          
+                        :documentation " Fit dynamics. ")
+                        (reparse-symbol indented_block_body) [649 1766]))                  
+                :type "class")
+                nil [145 1766]))          
+      :file "dynamics_lr.py"
+      :pointmax 1766
+      :fsize 1765
+      :lastmodtime '(22697 58688 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "dynamics_prior_gmm.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines the GMM prior for dynamics estimation. \"\"\"" code nil nil [1 65])
+            ("copy" include nil nil [66 77])
+            ("logging" include nil nil [78 92])
+            ("numpy" include nil nil [94 112])
+            ("gps.algorithm.dynamics.config" include nil nil [114 169])
+            ("gps.utility.gmm" include nil nil [170 201])
+            ("LOGGER" variable nil nil [204 240])
+            ("DynamicsPriorGMM" type
+               (:documentation "
+    A dynamics prior encoded as a GMM over [x_t, u_t, x_t+1] points.
+    See:
+        S. Levine*, C. Finn*, T. Darrell, P. Abbeel, \"End-to-end
+        training of Deep Visuomotor Policies\", arXiv:1504.00702,
+        Appendix A.3.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Hyperparameters:
+            min_samples_per_cluster: Minimum samples per cluster.
+            max_clusters: Maximum number of clusters to fit.
+            max_samples: Maximum number of trajectories to use for
+                fitting the GMM at any given time.
+            strength: Adjusts the strength of the prior.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [566 908])
+                            ("config" variable nil (reparse-symbol indented_block_body) [917 954])
+                            ("config" code nil (reparse-symbol indented_block_body) [963 989])
+                            ("self" variable nil (reparse-symbol indented_block_body) [998 1024])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1033 1046])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1055 1068])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1077 1093])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1102 1163])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1172 1224])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1233 1287])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1296 1342]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [538 542])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [544 555]))                          
+                        :documentation "
+        Hyperparameters:
+            min_samples_per_cluster: Minimum samples per cluster.
+            max_clusters: Maximum number of clusters to fit.
+            max_samples: Maximum number of trajectories to use for
+                fitting the GMM at any given time.
+            strength: Adjusts the strength of the prior.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [525 1343])
+                    ("initial_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1366 1370]))                          
+                        :documentation " Return dynamics prior for initial time step. ")
+                        (reparse-symbol indented_block_body) [1348 1815])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1831 1835])
+                            ("X" variable nil (reparse-symbol function_parameters) [1837 1838])
+                            ("U" variable nil (reparse-symbol function_parameters) [1840 1841]))                          
+                        :documentation "
+        Update prior with additional data.
+        Args:
+            X: A N x T x dX matrix of sequential state data.
+            U: A N x T x dU matrix of sequential control data.
+        ")
+                        (reparse-symbol indented_block_body) [1820 3138])
+                    ("eval" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3152 3156])
+                            ("Dx" variable nil (reparse-symbol function_parameters) [3158 3160])
+                            ("Du" variable nil (reparse-symbol function_parameters) [3162 3164])
+                            ("pts" variable nil (reparse-symbol function_parameters) [3166 3169]))                          
+                        :documentation "
+        Evaluate prior.
+        Args:
+            pts: A N x Dx+Du+Dx matrix.
+        ")
+                        (reparse-symbol indented_block_body) [3143 3710]))                  
+                :type "class")
+                nil [243 3710]))          
+      :file "dynamics_prior_gmm.py"
+      :pointmax 3710
+      :fsize 3709
+      :lastmodtime '(22697 59988 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" Default configuration and hyperparameter values for dynamics objects. \"\"\"" code nil nil [1 78])
+            ("DYN_PRIOR_GMM" variable nil nil [100 222]))          
+      :file "config.py"
+      :pointmax 223
+      :fsize 222
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "dynamics_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines utility classes and functions for dynamics. \"\"\"" code nil nil [1 70])
+            ("numpy" include nil nil [71 89])
+            ("guess_dynamics" function
+               (:documentation "
+    Initial guess at the model using position-velocity assumption.
+    Note: This code assumes joint positions occupy the first dU state
+          indices and joint velocities occupy the next dU.
+    Args:
+        gains: dU dimensional joint gains.
+        acc: dU dimensional joint acceleration.
+        dX: Dimensionality of the state.
+        dU: Dimensionality of the action.
+        dt: Length of a time step.
+    Returns:
+        Fd: A dX by dX+dU transition matrix.
+        fc: A dX bias vector.
+    "
+                :arguments 
+                  ( ("gains" variable nil (reparse-symbol function_parameters) [111 116])
+                    ("acc" variable nil (reparse-symbol function_parameters) [118 121])
+                    ("dX" variable nil (reparse-symbol function_parameters) [123 125])
+                    ("dU" variable nil (reparse-symbol function_parameters) [127 129])
+                    ("dt" variable nil (reparse-symbol function_parameters) [131 133]))                  )
+                nil [92 1169]))          
+      :file "dynamics_utils.py"
+      :pointmax 1169
+      :fsize 1168
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!algorithm!dynamics!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

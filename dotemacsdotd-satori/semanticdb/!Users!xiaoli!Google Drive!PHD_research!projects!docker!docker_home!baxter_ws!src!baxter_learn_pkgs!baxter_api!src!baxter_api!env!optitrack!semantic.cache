@@ -1,0 +1,134 @@
+;; Object optitrack/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "optitrack/"
+  :tables
+  (list
+    (semanticdb-table "insert_scene.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("pub_goal_marker" include nil nil [37 80])
+            ("numpy" include nil nil [81 99])
+            ("motive_to_baxter_transform" include nil nil [100 167])
+            ("InsertScene" type
+               (:members 
+                  ( ("'''
+    insert objects into the environment (defined in config.py) and obtain pose feedback
+    '''" code nil (reparse-symbol indented_block_body) [195 294])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [341 376])
+                            ("self" variable nil (reparse-symbol indented_block_body) [385 442])
+                            ("for" code nil (reparse-symbol indented_block_body) [465 886])
+                            ("self" code nil (reparse-symbol indented_block_body) [895 933])
+                            ("self" variable nil (reparse-symbol indented_block_body) [942 962]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [317 321])
+                            ("config" variable nil (reparse-symbol function_parameters) [323 329]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [304 963])
+                    ("update_scene_objects" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1005 1009]))                          )
+                        (reparse-symbol indented_block_body) [980 1235]))                  
+                :type "class")
+                nil [170 1235])
+            ("if" code nil nil [1241 1423]))          
+      :file "insert_scene.py"
+      :pointmax 1423
+      :fsize 1422
+      :lastmodtime '(23119 62586 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "pub_goal_marker.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [24 36])
+            ("visualization_msgs.msg" include nil nil [37 91])
+            ("interactive_markers.interactive_marker_server" include nil nil [92 151])
+            ("visualization_msgs.msg" include nil nil [152 188])
+            ("geometry_msgs.msg" include nil nil [189 230])
+            ("interactive_markers.menu_handler" include nil nil [231 277])
+            ("MarkerPublisher" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [342 375])
+                            ("self" variable nil (reparse-symbol indented_block_body) [384 480])
+                            ("self" variable nil (reparse-symbol indented_block_body) [489 578])
+                            ("rospy" code nil (reparse-symbol indented_block_body) [597 632])
+                            ("self" variable nil (reparse-symbol indented_block_body) [642 708])
+                            ("self" variable nil (reparse-symbol indented_block_body) [717 750])
+                            ("self" variable nil (reparse-symbol indented_block_body) [768 797])
+                            ("self" variable nil (reparse-symbol indented_block_body) [806 833]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [327 331]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [314 834])
+                    ("add_marker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [918 922])
+                            ("name" variable nil (reparse-symbol function_parameters) [943 947])
+                            ("pose" variable nil (reparse-symbol function_parameters) [968 972])
+                            ("scale" variable nil (reparse-symbol function_parameters) [1029 1034])
+                            ("rgba" variable nil (reparse-symbol function_parameters) [1091 1095])
+                            ("marker_type" variable nil (reparse-symbol function_parameters) [1179 1190]))                          )
+                        (reparse-symbol indented_block_body) [903 2409])
+                    ("update_marker_pose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2437 2441])
+                            ("name" variable nil (reparse-symbol function_parameters) [2443 2447])
+                            ("pose" variable nil (reparse-symbol function_parameters) [2449 2453]))                          )
+                        (reparse-symbol indented_block_body) [2414 2976])
+                    ("publish_marker_array" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3029 3033]))                          )
+                        (reparse-symbol indented_block_body) [3004 3302])
+                    ("process_int_marker_feedback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3350 3354])
+                            ("feedback" variable nil (reparse-symbol function_parameters) [3356 3364]))                          )
+                        (reparse-symbol indented_block_body) [3318 4625])
+                    ("makeBox" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4650 4654])
+                            ("msg" variable nil (reparse-symbol function_parameters) [4656 4659]))                          )
+                        (reparse-symbol indented_block_body) [4638 4994])
+                    ("makeBoxControl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5027 5031])
+                            ("msg" variable nil (reparse-symbol function_parameters) [5033 5036]))                          )
+                        (reparse-symbol indented_block_body) [5008 5238])
+                    ("make6DofMarker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5271 5275])
+                            ("fixed" variable nil (reparse-symbol function_parameters) [5277 5282])
+                            ("interaction_mode" variable nil (reparse-symbol function_parameters) [5284 5300])
+                            ("position" variable nil (reparse-symbol function_parameters) [5302 5310])
+                            ("show_6dof" variable nil (reparse-symbol function_parameters) [5312 5321]))                          )
+                        (reparse-symbol indented_block_body) [5252 9303]))                  
+                :type "class")
+                nil [279 9303])
+            ("if" code nil nil [9314 11458]))          
+      :file "pub_goal_marker.py"
+      :pointmax 11458
+      :fsize 11457
+      :lastmodtime '(23119 62586 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "motive_to_baxter_transform.py"
+      :file "motive_to_baxter_transform.py"
+      :fsize 2676
+      :lastmodtime '(23119 62586 0 0)))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!baxter_ws!src!baxter_learn_pkgs!baxter_api!src!baxter_api!env!optitrack!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

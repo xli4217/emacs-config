@@ -1,0 +1,123 @@
+;; Object ai2thor/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ai2thor/"
+  :tables
+  (list
+    (semanticdb-table "experiments.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("rl_pipeline.env.ai2thor.ai2thor_env" include nil nil [31 89])
+            ("rl_pipeline.env.fsa_augmented_env.fsa_augmented_env" include nil nil [90 169])
+            ("rl_pipeline.algo_devel.value_methods.runner" include nil nil [170 239])
+            ("rl_pipeline.algo_devel.value_methods.config" include nil nil [240 340])
+            ("rl_pipeline.train.rl.train" include nil nil [342 386])
+            ("rl_pipeline.deploy.deploy" include nil nil [387 431])
+            ("examples.nips2018.ai2thor.q_function.mlp_q" include nil nil [434 493])
+            ("fire" include nil nil [494 505])
+            ("task" include nil nil [506 537])
+            ("tl_tools.tltl_utils" include nil nil [538 574])
+            ("pickup_target" variable nil nil [576 593])
+            ("receptacle_target" variable nil nil [641 662])
+            ("pickup_target_is_in" variable nil nil [675 698])
+            ("inventory" variable nil nil [709 722])
+            ("current_object" variable nil nil [743 761])
+            ("openable" variable nil nil [777 789])
+            ("pickupable" variable nil nil [811 825])
+            ("is_receptacle" variable nil nil [845 862])
+            ("is_open" variable nil nil [879 890])
+            ("visible" variable nil nil [913 924])
+            ("achieved" code nil nil [947 960])
+            ("lettuce_id" variable nil nil [984 999])
+            ("fridge_id" variable nil nil [1028 1042])
+            ("Reward" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1106 1126])
+                            ("spec_full" variable nil (reparse-symbol indented_block_body) [1135 1166])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1175 1201])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1210 1237])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1381 1466])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1475 1515])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1524 1566]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1083 1087])
+                            ("config" variable nil (reparse-symbol function_parameters) [1089 1095]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1070 1567])
+                    ("terminal_robustness" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1604 1608])
+                            ("state_traj" variable nil (reparse-symbol function_parameters) [1610 1620]))                          )
+                        (reparse-symbol indented_block_body) [1580 3136])
+                    ("reward_func" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3178 3182])
+                            ("s" variable nil (reparse-symbol function_parameters) [3184 3185])
+                            ("a" variable nil (reparse-symbol function_parameters) [3187 3188])
+                            ("sp" variable nil (reparse-symbol function_parameters) [3190 3192])
+                            ("done" variable nil (reparse-symbol function_parameters) [3194 3198])
+                            ("other" variable nil (reparse-symbol function_parameters) [3200 3205]))                          )
+                        (reparse-symbol indented_block_body) [3162 3808]))                  
+                :type "class")
+                nil [1044 3808])
+            ("Evaluate" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3873 3896]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3850 3854])
+                            ("config" variable nil (reparse-symbol function_parameters) [3856 3862]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3837 3897])
+                    ("evaluation_func" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3930 3934])
+                            ("batch" variable nil (reparse-symbol function_parameters) [3936 3941]))                          )
+                        (reparse-symbol indented_block_body) [3910 4533]))                  
+                :type "class")
+                nil [3809 4533])
+            ("construct_experiment" function (:arguments 
+              ( ("mode" variable nil (reparse-symbol function_parameters) [4564 4568])
+                ("agent" variable nil (reparse-symbol function_parameters) [4603 4608])
+                ("task" variable nil (reparse-symbol function_parameters) [4645 4649])
+                ("subtask" variable nil (reparse-symbol function_parameters) [4680 4687])
+                ("with_penalty" variable nil (reparse-symbol function_parameters) [4801 4813])
+                ("nogui" variable nil (reparse-symbol function_parameters) [4846 4851]))              ) nil [4539 10473])
+            ("if" code nil nil [10474 10861]))          
+      :file "experiments.py"
+      :pointmax 10865
+      :fsize 10864
+      :lastmodtime '(23311 21406 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "task.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 23])
+            ("tl_tools.tltl_utils" include nil nil [24 60])
+            ("construct_task" function (:arguments 
+              ( ("reward_type" variable nil (reparse-symbol function_parameters) [81 92])
+                ("task" variable nil (reparse-symbol function_parameters) [202 206])
+                ("with_penalty" variable nil (reparse-symbol function_parameters) [231 243])
+                ("lettuce_id" variable nil (reparse-symbol function_parameters) [270 280])
+                ("fridge_id" variable nil (reparse-symbol function_parameters) [332 341]))              ) nil [62 6190])
+            ("if" code nil nil [6192 6626]))          
+      :file "task.py"
+      :pointmax 6636
+      :fsize 6635
+      :lastmodtime '(23293 4207 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!rlfps!examples!nips2018!ai2thor!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

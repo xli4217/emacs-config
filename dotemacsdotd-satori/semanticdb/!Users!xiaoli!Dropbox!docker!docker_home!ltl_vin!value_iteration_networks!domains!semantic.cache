@@ -1,0 +1,449 @@
+;; Object domains/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "domains/"
+  :tables
+  (list
+    (semanticdb-table "reacher_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy.sparse" include nil nil [20 55])
+            ("scipy.sparse.csgraph" include nil nil [56 97])
+            ("lomap.classes" include nil nil [98 155])
+            ("lomap.algorithms.product" include nil nil [156 209])
+            ("lomap.algorithms.value_iteration" include nil nil [210 284])
+            ("matplotlib.pyplot" include nil nil [285 316])
+            ("networkx" include nil nil [317 338])
+            ("collections" include nil nil [339 374])
+            ("pdb" include nil nil [376 386])
+            ("longterm" type
+               (:documentation "A class for making gridworlds"
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [507 525])
+                            ("self" variable nil (reparse-symbol indented_block_body) [534 561])
+                            ("self" variable nil (reparse-symbol indented_block_body) [570 597])
+                            ("self" variable nil (reparse-symbol indented_block_body) [606 625])
+                            ("self" variable nil (reparse-symbol indented_block_body) [634 653])
+                            ("self" variable nil (reparse-symbol indented_block_body) [663 681])
+                            ("self" variable nil (reparse-symbol indented_block_body) [690 718])
+                            ("self" variable nil (reparse-symbol indented_block_body) [891 902])
+                            ("self" variable nil (reparse-symbol indented_block_body) [990 1001])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1101 1112])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1196 1207])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1216 1227])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1236 1253])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1262 1280])
+                            ("self" code nil (reparse-symbol indented_block_body) [1289 1304])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1314 1328])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1397 1439])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1448 1581])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1590 1615])
+                            ("for" code nil (reparse-symbol indented_block_body) [1624 1723])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1731 1771])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1780 1794]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [461 465])
+                            ("image" variable nil (reparse-symbol function_parameters) [467 472])
+                            ("goals" variable nil (reparse-symbol function_parameters) [474 479])
+                            ("goal_names" variable nil (reparse-symbol function_parameters) [481 491])
+                            ("fsa" variable nil (reparse-symbol function_parameters) [493 496]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [448 1795])
+                    ("'''
+    returns a transition matrix that maps (fsa_state, node_num) to
+    (next_node_num, next_fsa_state)
+    '''" code nil (reparse-symbol indented_block_body) [1823 1937])
+                    ("v_transition_matrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1966 1970])
+                            ("pa" variable nil (reparse-symbol function_parameters) [1972 1974]))                          )
+                        (reparse-symbol indented_block_body) [1942 3033])
+                    ("get_fsa_layers" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3057 3061])
+                            ("fsa" variable nil (reparse-symbol function_parameters) [3063 3066]))                          )
+                        (reparse-symbol indented_block_body) [3038 3223])
+                    ("plot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3237 3241]))                          )
+                        (reparse-symbol indented_block_body) [3228 3517])
+                    ("execute_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3541 3545])
+                            ("start" variable nil (reparse-symbol function_parameters) [3547 3552]))                          )
+                        (reparse-symbol indented_block_body) [3522 5731])
+                    ("get_fsa_state" function (:arguments 
+                      ( ("g" variable nil (reparse-symbol function_parameters) [5762 5763])
+                        ("start_node" variable nil (reparse-symbol function_parameters) [5765 5775])
+                        ("control" variable nil (reparse-symbol function_parameters) [5777 5784]))                      ) (reparse-symbol indented_block_body) [5744 6107])
+                    ("generate_gridworld_mdp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6139 6143]))                          )
+                        (reparse-symbol indented_block_body) [6112 8793])
+                    ("set_vals" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8812 8816]))                          )
+                        (reparse-symbol indented_block_body) [8799 11915])
+                    ("get_value_prior" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11940 11944]))                          )
+                        (reparse-symbol indented_block_body) [11920 12172])
+                    ("map_ind_to_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12198 12202])
+                            ("row" variable nil (reparse-symbol function_parameters) [12204 12207])
+                            ("col" variable nil (reparse-symbol function_parameters) [12209 12212]))                          )
+                        (reparse-symbol indented_block_body) [12177 12357])
+                    ("get_coords" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12377 12381])
+                            ("states" variable nil (reparse-symbol function_parameters) [12383 12389]))                          )
+                        (reparse-symbol indented_block_body) [12362 12644])
+                    ("sample_next_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12671 12675])
+                            ("s" variable nil (reparse-symbol function_parameters) [12677 12678])
+                            ("f" variable nil (reparse-symbol function_parameters) [12680 12681])
+                            ("a" variable nil (reparse-symbol function_parameters) [12683 12684])
+                            ("pa" variable nil (reparse-symbol function_parameters) [12686 12688]))                          )
+                        (reparse-symbol indented_block_body) [12649 13506])
+                    ("get_size" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13524 13528]))                          )
+                        (reparse-symbol indented_block_body) [13511 13599])
+                    ("neighbors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13618 13622])
+                            ("row" variable nil (reparse-symbol function_parameters) [13624 13627])
+                            ("col" variable nil (reparse-symbol function_parameters) [13629 13632]))                          )
+                        (reparse-symbol indented_block_body) [13604 14679]))                  
+                :type "class")
+                nil [388 14679])
+            ("trace_path" function (:arguments 
+              ( ("pred" variable nil (reparse-symbol function_parameters) [14695 14699])
+                ("source" variable nil (reparse-symbol function_parameters) [14701 14707])
+                ("target" variable nil (reparse-symbol function_parameters) [14709 14715]))              ) nil [14680 15164])
+            ("sample_trajectory" function (:arguments 
+              ( ("M" variable nil (reparse-symbol function_parameters) [15187 15188])
+                ("n_traj" variable nil (reparse-symbol function_parameters) [15190 15196]))              ) nil [15165 16558])
+            ("if" code nil nil [16560 16596]))          
+      :file "reacher_env.py"
+      :pointmax 16605
+      :unmatched-syntax '((INDENT_BLOCK 15057 . 15079) (NEWLINE 15056 . 15057) (COLON 15055 . 15056) (TRY 14959 . 14962) (AS 15051 . 15053) (INDENT_BLOCK 15057 . 15079) (NEWLINE 15056 . 15057) (COLON 15055 . 15056) (TRY 14959 . 14962) (AS 15051 . 15053)))
+    (semanticdb-table "gridworld.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy.sparse" include nil nil [20 55])
+            ("scipy.sparse.csgraph" include nil nil [56 97])
+            ("lomap.classes" include nil nil [98 155])
+            ("lomap.algorithms.product" include nil nil [156 209])
+            ("lomap.algorithms.value_iteration" include nil nil [210 284])
+            ("matplotlib.pyplot" include nil nil [285 316])
+            ("networkx" include nil nil [317 338])
+            ("collections" include nil nil [339 374])
+            ("pdb" include nil nil [376 386])
+            ("gridworld" type
+               (:documentation "A class for making gridworlds"
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [496 514])
+                            ("self" variable nil (reparse-symbol indented_block_body) [523 550])
+                            ("self" variable nil (reparse-symbol indented_block_body) [559 586])
+                            ("self" variable nil (reparse-symbol indented_block_body) [595 614])
+                            ("self" variable nil (reparse-symbol indented_block_body) [623 642])
+                            ("self" variable nil (reparse-symbol indented_block_body) [652 670])
+                            ("self" variable nil (reparse-symbol indented_block_body) [843 854])
+                            ("self" variable nil (reparse-symbol indented_block_body) [942 953])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1053 1064])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1148 1159])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1168 1179])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1188 1205])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1214 1232])
+                            ("self" code nil (reparse-symbol indented_block_body) [1241 1256])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1266 1280])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1349 1391])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1400 1533])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1542 1567])
+                            ("for" code nil (reparse-symbol indented_block_body) [1576 1675])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1683 1723])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1732 1746]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [462 466])
+                            ("image" variable nil (reparse-symbol function_parameters) [468 473])
+                            ("goals" variable nil (reparse-symbol function_parameters) [475 480])
+                            ("fsa" variable nil (reparse-symbol function_parameters) [482 485]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [449 1747])
+                    ("'''
+    returns a transition matrix that maps (fsa_state, node_num) to
+    (next_node_num, next_fsa_state)
+    '''" code nil (reparse-symbol indented_block_body) [1775 1889])
+                    ("v_transition_matrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1918 1922])
+                            ("pa" variable nil (reparse-symbol function_parameters) [1924 1926]))                          )
+                        (reparse-symbol indented_block_body) [1894 2985])
+                    ("get_fsa_layers" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3009 3013])
+                            ("fsa" variable nil (reparse-symbol function_parameters) [3015 3018]))                          )
+                        (reparse-symbol indented_block_body) [2990 3183])
+                    ("plot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3197 3201]))                          )
+                        (reparse-symbol indented_block_body) [3188 3477])
+                    ("execute_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3501 3505])
+                            ("start" variable nil (reparse-symbol function_parameters) [3507 3512]))                          )
+                        (reparse-symbol indented_block_body) [3482 5623])
+                    ("get_fsa_state" function (:arguments 
+                      ( ("g" variable nil (reparse-symbol function_parameters) [5654 5655])
+                        ("start_node" variable nil (reparse-symbol function_parameters) [5657 5667])
+                        ("control" variable nil (reparse-symbol function_parameters) [5669 5676]))                      ) (reparse-symbol indented_block_body) [5636 5999])
+                    ("generate_gridworld_mdp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6031 6035]))                          )
+                        (reparse-symbol indented_block_body) [6004 8678])
+                    ("set_vals" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8697 8701]))                          )
+                        (reparse-symbol indented_block_body) [8684 11792])
+                    ("get_value_prior" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11817 11821]))                          )
+                        (reparse-symbol indented_block_body) [11797 12046])
+                    ("map_ind_to_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12072 12076])
+                            ("row" variable nil (reparse-symbol function_parameters) [12078 12081])
+                            ("col" variable nil (reparse-symbol function_parameters) [12083 12086]))                          )
+                        (reparse-symbol indented_block_body) [12051 12231])
+                    ("get_coords" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12251 12255])
+                            ("states" variable nil (reparse-symbol function_parameters) [12257 12263]))                          )
+                        (reparse-symbol indented_block_body) [12236 12499])
+                    ("sample_next_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12526 12530])
+                            ("s" variable nil (reparse-symbol function_parameters) [12532 12533])
+                            ("f" variable nil (reparse-symbol function_parameters) [12535 12536])
+                            ("a" variable nil (reparse-symbol function_parameters) [12538 12539])
+                            ("pa" variable nil (reparse-symbol function_parameters) [12541 12543]))                          )
+                        (reparse-symbol indented_block_body) [12504 13468])
+                    ("get_size" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13486 13490]))                          )
+                        (reparse-symbol indented_block_body) [13473 13561])
+                    ("neighbors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13580 13584])
+                            ("row" variable nil (reparse-symbol function_parameters) [13586 13589])
+                            ("col" variable nil (reparse-symbol function_parameters) [13591 13594]))                          )
+                        (reparse-symbol indented_block_body) [13566 14641])
+                    ("merge_trap_states" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14715 14719])
+                            ("pa" variable nil (reparse-symbol function_parameters) [14721 14723]))                          )
+                        (reparse-symbol indented_block_body) [14693 15638]))                  
+                :type "class")
+                nil [388 15638])
+            ("trace_path" function (:arguments 
+              ( ("pred" variable nil (reparse-symbol function_parameters) [15654 15658])
+                ("source" variable nil (reparse-symbol function_parameters) [15660 15666])
+                ("target" variable nil (reparse-symbol function_parameters) [15668 15674]))              ) nil [15639 16123])
+            ("sample_trajectory" function (:arguments 
+              ( ("M" variable nil (reparse-symbol function_parameters) [16146 16147])
+                ("n_traj" variable nil (reparse-symbol function_parameters) [16149 16155]))              ) nil [16124 17494]))          
+      :file "gridworld.py"
+      :pointmax 17494
+      :fsize 17493
+      :lastmodtime '(23247 41215 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 16016 . 16038) (NEWLINE 16015 . 16016) (COLON 16014 . 16015) (TRY 15918 . 15921) (AS 16010 . 16012)))
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("gym.envs.registration" include nil nil [1 65]))          
+      :file "__init__.py"
+      :pointmax 221
+      :fsize 220
+      :lastmodtime '(23247 48094 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "min_vio.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy.sparse" include nil nil [20 55])
+            ("scipy.sparse.csgraph" include nil nil [56 97])
+            ("lomap.classes" include nil nil [98 155])
+            ("lomap.algorithms.product" include nil nil [156 209])
+            ("lomap.algorithms.value_iteration" include nil nil [210 284])
+            ("matplotlib.pyplot" include nil nil [285 316])
+            ("networkx" include nil nil [317 338])
+            ("collections" include nil nil [339 374])
+            ("pdb" include nil nil [376 386])
+            ("longterm" type
+               (:documentation "A class for making gridworlds"
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [507 525])
+                            ("self" variable nil (reparse-symbol indented_block_body) [534 561])
+                            ("self" variable nil (reparse-symbol indented_block_body) [570 597])
+                            ("self" variable nil (reparse-symbol indented_block_body) [606 625])
+                            ("self" variable nil (reparse-symbol indented_block_body) [634 653])
+                            ("self" variable nil (reparse-symbol indented_block_body) [663 681])
+                            ("self" variable nil (reparse-symbol indented_block_body) [690 718])
+                            ("self" variable nil (reparse-symbol indented_block_body) [891 902])
+                            ("self" variable nil (reparse-symbol indented_block_body) [990 1001])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1101 1112])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1196 1207])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1216 1227])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1236 1253])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1262 1280])
+                            ("self" code nil (reparse-symbol indented_block_body) [1289 1304])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1314 1328])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1397 1439])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1448 1581])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1590 1615])
+                            ("for" code nil (reparse-symbol indented_block_body) [1624 1723])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1731 1771])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1780 1794]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [461 465])
+                            ("image" variable nil (reparse-symbol function_parameters) [467 472])
+                            ("goals" variable nil (reparse-symbol function_parameters) [474 479])
+                            ("goal_names" variable nil (reparse-symbol function_parameters) [481 491])
+                            ("fsa" variable nil (reparse-symbol function_parameters) [493 496]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [448 1795])
+                    ("'''
+    returns a transition matrix that maps (fsa_state, node_num) to
+    (next_node_num, next_fsa_state)
+    '''" code nil (reparse-symbol indented_block_body) [1823 1937])
+                    ("v_transition_matrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1966 1970])
+                            ("pa" variable nil (reparse-symbol function_parameters) [1972 1974]))                          )
+                        (reparse-symbol indented_block_body) [1942 3033])
+                    ("get_fsa_layers" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3057 3061])
+                            ("fsa" variable nil (reparse-symbol function_parameters) [3063 3066]))                          )
+                        (reparse-symbol indented_block_body) [3038 3223])
+                    ("plot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3237 3241]))                          )
+                        (reparse-symbol indented_block_body) [3228 3517])
+                    ("execute_policy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3541 3545])
+                            ("start" variable nil (reparse-symbol function_parameters) [3547 3552]))                          )
+                        (reparse-symbol indented_block_body) [3522 5731])
+                    ("get_fsa_state" function (:arguments 
+                      ( ("g" variable nil (reparse-symbol function_parameters) [5762 5763])
+                        ("start_node" variable nil (reparse-symbol function_parameters) [5765 5775])
+                        ("control" variable nil (reparse-symbol function_parameters) [5777 5784]))                      ) (reparse-symbol indented_block_body) [5744 6107])
+                    ("generate_gridworld_mdp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6139 6143]))                          )
+                        (reparse-symbol indented_block_body) [6112 8793])
+                    ("set_vals" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8812 8816]))                          )
+                        (reparse-symbol indented_block_body) [8799 12208])
+                    ("get_value_prior" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12233 12237]))                          )
+                        (reparse-symbol indented_block_body) [12213 12463])
+                    ("map_ind_to_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12489 12493])
+                            ("row" variable nil (reparse-symbol function_parameters) [12495 12498])
+                            ("col" variable nil (reparse-symbol function_parameters) [12500 12503]))                          )
+                        (reparse-symbol indented_block_body) [12468 12648])
+                    ("get_coords" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12668 12672])
+                            ("states" variable nil (reparse-symbol function_parameters) [12674 12680]))                          )
+                        (reparse-symbol indented_block_body) [12653 12916])
+                    ("sample_next_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12943 12947])
+                            ("s" variable nil (reparse-symbol function_parameters) [12949 12950])
+                            ("f" variable nil (reparse-symbol function_parameters) [12952 12953])
+                            ("a" variable nil (reparse-symbol function_parameters) [12955 12956])
+                            ("pa" variable nil (reparse-symbol function_parameters) [12958 12960]))                          )
+                        (reparse-symbol indented_block_body) [12921 13823])
+                    ("get_size" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13841 13845]))                          )
+                        (reparse-symbol indented_block_body) [13828 13916])
+                    ("neighbors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13935 13939])
+                            ("row" variable nil (reparse-symbol function_parameters) [13941 13944])
+                            ("col" variable nil (reparse-symbol function_parameters) [13946 13949]))                          )
+                        (reparse-symbol indented_block_body) [13921 14996]))                  
+                :type "class")
+                nil [388 14996])
+            ("trace_path" function (:arguments 
+              ( ("pred" variable nil (reparse-symbol function_parameters) [15012 15016])
+                ("source" variable nil (reparse-symbol function_parameters) [15018 15024])
+                ("target" variable nil (reparse-symbol function_parameters) [15026 15032]))              ) nil [14997 15481])
+            ("sample_trajectory" function (:arguments 
+              ( ("M" variable nil (reparse-symbol function_parameters) [15504 15505])
+                ("n_traj" variable nil (reparse-symbol function_parameters) [15507 15513]))              ) nil [15482 16874]))          
+      :file "min_vio.py"
+      :pointmax 16874
+      :fsize 16873
+      :lastmodtime '(23247 41215 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 15374 . 15396) (NEWLINE 15373 . 15374) (COLON 15372 . 15373) (TRY 15276 . 15279) (AS 15368 . 15370))))
+  :file "!Users!xiaoli!Dropbox!docker!docker_home!ltl_vin!value_iteration_networks!domains!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,160 @@
+;; Object policies/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "policies/"
+  :tables
+  (list
+    (semanticdb-table "mlp_policy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("tensorflow" include nil nil [20 43])
+            ("os" include nil nil [44 53])
+            ("MlpPolicy" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [141 161])
+                            ("self" variable nil (reparse-symbol indented_block_body) [170 207])
+                            ("self" variable nil (reparse-symbol indented_block_body) [216 251])
+                            ("self" variable nil (reparse-symbol indented_block_body) [260 294])
+                            ("self" variable nil (reparse-symbol indented_block_body) [303 352])
+                            ("self" variable nil (reparse-symbol indented_block_body) [361 410])
+                            ("self" variable nil (reparse-symbol indented_block_body) [428 460])
+                            ("self" variable nil (reparse-symbol indented_block_body) [469 510])
+                            ("self" variable nil (reparse-symbol indented_block_body) [519 554])
+                            ("self" variable nil (reparse-symbol indented_block_body) [563 598])
+                            ("self" code nil (reparse-symbol indented_block_body) [621 640])
+                            ("if" code nil (reparse-symbol indented_block_body) [649 760])
+                            ("if" code nil (reparse-symbol indented_block_body) [770 927])
+                            ("self" code nil (reparse-symbol indented_block_body) [936 969]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [91 95])
+                            ("config" variable nil (reparse-symbol function_parameters) [97 103])
+                            ("logger" variable nil (reparse-symbol function_parameters) [105 111])
+                            ("deploy" variable nil (reparse-symbol function_parameters) [118 124]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [78 970])
+                    ("save" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1000 1004])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [1006 1015])
+                            ("model_name" variable nil (reparse-symbol function_parameters) [1017 1027]))                          )
+                        (reparse-symbol indented_block_body) [991 1110])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1127 1131])
+                            ("model_dir" variable nil (reparse-symbol function_parameters) [1133 1142]))                          )
+                        (reparse-symbol indented_block_body) [1115 1222])
+                    ("_build_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1252 1256]))                          )
+                        (reparse-symbol indented_block_body) [1235 1851])
+                    ("_build_tensorboard_summary" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1887 1891]))                          )
+                        (reparse-symbol indented_block_body) [1856 2174])
+                    ("_placeholders" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2214 2218]))                          )
+                        (reparse-symbol indented_block_body) [2196 2800])
+                    ("_policy_nn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2820 2824]))                          )
+                        (reparse-symbol indented_block_body) [2805 4223])
+                    ("_logprob" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4242 4246]))                          
+                        :documentation " Calculate log probabilities of a batch of observations & actions
+        Calculates log probabilities using previous step's model parameters and
+        new parameters being trained.
+        ")
+                        (reparse-symbol indented_block_body) [4229 5505])
+                    ("_kl_entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5527 5531]))                          
+                        :documentation "
+        Add to Graph:
+        1. KL divergence between old and new distributions
+        2. Entropy of present policy given states and actions
+        https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Kullback.E2.80.93Leibler_divergence
+        https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Entropy
+        ")
+                        (reparse-symbol indented_block_body) [5511 7133])
+                    ("_sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7167 7171]))                          
+                        :documentation " Sample from distribution, given observation ")
+                        (reparse-symbol indented_block_body) [7155 7383])
+                    ("_deterministic_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7414 7418]))                          )
+                        (reparse-symbol indented_block_body) [7388 7566])
+                    ("_loss_train_op" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7598 7602]))                          
+                        :documentation "
+        Three loss terms:
+        1) standard policy gradient
+        2) D_KL(pi_old || pi_new)
+        3) Hinge loss on [D_KL - kl_targ]^2
+        See: https://arxiv.org/pdf/1707.02286.pdf
+        ")
+                        (reparse-symbol indented_block_body) [7579 8748])
+                    ("_init_session" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8771 8775]))                          
+                        :documentation "Launch TensorFlow session and initialize variables")
+                        (reparse-symbol indented_block_body) [8753 8951])
+                    ("get_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8987 8991])
+                            ("obs" variable nil (reparse-symbol function_parameters) [8993 8996])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [8998 9011]))                          
+                        :documentation "get action from distribution")
+                        (reparse-symbol indented_block_body) [8972 9398])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9414 9418])
+                            ("observes" variable nil (reparse-symbol function_parameters) [9420 9428])
+                            ("actions" variable nil (reparse-symbol function_parameters) [9430 9437])
+                            ("advantages" variable nil (reparse-symbol function_parameters) [9439 9449])
+                            ("itr" variable nil (reparse-symbol function_parameters) [9451 9454]))                          
+                        :documentation " Update policy based on observations, actions and advantages
+        Args:
+        observes: observations, shape = (N, obs_dim)
+        actions: actions, shape = (N, act_dim)
+        advantages: advantages, shape = (N,)
+        logger: Logger object, see utils.py
+        ")
+                        (reparse-symbol indented_block_body) [9403 11180])
+                    ("close_sess" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11208 11212]))                          
+                        :documentation " Close TensorFlow session ")
+                        (reparse-symbol indented_block_body) [11193 11281]))                  
+                :type "class")
+                nil [55 11281]))          
+      :file "mlp_policy.py"
+      :pointmax 11281
+      :fsize 11280
+      :lastmodtime '(23179 40724 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!algo_devel!ppo!policies!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

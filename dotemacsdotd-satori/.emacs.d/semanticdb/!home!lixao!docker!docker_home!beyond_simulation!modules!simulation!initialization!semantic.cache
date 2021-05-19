@@ -1,0 +1,83 @@
+;; Object initialization/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "initialization/"
+  :tables
+  (list
+
+    (semanticdb-table "init_world.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rospy" include nil nil [1 13])
+            ("modules.state_estimation.proto" include nil nil [15 78])
+            ("modules.simulation.proto" include nil nil [79 130])
+            ("config.init_config" include nil nil [132 176])
+            ("cloudpickle" include nil nil [177 195])
+            ("time" include nil nil [197 208])
+            ("InitWorldMsgPublisher" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [294 328])
+                            ("world_state_msg" variable nil (reparse-symbol indented_block_body) [338 392])
+                            ("self" code nil (reparse-symbol indented_block_body) [401 446])
+                            ("init_world_state_msg" variable nil (reparse-symbol indented_block_body) [455 493]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [265 269])
+                            ("config" variable nil (reparse-symbol function_parameters) [271 277]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [252 494])
+                    ("process_world_state_msg" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [543 547])
+                            ("world_state_msg" variable nil (reparse-symbol function_parameters) [549 564]))                          
+                        :documentation "
+        @brief      { process world state message }
+        @param      self  The object
+        @param      world_state  The world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [515 1013])
+                    ("add_ego" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1030 1034])
+                            ("world_state_msg" variable nil (reparse-symbol function_parameters) [1036 1051]))                          )
+                        (reparse-symbol indented_block_body) [1018 1664])
+                    ("add_path_id_to_lanes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1702 1706])
+                            ("world_state" variable nil (reparse-symbol function_parameters) [1708 1719]))                          
+                        :documentation "
+        @brief      { process world state message }
+        @param      self  The object
+        @param      world_state  The world state message
+        @return     { description_of_the_return_value }
+        ")
+                        (reparse-symbol indented_block_body) [1677 2216])
+                    ("add_map" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2328 2332])
+                            ("world_state_msg" variable nil (reparse-symbol function_parameters) [2334 2349]))                          )
+                        (reparse-symbol indented_block_body) [2316 3414])
+                    ("add_agents" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3434 3438])
+                            ("world_state_msg" variable nil (reparse-symbol function_parameters) [3440 3455]))                          )
+                        (reparse-symbol indented_block_body) [3419 4299]))                  
+                :type "class")
+                nil [210 4299])
+            ("if" code nil nil [4302 4459]))          
+      :file "init_world.py"
+      :pointmax 4459
+      :fsize 4769
+      :lastmodtime '(23346 35968 594418 663000)
+      :unmatched-syntax nil))
+  :file "!home!lixao!docker!docker_home!beyond_simulation!modules!simulation!initialization!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

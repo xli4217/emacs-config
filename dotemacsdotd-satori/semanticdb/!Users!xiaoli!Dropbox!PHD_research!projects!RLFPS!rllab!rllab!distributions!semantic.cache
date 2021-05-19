@@ -1,0 +1,346 @@
+;; Object distributions/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "distributions/"
+  :tables
+  (list
+    (semanticdb-table "base.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Distribution" type
+               (:superclasses ("object")
+                :members 
+                  ( ("dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [56 60]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [34 97])
+                    ("kl_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [113 117])
+                            ("old_dist_info_vars" variable nil (reparse-symbol function_parameters) [119 137])
+                            ("new_dist_info_vars" variable nil (reparse-symbol function_parameters) [139 157]))                          
+                        :documentation "
+        Compute the symbolic KL divergence of two distributions
+        ")
+                        (reparse-symbol indented_block_body) [102 282])
+                    ("kl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [294 298])
+                            ("old_dist_info" variable nil (reparse-symbol function_parameters) [300 313])
+                            ("new_dist_info" variable nil (reparse-symbol function_parameters) [315 328]))                          
+                        :documentation "
+        Compute the KL divergence of two distributions
+        ")
+                        (reparse-symbol indented_block_body) [287 444])
+                    ("likelihood_ratio_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [474 478])
+                            ("x_var" variable nil (reparse-symbol function_parameters) [480 485])
+                            ("old_dist_info_vars" variable nil (reparse-symbol function_parameters) [487 505])
+                            ("new_dist_info_vars" variable nil (reparse-symbol function_parameters) [507 525]))                          )
+                        (reparse-symbol indented_block_body) [449 562])
+                    ("entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [579 583])
+                            ("dist_info" variable nil (reparse-symbol function_parameters) [585 594]))                          )
+                        (reparse-symbol indented_block_body) [567 631])
+                    ("log_likelihood_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [659 663])
+                            ("x_var" variable nil (reparse-symbol function_parameters) [665 670])
+                            ("dist_info_vars" variable nil (reparse-symbol function_parameters) [672 686]))                          )
+                        (reparse-symbol indented_block_body) [636 723])
+                    ("log_likelihood" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [747 751])
+                            ("xs" variable nil (reparse-symbol function_parameters) [753 755])
+                            ("dist_info" variable nil (reparse-symbol function_parameters) [757 766]))                          )
+                        (reparse-symbol indented_block_body) [728 803])
+                    ("dist_info_keys" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [841 845]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [808 882]))                  
+                :type "class")
+                nil [1 882]))          
+      :file "base.py"
+      :pointmax 882
+      :fsize 881
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "categorical.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("theano.tensor" include nil nil [1 27])
+            ("numpy" include nil nil [28 46])
+            ("Distribution" include nil nil [58 77])
+            ("TINY" variable nil nil [79 90])
+            ("from_onehot_sym" function (:arguments 
+              ( ("x_var" variable nil (reparse-symbol function_parameters) [113 118]))              ) nil [93 306])
+            ("from_onehot" function (:arguments 
+              ( ("x_var" variable nil (reparse-symbol function_parameters) [324 329]))              ) nil [308 466])
+            ("Categorical" type
+               (:superclasses ("Distribution")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [538 553]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [518 522])
+                            ("dim" variable nil (reparse-symbol function_parameters) [524 527]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [505 554])
+                    ("dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [581 585]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [559 613])
+                    ("kl_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [629 633])
+                            ("old_dist_info_vars" variable nil (reparse-symbol function_parameters) [635 653])
+                            ("new_dist_info_vars" variable nil (reparse-symbol function_parameters) [655 673]))                          
+                        :documentation "
+        Compute the symbolic KL divergence of two categorical distributions
+        ")
+                        (reparse-symbol indented_block_body) [618 1050])
+                    ("kl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1062 1066])
+                            ("old_dist_info" variable nil (reparse-symbol function_parameters) [1068 1081])
+                            ("new_dist_info" variable nil (reparse-symbol function_parameters) [1083 1096]))                          
+                        :documentation "
+        Compute the KL divergence of two categorical distributions
+        ")
+                        (reparse-symbol indented_block_body) [1055 1401])
+                    ("likelihood_ratio_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1431 1435])
+                            ("x_var" variable nil (reparse-symbol function_parameters) [1437 1442])
+                            ("old_dist_info_vars" variable nil (reparse-symbol function_parameters) [1444 1462])
+                            ("new_dist_info_vars" variable nil (reparse-symbol function_parameters) [1464 1482]))                          )
+                        (reparse-symbol indented_block_body) [1406 1797])
+                    ("entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1814 1818])
+                            ("info" variable nil (reparse-symbol function_parameters) [1820 1824]))                          )
+                        (reparse-symbol indented_block_body) [1802 1917])
+                    ("log_likelihood_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1945 1949])
+                            ("x_var" variable nil (reparse-symbol function_parameters) [1951 1956])
+                            ("dist_info_vars" variable nil (reparse-symbol function_parameters) [1958 1972]))                          )
+                        (reparse-symbol indented_block_body) [1922 2170])
+                    ("log_likelihood" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2194 2198])
+                            ("xs" variable nil (reparse-symbol function_parameters) [2200 2202])
+                            ("dist_info" variable nil (reparse-symbol function_parameters) [2204 2213]))                          )
+                        (reparse-symbol indented_block_body) [2175 2389])
+                    ("dist_info_keys" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2427 2431]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2394 2458]))                  
+                :type "class")
+                nil [468 2458]))          
+      :file "categorical.py"
+      :pointmax 2458
+      :fsize 2457
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax '((FROM 47 . 51) (PERIOD 52 . 53)))
+    (semanticdb-table "diagonal_gaussian.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("theano.tensor" include nil nil [1 27])
+            ("numpy" include nil nil [28 46])
+            ("rllab.distributions.base" include nil nil [47 96])
+            ("DiagonalGaussian" type
+               (:superclasses ("Distribution")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [174 189]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [154 158])
+                            ("dim" variable nil (reparse-symbol function_parameters) [160 163]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [141 190])
+                    ("dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [217 221]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [195 249])
+                    ("kl_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [265 269])
+                            ("old_dist_info_vars" variable nil (reparse-symbol function_parameters) [271 289])
+                            ("new_dist_info_vars" variable nil (reparse-symbol function_parameters) [291 309]))                          )
+                        (reparse-symbol indented_block_body) [254 1171])
+                    ("likelihood_ratio_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1201 1205])
+                            ("x_var" variable nil (reparse-symbol function_parameters) [1207 1212])
+                            ("old_dist_info_vars" variable nil (reparse-symbol function_parameters) [1214 1232])
+                            ("new_dist_info_vars" variable nil (reparse-symbol function_parameters) [1234 1252]))                          )
+                        (reparse-symbol indented_block_body) [1176 1442])
+                    ("log_likelihood_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1470 1474])
+                            ("x_var" variable nil (reparse-symbol function_parameters) [1476 1481])
+                            ("dist_info_vars" variable nil (reparse-symbol function_parameters) [1483 1497]))                          )
+                        (reparse-symbol indented_block_body) [1447 1792])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1808 1812])
+                            ("dist_info" variable nil (reparse-symbol function_parameters) [1814 1823]))                          )
+                        (reparse-symbol indented_block_body) [1797 1995])
+                    ("log_likelihood" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2019 2023])
+                            ("xs" variable nil (reparse-symbol function_parameters) [2025 2027])
+                            ("dist_info" variable nil (reparse-symbol function_parameters) [2029 2038]))                          )
+                        (reparse-symbol indented_block_body) [2000 2320])
+                    ("entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2337 2341])
+                            ("dist_info" variable nil (reparse-symbol function_parameters) [2343 2352]))                          )
+                        (reparse-symbol indented_block_body) [2325 2472])
+                    ("dist_info_keys" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2510 2514]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2477 2552]))                  
+                :type "class")
+                nil [99 2552]))          
+      :file "diagonal_gaussian.py"
+      :pointmax 2552
+      :fsize 2551
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "recurrent_categorical.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("theano.tensor" include nil nil [1 27])
+            ("numpy" include nil nil [28 46])
+            ("theano" include nil nil [47 60])
+            ("rllab.distributions.categorical" include nil nil [61 116])
+            ("rllab.distributions.base" include nil nil [117 166])
+            ("TINY" variable nil nil [168 179])
+            ("RecurrentCategorical" type
+               (:superclasses ("Distribution")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [261 289])
+                            ("self" variable nil (reparse-symbol indented_block_body) [298 313]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [241 245])
+                            ("dim" variable nil (reparse-symbol function_parameters) [247 250]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [228 314])
+                    ("dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [341 345]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [319 373])
+                    ("kl_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [389 393])
+                            ("old_dist_info_vars" variable nil (reparse-symbol function_parameters) [395 413])
+                            ("new_dist_info_vars" variable nil (reparse-symbol function_parameters) [415 433]))                          
+                        :documentation "
+        Compute the symbolic KL divergence of two categorical distributions
+        ")
+                        (reparse-symbol indented_block_body) [378 813])
+                    ("kl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [825 829])
+                            ("old_dist_info" variable nil (reparse-symbol function_parameters) [831 844])
+                            ("new_dist_info" variable nil (reparse-symbol function_parameters) [846 859]))                          
+                        :documentation "
+        Compute the KL divergence of two categorical distributions
+        ")
+                        (reparse-symbol indented_block_body) [818 1163])
+                    ("likelihood_ratio_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1193 1197])
+                            ("x_var" variable nil (reparse-symbol function_parameters) [1199 1204])
+                            ("old_dist_info_vars" variable nil (reparse-symbol function_parameters) [1206 1224])
+                            ("new_dist_info_vars" variable nil (reparse-symbol function_parameters) [1226 1244]))                          )
+                        (reparse-symbol indented_block_body) [1168 1694])
+                    ("entropy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1711 1715])
+                            ("dist_info" variable nil (reparse-symbol function_parameters) [1717 1726]))                          )
+                        (reparse-symbol indented_block_body) [1699 1824])
+                    ("log_likelihood_sym" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1852 1856])
+                            ("xs" variable nil (reparse-symbol function_parameters) [1858 1860])
+                            ("dist_info_vars" variable nil (reparse-symbol function_parameters) [1862 1876]))                          )
+                        (reparse-symbol indented_block_body) [1829 2203])
+                    ("log_likelihood" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2227 2231])
+                            ("xs" variable nil (reparse-symbol function_parameters) [2233 2235])
+                            ("dist_info" variable nil (reparse-symbol function_parameters) [2237 2246]))                          )
+                        (reparse-symbol indented_block_body) [2208 2517])
+                    ("dist_info_keys" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2555 2559]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2522 2586]))                  
+                :type "class")
+                nil [182 2586]))          
+      :file "recurrent_categorical.py"
+      :pointmax 2586
+      :fsize 2585
+      :lastmodtime '(22555 31253 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!rllab!distributions!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

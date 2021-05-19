@@ -1,0 +1,215 @@
+;; Object traci/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "traci/"
+  :tables
+  (list
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [584 621])
+            ("__future__" include nil nil [622 660])
+            ("socket" include nil nil [661 674])
+            ("time" include nil nil [675 686])
+            ("subprocess" include nil nil [687 704])
+            ("warnings" include nil nil [705 720])
+            ("abc" include nil nil [721 731])
+            ("sumolib" include nil nil [733 747])
+            ("sumolib.miscutils" include nil nil [756 803])
+            ("_defaultDomains" include nil nil [818 840])
+            ("_embedded" include nil nil [858 886])
+            ("Connection" include nil nil [858 886])
+            ("TraCIException" include nil nil [904 942])
+            ("FatalTraCIError" include nil nil [904 942])
+            ("_trafficlight" include nil nil [950 1014])
+            ("_multientryexit" include nil nil [950 1014])
+            ("_lanearea" include nil nil [950 1014])
+            ("_inductionloop" include nil nil [950 1014])
+            ("_route" include nil nil [1022 1075])
+            ("_person" include nil nil [1022 1075])
+            ("_vehicletype" include nil nil [1022 1075])
+            ("_vehicle" include nil nil [1022 1075])
+            ("_lane" include nil nil [1022 1075])
+            ("_gui" include nil nil [1083 1141])
+            ("_simulation" include nil nil [1083 1141])
+            ("_edge" include nil nil [1083 1141])
+            ("_junction" include nil nil [1083 1141])
+            ("_polygon" include nil nil [1083 1141])
+            ("_poi" include nil nil [1083 1141])
+            ("_connections" variable nil nil [1143 1160])
+            ("_stepListeners" variable nil nil [1161 1180])
+            ("_STEPS2TIME" function
+               (:documentation "Conversion from time steps in milliseconds to seconds as float"
+                :arguments 
+                  ( ("step" variable nil (reparse-symbol function_parameters) [1199 1203]))                  )
+                nil [1183 1303])
+            ("connect" function
+               (:documentation "
+    Establish a connection to a TraCI-Server and return the
+    connection object. The connection is not saved in the pool and not
+    accessible via traci.switch. It should be safe to use different
+    connections established by this method in different threads.
+    "
+                :arguments 
+                  ( ("port" variable nil (reparse-symbol function_parameters) [1317 1321])
+                    ("numRetries" variable nil (reparse-symbol function_parameters) [1328 1338])
+                    ("host" variable nil (reparse-symbol function_parameters) [1343 1347])
+                    ("proc" variable nil (reparse-symbol function_parameters) [1361 1365]))                  )
+                nil [1305 2118])
+            ("init" function
+               (:documentation "
+    Establish a connection to a TraCI-Server and store it under the given
+    label. This method is not thread-safe. It accesses the connection
+    pool concurrently.
+    "
+                :arguments 
+                  ( ("port" variable nil (reparse-symbol function_parameters) [2129 2133])
+                    ("numRetries" variable nil (reparse-symbol function_parameters) [2140 2150])
+                    ("host" variable nil (reparse-symbol function_parameters) [2155 2159])
+                    ("label" variable nil (reparse-symbol function_parameters) [2173 2178]))                  )
+                nil [2120 2474])
+            ("start" function
+               (:documentation "
+    Start a sumo server using cmd, establish a connection to it and
+    store it under the given label. This method is not thread-safe.
+    "
+                :arguments 
+                  ( ("cmd" variable nil (reparse-symbol function_parameters) [2486 2489])
+                    ("port" variable nil (reparse-symbol function_parameters) [2491 2495])
+                    ("numRetries" variable nil (reparse-symbol function_parameters) [2502 2512])
+                    ("label" variable nil (reparse-symbol function_parameters) [2517 2522]))                  )
+                nil [2476 2952])
+            ("isEmbedded" function nil nil [2954 2993])
+            ("load" function
+               (:documentation "load([optionOrParam, ...])
+    Let sumo load a simulation using the given command line like options 
+    Example:
+      load(['-c', 'run.sumocfg'])
+      load(['-n', 'net.net.xml', '-r', 'routes.rou.xml'])
+    "
+                :arguments 
+                  ( ("args" variable nil (reparse-symbol function_parameters) [3004 3008]))                  )
+                nil [2995 3271])
+            ("simulationStep" function
+               (:documentation "
+    Make a simulation step and simulate up to the given millisecond in sim time.
+    If the given value is 0 or absent, exactly one step is performed.
+    Values smaller than or equal to the current sim time result in no action.
+    "
+                :arguments 
+                  ( ("step" variable nil (reparse-symbol function_parameters) [3292 3296]))                  )
+                nil [3273 3711])
+            ("StepListener" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [3745 3772])
+                    ("step" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abc.abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3811 3815])
+                            ("s" variable nil (reparse-symbol function_parameters) [3817 3818]))                          
+                        :documentation "step(int) -> None
+
+        After adding a StepListener 'listener' with traci.addStepListener(listener),
+        TraCI will call listener.step(s) after each call to traci.simulationStep(s)
+        ")
+                        (reparse-symbol indented_block_body) [3778 4047]))                  
+                :type "class")
+                nil [3713 4047])
+            ("addStepListener" function
+               (:documentation "addStepListener(traci.StepListener) -> bool
+
+    Append the step listener (its step function is called at the end of every call to traci.simulationStep())
+    Returns True if the listener was added successfully, False otherwise.
+    "
+                :arguments 
+                  ( ("listener" variable nil (reparse-symbol function_parameters) [4069 4077]))                  )
+                nil [4049 4591])
+            ("removeStepListener" function
+               (:documentation "removeStepListener(traci.StepListener) -> bool
+
+    Remove the step listener from traci's step listener container.
+    Returns True if the listener was removed successfully, False if it wasn't registered.
+    "
+                :arguments 
+                  ( ("listener" variable nil (reparse-symbol function_parameters) [4616 4624]))                  )
+                nil [4593 5079])
+            ("getVersion" function nil nil [5081 5140])
+            ("setOrder" function (:arguments 
+              ( ("order" variable nil (reparse-symbol function_parameters) [5155 5160]))              ) nil [5142 5207])
+            ("close" function (:arguments 
+              ( ("wait" variable nil (reparse-symbol function_parameters) [5219 5223]))              ) nil [5209 5264])
+            ("switch" function (:arguments 
+              ( ("label" variable nil (reparse-symbol function_parameters) [5277 5282]))              ) nil [5266 5411])
+            ("getConnection" function (:arguments 
+              ( ("label" variable nil (reparse-symbol function_parameters) [5430 5435]))              ) nil [5412 5586])
+            ("if" code nil nil [5587 5654]))          
+      :file "__init__.py"
+      :pointmax 5654
+      :fsize 5653
+      :lastmodtime '(23228 150 90869 915000)
+      :unmatched-syntax '((INDENT_BLOCK 1813 . 2040) (NEWLINE 1812 . 1813) (COLON 1811 . 1812) (TRY 1703 . 1706) (AS 1807 . 1809) (FROM 1076 . 1080) (PERIOD 1081 . 1082) (FROM 1015 . 1019) (PERIOD 1020 . 1021) (FROM 943 . 947) (PERIOD 948 . 949) (FROM 887 . 891) (PERIOD 892 . 893) (FROM 841 . 845) (PERIOD 846 . 847) (FROM 805 . 809) (PERIOD 810 . 811) (FROM 1076 . 1080) (PERIOD 1081 . 1082) (FROM 1015 . 1019) (PERIOD 1020 . 1021) (FROM 943 . 947) (PERIOD 948 . 949) (FROM 887 . 891) (PERIOD 892 . 893) (FROM 841 . 845) (PERIOD 846 . 847) (FROM 805 . 809) (PERIOD 810 . 811)))
+    (semanticdb-table "_trafficlight.py"
+      :file "_trafficlight.py"
+      :fsize 10495
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_multientryexit.py"
+      :file "_multientryexit.py"
+      :fsize 2589
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_lanearea.py"
+      :file "_lanearea.py"
+      :fsize 4252
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_inductionloop.py"
+      :file "_inductionloop.py"
+      :fsize 4609
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_route.py"
+      :file "_route.py"
+      :fsize 1715
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_person.py"
+      :file "_person.py"
+      :fsize 17601
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_vehicletype.py"
+      :file "_vehicletype.py"
+      :fsize 14339
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_vehicle.py"
+      :file "_vehicle.py"
+      :fsize 54040
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_lane.py"
+      :file "_lane.py"
+      :fsize 12698
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_gui.py"
+      :file "_gui.py"
+      :fsize 4567
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_simulation.py"
+      :file "_simulation.py"
+      :fsize 17664
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_edge.py"
+      :file "_edge.py"
+      :fsize 11311
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_junction.py"
+      :file "_junction.py"
+      :fsize 1667
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_polygon.py"
+      :file "_polygon.py"
+      :fsize 5166
+      :lastmodtime '(23104 6372 0 0))
+    (semanticdb-table "_poi.py"
+      :file "_poi.py"
+      :fsize 4115
+      :lastmodtime '(23104 6372 0 0)))
+  :file "!usr!share!sumo!tools!traci!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

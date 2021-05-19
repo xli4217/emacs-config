@@ -1,0 +1,93 @@
+;; Object spaces/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "spaces/"
+  :tables
+  (list
+    (semanticdb-table "box.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("gym" include nil nil [21 31])
+            ("gym.spaces" include nil nil [32 59])
+            ("Box" type
+               (:documentation "
+    A box in R^n.
+    I.e., each coordinate is bounded.
+
+    Example usage:
+    self.action_space = spaces.Box(low=-10, high=10, shape=(1,))
+    "
+                :superclasses ("gym.Space")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Two kinds of valid input:
+            Box(-1.0, 1.0, (3,4)) # low and high are scalars, and shape is provided
+            Box(np.array([-1.0,-2.0]), np.array([2.0,4.0])) # low and high are arrays of the same shape
+        \"\"\"" code nil (reparse-symbol indented_block_body) [295 532])
+                            ("if" code nil (reparse-symbol indented_block_body) [541 822]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [257 261])
+                            ("low" variable nil (reparse-symbol function_parameters) [263 266])
+                            ("high" variable nil (reparse-symbol function_parameters) [268 272])
+                            ("shape" variable nil (reparse-symbol function_parameters) [274 279]))                          
+                        :documentation "
+        Two kinds of valid input:
+            Box(-1.0, 1.0, (3,4)) # low and high are scalars, and shape is provided
+            Box(np.array([-1.0,-2.0]), np.array([2.0,4.0])) # low and high are arrays of the same shape
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [244 822])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [837 841]))                          )
+                        (reparse-symbol indented_block_body) [826 933])
+                    ("contains" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [950 954])
+                            ("x" variable nil (reparse-symbol function_parameters) [956 957]))                          )
+                        (reparse-symbol indented_block_body) [937 1050])
+                    ("to_jsonable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1071 1075])
+                            ("sample_n" variable nil (reparse-symbol function_parameters) [1077 1085]))                          )
+                        (reparse-symbol indented_block_body) [1055 1131])
+                    ("from_jsonable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1153 1157])
+                            ("sample_n" variable nil (reparse-symbol function_parameters) [1159 1167]))                          )
+                        (reparse-symbol indented_block_body) [1135 1229])
+                    ("shape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1258 1262]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1234 1295])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1312 1316]))                          )
+                        (reparse-symbol indented_block_body) [1299 1358])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1373 1377])
+                            ("other" variable nil (reparse-symbol function_parameters) [1379 1384]))                          )
+                        (reparse-symbol indented_block_body) [1362 1474]))                  
+                :type "class")
+                nil [61 1474]))          
+      :file "box.py"
+      :pointmax 1474
+      :fsize 1473
+      :lastmodtime '(22749 17617 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gym!spaces!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

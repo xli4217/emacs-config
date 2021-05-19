@@ -1,0 +1,224 @@
+;; Object baxter_sim_io/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "baxter_sim_io/"
+  :tables
+  (list
+    (semanticdb-table "qnode.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("baxter_sim_io_QNODE_HPP_" variable (:constant-flag t) nil [1886 1910])
+            ("ros/ros.h" include (:system-flag t) nil [1912 1932])
+            ("string" include (:system-flag t) nil [1933 1950])
+            ("QThread" include (:system-flag t) nil [1951 1969])
+            ("QStringListModel" include (:system-flag t) nil [1970 1997])
+            ("baxter_core_msgs/NavigatorState.h" include (:system-flag t) nil [1998 2042])
+            ("baxter_core_msgs/DigitalIOState.h" include (:system-flag t) nil [2043 2087])
+            ("baxter_sim_io" type
+               (:members 
+                  ( ("QNode" type
+                       (:superclasses 
+                          ( ("QThread" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2157 2164])
+                            ("QNode" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2173 2182])
+                                    ("argv" variable
+                                       (:pointer 2
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2183 2195]))                                  
+                                :type ("QNode" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2167 2196])
+                            ("QNode" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2199 2216])
+                            ("init" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2219 2231])
+                            ("run" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2234 2245])
+                            ("left_arm_nav" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::NavigatorState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2248 2361])
+                            ("right_arm_nav" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::NavigatorState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2248 2361])
+                            ("left_shoulder_nav" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::NavigatorState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2248 2361])
+                            ("right_shoulder_nav" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::NavigatorState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2248 2361])
+                            ("left_cuff_squeeze" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2364 2549])
+                            ("right_cuff_squeeze" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2364 2549])
+                            ("left_cuff_ok" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2364 2549])
+                            ("right_cuff_ok" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2364 2549])
+                            ("left_cuff_grasp" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2364 2549])
+                            ("right_cuff_grasp" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2364 2549])
+                            ("left_shoulder" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2364 2549])
+                            ("right_shoulder" variable
+                               (:typemodifiers ("static")
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2364 2549])
+                            ("rosShutdown" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2553 2572])
+                            ("private" label nil (reparse-symbol classsubparts) [2575 2583])
+                            ("init_argc" variable (:type "int") (reparse-symbol classsubparts) [2586 2600])
+                            ("init_argv" variable
+                               (:pointer 2
+                                :type "char")
+                                (reparse-symbol classsubparts) [2603 2620])
+                            ("left_navigator" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("right_navigator" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("torso_left_navigator" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("torso_right_navigator" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("left_lower_cuff" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("right_lower_cuff" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("left_lower_button" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("right_lower_button" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("left_upper_button" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("right_upper_button" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("left_shoulder_button" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("right_shoulder_button" variable (:type ("ros::Publisher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2623 2891])
+                            ("left_inner_light_sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2894 3167])
+                            ("left_outer_light_sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2894 3167])
+                            ("right_inner_light_sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2894 3167])
+                            ("right_outer_light_sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2894 3167])
+                            ("torso_left_inner_light_sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2894 3167])
+                            ("torso_left_outer_light_sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2894 3167])
+                            ("torso_right_inner_light_sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2894 3167])
+                            ("torso_right_outer_light_sub" variable (:type ("ros::Subscriber" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2894 3167])
+                            ("left_inner_light_sub_cb" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3199 3243]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3170 3244])
+                            ("left_outer_light_sub_cb" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3276 3320]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3247 3321])
+                            ("right_inner_light_sub_cb" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3354 3398]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3324 3399])
+                            ("right_outer_light_sub_cb" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3432 3476]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3402 3477])
+                            ("torso_left_inner_light_sub_cb" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3515 3559]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3480 3560])
+                            ("torso_left_outer_light_sub_cb" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3598 3642]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3563 3643])
+                            ("torso_right_inner_light_sub_cb" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3682 3726]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3646 3727])
+                            ("torso_right_outer_light_sub_cb" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3766 3810]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3730 3811]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2116 3815]))                  
+                :type "namespace")
+                nil [2089 3818]))          
+      :file "qnode.hpp"
+      :pointmax 3886
+      :fsize 3885
+      :lastmodtime '(23119 55870 0 0)
+      :unmatched-syntax '((symbol 2147 . 2155))
+      :lexical-table 
+        '(("baxter_sim_io_QNODE_HPP_")
+          )
+))
+  :file "!Users!xiaoli!src!docker_ros!docker_home!baxter_ws!src!baxter_simulator!baxter_sim_io!include!baxter_sim_io!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

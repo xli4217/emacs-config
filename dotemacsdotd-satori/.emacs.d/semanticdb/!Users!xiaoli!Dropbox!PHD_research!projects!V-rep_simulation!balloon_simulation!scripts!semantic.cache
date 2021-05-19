@@ -1,0 +1,717 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables
+  (list
+    (semanticdb-table "main.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("DDPG" include nil nil [20 41])
+            ("copdac" include nil nil [42 67])
+            ("numpy" include nil nil [109 127])
+            ("sys" include nil nil [128 138])
+            ("time" include nil nil [139 150])
+            ("try" code nil nil [152 626])
+            ("time" include nil nil [627 638])
+            ("print" code nil nil [640 665])
+            ("vrep" code nil nil [666 685])
+            ("clientID" variable nil nil [731 790])
+            ("if" code nil nil [811 10157])
+            ("print" code nil nil [10157 10180]))          
+      :file "main.py"
+      :pointmax 10181
+      :fsize 10180
+      :lastmodtime '(22350 60239 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "DDPG.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 38])
+            ("create_network" include nil nil [39 79])
+            ("network_visualization" include nil nil [80 162])
+            ("DDPG" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''
+        inputs to create_network:
+          input_dim
+          output_dim
+          num_of_layers
+          nodes_per_layer
+          layer_type
+          learning_rate
+        '''" code nil (reparse-symbol indented_block_body) [221 406])
+                            ("self" variable nil (reparse-symbol indented_block_body) [456 478])
+                            ("self" variable nil (reparse-symbol indented_block_body) [487 512])
+                            ("self" variable nil (reparse-symbol indented_block_body) [521 542])
+                            ("self" variable nil (reparse-symbol indented_block_body) [552 577])
+                            ("self" variable nil (reparse-symbol indented_block_body) [609 620])
+                            ("self" variable nil (reparse-symbol indented_block_body) [676 688])
+                            ("self" variable nil (reparse-symbol indented_block_body) [738 755])
+                            ("self" variable nil (reparse-symbol indented_block_body) [764 780])
+                            ("self" variable nil (reparse-symbol indented_block_body) [830 862])
+                            ("self" variable nil (reparse-symbol indented_block_body) [871 932])
+                            ("self" variable nil (reparse-symbol indented_block_body) [941 959])
+                            ("self" variable nil (reparse-symbol indented_block_body) [968 987])
+                            ("self" variable nil (reparse-symbol indented_block_body) [997 1032])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1041 1105])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1114 1197])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1207 1236])
+                            ("self" code nil (reparse-symbol indented_block_body) [1479 1529])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1547 1575])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1584 1607])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1616 1641])
+                            ("self" code nil (reparse-symbol indented_block_body) [1650 1818])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1836 1866])
+                            ("self" code nil (reparse-symbol indented_block_body) [1938 1985])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1994 2023])
+                            ("self" code nil (reparse-symbol indented_block_body) [2032 2082])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2092 2115])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2124 2153])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2162 2185])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2195 2243])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2252 2318])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2327 2390])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2400 2468])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2477 2542])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2552 2620])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2629 2694])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2704 2774])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2783 2850])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2860 2963])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2972 3077]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [201 205])
+                            ("port" variable nil (reparse-symbol function_parameters) [206 210]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [188 3078])
+                    ("save_ddpg" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3105 3109]))                          )
+                        (reparse-symbol indented_block_body) [3091 3439])
+                    ("load_ddpg" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3466 3470]))                          )
+                        (reparse-symbol indented_block_body) [3452 4006])
+                    ("save_check_point_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4038 4042]))                          )
+                        (reparse-symbol indented_block_body) [4011 4147])
+                    ("load_checkpoint_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4178 4182]))                          )
+                        (reparse-symbol indented_block_body) [4152 4337])
+                    ("get_next_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4370 4374])
+                            ("current_state" variable nil (reparse-symbol function_parameters) [4376 4389])
+                            ("with_noise" variable nil (reparse-symbol function_parameters) [4391 4401]))                          )
+                        (reparse-symbol indented_block_body) [4350 4681])
+                    ("append_buffer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4755 4759])
+                            ("new_experience" variable nil (reparse-symbol function_parameters) [4760 4774]))                          )
+                        (reparse-symbol indented_block_body) [4737 4972])
+                    ("prepare_target" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4996 5000])
+                            ("data" variable nil (reparse-symbol function_parameters) [5001 5005])
+                            ("nb_of_samples" variable nil (reparse-symbol function_parameters) [5007 5020]))                          )
+                        (reparse-symbol indented_block_body) [4977 6124])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6140 6144]))                          )
+                        (reparse-symbol indented_block_body) [6129 10898])
+                    ("calculate_Qaction_gradient" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11010 11014])
+                            ("critic_nn" variable nil (reparse-symbol function_parameters) [11015 11024])
+                            ("s" variable nil (reparse-symbol function_parameters) [11025 11026])
+                            ("a" variable nil (reparse-symbol function_parameters) [11027 11028]))                          )
+                        (reparse-symbol indented_block_body) [10979 11670])
+                    ("flatten_weights" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12759 12763])
+                            ("weight_list" variable nil (reparse-symbol function_parameters) [12764 12775]))                          )
+                        (reparse-symbol indented_block_body) [12739 13160])
+                    ("restore_weight_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13198 13202])
+                            ("weight_flattened" variable nil (reparse-symbol function_parameters) [13203 13219])
+                            ("weight_shape" variable nil (reparse-symbol function_parameters) [13220 13232]))                          )
+                        (reparse-symbol indented_block_body) [13174 13699]))                  
+                :type "class")
+                nil [164 13699]))          
+      :file "DDPG.py"
+      :pointmax 13715
+      :fsize 13714
+      :lastmodtime '(22343 29344 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "create_network.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("keras.models" include nil nil [20 79])
+            ("keras.layers.core" include nil nil [127 183])
+            ("keras.layers.advanced_activations" include nil nil [184 239])
+            ("keras.layers.normalization" include nil nil [240 297])
+            ("keras.utils.visualize_util" include nil nil [298 341])
+            ("keras.optimizers" include nil nil [342 398])
+            ("keras.regularizers" include nil nil [399 432])
+            ("keras.callbacks" include nil nil [433 499])
+            ("json" include nil nil [500 511])
+            ("numpy" include nil nil [512 530])
+            ("matplotlib.pyplot" include nil nil [531 562])
+            ("SaveArchitecture" type
+               (:superclasses ("Callback")
+                :members 
+                  ( ("on_train_begin" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [622 626])
+                            ("logs" variable nil (reparse-symbol function_parameters) [627 631]))                          )
+                        (reparse-symbol indented_block_body) [603 800]))                  
+                :type "class")
+                nil [565 800])
+            ("CreateNetwork" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [857 882])
+                            ("self" variable nil (reparse-symbol indented_block_body) [966 1139]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [856 860]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [843 1154])
+                    ("create_network" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1287 1291])
+                            ("input_dim" variable nil (reparse-symbol function_parameters) [1316 1325])
+                            ("output_dim" variable nil (reparse-symbol function_parameters) [1350 1360])
+                            ("num_of_layers" variable nil (reparse-symbol function_parameters) [1385 1398])
+                            ("nodes_per_layer" variable nil (reparse-symbol function_parameters) [1423 1438])
+                            ("layer_type" variable nil (reparse-symbol function_parameters) [1463 1473])
+                            ("learning_rate" variable nil (reparse-symbol function_parameters) [1498 1511])
+                            ("l2_reg" variable nil (reparse-symbol function_parameters) [1536 1542])
+                            ("with_BN" variable nil (reparse-symbol function_parameters) [1569 1576]))                          )
+                        (reparse-symbol indented_block_body) [1268 3596])
+                    ("compile_network" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4496 4500])
+                            ("lr" variable nil (reparse-symbol function_parameters) [4501 4503]))                          )
+                        (reparse-symbol indented_block_body) [4476 4833])
+                    ("copy_network" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4864 4868])
+                            ("target_nn" variable nil (reparse-symbol function_parameters) [4870 4879])
+                            ("learning_rate" variable nil (reparse-symbol function_parameters) [4881 4894]))                          )
+                        (reparse-symbol indented_block_body) [4847 5175])
+                    ("save_network" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5391 5395])
+                            ("architecture_path" variable nil (reparse-symbol function_parameters) [5396 5413])
+                            ("weight_path" variable nil (reparse-symbol function_parameters) [5415 5426]))                          )
+                        (reparse-symbol indented_block_body) [5374 5705])
+                    ("load_network" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5739 5743])
+                            ("architecture_path" variable nil (reparse-symbol function_parameters) [5744 5761])
+                            ("weight_path" variable nil (reparse-symbol function_parameters) [5762 5773]))                          )
+                        (reparse-symbol indented_block_body) [5722 6023])
+                    ("forward_pass" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6045 6049])
+                            ("x" variable nil (reparse-symbol function_parameters) [6050 6051]))                          )
+                        (reparse-symbol indented_block_body) [6028 6100])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6136 6140])
+                            ("data" variable nil (reparse-symbol function_parameters) [6141 6145])
+                            ("target" variable nil (reparse-symbol function_parameters) [6146 6152])
+                            ("nb_epoch" variable nil (reparse-symbol function_parameters) [6153 6161])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [6162 6172])
+                            ("validation_data" variable nil (reparse-symbol function_parameters) [6173 6188])
+                            ("history" variable nil (reparse-symbol function_parameters) [6189 6196])
+                            ("is_hstl" variable nil (reparse-symbol function_parameters) [6202 6209]))                          )
+                        (reparse-symbol indented_block_body) [6126 7945])
+                    ("visualize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7992 7996])
+                            ("file_name" variable nil (reparse-symbol function_parameters) [7997 8006]))                          )
+                        (reparse-symbol indented_block_body) [7978 8069])
+                    ("get_weights" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8090 8094]))                          )
+                        (reparse-symbol indented_block_body) [8074 8137])
+                    ("set_weights" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8158 8162])
+                            ("weights" variable nil (reparse-symbol function_parameters) [8163 8170]))                          )
+                        (reparse-symbol indented_block_body) [8142 8213])
+                    ("count_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8234 8238]))                          )
+                        (reparse-symbol indented_block_body) [8217 8282]))                  
+                :type "class")
+                nil [810 8282]))          
+      :file "create_network.py"
+      :pointmax 8283
+      :fsize 8282
+      :lastmodtime '(22338 4140 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "plot_data.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("network_visualization" include nil nil [20 68])
+            ("matplotlib.pyplot" include nil nil [69 100])
+            ("matplotlib" include nil nil [101 126])
+            ("mpl_toolkits.mplot3d" include nil nil [127 166])
+            ("DDPG" include nil nil [167 188])
+            ("hstl" include nil nil [189 210])
+            ("copdac" include nil nil [211 236])
+            ("numpy" include nil nil [237 255])
+            ("zmq" include nil nil [256 266])
+            ("statsmodels.api" include nil nil [267 298])
+            ("statsmodels.graphics" include nil nil [299 340])
+            ("traj" variable nil nil [3252 3306])
+            ("traj" code nil nil [3307 3334])
+            ("hstl" variable nil nil [3360 3373])
+            ("r" variable nil nil [3375 3381])
+            ("rt" variable nil nil [3382 3389])
+            ("t" variable nil nil [3390 3396])
+            ("h" variable nil nil [3397 3403])
+            ("k" variable nil nil [3404 3409])
+            ("for" code nil nil [3410 3707])
+            ("fig" variable nil nil [3717 3735])
+            ("plt" code nil nil [3736 3780])
+            ("plt" code nil nil [3781 3795])
+            ("plt" code nil nil [3796 3810])
+            ("plt" code nil nil [3811 3848])
+            ("plt" code nil nil [3849 3867])
+            ("plt" code nil nil [3868 3899])
+            ("plt" code nil nil [3900 3912])
+            ("plt" code nil nil [3913 3923])
+            ("plot_policy" function (:arguments 
+              ( ("ax" variable nil (reparse-symbol function_parameters) [4008 4010])
+                ("sv" variable nil (reparse-symbol function_parameters) [4011 4013])
+                ("vv" variable nil (reparse-symbol function_parameters) [4014 4016])
+                ("av" variable nil (reparse-symbol function_parameters) [4017 4019])
+                ("type_of_policy" variable nil (reparse-symbol function_parameters) [4020 4034]))              ) nil [3992 5045]))          
+      :file "plot_data.py"
+      :pointmax 7734
+      :fsize 7733
+      :lastmodtime '(22351 13911 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "network_visualization.py"
+      :file "network_visualization.py"
+      :fsize 4960
+      :lastmodtime '(22310 49657 0 0))
+    (semanticdb-table "hstl.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 38])
+            ("create_network" include nil nil [39 79])
+            ("HSTL" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [171 189])
+                            ("self" variable nil (reparse-symbol indented_block_body) [198 219])
+                            ("self" variable nil (reparse-symbol indented_block_body) [228 240])
+                            ("self" variable nil (reparse-symbol indented_block_body) [249 262])
+                            ("self" variable nil (reparse-symbol indented_block_body) [271 288])
+                            ("self" variable nil (reparse-symbol indented_block_body) [297 313])
+                            ("self" variable nil (reparse-symbol indented_block_body) [366 384])
+                            ("self" variable nil (reparse-symbol indented_block_body) [393 412])
+                            ("self" variable nil (reparse-symbol indented_block_body) [422 457])
+                            ("self" variable nil (reparse-symbol indented_block_body) [466 530])
+                            ("self" variable nil (reparse-symbol indented_block_body) [539 622])
+                            ("self" variable nil (reparse-symbol indented_block_body) [650 680])
+                            ("self" variable nil (reparse-symbol indented_block_body) [689 719])
+                            ("option1_config_path" variable nil (reparse-symbol indented_block_body) [728 799])
+                            ("option1_weight_path" variable nil (reparse-symbol indented_block_body) [808 876])
+                            ("option2_config_path" variable nil (reparse-symbol indented_block_body) [885 956])
+                            ("option2_weight_path" variable nil (reparse-symbol indented_block_body) [965 1033])
+                            ("self" code nil (reparse-symbol indented_block_body) [1042 1108])
+                            ("self" code nil (reparse-symbol indented_block_body) [1117 1183])
+                            ("self" code nil (reparse-symbol indented_block_body) [1192 1230])
+                            ("self" code nil (reparse-symbol indented_block_body) [1239 1277])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1319 1343])
+                            ("self" code nil (reparse-symbol indented_block_body) [1352 1475])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1516 1541])
+                            ("self" code nil (reparse-symbol indented_block_body) [1550 1588])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1606 1629])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1638 1667])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1685 1743])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1752 1807])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1817 1877])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1886 1943])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1953 2050]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [118 122]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [105 2051])
+                    ("save_hstl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2078 2082]))                          )
+                        (reparse-symbol indented_block_body) [2064 2223])
+                    ("load_hstl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2250 2254]))                          )
+                        (reparse-symbol indented_block_body) [2236 2478])
+                    ("load_checkpoint_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2517 2521]))                          )
+                        (reparse-symbol indented_block_body) [2491 2682])
+                    ("get_next_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2715 2719])
+                            ("current_state" variable nil (reparse-symbol function_parameters) [2720 2733])
+                            ("with_explore" variable nil (reparse-symbol function_parameters) [2734 2746]))                          )
+                        (reparse-symbol indented_block_body) [2695 3758])
+                    ("prepare_target" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3819 3823])
+                            ("data" variable nil (reparse-symbol function_parameters) [3824 3828])
+                            ("nb_of_samples" variable nil (reparse-symbol function_parameters) [3829 3842])
+                            ("type_of_update" variable nil (reparse-symbol function_parameters) [3843 3857]))                          )
+                        (reparse-symbol indented_block_body) [3800 4794])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4822 4826]))                          )
+                        (reparse-symbol indented_block_body) [4811 5648])
+                    ("evaluate_stl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5671 5675])
+                            ("t" variable nil (reparse-symbol function_parameters) [5676 5677])
+                            ("h" variable nil (reparse-symbol function_parameters) [5678 5679]))                          )
+                        (reparse-symbol indented_block_body) [5654 6055])
+                    ("flatten_weights" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6105 6109])
+                            ("weight_list" variable nil (reparse-symbol function_parameters) [6110 6121]))                          )
+                        (reparse-symbol indented_block_body) [6085 6506])
+                    ("restore_weight_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6544 6548])
+                            ("weight_flattened" variable nil (reparse-symbol function_parameters) [6549 6565])
+                            ("weight_shape" variable nil (reparse-symbol function_parameters) [6566 6578]))                          )
+                        (reparse-symbol indented_block_body) [6520 7045]))                  
+                :type "class")
+                nil [81 7045]))          
+      :file "hstl.py"
+      :pointmax 7045
+      :fsize 7044
+      :lastmodtime '(22350 61002 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "balloon_learn_offline.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("DDPG" include nil nil [20 41])
+            ("hstl" include nil nil [42 63])
+            ("numpy" include nil nil [64 82])
+            ("matplotlib.pyplot" include nil nil [83 114])
+            ("network_visualization" include nil nil [115 163])
+            ("copdac" include nil nil [164 189])
+            ("hstl" variable nil nil [1880 1893])
+            ("hstl" code nil nil [1895 1911])
+            ("experience" variable nil nil [1913 1981])
+            ("print" code nil nil [1982 2004])
+            ("validation_data_idx" variable nil nil [2006 2108])
+            ("validation_data" variable nil nil [2109 2160])
+            ("train_data" variable nil nil [2162 2251])
+            ("k" variable nil nil [2252 2257])
+            ("for" code nil nil [2258 2391])
+            ("hstl" variable nil nil [2392 2421])
+            ("hstl" variable nil nil [2422 2462])
+            ("i" variable nil nil [2471 2476])
+            ("while" code nil nil [2477 2589]))          
+      :file "balloon_learn_offline.py"
+      :pointmax 2589
+      :fsize 2588
+      :lastmodtime '(22339 6076 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("create_network" include nil nil [20 60])
+            ("matplotlib.pyplot" include nil nil [61 92])
+            ("numpy" include nil nil [93 111])
+            ("sys" include nil nil [112 122])
+            ("keras.models" include nil nil [124 176])
+            ("keras.layers.core" include nil nil [177 233])
+            ("theano.tensor" include nil nil [234 259])
+            ("theano" include nil nil [260 273])
+            ("theano" include nil nil [274 295])
+            ("keras.optimizers" include nil nil [296 334])
+            ("keras.callbacks" include nil nil [335 371])
+            ("DDPG" include nil nil [373 394])
+            ("network_visualization" include nil nil [395 494])
+            ("archi_path" variable nil nil [496 520])
+            ("weight_path" variable nil nil [521 544])
+            ("create_data" function (:arguments 
+              ( ("lower" variable nil (reparse-symbol function_parameters) [562 567])
+                ("upper" variable nil (reparse-symbol function_parameters) [568 573]))              ) nil [546 723])
+            ("x" variable nil nil [725 745])
+            ("y" variable nil nil [746 766])
+            ("z" variable nil nil [767 795])
+            ("vd" variable nil nil [797 804])
+            ("for" code nil nil [805 852])
+            ("vd" variable nil nil [853 875])
+            ("nn1" variable nil nil [942 963])
+            ("nn1" code nil nil [995 1053])
+            ("nn1" code nil nil [1339 1362]))          
+      :file "test.py"
+      :pointmax 2824
+      :fsize 2823
+      :lastmodtime '(22425 25520 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "explanation.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("create_network" include nil nil [20 60])
+            ("matplotlib.pyplot" include nil nil [61 92])
+            ("numpy" include nil nil [93 111])
+            ("math" include nil nil [112 123])
+            ("theano" include nil nil [124 137])
+            ("keras.models" include nil nil [139 191])
+            ("keras.layers.core" include nil nil [192 248])
+            ("keras.callbacks" include nil nil [249 298])
+            ("matplotlib.animation" include nil nil [300 340])
+            ("TrainingHistory" type
+               (:superclasses ("Callback")
+                :members 
+                  ( ("on_train_begin" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [475 479])
+                            ("logs" variable nil (reparse-symbol function_parameters) [481 485]))                          )
+                        (reparse-symbol indented_block_body) [456 687])
+                    ("on_batch_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [709 713])
+                            ("batch" variable nil (reparse-symbol function_parameters) [715 720])
+                            ("logs" variable nil (reparse-symbol function_parameters) [722 726]))                          )
+                        (reparse-symbol indented_block_body) [692 932]))                  
+                :type "class")
+                nil [419 932])
+            ("visualize_training" function (:arguments 
+              ( ("history" variable nil (reparse-symbol function_parameters) [1216 1223])
+                ("name" variable nil (reparse-symbol function_parameters) [1225 1229]))              ) nil [1193 2509])
+            ("create_data" function (:arguments 
+              ( ("lower" variable nil (reparse-symbol function_parameters) [2978 2983])
+                ("upper" variable nil (reparse-symbol function_parameters) [2984 2989]))              ) nil [2962 3155])
+            ("x_long, y_long" code nil nil [3156 3191])
+            ("x, y" code nil nil [3192 3215])
+            ("x" variable nil nil [3216 3246])
+            ("y" variable nil nil [3285 3315])
+            ("X_train" variable nil nil [3354 3386])
+            ("Y_train" variable nil nil [3387 3419])
+            ("X_train_long" variable nil nil [3420 3462])
+            ("nn1" variable nil nil [3464 3485])
+            ("nn1" code nil nil [3486 3574])
+            ("history" variable nil nil [3722 3749])
+            ("for" code nil nil [3750 4202]))          
+      :file "explanation.py"
+      :pointmax 4584
+      :fsize 4583
+      :lastmodtime '(22327 49368 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "hmain.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("hstl" include nil nil [20 41])
+            ("create_network" include nil nil [42 82])
+            ("numpy" include nil nil [83 101])
+            ("sys" include nil nil [102 112])
+            ("time" include nil nil [113 124])
+            ("os" include nil nil [125 134])
+            ("try" code nil nil [136 610])
+            ("time" include nil nil [611 622])
+            ("print" code nil nil [624 649])
+            ("vrep" code nil nil [650 669])
+            ("clientID" variable nil nil [715 774])
+            ("if" code nil nil [795 9120])
+            ("print" code nil nil [9120 9143]))          
+      :file "hmain.py"
+      :pointmax 9144
+      :fsize 9143
+      :lastmodtime '(22338 15173 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "copdac.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 38])
+            ("create_network" include nil nil [39 79])
+            ("COPDAC" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [169 185])
+                            ("self" variable nil (reparse-symbol indented_block_body) [194 214])
+                            ("self" variable nil (reparse-symbol indented_block_body) [223 242])
+                            ("self" variable nil (reparse-symbol indented_block_body) [252 263])
+                            ("self" variable nil (reparse-symbol indented_block_body) [319 331])
+                            ("self" variable nil (reparse-symbol indented_block_body) [381 398])
+                            ("self" variable nil (reparse-symbol indented_block_body) [441 459])
+                            ("self" variable nil (reparse-symbol indented_block_body) [468 487])
+                            ("self" variable nil (reparse-symbol indented_block_body) [497 532])
+                            ("self" variable nil (reparse-symbol indented_block_body) [541 605])
+                            ("self" variable nil (reparse-symbol indented_block_body) [614 697])
+                            ("self" variable nil (reparse-symbol indented_block_body) [707 732])
+                            ("self" variable nil (reparse-symbol indented_block_body) [741 770])
+                            ("self" variable nil (reparse-symbol indented_block_body) [823 851])
+                            ("self" code nil (reparse-symbol indented_block_body) [860 960])
+                            ("self" variable nil (reparse-symbol indented_block_body) [969 1017])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1070 1101])
+                            ("self" code nil (reparse-symbol indented_block_body) [1110 1195])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1241 1331])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1341 1409])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1418 1483])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1493 1598])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1607 1714])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1724 1798])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1807 1878])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1888 1959]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [120 124]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [107 1960])
+                    ("save_copdac" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1983 1987]))                          )
+                        (reparse-symbol indented_block_body) [1967 2244])
+                    ("load_copdac" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2266 2270]))                          )
+                        (reparse-symbol indented_block_body) [2250 2594])
+                    ("save_check_point_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2626 2630]))                          )
+                        (reparse-symbol indented_block_body) [2599 2735])
+                    ("load_checkpoint_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2766 2770]))                          )
+                        (reparse-symbol indented_block_body) [2740 2925])
+                    ("get_next_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2950 2954])
+                            ("current_state" variable nil (reparse-symbol function_parameters) [2955 2968])
+                            ("with_noise" variable nil (reparse-symbol function_parameters) [2969 2979]))                          )
+                        (reparse-symbol indented_block_body) [2930 3265])
+                    ("prepare_gradients" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3353 3357])
+                            ("data" variable nil (reparse-symbol function_parameters) [3358 3362])
+                            ("nb_of_samples" variable nil (reparse-symbol function_parameters) [3363 3376]))                          )
+                        (reparse-symbol indented_block_body) [3331 5182])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5207 5211]))                          )
+                        (reparse-symbol indented_block_body) [5196 6190])
+                    ("update_GQ" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6210 6214]))                          )
+                        (reparse-symbol indented_block_body) [6196 6234])
+                    ("flatten_weights" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6259 6263])
+                            ("weight_list" variable nil (reparse-symbol function_parameters) [6264 6275]))                          )
+                        (reparse-symbol indented_block_body) [6239 6660])
+                    ("restore_weight_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6698 6702])
+                            ("weight_flattened" variable nil (reparse-symbol function_parameters) [6703 6719])
+                            ("weight_shape" variable nil (reparse-symbol function_parameters) [6720 6732]))                          )
+                        (reparse-symbol indented_block_body) [6674 7199]))                  
+                :type "class")
+                nil [81 7199]))          
+      :file "copdac.py"
+      :pointmax 7221
+      :fsize 7220
+      :lastmodtime '(22335 59645 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "main_bak.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("try" code nil nil [20 494])
+            ("time" include nil nil [495 506])
+            ("print" code nil nil [508 533])
+            ("vrep" code nil nil [534 553])
+            ("clientID" variable nil nil [599 658])
+            ("if" code nil nil [678 2270])
+            ("print" code nil nil [2270 2293]))          
+      :file "main_bak.py"
+      :pointmax 2294
+      :fsize 2293
+      :lastmodtime '(22288 7286 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "fake_simulation.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("DDPG" include nil nil [20 41])
+            ("matplotlib.pyplot" include nil nil [42 73])
+            ("numpy" include nil nil [74 92])
+            ("dynamics" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [134 135])
+                ("a" variable nil (reparse-symbol function_parameters) [136 137]))              ) nil [121 195])
+            ("ddpg" variable nil nil [197 210])
+            ("for" code nil nil [212 738]))          
+      :file "fake_simulation.py"
+      :pointmax 746
+      :fsize 745
+      :lastmodtime '(22301 7365 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!V-rep_simulation!balloon_simulation!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

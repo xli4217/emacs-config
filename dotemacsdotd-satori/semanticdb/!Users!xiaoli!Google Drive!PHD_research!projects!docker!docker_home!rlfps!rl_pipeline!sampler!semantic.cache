@@ -1,0 +1,168 @@
+;; Object sampler/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sampler/"
+  :tables
+  (list
+    (semanticdb-table "batch_sampler.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("cloudpickle" include nil nil [30 48])
+            ("BatchSampler" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [339 353])
+                            ("self" variable nil (reparse-symbol indented_block_body) [475 495])
+                            ("self" variable nil (reparse-symbol indented_block_body) [504 555])
+                            ("self" variable nil (reparse-symbol indented_block_body) [564 631])
+                            ("self" variable nil (reparse-symbol indented_block_body) [640 701])
+                            ("self" variable nil (reparse-symbol indented_block_body) [710 730])
+                            ("self" variable nil (reparse-symbol indented_block_body) [740 784])
+                            ("self" variable nil (reparse-symbol indented_block_body) [793 839])
+                            ("self" variable nil (reparse-symbol indented_block_body) [849 873])
+                            ("self" variable nil (reparse-symbol indented_block_body) [923 945]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [96 100])
+                            ("env" variable nil (reparse-symbol function_parameters) [119 122])
+                            ("policy" variable nil (reparse-symbol function_parameters) [141 147])
+                            ("sampler_hyperparams" variable nil (reparse-symbol function_parameters) [166 185])
+                            ("state_preprocessor" variable nil (reparse-symbol function_parameters) [204 222])
+                            ("reward_preprocessor" variable nil (reparse-symbol function_parameters) [246 265])
+                            ("logger" variable nil (reparse-symbol function_parameters) [289 295])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [319 327]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [83 986])
+                    ("run_episode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1543 1547])
+                            ("env" variable nil (reparse-symbol function_parameters) [1569 1572])
+                            ("policy" variable nil (reparse-symbol function_parameters) [1594 1600])
+                            ("episode_horizon" variable nil (reparse-symbol function_parameters) [1622 1637])
+                            ("state_preprocessor" variable nil (reparse-symbol function_parameters) [1659 1677])
+                            ("reward_preprocessor" variable nil (reparse-symbol function_parameters) [1699 1718])
+                            ("logger" variable nil (reparse-symbol function_parameters) [1740 1746])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [1768 1781]))                          
+                        :documentation " Run single episode with option to animate
+        Args:
+        
+        Returns: two dictionaries with keys \"Observations\", \"Actions\", \"Rewards\"
+        Observations: shape = (episode len, obs_dim)
+        Actions: shape = (episode len, act_dim)
+        Rewards: shape = (episode len,)
+
+        The first dictionary is original trajectory
+        The second is normalized trajectory (same as the first if no state or reward preprocessor specified)
+        ")
+                        (reparse-symbol indented_block_body) [1527 4760])
+                    ("get_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4791 4795])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [4797 4810]))                          )
+                        (reparse-symbol indented_block_body) [4777 5956])
+                    ("save_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5977 5981])
+                            ("batch" variable nil (reparse-symbol function_parameters) [5983 5988])
+                            ("path" variable nil (reparse-symbol function_parameters) [5990 5994]))                          )
+                        (reparse-symbol indented_block_body) [5962 6191]))                  
+                :type "class")
+                nil [50 6191])
+            ("if" code nil nil [6204 7810]))          
+      :file "batch_sampler.py"
+      :pointmax 7810
+      :fsize 7809
+      :lastmodtime '(23185 61348 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "parallel_batch_sampler.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("os" include nil nil [20 29])
+            ("cloudpickle" include nil nil [30 48])
+            ("ray" include nil nil [49 59])
+            ("run_episode" function
+               (:parent "dummy"
+                :decorators 
+                  ( ("ray.remote" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("self" variable nil (reparse-symbol function_parameters) [89 93])
+                    ("env" variable nil (reparse-symbol function_parameters) [111 114])
+                    ("policy" variable nil (reparse-symbol function_parameters) [132 138])
+                    ("episode_horizon" variable nil (reparse-symbol function_parameters) [156 171])
+                    ("state_preprocessor" variable nil (reparse-symbol function_parameters) [189 207])
+                    ("reward_preprocessor" variable nil (reparse-symbol function_parameters) [225 244])
+                    ("logger" variable nil (reparse-symbol function_parameters) [262 268])
+                    ("deterministic" variable nil (reparse-symbol function_parameters) [286 299]))                  
+                :documentation " Run single episode with option to animate
+        Args:
+        
+        Returns: two dictionaries with keys \"Observations\", \"Actions\", \"Rewards\"
+        Observations: shape = (episode len, obs_dim)
+        Actions: shape = (episode len, act_dim)
+        Rewards: shape = (episode len,)
+
+        The first dictionary is original trajectory
+        The second is normalized trajectory (same as the first if no state or reward preprocessor specified)
+        ")
+                nil [61 2797])
+            ("ParallelBatchSampler" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("os" variable nil (reparse-symbol indented_block_body) [3080 3113])
+                            ("os" variable nil (reparse-symbol indented_block_body) [3122 3160])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3178 3192])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3314 3334])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3343 3394])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3403 3470])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3479 3540])
+                            ("if" code nil (reparse-symbol indented_block_body) [3549 3593])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3601 3645])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3654 3700])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3710 3734])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3784 3806])
+                            ("if" code nil (reparse-symbol indented_block_body) [3856 4073]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2854 2858])
+                            ("env" variable nil (reparse-symbol function_parameters) [2877 2880])
+                            ("policy" variable nil (reparse-symbol function_parameters) [2899 2905])
+                            ("sampler_hyperparams" variable nil (reparse-symbol function_parameters) [2924 2943])
+                            ("state_preprocessor" variable nil (reparse-symbol function_parameters) [2962 2980])
+                            ("reward_preprocessor" variable nil (reparse-symbol function_parameters) [3004 3023])
+                            ("logger" variable nil (reparse-symbol function_parameters) [3047 3053])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [3060 3068]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2841 4073])
+                    ("get_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4121 4125])
+                            ("deterministic" variable nil (reparse-symbol function_parameters) [4127 4140]))                          )
+                        (reparse-symbol indented_block_body) [4107 5251])
+                    ("save_batch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5272 5276])
+                            ("batch" variable nil (reparse-symbol function_parameters) [5278 5283])
+                            ("path" variable nil (reparse-symbol function_parameters) [5285 5289]))                          )
+                        (reparse-symbol indented_block_body) [5257 5486]))                  
+                :type "class")
+                nil [2800 5486])
+            ("if" code nil nil [5499 7105]))          
+      :file "parallel_batch_sampler.py"
+      :pointmax 7105
+      :fsize 7104
+      :lastmodtime '(23155 27911 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!sampler!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,68 @@
+;; Object search_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "search_test/"
+  :tables
+  (list
+    (semanticdb-table "items.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("scrapy" include nil nil [153 166])
+            ("MyItem" type
+               (:superclasses ("scrapy.Item")
+                :members 
+                  ( ("title" variable nil (reparse-symbol indented_block_body) [277 299])
+                    ("file_urls" variable nil (reparse-symbol indented_block_body) [309 335])
+                    ("files" variable nil (reparse-symbol indented_block_body) [340 362]))                  
+                :type "class")
+                nil [169 363]))          
+      :file "items.py"
+      :pointmax 363
+      :fsize 362
+      :lastmodtime '(22143 23206 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "pipelines.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [193 204])
+            ("SearchTestPipeline" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [273 315]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [258 262]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [245 316])
+                    ("process_item" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [338 342])
+                            ("item" variable nil (reparse-symbol function_parameters) [344 348])
+                            ("spider" variable nil (reparse-symbol function_parameters) [350 356]))                          )
+                        (reparse-symbol indented_block_body) [321 464]))                  
+                :type "class")
+                nil [206 464]))          
+      :file "pipelines.py"
+      :pointmax 464
+      :fsize 463
+      :lastmodtime '(22143 31369 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "settings.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("BOT_NAME" variable nil nil [437 461])
+            ("SPIDER_MODULES" variable nil nil [463 503])
+            ("NEWSPIDER_MODULE" variable nil nil [504 544])
+            ("ITEM_PIPELINES" variable nil nil [2123 2290])
+            ("FILES_STORE" variable nil nil [2292 2356])
+            ("IMAGES_STORE" variable nil nil [2357 2422]))          
+      :file "settings.py"
+      :pointmax 3258
+      :fsize 3257
+      :lastmodtime '(22143 26035 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Desktop!search!scrape!scrapy_test!search_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

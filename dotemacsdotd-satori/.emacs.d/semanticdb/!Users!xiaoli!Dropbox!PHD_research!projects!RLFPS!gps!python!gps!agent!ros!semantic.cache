@@ -1,0 +1,235 @@
+;; Object ros/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ros/"
+  :tables
+  (list
+    (semanticdb-table "agent_ros.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines an agent for the PR2 ROS environment. \"\"\"" code nil nil [1 64])
+            ("copy" include nil nil [65 76])
+            ("time" include nil nil [77 88])
+            ("numpy" include nil nil [89 107])
+            ("rospy" include nil nil [109 121])
+            ("gps.agent.agent" include nil nil [123 156])
+            ("gps.agent.agent_utils" include nil nil [157 212])
+            ("gps.agent.config" include nil nil [213 251])
+            ("gps.agent.ros.ros_utils" include nil nil [252 389])
+            ("gps.proto.gps_pb2" include nil nil [390 444])
+            ("gps_agent_pkg.msg" include nil nil [445 583])
+            ("try" code nil nil [584 721])
+            ("AgentROS" type
+               (:documentation "
+    All communication between the algorithms and ROS is done through
+    this class.
+    "
+                :superclasses ("Agent")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Initialize agent.
+        Args:
+            hyperparams: Dictionary of hyperparameters.
+            init_node: Whether or not to initialize a new ROS node.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [909 1088])
+                            ("config" variable nil (reparse-symbol indented_block_body) [1097 1130])
+                            ("config" code nil (reparse-symbol indented_block_body) [1139 1165])
+                            ("Agent" code nil (reparse-symbol indented_block_body) [1174 1202])
+                            ("if" code nil (reparse-symbol indented_block_body) [1211 1275])
+                            ("self" code nil (reparse-symbol indented_block_body) [1283 1309])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1318 1334])
+                            ("conditions" variable nil (reparse-symbol indented_block_body) [1385 1429])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1439 1451])
+                            ("for" code nil (reparse-symbol indented_block_body) [1460 1646])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1654 1687])
+                            ("r" variable nil (reparse-symbol indented_block_body) [1697 1714])
+                            ("r" code nil (reparse-symbol indented_block_body) [1723 1732])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1742 1761])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1770 1800]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [865 869])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [871 882])
+                            ("init_node" variable nil (reparse-symbol function_parameters) [884 893]))                          
+                        :documentation "
+        Initialize agent.
+        Args:
+            hyperparams: Dictionary of hyperparameters.
+            init_node: Whether or not to initialize a new ROS node.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [852 1801])
+                    ("_init_pubs_and_subs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1830 1834]))                          )
+                        (reparse-symbol indented_block_body) [1806 2605])
+                    ("run_trial_tf" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7450 7454])
+                            ("policy" variable nil (reparse-symbol function_parameters) [7456 7462])
+                            ("time_to_run" variable nil (reparse-symbol function_parameters) [7464 7475]))                          
+                        :documentation " Run an async controller from a policy. The async controller receives observations from ROS subscribers
+         and then uses them to publish actions.")
+                        (reparse-symbol indented_block_body) [7433 8820])
+                    ("_get_new_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8845 8849])
+                            ("policy" variable nil (reparse-symbol function_parameters) [8851 8857])
+                            ("obs" variable nil (reparse-symbol function_parameters) [8859 8862]))                          )
+                        (reparse-symbol indented_block_body) [8825 8914])
+                    ("_tf_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8936 8940])
+                            ("message" variable nil (reparse-symbol function_parameters) [8942 8949]))                          )
+                        (reparse-symbol indented_block_body) [8919 9034])
+                    ("_tf_publish" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9055 9059])
+                            ("pub_msg" variable nil (reparse-symbol function_parameters) [9061 9068]))                          
+                        :documentation " Publish a message without waiting for response. ")
+                        (reparse-symbol indented_block_body) [9039 9170])
+                    ("_init_tf" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9188 9192])
+                            ("dU" variable nil (reparse-symbol function_parameters) [9194 9196]))                          )
+                        (reparse-symbol indented_block_body) [9175 9775]))                  
+                :type "class")
+                nil [724 9775]))          
+      :file "agent_ros.py"
+      :pointmax 9775
+      :fsize 9774
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ros_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" This file defines utilities for the ROS agents. \"\"\"" code nil nil [1 56])
+            ("numpy" include nil nil [57 75])
+            ("rospy" include nil nil [77 89])
+            ("gps.algorithm.policy.lin_gauss_policy" include nil nil [91 161])
+            ("gps_agent_pkg.msg" include nil nil [162 264])
+            ("gps.sample.sample" include nil nil [265 301])
+            ("gps.proto.gps_pb2" include nil nil [302 385])
+            ("logging" include nil nil [386 400])
+            ("LOGGER" variable nil nil [401 437])
+            ("try" code nil nil [609 710])
+            ("msg_to_sample" function
+               (:documentation "
+    Convert a SampleResult ROS message into a Sample Python object.
+    "
+                :arguments 
+                  ( ("ros_msg" variable nil (reparse-symbol function_parameters) [730 737])
+                    ("agent" variable nil (reparse-symbol function_parameters) [739 744]))                  )
+                nil [712 1079])
+            ("policy_to_msg" function
+               (:documentation "
+    Convert a policy object to a ROS ControllerParams message.
+    "
+                :arguments 
+                  ( ("policy" variable nil (reparse-symbol function_parameters) [1099 1105])
+                    ("noise" variable nil (reparse-symbol function_parameters) [1107 1112]))                  )
+                nil [1081 2586])
+            ("tf_policy_to_action_msg" function
+               (:documentation "
+        Convert an action to a TFActionCommand message.
+        "
+                :arguments 
+                  ( ("deg_action" variable nil (reparse-symbol function_parameters) [2616 2626])
+                    ("action" variable nil (reparse-symbol function_parameters) [2628 2634])
+                    ("action_id" variable nil (reparse-symbol function_parameters) [2636 2645]))                  )
+                nil [2588 2871])
+            ("tf_obs_msg_to_numpy" function (:arguments 
+              ( ("obs_message" variable nil (reparse-symbol function_parameters) [2897 2908]))              ) nil [2873 2985])
+            ("TimeoutException" type
+               (:documentation " Exception thrown on timeouts. "
+                :superclasses ("Exception")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Exception" code nil (reparse-symbol indented_block_body) [3108 3174]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3081 3085])
+                            ("sec_waited" variable nil (reparse-symbol function_parameters) [3087 3097]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3068 3175]))                  
+                :type "class")
+                nil [2987 3175])
+            ("ServiceEmulator" type
+               (:documentation "
+    Emulates a ROS service (request-response) from a
+    publisher-subscriber pair.
+    Args:
+        pub_topic: Publisher topic.
+        pub_type: Publisher message type.
+        sub_topic: Subscriber topic.
+        sub_type: Subscriber message type.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3550 3598])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3607 3672])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3682 3703])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3712 3739]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3493 3497])
+                            ("pub_topic" variable nil (reparse-symbol function_parameters) [3499 3508])
+                            ("pub_type" variable nil (reparse-symbol function_parameters) [3510 3518])
+                            ("sub_topic" variable nil (reparse-symbol function_parameters) [3520 3529])
+                            ("sub_type" variable nil (reparse-symbol function_parameters) [3531 3539]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3480 3740])
+                    ("_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3759 3763])
+                            ("message" variable nil (reparse-symbol function_parameters) [3765 3772]))                          )
+                        (reparse-symbol indented_block_body) [3745 3878])
+                    ("publish" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3895 3899])
+                            ("pub_msg" variable nil (reparse-symbol function_parameters) [3901 3908]))                          
+                        :documentation " Publish a message without waiting for response. ")
+                        (reparse-symbol indented_block_body) [3883 4010])
+                    ("publish_and_wait" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4036 4040])
+                            ("pub_msg" variable nil (reparse-symbol function_parameters) [4042 4049])
+                            ("timeout" variable nil (reparse-symbol function_parameters) [4051 4058])
+                            ("poll_delay" variable nil (reparse-symbol function_parameters) [4064 4074])
+                            ("check_id" variable nil (reparse-symbol function_parameters) [4106 4114]))                          
+                        :documentation "
+        Publish a message and wait for the response.
+        Args:
+            pub_msg: Message to publish.
+            timeout: Timeout in seconds.
+            poll_delay: Speed of polling for the subscriber message in
+                seconds.
+            check_id: If enabled, will only return messages with a
+                matching id field.
+        Returns:
+            sub_msg: Subscriber message.
+        ")
+                        (reparse-symbol indented_block_body) [4015 4960]))                  
+                :type "class")
+                nil [3177 4960]))          
+      :file "ros_utils.py"
+      :pointmax 4960
+      :fsize 4959
+      :lastmodtime '(22653 24657 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 551 . 609) (COLON 549 . 550) (TRY 438 . 441) (AS 545 . 547))))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!gps!python!gps!agent!ros!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

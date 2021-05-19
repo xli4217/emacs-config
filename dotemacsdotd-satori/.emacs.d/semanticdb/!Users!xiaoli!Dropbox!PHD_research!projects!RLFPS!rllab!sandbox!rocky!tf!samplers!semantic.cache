@@ -1,0 +1,95 @@
+;; Object samplers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "samplers/"
+  :tables
+  (list
+    (semanticdb-table "vectorized_sampler.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pickle" include nil nil [1 14])
+            ("tensorflow" include nil nil [16 39])
+            ("rllab.sampler.base" include nil nil [40 82])
+            ("sandbox.rocky.tf.envs.parallel_vec_env_executor" include nil nil [83 165])
+            ("sandbox.rocky.tf.envs.vec_env_executor" include nil nil [166 231])
+            ("rllab.misc" include nil nil [232 267])
+            ("numpy" include nil nil [268 286])
+            ("rllab.sampler.stateful_pool" include nil nil [287 341])
+            ("rllab.misc.logger" include nil nil [342 376])
+            ("itertools" include nil nil [377 393])
+            ("VectorizedSampler" type
+               (:superclasses ("BaseSampler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [486 531])
+                            ("self" variable nil (reparse-symbol indented_block_body) [540 560]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [452 456])
+                            ("algo" variable nil (reparse-symbol function_parameters) [458 462])
+                            ("n_envs" variable nil (reparse-symbol function_parameters) [464 470]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [439 561])
+                    ("start_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [583 587]))                          )
+                        (reparse-symbol indented_block_body) [566 1225])
+                    ("shutdown_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1250 1254]))                          )
+                        (reparse-symbol indented_block_body) [1230 1290])
+                    ("obtain_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1314 1318])
+                            ("itr" variable nil (reparse-symbol function_parameters) [1320 1323]))                          )
+                        (reparse-symbol indented_block_body) [1295 4538]))                  
+                :type "class")
+                nil [396 4538]))          
+      :file "vectorized_sampler.py"
+      :pointmax 4538
+      :fsize 4537
+      :lastmodtime '(22795 38134 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "batch_sampler.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.sampler.base" include nil nil [1 43])
+            ("rllab.sampler" include nil nil [44 86])
+            ("rllab.sampler.stateful_pool" include nil nil [87 141])
+            ("tensorflow" include nil nil [142 165])
+            ("worker_init_tf" function (:arguments 
+              ( ("G" variable nil (reparse-symbol function_parameters) [187 188]))              ) nil [168 240])
+            ("worker_init_tf_vars" function (:arguments 
+              ( ("G" variable nil (reparse-symbol function_parameters) [266 267]))              ) nil [242 320])
+            ("BatchSampler" type
+               (:superclasses ("BaseSampler")
+                :members 
+                  ( ("start_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [376 380]))                          )
+                        (reparse-symbol indented_block_body) [359 648])
+                    ("shutdown_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [673 677]))                          )
+                        (reparse-symbol indented_block_body) [653 743])
+                    ("obtain_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [767 771])
+                            ("itr" variable nil (reparse-symbol function_parameters) [773 776]))                          )
+                        (reparse-symbol indented_block_body) [748 1377]))                  
+                :type "class")
+                nil [322 1377]))          
+      :file "batch_sampler.py"
+      :pointmax 1377
+      :fsize 1376
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!sandbox!rocky!tf!samplers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

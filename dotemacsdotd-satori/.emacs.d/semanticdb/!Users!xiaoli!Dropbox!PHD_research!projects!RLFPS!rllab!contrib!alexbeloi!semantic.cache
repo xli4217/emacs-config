@@ -1,0 +1,138 @@
+;; Object alexbeloi/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "alexbeloi/"
+  :tables
+  (list
+    (semanticdb-table "is_sampler.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("rllab.algos.batch_polopt" include nil nil [1 50])
+            ("math" include nil nil [51 76])
+            ("numpy" include nil nil [77 98])
+            ("random" include nil nil [99 112])
+            ("copy" include nil nil [113 124])
+            ("ISSampler" type
+               (:documentation "
+    Sampler which alternates between live sampling iterations using BatchSampler
+    and importance sampling iterations.
+    "
+                :superclasses ("BatchSampler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :type algo: BatchPolopt
+        :param n_backtrack: Number of past policies to update from
+        :param n_is_pretrain: Number of importance sampling iterations to
+            perform in beginning of training
+        :param init_is: (True/False) set initial iteration (after pretrain) an
+            importance sampling iteration
+        :param skip_is_itrs: (True/False) do not do any importance sampling
+            iterations (after pretrain)
+        :param hist_variance_penalty: penalize variance of historical policy
+        :param max_is_ratio: maximum allowed importance sampling ratio
+        :param ess_threshold: minimum effective sample size required
+        \"\"\"" code nil (reparse-symbol indented_block_body) [516 1203])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1212 1242])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1251 1285])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1294 1326])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1344 1394])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1403 1435])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1444 1478])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1496 1511])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1520 1542])
+                            ("super" code nil (reparse-symbol indented_block_body) [1552 1589]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [316 320])
+                            ("algo" variable nil (reparse-symbol function_parameters) [327 331])
+                            ("n_backtrack" variable nil (reparse-symbol function_parameters) [338 349])
+                            ("n_is_pretrain" variable nil (reparse-symbol function_parameters) [364 377])
+                            ("init_is" variable nil (reparse-symbol function_parameters) [385 392])
+                            ("skip_is_itrs" variable nil (reparse-symbol function_parameters) [400 412])
+                            ("hist_variance_penalty" variable nil (reparse-symbol function_parameters) [424 445])
+                            ("max_is_ratio" variable nil (reparse-symbol function_parameters) [458 470])
+                            ("ess_threshold" variable nil (reparse-symbol function_parameters) [481 494]))                          
+                        :documentation "
+        :type algo: BatchPolopt
+        :param n_backtrack: Number of past policies to update from
+        :param n_is_pretrain: Number of importance sampling iterations to
+            perform in beginning of training
+        :param init_is: (True/False) set initial iteration (after pretrain) an
+            importance sampling iteration
+        :param skip_is_itrs: (True/False) do not do any importance sampling
+            iterations (after pretrain)
+        :param hist_variance_penalty: penalize variance of historical policy
+        :param max_is_ratio: maximum allowed importance sampling ratio
+        :param ess_threshold: minimum effective sample size required
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [298 1590])
+                    ("history" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1621 1625]))                          
+                        :documentation "
+        History of policies that have interacted with the environment and the
+        data from interaction episode(s)
+        ")
+                        (reparse-symbol indented_block_body) [1595 1797])
+                    ("add_history" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1818 1822])
+                            ("policy_distribution" variable nil (reparse-symbol function_parameters) [1824 1843])
+                            ("paths" variable nil (reparse-symbol function_parameters) [1845 1850]))                          
+                        :documentation "
+        Store policy distribution and paths in history
+        ")
+                        (reparse-symbol indented_block_body) [1802 1988])
+                    ("get_history_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2014 2018])
+                            ("n_past" variable nil (reparse-symbol function_parameters) [2020 2026]))                          
+                        :documentation "
+        Get list of (distribution, data) tuples from history
+        ")
+                        (reparse-symbol indented_block_body) [1993 2238])
+                    ("obtain_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2262 2266])
+                            ("itr" variable nil (reparse-symbol function_parameters) [2268 2271]))                          )
+                        (reparse-symbol indented_block_body) [2243 2886])
+                    ("obtain_is_samples" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2914 2918])
+                            ("itr" variable nil (reparse-symbol function_parameters) [2920 2923]))                          )
+                        (reparse-symbol indented_block_body) [2892 3861])
+                    ("sample_isweighted_paths" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3907 3911])
+                            ("policy" variable nil (reparse-symbol function_parameters) [3925 3931])
+                            ("hist_policy_distribution" variable nil (reparse-symbol function_parameters) [3945 3969])
+                            ("max_samples" variable nil (reparse-symbol function_parameters) [3983 3994])
+                            ("max_path_length" variable nil (reparse-symbol function_parameters) [4008 4023])
+                            ("paths" variable nil (reparse-symbol function_parameters) [4041 4046])
+                            ("randomize_draw" variable nil (reparse-symbol function_parameters) [4065 4079])
+                            ("hist_variance_penalty" variable nil (reparse-symbol function_parameters) [4099 4120])
+                            ("max_is_ratio" variable nil (reparse-symbol function_parameters) [4138 4150])
+                            ("ess_threshold" variable nil (reparse-symbol function_parameters) [4167 4180]))                          )
+                        (reparse-symbol indented_block_body) [3866 5939]))                  
+                :type "class")
+                nil [126 5939])
+            ("kong_ess" function (:arguments 
+              ( ("weights" variable nil (reparse-symbol function_parameters) [5953 5960]))              ) nil [5940 6005]))          
+      :file "is_sampler.py"
+      :pointmax 6005
+      :fsize 6004
+      :lastmodtime '(22749 16759 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Dropbox!PHD_research!projects!RLFPS!rllab!contrib!alexbeloi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

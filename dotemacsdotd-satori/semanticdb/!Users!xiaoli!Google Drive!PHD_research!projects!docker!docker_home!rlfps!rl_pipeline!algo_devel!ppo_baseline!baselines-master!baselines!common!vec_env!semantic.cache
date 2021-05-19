@@ -1,0 +1,333 @@
+;; Object vec_env/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "vec_env/"
+  :tables
+  (list
+    (semanticdb-table "vec_normalize.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("baselines.common.vec_env" include nil nil [1 51])
+            ("baselines.common.running_mean_std" include nil nil [52 112])
+            ("numpy" include nil nil [113 131])
+            ("VecNormalize" type
+               (:documentation "
+    Vectorized environment base class
+    "
+                :superclasses ("VecEnvWrapper")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("VecEnvWrapper" code nil (reparse-symbol indented_block_body) [330 364])
+                            ("None" code nil (reparse-symbol indented_block_body) [449 453])
+                            ("None" code nil (reparse-symbol indented_block_body) [514 518])
+                            ("self" variable nil (reparse-symbol indented_block_body) [527 547])
+                            ("self" variable nil (reparse-symbol indented_block_body) [556 578])
+                            ("self" variable nil (reparse-symbol indented_block_body) [587 621])
+                            ("self" variable nil (reparse-symbol indented_block_body) [630 648])
+                            ("self" variable nil (reparse-symbol indented_block_body) [657 679]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [239 243])
+                            ("venv" variable nil (reparse-symbol function_parameters) [245 249])
+                            ("ob" variable nil (reparse-symbol function_parameters) [251 253])
+                            ("ret" variable nil (reparse-symbol function_parameters) [260 263])
+                            ("clipob" variable nil (reparse-symbol function_parameters) [270 276])
+                            ("cliprew" variable nil (reparse-symbol function_parameters) [282 289])
+                            ("gamma" variable nil (reparse-symbol function_parameters) [295 300])
+                            ("epsilon" variable nil (reparse-symbol function_parameters) [307 314]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [226 680])
+                    ("step_wait" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [699 703]))                          
+                        :documentation "
+        Apply sequence of actions to sequence of environments
+        actions -> (observations, rewards, news)
+
+        where 'news' is a boolean vector indicating whether each element is new.
+        ")
+                        (reparse-symbol indented_block_body) [685 1268])
+                    ("_obfilt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1285 1289])
+                            ("obs" variable nil (reparse-symbol function_parameters) [1291 1294]))                          )
+                        (reparse-symbol indented_block_body) [1273 1538])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1553 1557]))                          
+                        :documentation "
+        Reset all environments
+        ")
+                        (reparse-symbol indented_block_body) [1543 1680]))                  
+                :type "class")
+                nil [133 1680]))          
+      :file "vec_normalize.py"
+      :pointmax 1680
+      :fsize 1679
+      :lastmodtime '(23172 63484 0 0)
+      :unmatched-syntax '((NAME 462 . 466) (IF 502 . 504) (ELSE 509 . 513) (NAME 373 . 377) (IF 438 . 440) (ELSE 444 . 448)))
+    (semanticdb-table "dummy_vec_env.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("VecEnv" include nil nil [27 40])
+            ("DummyVecEnv" type
+               (:superclasses ("VecEnv")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [110 146])
+                            ("env" variable nil (reparse-symbol indented_block_body) [155 173])
+                            ("VecEnv" code nil (reparse-symbol indented_block_body) [190 266])
+                            ("self" variable nil (reparse-symbol indented_block_body) [275 322])
+                            ("self" variable nil (reparse-symbol indented_block_body) [339 358]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [86 90])
+                            ("env_fns" variable nil (reparse-symbol function_parameters) [92 99]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [73 359])
+                    ("step_async" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [379 383])
+                            ("actions" variable nil (reparse-symbol function_parameters) [385 392]))                          )
+                        (reparse-symbol indented_block_body) [364 426])
+                    ("step_wait" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [445 449]))                          )
+                        (reparse-symbol indented_block_body) [431 851])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [866 870]))                          )
+                        (reparse-symbol indented_block_body) [856 967])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [982 986]))                          )
+                        (reparse-symbol indented_block_body) [972 1003]))                  
+                :type "class")
+                nil [42 1003]))          
+      :file "dummy_vec_env.py"
+      :pointmax 1003
+      :fsize 1002
+      :lastmodtime '(23172 63484 0 0)
+      :unmatched-syntax '((FROM 20 . 24) (PERIOD 25 . 26)))
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("abc" include nil nil [1 36])
+            ("baselines" include nil nil [37 65])
+            ("AlreadySteppingError" type
+               (:documentation "
+    Raised when an asynchronous step is running while
+    step_async() is called again.
+    "
+                :superclasses ("Exception")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("msg" variable nil (reparse-symbol indented_block_body) [242 279])
+                            ("Exception" code nil (reparse-symbol indented_block_body) [288 317]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [227 231]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [214 318]))                  
+                :type "class")
+                nil [67 318])
+            ("NotSteppingError" type
+               (:documentation "
+    Raised when an asynchronous step is not running but
+    step_wait() is called.
+    "
+                :superclasses ("Exception")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("msg" variable nil (reparse-symbol indented_block_body) [485 518])
+                            ("Exception" code nil (reparse-symbol indented_block_body) [527 556]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [470 474]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [457 557]))                  
+                :type "class")
+                nil [319 557])
+            ("VecEnv" type
+               (:superclasses ("ABC")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [653 677])
+                            ("self" variable nil (reparse-symbol indented_block_body) [686 728])
+                            ("self" variable nil (reparse-symbol indented_block_body) [737 769]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [595 599])
+                            ("num_envs" variable nil (reparse-symbol function_parameters) [601 609])
+                            ("observation_space" variable nil (reparse-symbol function_parameters) [611 628])
+                            ("action_space" variable nil (reparse-symbol function_parameters) [630 642]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [582 770])
+                    ("\"\"\"
+    An abstract asynchronous, vectorized environment.
+    \"\"\"" code nil (reparse-symbol indented_block_body) [775 840])
+                    ("reset" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [875 879]))                          
+                        :documentation "
+        Reset all the environments and return an array of
+        observations.
+
+        If step_async is still doing work, that work will
+        be cancelled and step_wait() should not be called
+        until step_async() is invoked again.
+        ")
+                        (reparse-symbol indented_block_body) [845 1161])
+                    ("step_async" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1201 1205])
+                            ("actions" variable nil (reparse-symbol function_parameters) [1207 1214]))                          
+                        :documentation "
+        Tell all the environments to start taking a step
+        with the given actions.
+        Call step_wait() to get the results of the step.
+
+        You should not call this if a step_async run is
+        already pending.
+        ")
+                        (reparse-symbol indented_block_body) [1166 1482])
+                    ("step_wait" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1521 1525]))                          
+                        :documentation "
+        Wait for the step taken with step_async().
+
+        Returns (obs, rews, dones, infos):
+         - obs: an array of observations
+         - rews: an array of rewards
+         - dones: an array of \"episode done\" booleans
+         - infos: an array of info objects
+        ")
+                        (reparse-symbol indented_block_body) [1487 1835])
+                    ("close" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1870 1874]))                          
+                        :documentation "
+        Clean up the environments' resources.
+        ")
+                        (reparse-symbol indented_block_body) [1840 1960])
+                    ("step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1974 1978])
+                            ("actions" variable nil (reparse-symbol function_parameters) [1980 1987]))                          )
+                        (reparse-symbol indented_block_body) [1965 2055])
+                    ("render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2071 2075]))                          )
+                        (reparse-symbol indented_block_body) [2060 2132]))                  
+                :type "class")
+                nil [558 2132])
+            ("VecEnvWrapper" type
+               (:superclasses ("VecEnv")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2243 2259])
+                            ("VecEnv" code nil (reparse-symbol indented_block_body) [2268 2462]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2179 2183])
+                            ("venv" variable nil (reparse-symbol function_parameters) [2185 2189])
+                            ("observation_space" variable nil (reparse-symbol function_parameters) [2191 2208])
+                            ("action_space" variable nil (reparse-symbol function_parameters) [2215 2227]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2166 2463])
+                    ("step_async" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2483 2487])
+                            ("actions" variable nil (reparse-symbol function_parameters) [2489 2496]))                          )
+                        (reparse-symbol indented_block_body) [2468 2537])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2572 2576]))                          
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2542 2592])
+                    ("step_wait" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2631 2635]))                          
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2597 2651])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2666 2670]))                          )
+                        (reparse-symbol indented_block_body) [2656 2706])
+                    ("render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2722 2726]))                          )
+                        (reparse-symbol indented_block_body) [2711 2756]))                  
+                :type "class")
+                nil [2133 2756])
+            ("CloudpickleWrapper" type
+               (:documentation "
+    Uses cloudpickle to serialize contents (otherwise multiprocessing tries to use pickle)
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2933 2943]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2915 2919])
+                            ("x" variable nil (reparse-symbol function_parameters) [2921 2922]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2902 2944])
+                    ("__getstate__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2965 2969]))                          )
+                        (reparse-symbol indented_block_body) [2948 3040])
+                    ("__setstate__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3061 3065])
+                            ("ob" variable nil (reparse-symbol function_parameters) [3067 3069]))                          )
+                        (reparse-symbol indented_block_body) [3044 3128]))                  
+                :type "class")
+                nil [2757 3128]))          
+      :file "__init__.py"
+      :pointmax 3128
+      :fsize 3127
+      :lastmodtime '(23172 63484 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!algo_devel!ppo_baseline!baselines-master!baselines!common!vec_env!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

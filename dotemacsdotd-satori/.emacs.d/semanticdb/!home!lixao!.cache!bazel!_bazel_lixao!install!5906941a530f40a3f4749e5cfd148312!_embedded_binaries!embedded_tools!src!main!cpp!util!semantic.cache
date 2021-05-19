@@ -1,0 +1,151 @@
+;; Object util/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "util/"
+  :tables
+  (list
+    (semanticdb-table "md5.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("src/main/cpp/util/md5.h" include nil nil [1595 1629])
+            ("string.h" include (:system-flag t) nil [1631 1650])
+            ("stddef.h" include (:system-flag t) nil [1666 1685])
+            ("cinttypes" include (:system-flag t) nil [1703 1723])
+            ("UNALIGNED_P" variable (:constant-flag t) nil [1777 1788])
+            ("blaze_util" type
+               (:members 
+                  ( ("std::string" using (:type ("std::string" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [2099 2117])
+                    ("k8Bytes" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "64"
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [2119 2158])
+                    ("k8ByteMask" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "63"
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [2159 2201])
+                    ("kPadding" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "{
+  0x80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+}"
+                        :type "unsigned char")
+                        (reparse-symbol namespacesubparts) [2203 2449])
+                    ("hex_char" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :default-value "\"0123456789abcdef\""
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [2472 2516])
+                    ("b2a_hex_t" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("b" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "unsigned char")
+                                (reparse-symbol arg-sub-list) [2731 2754])
+                            ("a" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2755 2759])
+                            ("num" variable (:type "int") (reparse-symbol arg-sub-list) [2760 2768]))                          
+                        :typemodifiers ("static"))
+                        (reparse-symbol namespacesubparts) [2687 2891])
+                    ("b2a_hex" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("from" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "unsigned char")
+                                (reparse-symbol arg-sub-list) [3292 3318])
+                            ("to" variable
+                               (:pointer 1
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3319 3330])
+                            ("num" variable (:type "int") (reparse-symbol arg-sub-list) [3331 3339]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3272 3405])
+                    ("Md5Digest" function
+                       (:constructor-flag t
+                        :parent "Md5Digest"
+                        :type ("Md5Digest" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3407 3444])
+                    ("Md5Digest" function
+                       (:constructor-flag t
+                        :parent "Md5Digest"
+                        :arguments 
+                          ( ("original" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Md5Digest" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3467 3493]))                          
+                        :type ("Md5Digest" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3446 3723])
+                    ("Reset" function
+                       (:parent "Md5Digest"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3725 3943])
+                    ("Update" function
+                       (:parent "Md5Digest"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3968 3984])
+                            ("length" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3985 4005]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3945 5037])
+                    ("Finish" function
+                       (:parent "Md5Digest"
+                        :arguments 
+                          ( ("digest" variable
+                               (:dereference 1
+                                :type "unsigned char")
+                                (reparse-symbol arg-sub-list) [5062 5087]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5039 5664])
+                    ("Transform" function
+                       (:parent "Md5Digest"
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "unsigned char")
+                                (reparse-symbol arg-sub-list) [5697 5725])
+                            ("len" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5726 5743]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5666 11241])
+                    ("String" function
+                       (:parent "Md5Digest"
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [11243 11378]))                  
+                :type "namespace")
+                nil [2075 11381]))          
+      :file "md5.cc"
+      :pointmax 11407
+      :fsize 11406
+      :lastmodtime '(28003 1986 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("UNALIGNED_P" (spp-arg-list ("p") 1788 . 1791) . ((semantic-list "(reinterpret_cast<uint64_t>(p) % \\
+                          __alignof__(uint32_t) != 0)" 1792 . 1880)))
+          )
+)
+    (semanticdb-table "md5.h"
+      :file "md5.h"
+      :fsize 2275
+      :lastmodtime '(28003 1986 0 0)))
+  :file "!home!lixao!.cache!bazel!_bazel_lixao!install!5906941a530f40a3f4749e5cfd148312!_embedded_binaries!embedded_tools!src!main!cpp!util!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

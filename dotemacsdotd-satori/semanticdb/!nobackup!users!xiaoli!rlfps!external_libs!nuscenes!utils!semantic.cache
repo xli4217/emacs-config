@@ -1,0 +1,153 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("copy" include nil nil [61 72])
+            ("os.path" include nil nil [73 94])
+            ("struct" include nil nil [95 108])
+            ("abc" include nil nil [109 144])
+            ("functools" include nil nil [145 173])
+            ("typing" include nil nil [174 210])
+            ("cv2" include nil nil [212 222])
+            ("numpy" include nil nil [223 241])
+            ("matplotlib.axes" include nil nil [242 274])
+            ("pyquaternion" include nil nil [275 310])
+            ("nuscenes.utils.geometry_utils" include nil nil [312 383])
+            ("PointCloud" type
+               (:documentation "
+    Abstract class for manipulating and viewing point clouds.
+    Every point cloud (lidar and radar) consists of points where:
+    - Dimensions 0, 1, 2 represent x, y, z coordinates.
+        These are modified when the point cloud is rotated or translated.
+    - All other dimensions are optional. Hence these have to be manually modified if the reference frame changes.
+    "
+                :superclasses ("ABC")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Initialize a point cloud and check it has the correct dimensions.
+        :param points: <np.float: d, n>. d-dimensional input point cloud matrix.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [850 1020])
+                            ("assert" code nil (reparse-symbol indented_block_body) [1029 1141])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1150 1170]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [815 819])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [832 839]))                          
+                        :documentation "
+        Initialize a point cloud and check it has the correct dimensions.
+        :param points: <np.float: d, n>. d-dimensional input point cloud matrix.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [802 1171]))                  
+                :type "class")
+                nil [386 9962])
+            ("LidarPointCloud" type
+               (:superclasses ("PointCloud")
+                :type "class")
+                nil [9964 10733])
+            ("RadarPointCloud" type
+               (:superclasses ("PointCloud")
+                :members 
+                  ( ("invalid_states" variable nil (reparse-symbol indented_block_body) [10842 10862])
+                    ("dynprop_states" variable nil (reparse-symbol indented_block_body) [10886 10911])
+                    ("ambig_states" variable nil (reparse-symbol indented_block_body) [10976 10994]))                  
+                :type "class")
+                nil [10735 18111])
+            ("Box" type
+               (:documentation " Simple data class representing a 3d box including, label, score and velocity. "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        :param center: Center of box given as x, y, z.
+        :param size: Size of box in width, length, height.
+        :param orientation: Box orientation.
+        :param label: Integer label, optional.
+        :param score: Classification score, optional.
+        :param velocity: Box velocity in x, y, z direction.
+        :param name: Box name, optional. Can be used e.g. for denote category name.
+        :param token: Unique string identifier from DB.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [18573 19048])
+                            ("assert" code nil (reparse-symbol indented_block_body) [19057 19092])
+                            ("assert" code nil (reparse-symbol indented_block_body) [19101 19134])
+                            ("assert" code nil (reparse-symbol indented_block_body) [19143 19166])
+                            ("assert" code nil (reparse-symbol indented_block_body) [19175 19196])
+                            ("assert" code nil (reparse-symbol indented_block_body) [19205 19243])
+                            ("self" variable nil (reparse-symbol indented_block_body) [19253 19283])
+                            ("self" variable nil (reparse-symbol indented_block_body) [19292 19317])
+                            ("self" variable nil (reparse-symbol indented_block_body) [19326 19356])
+                            ("label" code nil (reparse-symbol indented_block_body) [19417 19422])
+                            ("score" code nil (reparse-symbol indented_block_body) [19485 19490])
+                            ("self" variable nil (reparse-symbol indented_block_body) [19499 19533])
+                            ("self" variable nil (reparse-symbol indented_block_body) [19542 19558])
+                            ("self" variable nil (reparse-symbol indented_block_body) [19567 19585]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18232 18236])
+                            ("Quaternion" variable nil (reparse-symbol function_parameters) [18342 18352])
+                            ("int" variable nil (reparse-symbol function_parameters) [18378 18381])
+                            ("float" variable nil (reparse-symbol function_parameters) [18416 18421])
+                            ("Tuple" variable nil (reparse-symbol function_parameters) [18459 18464])
+                            ("str" variable nil (reparse-symbol function_parameters) [18516 18519])
+                            ("str" variable nil (reparse-symbol function_parameters) [18552 18555]))                          
+                        :documentation "
+        :param center: Center of box given as x, y, z.
+        :param size: Size of box in width, length, height.
+        :param orientation: Box orientation.
+        :param label: Integer label, optional.
+        :param score: Classification score, optional.
+        :param velocity: Box velocity in x, y, z direction.
+        :param name: Box name, optional. Can be used e.g. for denote category name.
+        :param token: Unique string identifier from DB.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [18219 19586])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19602 19606])
+                            ("other" variable nil (reparse-symbol function_parameters) [19608 19613]))                          )
+                        (reparse-symbol indented_block_body) [19591 20223])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20241 20245]))                          )
+                        (reparse-symbol indented_block_body) [20228 20973]))                  
+                :type "class")
+                nil [18113 27080]))          
+      :file "data_classes.py"
+      :pointmax 27080
+      :fsize 27079
+      :lastmodtime '(24254 64186 49123 46000)
+      :unmatched-syntax '((INDENT_BLOCK 26965 . 27080) (NEWLINE 26964 . 26965) (COLON 26963 . 26964) (MINUS 26955 . 26956) (GT 26956 . 26957) (INDENT_BLOCK 25195 . 26935) (NEWLINE 25194 . 25195) (COLON 25193 . 25194) (MINUS 25186 . 25187) (GT 25187 . 25188) (NAME 25166 . 25175) (COLON 25175 . 25176) (NAME 25086 . 25092) (COLON 25092 . 25093) (NAME 25042 . 25051) (COLON 25051 . 25052) (PERIOD 25001 . 25002) (NAME 24993 . 24997) (COLON 24997 . 24998) (PERIOD 24964 . 24965) (NAME 24958 . 24960) (COLON 24960 . 24961) (INDENT_BLOCK 23264 . 24913) (NEWLINE 23263 . 23264) (COLON 23262 . 23263) (MINUS 23255 . 23256) (GT 23256 . 23257) (NAME 23233 . 23242) (COLON 23242 . 23243) (NAME 23185 . 23191) (COLON 23191 . 23192) (NAME 23145 . 23154) (COLON 23154 . 23155) (PERIOD 23108 . 23109) (NAME 23100 . 23104) (COLON 23104 . 23105) (NAME 23073 . 23077) (COLON 23077 . 23078) (INDENT_BLOCK 22824 . 23036) (NEWLINE 22823 . 22824) (COLON 22822 . 22823) (MINUS 22809 . 22810) (GT 22810 . 22811) (INDENT_BLOCK 21810 . 22779) (NEWLINE 21809 . 21810) (COLON 21808 . 21809) (MINUS 21795 . 21796) (GT 21796 . 21797) (NAME 21770 . 21780) (COLON 21780 . 21781) (INDENT_BLOCK 21455 . 21747) (NEWLINE 21454 . 21455) (COLON 21453 . 21454) (MINUS 21446 . 21447) (GT 21447 . 21448) (NAME 21422 . 21432) (COLON 21432 . 21433) (INDENT_BLOCK 21250 . 21400) (NEWLINE 21249 . 21250) (COLON 21248 . 21249) (MINUS 21241 . 21242) (GT 21242 . 21243) (PERIOD 21231 . 21232) (NAME 21226 . 21227) (COLON 21227 . 21228) (INDENT_BLOCK 21033 . 21201) (NEWLINE 21032 . 21033) (COLON 21031 . 21032) (AT 20978 . 20979) (MINUS 21018 . 21019) (GT 21019 . 21020) (NAME 19431 . 19435) (IF 19457 . 19459) (ELSE 19480 . 19484) (NAME 19365 . 19369) (IF 19389 . 19391) (ELSE 19412 . 19416) (NAME 18545 . 18550) (COLON 18550 . 18551) (NAME 18510 . 18514) (COLON 18514 . 18515) (NAME 18449 . 18457) (COLON 18457 . 18458) (NAME 18409 . 18414) (COLON 18414 . 18415) (NAME 18371 . 18376) (COLON 18376 . 18377) (COLON 18340 . 18341) (COMMA 18310 . 18311) (BRACK_BLOCK 18303 . 18310) (COLON 18297 . 18298) (COMMA 18274 . 18275) (BRACK_BLOCK 18267 . 18274) (NAME 18255 . 18261) (COLON 18261 . 18262) (INDENT_BLOCK 12095 . 18111) (NEWLINE 12094 . 12095) (COLON 12093 . 12094) (MINUS 12073 . 12074) (GT 12074 . 12075) (ASSIGN 12065 . 12066) (BRACK_BLOCK 12059 . 12064) (NAME 12041 . 12053) (COLON 12053 . 12054) (ASSIGN 12015 . 12016) (BRACK_BLOCK 12009 . 12014) (NAME 11989 . 12003) (COLON 12003 . 12004) (ASSIGN 11963 . 11964) (BRACK_BLOCK 11957 . 11962) (NAME 11937 . 11951) (COLON 11951 . 11952) (NAME 11903 . 11912) (COLON 11912 . 11913) (INDENT_BLOCK 11721 . 11844) (NEWLINE 11720 . 11721) (COLON 11719 . 11720) (MINUS 11713 . 11714) (GT 11714 . 11715) (INDENT_BLOCK 11434 . 11675) (NEWLINE 11433 . 11434) (COLON 11432 . 11433) (MINUS 11425 . 11426) (GT 11426 . 11427) (INDENT_BLOCK 11070 . 11378) (NEWLINE 11069 . 11070) (COLON 11068 . 11069) (AT 11019 . 11020) (MINUS 11061 . 11062) (GT 11062 . 11063) (INDENT_BLOCK 10246 . 10733) (NEWLINE 10245 . 10246) (COLON 10244 . 10245) (MINUS 10224 . 10225) (GT 10225 . 10226) (NAME 10208 . 10217) (COLON 10217 . 10218) (INDENT_BLOCK 10045 . 10167) (NEWLINE 10044 . 10045) (COLON 10043 . 10044) (AT 10004 . 10005) (MINUS 10037 . 10038) (GT 10038 . 10039) (INDENT_BLOCK 9346 . 9962) (NEWLINE 9345 . 9346) (COLON 9344 . 9345) (MINUS 9337 . 9338) (GT 9338 . 9339) (COLON 9328 . 9329) (COMMA 9292 . 9293) (BRACK_BLOCK 9278 . 9292) (COLON 9271 . 9272) (COMMA 9241 . 9242) (BRACK_BLOCK 9227 . 9241) (NAME 9215 . 9220) (COLON 9220 . 9221) (PERIOD 9182 . 9183) (NAME 9174 . 9178) (COLON 9178 . 9179) (NAME 9141 . 9143) (COLON 9143 . 9144) (NAME 9098 . 9111) (COLON 9111 . 9112) (INDENT_BLOCK 8595 . 9045) (NEWLINE 8594 . 8595) (COLON 8593 . 8594) (MINUS 8586 . 8587) (GT 8587 . 8588) (COLON 8573 . 8574) (COMMA 8535 . 8536) (PAREN_BLOCK 8526 . 8535) (ASSIGN 8524 . 8525) (BRACK_BLOCK 8509 . 8523) (COLON 8502 . 8503) (COMMA 8470 . 8471) (PAREN_BLOCK 8461 . 8470) (ASSIGN 8459 . 8460) (BRACK_BLOCK 8444 . 8458) (NAME 8432 . 8437) (COLON 8437 . 8438) (PERIOD 8385 . 8386) (NAME 8377 . 8381) (COLON 8381 . 8382) (NAME 8342 . 8344) (COLON 8344 . 8345) (INDENT_BLOCK 7784 . 8285) (NEWLINE 7783 . 7784) (COLON 7782 . 7783) (MINUS 7775 . 7776) (GT 7776 . 7777) (COLON 7762 . 7763) (COMMA 7727 . 7728) (PAREN_BLOCK 7718 . 7727) (ASSIGN 7716 . 7717) (BRACK_BLOCK 7701 . 7715) (COLON 7694 . 7695) (COMMA 7665 . 7666) (PAREN_BLOCK 7656 . 7665) (ASSIGN 7654 . 7655) (BRACK_BLOCK 7639 . 7653) (NAME 7627 . 7632) (COLON 7632 . 7633) (PERIOD 7583 . 7584) (NAME 7575 . 7579) (COLON 7579 . 7580) (NAME 7543 . 7545) (COLON 7545 . 7546) (INDENT_BLOCK 7230 . 7492) (NEWLINE 7229 . 7230) (COLON 7228 . 7229) (MINUS 7221 . 7222) (GT 7222 . 7223) (PERIOD 7211 . 7212) (NAME 7194 . 7207) (COLON 7207 . 7208) (INDENT_BLOCK 6987 . 7169) (NEWLINE 6986 . 6987) (COLON 6985 . 6986) (MINUS 6978 . 6979) (GT 6979 . 6980) (PERIOD 6968 . 6969) (NAME 6954 . 6964) (COLON 6964 . 6965) (INDENT_BLOCK 6714 . 6932) (NEWLINE 6713 . 6714) (COLON 6712 . 6713) (MINUS 6705 . 6706) (GT 6706 . 6707) (PERIOD 6695 . 6696) (NAME 6690 . 6691) (COLON 6691 . 6692) (INDENT_BLOCK 6290 . 6665) (NEWLINE 6289 . 6290) (COLON 6288 . 6289) (MINUS 6281 . 6282) (GT 6282 . 6283) (NAME 6266 . 6272) (COLON 6272 . 6273) (INDENT_BLOCK 5977 . 6238) (NEWLINE 5976 . 5977) (COLON 5975 . 5976) (MINUS 5968 . 5969) (GT 5969 . 5970) (NAME 5954 . 5959) (COLON 5959 . 5960) (INDENT_BLOCK 5796 . 5929) (NEWLINE 5795 . 5796) (COLON 5794 . 5795) (MINUS 5788 . 5789) (GT 5789 . 5790) (INDENT_BLOCK 1993 . 5762) (NEWLINE 1992 . 1993) (COLON 1991 . 1992) (MINUS 1957 . 1958) (GT 1958 . 1959) (NAME 1930 . 1942) (COLON 1942 . 1943) (NAME 1883 . 1890) (COLON 1890 . 1891) (NAME 1839 . 1847) (COLON 1847 . 1848) (NAME 1799 . 1803) (COLON 1803 . 1804) (COLON 1762 . 1763) (COMMA 1721 . 1722) (STRING_LITERAL 1711 . 1721) (NAME 1705 . 1709) (COLON 1709 . 1710) (INDENT_BLOCK 1449 . 1624) (NEWLINE 1448 . 1449) (COLON 1447 . 1448) (MINUS 1432 . 1433) (GT 1433 . 1434) (NAME 1416 . 1425) (COLON 1425 . 1426) (INDENT_BLOCK 1237 . 1355) (NEWLINE 1236 . 1237) (COLON 1235 . 1236) (AT 1176 . 1177) (MINUS 1229 . 1230) (GT 1230 . 1231) (PERIOD 831 . 832) (NAME 821 . 827) (COLON 827 . 828)))
+    (semanticdb-table "semanticdb-table"
+      :file "geometry_utils.py"
+      :fsize 5452
+      :lastmodtime '(24254 64186 49525 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("typing" include nil nil [61 90])
+            ("nuscenes" include nil nil [92 121])
+            ("train_detect" variable nil nil [123 5259])
+            ("train_track" variable nil nil [5261 10396])
+            ("train" variable nil nil [10398 10451])
+            ("val" variable nil nil [10453 12655])
+            ("test" variable nil nil [12657 14860])
+            ("mini_train" variable nil nil [15050 15161])
+            ("mini_val" variable nil nil [15163 15216])
+            ("if" code nil nil [18256 18357]))          
+      :file "splits.py"
+      :pointmax 18357
+      :fsize 18356
+      :lastmodtime '(24415 62754 745859 549000)
+      :unmatched-syntax nil))
+  :file "!nobackup!users!xiaoli!rlfps!external_libs!nuscenes!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

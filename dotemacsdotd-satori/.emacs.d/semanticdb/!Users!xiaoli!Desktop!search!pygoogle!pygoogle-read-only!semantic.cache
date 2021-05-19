@@ -1,0 +1,129 @@
+;; Object pygoogle-read-only/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pygoogle-read-only/"
+  :tables
+  (list
+    (semanticdb-table "pygoogle.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Google AJAX Search Module
+http://code.google.com/apis/ajaxsearch/documentation/reference.html
+Needs Python 2.6 or later
+\"\"\"" code nil nil [19 146])
+            ("try" code nil nil [147 265])
+            ("sys" include nil nil [266 276])
+            ("urllib" include nil nil [277 290])
+            ("logging" include nil nil [291 305])
+            ("argparse" include nil nil [306 321])
+            ("__author__" variable nil nil [323 350])
+            ("__version__" variable nil nil [351 370])
+            ("URL" variable nil nil [371 431])
+            ("\"\"\"
+SAFE
+This optional argument supplies the search safety level which may be one of:
+    * safe=active - enables the highest level of safe search filtering
+    * safe=moderate - enables moderate safe search filtering (default)
+    * safe=off - disables safe search filtering
+\"\"\"" code nil nil [557 836])
+            ("SAFE_ACTIVE" variable nil nil [837 863])
+            ("SAFE_MODERATE" variable nil nil [864 892])
+            ("SAFE_OFF" variable nil nil [893 916])
+            ("\"\"\"
+FILTER
+This optional argument controls turning on or off the duplicate content filter:
+
+    * filter=0 - Turns off the duplicate content filter
+    * filter=1 - Turns on the duplicate content filter (default)
+
+\"\"\"" code nil nil [918 1135])
+            ("FILTER_OFF" variable nil nil [1136 1151])
+            ("FILTER_ON" variable nil nil [1152 1167])
+            ("\"\"\"
+RSZ
+This optional argument supplies the number of results that the application would like to recieve. 
+A value of small indicates a small result set size or 4 results. 
+A value of large indicates a large result set or 8 results. If this argument is not supplied, a value of small is assumed. 
+\"\"\"" code nil nil [1274 1574])
+            ("RSZ_SMALL" variable nil nil [1575 1594])
+            ("RSZ_LARGE" variable nil nil [1595 1614])
+            ("\"\"\"
+HL
+This optional argument supplies the host language of the application making the request. 
+If this argument is not present then the system will choose a value based on the value of the Accept-Language http header. 
+If this header is not present, a value of en is assumed.
+\"\"\"" code nil nil [1616 1897])
+            ("pygoogle" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1998 2016])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2063 2081])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2090 2113])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2192 2212])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2268 2288])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2341 2353])
+                            ("self" code nil (reparse-symbol indented_block_body) [2403 2440]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1937 1941])
+                            ("query" variable nil (reparse-symbol function_parameters) [1942 1947])
+                            ("pages" variable nil (reparse-symbol function_parameters) [1948 1953])
+                            ("hl" variable nil (reparse-symbol function_parameters) [1957 1959])
+                            ("log_level" variable nil (reparse-symbol function_parameters) [1965 1974]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1924 2441])
+                    ("__setup_logging" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2474 2478])
+                            ("level" variable nil (reparse-symbol function_parameters) [2480 2485]))                          )
+                        (reparse-symbol indented_block_body) [2454 2784])
+                    ("__search__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2804 2808])
+                            ("print_results" variable nil (reparse-symbol function_parameters) [2809 2822]))                          )
+                        (reparse-symbol indented_block_body) [2789 4747])
+                    ("search" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4767 4771]))                          
+                        :documentation "Returns a dict of Title/URLs")
+                        (reparse-symbol indented_block_body) [4756 5562])
+                    ("search_page_wise" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5588 5592]))                          
+                        :documentation "Returns a dict of page-wise urls")
+                        (reparse-symbol indented_block_body) [5567 6612])
+                    ("get_urls" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6638 6642]))                          
+                        :documentation "Returns list of result URLs")
+                        (reparse-symbol indented_block_body) [6625 7184])
+                    ("get_result_count" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7210 7214]))                          
+                        :documentation "Returns the number of results")
+                        (reparse-symbol indented_block_body) [7189 8000])
+                    ("display_results" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8033 8037]))                          
+                        :documentation "Prints results (for command line)")
+                        (reparse-symbol indented_block_body) [8013 8118]))                  
+                :type "class")
+                nil [1899 8118])
+            ("main" function nil nil [8119 8979])
+            ("if" code nil nil [8980 9018]))          
+      :file "pygoogle.py"
+      :pointmax 9018
+      :fsize 9017
+      :lastmodtime '(22131 40472 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 7942 . 7972) (NEWLINE 7941 . 7942) (COLON 7940 . 7941) (FINALLY 7933 . 7940))))
+  :file "!Users!xiaoli!Desktop!search!pygoogle!pygoogle-read-only!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

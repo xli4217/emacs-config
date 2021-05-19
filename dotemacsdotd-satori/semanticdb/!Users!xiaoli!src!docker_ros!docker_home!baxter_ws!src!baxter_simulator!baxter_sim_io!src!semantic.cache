@@ -1,0 +1,395 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "qnode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ros/ros.h" include (:system-flag t) nil [1864 1884])
+            ("ros/network.h" include (:system-flag t) nil [1885 1909])
+            ("string" include (:system-flag t) nil [1910 1927])
+            ("std_msgs/String.h" include (:system-flag t) nil [1928 1956])
+            ("sstream" include (:system-flag t) nil [1957 1975])
+            ("baxter_sim_io/qnode.hpp" include (:system-flag t) nil [1976 2010])
+            ("signal.h" include (:system-flag t) nil [2011 2030])
+            ("baxter_sim_io" type
+               (:members 
+                  ( ("BAXTER_LEFTIL_TOPIC" variable
+                       (:constant-flag t
+                        :default-value "\"robot/digital_io/left_inner_light/state\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2066 2156])
+                    ("BAXTER_LEFTOL_TOPIC" variable
+                       (:constant-flag t
+                        :default-value "\"robot/digital_io/left_outer_light/state\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2157 2247])
+                    ("BAXTER_TORSO_LEFTIL_TOPIC" variable
+                       (:constant-flag t
+                        :default-value "\"robot/digital_io/torso_left_inner_light/state\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2248 2350])
+                    ("BAXTER_TORSO_LEFTOL_TOPIC" variable
+                       (:constant-flag t
+                        :default-value "\"robot/digital_io/torso_left_outer_light/state\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2351 2453])
+                    ("BAXTER_RIGHTIL_TOPIC" variable
+                       (:constant-flag t
+                        :default-value "\"robot/digital_io/right_inner_light/state\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2454 2546])
+                    ("BAXTER_RIGHTOL_TOPIC" variable
+                       (:constant-flag t
+                        :default-value "\"robot/digital_io/right_outer_light/state\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2547 2639])
+                    ("BAXTER_TORSO_RIGHTIL_TOPIC" variable
+                       (:constant-flag t
+                        :default-value "\"robot/digital_io/torso_right_inner_light/state\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2640 2744])
+                    ("BAXTER_TORSO_RIGHTOL_TOPIC" variable
+                       (:constant-flag t
+                        :default-value "\"robot/digital_io/torso_right_outer_light/state\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2745 2849])
+                    ("QNode" function
+                       (:constructor-flag t
+                        :parent "QNode"
+                        :arguments 
+                          ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2864 2873])
+                            ("argv" variable
+                               (:pointer 2
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2874 2886]))                          
+                        :type ("QNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2851 2945])
+                    ("QNode" function
+                       (:destructor-flag t
+                        :parent "QNode"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2947 3104])
+                    ("quit" function
+                       (:arguments 
+                          ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [3116 3124]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3106 3154])
+                    ("init" function
+                       (:parent "QNode"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3156 9318])
+                    ("left_inner_light_sub_cb" function
+                       (:parent "QNode"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9356 9400]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9320 9456])
+                    ("left_outer_light_sub_cb" function
+                       (:parent "QNode"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9493 9537]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9457 9593])
+                    ("right_inner_light_sub_cb" function
+                       (:parent "QNode"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9631 9675]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9594 9732])
+                    ("right_outer_light_sub_cb" function
+                       (:parent "QNode"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9770 9814]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9733 9871])
+                    ("torso_left_inner_light_sub_cb" function
+                       (:parent "QNode"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9914 9958]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9872 10019])
+                    ("torso_left_outer_light_sub_cb" function
+                       (:parent "QNode"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10062 10106]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10020 10167])
+                    ("torso_right_inner_light_sub_cb" function
+                       (:parent "QNode"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10211 10255]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10168 10317])
+                    ("torso_right_outer_light_sub_cb" function
+                       (:parent "QNode"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("baxter_core_msgs::DigitalIOState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10361 10405]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10318 10467])
+                    ("run" function
+                       (:parent "QNode"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10469 11317]))                  
+                :type "namespace")
+                nil [2039 11320]))          
+      :file "qnode.cpp"
+      :pointmax 11349
+      :fsize 11348
+      :lastmodtime '(23119 59497 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "baxter_io.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("QtGui" include (:system-flag t) nil [1839 1855])
+            ("QMessageBox" include (:system-flag t) nil [1856 1878])
+            ("iostream" include (:system-flag t) nil [1879 1898])
+            ("baxter_sim_io/baxter_io.hpp" include (:system-flag t) nil [1899 1937])
+            ("baxter_sim_io" type
+               (:members 
+                  ( ("Qt" using (:type ("Qt" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1966 1985])
+                    ("setstyle" function
+                       (:parent "BaxterIO"
+                        :arguments 
+                          ( ("pressed" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2011 2031])
+                            ("released" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2032 2053])
+                            ("button" variable
+                               (:reference 1
+                                :type ("QPushButton" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2054 2074]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1987 2689])
+                    ("BaxterIO" function
+                       (:constructor-flag t
+                        :parent "BaxterIO"
+                        :arguments 
+                          ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2710 2719])
+                            ("argv" variable
+                               (:pointer 2
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2720 2732])
+                            ("parent" variable
+                               (:pointer 1
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2733 2749]))                          
+                        :type ("BaxterIO" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2691 4819])
+                    ("BaxterIO" function
+                       (:destructor-flag t
+                        :parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4821 4859])
+                    ("on_left_arm_ok_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4861 4945])
+                    ("on_left_arm_ok_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4947 5033])
+                    ("on_left_arm_cancel_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5035 5123])
+                    ("on_left_arm_cancel_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5125 5215])
+                    ("on_left_arm_dial_sliderMoved" function
+                       (:parent "BaxterIO"
+                        :arguments 
+                          ( ("position" variable (:type "int") (reparse-symbol arg-sub-list) [5261 5274]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5217 5318])
+                    ("on_left_arm_show_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5320 5406])
+                    ("on_left_arm_show_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5408 5496])
+                    ("on_left_cuff_squeeze_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5498 5625])
+                    ("on_left_cuff_squeeze_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5627 5757])
+                    ("on_left_cuff_ok_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5759 5876])
+                    ("on_left_cuff_ok_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5878 5998])
+                    ("on_left_cuff_grasp_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6000 6123])
+                    ("on_left_cuff_grasp_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6125 6251])
+                    ("on_left_shoulder_ok_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6253 6347])
+                    ("on_left_shoulder_ok_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6349 6445])
+                    ("on_left_shoulder_cancel_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6447 6545])
+                    ("on_left_shoulder_cancel_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6547 6647])
+                    ("on_left_shoulder_show_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6649 6745])
+                    ("on_left_shoulder_show_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6747 6845])
+                    ("on_left_shoulder_dial_sliderMoved" function
+                       (:parent "BaxterIO"
+                        :arguments 
+                          ( ("position" variable (:type "int") (reparse-symbol arg-sub-list) [6896 6909]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6847 6958])
+                    ("on_right_shoulder_ok_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6960 7056])
+                    ("on_right_shoulder_ok_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7058 7156])
+                    ("on_right_shoulder_cancel_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7158 7258])
+                    ("on_right_shoulder_cancel_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7260 7362])
+                    ("on_right_shoulder_dial_sliderMoved" function
+                       (:parent "BaxterIO"
+                        :arguments 
+                          ( ("position" variable (:type "int") (reparse-symbol arg-sub-list) [7414 7427]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7364 7477])
+                    ("on_right_shoulder_show_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7479 7577])
+                    ("on_right_shoulder_show_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7579 7679])
+                    ("on_right_arm_ok_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7681 7767])
+                    ("on_right_arm_ok_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7769 7857])
+                    ("on_right_arm_cancel_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7859 7949])
+                    ("on_right_arm_cancel_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7951 8043])
+                    ("on_right_arm_dial_sliderMoved" function
+                       (:parent "BaxterIO"
+                        :arguments 
+                          ( ("position" variable (:type "int") (reparse-symbol arg-sub-list) [8090 8103]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8045 8148])
+                    ("on_right_arm_show_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8150 8238])
+                    ("on_right_arm_show_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8240 8330])
+                    ("on_right_cuff_squeeze_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8332 8461])
+                    ("on_right_cuff_squeeze_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8463 8595])
+                    ("on_right_cuff_ok_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8597 8716])
+                    ("on_right_cuff_ok_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8718 8840])
+                    ("on_right_cuff_grasp_pressed" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8842 8967])
+                    ("on_right_cuff_grasp_released" function
+                       (:parent "BaxterIO"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8969 9097]))                  
+                :type "namespace")
+                nil [1939 9100]))          
+      :file "baxter_io.cpp"
+      :pointmax 9129
+      :fsize 9128
+      :lastmodtime '(23119 55870 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!src!docker_ros!docker_home!baxter_ws!src!baxter_simulator!baxter_sim_io!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

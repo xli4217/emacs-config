@@ -1,0 +1,181 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("json" include nil nil [1 12])
+            ("future.utils" include nil nil [13 47])
+            ("matplotlib.gridspec" include nil nil [48 86])
+            ("matplotlib.pyplot" include nil nil [87 118])
+            ("matplotlib.offsetbox" include nil nil [119 179])
+            ("PIL" include nil nil [180 201])
+            ("cv2" include nil nil [202 212])
+            ("io" include nil nil [213 222])
+            ("sklearn" include nil nil [223 237])
+            ("torch" include nil nil [238 250])
+            ("torch.utils.tensorboard" include nil nil [251 300])
+            ("typing" include nil nil [301 342])
+            ("numpy" include nil nil [343 361])
+            ("logging" include nil nil [362 376])
+            ("os" include nil nil [377 386])
+            ("tqdm" include nil nil [387 398])
+            ("scipy.ndimage" include nil nil [399 431])
+            ("external_libs.nuscenes.prediction.helper" include nil nil [432 502])
+            ("external_libs.nuscenes.eval.common.utils" include nil nil [503 570])
+            ("pyquaternion" include nil nil [571 606])
+            ("external_libs.nuscenes" include nil nil [609 652])
+            ("external_libs.nuscenes.map_expansion.map_api" include nil nil [653 721])
+            ("external_libs.nuscenes.eval.prediction.metrics" include nil nil [722 929])
+            ("external_libs.nuscenes.prediction" include nil nil [931 1022])
+            ("plotly.graph_objs" include nil nil [1023 1087])
+            ("plotly.graph_objs" include nil nil [1088 1118])
+            ("plotly.figure_factory" include nil nil [1119 1153])
+            ("plotly" include nil nil [1154 1167])
+            ("plotly.tools" include nil nil [1168 1194])
+            ("eval_dir" variable nil nil [1196 1397])
+            ("cars" variable nil nil [1399 1719])
+            ("robot" variable nil nil [1721 1782])
+            ("ped" variable nil nil [1784 1829])
+            ("get_img_from_fig" function (:arguments 
+              ( ("fig" variable nil (reparse-symbol function_parameters) [1852 1855])
+                ("dpi" variable nil (reparse-symbol function_parameters) [1857 1860])
+                ("size" variable nil (reparse-symbol function_parameters) [1866 1870]))              ) nil [1831 2271])
+            ("default_config" variable nil nil [2272 2578])
+            ("NuScenesEvaluator" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2682 2710])
+                            ("self" code nil (reparse-symbol indented_block_body) [2719 2745])
+                            ("logging" code nil (reparse-symbol indented_block_body) [2754 2875])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2884 2936])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2946 2966])
+                            ("if" code nil (reparse-symbol indented_block_body) [2975 3219])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3240 3312])
+                            ("self" code nil (reparse-symbol indented_block_body) [3321 3404])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3422 3492])
+                            ("self" code nil (reparse-symbol indented_block_body) [3502 3525])
+                            ("if" code nil (reparse-symbol indented_block_body) [3535 3704]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2631 2635])
+                            ("config" variable nil (reparse-symbol function_parameters) [2637 2643])
+                            ("helper" variable nil (reparse-symbol function_parameters) [2660 2666]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2618 3704])
+                    ("populate_metrics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3742 3746]))                          )
+                        (reparse-symbol indented_block_body) [3721 5615])
+                    ("plot_result_histogram" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5659 5663])
+                            ("int" variable nil (reparse-symbol function_parameters) [5672 5675])
+                            ("str" variable nil (reparse-symbol function_parameters) [5690 5693])
+                            ("float" variable nil (reparse-symbol function_parameters) [5733 5738]))                          )
+                        (reparse-symbol indented_block_body) [5633 7498])
+                    ("render_trajectory_on_map" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7540 7544])
+                            ("int" variable nil (reparse-symbol function_parameters) [7606 7609])
+                            ("str" variable nil (reparse-symbol function_parameters) [7654 7657])
+                            ("str" variable nil (reparse-symbol function_parameters) [7704 7707])
+                            ("bool" variable nil (reparse-symbol function_parameters) [7777 7781])
+                            ("bool" variable nil (reparse-symbol function_parameters) [7834 7838])
+                            ("bool" variable nil (reparse-symbol function_parameters) [7897 7901])
+                            ("render_other_cars" variable nil (reparse-symbol function_parameters) [7942 7959])
+                            ("render_pedestrian" variable nil (reparse-symbol function_parameters) [8002 8019])
+                            ("render_ego" variable nil (reparse-symbol function_parameters) [8062 8072]))                          )
+                        (reparse-symbol indented_block_body) [7511 13093])
+                    ("render_agent_poses_on_map" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13154 13158])
+                            ("str" variable nil (reparse-symbol function_parameters) [13205 13208])
+                            ("list" variable nil (reparse-symbol function_parameters) [13254 13258])
+                            ("float" variable nil (reparse-symbol function_parameters) [13303 13308])
+                            ("str" variable nil (reparse-symbol function_parameters) [13519 13522]))                          )
+                        (reparse-symbol indented_block_body) [13124 15714])
+                    ("render_sample_instances" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15764 15768])
+                            ("str" variable nil (reparse-symbol function_parameters) [15818 15821])
+                            ("str" variable nil (reparse-symbol function_parameters) [15869 15872])
+                            ("str" variable nil (reparse-symbol function_parameters) [15919 15922])
+                            ("float" variable nil (reparse-symbol function_parameters) [15970 15975])
+                            ("str" variable nil (reparse-symbol function_parameters) [16022 16025])
+                            ("NuScenesMap" variable nil (reparse-symbol function_parameters) [16069 16080])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [16131 16138])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [16188 16195])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [16249 16256])
+                            ("list" variable nil (reparse-symbol function_parameters) [16302 16306])
+                            ("bool" variable nil (reparse-symbol function_parameters) [16350 16354])
+                            ("str" variable nil (reparse-symbol function_parameters) [16405 16408])
+                            ("bool" variable nil (reparse-symbol function_parameters) [16464 16468])
+                            ("figure" variable nil (reparse-symbol function_parameters) [16509 16515])
+                            ("axis" variable nil (reparse-symbol function_parameters) [16556 16560])
+                            ("bool" variable nil (reparse-symbol function_parameters) [16620 16624])
+                            ("bool" variable nil (reparse-symbol function_parameters) [16685 16689])
+                            ("bool" variable nil (reparse-symbol function_parameters) [16743 16747])
+                            ("list" variable nil (reparse-symbol function_parameters) [16808 16812]))                          )
+                        (reparse-symbol indented_block_body) [15736 25113])
+                    ("in_my_patch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25134 25138])
+                            ("pos" variable nil (reparse-symbol function_parameters) [25140 25143])
+                            ("my_patch" variable nil (reparse-symbol function_parameters) [25145 25153]))                          )
+                        (reparse-symbol indented_block_body) [25118 25327])
+                    ("get_map_pose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25357 25361])
+                            ("map_mask" variable nil (reparse-symbol function_parameters) [25363 25371])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [25380 25387]))                          )
+                        (reparse-symbol indented_block_body) [25340 25577])
+                    ("plot_elements" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25609 25613])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [25645 25652])
+                            ("float" variable nil (reparse-symbol function_parameters) [25685 25690])
+                            ("object_type" variable nil (reparse-symbol function_parameters) [25714 25725])
+                            ("ax" variable nil (reparse-symbol function_parameters) [25763 25765])
+                            ("str" variable nil (reparse-symbol function_parameters) [25801 25804])
+                            ("str" variable nil (reparse-symbol function_parameters) [25842 25845]))                          )
+                        (reparse-symbol indented_block_body) [25591 26807])
+                    ("plot_text_box" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26830 26834])
+                            ("ax" variable nil (reparse-symbol function_parameters) [26836 26838])
+                            ("str" variable nil (reparse-symbol function_parameters) [26852 26855])
+                            ("ndarray" variable nil (reparse-symbol function_parameters) [26865 26872])
+                            ("str" variable nil (reparse-symbol function_parameters) [26885 26888]))                          )
+                        (reparse-symbol indented_block_body) [26812 27038])
+                    ("render_annotation_onwards" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27085 27089])
+                            ("instance_token" variable nil (reparse-symbol function_parameters) [27091 27105])
+                            ("sample_token" variable nil (reparse-symbol function_parameters) [27107 27119]))                          )
+                        (reparse-symbol indented_block_body) [27055 27403]))                  
+                :type "class")
+                nil [2580 27403])
+            ("if" code nil nil [27412 28139]))          
+      :file "evaluator.py"
+      :pointmax 28139
+      :fsize 28138
+      :lastmodtime '(24348 52561 390269 566000)
+      :unmatched-syntax '((NAME 26874 . 26883) (COLON 26883 . 26884) (PERIOD 26864 . 26865) (NAME 26857 . 26860) (COLON 26860 . 26861) (NAME 26840 . 26851) (COLON 26851 . 26852) (NAME 25831 . 25840) (COLON 25840 . 25841) (NAME 25794 . 25799) (COLON 25799 . 25800) (NAME 25676 . 25683) (COLON 25683 . 25684) (PERIOD 25644 . 25645) (NAME 25637 . 25640) (COLON 25640 . 25641) (PERIOD 25379 . 25380) (NAME 25373 . 25376) (COLON 25376 . 25377) (NAME 16789 . 16806) (COLON 16806 . 16807) (NAME 16731 . 16741) (COLON 16741 . 16742) (NAME 16666 . 16683) (COLON 16683 . 16684) (NAME 16601 . 16618) (COLON 16618 . 16619) (NAME 16449 . 16462) (COLON 16462 . 16463) (NAME 16395 . 16403) (COLON 16403 . 16404) (NAME 16341 . 16348) (COLON 16348 . 16349) (NAME 16290 . 16300) (COLON 16300 . 16301) (PERIOD 16248 . 16249) (NAME 16229 . 16244) (COLON 16244 . 16245) (PERIOD 16187 . 16188) (NAME 16172 . 16183) (COLON 16183 . 16184) (PERIOD 16130 . 16131) (NAME 16114 . 16126) (COLON 16126 . 16127) (NAME 16059 . 16067) (COLON 16067 . 16068) (NAME 16009 . 16020) (COLON 16020 . 16021) (NAME 15956 . 15968) (COLON 15968 . 15969) (NAME 15906 . 15917) (COLON 15917 . 15918) (NAME 15855 . 15867) (COLON 15867 . 15868) (NAME 15802 . 15816) (COLON 15816 . 15817) (COLON 13517 . 13518) (COMMA 13476 . 13477) (PAREN_BLOCK 13461 . 13476) (ASSIGN 13459 . 13460) (BRACK_BLOCK 13443 . 13458) (COLON 13436 . 13437) (COMMA 13395 . 13396) (PAREN_BLOCK 13380 . 13395) (ASSIGN 13378 . 13379) (BRACK_BLOCK 13362 . 13377) (NAME 13347 . 13355) (COLON 13355 . 13356) (NAME 13291 . 13301) (COLON 13301 . 13302) (NAME 13241 . 13252) (COLON 13252 . 13253) (NAME 13191 . 13203) (COLON 13203 . 13204) (NAME 7879 . 7895) (COLON 7895 . 7896) (NAME 7821 . 7832) (COLON 7832 . 7833) (NAME 7748 . 7775) (COLON 7775 . 7776) (NAME 7698 . 7702) (COLON 7702 . 7703) (NAME 7646 . 7652) (COLON 7652 . 7653) (NAME 7579 . 7604) (COLON 7604 . 7605) (NAME 5723 . 5731) (COLON 5731 . 5732) (NAME 5681 . 5688) (COLON 5688 . 5689) (NAME 5665 . 5670) (COLON 5670 . 5671))))
+  :file "!nobackup!users!xiaoli!rlfps!examples!postdoc!traj_prediction!pre-corl2020!evaluation!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

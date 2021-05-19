@@ -1,0 +1,207 @@
+;; Object preprocessor/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "preprocessor/"
+  :tables
+  (list
+    (semanticdb-table "running_average.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("rl_pipeline.preprocessor.preprocessor" include nil nil [20 82])
+            ("cloudpickle" include nil nil [83 101])
+            ("RunningAverage" type
+               (:documentation " Generate scale and offset based on running mean and stddev along axis=0
+
+        offset = running mean
+        scale = 1 / (stddev + 0.1) / 3 (i.e. 3x stddev = +/- 1.0)
+    "
+                :superclasses ("Preprocessor")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Args:
+            obs_dim: dimension of axis=1
+        \"\"\"" code nil (reparse-symbol indented_block_body) [382 452])
+                            ("super" code nil (reparse-symbol indented_block_body) [462 523])
+                            ("self" variable nil (reparse-symbol indented_block_body) [541 566])
+                            ("self" variable nil (reparse-symbol indented_block_body) [575 601])
+                            ("self" variable nil (reparse-symbol indented_block_body) [610 620])
+                            ("self" variable nil (reparse-symbol indented_block_body) [629 639])
+                            ("self" variable nil (reparse-symbol indented_block_body) [648 670]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [342 346])
+                            ("dim" variable nil (reparse-symbol function_parameters) [348 351])
+                            ("preprocessor_param" variable nil (reparse-symbol function_parameters) [353 371]))                          
+                        :documentation "
+        Args:
+            obs_dim: dimension of axis=1
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [329 671])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [696 700])
+                            ("X" variable nil (reparse-symbol function_parameters) [702 703]))                          
+                        :documentation " Update running mean and variance (this is an exact method)
+        Args:
+            X: NumPy array, shape = (N, dim)
+
+        see: https://stats.stackexchange.com/questions/43159/how-to-calculate-pooled-
+               variance-of-two-groups-given-known-group-variances-mean
+        ")
+                        (reparse-symbol indented_block_body) [685 1814])
+                    ("get_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1847 1851]))                          )
+                        (reparse-symbol indented_block_body) [1832 1925])
+                    ("save_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1946 1950])
+                            ("save_path" variable nil (reparse-symbol function_parameters) [1952 1961]))                          )
+                        (reparse-symbol indented_block_body) [1930 2083])
+                    ("restore_preprocessor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2113 2117])
+                            ("restore_path" variable nil (reparse-symbol function_parameters) [2119 2131]))                          )
+                        (reparse-symbol indented_block_body) [2088 2320])
+                    ("get_scaled_x" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2354 2358])
+                            ("x" variable nil (reparse-symbol function_parameters) [2360 2361])
+                            ("shift_mean" variable nil (reparse-symbol function_parameters) [2363 2373]))                          
+                        :documentation " returns 2-tuple: (scale, offset) ")
+                        (reparse-symbol indented_block_body) [2337 2656]))                  
+                :type "class")
+                nil [103 2656]))          
+      :file "running_average.py"
+      :pointmax 2657
+      :fsize 2656
+      :lastmodtime '(23207 13764 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "preprocessor.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Preprocessor" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [92 106])
+                            ("self" variable nil (reparse-symbol indented_block_body) [115 159]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [47 51])
+                            ("dim" variable nil (reparse-symbol function_parameters) [53 56])
+                            ("preprocessor_param" variable nil (reparse-symbol function_parameters) [58 76]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [34 160])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [184 188])
+                            ("X" variable nil (reparse-symbol function_parameters) [190 191]))                          )
+                        (reparse-symbol indented_block_body) [173 388])
+                    ("get_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [408 412]))                          )
+                        (reparse-symbol indented_block_body) [393 562])
+                    ("save_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [583 587])
+                            ("save_path" variable nil (reparse-symbol function_parameters) [589 598]))                          )
+                        (reparse-symbol indented_block_body) [567 705])
+                    ("restore_preprocessor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [752 756])
+                            ("restore_path" variable nil (reparse-symbol function_parameters) [758 770]))                          )
+                        (reparse-symbol indented_block_body) [727 867])
+                    ("get_scaled_x" function (:arguments 
+                      ( ("x" variable nil (reparse-symbol function_parameters) [897 898])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [900 908]))                      ) (reparse-symbol indented_block_body) [880 947]))                  
+                :type "class")
+                nil [1 947]))          
+      :file "preprocessor.py"
+      :pointmax 955
+      :fsize 954
+      :lastmodtime '(23170 24027 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "standardize.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("rl_pipeline.preprocessor.preprocessor" include nil nil [20 82])
+            ("cloudpickle" include nil nil [83 101])
+            ("Standardize" type
+               (:documentation "
+    Standardize input data
+    x_standardized = (x - mean)/std
+    "
+                :superclasses ("Preprocessor")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Args:
+            obs_dim: dimension of axis=1
+        \"\"\"" code nil (reparse-symbol indented_block_body) [273 343])
+                            ("super" code nil (reparse-symbol indented_block_body) [353 411]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [233 237])
+                            ("dim" variable nil (reparse-symbol function_parameters) [239 242])
+                            ("preprocessor_param" variable nil (reparse-symbol function_parameters) [244 262]))                          
+                        :documentation "
+        Args:
+            obs_dim: dimension of axis=1
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [220 412])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [445 449])
+                            ("X" variable nil (reparse-symbol function_parameters) [451 452]))                          )
+                        (reparse-symbol indented_block_body) [434 468])
+                    ("get_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [496 500]))                          )
+                        (reparse-symbol indented_block_body) [481 516])
+                    ("save_params" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [537 541])
+                            ("save_path" variable nil (reparse-symbol function_parameters) [543 552]))                          )
+                        (reparse-symbol indented_block_body) [521 568])
+                    ("restore_preprocessor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [606 610])
+                            ("restore_path" variable nil (reparse-symbol function_parameters) [612 624]))                          )
+                        (reparse-symbol indented_block_body) [581 640])
+                    ("get_scaled_x" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [670 674])
+                            ("x" variable nil (reparse-symbol function_parameters) [676 677]))                          )
+                        (reparse-symbol indented_block_body) [653 786]))                  
+                :type "class")
+                nil [103 786]))          
+      :file "standardize.py"
+      :pointmax 792
+      :fsize 791
+      :lastmodtime '(23181 58503 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!Google Drive!PHD_research!projects!docker!docker_home!rlfps!rl_pipeline!preprocessor!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

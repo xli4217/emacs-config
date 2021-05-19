@@ -1,0 +1,280 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("torch" include nil nil [1 13])
+            ("numpy" include nil nil [14 32])
+            ("collections" include nil nil [33 64])
+            ("model.trajectron" include nil nil [65 104])
+            ("model.online.online_mgcvae" include nil nil [105 174])
+            ("model.model_utils" include nil nil [175 213])
+            ("data" include nil nil [214 288])
+            ("OnlineTrajectron" type
+               (:superclasses ("Trajectron")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [414 684])
+                            ("self" variable nil (reparse-symbol indented_block_body) [693 716])
+                            ("self" variable nil (reparse-symbol indented_block_body) [725 748])
+                            ("self" code nil (reparse-symbol indented_block_body) [757 988])
+                            ("self" variable nil (reparse-symbol indented_block_body) [997 1021])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1030 1060]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [344 348])
+                            ("model_registrar" variable nil (reparse-symbol function_parameters) [350 365])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [384 395])
+                            ("device" variable nil (reparse-symbol function_parameters) [397 403]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [331 1061])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1079 1083]))                          )
+                        (reparse-symbol indented_block_body) [1066 1215])
+                    ("_add_node_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1240 1244])
+                            ("node" variable nil (reparse-symbol function_parameters) [1246 1250]))                          )
+                        (reparse-symbol indented_block_body) [1220 1808])
+                    ("update_removed_nodes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1838 1842]))                          )
+                        (reparse-symbol indented_block_body) [1813 2073])
+                    ("_remove_node_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2101 2105])
+                            ("node" variable nil (reparse-symbol function_parameters) [2107 2111]))                          )
+                        (reparse-symbol indented_block_body) [2078 2291])
+                    ("set_environment" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2316 2320])
+                            ("env" variable nil (reparse-symbol function_parameters) [2322 2325])
+                            ("init_timestep" variable nil (reparse-symbol function_parameters) [2327 2340]))                          )
+                        (reparse-symbol indented_block_body) [2296 2869])
+                    ("incremental_forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2898 2902])
+                            ("new_inputs_dict" variable nil (reparse-symbol function_parameters) [2904 2919])
+                            ("prediction_horizon" variable nil (reparse-symbol function_parameters) [2949 2967])
+                            ("num_samples" variable nil (reparse-symbol function_parameters) [2999 3010])
+                            ("robot_present_and_future" variable nil (reparse-symbol function_parameters) [3042 3066])
+                            ("z_mode" variable nil (reparse-symbol function_parameters) [3101 3107])
+                            ("gmm_mode" variable nil (reparse-symbol function_parameters) [3143 3151])
+                            ("full_dist" variable nil (reparse-symbol function_parameters) [3187 3196])
+                            ("all_z_sep" variable nil (reparse-symbol function_parameters) [3232 3241])
+                            ("run_models" variable nil (reparse-symbol function_parameters) [3277 3287]))                          )
+                        (reparse-symbol indented_block_body) [2874 10929])
+                    ("_run_decoder" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10951 10955])
+                            ("node" variable nil (reparse-symbol function_parameters) [10957 10961])
+                            ("num_predicted_timesteps" variable nil (reparse-symbol function_parameters) [10984 11007])
+                            ("num_samples" variable nil (reparse-symbol function_parameters) [11030 11041])
+                            ("robot_present_and_future" variable nil (reparse-symbol function_parameters) [11064 11088])
+                            ("z_mode" variable nil (reparse-symbol function_parameters) [11116 11122])
+                            ("gmm_mode" variable nil (reparse-symbol function_parameters) [11151 11159])
+                            ("full_dist" variable nil (reparse-symbol function_parameters) [11188 11197])
+                            ("all_z_sep" variable nil (reparse-symbol function_parameters) [11226 11235]))                          )
+                        (reparse-symbol indented_block_body) [10934 12224])
+                    ("sample_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12246 12250])
+                            ("num_predicted_timesteps" variable nil (reparse-symbol function_parameters) [12252 12275])
+                            ("num_samples" variable nil (reparse-symbol function_parameters) [12298 12309])
+                            ("robot_present_and_future" variable nil (reparse-symbol function_parameters) [12332 12356])
+                            ("z_mode" variable nil (reparse-symbol function_parameters) [12384 12390])
+                            ("gmm_mode" variable nil (reparse-symbol function_parameters) [12419 12427])
+                            ("full_dist" variable nil (reparse-symbol function_parameters) [12456 12465])
+                            ("all_z_sep" variable nil (reparse-symbol function_parameters) [12494 12503]))                          )
+                        (reparse-symbol indented_block_body) [12229 14091])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14108 14112])
+                            ("init_env" variable nil (reparse-symbol function_parameters) [14114 14122])
+                            ("init_timestep" variable nil (reparse-symbol function_parameters) [14140 14153])
+                            ("pos_dicts" variable nil (reparse-symbol function_parameters) [14171 14180])
+                            ("num_predicted_timesteps" variable nil (reparse-symbol function_parameters) [14231 14254])
+                            ("num_samples" variable nil (reparse-symbol function_parameters) [14272 14283])
+                            ("robot_present_and_future" variable nil (reparse-symbol function_parameters) [14301 14325])
+                            ("z_mode" variable nil (reparse-symbol function_parameters) [14348 14354])
+                            ("gmm_mode" variable nil (reparse-symbol function_parameters) [14378 14386])
+                            ("full_dist" variable nil (reparse-symbol function_parameters) [14410 14419])
+                            ("all_z_sep" variable nil (reparse-symbol function_parameters) [14443 14452]))                          )
+                        (reparse-symbol indented_block_body) [14096 15299]))                  
+                :type "class")
+                nil [291 15299]))          
+      :file "online_trajectron.py"
+      :pointmax 15299
+      :fsize 15298
+      :lastmodtime '(24355 23160 510366 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("warnings" include nil nil [1 16])
+            ("torch" include nil nil [17 29])
+            ("torch.nn" include nil nil [30 51])
+            ("torch.nn.functional" include nil nil [52 83])
+            ("numpy" include nil nil [84 102])
+            ("collections" include nil nil [103 147])
+            ("model.components" include nil nil [148 178])
+            ("model.model_utils" include nil nil [179 210])
+            ("model.dynamics" include nil nil [211 250])
+            ("model.mgcvae" include nil nil [251 300])
+            ("environment.scene_graph" include nil nil [301 349])
+            ("environment.node_type" include nil nil [350 392])
+            ("OnlineMultimodalGenerativeCVAE" type
+               (:superclasses ("MultimodalGenerativeCVAE")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [625 655])
+                            ("self" variable nil (reparse-symbol indented_block_body) [664 680])
+                            ("self" variable nil (reparse-symbol indented_block_body) [689 720])
+                            ("if" code nil (reparse-symbol indented_block_body) [730 835])
+                            ("self" variable nil (reparse-symbol indented_block_body) [843 875])
+                            ("self" variable nil (reparse-symbol indented_block_body) [884 922])
+                            ("self" variable nil (reparse-symbol indented_block_body) [931 951])
+                            ("self" variable nil (reparse-symbol indented_block_body) [961 987])
+                            ("self" variable nil (reparse-symbol indented_block_body) [996 1010])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1019 1042])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1052 1090])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1099 1163])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1172 1278])
+                            ("if" code nil (reparse-symbol indented_block_body) [1287 1470])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1478 1578])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1588 1620])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1629 1656])
+                            ("self" code nil (reparse-symbol indented_block_body) [1666 1695])
+                            ("dynamic_class" variable nil (reparse-symbol indented_block_body) [1705 1797])
+                            ("dyn_limits" variable nil (reparse-symbol indented_block_body) [1806 1867])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1876 1982]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [476 480])
+                            ("env" variable nil (reparse-symbol function_parameters) [499 502])
+                            ("node" variable nil (reparse-symbol function_parameters) [521 525])
+                            ("model_registrar" variable nil (reparse-symbol function_parameters) [544 559])
+                            ("hyperparams" variable nil (reparse-symbol function_parameters) [578 589])
+                            ("device" variable nil (reparse-symbol function_parameters) [608 614]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [463 1983])
+                    ("create_graphical_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2015 2019]))                          
+                        :documentation "
+        Creates or queries all trainable components.
+
+        :return: None
+        ")
+                        (reparse-symbol indented_block_body) [1988 2391])
+                    ("update_graph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2413 2417])
+                            ("new_scene_graph" variable nil (reparse-symbol function_parameters) [2419 2434])
+                            ("new_neighbors" variable nil (reparse-symbol function_parameters) [2436 2449])
+                            ("removed_neighbors" variable nil (reparse-symbol function_parameters) [2451 2468]))                          )
+                        (reparse-symbol indented_block_body) [2396 3035])
+                    ("get_edge_to" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3056 3060])
+                            ("other_node" variable nil (reparse-symbol function_parameters) [3062 3072]))                          )
+                        (reparse-symbol indented_block_body) [3040 3126])
+                    ("add_edge_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3150 3154])
+                            ("edge_type" variable nil (reparse-symbol function_parameters) [3156 3165]))                          )
+                        (reparse-symbol indented_block_body) [3131 5086])
+                    ("_get_other_node_type_from_edge" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5126 5130])
+                            ("edge_type_str" variable nil (reparse-symbol function_parameters) [5132 5145]))                          )
+                        (reparse-symbol indented_block_body) [5091 5284])
+                    ("_get_edge_type_from_str" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5317 5321])
+                            ("edge_type_str" variable nil (reparse-symbol function_parameters) [5323 5336]))                          )
+                        (reparse-symbol indented_block_body) [5289 5574])
+                    ("remove_edge_model" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5601 5605])
+                            ("edge_type" variable nil (reparse-symbol function_parameters) [5607 5616]))                          )
+                        (reparse-symbol indented_block_body) [5579 5848])
+                    ("create_encoder_rep" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9818 9822])
+                            ("mode" variable nil (reparse-symbol function_parameters) [9824 9828])
+                            ("TD" variable nil (reparse-symbol function_parameters) [9857 9859])
+                            ("robot_present_st" variable nil (reparse-symbol function_parameters) [9888 9904])
+                            ("robot_future_st" variable nil (reparse-symbol function_parameters) [9933 9948]))                          )
+                        (reparse-symbol indented_block_body) [9795 11929])
+                    ("encode_node_history" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11958 11962])
+                            ("inputs_st" variable nil (reparse-symbol function_parameters) [11964 11973]))                          )
+                        (reparse-symbol indented_block_body) [11934 12621])
+                    ("encode_edge" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12642 12646])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [12648 12654])
+                            ("inputs_st" variable nil (reparse-symbol function_parameters) [12656 12665])
+                            ("inputs_np" variable nil (reparse-symbol function_parameters) [12667 12676])
+                            ("edge_type" variable nil (reparse-symbol function_parameters) [12678 12687])
+                            ("connected_nodes" variable nil (reparse-symbol function_parameters) [12689 12704])
+                            ("edge_masks" variable nil (reparse-symbol function_parameters) [12706 12716]))                          )
+                        (reparse-symbol indented_block_body) [12626 17336])
+                    ("encoder_forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17361 17365])
+                            ("inputs" variable nil (reparse-symbol function_parameters) [17367 17373])
+                            ("inputs_st" variable nil (reparse-symbol function_parameters) [17375 17384])
+                            ("inputs_np" variable nil (reparse-symbol function_parameters) [17386 17395])
+                            ("robot_present_and_future" variable nil (reparse-symbol function_parameters) [17397 17421]))                          )
+                        (reparse-symbol indented_block_body) [17341 17855])
+                    ("decoder_forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18077 18081])
+                            ("prediction_horizon" variable nil (reparse-symbol function_parameters) [18083 18101])
+                            ("num_samples" variable nil (reparse-symbol function_parameters) [18127 18138])
+                            ("robot_present_and_future" variable nil (reparse-symbol function_parameters) [18164 18188])
+                            ("z_mode" variable nil (reparse-symbol function_parameters) [18219 18225])
+                            ("gmm_mode" variable nil (reparse-symbol function_parameters) [18257 18265])
+                            ("full_dist" variable nil (reparse-symbol function_parameters) [18297 18306])
+                            ("all_z_sep" variable nil (reparse-symbol function_parameters) [18338 18347]))                          )
+                        (reparse-symbol indented_block_body) [18057 19930]))                  
+                :type "class")
+                nil [395 19930]))          
+      :file "online_mgcvae.py"
+      :pointmax 19930
+      :fsize 19929
+      :lastmodtime '(24355 23160 510117 479000)
+      :unmatched-syntax '((INDENT_BLOCK 6435 . 9790) (NEWLINE 6434 . 6435) (COLON 6433 . 6434) (DEF 5853 . 5856) (MINUS 5948 . 5949) (GT 5949 . 5950))))
+  :file "!nobackup!users!xiaoli!rlfps!examples!postdoc!traj_prediction!post-corl2020!models!trajectronpp!base!trajectron!model!online!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

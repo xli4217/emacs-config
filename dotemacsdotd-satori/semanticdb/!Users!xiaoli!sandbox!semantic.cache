@@ -1,0 +1,61 @@
+;; Object sandbox/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sandbox/"
+  :tables
+  (list
+    (semanticdb-table "test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("A" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [53 63]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [35 39])
+                            ("a" variable nil (reparse-symbol function_parameters) [41 42]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [22 64]))                  
+                :type "class")
+                nil [1 64])
+            ("B" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [117 127]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [99 103])
+                            ("A" variable nil (reparse-symbol function_parameters) [105 106]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [86 128]))                  
+                :type "class")
+                nil [65 128])
+            ("C" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [175 185]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [157 161])
+                            ("A" variable nil (reparse-symbol function_parameters) [163 164]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [144 186]))                  
+                :type "class")
+                nil [129 186])
+            ("p1" variable nil nil [187 198])
+            ("p2" variable nil nil [199 209])
+            ("print" code nil nil [210 223])
+            ("p1" variable nil nil [224 232]))          
+      :file "test.py"
+      :pointmax 248
+      :fsize 247
+      :lastmodtime '(23225 27153 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!xiaoli!sandbox!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
