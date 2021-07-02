@@ -79,6 +79,7 @@ This function should only modify configuration layer settings."
                                       find-file-in-project
                                       jedi
                                       anaconda-mode
+                                      sphinx-doc
                                       )
 
    ;; A list of packages that cannot be updated.
@@ -602,11 +603,12 @@ before packages are loaded."
   (key-chord-define-global "ww" 'windmove-up)
   (key-chord-define-global "ss" 'windmove-down)
 
-  ;; (global-set-key (kbd "C-c <left>")  'windmove-left)
-  ;; (global-set-key (kbd "C-c <right>") 'windmove-right)
-  ;; (global-set-key (kbd "C-c <up>")    'windmove-up)
-  ;; (global-set-key (kbd "C-c <down>")  'windmove-down)
 
+  "#### Sphinx Doc ####"
+  (add-hook 'python-mode-hook (lambda ()
+                                (require 'sphinx-doc)
+                                (sphinx-doc-mode t)))
+  (key-chord-define-global "22" 'sphinx-doc)
   "##### Other Configs #######"
   )
 
