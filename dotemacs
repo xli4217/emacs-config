@@ -4,14 +4,9 @@
                   ("elpa" . "http://tromey.com/elpa/")
                   ;; TODO: Maybe, use this after emacs24 is released
                   ;; (development versions of packages)
-                  ("melpa" . "http://melpa.org/packages/")
+                  ("melpa" . "http://melpa.milkbox.net/packages/")
                   ))
 (add-to-list 'package-archives source t))
-                                       
-;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-;; (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-;; (add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
-
 (package-initialize)
 
 ;;;;;;;;;; these are the packages to install at startup ;;;;;;;;;;;
@@ -19,9 +14,9 @@
 (setq package-list '(key-chord helm jedi jedi-core helm-swoop realgud tabbar tabbar-ruler magit sphinx-doc markdown-mode fold-this))
 
 ;list the repositories containing them
-;(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
-;                         ("gnu" . "http://elpa.gnu.org/packages/")
-;                         ("marmalade" . "http://marmalade-repo.org/packages/")))
+(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
+                         ("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")))
 
 
 ; activate all the packages (in particular autoloads)
@@ -48,7 +43,7 @@
   (when (not (package-installed-p p))
   (package-install p)))
 
-;-------------------------------------------------------------------------------
+;; ;-------------------------------------------------------------------------------
 
 (add-to-list 'load-path "~/.emacs.d/auto-complete-clang/")
 (require 'auto-complete-clang)
@@ -85,7 +80,19 @@
 )
  
 (add-hook 'c-mode-common-hook 'my-ac-clang-mode-common-hook)
-
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" default)))
+ '(ecb-options-version "2.40")
+ '(inhibit-startup-screen t)
+ '(package-selected-packages
+   (quote
+    (realgud-jdb realgud-ipdb fold-this markdown-mode sphinx-doc magit tabbar-ruler tabbar helm-swoop jedi helm sublime-themes sr-speedbar smartparens realgud neotree key-chord json-mode ggtags flycheck-pyflakes flycheck-mypy flycheck-irony flycheck-google-cpplint flycheck-cask elpy ecb dumb-jump cppcheck company-anaconda color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized color-theme cmake-project cmake-ide cmake-font-lock buffer-move bracketed-paste auto-complete-c-headers))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -102,7 +109,7 @@
 (add-hook 'c-mode-hook 'my:ac-c-headers-init)
 
 
-;-------------------- for xml ----------------------------------------------
+;; ;-------------------- for xml ----------------------------------------------
 
 ;path to where nxml is
 (set 'nxml-path (concat "~/.emacs.d/" "nxml-mode/"))
@@ -124,7 +131,7 @@
 (setq nxml-slash-auto-complete-flag t)
 
 
-;-------------------- for code folding -------------------------------------------------------------------------------
+;; ;-------------------- for code folding -------------------------------------------------------------------------------
 
 (load-library "hideshow")
 
@@ -134,7 +141,7 @@
 
 (add-hook 'c++-mode-hook 'hs-minor-mode)
 
-;---------- ggtags ----------------------------------
+;; ;---------- ggtags ----------------------------------
 (require 'ggtags)
 (add-hook 'c-mode-common-hook
                     (lambda ()
@@ -152,7 +159,7 @@
 
 (setq-local imenu-create-index-function #'ggtags-build-imenu-index) ; ggtag with imenu
 
-; ----------------- neotree ---------------------
+;; ; ----------------- neotree ---------------------
  (require 'neotree)
 
 (global-set-key [f4] 'neotree-toggle)
@@ -160,7 +167,7 @@
 ; set neotree backgound text color
 (setq frame-background-mode 'dark)
 
-; -------------- setup semantic ----------------
+;; ; -------------- setup semantic ----------------
  (require 'cc-mode)
  (require 'semantic)
 
@@ -169,7 +176,7 @@
 
  (semantic-mode 1)
 
-; ------------- smartparens ------------------------
+;; ; ------------- smartparens ------------------------
  ;; Package: smartparens
   (require 'smartparens-config)
   (show-smartparens-global-mode +1)
@@ -181,7 +188,7 @@
     (sp-local-pair "{" nil :post-handlers '(("||\n[i]" "RET")))
       (sp-local-pair "/*" "*/" :post-handlers '((" | " "SPC")
                                                   ("* ||\n[i]" "RET"))))
-; ---------------- toggle between header and implementation file -------------
+;; ; ---------------- toggle between header and implementation file -------------
 
 (setq cc-other-file-alist
       '(("\\.c"   (".h"))
@@ -195,20 +202,20 @@
 ;;; Bind the toggle function to a global key
 (global-set-key "\M-t" 'ff-find-other-file)
 
-; ---------------- Emacs for python -------------------------------------
-(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
+;; ; ---------------- Emacs for python -------------------------------------
+;(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
 
-; ----------------- flycheck -------------------------------------------------               
+;; ; ----------------- flycheck -------------------------------------------------               
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (setq flycheck-python-pylint-executable "~/pylint-1.4.3/bin/pylint")
 ;; (add-hook 'c++-mode-hook                                                                  
 ;;           (lambda () (setq flycheck-clang-include-path                                    
 ;;                            (list (expand-file-name "~/dev/cisst/cisst-saw/cisst/")))))    
 
-; irony mode                                                                                 
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'objc-mode-hook 'irony-mode)
+;; ; irony mode                                                                                 
+;; (add-hook 'c++-mode-hook 'irony-mode)
+;; (add-hook 'c-mode-hook 'irony-mode)
+;; (add-hook 'objc-mode-hook 'irony-mode)
 
 ;; replace the `completion-at-point' and `complete-symbol bindings in                       
 ;; irony-modes buffers by irony-modes function                                             
@@ -232,8 +239,8 @@
 
 (autoload 'cmake-mode "/usr/share/emacs/site-lisp/cmake-mode.el" t)
 
-; -------------------- From other source -----------------------
-;;;;;;;;;;;; Emacs Basic Setting ;;;;;;;;
+;; ; -------------------- From other source -----------------------
+;; ;;;;;;;;;;;; Emacs Basic Setting ;;;;;;;;
 
 ;; 'y' for 'yes', 'n' for 'no'
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -243,7 +250,7 @@
 (require 'hl-line)
 ;(global-hl-line-mode t)
 
-;;;;;;;; cursor ;;;;;;;;;;;;;;;;;
+;; ;;;;;;;; cursor ;;;;;;;;;;;;;;;;;
 (setq-default cursor-type 'bar)
 ;;to set the cursor color
 (set-cursor-color "blue")
@@ -307,7 +314,7 @@
 ;;;;;;; set title "title@Emacs";;
 (setq frame-title-format "%b@Emacs")
 
-;;;;;;;;;; Shortcut Keys ;;;;;;;;;;
+;; ;;;;;;;;;; Shortcut Keys ;;;;;;;;;;
 (global-set-key [f5] 'compile)
 (global-set-key [f8] 'calendar)
 (global-set-key [f9] 'list-bookmarks)
@@ -322,7 +329,7 @@
             (require 'perl-completion)
             (perl-completion-mode t)))
 
-;;;;;;;;;;;;;; MATLAB ;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;;;;;;;;;;;;;; MATLAB ;;;;;;;;;;;;;;;;;;;;;;;;;
 (autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
 (add-to-list
  'auto-mode-alist
@@ -338,56 +345,56 @@
 
 
 
-;;; For mixed dos/unix style CF ;;;
+;; ;;; For mixed dos/unix style CF ;;;
 (defun remove-dos-eol ()
   "Do not show ^M in files containing mixed UNIX and DOS line endings."
   (interactive)
   (setq buffer-display-table (make-display-table))
   (aset buffer-display-table ?\^M []))
 
-;;;; Markdown files ;;;;
+;; ;;;; Markdown files ;;;;
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-;;;; Use google-chrome ;;;;
+;; ;;;; Use google-chrome ;;;;
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "google-chrome")
 
-;;;; JavaScripte ;;;;
+;; ;;;; JavaScripte ;;;;
 (setq js-indent-level 2)
 ;;;; JSON ;;;;
 (add-to-list 'auto-mode-alist '("\\.json\\'" . js-mode))
 
 
-;;;; Google Protobuf ;;;
+;; ;;;; Google Protobuf ;;;
 ;; (add-to-list 'load-path "~/.emacs.d/plugins/protobuf")
 ;; (require 'protobuf-mode)
 ;; (setq auto-mode-alist  (cons '(".proto$" . protobuf-mode) auto-mode-alist))
 
 
-;;;; nesC mode ;;;;
+;; ;;;; nesC mode ;;;;
 (add-to-list 'load-path "~/.emacs.d/plugins/nesc")
 (setq load-path (cons (expand-file-name "X") load-path))
 (autoload 'nesc-mode "nesc.el")
 (add-to-list 'auto-mode-alist '("\\.nc\\'" . nesc-mode))
 
-;;;; smart indent ;;;;
+;; ;;;; smart indent ;;;;
 (add-to-list 'load-path "~/.emacs.d/plugins/smarttab")
 
-;;;; Color Theme ;;;;;
+;; ;;;; Color Theme ;;;;;
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-calm-forest)
 
-;--------- cursor type -------------
+;; ;--------- cursor type -------------
 (setq-default cursor-type 'bar)
 (set-cursor-color "#8470ff")
 
 
-;------------------ ECB ---------------------
+;; ;------------------ ECB ---------------------
 (add-to-list 'load-path "~/.emacs.d/elpa")
 (require 'ecb)
 
@@ -399,26 +406,31 @@
 (global-set-key (kbd "C-c 4") 'ecb-goto-window-history)                                                                                                                                       
 (global-set-key (kbd "C-c 5") 'ecb-goto-window-edit1)       
 
-; ------------ Split Window Binding ------------
+;; ; ------------ Split Window Binding ------------
 (global-set-key (kbd "C-c e") 'split-window-right)
 (global-set-key (kbd "C-c o") 'split-window-below)
 
-;------ resize window ------------
+;; ;------ resize window ------------
 (global-set-key (kbd "C-c k") 'enlarge-window)
 (global-set-key (kbd "C-c i") 'shrink-window)
 (global-set-key (kbd "C-c j") 'enlarge-window-horizontally)
 (global-set-key (kbd "C-c l") 'shrink-window-horizontally)
 
-;—— latex-preview-pane —————
+;; ;—— latex-preview-pane —————
 ;(setq exec-path (append exec-path '("YOUR/PATH/TO/LATEXB/BIN/")) ) ; if emacs complains “can not find file or directory pdflatex”
 
-; -- windmove -----
-(global-set-key (kbd "C-c <left>")  'windmove-left)
-(global-set-key (kbd "C-c <right>") 'windmove-right)
-(global-set-key (kbd "C-c <up>")    'windmove-up)
-(global-set-key (kbd "C-c <down>")  'windmove-down)
+;; ; -- windmove -----
+;(global-set-key (kbd "C-c <left>")  'windmove-left)
+;(global-set-key (kbd "C-c <right>") 'windmove-right)
+;(global-set-key (kbd "C-c <up>")    'windmove-up)
+;(global-set-key (kbd "C-c <down>")  'windmove-down)
 
-;---- anaconda-mode ------
+(key-chord-define-global "aa" 'windmove-left)
+(key-chord-define-global "dd" 'windmove-right)
+(key-chord-define-global "ww" 'windmove-up)
+(key-chord-define-global "ss" 'windmove-down) 
+
+;; ;---- anaconda-mode ------
 (add-hook 'python-mode-hook 'anaconda-mode)
 
 ;----- buffer-move ----------
@@ -445,28 +457,26 @@
  gdb-show-main t
  )
  
- ;;;;;;;;;; key-chord ;;;;;;;;;;;;
-
-(require 'key-chord)                                                                                   (key-chord-define-global "ff" 'find-file-in-project)   
-(key-chord-define-global "ms" 'magit-status)                                                                                                              ;(key-chord-define-global "oo" 'helm-occur)
+;;  ;;;;;;;;;; key-chord ;;;;;;;;;;;;                                                                                                                                                                                                              
+(require 'key-chord)                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                               
+(key-chord-define-global "ff" 'find-file-in-project)   
+(key-chord-define-global "ms" 'magit-status)                                                                                                                                                                                           
+(key-chord-define-global "fs" 'find-file-in-project-by-selected) 
 (key-chord-define-global "cc" 'compile)
 (key-chord-define-global "fd" 'helm-semantic-or-imenu)    
-(key-chord-define-global "ef" 'find-file)    
-
+ 
 (key-chord-mode +1)  
 
-;;;;;;;; helm ;;;;;;;;;
+;; ;;;;;;;; helm ;;;;;;;;;
 (helm-mode 1)
 (global-set-key (kbd "M-x") #'helm-M-x)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 
-;;;;;;;; jedi ;;;;;;;;;;;;
+;; ;;;;;;;; jedi ;;;;;;;;;;;;
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t) 
 
-(setq jedi:server-args `("--log-level=DEBUG"
-                         ,(format "--log=%s" (expand-file-name "~/jediepcserver.log"))
-                         "--log-traceback"))
 
  ;;;;;;; helm-swoop ;;;;;;
  (global-set-key (kbd "C-s") #'helm-multi-swoop-all)
@@ -481,74 +491,76 @@
 ;(key-chord-define-global "dd" 'sphinx-doc)                  
  
  
-;;;;;; google stype docstring ;;;;;;;;;;;
-(defun chomp (str)
-        "Chomp leading and tailing whitespace from STR."
-        (let ((s (if (symbolp str) (symbol-name str) str)))
-          (replace-regexp-in-string
-           "\\(^[[:space:]\n]*\\|[[:space:]\n]*$\\)" "" s)))
- (defun get-function-definition(sentence)
-    (if (string-match "def.*(.*):" sentence)
-        (match-string 0 sentence)))
- (defun get-parameters(sentence)
-    (setq y (get-function-definition sentence))
-    (if y
-        (if (string-match "(.*)" y)
-            (match-string 0 y))))
- (autoload 'thing-at-point "thingatpt" nil t) ;; build-in librairie
- (defun python-insert-docstring()
-        (interactive)
-        (setq p (get-parameters (thing-at-point 'sentence)))
-        (forward-line 1)
-        (insert "    \"\"\"\n")
-        (insert "\tArgs:\n")
-        (setq params (split-string p "[?\,?\(?\)?\ ]"))
-        (while params
-          (if (/= (length (chomp (car params))) 0)
-              (progn
-                (insert "        ")
-                (insert (chomp (car params)))
-                (insert ": \n")))
-          (setq params (cdr params)))
-        (insert "    Returns:\n    \"\"\"\n"))
-      (global-set-key (kbd "<f9>") 'python-insert-docstring)
+;; ;;;;;; google stype docstring ;;;;;;;;;;;
+;; (defun chomp (str)
+;;         "Chomp leading and tailing whitespace from STR."
+;;         (let ((s (if (symbolp str) (symbol-name str) str)))
+;;           (replace-regexp-in-string
+;;            "\\(^[[:space:]\n]*\\|[[:space:]\n]*$\\)" "" s)))
+;;  (defun get-function-definition(sentence)
+;;     (if (string-match "def.*(.*):" sentence)
+;;         (match-string 0 sentence)))
+;;  (defun get-parameters(sentence)
+;;     (setq y (get-function-definition sentence))
+;;     (if y
+;;         (if (string-match "(.*)" y)
+;;             (match-string 0 y))))
+;;  (autoload 'thing-at-point "thingatpt" nil t) ;; build-in librairie
+;;  (defun python-insert-docstring()
+;;         (interactive)
+;;         (setq p (get-parameters (thing-at-point 'sentence)))
+;;         (forward-line 1)
+;;         (insert "    \"\"\"\n")
+;;         (insert "\tArgs:\n")
+;;         (setq params (split-string p "[?\,?\(?\)?\ ]"))
+;;         (while params
+;;           (if (/= (length (chomp (car params))) 0)
+;;               (progn
+;;                 (insert "        ")
+;;                 (insert (chomp (car params)))
+;;                 (insert ": \n")))
+;;           (setq params (cdr params)))
+;;         (insert "    Returns:\n    \"\"\"\n"))
+;;       (global-set-key (kbd "<f9>") 'python-insert-docstring)
       
-; —— ediff —————
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ediff                                                                  ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;(require 'ediff)
-;; don't start another frame
-;; this is done by default in preluse
-;;(setq ediff-window-setup-function 'ediff-setup-windows-plain)
-;; put windows side by side
-;;(setq ediff-split-window-function (quote split-window-horizontally))
-;;revert windows on exit - needs winner mode
-;;(winner-mode)
-;;(add-hook 'ediff-after-quit-hook-internal 'winner-undo)
+;; ; —— ediff —————
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;; ediff                                                                  ;;
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;;(require 'ediff)
+;; ;; don't start another frame
+;; ;; this is done by default in preluse
+;; ;;(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+;; ;; put windows side by side
+;; ;;(setq ediff-split-window-function (quote split-window-horizontally))
+;; ;;revert windows on exit - needs winner mode
+;; ;;(winner-mode)
+;; ;;(add-hook 'ediff-after-quit-hook-internal 'winner-undo)
+(require 'color-theme-sanityinc-tomorrow)
 
-;;----------------------------------------------------------------------------                                                                                                                                     
-;; ipdb                                                                                                                                                                                                            
-;; from: pedrokroger.net/2010/07/configuring-emacs-as-a-python-ide-2/                                                                                                                                              
-;; Highlight ipdb lines:                                                                                                                                                                                           
-(defun annotate-pdb ()                                                                                                                                                                                             
+
+;;----------------------------------------------------------------------------
+;; ipdb
+;; from: pedrokroger.net/2010/07/configuring-emacs-as-a-python-ide-2/
+;; Highlight ipdb lines:
+(defun annotate-pdb ()
   (interactive)
-  (highlight-lines-matching-regexp "import pdb")                                                                                                                                                                   
-  (highlight-lines-matching-regexp "pdb.set_trace()"))                                                                                                                                                             
-                                                                                                                                                                                                                   
-(add-hook 'python-mode-hook 'annotate-pdb)                                                                                                                                                                         
-                                                                                                                                                                                                                   
-;;----------                                                                                                                                                                                                       
-;; Keybinding to add breakpoint:                                                                                                                                                                                   
-(defun python-add-breakpoint ()                                                                                                                                                                                    
-  (interactive)                                                                                                                       
-  (newline-and-indent)                                                                                                                                                                                             
-  (insert "import ipdb; ipdb.set_trace()")                                                                                                                                                                         
-  (highlight-lines-matching-regexp "^[ ]*import ipdb; ipdb.set_trace()"))                                                                                                                                          
-                                                                                                                                                                                                                   
-(key-chord-define-global "st" 'python-add-breakpoint)                                                                                                                                                              
-;;(define-key global-map (kbd "C-c C-t") 'python-add-breakpoint)
-;; (define-key python-mode-map (kbd "C-c C-t") 'python-add-breakpoint)                                                                                                                                 
-;;(global-linum-mode t)
+  (highlight-lines-matching-regexp "import pdb")
+  (highlight-lines-matching-regexp "pdb.set_trace()"))
 
-(elpy-enable)
+(add-hook 'python-mode-hook 'annotate-pdb)
+
+;;----------
+;; Keybinding to add breakpoint:
+(defun python-add-breakpoint ()
+  (interactive)
+  (newline-and-indent)
+  (insert "import ipdb; ipdb.set_trace()")
+  (highlight-lines-matching-regexp "^[ ]*import ipdb; ipdb.set_trace()"))
+
+(key-chord-define-global "11" 'python-add-breakpoint)
+;;(define-key global-map (kbd "C-c C-t") 'python-add-breakpoint)
+
+;; (define-key python-mode-map (kbd "C-c C-t") 'python-add-breakpoint)
+
+
