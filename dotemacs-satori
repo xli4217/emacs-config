@@ -555,8 +555,11 @@
 (defun python-add-breakpoint ()
   (interactive)
   (newline-and-indent)
-  (insert "#### break point ####\nfrom rich.console import Console; console = Console() \nconsole.log('log', log_locals=False) \nimport ipdb; ipdb.set_trace()\n#####################")
-  (highlight-lines-matching-regexp "^[ ]*import ipdb; ipdb.set_trace()"))
+  (insert "from rich.console import Console; console = Console() \nconsole.log('log', log_locals=False) \nimport ipdb; ipdb.set_trace()")
+  (highlight-lines-matching-regexp "^[ ]*import ipdb; ipdb.set_trace()")
+  (highlight-lines-matching-regexp "^[ ]*from rich.console import Console")
+  (highlight-lines-matching-regexp "^[ ]*console.log('log', log_locals=False)")
+ )
 
 ;;(key-chord-define-global "dd" 'python-add-breakpoint)
 (define-key global-map (kbd "C-x i") 'python-add-breakpoint)
