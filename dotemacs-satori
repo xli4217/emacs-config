@@ -425,6 +425,11 @@
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
 
+;; (key-chord-define-global "aa" 'windmove-left)
+;; (key-chord-define-global "dd" 'windmove-right)
+;; (key-chord-define-global "ww" 'windmove-up)
+;; (key-chord-define-global "ss" 'windmove-down) 
+
 ;; ;---- anaconda-mode ------
 (add-hook 'python-mode-hook 'anaconda-mode)
 
@@ -483,7 +488,7 @@
  (add-hook 'python-mode-hook (lambda ()                                                                                                                                                                                                        
                                   (require 'sphinx-doc)                                                                                                                                                                                        
                                   (sphinx-doc-mode t)))                                                                                                                                                                                        
-;(key-chord-define-global "dd" 'sphinx-doc)                  
+(key-chord-define-global "22" 'sphinx-doc)                  
  
  
 ;; ;;;;;; google stype docstring ;;;;;;;;;;;
@@ -550,11 +555,11 @@
 (defun python-add-breakpoint ()
   (interactive)
   (newline-and-indent)
-  (insert "import ipdb; ipdb.set_trace()")
+  (insert "#### break point ####\nfrom rich.console import Console; console = Console() \nconsole.log('log', log_locals=False) \nimport ipdb; ipdb.set_trace()\n#####################")
   (highlight-lines-matching-regexp "^[ ]*import ipdb; ipdb.set_trace()"))
 
-(key-chord-define-global "st" 'python-add-breakpoint)
-;;(define-key global-map (kbd "C-c C-t") 'python-add-breakpoint)
+;;(key-chord-define-global "dd" 'python-add-breakpoint)
+(define-key global-map (kbd "C-x i") 'python-add-breakpoint)
 
 ;; (define-key python-mode-map (kbd "C-c C-t") 'python-add-breakpoint)
 
